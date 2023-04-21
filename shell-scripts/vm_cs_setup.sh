@@ -16,8 +16,9 @@ pip install -U pyx
 sudo apt install graphviz
 pip install -U cryptograpy
 pip install -U scapy
+pip freeze > requirements.txt
 deactivate
-cd ..
+cd ~
 #Install Wireshark
 sudo apt install wireshark
 sudo usermod -a -G wireshark kai
@@ -28,6 +29,7 @@ cd boofuzz
 python3 -m venv boofuzz-env 
 source boofuzz-env/bin/activate
 pip install -U boofuzz
+pip freeze > requirements.txt
 deactivate
-cd ..
+cd ~
 
