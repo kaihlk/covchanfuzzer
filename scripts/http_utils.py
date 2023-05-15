@@ -1,5 +1,6 @@
 # http_utils.py
 import random
+import urllib.parse
 #from scapy.layers.http import *
 
 def generate_chromium_header(url):
@@ -81,7 +82,7 @@ def generate_chromium_header_with_random_whitespace(url, limit=10):
 
 
 
-def forge_http_request_reorder_headerfields(url):
+def generate_chromium_header_reorder_fields(url):
     # Define the original header order
     original_headers = [
         ('Host', url),
@@ -116,9 +117,57 @@ def forge_http_request_reorder_headerfields(url):
     return request_string, deviation_count
 
 
+###Not working properly
+### need testing
+### 
+def generate_chromium_header_change_uri_representation(url, port=None):
+    deviation_count = 0
+
+    if port and random.random() < 0.5:
+        url += ':{}'.format(port)
+        deviation_count += 1
+
+    if random.random() < 0.5:
+        if port == 80:
+            url = 'http://' + url
+        elif port == 443:
+            url = 'https://' + url
+        else:
+            url = random.choice(['http://', 'https://']) + url
+        deviation_count += 1
+
+    if random.random() < 0.5:
+        url += '/'
+        deviation_count += 1
+
+        # Add random component after the ending slash
+        component = random.choice(['', '?', '%3F'])
+        url += component
+        if component == '%3F':
+            deviation_count += 2
+        elif component != '':
+            deviation_count += 1
+
+    headers = [
+        ('Host', url),
+        ('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36'),
+        ('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'),
+        ('Accept-Encoding', 'gzip, deflate, br'),
+        ('Accept-Language', 'en-US,en;q=0.9'),
+        ('Connection', 'keep-alive')
+    ]
+
+    request_string = f"GET / HTTP/1.1\r\n"
+
+    for header in headers:
+        request_string += f"{header[0]}: {header[1]}\r\n"
+
+    request_string += "\r\n"
+
+    return request_string, deviation_count
 
 
-def forge_http_request(url, method):
+def forge_http_request(url, port, method):
     if method == 1:
         return generate_chromium_header(url)
     elif method == 2:
@@ -126,7 +175,9 @@ def forge_http_request(url, method):
     elif method == 3:
         return generate_chromium_header_with_random_whitespace(url)
     elif method == 4:
-        return forge_http_request_reorder_headerfields(url)
+        return generate_chromium_header_reorder_fields(url)
+    elif method == 5:
+        return generate_chromium_header_change_uri_representation(url, port)
     else:
-        raise ValueError("Invalid method number. Supported methods are 1, 2, 3, and 4.")
+        raise ValueError("Invalid method number. Supported methods are 1, 2, 3, 4 and 5.")
 

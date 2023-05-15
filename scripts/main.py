@@ -3,13 +3,13 @@ import http_utils
 
 hosts = [
     ('www.example.com', 80),
-   # ('www.google.com', 80),
-  # ('www.amazon.com', 443)
+  #  ('www.google.com', 80),
+   #('www.amazon.com', 443)
 ]
 
 def main():
     # Select the method for forging the header
-    method = 2
+    method = 5
     # Number of attempts
     num_attempts = 10
 
@@ -21,7 +21,7 @@ def main():
         for targethost, targetport in hosts:
             #Todo:   Baseline Check if Client is not blocked yet
             
-            request, deviation_count = http_utils.forge_http_request(targethost, method)
+            request, deviation_count = http_utils.forge_http_request(targethost, targetport, method)
 
             # Send the HTTP request and get the response        
            
