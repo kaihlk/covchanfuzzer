@@ -1,6 +1,13 @@
 from custom_http import CustomHTTP
 import http_utils
 
+#Todo
+#host and channelselction as arguments?
+#host and channels as a file?
+#capture the packets with wireshark/tshark
+# Data Output: Host, port, Channel, Request Packet, Answer Status Code
+
+
 hosts = [
     ('www.example.com', 80),
   #  ('www.google.com', 80),
