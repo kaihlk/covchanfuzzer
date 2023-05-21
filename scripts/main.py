@@ -2,11 +2,12 @@ from custom_http import CustomHTTP
 import http_utils
 
 #Todo
-#host and channelselction as arguments?
+#host and channelselction, number of attempts as arguments?
 #host and channels as a file?
 #capture the packets with wireshark/tshark
 # Data Output: Host, port, Channel, Request Packet, Answer Status Code
-
+#Add a mode that leaves some time between requests to the same adress (Not getting caught by Denial of service counter measures)
+# Add a mode that sends a well formed request every x attempts to verify not being blocked
 
 hosts = [
     ('www.example.com', 80),
