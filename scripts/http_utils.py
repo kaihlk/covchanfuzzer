@@ -57,7 +57,7 @@ def parse_host(host):
     # Return the extracted parts as a tuple
     return scheme, subdomain, hostname, domain, port, path
 
-def random_switch_case_of_char_in_string(self, orginal_string, fuzzvalue):
+def random_switch_case_of_char_in_string(self, original_string, fuzzvalue):
     modified_string=''
     deviation_count=0
     # Randomly change the case of the field name
@@ -132,7 +132,7 @@ def generate_request_CC_case_insensitivity(self, host, url='/', method="GET", he
     #Iterate over the header fields
     for header in headers:
         field_name, field_value = header
-        modified_field_name, deviation_count=self.random_switch_case_of_char_in_string(fieldname, fuzzvalue)
+        modified_field_name, deviation_count=self.random_switch_case_of_char_in_string(field_name, fuzzvalue)
         #Build request string from modified field name, :, and field value
         request_string += f"{modified_field_name}: {field_value}\r\n"
 
@@ -206,11 +206,11 @@ def generate_request_CC_reordering_headerfields(self, host, url='/', method="GET
 
     # Shuffle the header fields randomly
     # Reorder the header fields, Note: the RandomValue random.shuffle(List, RandomValue[0,1]) is deprecated (Python 3.9)
-    shuffled_headers = original_headers[:]
+    shuffled_headers = headers[:]
     random.shuffle(shuffled_headers)
     
     # Iterate over the shuffled headers and compare with the original order
-    for shuffled_header, original_header in zip(shuffled_headers, original_headers):
+    for shuffled_header, original_header in zip(shuffled_headers, headers):
         # Check if the header is not 'Host' and the order has deviated and increment the deviation count    
         if shuffled_header != original_header:
             deviation_count += 1
@@ -264,7 +264,7 @@ def generate_request_CC_change_uri_representation(self, host, port=80, url='', m
     if new_subdomain!=subdomain:
         deviation_count+=1
 
-    new_hostname=randomchoice(hostname+'.'+domain,'')
+    new_hostname=random.choice(hostname+'.'+domain,'')
     if new_hostname!=hostname+'.'+subdomain:
         deviation_count+=1
 
@@ -291,7 +291,7 @@ def generate_request_CC_change_uri_representation(self, host, port=80, url='', m
     return request_string, deviation_count
 
 
-#CC with addional changes in the URL, like Case insensitvity and HEX Representation of the URL
+#CC with addional changes in the URL Case insensitvity 
 def generate_request_CC_change_uri_case_insensitivity(self, host, port=80, url='', method="GET", headers=None, fuzzvalue=None):
     # Check if headers are provided elsewise take default headers
     if headers is None:
@@ -316,9 +316,10 @@ def generate_request_CC_change_uri_case_insensitivity(self, host, port=80, url='
     if hostport=='':
         hostport=random.choice('',':'+port)
      
-    new_url, deviation_count=random_switch_case_of_char_in_string(new_scheme+new_subdomain+new_hostname+new_port+new_path, fuzzvalue) 
+    new_url, deviation_count=random_switch_case_of_char_in_string(scheme+subdomain+new_hostname+port+path, fuzzvalue) 
     
     request_line = f"{method} {new_url} HTTP/1.1\r\n"
+    request_string = request_line
 
     for header in headers:
         request_string += f"{header[0]}: {header[1]}\r\n"
@@ -327,8 +328,8 @@ def generate_request_CC_change_uri_case_insensitivity(self, host, port=80, url='
 
     return request_string, deviation_count
 
-#CC with addional changes in the URL, like Case insensitvity and HEX Representation of the URL
-def generate_request_CC_change_uri_case_insensitivity(self, host, port=80, url='', method="GET", headers=None, fuzzvalue=None):
+#CC with addional changes in the URL,  HEX Representation of the URL
+def generate_request_CC_change_uri_HEXHEX(self, host, port=80, url='', method="GET", headers=None, fuzzvalue=None):
     # Check if headers are provided elsewise take default headers
     if headers is None:
         headers = self.default_headers
@@ -354,9 +355,9 @@ def generate_request_CC_change_uri_case_insensitivity(self, host, port=80, url='
 
     #Add some spezial Stuff to the path like HEX value? Maybe change it should work over the whole string?
     if random.random()<fuzzvalue and path=='':
-        new_path+=randomchoice('/?','/%3F','/%3f')
+        new_path+=random.choice('/?','/%3F','/%3f')
 
-    new_url=new_scheme+new_subdomain+new_hostname+new_port+new_path
+    new_url=scheme+subdomain+new_hostname+port+new_path
     
     if random.random()<fuzzvalue:
         #Convert the URL using parse lib quote (recommended for handling URLs in Python)
@@ -364,11 +365,32 @@ def generate_request_CC_change_uri_case_insensitivity(self, host, port=80, url='
 
      #Convert other characters in the URL to HEXHEX 
 
-    if random.random()<fuzzvalue:
-        for 
-
-    new_url, deviation_count=random_switch_case_of_char_in_string(new_scheme+new_subdomain+new_hostname+new_port+new_path, fuzzvalue) 
     
+    for char in new_url:
+        if random.random()<fuzzvalue:
+            #find unicode point of the char, convert it to hex string
+            hex_code = hex(ord(char))
+            #slice string to remove leading "0x"
+            hex_code=hex_code[2:]
+            #randomly make chars of the Hex value upper or lower case
+            if random.random()<fuzzvalue:  
+                hex_code=hex_code.upper()
+            else:
+                hex_code=hex_code.lower()
+            result += "%" + hex_code
+        else:
+            result += char
+                
+    new_url=result
+
+    #Compare strings to count deviation
+    deviation_count = 0
+    min_len = min(len(url), len(new_url))
+    for i in range(min_len):
+        if url[i] != new_url[i]:
+            deviation_count += 1
+    # Account for any remaining characters in the longer string
+    deviation_count += abs(len(url) - len(new_url)) 
 
     request_line = f"{method} {new_url} HTTP/1.1\r\n"
 
@@ -397,16 +419,20 @@ def generate_request_CC_change_uri_case_insensitivity(self, host, port=80, url='
 #   Try catch blocks?
 
 
-def forge_http_request(url, port, method):
+def forge_http_request(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5):
     if method == 1:
-        return generate_standard_request(url)
+        return generate_standard_request(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
     elif method == 2:
-         return generate_standard_request_with_random_case(url)
+         return generate_request_CC_case_insensitivity(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
     elif method == 3:
-        return generate_standard_request_with_random_whitespace(url)
+        return generate_request_CC_random_whitespace(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
     elif method == 4:
-        return generate_standard_request_reorder_fields(url)
+        return generate_request_CC_reordering_headerfields(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
     elif method == 5:
-        return generate_standard_request_change_uri_representation(url, port)
+        return generate_request_CC_change_uri_representation(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
+    elif method == 6:
+        return generate_request_CC_change_uri_case_insensitivity(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
+    elif method == 7:
+        return generate_request_CC_change_uri_HEXHEX(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
     else:
-        raise ValueError("Invalid method number. Supported methods are 1, 2, 3, 4 and 5.")
+        raise ValueError("Invalid method number. Supported methods are 1, 2, 3, 4 , 5, 6 and 7.")
