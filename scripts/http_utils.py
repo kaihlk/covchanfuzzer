@@ -5,18 +5,9 @@
 import random
 from urllib.parse import quote
 
-""" def __init__(self):
-        #Definition of standard HTTP request like a Chrome Browser on a Windows OS would send
-        self.default_headers = [
-            #The field with the Host and the url must be generated and inserted in the functions
-            ('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36'),
-            ('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'),
-            ('Accept-Encoding', 'gzip, deflate, br'),
-            ('Accept-Language', 'en-US,en;q=0.9'),
-            ('Connection', 'keep-alive')
-        ]
 
- """
+
+
 default_headers = [
             #The field with the Host and the url must be generated and inserted in the functions
             ('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36'),
@@ -65,32 +56,34 @@ def parse_host(host):
     # Return the extracted parts as a tuple
     return scheme, subdomain, hostname, domain, port, path
 
-def random_switch_case_of_char_in_string(self, original_string, fuzzvalue):
+def random_switch_case_of_char_in_string(original_string, fuzzvalue):
     modified_string=''
     deviation_count=0
     # Randomly change the case of the field name
     for c in original_string:
         #The value of the probabiltiy to change a char is defined by the fuzzvalue
         #the char functions doesn't affect signs and symbols
-        if random()<fuzzvalue:
+        if random.random()<fuzzvalue:
             if c.isupper():
-                modified_string.join(c.lower())
-                deviation_count=+1
+                modified_string=modified_string + c.lower()
+                deviation_count+=1
             elif c.islower:
-                modified_string.join(c.upper())
-                deviation_count=+1
+                modified_string=modified_string + c.upper()
+                deviation_count+=1
             else:
-                modified_string.join(c)
+                modified_string = modified_string + c
+        else:
+            modified_string = modified_string + c
     return modified_string, deviation_count
 
 #Generation of request package without insertion of a covert channel 
-def generate_standard_request(self, host, port, url='/', method="GET", headers=None, fuzzvalue=None):
+def generate_standard_request(host, port, url='/', method="GET", headers=None, fuzzvalue=None):
     
     # Check if headers are provided elsewise take default headers
     if headers is None:
-        headers = default_headers
+        headers = default_headers.copy()
     else:
-        # Create a copy to avoid modifying the original list
+       # Create a copy to avoid modifying the original list
         headers = headers.copy()  
     
     # Insert the Host header at the beginning of the list
@@ -114,7 +107,7 @@ def generate_standard_request(self, host, port, url='/', method="GET", headers=N
 
 #Covertchannel suggested by Kwecka et al: Case-insensitivity of header key names
 #fuzzvalue defines the probability that a character of a header field is changed
-def generate_request_CC_case_insensitivity(self, host, port, url='/', method="GET", headers=None, fuzzvalue=0.5):
+def generate_request_CC_case_insensitivity(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5):
     
     # Check fuzzvalue
     if fuzzvalue < 0 or fuzzvalue > 1:
@@ -122,7 +115,7 @@ def generate_request_CC_case_insensitivity(self, host, port, url='/', method="GE
 
     # Check if headers are provided elsewise take default headers
     if headers is None:
-        headers = self.default_headers
+        headers = default_headers.copy()
     else:
         # Create a copy to avoid modifying the original list
         headers = headers.copy()
@@ -136,13 +129,14 @@ def generate_request_CC_case_insensitivity(self, host, port, url='/', method="GE
 
     #Define Request first line
     request_string = request_line
-
+    deviation_count=0
     #Iterate over the header fields
     for header in headers:
         field_name, field_value = header
-        modified_field_name, deviation_count=self.random_switch_case_of_char_in_string(field_name, fuzzvalue)
+        modified_field_name, deviation = random_switch_case_of_char_in_string(original_string=field_name, fuzzvalue=fuzzvalue)
         #Build request string from modified field name, :, and field value
         request_string += f"{modified_field_name}: {field_value}\r\n"
+        deviation+=deviation
 
     #Add ending of request
     request_string += "\r\n"
@@ -153,11 +147,11 @@ def generate_request_CC_case_insensitivity(self, host, port, url='/', method="GE
 #Covertchannel suggested by Kwecka et al: Linear whitespacing
 #fuzzvalue defines the propability whether a value is changed and how many whitespaces/tabs/newlines are added 
 #Possible endless Loop, here is CC to learn something about the maximum size of the Request size
-def generate_request_CC_random_whitespace(self, host, url='/', method="GET", headers=None, fuzzvalue=0.9):
+def generate_request_CC_random_whitespace(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5):
     
     # Check if headers are provided elsewise take default headers
     if headers is None:
-        headers = self.default_headers
+        headers = default_headers.copy()
     else:
         # Create a copy to avoid modifying the original list
         headers = headers.copy()  
@@ -173,10 +167,10 @@ def generate_request_CC_random_whitespace(self, host, url='/', method="GET", hea
     for header in headers: 
         field_name, field_value = header
         #Random choice if value is changed
-        if random()<fuzzvalue:
+        if random.random()<fuzzvalue:
             #Create a string with random number of Whitespaces and Tabulators, third possible char?  ????
             whitespace=''
-            while random()<fuzzvalue:
+            while random.random()<fuzzvalue:
                  #Random Choice from Tabulator, Whitespace, Newline+Whitespace
                 random_string=random.choice(['\t', ' ', '/r/n '])
                 whitespace+=random_string
@@ -199,7 +193,7 @@ def generate_request_CC_reordering_headerfields(self, host, url='/', method="GET
     
     # Check if headers are provided elsewise take default headers
     if headers is None:
-        headers = self.default_headers
+        headers = default_headers.copy()
     else:
         # Create a copy to avoid modifying the original list
         headers = headers.copy()  
@@ -242,7 +236,7 @@ def generate_request_CC_reordering_headerfields(self, host, url='/', method="GET
 def generate_request_CC_change_uri_representation(self, host, port=80, url='', method="GET", headers=None, fuzzvalue=None):
     # Check if headers are provided elsewise take default headers
     if headers is None:
-        headers = self.default_headers
+        headers = default_headers.copy()
     else:
         # Create a copy to avoid modifying the original list
         headers = headers.copy()  
@@ -299,7 +293,7 @@ def generate_request_CC_change_uri_representation(self, host, port=80, url='', m
 def generate_request_CC_change_uri_case_insensitivity(self, host, port=80, url='', method="GET", headers=None, fuzzvalue=None):
     # Check if headers are provided elsewise take default headers
     if headers is None:
-        headers = self.default_headers
+        headers = default_headers.copy()
     else:
         # Create a copy to avoid modifying the original list
         headers = headers.copy()  
@@ -338,7 +332,7 @@ def generate_request_CC_change_uri_case_insensitivity(self, host, port=80, url='
 def generate_request_CC_change_uri_HEXHEX(self, host, port=80, url='', method="GET", headers=None, fuzzvalue=None):
     # Check if headers are provided elsewise take default headers
     if headers is None:
-        headers = self.default_headers
+        headers = default_headers.copy()
     else:
         # Create a copy to avoid modifying the original list
         headers = headers.copy()  

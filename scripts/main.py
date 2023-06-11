@@ -4,10 +4,11 @@ import http_utils
 #Todo
 #host and channelselction, number of attempts as arguments?
 #host and channels as a file?
-#capture the packets with wireshark/tshark
+#auto capture the packets, tls with wireshark/tshark
 # Data Output: Host, port, Channel, Request Packet, Answer Status Code
 #Add a mode that leaves some time between requests to the same adress (Not getting caught by Denial of service counter measures)
 # Add a mode that sends a well formed request every x attempts to verify not being blocked
+# Control the body of the response as well (?)
 
 hosts = [
     ('www.example.com', 80),
@@ -17,16 +18,15 @@ hosts = [
 
 def main():
     # Select the method for forging the header
-    covertchannel_number = 1
+    covertchannel_number = 3
     # Number of attempts
-    num_attempts = 5
-    utils=http_utils
+    num_attempts = 2
     for _ in range(num_attempts):
         
         for targethost, targetport in hosts:
             #Todo:   Baseline Check if Client is not blocked yet
-            
-            request, deviation_count = utils.forge_http_request(cc_number=covertchannel_number, host=targethost, port=targetport, url='/', method="GET", headers=None, fuzzvalue=0.5)
+       
+            request, deviation_count = http_utils.forge_http_request(cc_number=covertchannel_number, host=targethost, port=targetport, url='/', method="GET", headers=None, fuzzvalue=0.5)
 
             # Send the HTTP request and get the response        
            
