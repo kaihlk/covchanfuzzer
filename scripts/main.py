@@ -17,15 +17,16 @@ hosts = [
 
 def main():
     # Select the method for forging the header
-    method = 1
+    covertchannel_number = 1
     # Number of attempts
     num_attempts = 5
+    utils=http_utils
     for _ in range(num_attempts):
         
         for targethost, targetport in hosts:
             #Todo:   Baseline Check if Client is not blocked yet
             
-            request, deviation_count = forge_http_request(host=targethost, port=targetport, url='/', method="GET", headers=None, fuzzvalue=0.5)
+            request, deviation_count = utils.forge_http_request(cc_number=covertchannel_number, host=targethost, port=targetport, url='/', method="GET", headers=None, fuzzvalue=0.5)
 
             # Send the HTTP request and get the response        
            

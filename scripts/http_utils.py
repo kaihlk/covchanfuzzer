@@ -5,7 +5,7 @@
 import random
 from urllib.parse import quote
 
-def __init__(self):
+""" def __init__(self):
         #Definition of standard HTTP request like a Chrome Browser on a Windows OS would send
         self.default_headers = [
             #The field with the Host and the url must be generated and inserted in the functions
@@ -16,7 +16,15 @@ def __init__(self):
             ('Connection', 'keep-alive')
         ]
 
-
+ """
+default_headers = [
+            #The field with the Host and the url must be generated and inserted in the functions
+            ('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36'),
+            ('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'),
+            ('Accept-Encoding', 'gzip, deflate, br'),
+            ('Accept-Language', 'en-US,en;q=0.9'),
+            ('Connection', 'keep-alive')
+]
 
 def parse_host(host):
     # Initialize variables
@@ -76,11 +84,11 @@ def random_switch_case_of_char_in_string(self, original_string, fuzzvalue):
     return modified_string, deviation_count
 
 #Generation of request package without insertion of a covert channel 
-def generate_standard_request(self, host, url='/', method="GET", headers=None, fuzzvalue=None):
+def generate_standard_request(self, host, port, url='/', method="GET", headers=None, fuzzvalue=None):
     
     # Check if headers are provided elsewise take default headers
     if headers is None:
-        headers = self.default_headers
+        headers = default_headers
     else:
         # Create a copy to avoid modifying the original list
         headers = headers.copy()  
@@ -106,7 +114,7 @@ def generate_standard_request(self, host, url='/', method="GET", headers=None, f
 
 #Covertchannel suggested by Kwecka et al: Case-insensitivity of header key names
 #fuzzvalue defines the probability that a character of a header field is changed
-def generate_request_CC_case_insensitivity(self, host, url='/', method="GET", headers=None, fuzzvalue=0.5):
+def generate_request_CC_case_insensitivity(self, host, port, url='/', method="GET", headers=None, fuzzvalue=0.5):
     
     # Check fuzzvalue
     if fuzzvalue < 0 or fuzzvalue > 1:
