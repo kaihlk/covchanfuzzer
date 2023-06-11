@@ -18,4 +18,4 @@ WORKDIR /scripts
 COPY scripts/* /scripts/
 
 # Set the entrypoint command
-ENTRYPOINT ["python"]
+ENTRYPOINT ["python"] 
