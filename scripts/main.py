@@ -1,5 +1,5 @@
 from custom_http import CustomHTTP
-import http_utils
+import http_utils 
 
 #Todo
 #host and channelselction, number of attempts as arguments?
@@ -17,19 +17,15 @@ hosts = [
 
 def main():
     # Select the method for forging the header
-    method = 5
+    method = 1
     # Number of attempts
-    num_attempts = 10
-
-    
-
-
+    num_attempts = 5
     for _ in range(num_attempts):
         
         for targethost, targetport in hosts:
             #Todo:   Baseline Check if Client is not blocked yet
             
-            request, deviation_count = forge_http_request(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
+            request, deviation_count = forge_http_request(host=targethost, port=targetport, url='/', method="GET", headers=None, fuzzvalue=0.5)
 
             # Send the HTTP request and get the response        
            
