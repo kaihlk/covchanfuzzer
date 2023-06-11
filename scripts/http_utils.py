@@ -5,7 +5,7 @@
 import random
 from urllib.parse import quote
 
-def _init_(self):
+def __init__(self):
         #Definition of standard HTTP request like a Chrome Browser on a Windows OS would send
         self.default_headers = [
             #The field with the Host and the url must be generated and inserted in the functions
@@ -417,20 +417,20 @@ def generate_request_CC_change_uri_HEXHEX(self, host, port=80, url='', method="G
 #   Try catch blocks?
 
 
-def forge_http_request(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5):
-    if method == 1:
+def forge_http_request(cc_number, host, port, url='/', method="GET", headers=None, fuzzvalue=0.5):
+    if cc_number == 1:
         return generate_standard_request(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
-    elif method == 2:
+    elif cc_number== 2:
          return generate_request_CC_case_insensitivity(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
-    elif method == 3:
+    elif cc_number == 3:
         return generate_request_CC_random_whitespace(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
-    elif method == 4:
+    elif cc_number == 4:
         return generate_request_CC_reordering_headerfields(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
-    elif method == 5:
+    elif cc_number == 5:
         return generate_request_CC_change_uri_representation(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
-    elif method == 6:
+    elif cc_number == 6:
         return generate_request_CC_change_uri_case_insensitivity(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
-    elif method == 7:
+    elif cc_number == 7:
         return generate_request_CC_change_uri_HEXHEX(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
     else:
         raise ValueError("Invalid method number. Supported methods are 1, 2, 3, 4 , 5, 6 and 7.")
