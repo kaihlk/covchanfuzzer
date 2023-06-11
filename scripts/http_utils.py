@@ -227,14 +227,10 @@ def generate_request_CC_reordering_headerfields(self, host, url='/', method="GET
 
 #URI in the request line!!!!!!!!!!
 #Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers
-# Empty or not given port assune 80
+# Divide in 3 cover channels due to difference of technique
+# Change the part of the path to make an absolute URI, may include scheme, port or 
+## Empty or not given port assune 80
 # http as scheme name and host name case insenitivity
-# empty absolute path interpreta as "/"
-# Ascci Hex Hex Representation  ---> This is not working like suggested!!!!
-#  Hex representation can  7e or 7E 
-###Not working properly
-### need testing
-### add fuzzing value
 def generate_request_CC_change_uri_representation(self, host, port=80, url='', method="GET", headers=None, fuzzvalue=None):
     # Check if headers are provided elsewise take default headers
     if headers is None:
@@ -291,7 +287,7 @@ def generate_request_CC_change_uri_representation(self, host, port=80, url='', m
     return request_string, deviation_count
 
 
-#CC with addional changes in the URL Case insensitvity 
+#CC URI  with addional changes in Case insensitvity 
 def generate_request_CC_change_uri_case_insensitivity(self, host, port=80, url='', method="GET", headers=None, fuzzvalue=None):
     # Check if headers are provided elsewise take default headers
     if headers is None:
@@ -329,6 +325,9 @@ def generate_request_CC_change_uri_case_insensitivity(self, host, port=80, url='
     return request_string, deviation_count
 
 #CC with addional changes in the URL,  HEX Representation of the URL
+# empty absolute path interpreta as "/"
+#  Hex representation can  7e or 7E 
+
 def generate_request_CC_change_uri_HEXHEX(self, host, port=80, url='', method="GET", headers=None, fuzzvalue=None):
     # Check if headers are provided elsewise take default headers
     if headers is None:
