@@ -29,7 +29,7 @@ def main():
         for targethost, targetport in hosts:
             #Todo:   Baseline Check if Client is not blocked yet
             
-            request, deviation_count = http_utils.forge_http_request(targethost, targetport, method)
+            request, deviation_count = forge_http_request(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
 
             # Send the HTTP request and get the response        
            

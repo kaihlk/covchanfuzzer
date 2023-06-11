@@ -327,7 +327,6 @@ def generate_request_CC_change_uri_case_insensitivity(self, host, port=80, url='
 #CC with addional changes in the URL,  HEX Representation of the URL
 # empty absolute path interpreta as "/"
 #  Hex representation can  7e or 7E 
-
 def generate_request_CC_change_uri_HEXHEX(self, host, port=80, url='', method="GET", headers=None, fuzzvalue=None):
     # Check if headers are provided elsewise take default headers
     if headers is None:
@@ -408,7 +407,7 @@ def generate_request_CC_change_uri_HEXHEX(self, host, port=80, url='', method="G
 # CC with self defined headers (size limit?)
 # CC with host and port
 # CC with Data send While establishing TCP and upgrade to TLS
-# CC With Data while Client Hllot at http2
+# CC With Data while Client Hello at http2
 
 
 
