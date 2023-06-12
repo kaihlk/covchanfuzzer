@@ -227,16 +227,13 @@ def generate_request_CC_reordering_headerfields(host, port, url='/', method="GET
     # Return the request string and deviation count
     return request_string, deviation_count
 
-
-
-
-#URI in the request line!!!!!!!!!!
+#URI in the request line
 #Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers
 # Divide in 3 cover channels due to difference of technique
 # Change the part of the path to make an absolute URI, may include scheme, port or 
 ## Empty or not given port assune 80
 # http as scheme name and host name case insenitivity
-def generate_request_CC_change_uri_representation(self, host, port=80, url='', method="GET", headers=None, fuzzvalue=None):
+def generate_request_CC_change_uri_representation(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5):
     # Check if headers are provided elsewise take default headers
     if headers is None:
         headers = default_headers.copy()
@@ -255,27 +252,27 @@ def generate_request_CC_change_uri_representation(self, host, port=80, url='', m
 
     if scheme=='':
         scheme='http'
-    new_scheme=random.choice(scheme+'://', '', 'http://', 'https://')
+    new_scheme=random.choice([scheme+'://', '', 'http://', 'https://'])
     if new_scheme!=scheme:
         deviation_count+=1
 
     if subdomain=='':
-        subdomain='www'
-    new_subdomain=random.choice(subdomain+'.', '', 'www.')
+        subdomain='www.'
+    new_subdomain=random.choice([subdomain+'.', '', 'www.'])
     if new_subdomain!=subdomain:
         deviation_count+=1
 
-    new_hostname=random.choice(hostname+'.'+domain,'')
-    if new_hostname!=hostname+'.'+subdomain:
+    new_hostname=random.choice([hostname+'.'+domain,''])
+    if new_hostname!=hostname+'.'+domain:
         deviation_count+=1
 
     if hostport=='':
         hostport=port
-    new_port=random.choice('',':'+hostport,':'+port, ':'+'80', ':'+'443', ':'+random.randint(0, 65535))
+    new_port=random.choice(['',':'+str(hostport),':'+str(port), ':'+'80', ':'+'443', ':' + str(random.randint(0, 65535))])
     if new_port!=hostport:
         deviation_count+=1
 
-    new_path=random.choice('','/','/'+path)
+    new_path=random.choice(['','/','/'+path])
     if new_path!=path:
         deviation_count+=1
     
@@ -283,7 +280,7 @@ def generate_request_CC_change_uri_representation(self, host, port=80, url='', m
 
     request_line = f"{method} {new_url} HTTP/1.1\r\n"
 
-
+    request_string = request_line
     for header in headers:
         request_string += f"{header[0]}: {header[1]}\r\n"
 
@@ -293,7 +290,7 @@ def generate_request_CC_change_uri_representation(self, host, port=80, url='', m
 
 
 #CC URI  with addional changes in Case insensitvity 
-def generate_request_CC_change_uri_case_insensitivity(self, host, port=80, url='', method="GET", headers=None, fuzzvalue=None):
+def generate_request_CC_change_uri_case_insensitivity(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5):
     # Check if headers are provided elsewise take default headers
     if headers is None:
         headers = default_headers.copy()
@@ -310,14 +307,14 @@ def generate_request_CC_change_uri_case_insensitivity(self, host, port=80, url='
     #Build a new URL from the given host, add some deviation if not all fields are provided
 
     if scheme=='':
-        scheme=random.choice('http://', 'https://')
+        scheme=random.choice(['http://', 'https://'])
     if subdomain=='':
         subdomain='www'
-    new_hostname=hostname+'.'+domain
+    new_hostname=subdomain+'.'+hostname+'.'+domain
     if hostport=='':
-        hostport=random.choice('',':'+port)
+        hostport=random.choice(['',':'+str(port)])
      
-    new_url, deviation_count=random_switch_case_of_char_in_string(scheme+subdomain+new_hostname+port+path, fuzzvalue) 
+    new_url, deviation_count=random_switch_case_of_char_in_string(scheme+new_hostname+hostport+path, fuzzvalue) 
     
     request_line = f"{method} {new_url} HTTP/1.1\r\n"
     request_string = request_line
@@ -332,7 +329,7 @@ def generate_request_CC_change_uri_case_insensitivity(self, host, port=80, url='
 #CC with addional changes in the URL,  HEX Representation of the URL
 # empty absolute path interpreta as "/"
 #  Hex representation can  7e or 7E 
-def generate_request_CC_change_uri_HEXHEX(self, host, port=80, url='', method="GET", headers=None, fuzzvalue=None):
+def generate_request_CC_change_uri_HEXHEX(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5):
     # Check if headers are provided elsewise take default headers
     if headers is None:
         headers = default_headers.copy()
@@ -347,28 +344,37 @@ def generate_request_CC_change_uri_HEXHEX(self, host, port=80, url='', method="G
     scheme, subdomain, hostname, domain, hostport, path = parse_host(host)
 
     #Build a new URL from the given host, add some deviation if not all fields are provided
-
+  
     if scheme=='':
-        scheme=random.choice('http://', 'https://')
+        scheme=random.choice(['http://', 'https://'])
+    
     if subdomain=='':
         subdomain='www'
-    new_hostname=hostname+'.'+domain
+       
+    new_hostname=subdomain+'.'+hostname+'.'+domain
+
     if hostport=='':
-        hostport=random.choice('',':'+port)
+        hostport=random.choice(['',':'+str(port)])
+       
 
     #Add some spezial Stuff to the path like HEX value? Maybe change it should work over the whole string?
     if random.random()<fuzzvalue and path=='':
-        new_path+=random.choice('/?','/%3F','/%3f')
+        new_path=random.choice(['/?','/%3F','/%3f'])
+       
+    else:
+        new_path=path
 
-    new_url=scheme+subdomain+new_hostname+port+new_path
+    new_url=scheme+new_hostname+hostport+new_path
     
+
     if random.random()<fuzzvalue:
         #Convert the URL using parse lib quote (recommended for handling URLs in Python)
         new_url=quote(new_url)
-
-     #Convert other characters in the URL to HEXHEX 
-
+       
     
+   
+    #Convert other characters in the URL to HEXHEX 
+    new_url_temp=''  
     for char in new_url:
         if random.random()<fuzzvalue:
             #find unicode point of the char, convert it to hex string
@@ -380,13 +386,13 @@ def generate_request_CC_change_uri_HEXHEX(self, host, port=80, url='', method="G
                 hex_code=hex_code.upper()
             else:
                 hex_code=hex_code.lower()
-            result += "%" + hex_code
+            new_url_temp += "%" + hex_code
         else:
-            result += char
+            new_url_temp += char
                 
-    new_url=result
-
-    #Compare strings to count deviation
+    new_url=new_url_temp
+   
+    #Compare strings to count deviation, this is not perfect, maybe find a better way
     deviation_count = 0
     min_len = min(len(url), len(new_url))
     for i in range(min_len):
@@ -397,6 +403,7 @@ def generate_request_CC_change_uri_HEXHEX(self, host, port=80, url='', method="G
 
     request_line = f"{method} {new_url} HTTP/1.1\r\n"
 
+    request_string=request_line
     for header in headers:
         request_string += f"{header[0]}: {header[1]}\r\n"
 

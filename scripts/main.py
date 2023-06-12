@@ -18,29 +18,32 @@ hosts = [
 
 def main():
     # Select the method for forging the header
-    covertchannel_number = 4
+    covertchannel_number = 7
     # Number of attempts
-    num_attempts = 3
+    num_attempts = 10
+    ok=0
     for _ in range(num_attempts):
         
         for targethost, targetport in hosts:
             #Todo:   Baseline Check if Client is not blocked yet
        
-            request, deviation_count = http_utils.forge_http_request(cc_number=covertchannel_number, host=targethost, port=targetport, url='/', method="GET", headers=None, fuzzvalue=0.4)
+            request, deviation_count = http_utils.forge_http_request(cc_number=covertchannel_number, host=targethost, port=targetport, url='/', method="GET", headers=None, fuzzvalue=0.1)
 
             # Send the HTTP request and get the response        
            
             response=CustomHTTP().http_request(host=targethost, port=targetport, customRequest=request)
+            response_status_code=response.Status_Code.decode('utf-8')
 
             # Print the response status code and deviation count
             print("Host: {}".format(targethost))
             print("Port: {}".format(targetport))
             print("Status Code: {}".format(response.Status_Code.decode('utf-8')))
             print("Deviation Count: {}\n".format(deviation_count))
-            
 
+            if response_status_code=='200':
+                ok+=1
             #ToDo Save request, deviation, status_code maybe response Time? 
-
+    print('Successfull packets: '+str(ok) + ' of '+str(num_attempts)+ ' attempts.')
 
             
 
