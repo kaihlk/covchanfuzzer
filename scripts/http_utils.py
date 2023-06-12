@@ -136,8 +136,8 @@ def generate_request_CC_case_insensitivity(host, port, url='/', method="GET", he
         modified_field_name, deviation = random_switch_case_of_char_in_string(original_string=field_name, fuzzvalue=fuzzvalue)
         #Build request string from modified field name, :, and field value
         request_string += f"{modified_field_name}: {field_value}\r\n"
-        deviation+=deviation
-
+        deviation_count+=deviation
+        
     #Add ending of request
     request_string += "\r\n"
 
@@ -158,7 +158,7 @@ def generate_request_CC_random_whitespace(host, port, url='/', method="GET", hea
     
     # Insert the Host header at the beginning of the list
     headers.insert(0, ('Host', host))  
-    
+    print(fuzzvalue)
     # Build the request_line from the provided arguments
     request_line = f"{method} {url} HTTP/1.1\r\n"
     deviation_count = 0
@@ -171,8 +171,8 @@ def generate_request_CC_random_whitespace(host, port, url='/', method="GET", hea
             #Create a string with random number of Whitespaces and Tabulators, third possible char?  ????
             whitespace=''
             while random.random()<fuzzvalue:
-                 #Random Choice from Tabulator, Whitespace, Newline+Whitespace
-                random_string=random.choice(['\t', ' ', '/r/n '])
+                 #Random Choice from Tabulator, Whitespace, carriage retrun + newline + Whitespace
+                random_string=random.choice(['\t', ' ', '\r\n '])
                 whitespace+=random_string
                 deviation_count+=1
             #Add the whitespace string at the end of the value
@@ -184,12 +184,12 @@ def generate_request_CC_random_whitespace(host, port, url='/', method="GET", hea
     request_string += "\r\n"
 
     return request_string, deviation_count
+ 
 
-
-#Covertchannel suggested by Kwecka et al: Reordering of Headerfields#
+#Covertchannel suggested by Kwecka et al: Reordering ofHeaderfields#
 # Fuzz Parameter no effect, due to Implementation of Shuffle
 
-def generate_request_CC_reordering_headerfields(self, host, url='/', method="GET", headers=None, fuzzvalue=None):
+def generate_request_CC_reordering_headerfields(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5):
     
     # Check if headers are provided elsewise take default headers
     if headers is None:
@@ -198,8 +198,7 @@ def generate_request_CC_reordering_headerfields(self, host, url='/', method="GET
         # Create a copy to avoid modifying the original list
         headers = headers.copy()  
     
-    # Insert the Host header at the beginning of the list
-    headers.insert(0, ('Host', host))  
+     
     
     # Build the request_line from the provided arguments
     request_line = f"{method} {url} HTTP/1.1\r\n"
@@ -211,10 +210,14 @@ def generate_request_CC_reordering_headerfields(self, host, url='/', method="GET
     shuffled_headers = headers[:]
     random.shuffle(shuffled_headers)
     
+     # Insert the Host header at the beginning of the list
+    shuffled_headers.insert(0, ('Host', host)) 
+    request_string=request_line
+
     # Iterate over the shuffled headers and compare with the original order
     for shuffled_header, original_header in zip(shuffled_headers, headers):
         # Check if the header is not 'Host' and the order has deviated and increment the deviation count    
-        if shuffled_header != original_header:
+        if shuffled_header != original_header and original_header[0]!=host:
             deviation_count += 1
         # Build the request_string with the shuffeled_header  
         request_string += f"{shuffled_header[0]}: {shuffled_header[1]}\r\n"
@@ -421,18 +424,18 @@ def generate_request_CC_change_uri_HEXHEX(self, host, port=80, url='', method="G
 
 def forge_http_request(cc_number, host, port, url='/', method="GET", headers=None, fuzzvalue=0.5):
     if cc_number == 1:
-        return generate_standard_request(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
+        return generate_standard_request(host, port, url, method, headers, fuzzvalue)
     elif cc_number== 2:
-         return generate_request_CC_case_insensitivity(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
+         return generate_request_CC_case_insensitivity(host, port, url, method, headers, fuzzvalue)
     elif cc_number == 3:
-        return generate_request_CC_random_whitespace(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
+        return generate_request_CC_random_whitespace(host, port, url, method, headers, fuzzvalue)
     elif cc_number == 4:
-        return generate_request_CC_reordering_headerfields(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
+        return generate_request_CC_reordering_headerfields(host, port, url, method, headers, fuzzvalue)
     elif cc_number == 5:
-        return generate_request_CC_change_uri_representation(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
+        return generate_request_CC_change_uri_representation(host, port, url, method, headers, fuzzvalue)
     elif cc_number == 6:
-        return generate_request_CC_change_uri_case_insensitivity(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
+        return generate_request_CC_change_uri_case_insensitivity(host, port, url, method, headers, fuzzvalue)
     elif cc_number == 7:
-        return generate_request_CC_change_uri_HEXHEX(host, port, url='/', method="GET", headers=None, fuzzvalue=0.5)
+        return generate_request_CC_change_uri_HEXHEX(host, port, url, method, headers, fuzzvalue)
     else:
         raise ValueError("Invalid method number. Supported methods are 1, 2, 3, 4 , 5, 6 and 7.")
