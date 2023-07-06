@@ -240,22 +240,19 @@ URL_GRAMMAR: Grammar = {
 }
 
 
-    syntax_diagram(URL_GRAMMAR)
+syntax_diagram(URL_GRAMMAR)
 
 #Example Grammar as seeds
-from typing import Set
-
-
+""" from typing import Set
 from MutationFuzzer import MutationFuzzer  # minor dependency
-
-    number_of_seeds = 10
-    seeds = [
+number_of_seeds = 10
+        seeds = [
         simple_grammar_fuzzer(
             grammar=URL_GRAMMAR,
             max_nonterminals=10) for i in range(number_of_seeds)]
     seeds
 
-    m = MutationFuzzer(seeds)
+    m = MutationFuzzer(seeds)"""
 
 
 ## A Grammar Toolbox
@@ -295,14 +292,17 @@ def crange(character_start: str, character_end: str) -> List[Expansion]:
             for i in range(ord(character_start), ord(character_end) + 1)]
 
 ### Grammar Shortcuts
+""" 
 
-if __name__ == '__main__':
     
-    nonterminal_ebnf_grammar = extend_grammar(nonterminal_grammar,
-                                              {
-                                                  "<identifier>": ["<idchar>+"]
-                                              }
-                                              )
+nonterminal_ebnf_grammar = extend_grammar(nonterminal_grammar,
+    {
+        "<identifier>": ["<idchar>+"]
+    }
+ )
+The form <symbol>? indicates that <symbol> is optional – that is, it can occur 0 or 1 times.
+The form <symbol>+ indicates that <symbol> can occur 1 or more times repeatedly.
+The form <symbol>* indicates that <symbol> can occur 0 or more times. (In other words, it is an optional repetition.)
 
 EXPR_EBNF_GRAMMAR: Grammar = {
     "<start>":
@@ -325,20 +325,12 @@ EXPR_EBNF_GRAMMAR: Grammar = {
 
     "<digit>":
         srange(string.digits)
-}
+} """
 
-#### Excursion: Implementing `convert_ebnf_grammar()`
-
-if __name__ == '__main__':
-    print('\n#### Excursion: Implementing `convert_ebnf_grammar()`')
 
 
 
 ##### Creating New Symbols
-
-if __name__ == '__main__':
-    print('\n##### Creating New Symbols')
-
 
 
 def new_symbol(grammar: Grammar, symbol_name: str = "<symbol>") -> str:
@@ -353,14 +345,8 @@ def new_symbol(grammar: Grammar, symbol_name: str = "<symbol>") -> str:
             return tentative_symbol_name
         count += 1
 
-if __name__ == '__main__':
-    assert new_symbol(EXPR_EBNF_GRAMMAR, '<expr>') == '<expr-1>'
 
 ##### Expanding Parenthesized Expressions
-
-if __name__ == '__main__':
-    print('\n##### Expanding Parenthesized Expressions')
-
 
 
 RE_PARENTHESIZED_EXPR = re.compile(r'\([^()]*\)[?+*]')
@@ -373,9 +359,6 @@ def parenthesized_expressions(expansion: Expansion) -> List[str]:
 
     return re.findall(RE_PARENTHESIZED_EXPR, expansion)
 
-if __name__ == '__main__':
-    assert parenthesized_expressions("(<foo>)* (<foo><bar>)+ (+<foo>)? <integer>(.<integer>)?") == [
-        '(<foo>)*', '(<foo><bar>)+', '(+<foo>)?', '(.<integer>)?']
 
 def convert_ebnf_parentheses(ebnf_grammar: Grammar) -> Grammar:
     """Convert a grammar in extended BNF to BNF"""
@@ -415,17 +398,7 @@ def convert_ebnf_parentheses(ebnf_grammar: Grammar) -> Grammar:
 
     return grammar
 
-if __name__ == '__main__':
-    convert_ebnf_parentheses({"<number>": ["<integer>(.<integer>)?"]})
-
-if __name__ == '__main__':
-    convert_ebnf_parentheses({"<foo>": ["((<foo>)?)+"]})
-
-##### Expanding Operators
-
-if __name__ == '__main__':
-    print('\n##### Expanding Operators')
-
+#### Expanding Operators
 
 
 RE_EXTENDED_NONTERMINAL = re.compile(r'(<[^<> ]*>[?+*])')
@@ -437,10 +410,6 @@ def extended_nonterminals(expansion: Expansion) -> List[str]:
         expansion = expansion[0]
 
     return re.findall(RE_EXTENDED_NONTERMINAL, expansion)
-
-if __name__ == '__main__':
-    assert extended_nonterminals(
-        "<foo>* <bar>+ <elem>? <none>") == ['<foo>*', '<bar>+', '<elem>?']
 
 def convert_ebnf_operators(ebnf_grammar: Grammar) -> Grammar:
     """Convert a grammar in extended BNF to BNF"""
@@ -482,37 +451,10 @@ def convert_ebnf_operators(ebnf_grammar: Grammar) -> Grammar:
 
     return grammar
 
-if __name__ == '__main__':
-    convert_ebnf_operators({"<integer>": ["<digit>+"], "<digit>": ["0"]})
-
-##### All Together
-
-if __name__ == '__main__':
-    print('\n##### All Together')
-
 
 
 def convert_ebnf_grammar(ebnf_grammar: Grammar) -> Grammar:
     return convert_ebnf_operators(convert_ebnf_parentheses(ebnf_grammar))
-
-#### End of Excursion
-
-if __name__ == '__main__':
-    print('\n#### End of Excursion')
-
-
-
-if __name__ == '__main__':
-    convert_ebnf_grammar({"<authority>": ["(<userinfo>@)?<host>(:<port>)?"]})
-
-if __name__ == '__main__':
-    expr_grammar = convert_ebnf_grammar(EXPR_EBNF_GRAMMAR)
-    expr_grammar
-
-### Grammar Extensions
-
-if __name__ == '__main__':
-    print('\n### Grammar Extensions')
 
 
 
@@ -526,8 +468,6 @@ if __name__ == '__main__':
 def opts(**kwargs: Any) -> Dict[str, Any]:
     return kwargs
 
-if __name__ == '__main__':
-    opts(min_depth=10)
 
 def exp_string(expansion: Expansion) -> str:
     """Return the string to be expanded"""
@@ -535,8 +475,7 @@ def exp_string(expansion: Expansion) -> str:
         return expansion
     return expansion[0]
 
-if __name__ == '__main__':
-    exp_string(("<term> + <expr>", opts(min_depth=10)))
+
 
 def exp_opts(expansion: Expansion) -> Dict[str, Any]:
     """Return the options of an expansion.  If options are not defined, return {}"""
@@ -549,11 +488,6 @@ def exp_opt(expansion: Expansion, attribute: str) -> Any:
     If attribute is not defined, return None"""
     return exp_opts(expansion).get(attribute, None)
 
-if __name__ == '__main__':
-    exp_opts(("<term> + <expr>", opts(min_depth=10)))
-
-if __name__ == '__main__':
-    exp_opt(("<term> - <expr>", opts(max_depth=2)), 'max_depth')
 
 def set_opts(grammar: Grammar, symbol: str, expansion: Expansion, 
              opts: Option = {}) -> None:
@@ -584,25 +518,12 @@ def set_opts(grammar: Grammar, symbol: str, expansion: Expansion,
         repr(
             exp_string(expansion)))
 
-#### End of Excursion
 
-if __name__ == '__main__':
-    print('\n#### End of Excursion')
-
-
-
-## Checking Grammars
-## -----------------
-
-if __name__ == '__main__':
-    print('\n## Checking Grammars')
 
 
 
 ### Excursion: Implementing `is_valid_grammar()`
 
-if __name__ == '__main__':
-    print('\n### Excursion: Implementing `is_valid_grammar()`')
 
 
 
@@ -723,194 +644,19 @@ def is_valid_grammar(grammar: Grammar,
 
 ### End of Excursion
 
-if __name__ == '__main__':
-    print('\n### End of Excursion')
 
 
+#Finding Bugs
 
-if __name__ == '__main__':
-    assert is_valid_grammar(EXPR_GRAMMAR)
-    assert is_valid_grammar(CGI_GRAMMAR)
-    assert is_valid_grammar(URL_GRAMMAR)
+""" from .ExpectError import ExpectError, ExpectTimeout
 
-if __name__ == '__main__':
-    assert is_valid_grammar(EXPR_EBNF_GRAMMAR)
 
-if __name__ == '__main__':
-    assert not is_valid_grammar({"<start>": ["<x>"], "<y>": ["1"]})  # type: ignore
-
-if __name__ == '__main__':
-    assert not is_valid_grammar({"<start>": "123"})  # type: ignore
-
-if __name__ == '__main__':
-    assert not is_valid_grammar({"<start>": []})  # type: ignore
-
-if __name__ == '__main__':
-    assert not is_valid_grammar({"<start>": [1, 2, 3]})  # type: ignore
-
-## Synopsis
-## --------
-
-if __name__ == '__main__':
-    print('\n## Synopsis')
-
-
-
-US_PHONE_GRAMMAR: Grammar = {
-    "<start>": ["<phone-number>"],
-    "<phone-number>": ["(<area>)<exchange>-<line>"],
-    "<area>": ["<lead-digit><digit><digit>"],
-    "<exchange>": ["<lead-digit><digit><digit>"],
-    "<line>": ["<digit><digit><digit><digit>"],
-    "<lead-digit>": ["2", "3", "4", "5", "6", "7", "8", "9"],
-    "<digit>": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-}
-
-assert is_valid_grammar(US_PHONE_GRAMMAR)
-
-if __name__ == '__main__':
-    [simple_grammar_fuzzer(US_PHONE_GRAMMAR) for i in range(5)]
-
-## Lessons Learned
-## ---------------
-
-if __name__ == '__main__':
-    print('\n## Lessons Learned')
-
-
-
-## Next Steps
-## ----------
-
-if __name__ == '__main__':
-    print('\n## Next Steps')
-
-
-
-## Background
-## ----------
-
-if __name__ == '__main__':
-    print('\n## Background')
-
-
-
-## Exercises
-## ---------
-
-if __name__ == '__main__':
-    print('\n## Exercises')
-
-
-
-### Exercise 1: A JSON Grammar
-
-if __name__ == '__main__':
-    print('\n### Exercise 1: A JSON Grammar')
-
-
-
-CHARACTERS_WITHOUT_QUOTE = (string.digits
-                            + string.ascii_letters
-                            + string.punctuation.replace('"', '').replace('\\', '')
-                            + ' ')
-
-JSON_EBNF_GRAMMAR: Grammar = {
-    "<start>": ["<json>"],
-
-    "<json>": ["<element>"],
-
-    "<element>": ["<ws><value><ws>"],
-
-    "<value>": ["<object>", "<array>", "<string>", "<number>",
-                "true", "false", "null", "'; DROP TABLE STUDENTS"],
-
-    "<object>": ["{<ws>}", "{<members>}"],
-
-    "<members>": ["<member>(,<members>)*"],
-
-    "<member>": ["<ws><string><ws>:<element>"],
-
-    "<array>": ["[<ws>]", "[<elements>]"],
-
-    "<elements>": ["<element>(,<elements>)*"],
-
-    "<element>": ["<ws><value><ws>"],
-
-    "<string>": ['"' + "<characters>" + '"'],
-    
-    "<characters>": ["<character>*"],
-
-    "<character>": srange(CHARACTERS_WITHOUT_QUOTE),
-
-    "<number>": ["<int><frac><exp>"],
-
-    "<int>": ["<digit>", "<onenine><digits>", "-<digit>", "-<onenine><digits>"],
-
-    "<digits>": ["<digit>+"],
-
-    "<digit>": ['0', "<onenine>"],
-
-    "<onenine>": crange('1', '9'),
-
-    "<frac>": ["", ".<digits>"],
-
-    "<exp>": ["", "E<sign><digits>", "e<sign><digits>"],
-
-    "<sign>": ["", '+', '-'],
-
-    # "<ws>": srange(string.whitespace)
-
-    "<ws>": [" "]
-}
-
-assert is_valid_grammar(JSON_EBNF_GRAMMAR)
-
-JSON_GRAMMAR = convert_ebnf_grammar(JSON_EBNF_GRAMMAR)
-
-from .ExpectError import ExpectError
-
-if __name__ == '__main__':
-    for i in range(50):
-        with ExpectError():
-            print(simple_grammar_fuzzer(JSON_GRAMMAR, '<object>'))
-
-### Exercise 2: Finding Bugs
-
-if __name__ == '__main__':
-    print('\n### Exercise 2: Finding Bugs')
-
-
-
-from .ExpectError import ExpectError, ExpectTimeout
-
-if __name__ == '__main__':
-    with ExpectError():
+with ExpectError():
         simple_grammar_fuzzer(nonterminal_grammar, log=True)
 
-if __name__ == '__main__':
-    with ExpectTimeout(1):
+with ExpectTimeout(1):
         for i in range(10):
-            print(simple_grammar_fuzzer(expr_grammar))
-
-### Exercise 3: Grammars with Regular Expressions
-
-if __name__ == '__main__':
-    print('\n### Exercise 3: Grammars with Regular Expressions')
-
-
-
-#### Part 1: Convert regular expressions
-
-if __name__ == '__main__':
-    print('\n#### Part 1: Convert regular expressions')
-
-
-
-#### Part 2: Identify and expand regular expressions
-
-if __name__ == '__main__':
-    print('\n#### Part 2: Identify and expand regular expressions')
+            print(simple_grammar_fuzzer(expr_grammar ))"""
 
 
 
