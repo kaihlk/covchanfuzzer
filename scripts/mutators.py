@@ -3,60 +3,96 @@
 
 import random
 
-#Generate String
-#Parameter: Allowed Signs
-#Max Length, Min Length
 
-
-#Mutate String
-#Change Case
-#Slice and Switch
-#Delete Char
-#Add Char
-#Switch Chars
+####String Mutation####
 
 def delete_random_char(s: str) -> str:
+    # Deletes Random Char
     if s=='':
         return s
     pos = random.randint(0, len(s) - 1)
     return s[:pos] + s[pos + 1:]
 
-def insert_random_char(s: str) -> str:
+
+def insert_random_char(s: str, start=32, end=127) -> str:    
+    # Inserts a random Char at a random position
     pos = random.randint(0, len(s) - 1)
+    random_char = chr(random.randint(start, end))
+    return s[:pos] + random_char + s[pos + 1:]
+
+def random_switch_case_of_char_in_string(s: str) -> str : 
+    # Change the case of a char at a random position 
+    pos = random.randint(0, len(s) - 1)
+    c=s[pos]
+    if c.isupper():
+        return s[:pos] + c.lower() + s[pos+1:]
+    elif c.islower():
+        return s[:pos] + c.upper() + s[pos+1:]
+    else:
+        return s
+
+def random_switch_chars(s: str) -> str : 
+    # Switch two chars in a string
+    if len(s)<2:
+        return s
+    pos1 = random.randint(0, len(s) - 1)
+    pos2 = random.randint(0, len(s) - 1)
+    # Make sure both values differ
+    while pos2 == pos1:
+        pos2 = random.randint(0, len(s) - 1)
+    # Make sure pos1 < pos2
+    if pos1 > pos2:
+        pos1, pos2 = pos2, pos1
+    # Build string
+    return s[:pos1] + s[pos2] + s[pos1+1:pos2] +s[pos1] + s[pos2+1:]
+
+def random_slice_and_swap_string(s: str) -> str : 
+    # Slice a string into two parts and swap them
+    if len(s)<2:
+        return s
+    pos = random.randint(0, len(s) - 1)
+    return s[pos:] + s[:pos]
+
+def generate_random_string(char_set: str, length: int, minlength=0) -> str :
+    # Generate a random string from a charse
+    random_chars = [random.choice(char_set) for _ in range(minlength, length)]
+    return ''.join(random_chars)
+
+
+#### List Mutatations #### 
+
+def delete_random_entry(kv_list: list) -> list:
+    # Deletes a Random Entry from the Key-Value List
+    if not kv_list:
+        return kv_list   
+    pos = random.randint(0, len(kv_list) - 1)
+    del kv_list[pos]
+    return kv_list
+
+def insert_random_entry(kv_list: list, value_list: list) -> list:
+    # Inserts a Random Entry with a Random Value from Another List
+    if not value_list:
+        return kv_list    
+    pos = random.randint(0, len(kv_list))
+    random_entry = random.choice(value_list)  
+    kv_list.insert(pos, random_entry)
+    return kv_list
+
+def switch_random_entries(kv_list: list) -> list:
+    # Switches Two Random Entries in the Key-Value List
+    if len(kv_list) < 2:
+        return kv_list
+
+    pos1 = random.randint(0, len(kv_list) - 1)
+    pos2 = random.randint(0, len(kv_list) - 1)
     
-    return s[:pos] + s[pos + 1:]
+    while pos2 == pos1:
+        pos2 = random.randint(0, len(kv_list) - 1)
+    
+    kv_list[pos1], kv_list[pos2] = kv_list[pos2], kv_list[pos1]
+    return kv_list
 
 
-def insert_random_char(s: str, range: str) -> str:
-    if s=='':
-        return s
-    pos = random.randint(0, len(s) - 1)
-    return s[:pos] + s[pos + 1:]
+#### Integer Mutation ####
 
-
-def random_switch_case_of_char_in_string(original_string, fuzzvalue):
-    modified_string=''
-    deviation_count=0
-    # Randomly change the case of the field name
-    for c in original_string:
-        #The value of the probabiltiy to change a char is defined by the fuzzvalue
-        #the char functions doesn't affect signs and symbols
-        if random.random()<fuzzvalue:
-            if c.isupper():
-                modified_string=modified_string + c.lower()
-                deviation_count+=1
-            elif c.islower:
-                modified_string=modified_string + c.upper()
-                deviation_count+=1
-            else:
-                modified_string = modified_string + c
-        else:
-            modified_string = modified_string + c
-    return modified_string, deviation_count
-
-#Integer, max/min Size
-
-#List
-#Add Entry
-#Delete Entry
-#Switch Entries
+#Integer, max/min Size, zero, negative

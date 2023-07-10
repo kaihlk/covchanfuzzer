@@ -1,6 +1,7 @@
 from custom_http import CustomHTTP
 import http_utils 
-
+import mutators
+import random
 #Todo
 #host and channelselction, number of attempts as arguments?
 #host and channels as a file?
@@ -15,9 +16,20 @@ hosts = [
   #  ('www.google.com', 80),
    #('www.amazon.com', 443)
 ]
+SampleString="Hallo Welt!"
+
 
 def main():
-    # Select the method for forging the header
+    print(SampleString)
+    print(mutators.delete_random_char(SampleString))
+    print(mutators.insert_random_char(SampleString))
+    print(mutators.random_switch_case_of_char_in_string(SampleString))
+    print(mutators.random_switch_chars(SampleString))
+    print(mutators.random_slice_and_swap_string(SampleString))
+    print(SampleString+mutators.generate_random_string(" \t", random.randint(0,10))+"<--")
+    print(mutators.generate_random_string(SampleString, 15))
+    
+"""  # Select the method for forging the header
     covertchannel_number = 7
     # Number of attempts
     num_attempts = 10
@@ -43,7 +55,7 @@ def main():
             if response_status_code=='200':
                 ok+=1
             #ToDo Save request, deviation, status_code maybe response Time? 
-    print('Successfull packets: '+str(ok) + ' of '+str(num_attempts)+ ' attempts.')
+    print('Successfull packets: '+str(ok) + ' of '+str(num_attempts)+ ' attempts.') """
 
             
 
