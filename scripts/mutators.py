@@ -2,7 +2,14 @@
 #methods to mutate inputs
 
 import random
-
+""" print(SampleString)
+    print(mutators.delete_random_char(SampleString))
+    print(mutators.insert_random_char(SampleString))
+    print(mutators.random_switch_case_of_char_in_string(SampleString))
+    print(mutators.random_switch_chars(SampleString))
+    print(mutators.random_slice_and_swap_string(SampleString))
+    print(SampleString+mutators.generate_random_string(" \t", random.randint(0,10))+"<--")
+    print(mutators.generate_random_string(SampleString, 15)) """
 
 ####String Mutation####
 

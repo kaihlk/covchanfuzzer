@@ -46,19 +46,24 @@ class CustomHTTP(HTTP):
 
 
 
-    def http_request(self, host, path="/", port=80, timeout=3,
+    def http_request(self, host, path="/", port=80, host_ip_info=None, timeout=3,
                     display=False, verbose=0, customRequest=None, **headers):
         """Util to perform an HTTP request, using a socket connection.
 
-        :param host: the host to connect to
-        :param path: the path of the request (default /)
-        :param port: the port (default 80)
-        :param timeout: timeout before None is returned
-        :param display: display the result in the default browser (default False)
-        :param headers: any additional headers passed to the request
+        param host: the host to connect to
+        param path: the path of the request (default /)
+        param port: the port (default 80)
+        param timeout: timeout before None is returned
+        param display: display the result in the default browser (default False)
+        param headers: any additional headers passed to the request
 
-        :returns: the HTTPResponse packet
+        returns: the HTTPResponse packet
         """
+        #DNS Lookup if info not provided
+        if host_ip_info==None:
+            host_ip_info=self.lookup_dns(host,port)
+
+        #TODO Add IPV6 support
         http_headers = {
             "Accept_Encoding": b'gzip, deflate',
             "Cache_Control": b'no-cache',
@@ -76,20 +81,19 @@ class CustomHTTP(HTTP):
         
         #Check
         print(req)
-        #Lookup Domain
-        host_ip_address_info=self.lookup_dns(host,port)
+
         # Establish a socket connection
-        sock=self.create_tcp_socket(host_ip_address_info)
+        sock=self.create_tcp_socket(host_ip_info)
         # Upgrade to TLS depending on the port
         if (443==port):
             tls_socket = self.upgrade_to_tls(sock, host)
             #Connect Socket to TCP Endpoint
-            tls_socket.connect(host_ip_address_info[0][4])
+            tls_socket.connect(host_ip_info[0][4])
             tls_socket.settimeout(timeout)
             assert('http/1.1' == tls_socket.selected_alpn_protocol())
             stream_socket = SuperSocket.SSLStreamSocket(tls_socket, basecls=HTTP)
         else:
-            sock.connect((host_ip_address_info[0][4]))
+            sock.connect((host_ip_info[0][4]))
             sock.settimeout(timeout)
             stream_socket = SuperSocket.StreamSocket(sock, basecls=HTTP)
         
@@ -112,7 +116,7 @@ class CustomHTTP(HTTP):
            ans = None
         finally:
         
-            # Close the socketas
+            # Close the socket 
             if (443==port):
                 tls_socket.shutdown(1)
                 stream_socket.close()

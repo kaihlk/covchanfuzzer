@@ -1,4 +1,4 @@
-# http_utils.py
+# http1_covered_channels.py
 # Definition of functions to generate cover channels in http/1.1 requests
 #TODO HTTP/2 request generation, with method:
 

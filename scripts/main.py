@@ -1,5 +1,5 @@
 from custom_http import CustomHTTP
-import http_utils 
+import http1_covered_channels 
 import mutators
 import random
 import threading
@@ -15,50 +15,98 @@ import subprocess
 # Control the body of the response as well (?)
 
 hosts = [
-    ('www.example.com', 80),
-  #  ('www.google.com', 80),
+    ('www.example.com', 443),
+   # ('www.google.com', 80),
    #('www.amazon.com', 443)
 ]
 
-def capture_packets(destination_ip, destination_port, host, coveredchannel):
+#dumpcap needs less privilige than tshark and is maybe faster.
+# Prerequsites:
+#  sudo usermod -a -G wireshark your_username
+#  sudo setcap cap_net_raw=eip $(which dumpcap)
+def capture_packets_dumpcap(destination_ip, destination_port, host, coveredchannel, stop_capture_flag, timeout=20.0, nw_interface="eth0"):
+    # Set the output file for captured packets
+    pcap_file = f"captured_packets_{host}_{coveredchannel}_{destination_ip}_{destination_port}.pcap"
+
+    # Filter for packets related to the specific connection, host filter both directions
+    filter_expression = f"host {destination_ip}"
+
+    # Generate command to run Dumpcap
+    dumpcap_cmd = [
+        "dumpcap",
+        "-i", nw_interface,
+        "-w", pcap_file,
+        "-f", filter_expression
+    ]
+
+    try:
+        # Start the dumpcap process in a separate thread
+      
+        dumpcap_thread = threading.Thread(target=subprocess.run, args=(dumpcap_cmd,), kwargs={"timeout": timeout})
+        dumpcap_thread.start()
+
+        # Wait for the HTTP response or timeout
+        while not stop_capture_flag.is_set():
+            # Continue capturing packets until the response is received or timeout occurs
+            pass
+
+        # If the response arrived, terminate the capturing process early
+        print("HTTP Response received. Capturing terminated.")
+        subprocess.run(["pkill", "dumpcap"])  # Terminate dumpcap process
+        print("Packets captured and saved to", pcap_file)
+
+        # Wait for the capture thread to finish
+        dumpcap_thread.join()
+
+    except subprocess.TimeoutExpired:
+        # If a timeout occurs, terminate the dumpcap process
+        print("Timeout limit reached. Capturing terminated.")
+        subprocess.run(["pkill", "dumpcap"])  # Terminate dumpcap process
+        print("Packets captured and saved to", pcap_file)
+    except subprocess.CalledProcessError as e:
+        print("Error occurred during packet capture:", e)
+
+
+
+def capture_packets_tshark(destination_ip, destination_port, host, coveredchannel, timeout=20.0, nw_interface="eth0" ):
 
     # Set the output file for captured packets
-    pcap_file = f"captured_packets_{host}_{coverchannel}_{destination_ip}_{destination_port}.pcap"
+    pcap_file = f"captured_packets_{host}_{coveredchannel}_{destination_ip}_{destination_port}.pcap"
    
-    # Filter for packets related to the specific connection (client to server)
-    filter_expression = f"dst {destination_ip} and dst port {destination_port}"
+    # Filter for packets related to the specific connection, host filter both direction
+    filter_expression = f"host {destination_ip} and port {destination_port}"
 
-    # Build the tshark command
+    # Generate command to run TShark
     tshark_cmd = [
         "tshark",
-        "-i", "<interface>",      # Replace <interface> with the network interface name
+        "-i", nw_interface,     
         "-w", pcap_file,
         "-f", filter_expression
     ]
 
      # Function to terminate the tshark process after timeout
     def terminate_capture():
-        proc.terminate()
+        tshark_process.terminate()
 
     # Start tshark process
-    proc = subprocess.Popen(tshark_cmd, stdout=subprocess.PIPE, text=True, bufsize=1, universal_newlines=True)
+    tshark_process = subprocess.Popen(tshark_cmd, stdout=subprocess.PIPE, text=True, bufsize=1, universal_newlines=True)
 
     # Flag to track if complete HTTP response is found
     complete_response_found = False
 
     # Create a timer thread to terminate the capture after timeout
-    timeout_timer = threading.Timer(capture_timeout, terminate_capture)
+    timeout_timer = threading.Timer(timeout, terminate_capture)
     timeout_timer.start()
 
     # Loop through the captured packets
-    for line in iter(proc.stdout.readline, ''):
+    for line in iter(tshark_proce.stdout.readline, ''):
         # Check if the blank line (end of HTTP response headers) is found
-        if line == '\r\n':
+        if line == '\r\n':  #This needs testing
             complete_response_found = True
             break
 
     # Stop capturing by killing the tshark process (if not already terminated)
-    proc.terminate()
+    tshark_proce.terminate()
 
     # Cancel the timeout timer
     timeout_timer.cancel()
@@ -73,34 +121,47 @@ def capture_packets(destination_ip, destination_port, host, coveredchannel):
 
 
 def main():
-    """ print(SampleString)
-    print(mutators.delete_random_char(SampleString))
-    print(mutators.insert_random_char(SampleString))
-    print(mutators.random_switch_case_of_char_in_string(SampleString))
-    print(mutators.random_switch_chars(SampleString))
-    print(mutators.random_slice_and_swap_string(SampleString))
-    print(SampleString+mutators.generate_random_string(" \t", random.randint(0,10))+"<--")
-    print(mutators.generate_random_string(SampleString, 15)) """
+
     
  # Select the method for forging the header
-    covertchannel_number = 7
+    covertchannel_number = 3
     # Number of attempts
-    num_attempts = 10
+    num_attempts = 1
     ok=0
+    conn_timeout=20.0
+    nw_interface="enp0s3"
+    #Flag if IPv4 should be used when possible
+    useIPv4=True
+
     for targethost, targetport in hosts:
-        
-        
+        # Dns Lookup has to be done here  to get thark parameters          
+        target_ip_info=CustomHTTP().lookup_dns(targethost,targetport)
+        if useIPv4:
+            target_ip=target_ip_info[0][4][0]
+        else: target_ip=target_ip_info[1][4][0] 
+    
         for _ in range(num_attempts):
             #Todo:   Baseline Check if Client is not blocked yet
        
-            request, deviation_count = http_utils.forge_http_request(cc_number=covertchannel_number, host=targethost, port=targetport, url='/', method="GET", headers=None, fuzzvalue=0.1)
+            request, deviation_count = http1_covered_channels.forge_http_request(cc_number=covertchannel_number, host=targethost, port=targetport, url='/', method="GET", headers=None, fuzzvalue=0.1)
 
-            # Send the HTTP request and get the response        
-            
-            # Dns Lookup has to be done here  to get thark parameters          
 
-            response=CustomHTTP().http_request(host=targethost, port=targetport, customRequest=request)
+            # Create a flag to stop the capturing process when the response is received
+            stop_capture_flag = threading.Event()
+
+            # Start thread to capture the packets
+            # Create an start thread for the packet capture
+            capture_thread = threading.Thread(target=capture_packets_dumpcap, args=(target_ip, targetport, targethost,  covertchannel_number, stop_capture_flag, conn_timeout, nw_interface))
+            capture_thread.start()
+            # Send the HTTP request and get the response in the main thread                             
+            response=CustomHTTP().http_request(host=targethost, port=targetport, host_ip_info=target_ip_info, customRequest=request)
+            # Set the stop_capture_flag to signal the capturing thread to stop earlier 
+            stop_capture_flag.set()
+            # Wait for the capture thread to finish
+            capture_thread.join()
+
             response_status_code=response.Status_Code.decode('utf-8')
+
 
             # Print the response status code and deviation count
             print("Host: {}".format(targethost))
