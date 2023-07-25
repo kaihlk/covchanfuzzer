@@ -4,6 +4,8 @@ import mutators
 import random
 import threading
 import subprocess
+import time
+import os
 
 #Todo
 #host and channelselction, number of attempts as arguments?
@@ -24,9 +26,9 @@ hosts = [
 # Prerequsites:
 #  sudo usermod -a -G wireshark your_username
 #  sudo setcap cap_net_raw=eip $(which dumpcap)
-def capture_packets_dumpcap(destination_ip, destination_port, host, coveredchannel, stop_capture_flag, timeout=20.0, nw_interface="eth0"):
+def capture_packets_dumpcap(destination_ip, destination_port, host, log_dir, coveredchannel, stop_capture_flag, timeout=20.0, nw_interface="eth0"):
     # Set the output file for captured packets
-    pcap_file = f"captured_packets_{host}_{coveredchannel}_{destination_ip}_{destination_port}.pcap"
+    pcap_file = f"{log_dir}/captured_packets_{host}_{coveredchannel}_{destination_ip}_{destination_port}.pcap"
 
     # Filter for packets related to the specific connection, host filter both directions
     filter_expression = f"host {destination_ip}"
@@ -36,8 +38,8 @@ def capture_packets_dumpcap(destination_ip, destination_port, host, coveredchann
         "dumpcap",
         "-i", nw_interface,
         "-w", pcap_file,
-        "-f", filter_expression
-    ]
+        "-f", filter_expression,
+        ]
 
     try:
         # Start the dumpcap process in a separate thread
@@ -49,7 +51,7 @@ def capture_packets_dumpcap(destination_ip, destination_port, host, coveredchann
         while not stop_capture_flag.is_set():
             # Continue capturing packets until the response is received or timeout occurs
             pass
-
+        time.sleep(0.1)
         # If the response arrived, terminate the capturing process early
         print("HTTP Response received. Capturing terminated.")
         subprocess.run(["pkill", "dumpcap"])  # Terminate dumpcap process
@@ -126,55 +128,65 @@ def main():
  # Select the method for forging the header
     covertchannel_number = 3
     # Number of attempts
-    num_attempts = 1
+    num_attempts = 10
     ok=0
     conn_timeout=20.0
     nw_interface="enp0s3"
     #Flag if IPv4 should be used when possible
     useIPv4=True
 
-    for targethost, targetport in hosts:
+    for target_host, target_port in hosts:
         # Dns Lookup has to be done here  to get thark parameters          
-        target_ip_info=CustomHTTP().lookup_dns(targethost,targetport)
+        target_ip_info=CustomHTTP().lookup_dns(target_host,target_port)
         if useIPv4:
             target_ip=target_ip_info[0][4][0]
         else: target_ip=target_ip_info[1][4][0] 
-    
+
+        #Create a directory to store the logs
+        timestamp = time.strftime("%Y%m%d_%H%M%S")
+        log_dir = f"logs/{timestamp}_{target_host}"
+        os.makedirs(log_dir, exist_ok=True)
+         # Create a flag to stop the capturing process when the response is received
+        stop_capture_flag = threading.Event()
+
+        # Start thread to capture the packets
+        # Create an start thread for the packet capture
+        capture_thread = threading.Thread(target=capture_packets_dumpcap, args=(target_ip, target_port, target_host, log_dir, covertchannel_number, stop_capture_flag, conn_timeout, nw_interface))
+        capture_thread.start()
+
         for _ in range(num_attempts):
             #Todo:   Baseline Check if Client is not blocked yet
        
-            request, deviation_count = http1_covered_channels.forge_http_request(cc_number=covertchannel_number, host=targethost, port=targetport, url='/', method="GET", headers=None, fuzzvalue=0.1)
+            request, deviation_count = http1_covered_channels.forge_http_request(cc_number=covertchannel_number, host=target_host, port=target_port, url='/', method="GET", headers=None, fuzzvalue=0.1)
 
 
-            # Create a flag to stop the capturing process when the response is received
-            stop_capture_flag = threading.Event()
-
-            # Start thread to capture the packets
-            # Create an start thread for the packet capture
-            capture_thread = threading.Thread(target=capture_packets_dumpcap, args=(target_ip, targetport, targethost,  covertchannel_number, stop_capture_flag, conn_timeout, nw_interface))
-            capture_thread.start()
+           
             # Send the HTTP request and get the response in the main thread                             
-            response=CustomHTTP().http_request(host=targethost, port=targetport, host_ip_info=target_ip_info, customRequest=request)
+            response=CustomHTTP().http_request(host=target_host, port=target_port, host_ip_info=target_ip_info, customRequest=request)
             # Set the stop_capture_flag to signal the capturing thread to stop earlier 
-            stop_capture_flag.set()
-            # Wait for the capture thread to finish
-            capture_thread.join()
+ 
 
             response_status_code=response.Status_Code.decode('utf-8')
 
 
             # Print the response status code and deviation count
-            print("Host: {}".format(targethost))
-            print("Port: {}".format(targetport))
+            print("Host: {}".format(target_host))
+            print("Port: {}".format(target_port))
             print("Status Code: {}".format(response.Status_Code.decode('utf-8')))
             print("Deviation Count: {}\n".format(deviation_count))
 
             if response_status_code=='200':
                 ok+=1
             #ToDo Save request, deviation, status_code maybe response Time? 
+        stop_capture_flag.set()
+        # Wait for the capture thread to finish
+        capture_thread.join()
+
     print('Successfull packets: '+str(ok) + ' of '+str(num_attempts)+ ' attempts.')
 
-            
+    #TODO Create Meta Data
+    # Save SSHKeys and Clean Up
+    os.rename("sessionkeys.txt", f"{log_dir}/sessionkeys.txt")    
 
 if __name__ == '__main__':
     main()
