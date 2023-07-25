@@ -6,13 +6,23 @@ import threading
 import subprocess
 import time
 import os
+import json
 
 
+def save_metafile(metafile_path, experiment_variables):
+    data = {
+        "experiment_variables": experiment_variables,    
+    }
+
+    with open(metafile_path, "w") as file:
+        json.dump(data, file, indent=4)
 
 #dumpcap needs less privilige than tshark and is maybe faster.
 # Prerequsites:
 #  sudo usermod -a -G wireshark your_username
 #  sudo setcap cap_net_raw=eip $(which dumpcap)
+
+
 
 def capture_packets_dumpcap(destination_ip, destination_port, host, log_dir, coveredchannel, stop_capture_flag, nw_interface="eth0"):
     # Set the output file for captured packets
@@ -78,15 +88,18 @@ def main():
     # Number of attempts
 
     num_attempts = 10
+    #set counter for 200 received to zero
     ok=0
     conn_timeout=20.0
     nw_interface="enp0s3"
-    
+    fuzz_value=0.5
     #Flag if IPv4 should be used when possible
     
     useIPv4=True
 
     for target_host, target_port in hosts:
+         #set counter for 200 received to zero
+        ok=0
         # Dns Lookup has to be done here  to get thark parameters          
         target_ip_info=CustomHTTP().lookup_dns(target_host,target_port)
         if useIPv4:
@@ -102,14 +115,14 @@ def main():
 
         # Start thread to capture the packets
         # Create an start thread for the packet capture
-        capture_thread = threading.Thread(target=capture_packets_dumpcap, args=(target_ip, target_port, target_host, log_dir, covertchannel_number, stop_capture_flag, conn_timeout, nw_interface))
+        capture_thread = threading.Thread(target=capture_packets_dumpcap, args=(target_ip, target_port, target_host, log_dir, covertchannel_number, stop_capture_flag, nw_interface))
         capture_thread.start()
         #Output of the Capturing
         time.sleep(0.5)
         for _ in range(num_attempts):
             #Todo:   Baseline Check if Client is not blocked yet
        
-            request, deviation_count = http1_covered_channels.forge_http_request(cc_number=covertchannel_number, host=target_host, port=target_port, url='/', method="GET", headers=None, fuzzvalue=0.1)    
+            request, deviation_count = http1_covered_channels.forge_http_request(cc_number=covertchannel_number, host=target_host, port=target_port, url='/', method="GET", headers=None, fuzzvalue=fuzz_value)    
             # Send the HTTP request and get the response in the main thread                             
             response=CustomHTTP().http_request(host=target_host, port=target_port, host_ip_info=target_ip_info, customRequest=request)
             # Set the stop_capture_flag to signal the capturing thread to stop earlier 
@@ -122,7 +135,7 @@ def main():
 
             if response_status_code=='200':
                 ok+=1
-            #ToDo Save request, deviation, status_code maybe response Time? 
+            #ToDo Save request, deviation, status_code maybe response Time into separate file? 
         stop_capture_flag.set()
         # Wait for the capture thread to finish
         capture_thread.join()
@@ -130,14 +143,37 @@ def main():
     print('Successfull packets: '+str(ok) + ' of '+str(num_attempts)+ ' attempts.')
 
     #TODO Create Meta Data
+    experiment_variables = {
+        "Comment": "Some text describing the Testrun",
+        "covertchannel_number": covertchannel_number,
+        "number_of_attempts": num_attempts,
+        "fuzzvalue": fuzz_value,
+        "timeout_value": conn_timeout,
+        "networkinterface": nw_interface,
+        "use_IPv4": useIPv4,
+        "host": target_host,
+        "port": target_port,
+        "Target_IP_Information": target_ip_info,
+        "Used_Target_IP": target_ip,
+        "Used_Target_Port": target_port,
+        "log_dir": log_dir,
+        "Number_of_200_Responses": ok,
+        
+    }
+    metafile_path=f"{log_dir}/metafile.json"
+    save_metafile(metafile_path, experiment_variables)
+    
+    
+    
     # Save SSHKeys and Clean Up
     os.rename("sessionkeys.txt", f"{log_dir}/sessionkeys.txt")    
 
+
+    #TODO Generate a bash script for each folder to view results
     #Open Wireshark for the files to review
    # wireshark_cmd = ["wireshark", "-r", f"{log_dir}/captured_packets_{target_host}_{covertchannel_number}_{target_ip}_{target_port}.pcap", "-o", f"tls.keylog_file:{log_dir}/sessionkeys.txt"]
-
     # Run Wireshark command
-    subprocess.run(wireshark_cmd)
+   # subprocess.run(wireshark_cmd)
     
 
 if __name__ == '__main__':
