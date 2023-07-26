@@ -179,7 +179,8 @@ def main():
     for status_code, count in status_code_count.items():
         print(f"{status_code}: {count}")
 
-    #TODO Create Meta Data
+    #Save Experiment Metadata
+
     experiment_variables = {
         'Time Stamp': timestamp,
         "Comment": "Some text describing the Testrun",
