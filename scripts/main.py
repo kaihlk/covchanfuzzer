@@ -9,24 +9,46 @@ import os
 import json
 
 
-def save_metafile(metafile_path, experiment_variables):
+
+# PCAP Files 
+def save_logfiles(log_dir, experiment_variables, triplets_list):
+    
+    #Save Meta Data
+    metafile_path=f"{log_dir}/metafile.json"
     data = {
         "experiment_variables": experiment_variables,    
     }
 
     with open(metafile_path, "w") as file:
         json.dump(data, file, indent=4)
+    #Move TLS Keys to Log Folder
+    os.rename("sessionkeys.txt", f"{log_dir}/sessionkeys.txt")    
+    # Create Bash Script to start Wireshark with TLS KeyFile
+    wireshark_cmd = ["wireshark", "-r", "captured_packets.pcap", "-o", f"tls.keylog_file:sessionkeys.txt"]
+    wireshark_script_path = f"{log_dir}/wireshark_script.sh"
+    with open(wireshark_script_path, "w") as file:
+        file.write("#!/bin/bash\n")
+        file.write(" ".join(wireshark_cmd))
+
+    # Add execute permission to the bash file
+    os.chmod(wireshark_script_path, 0o755)
+
+    #Save the Triplets Request, Deviation Count and Response Statuscode
+    log_file_path = f"{log_dir}/log_file.json"
+    with open(log_file_path, "w") as file:
+        json.dump(triplets_list, file, indent=4)
+
+
+
 
 #dumpcap needs less privilige than tshark and is maybe faster.
 # Prerequsites:
 #  sudo usermod -a -G wireshark your_username
 #  sudo setcap cap_net_raw=eip $(which dumpcap)
 
-
-
 def capture_packets_dumpcap(destination_ip, destination_port, host, log_dir, coveredchannel, stop_capture_flag, nw_interface="eth0"):
     # Set the output file for captured packets
-    pcap_file = f"{log_dir}/captured_packets_{host}_{coveredchannel}_{destination_ip}_{destination_port}.pcap"
+    pcap_path = f"{log_dir}/captured_packets.pcap"
 
     # Filter for packets related to the specific connection, host filter both directions
     filter_expression = f"host {destination_ip}"
@@ -35,7 +57,7 @@ def capture_packets_dumpcap(destination_ip, destination_port, host, log_dir, cov
     dumpcap_cmd = [
         "dumpcap",
         "-i", nw_interface,
-        "-w", pcap_file,
+        "-w", pcap_path,
         "-f", filter_expression,
         "-q",
         ]
@@ -52,9 +74,9 @@ def capture_packets_dumpcap(destination_ip, destination_port, host, log_dir, cov
             pass
         time.sleep(0.1)
         # If the response arrived, terminate the capturing process early
-        print("HTTP Response received. Capturing terminated.")
+        print("End of run. Capturing terminated.")
         subprocess.run(["pkill", "dumpcap"])  # Terminate dumpcap process
-        print("Packets captured and saved to", pcap_file)
+        print("Packets captured and saved to", pcap_path)
 
         # Wait for the capture thread to finish
         dumpcap_thread.join()
@@ -63,7 +85,7 @@ def capture_packets_dumpcap(destination_ip, destination_port, host, log_dir, cov
         # If a timeout occurs, terminate the dumpcap process
         print("Timeout limit reached. Capturing terminated.")
         subprocess.run(["pkill", "dumpcap"])  # Terminate dumpcap process
-        print("Packets captured and saved to", pcap_file)
+        print("Packets captured and saved to", pcap_path)
     except subprocess.CalledProcessError as e:
         print("Error occurred during packet capture:", e)
 
@@ -86,20 +108,23 @@ def main():
     # Select covered channel for forging the header
     covertchannel_number = 3
     # Number of attempts
-
     num_attempts = 10
     #set counter for 200 received to zero
     ok=0
     conn_timeout=20.0
     nw_interface="enp0s3"
+    #Value to change the propability to change packets
     fuzz_value=0.5
     #Flag if IPv4 should be used when possible
     
     useIPv4=True
+    
+    #Inititialise dictoionaries and lists for logging
+    status_code_count = {}
+    triplets_list = []
 
     for target_host, target_port in hosts:
-         #set counter for 200 received to zero
-        ok=0
+
         # Dns Lookup has to be done here  to get thark parameters          
         target_ip_info=CustomHTTP().lookup_dns(target_host,target_port)
         if useIPv4:
@@ -110,40 +135,55 @@ def main():
         timestamp = time.strftime("%Y%m%d_%H%M%S")
         log_dir = f"logs/{timestamp}_{target_host}"
         os.makedirs(log_dir, exist_ok=True)
-         # Create a flag to stop the capturing process when the response is received
+        
+        # Create a flag to stop the capturing process when the response is received
         stop_capture_flag = threading.Event()
 
-        # Start thread to capture the packets
         # Create an start thread for the packet capture
         capture_thread = threading.Thread(target=capture_packets_dumpcap, args=(target_ip, target_port, target_host, log_dir, covertchannel_number, stop_capture_flag, nw_interface))
         capture_thread.start()
-        #Output of the Capturing
-        time.sleep(0.5)
+
+        #Time to let the packet dumper work
+        time.sleep(1)
+
         for _ in range(num_attempts):
             #Todo:   Baseline Check if Client is not blocked yet
        
             request, deviation_count = http1_covered_channels.forge_http_request(cc_number=covertchannel_number, host=target_host, port=target_port, url='/', method="GET", headers=None, fuzzvalue=fuzz_value)    
             # Send the HTTP request and get the response in the main thread                             
-            response=CustomHTTP().http_request(host=target_host, port=target_port, host_ip_info=target_ip_info, customRequest=request)
-            # Set the stop_capture_flag to signal the capturing thread to stop earlier 
+            response=CustomHTTP().http_request(host=target_host, port=target_port, host_ip_info=target_ip_info, customRequest=request)            
             response_status_code=response.Status_Code.decode('utf-8')
+
+            #Save Data
+            status_code_count[response_status_code] = status_code_count.get(response_status_code, 0) + 1
+
+            triplet = {
+            "request": request,
+            "deviation_count": deviation_count,
+            "status_code": response_status_code
+            }
+            triplets_list.append(triplet)
+            
             # Print the response status code and deviation count
             print("Host: {}".format(target_host))
             print("Port: {}".format(target_port))
             print("Status Code: {}".format(response.Status_Code.decode('utf-8')))
             print("Deviation Count: {}\n".format(deviation_count))
 
-            if response_status_code=='200':
-                ok+=1
-            #ToDo Save request, deviation, status_code maybe response Time into separate file? 
+        #Time to let the packet dumper work
+        time.sleep(1)
         stop_capture_flag.set()
         # Wait for the capture thread to finish
         capture_thread.join()
 
-    print('Successfull packets: '+str(ok) + ' of '+str(num_attempts)+ ' attempts.')
+    
+    print("Status Code Counts:")
+    for status_code, count in status_code_count.items():
+        print(f"{status_code}: {count}")
 
     #TODO Create Meta Data
     experiment_variables = {
+        'Time Stamp': timestamp,
         "Comment": "Some text describing the Testrun",
         "covertchannel_number": covertchannel_number,
         "number_of_attempts": num_attempts,
@@ -158,23 +198,10 @@ def main():
         "Used_Target_Port": target_port,
         "log_dir": log_dir,
         "Number_of_200_Responses": ok,
-        
+        "Received_Status_Codes": status_code_count,
     }
-    metafile_path=f"{log_dir}/metafile.json"
-    save_metafile(metafile_path, experiment_variables)
     
-    
-    
-    # Save SSHKeys and Clean Up
-    os.rename("sessionkeys.txt", f"{log_dir}/sessionkeys.txt")    
-
-
-    #TODO Generate a bash script for each folder to view results
-    #Open Wireshark for the files to review
-   # wireshark_cmd = ["wireshark", "-r", f"{log_dir}/captured_packets_{target_host}_{covertchannel_number}_{target_ip}_{target_port}.pcap", "-o", f"tls.keylog_file:{log_dir}/sessionkeys.txt"]
-    # Run Wireshark command
-   # subprocess.run(wireshark_cmd)
-    
-
+    save_logfiles(log_dir, experiment_variables, triplets_list)   
+   
 if __name__ == '__main__':
     main()

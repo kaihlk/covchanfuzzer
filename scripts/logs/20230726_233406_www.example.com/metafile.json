@@ -1,0 +1,45 @@
+{
+    "experiment_variables": {
+        "Time Stamp": "20230726_233406",
+        "Comment": "Some text describing the Testrun",
+        "covertchannel_number": 3,
+        "number_of_attempts": 10,
+        "fuzzvalue": 0.5,
+        "timeout_value": 20.0,
+        "networkinterface": "enp0s3",
+        "use_IPv4": true,
+        "host": "www.example.com",
+        "port": 443,
+        "Target_IP_Information": [
+            [
+                2,
+                1,
+                6,
+                "",
+                [
+                    "93.184.216.34",
+                    443
+                ]
+            ],
+            [
+                10,
+                1,
+                6,
+                "",
+                [
+                    "2606:2800:220:1:248:1893:25c8:1946",
+                    443,
+                    0,
+                    0
+                ]
+            ]
+        ],
+        "Used_Target_IP": "93.184.216.34",
+        "Used_Target_Port": 443,
+        "log_dir": "logs/20230726_233406_www.example.com",
+        "Number_of_200_Responses": 0,
+        "Received_Status_Codes": {
+            "200": 10
+        }
+    }
+}
