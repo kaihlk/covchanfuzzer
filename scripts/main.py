@@ -93,10 +93,10 @@ def main():
     #Todo
     #host and channelselction, number of attempts as arguments?
     #host and channels as a file?
-    #  auto capture the packets, tls with wireshark/tshark
-    # Data Output: Host, port, Channel, Request Packet, Answer Status Code
-    # Add a mode that leaves some time between requests to the same adress (Not getting caught by Denial of service counter measures)
+    
+    # Add a cautios mode that leaves some time between requests to the same adress (Not getting caught by Denial of service counter measures)
     # Add a mode that sends a well formed request every x attempts to verify not being blocked
+    
     # Control the body of the response as well (?)
 
     hosts = [
@@ -109,8 +109,6 @@ def main():
     covertchannel_number = 3
     # Number of attempts
     num_attempts = 10
-    #set counter for 200 received to zero
-    ok=0
     conn_timeout=20.0
     nw_interface="enp0s3"
     #Value to change the propability to change packets
@@ -197,7 +195,6 @@ def main():
         "Used_Target_IP": target_ip,
         "Used_Target_Port": target_port,
         "log_dir": log_dir,
-        "Number_of_200_Responses": ok,
         "Received_Status_Codes": status_code_count,
     }
     
