@@ -70,6 +70,7 @@ def capture_packets_dumpcap(destination_ip, destination_port, host, log_dir, cov
     try:
 
         dumpcap_process = subprocess.Popen(dumpcap_cmd, stdout=subprocess.PIPE, text=True)
+        
         # Wait for the HTTP response or timeout
         while not stop_capture_flag.is_set():
             # Continue capturing packets until the response is received or timeout occurs
@@ -79,7 +80,7 @@ def capture_packets_dumpcap(destination_ip, destination_port, host, log_dir, cov
         print("End of run. Capturing terminated.")
         subprocess.run(["pkill", "dumpcap"])  # Terminate dumpcap process
         print("Packets captured and saved to", pcap_path)
-
+        time.sleep(1)
         # When the capturing process is complete, put the captured packets count into the result queue
         output = dumpcap_process.stdout.read() + dumpcap_process.stdout.read()
         print("Here comes the output:")
