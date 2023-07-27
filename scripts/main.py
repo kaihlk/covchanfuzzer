@@ -130,9 +130,9 @@ def main():
     ]
     
     # Select covered channel for forging the header
-    covertchannel_number = 3
+    covertchannel_number = 7
     # Number of attempts
-    num_attempts = 10
+    num_attempts = 100
     conn_timeout=20.0
     nw_interface="lo" #"enp0s3"
     #Value to change the propability to change packets
