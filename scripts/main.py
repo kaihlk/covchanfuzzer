@@ -7,7 +7,8 @@ import subprocess
 import time
 import os
 import json
-
+import re
+from queue import Queue
 
 
 # PCAP Files 
@@ -46,7 +47,9 @@ def save_logfiles(log_dir, experiment_variables, triplets_list):
 #  sudo usermod -a -G wireshark your_username
 #  sudo setcap cap_net_raw=eip $(which dumpcap)
 
-def capture_packets_dumpcap(destination_ip, destination_port, host, log_dir, coveredchannel, stop_capture_flag, nw_interface="eth0"):
+def capture_packets_dumpcap(destination_ip, destination_port, host, log_dir, coveredchannel, stop_capture_flag, nw_interface="eth0",result_queue=None):
+ 
+    
     # Set the output file for captured packets
     pcap_path = f"{log_dir}/captured_packets.pcap"
 
@@ -62,12 +65,11 @@ def capture_packets_dumpcap(destination_ip, destination_port, host, log_dir, cov
         "-q",
         ]
 
-    try:
-        # Start the dumpcap process in a separate thread
-      
-        dumpcap_thread = threading.Thread(target=subprocess.run, args=(dumpcap_cmd,))#, kwargs={"timeout": timeout})
-        dumpcap_thread.start()
+    packets_captured = 0
 
+    try:
+
+        dumpcap_process = subprocess.Popen(dumpcap_cmd, stdout=subprocess.PIPE, text=True)
         # Wait for the HTTP response or timeout
         while not stop_capture_flag.is_set():
             # Continue capturing packets until the response is received or timeout occurs
@@ -78,8 +80,24 @@ def capture_packets_dumpcap(destination_ip, destination_port, host, log_dir, cov
         subprocess.run(["pkill", "dumpcap"])  # Terminate dumpcap process
         print("Packets captured and saved to", pcap_path)
 
-        # Wait for the capture thread to finish
-        dumpcap_thread.join()
+        # When the capturing process is complete, put the captured packets count into the result queue
+        output = dumpcap_process.stdout.read() + dumpcap_process.stdout.read()
+        print("Here comes the output:")
+        print(output)
+
+        packet_count_pattern = r"Packets captured: (\d+)"
+        match = re.search(packet_count_pattern, output)
+        for line in output.splitlines():
+            print("Line 1:"+line)
+            match = re.search(packet_count_pattern, line)
+            if match:
+                packets_captured = int(match.group(1))
+                break
+        else:
+            print("Packets captured information not found.")
+        if result_queue:
+            result_queue.put(packets_captured)
+     
 
     except subprocess.TimeoutExpired:
         # If a timeout occurs, terminate the dumpcap process
@@ -117,11 +135,8 @@ def main():
     
     useIPv4=True
     
-    #Inititialise dictoionaries and lists for logging
-    status_code_count = {}
-    triplets_list = []
-
     for target_host, target_port in hosts:
+
 
         # Dns Lookup has to be done here  to get thark parameters          
         target_ip_info=CustomHTTP().lookup_dns(target_host,target_port)
@@ -134,17 +149,24 @@ def main():
         log_dir = f"logs/{timestamp}_{target_host}"
         os.makedirs(log_dir, exist_ok=True)
         
+        #Inititialise dictoionaries and lists for logging
+        status_code_count = {}
+        request_data_list = []
+        
         # Create a flag to stop the capturing process when the response is received
         stop_capture_flag = threading.Event()
+        # Create a queue to store the result (captured packets count)
+        result_queue = Queue()
 
         # Create an start thread for the packet capture
-        capture_thread = threading.Thread(target=capture_packets_dumpcap, args=(target_ip, target_port, target_host, log_dir, covertchannel_number, stop_capture_flag, nw_interface))
+        capture_thread = threading.Thread(target=capture_packets_dumpcap, args=(target_ip, target_port, target_host, log_dir, covertchannel_number, stop_capture_flag, nw_interface), kwargs={"result_queue": result_queue})
         capture_thread.start()
+
 
         #Time to let the packet dumper work
         time.sleep(1)
 
-        for _ in range(num_attempts):
+        for i in range(num_attempts):
             #Todo:   Baseline Check if Client is not blocked yet
        
             request, deviation_count = http1_covered_channels.forge_http_request(cc_number=covertchannel_number, host=target_host, port=target_port, url='/', method="GET", headers=None, fuzzvalue=fuzz_value)    
@@ -155,12 +177,14 @@ def main():
             #Save Data
             status_code_count[response_status_code] = status_code_count.get(response_status_code, 0) + 1
 
-            triplet = {
+            request_data = {
+            "Number": i,
             "request": request,
             "deviation_count": deviation_count,
+            "length": len(request),
             "status_code": response_status_code
             }
-            triplets_list.append(triplet)
+            request_data_list.append(request_data)
             
             # Print the response status code and deviation count
             print("Host: {}".format(target_host))
@@ -173,7 +197,7 @@ def main():
         stop_capture_flag.set()
         # Wait for the capture thread to finish
         capture_thread.join()
-
+        captured_packets_count = result_queue.get()
     
     print("Status Code Counts:")
     for status_code, count in status_code_count.items():
@@ -187,19 +211,22 @@ def main():
         "covertchannel_number": covertchannel_number,
         "number_of_attempts": num_attempts,
         "fuzzvalue": fuzz_value,
-        "timeout_value": conn_timeout,
-        "networkinterface": nw_interface,
-        "use_IPv4": useIPv4,
-        "host": target_host,
-        "port": target_port,
+        "Timeout_value": conn_timeout,
+        "Networkinterface": nw_interface,
+        "Use_IPv4": useIPv4,
+        "Host": target_host,
+        "Port": target_port,
         "Target_IP_Information": target_ip_info,
         "Used_Target_IP": target_ip,
         "Used_Target_Port": target_port,
         "log_dir": log_dir,
         "Received_Status_Codes": status_code_count,
+        "Captured Packet": captured_packets_count,
     }
-    
-    save_logfiles(log_dir, experiment_variables, triplets_list)   
+    ##ADD Adhoc Statistics
+
+
+    save_logfiles(log_dir, experiment_variables, request_data_list)   
    
 if __name__ == '__main__':
     main()
