@@ -13,6 +13,8 @@ import ssl
 
 class CustomHTTP(HTTP):
     def lookup_dns(self, hostname, portnumber):
+        if hostname.lower() == 'localhost':
+            hostname = '127.0.0.1'
         try:
             # Lookup IP of HTTP Endpoint
             address = socket.getaddrinfo(hostname, portnumber, socket.INADDR_ANY, socket.SOCK_STREAM, socket.IPPROTO_TCP)

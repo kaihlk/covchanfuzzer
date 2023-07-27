@@ -22,8 +22,12 @@ def save_logfiles(log_dir, experiment_variables, triplets_list):
 
     with open(metafile_path, "w") as file:
         json.dump(data, file, indent=4)
-    #Move TLS Keys to Log Folder
-    os.rename("sessionkeys.txt", f"{log_dir}/sessionkeys.txt")    
+    #Move TLS Keys to Log Folder when present
+    if os.path.exists("sessionkeys.txt"):
+        try:
+            os.rename("sessionkeys.txt", f"{log_dir}/sessionkeys.txt")
+        except OSError as e:
+            print(f"An error occurred while moving the file: {str(e)}")
     # Create Bash Script to start Wireshark with TLS KeyFile
     wireshark_cmd = ["wireshark", "-r", "captured_packets.pcap", "-o", f"tls.keylog_file:sessionkeys.txt"]
     wireshark_script_path = f"{log_dir}/wireshark_script.sh"
@@ -119,7 +123,8 @@ def main():
     # Control the body of the response as well (?)
 
     hosts = [
-        ('www.example.com', 443),
+        ('localhost', 8080)
+        #('www.example.com', 443),
     # ('www.google.com', 80),
     #('www.amazon.com', 443)
     ]
@@ -129,7 +134,7 @@ def main():
     # Number of attempts
     num_attempts = 10
     conn_timeout=20.0
-    nw_interface="enp0s3"
+    nw_interface="lo" #"enp0s3"
     #Value to change the propability to change packets
     fuzz_value=0.5
     #Flag if IPv4 should be used when possible

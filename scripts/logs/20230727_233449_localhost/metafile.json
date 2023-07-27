@@ -1,0 +1,34 @@
+{
+    "experiment_variables": {
+        "Time Stamp": "20230727_233449",
+        "Comment": "Some text describing the Testrun",
+        "covertchannel_number": 3,
+        "number_of_attempts": 10,
+        "fuzzvalue": 0.5,
+        "Timeout_value": 20.0,
+        "Networkinterface": "docker0",
+        "Use_IPv4": true,
+        "Host": "localhost",
+        "Port": 8080,
+        "Target_IP_Information": [
+            [
+                2,
+                1,
+                6,
+                "",
+                [
+                    "127.0.0.1",
+                    8080
+                ]
+            ]
+        ],
+        "Used_Target_IP": "127.0.0.1",
+        "Used_Target_Port": 8080,
+        "log_dir": "logs/20230727_233449_localhost",
+        "Received_Status_Codes": {
+            "400": 6,
+            "200": 4
+        },
+        "Captured Packet": 0
+    }
+}
