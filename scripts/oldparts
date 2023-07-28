@@ -1,0 +1,14 @@
+'''# When the capturing process is complete, put the captured packets count into the result queue
+            output = dumpcap_process.stdout.read() + dumpcap_process.stdout.read()
+            packet_count_pattern = r"Packets captured: (\d+)"
+            match = re.search(packet_count_pattern, output)
+            for line in output.splitlines():
+                print("Line 1:" + line)
+                match = re.search(packet_count_pattern, line)
+                if match:
+                    packets_captured = int(match.group(1))
+                    break
+            else:
+                print("Packets captured information not found.")
+                        if result_queue:
+                result_queue.put(packets_captured)'''

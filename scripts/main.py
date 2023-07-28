@@ -14,14 +14,14 @@ class ExperimentLogger:
         self.experiment_configuration = experiment_configuration
         self.target_ip = target_ip
         self.target_port = target_port
-        self.log_dir = self.create_logging_folder(experiment_configuration["host"])
+        self.log_dir = self.create_logging_folder(experiment_configuration["target_host"])
 
 
     def create_logging_folder(self, target_host):
         '''Create a directory to store the logs'''
         timestamp = time.strftime("%Y%m%d_%H%M%S")
         log_dir = f"logs/{timestamp}_{target_host}"
-        os.makedirs(self.log_dir, exist_ok=True)
+        os.makedirs(log_dir, exist_ok=True)
         return log_dir
     
     def save_experiment_metadata(self, result_variables):
@@ -103,7 +103,7 @@ class ExperimentLogger:
         ]
 
         try:
-            dumpcap_process = subprocess.Popen(dumpcap_cmd)
+            subprocess.Popen(dumpcap_cmd)
             # Wait for stop flag
             while not stop_capture_flag.is_set():
                 # Continue capturing packets until the response is received or timeout occurs
@@ -127,12 +127,13 @@ class ExperimentLogger:
 
 
 class ExperimentRunnter:
+    '''Runs the experiment itself'''
     def __init__(self, experiment_configuration, target_ip_info):
         self.experiment_configuration = experiment_configuration
         self.target_ip_info = target_ip_info
         self.target_port = experiment_configuration["target_port"]
     
-    def baselie_check(self):
+    def baseline_check(self):
         #Todo
         return True
 
@@ -149,21 +150,22 @@ class ExperimentRunnter:
                     fuzzvalue=self.experiment_configuration["fuzz_value"],
                 )
         #Send request and get response
-        try:
-            response, response_time = CustomHTTP().http_request(
-                host=self.experiment_configuration["target_host"],
-                port=self.target_port,
-                host_ip_info=self.target_ip_info,
-                customRequest=request,
-            )
-        except Exception as ex:
-            print("An error occurred during the HTTP request:", ex)
-            response = None
-            response_time = None
+        print(request)
+        #
+        response, response_time = CustomHTTP().http_request(
+            host=self.experiment_configuration["target_host"],
+            port=self.target_port,
+            host_ip_info=self.target_ip_info,
+            custom_request=request,
+        )
+       #except Exception as ex:
+       #     print("An error occurred during the HTTP request:", ex)
+       #     response = None
+         #   response_time = None
         response_status_code = response.Status_Code.decode("utf-8")
         
         request_data = {
-            "number": i,
+            "number": number,
             "request": request,
             "deviation_count": deviation_count,
             "request_length": len(request),
@@ -179,59 +181,37 @@ class ExperimentRunnter:
         status_code_count = {}
         request_data_list = []
         for i in range(self.experiment_configuration["num_attempts"]):
-            if self.baselie_check()==False:
+            if self.baseline_check() is False:
                 print("Baseline Check Failure, Connection maybe blocked")
             else:     
                 # Send the HTTP request and get the response in the main thread
-                request, request_data=self.forge_and_send_requests()
-                status_code_count[request_data["status_code"]] = (status_code_count.get(response_status_code, 0) + 1)
+                response, request_data=self.forge_and_send_requests(i)
+                status_code_count[request_data["status_code"]] = (status_code_count.get(request_data["status_code"], 0) + 1)
                 request_data_list.append(request_data)
                 # Print the response status code and deviation count
                 print("Host: {}".format(self.experiment_configuration["target_host"]))
                 print("Port: {}".format(self.target_port))
-                print("Status Code: {}".format(response.Status_Code.decode("utf-8")))
-                print("Deviation Count: {}\n".format(deviation_count))
+                print("Status Code: {}".format(request_data["status_code"]))
+                print("Deviation Count: {}\n".format(request_data["deviation_count"]))
 
         return status_code_count, request_data_list   
 
-        
 
-'''# When the capturing process is complete, put the captured packets count into the result queue
-            output = dumpcap_process.stdout.read() + dumpcap_process.stdout.read()
-            packet_count_pattern = r"Packets captured: (\d+)"
-            match = re.search(packet_count_pattern, output)
-            for line in output.splitlines():
-                print("Line 1:" + line)
-                match = re.search(packet_count_pattern, line)
-                if match:
-                    packets_captured = int(match.group(1))
-                    break
-            else:
-                print("Packets captured information not found.")
-                        if result_queue:
-                result_queue.put(packets_captured)'''
 
 def main():
     '''Function that runs the connection, selection of the CC and the fuzzer, should be cleaned up and externalised'''
     # TODO
     # host and channelselction, number of attempts as arguments?
-    # host and channels as a file?
 
     # Add a cautios mode that leaves some time between requests to the same adress (Not getting caught by Denial of service counter measures)
     # Add a mode that sends a well formed request every x attempts to verify not being blocked
 
     # Control the body of the response as well (?)
 
-    hosts = [
-        ("localhost", 8080)
-        # ('www.example.com', 443),
-        # ('www.google.com', 80),
-        # ('www.amazon.com', 443)
-    ]
-
-        # Experiment Configuration Values
+    # Experiment Configuration Values
     experiment_configuration = {
-        "covertchannel_number": 7,
+        "comment": "Some text describing the Testrun",
+        "covertchannel_number": 3,
         "num_attempts": 100,
         "conn_timeout": 20.0,
         "nw_interface": "lo",
@@ -266,53 +246,11 @@ def main():
         )
     )
     capture_thread.start()
-
+    time.sleep(1)
+    status_code_count, request_data_list = ExperimentRunnter(experiment_configuration, target_ip_info).run_experiment()
     # Time to let the packet dumper work
     time.sleep(1)
 
-    for i in range(experiment_configuration["num_attempts"]):
-        #TODO   Baseline Check if Client is not blocked yet
-
-        request, deviation_count = http1_covered_channels.forge_http_request(
-            cc_number=experiment_configuration["covertchannel_number"],
-            host=experiment_configuration["host"],
-            port=target_port,
-            url="/",
-            method="GET",
-            headers=None,
-            fuzzvalue=experiment_configuration["fuzz_value"],
-        )
-        # Send the HTTP request and get the response in the main thread
-        response = CustomHTTP().http_request(
-            host=experiment_configuration["host"],
-            port=target_port,
-            host_ip_info=target_ip_info,
-            customRequest=request,
-        )
-        response_status_code = response.Status_Code.decode("utf-8")
-
-        # Save Data
-        status_code_count[response_status_code] = (
-            status_code_count.get(response_status_code, 0) + 1
-        )
-
-        request_data = {
-            "Number": i,
-            "request": request,
-            "deviation_count": deviation_count,
-            "length": len(request),
-            "status_code": response_status_code,
-        }
-        request_data_list.append(request_data)
-
-        # Print the response status code and deviation count
-        print("Host: {}".format(experiment_configuration["host"]))
-        print("Port: {}".format(target_port))
-        print("Status Code: {}".format(response.Status_Code.decode("utf-8")))
-        print("Deviation Count: {}\n".format(deviation_count))
-
-    # Time to let the packet dumper work
-    time.sleep(1)
     stop_capture_flag.set()
     # Wait for the capture thread to finish
     capture_thread.join()
@@ -323,28 +261,11 @@ def main():
         print(f"{status_code}: {count}")
 
     # Save Experiment Metadata
-
-    experiment_variables = {
-        "Time Stamp": timestamp,
-        "Comment": "Some text describing the Testrun",
-        "covertchannel_number": covertchannel_number,
-        "number_of_attempts": num_attempts,
-        "fuzzvalue": fuzz_value,
-        "Timeout_value": conn_timeout,
-        "Networkinterface": nw_interface,
-        "Use_IPv4": use_ipv4,
-        "Host": target_host,
-        "Port": target_port,
-        "Target_IP_Information": target_ip_info,
-        "Used_Target_IP": target_ip,
-        "Used_Target_Port": target_port,
-        "log_dir": log_dir,
+    result_variables = {
         "Received_Status_Codes": status_code_count,
-        "Captured Packet": captured_packets_count,
+        #Here maybe more information would be nice, successful attempts/failures, count of successfull baseline checks, statistical data? medium response time?
     }
-    ##ADD Adhoc Statistics
-
-    save_logfiles(log_dir, experiment_variables, request_data_list)
+    logger.save_logfiles(request_data_list, result_variables)
 
 
 if __name__ == "__main__":
