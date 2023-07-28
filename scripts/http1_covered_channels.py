@@ -1,4 +1,5 @@
 # http1_covered_channels.py
+
 # Definition of functions to generate cover channels in http/1.1 requests
 # TODO HTTP/2 request generation, with method:
 
@@ -23,6 +24,7 @@ default_headers = [
 
 
 def parse_host(host):
+    '''Parse host uris'''
     # Initialize variables
     scheme = ""
     subdomain = ""
@@ -83,10 +85,10 @@ def random_switch_case_of_char_in_string(original_string, fuzzvalue):
     return modified_string, deviation_count
 
 
-# Generation of request package without insertion of a covert channel
 def generate_standard_request(
     host, port, url="/", method="GET", headers=None, fuzzvalue=None
 ):
+    '''Generation of request package without insertion of a covert channel'''
     # Check if headers are provided elsewise take default headers
     if headers is None:
         headers = default_headers.copy()
@@ -113,11 +115,12 @@ def generate_standard_request(
     return request_string, deviation_count
 
 
-# Covertchannel suggested by Kwecka et al: Case-insensitivity of header key names
-# fuzzvalue defines the probability that a character of a header field is changed
+
 def generate_request_CC_case_insensitivity(
     host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
 ):
+    '''Covertchannel suggested by Kwecka et al: Case-insensitivity of header key names, fuzzvalue defines the probability that a character of a header field is changed'''
+
     # Check fuzzvalue
     if fuzzvalue < 0 or fuzzvalue > 1:
         raise ValueError("fuzzvalue must be between 0 and 1.")
@@ -239,15 +242,17 @@ def generate_request_CC_reordering_headerfields(
     return request_string, deviation_count
 
 
-# URI in the request line
-# Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers
-# Divide in 3 cover channels due to difference of technique
-# Change the part of the path to make an absolute URI, may include scheme, port or
-## Empty or not given port assune 80
-# http as scheme name and host name case insenitivity
+
 def generate_request_CC_change_uri_representation(
     host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
 ):
+    '''URI in the request line
+    Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers
+    Divide in 3 cover channels due to difference of technique
+    Change the part of the path to make an absolute URI, may include scheme, port or
+    Empty or not given port assune 80
+    http as scheme name and host name case insenitivity'''
+    
     # Check if headers are provided elsewise take default headers
     if headers is None:
         headers = default_headers.copy()
@@ -312,10 +317,10 @@ def generate_request_CC_change_uri_representation(
     return request_string, deviation_count
 
 
-# CC URI  with addional changes in Case insensitvity
 def generate_request_CC_change_uri_case_insensitivity(
     host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
 ):
+    '''CC URI  with addional changes in Case insensitvity'''
     # Check if headers are provided elsewise take default headers
     if headers is None:
         headers = default_headers.copy()

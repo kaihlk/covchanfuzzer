@@ -3,16 +3,20 @@
 # Also provides a method to build a TLS Connection over the Socket
 
 
-from scapy.layers.http import *
+from scapy.layers.http import HTTP, HTTPRequest
 
 import socket
 import sys
 import scapy.supersocket as SuperSocket
 import ssl
+import time
 
 
 class CustomHTTP(HTTP):
+    '''Class to build up a http/1 connection to host via a socket'''
+    
     def lookup_dns(self, hostname, portnumber):
+        '''Function to make a DNS Lookup for a specified host or localhost using sockets and return the received data as a dictionary of tuples ''' 
         if hostname.lower() == "localhost":
             hostname = "127.0.0.1"
         try:
@@ -24,12 +28,13 @@ class CustomHTTP(HTTP):
                 socket.SOCK_STREAM,
                 socket.IPPROTO_TCP,
             )
-        except socket.gaierror as e:
-            print(f"DNS Lookup failed: {str(e)}")
+        except socket.gaierror as ex:
+            print(f"DNS Lookup failed: {str(ex)}")
             sys.exit(1)
         return address
 
     def create_tcp_socket(self, addrlist):
+        '''Create a TCP socket'''
         # Build socket
         s = socket.socket(addrlist[0][0], addrlist[0][1], addrlist[0][2])
         # Set socket options
@@ -40,6 +45,7 @@ class CustomHTTP(HTTP):
         return s
 
     def upgrade_to_tls(self, s, hostname):
+        '''Upgrade a tcp socket connection to TLS'''
         # Testing support for ALPN
         assert ssl.HAS_ALPN
         # Building the SSL context
@@ -59,9 +65,9 @@ class CustomHTTP(HTTP):
         port=80,
         host_ip_info=None,
         timeout=3,
-        display=False,
-        verbose=0,
-        customRequest=None,
+        #display=False,
+        #verbose=0,
+        custom_request=None,
         **headers,
     ):
         """Util to perform an HTTP request, using a socket connection.
@@ -76,10 +82,10 @@ class CustomHTTP(HTTP):
         returns: the HTTPResponse packet
         """
         # DNS Lookup if info not provided
-        if host_ip_info == None:
+        if host_ip_info is None:
             host_ip_info = self.lookup_dns(host, port)
 
-        # TODO Add IPV6 support
+        #TODO Add IPV6 support
         http_headers = {
             "Accept_Encoding": b"gzip, deflate",
             "Cache_Control": b"no-cache",
@@ -89,9 +95,9 @@ class CustomHTTP(HTTP):
             "Path": path,
         }
         http_headers.update(headers)
-        if customRequest is not None:
-            http_headers = customRequest
-            req = customRequest.encode()
+        if custom_request is not None:
+            http_headers = custom_request
+            req = custom_request.encode()
         else:
             req = HTTP() / HTTPRequest(**http_headers)
 
@@ -113,20 +119,20 @@ class CustomHTTP(HTTP):
             sock.settimeout(timeout)
             stream_socket = SuperSocket.StreamSocket(sock, basecls=HTTP)
 
-        ans = None
+        response = None
         try:
             # Send the request over the socket
+            start_time=time.time()
             stream_socket.send(req)
 
             # Receive the response
-
             response = stream_socket.recv()
-
-            # Create an HTTPResponse packet with the received response This part is not working properly
-            ans = response  # HTTPResponse(response)
+            end_time = time.time()
+            response_time=end_time-start_time
+  
         except socket.timeout:
             print("Timeout Limit reached")
-            ans = None
+            response = None
         finally:
             # Close the socket
             if 443 == port:
@@ -136,25 +142,4 @@ class CustomHTTP(HTTP):
                 sock.shutdown(1)
                 stream_socket.close()
 
-        return ans
-
-
-##Testing:
-
-
-""" 
-host='www.example.com'
-http_packet = CustomHTTP()
-myRequest= generate_chromium_header("www.example.com")
-answer=http_packet.http_request(host,port=80, customRequest=myRequest[0])
-received_status=answer.Status_Code.decode('utf-8')
-print('TCP:')
-print(received_status)
-
-host='www.example.com'
-http_packet2 = CustomHTTP()
-
-answer=http_packet2.http_request(host,port=443)
-received_status=answer.Status_Code.decode('utf-8')
-print('TLS:')
-print(received_status) """
+        return response, response_time
