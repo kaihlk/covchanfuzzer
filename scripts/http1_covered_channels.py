@@ -7,7 +7,7 @@ import random
 from urllib.parse import quote
 
 class Http1_Covered_Channel:
-     def __init__(self, target_host, target_port):
+    def __init__(self, target_host, target_port):
         self.target_host = target_host
         self.target_port = target_port   
         self. default_headers = [
@@ -25,8 +25,7 @@ class Http1_Covered_Channel:
             ("Connection", "keep-alive"),
         ]
 
-
-    def parse_host(self,host):
+    def parse_host(self):
         '''Parse host uris'''
         # Initialize variables
         scheme = ""
@@ -35,7 +34,7 @@ class Http1_Covered_Channel:
         domain = ""
         port = ""
         path = ""
-
+        host = self.target_host
         # Check if the host contains a scheme
         if "://" in host:
             # Split the host into scheme and the rest of the URL
