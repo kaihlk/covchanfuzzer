@@ -1,0 +1,19 @@
+{
+    "configuration_variables": {
+        "comment": "Some text describing the Testrun",
+        "covertchannel_number": 3,
+        "num_attempts": 100,
+        "conn_timeout": 20.0,
+        "nw_interface": "lo",
+        "fuzz_value": 0.5,
+        "use_ipv4": true,
+        "target_host": "localhost",
+        "target_port": 8080
+    },
+    "result_variables": {
+        "Received_Status_Codes": {
+            "200": 36,
+            "400": 64
+        }
+    }
+}
