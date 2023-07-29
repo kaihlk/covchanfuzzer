@@ -6,117 +6,120 @@
 import random
 from urllib.parse import quote
 
-
-default_headers = [
-    # The field with the Host and the url must be generated and inserted in the functions
-    (
-        "User-Agent",
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
-    ),
-    (
-        "Accept",
-        "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-    ),
-    ("Accept-Encoding", "gzip, deflate, br"),
-    ("Accept-Language", "en-US,en;q=0.9"),
-    ("Connection", "keep-alive"),
-]
-
-
-def parse_host(host):
-    '''Parse host uris'''
-    # Initialize variables
-    scheme = ""
-    subdomain = ""
-    hostname = ""
-    domain = ""
-    port = ""
-    path = ""
-
-    # Check if the host contains a scheme
-    if "://" in host:
-        # Split the host into scheme and the rest of the URL
-        parts = host.split("://", 1)
-        scheme = parts[0]
-        remaining = parts[1]
-    else:
-        remaining = host
-
-    # Split the remaining URL into subdomain, hostname, domain, and port (if present)
-    parts = remaining.split("/", 1)
-    if len(parts) == 2:
-        remaining, path = parts
-
-    subdomain_parts = remaining.split(".", 1)
-    if len(subdomain_parts) == 2:
-        subdomain = subdomain_parts[0]
-        remaining = subdomain_parts[1]
-
-    hostname_parts = remaining.split(".", 1)
-    if len(hostname_parts) == 2:
-        hostname = hostname_parts[0]
-        domain_port = hostname_parts[1].split(":", 1)
-        domain = domain_port[0]
-        if len(domain_port) == 2:
-            port = domain_port[1]
-
-    # Return the extracted parts as a tuple
-    return scheme, subdomain, hostname, domain, port, path
+class Http1_Covered_Channel:
+     def __init__(self, target_host, target_port):
+        self.target_host = target_host
+        self.target_port = target_port   
+        self. default_headers = [
+            # The field with the Host and the url must be generated and inserted in the functions
+            (
+                "User-Agent",
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
+            ),
+            (
+                "Accept",
+                "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+            ),
+            ("Accept-Encoding", "gzip, deflate, br"),
+            ("Accept-Language", "en-US,en;q=0.9"),
+            ("Connection", "keep-alive"),
+        ]
 
 
-def random_switch_case_of_char_in_string(original_string, fuzzvalue):
-    modified_string = ""
-    deviation_count = 0
-    # Randomly change the case of the field name
-    for c in original_string:
-        # The value of the probabiltiy to change a char is defined by the fuzzvalue
-        # the char functions doesn't affect signs and symbols
-        if random.random() < fuzzvalue:
-            if c.isupper():
-                modified_string = modified_string + c.lower()
-                deviation_count += 1
-            elif c.islower:
-                modified_string = modified_string + c.upper()
-                deviation_count += 1
+    def parse_host(self,host):
+        '''Parse host uris'''
+        # Initialize variables
+        scheme = ""
+        subdomain = ""
+        hostname = ""
+        domain = ""
+        port = ""
+        path = ""
+
+        # Check if the host contains a scheme
+        if "://" in host:
+            # Split the host into scheme and the rest of the URL
+            parts = host.split("://", 1)
+            scheme = parts[0]
+            remaining = parts[1]
+        else:
+            remaining = host
+
+        # Split the remaining URL into subdomain, hostname, domain, and port (if present)
+        parts = remaining.split("/", 1)
+        if len(parts) == 2:
+            remaining, path = parts
+
+        subdomain_parts = remaining.split(".", 1)
+        if len(subdomain_parts) == 2:
+            subdomain = subdomain_parts[0]
+            remaining = subdomain_parts[1]
+
+        hostname_parts = remaining.split(".", 1)
+        if len(hostname_parts) == 2:
+            hostname = hostname_parts[0]
+            domain_port = hostname_parts[1].split(":", 1)
+            domain = domain_port[0]
+            if len(domain_port) == 2:
+                port = domain_port[1]
+
+        # Return the extracted parts as a tuple
+        return scheme, subdomain, hostname, domain, port, path
+
+
+    def random_switch_case_of_char_in_string(self, original_string, fuzzvalue):
+        modified_string = ""
+        deviation_count = 0
+        # Randomly change the case of the field name
+        for c in original_string:
+            # The value of the probabiltiy to change a char is defined by the fuzzvalue
+            # the char functions doesn't affect signs and symbols
+            if random.random() < fuzzvalue:
+                if c.isupper():
+                    modified_string = modified_string + c.lower()
+                    deviation_count += 1
+                elif c.islower:
+                    modified_string = modified_string + c.upper()
+                    deviation_count += 1
+                else:
+                    modified_string = modified_string + c
             else:
                 modified_string = modified_string + c
+        return modified_string, deviation_count
+
+
+    def generate_standard_request(self, 
+        host, port, url="/", method="GET", headers=None, fuzzvalue=None
+    ):
+        '''Generation of request package without insertion of a covert channel'''
+        # Check if headers are provided elsewise take default headers
+        if headers is None:
+            headers = default_headers.copy()
         else:
-            modified_string = modified_string + c
-    return modified_string, deviation_count
+            # Create a copy to avoid modifying the original list
+            headers = headers.copy()
 
+        # Insert the Host header at the beginning of the list
+        headers.insert(0, ("Host", host))
 
-def generate_standard_request(
-    host, port, url="/", method="GET", headers=None, fuzzvalue=None
-):
-    '''Generation of request package without insertion of a covert channel'''
-    # Check if headers are provided elsewise take default headers
-    if headers is None:
-        headers = default_headers.copy()
-    else:
-        # Create a copy to avoid modifying the original list
-        headers = headers.copy()
+        # Build the request_line from the provided arguments
+        request_line = f"{method} {url} HTTP/1.1\r\n"
 
-    # Insert the Host header at the beginning of the list
-    headers.insert(0, ("Host", host))
+        # Build the request from request line and headers
+        request_string = request_line
+        for header in headers:
+            request_string += f"{header[0]}: {header[1]}\r\n"
 
-    # Build the request_line from the provided arguments
-    request_line = f"{method} {url} HTTP/1.1\r\n"
+        # Add the ending of the request
+        request_string += "\r\n"
 
-    # Build the request from request line and headers
-    request_string = request_line
-    for header in headers:
-        request_string += f"{header[0]}: {header[1]}\r\n"
-
-    # Add the ending of the request
-    request_string += "\r\n"
-
-    # No deviation
-    deviation_count = 0
-    return request_string, deviation_count
+        # No deviation
+        deviation_count = 0
+        return request_string, deviation_count
 
 
 
-def generate_request_CC_case_insensitivity(
+class generate_request_CC_case_insensitivity(
     host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
 ):
     '''Covertchannel suggested by Kwecka et al: Case-insensitivity of header key names, fuzzvalue defines the probability that a character of a header field is changed'''
