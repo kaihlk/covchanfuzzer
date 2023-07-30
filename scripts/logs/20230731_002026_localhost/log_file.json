@@ -1,0 +1,902 @@
+[
+    {
+        "number": 0,
+        "request": "GET http://.:443/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 403,
+        "status_code": "400",
+        "response_time": 0.019666671752929688,
+        "error_message": null
+    },
+    {
+        "number": 1,
+        "request": "GET http://www..:8080 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 407,
+        "status_code": "400",
+        "response_time": 0.019067764282226562,
+        "error_message": null
+    },
+    {
+        "number": 2,
+        "request": "GET www.:443/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 399,
+        "status_code": "400",
+        "response_time": 0.015491485595703125,
+        "error_message": null
+    },
+    {
+        "number": 3,
+        "request": "GET http://./ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 399,
+        "status_code": "400",
+        "response_time": 0.0066030025482177734,
+        "error_message": null
+    },
+    {
+        "number": 4,
+        "request": "GET https://.:8080 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 404,
+        "status_code": "200",
+        "response_time": 0.0019335746765136719,
+        "error_message": null
+    },
+    {
+        "number": 5,
+        "request": "GET www..:19205/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 402,
+        "status_code": "400",
+        "response_time": 0.0008132457733154297,
+        "error_message": null
+    },
+    {
+        "number": 6,
+        "request": "GET http://www...:8080 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 408,
+        "status_code": "400",
+        "response_time": 0.008554697036743164,
+        "error_message": null
+    },
+    {
+        "number": 7,
+        "request": "GET https://:8080/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 404,
+        "status_code": "200",
+        "response_time": 0.0075495243072509766,
+        "error_message": null
+    },
+    {
+        "number": 8,
+        "request": "GET http://./ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 399,
+        "status_code": "400",
+        "response_time": 0.01371455192565918,
+        "error_message": null
+    },
+    {
+        "number": 9,
+        "request": "GET http://www.:8080/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 407,
+        "status_code": "200",
+        "response_time": 0.0077707767486572266,
+        "error_message": null
+    },
+    {
+        "number": 10,
+        "request": "GET http://www./ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 402,
+        "status_code": "200",
+        "response_time": 0.005897045135498047,
+        "error_message": null
+    },
+    {
+        "number": 11,
+        "request": "GET https://:40627/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 405,
+        "status_code": "200",
+        "response_time": 0.005883693695068359,
+        "error_message": null
+    },
+    {
+        "number": 12,
+        "request": "GET  HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 390,
+        "status_code": "400",
+        "response_time": 0.005968809127807617,
+        "error_message": null
+    },
+    {
+        "number": 13,
+        "request": "GET http://.:55381/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 405,
+        "status_code": "400",
+        "response_time": 0.015208244323730469,
+        "error_message": null
+    },
+    {
+        "number": 14,
+        "request": "GET http://www..:8080/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 408,
+        "status_code": "400",
+        "response_time": 0.02803516387939453,
+        "error_message": null
+    },
+    {
+        "number": 15,
+        "request": "GET http://www..:80/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 406,
+        "status_code": "400",
+        "response_time": 0.0017669200897216797,
+        "error_message": null
+    },
+    {
+        "number": 16,
+        "request": "GET http://www..:80/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 406,
+        "status_code": "400",
+        "response_time": 0.008673667907714844,
+        "error_message": null
+    },
+    {
+        "number": 17,
+        "request": "GET http://.:27321 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 404,
+        "status_code": "400",
+        "response_time": 0.0060939788818359375,
+        "error_message": null
+    },
+    {
+        "number": 18,
+        "request": "GET www..:8080/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 401,
+        "status_code": "400",
+        "response_time": 0.030517578125,
+        "error_message": null
+    },
+    {
+        "number": 19,
+        "request": "GET http://:8080/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 403,
+        "status_code": "200",
+        "response_time": 0.02557539939880371,
+        "error_message": null
+    },
+    {
+        "number": 20,
+        "request": "GET http://:20630/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 404,
+        "status_code": "200",
+        "response_time": 0.008884906768798828,
+        "error_message": null
+    },
+    {
+        "number": 21,
+        "request": "GET http://www..:8080 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 407,
+        "status_code": "400",
+        "response_time": 0.0016071796417236328,
+        "error_message": null
+    },
+    {
+        "number": 22,
+        "request": "GET http://www...:8080 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 408,
+        "status_code": "400",
+        "response_time": 0.001018524169921875,
+        "error_message": null
+    },
+    {
+        "number": 23,
+        "request": "GET http://www..:8080 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 2,
+        "request_length": 407,
+        "status_code": "400",
+        "response_time": 0.017637968063354492,
+        "error_message": null
+    },
+    {
+        "number": 24,
+        "request": "GET https://:80/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 402,
+        "status_code": "200",
+        "response_time": 0.006998538970947266,
+        "error_message": null
+    },
+    {
+        "number": 25,
+        "request": "GET https://:3171/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 404,
+        "status_code": "200",
+        "response_time": 0.0065746307373046875,
+        "error_message": null
+    },
+    {
+        "number": 26,
+        "request": "GET https://www..:8080/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 409,
+        "status_code": "200",
+        "response_time": 0.0019354820251464844,
+        "error_message": null
+    },
+    {
+        "number": 27,
+        "request": "GET http://www.:60044 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 407,
+        "status_code": "200",
+        "response_time": 0.0015184879302978516,
+        "error_message": null
+    },
+    {
+        "number": 28,
+        "request": "GET http://www.:443/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 406,
+        "status_code": "200",
+        "response_time": 0.0019185543060302734,
+        "error_message": null
+    },
+    {
+        "number": 29,
+        "request": "GET .:80 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 394,
+        "status_code": "400",
+        "response_time": 0.0057659149169921875,
+        "error_message": null
+    },
+    {
+        "number": 30,
+        "request": "GET http:// HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 397,
+        "status_code": "200",
+        "response_time": 0.0074880123138427734,
+        "error_message": null
+    },
+    {
+        "number": 31,
+        "request": "GET :80 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 393,
+        "status_code": "400",
+        "response_time": 0.007683277130126953,
+        "error_message": null
+    },
+    {
+        "number": 32,
+        "request": "GET http://www...:8080/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 409,
+        "status_code": "400",
+        "response_time": 0.006059885025024414,
+        "error_message": null
+    },
+    {
+        "number": 33,
+        "request": "GET http://www..:443/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 407,
+        "status_code": "400",
+        "response_time": 0.014891862869262695,
+        "error_message": null
+    },
+    {
+        "number": 34,
+        "request": "GET https://.:443 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 403,
+        "status_code": "200",
+        "response_time": 0.00640416145324707,
+        "error_message": null
+    },
+    {
+        "number": 35,
+        "request": "GET http://www.:8080/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 407,
+        "status_code": "200",
+        "response_time": 0.018404245376586914,
+        "error_message": null
+    },
+    {
+        "number": 36,
+        "request": "GET https://www.:8080 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 407,
+        "status_code": "200",
+        "response_time": 0.006087064743041992,
+        "error_message": null
+    },
+    {
+        "number": 37,
+        "request": "GET .:443/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 396,
+        "status_code": "400",
+        "response_time": 0.006518840789794922,
+        "error_message": null
+    },
+    {
+        "number": 38,
+        "request": "GET http://www.:8080/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 407,
+        "status_code": "200",
+        "response_time": 0.005638837814331055,
+        "error_message": null
+    },
+    {
+        "number": 39,
+        "request": "GET .:8080/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 397,
+        "status_code": "400",
+        "response_time": 0.005631446838378906,
+        "error_message": null
+    },
+    {
+        "number": 40,
+        "request": "GET https://www...:55649/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 411,
+        "status_code": "200",
+        "response_time": 0.006993532180786133,
+        "error_message": null
+    },
+    {
+        "number": 41,
+        "request": "GET http://www...:8080 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 408,
+        "status_code": "400",
+        "response_time": 0.007496833801269531,
+        "error_message": null
+    },
+    {
+        "number": 42,
+        "request": "GET www... HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 396,
+        "status_code": "400",
+        "response_time": 0.006510496139526367,
+        "error_message": null
+    },
+    {
+        "number": 43,
+        "request": "GET http://www...:8080 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 408,
+        "status_code": "400",
+        "response_time": 0.00597381591796875,
+        "error_message": null
+    },
+    {
+        "number": 44,
+        "request": "GET http://www.:8080/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 407,
+        "status_code": "200",
+        "response_time": 0.006086587905883789,
+        "error_message": null
+    },
+    {
+        "number": 45,
+        "request": "GET .:443/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 396,
+        "status_code": "400",
+        "response_time": 0.006870269775390625,
+        "error_message": null
+    },
+    {
+        "number": 46,
+        "request": "GET http://www..:80/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 406,
+        "status_code": "400",
+        "response_time": 0.0057413578033447266,
+        "error_message": null
+    },
+    {
+        "number": 47,
+        "request": "GET www.:22527/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 401,
+        "status_code": "400",
+        "response_time": 0.0070836544036865234,
+        "error_message": null
+    },
+    {
+        "number": 48,
+        "request": "GET http://www./ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 402,
+        "status_code": "200",
+        "response_time": 0.006829977035522461,
+        "error_message": null
+    },
+    {
+        "number": 49,
+        "request": "GET http://www./ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 402,
+        "status_code": "200",
+        "response_time": 0.007046222686767578,
+        "error_message": null
+    },
+    {
+        "number": 50,
+        "request": "GET https://www.:443/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 407,
+        "status_code": "200",
+        "response_time": 0.008930206298828125,
+        "error_message": null
+    },
+    {
+        "number": 51,
+        "request": "GET http://www./ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 402,
+        "status_code": "200",
+        "response_time": 0.010361671447753906,
+        "error_message": null
+    },
+    {
+        "number": 52,
+        "request": "GET https://www./ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 403,
+        "status_code": "200",
+        "response_time": 0.011569499969482422,
+        "error_message": null
+    },
+    {
+        "number": 53,
+        "request": "GET http://www... HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 403,
+        "status_code": "400",
+        "response_time": 0.011888980865478516,
+        "error_message": null
+    },
+    {
+        "number": 54,
+        "request": "GET www..:28748 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 401,
+        "status_code": "400",
+        "response_time": 0.006003379821777344,
+        "error_message": null
+    },
+    {
+        "number": 55,
+        "request": "GET http://www..:12240 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 408,
+        "status_code": "400",
+        "response_time": 0.0058803558349609375,
+        "error_message": null
+    },
+    {
+        "number": 56,
+        "request": "GET / HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 391,
+        "status_code": "200",
+        "response_time": 0.006627798080444336,
+        "error_message": null
+    },
+    {
+        "number": 57,
+        "request": "GET https://www...:80 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 407,
+        "status_code": "200",
+        "response_time": 0.006353855133056641,
+        "error_message": null
+    },
+    {
+        "number": 58,
+        "request": "GET http://www..:8080 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 2,
+        "request_length": 407,
+        "status_code": "400",
+        "response_time": 0.006959438323974609,
+        "error_message": null
+    },
+    {
+        "number": 59,
+        "request": "GET http://.:656 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 402,
+        "status_code": "400",
+        "response_time": 0.005573272705078125,
+        "error_message": null
+    },
+    {
+        "number": 60,
+        "request": "GET http://www..:8080/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 408,
+        "status_code": "400",
+        "response_time": 0.005522966384887695,
+        "error_message": null
+    },
+    {
+        "number": 61,
+        "request": "GET :55946 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 396,
+        "status_code": "400",
+        "response_time": 0.006421327590942383,
+        "error_message": null
+    },
+    {
+        "number": 62,
+        "request": "GET http://www...:443 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 407,
+        "status_code": "400",
+        "response_time": 0.006943225860595703,
+        "error_message": null
+    },
+    {
+        "number": 63,
+        "request": "GET http://www..:443/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 407,
+        "status_code": "400",
+        "response_time": 0.008146047592163086,
+        "error_message": null
+    },
+    {
+        "number": 64,
+        "request": "GET https://www..:443/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 408,
+        "status_code": "200",
+        "response_time": 0.006124973297119141,
+        "error_message": null
+    },
+    {
+        "number": 65,
+        "request": "GET www..:443/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 400,
+        "status_code": "400",
+        "response_time": 0.0074541568756103516,
+        "error_message": null
+    },
+    {
+        "number": 66,
+        "request": "GET http://www..:443 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 2,
+        "request_length": 406,
+        "status_code": "400",
+        "response_time": 0.0057756900787353516,
+        "error_message": null
+    },
+    {
+        "number": 67,
+        "request": "GET http://:8080/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 403,
+        "status_code": "200",
+        "response_time": 0.005693674087524414,
+        "error_message": null
+    },
+    {
+        "number": 68,
+        "request": "GET https://:443/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 403,
+        "status_code": "200",
+        "response_time": 0.006460666656494141,
+        "error_message": null
+    },
+    {
+        "number": 69,
+        "request": "GET http://www. HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 401,
+        "status_code": "200",
+        "response_time": 0.007647991180419922,
+        "error_message": null
+    },
+    {
+        "number": 70,
+        "request": "GET https://www../ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 404,
+        "status_code": "200",
+        "response_time": 0.007068157196044922,
+        "error_message": null
+    },
+    {
+        "number": 71,
+        "request": "GET http://./ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 399,
+        "status_code": "400",
+        "response_time": 0.005921602249145508,
+        "error_message": null
+    },
+    {
+        "number": 72,
+        "request": "GET http://www../ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 403,
+        "status_code": "400",
+        "response_time": 0.0061795711517333984,
+        "error_message": null
+    },
+    {
+        "number": 73,
+        "request": "GET http://www..:64818/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 409,
+        "status_code": "400",
+        "response_time": 0.006132364273071289,
+        "error_message": null
+    },
+    {
+        "number": 74,
+        "request": "GET https:/// HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 399,
+        "status_code": "200",
+        "response_time": 0.00619959831237793,
+        "error_message": null
+    },
+    {
+        "number": 75,
+        "request": "GET :18582/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 397,
+        "status_code": "400",
+        "response_time": 0.00805807113647461,
+        "error_message": null
+    },
+    {
+        "number": 76,
+        "request": "GET https://www...:443 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 408,
+        "status_code": "200",
+        "response_time": 0.007112264633178711,
+        "error_message": null
+    },
+    {
+        "number": 77,
+        "request": "GET https://www../ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 404,
+        "status_code": "200",
+        "response_time": 0.0065250396728515625,
+        "error_message": null
+    },
+    {
+        "number": 78,
+        "request": "GET www.. HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 395,
+        "status_code": "400",
+        "response_time": 0.005778789520263672,
+        "error_message": null
+    },
+    {
+        "number": 79,
+        "request": "GET https://www.. HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 2,
+        "request_length": 403,
+        "status_code": "200",
+        "response_time": 0.006608724594116211,
+        "error_message": null
+    },
+    {
+        "number": 80,
+        "request": "GET https://www...:80/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 408,
+        "status_code": "200",
+        "response_time": 0.005921363830566406,
+        "error_message": null
+    },
+    {
+        "number": 81,
+        "request": "GET http://www.:57156 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 407,
+        "status_code": "200",
+        "response_time": 0.01323390007019043,
+        "error_message": null
+    },
+    {
+        "number": 82,
+        "request": "GET https://:80/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 402,
+        "status_code": "200",
+        "response_time": 0.010938405990600586,
+        "error_message": null
+    },
+    {
+        "number": 83,
+        "request": "GET http://www.:443 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 405,
+        "status_code": "200",
+        "response_time": 0.0059468746185302734,
+        "error_message": null
+    },
+    {
+        "number": 84,
+        "request": "GET :62356/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 397,
+        "status_code": "400",
+        "response_time": 0.008454561233520508,
+        "error_message": null
+    },
+    {
+        "number": 85,
+        "request": "GET www.:8080/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 400,
+        "status_code": "400",
+        "response_time": 0.007419109344482422,
+        "error_message": null
+    },
+    {
+        "number": 86,
+        "request": "GET https://www. HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 402,
+        "status_code": "200",
+        "response_time": 0.006399869918823242,
+        "error_message": null
+    },
+    {
+        "number": 87,
+        "request": "GET http://www...:443/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 408,
+        "status_code": "400",
+        "response_time": 0.007155895233154297,
+        "error_message": null
+    },
+    {
+        "number": 88,
+        "request": "GET https://www.:8080/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 408,
+        "status_code": "200",
+        "response_time": 0.012743473052978516,
+        "error_message": null
+    },
+    {
+        "number": 89,
+        "request": "GET / HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 391,
+        "status_code": "200",
+        "response_time": 0.006197929382324219,
+        "error_message": null
+    },
+    {
+        "number": 90,
+        "request": "GET http://:443 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 401,
+        "status_code": "200",
+        "response_time": 0.005921602249145508,
+        "error_message": null
+    },
+    {
+        "number": 91,
+        "request": "GET http://.:80 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 401,
+        "status_code": "400",
+        "response_time": 0.006441354751586914,
+        "error_message": null
+    },
+    {
+        "number": 92,
+        "request": "GET https://www...:8080 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 409,
+        "status_code": "200",
+        "response_time": 0.006035804748535156,
+        "error_message": null
+    },
+    {
+        "number": 93,
+        "request": "GET https://:443/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 403,
+        "status_code": "200",
+        "response_time": 0.00607752799987793,
+        "error_message": null
+    },
+    {
+        "number": 94,
+        "request": "GET http://.:8080/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 404,
+        "status_code": "400",
+        "response_time": 0.005609750747680664,
+        "error_message": null
+    },
+    {
+        "number": 95,
+        "request": "GET http://www..:443/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 407,
+        "status_code": "400",
+        "response_time": 0.009122848510742188,
+        "error_message": null
+    },
+    {
+        "number": 96,
+        "request": "GET .:443/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 396,
+        "status_code": "400",
+        "response_time": 0.012622833251953125,
+        "error_message": null
+    },
+    {
+        "number": 97,
+        "request": "GET www...:443/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 401,
+        "status_code": "400",
+        "response_time": 0.006246805191040039,
+        "error_message": null
+    },
+    {
+        "number": 98,
+        "request": "GET .:8080/ HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 397,
+        "status_code": "400",
+        "response_time": 0.007065296173095703,
+        "error_message": null
+    },
+    {
+        "number": 99,
+        "request": "GET https://.:443 HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.9\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 3,
+        "request_length": 403,
+        "status_code": "200",
+        "response_time": 0.0060307979583740234,
+        "error_message": null
+    }
+]

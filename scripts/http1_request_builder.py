@@ -4,9 +4,9 @@
 # TODO HTTP/2 request generation, with method:
 
 import random
-import logging
+
 from urllib.parse import quote
-logging.basicConfig(level=logging.DEBUG)
+
 
 
 class HTTP1_Request_Builder:
@@ -78,7 +78,7 @@ class HTTP1_Request_Builder:
         domain = ""
         port = ""
         path = ""
-        host = self.target_host
+        host = host
         # Check if the host contains a scheme
         if "://" in host:
             # Split the host into scheme and the rest of the URL
@@ -113,7 +113,7 @@ class HTTP1_Request_Builder:
 
 
 
-        '''Generation of request package without insertion of a covert channel'''
+        '''Generation of request package, CCs mut implement this '''
        
 
         # Insert the Host header at the beginning of the list
@@ -135,7 +135,7 @@ class HTTP1_Request_Builder:
         return request_string, deviation_count
 
     def generate_request(self, experiment_configuration):
-        '''Covered Channel Classes must implement this method'''
+        
         host=experiment_configuration["target_host"]
         port=experiment_configuration["target_port"]
         url=experiment_configuration["url"]
@@ -149,13 +149,5 @@ class HTTP1_Request_Builder:
                 headers= self.default_headers_sets[standard_headers].copy()       
             else:
                 headers = self.default_headers_sets["rfc"].copy()
-
             # Create a copy to avoid modifying the original list
-        print("Arguments:")
-        print(host)
-        print(port)
-        print(url)
-        print(method)
-        print(headers)
-        print(fuzzvalue)
         return self.generate_cc_request(host, port, url, method, headers, fuzzvalue)

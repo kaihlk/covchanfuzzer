@@ -35,28 +35,31 @@ def main():
     # Add a mode that sends a well formed request every x attempts to verify not being blocked
 
     # Control the body of the response as well (?)
+    #Add Verbose mode
 
     # Experiment Configuration Values
-    experiment_configuration = {
-        "comment": "Some text describing the Testrun",
-        "covertchannel_request_number": 2,
-        "covertchannel_connection_number": 1,
-        "covertchannel_timing_number": 1,
-        "num_attempts": 100,
-        "conn_timeout": 3,
-        "nw_interface": "lo",
-        "fuzz_value": 0.5,
-        "use_ipv4": True,
-        "target_host": "localhost",
-        "target_port": 8080,
-        "method" : "GET",
-        "url": "/",
-        "headers": None,
-        "standard_headers": "rfc",
+    try:
+        experiment_configuration = {
+            "comment": "Some text describing the Testrun",
+            "covertchannel_request_number": 7,
+            "covertchannel_connection_number": 1,
+            "covertchannel_timing_number": 1,
+            "num_attempts": 100,
+            "conn_timeout": 3,
+            "nw_interface": "lo",
+            "fuzz_value": 0.9,
+            "use_ipv4": True,
+            "target_host": "localhost",
+            "target_port": 8080,
+            "method" : "GET",
+            "url": "/",
+            "headers": None,
+            "standard_headers": "rfc",
 
-    }
-    ExperimentRunner(experiment_configuration).setup_and_start_experiment()
-
+        }
+        ExperimentRunner(experiment_configuration).setup_and_start_experiment()
+    except Exception as ex:
+        print("Error: ", str(ex))
 
 if __name__ == "__main__":
     main()

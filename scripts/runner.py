@@ -31,7 +31,7 @@ class ExperimentRunner:
         #Build HTTP Request after the selected covered channel
         selected_covered_channel = class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]()
         #TODO Change of PORT due to Upgrade
-        print(self.experiment_configuration["target_host"])
+        
         request, deviation_count = selected_covered_channel.generate_request(self.experiment_configuration)
 
         #Send request and get response

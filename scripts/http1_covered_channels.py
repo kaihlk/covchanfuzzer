@@ -8,7 +8,7 @@ from urllib.parse import quote
 from http1_request_builder import HTTP1_Request_Builder
 
 
-def random_switch_case_of_char_in_string(self, original_string, fuzzvalue):
+def random_switch_case_of_char_in_string(original_string, fuzzvalue):
     modified_string = ""
     deviation_count = 0
     # Randomly change the case of the field name
@@ -29,7 +29,7 @@ def random_switch_case_of_char_in_string(self, original_string, fuzzvalue):
     return modified_string, deviation_count
 
 
-def generate_standard_request(self, 
+def generate_standard_request(
     host, port, url="/", method="GET", headers=None, fuzzvalue=None
 ):
     '''Generation of request package without insertion of a covert channel'''
@@ -60,7 +60,8 @@ def generate_standard_request(self,
 
 
 class HTTP1_Request_CC_Case_Insensitivity(HTTP1_Request_Builder):
-    def generate_cc_request(host, port, url="/", method="GET", headers=None, fuzzvalue=None):
+    def generate_cc_request(self, host, port, url="/", method="GET", headers=None, fuzzvalue=None):
+
         '''Covertchannel suggested by Kwecka et al: Case-insensitivity of header key names, fuzzvalue defines the probability that a character of a header field is changed'''
 
         # Check fuzzvalue
@@ -86,8 +87,7 @@ class HTTP1_Request_CC_Case_Insensitivity(HTTP1_Request_Builder):
         # Iterate over the header fields
         for header in headers:
             field_name, field_value = header
-            modified_field_name, deviation = random_switch_case_of_char_in_string(
-                original_string=field_name, fuzzvalue=fuzzvalue
+            modified_field_name, deviation = random_switch_case_of_char_in_string(original_string=field_name, fuzzvalue=fuzzvalue
             )
             # Build request string from modified field name, :, and field value
             request_string += f"{modified_field_name}: {field_value}\r\n"
@@ -146,7 +146,7 @@ class HTTP1_Request_CC_Random_Whitespace(HTTP1_Request_Builder):
 # Fuzz Parameter no effect, due to Implementation of Shuffle
 
 class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
-    def generate_cc_request(
+    def generate_cc_request(self,
         host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
         ):
         # Check if headers are provided elsewise take default headers
@@ -184,7 +184,7 @@ class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
         return request_string, deviation_count
 
 class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
-    def generate_cc_request(
+    def generate_cc_request(self,
         host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
     ):
         '''URI in the request line
@@ -205,7 +205,7 @@ class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
         headers.insert(0, ("Host", host))
 
         # Parse the given host
-        scheme, subdomain, hostname, domain, hostport, path = parse_host(host)
+        scheme, subdomain, hostname, domain, hostport, path = self.parse_host(host)
 
         # Build a new URL from the given host
         deviation_count = 0
@@ -258,7 +258,7 @@ class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
         return request_string, deviation_count
 
 class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
-    def generate_cc_request(
+    def generate_cc_request(self,
         host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
     ):
         '''CC URI  with addional changes in Case insensitvity'''
@@ -273,7 +273,7 @@ class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
         headers.insert(0, ("Host", host))
 
         # Parse the given host
-        scheme, subdomain, hostname, domain, hostport, path = parse_host(host)
+        scheme, subdomain, hostname, domain, hostport, path = self.parse_host(host)
 
         # Build a new URL from the given host, add some deviation if not all fields are provided
 
@@ -303,7 +303,7 @@ class HTTP1_Request_CC_URI_Hex_Hex(HTTP1_Request_Builder):
     # CC with addional changes in the URL,  HEX Representation of the URL
     # empty absolute path interpreta as "/"
     #  Hex representation can  7e or 7E
-    def generate_cc_request(
+    def generate_cc_request(self,
         host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
     ):
         # Check if headers are provided elsewise take default headers
@@ -317,7 +317,7 @@ class HTTP1_Request_CC_URI_Hex_Hex(HTTP1_Request_Builder):
         headers.insert(0, ("Host", host))
 
         # Parse the given host
-        scheme, subdomain, hostname, domain, hostport, path = parse_host(host)
+        scheme, subdomain, hostname, domain, hostport, path = self.parse_host(host)
 
         # Build a new URL from the given host, add some deviation if not all fields are provided
 
