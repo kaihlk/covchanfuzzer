@@ -7,8 +7,8 @@ import time
 import http1_covered_channels
 from logger import ExperimentLogger
 from custom_http_client import CustomHTTP
-
-
+import class_mapping
+import http1_request_builder
 
 
 class ExperimentRunner:
@@ -26,10 +26,11 @@ class ExperimentRunner:
         #Todo
         return True
 
-    def forge_and_send_requests(self, number):
+    def forge_and_send_requests(self, attempt_number):
         '''Build a HTTP Request Package and sends it and processes the response'''
         #Build HTTP Request
-        request, deviation_count = http1_covered_channels.forge_http_request(
+        selected_covered_channel = class_mapping_requests[self.experiment_configuration["covertchannel_request_number"]]()
+        request, deviation_count = selected_covered_channel.generate_request(
                     cc_number=self.experiment_configuration["covertchannel_number"],
                     host=self.experiment_configuration["target_host"],
                     port=self.target_port,
@@ -38,7 +39,16 @@ class ExperimentRunner:
                     headers=None,
                     fuzzvalue=self.experiment_configuration["fuzz_value"],
                 )
-        #Send request and get response
+        """ request, deviation_count = http1_covered_channels.forge_http_request(
+                    cc_number=self.experiment_configuration["covertchannel_number"],
+                    host=self.experiment_configuration["target_host"],
+                    port=self.target_port,
+                    url="/",
+                    method="GET",
+                    headers=None,
+                    fuzzvalue=self.experiment_configuration["fuzz_value"],
+                )
+         """#Send request and get response
         print(request)
         #
         response, response_time = CustomHTTP().http_request(
@@ -54,7 +64,7 @@ class ExperimentRunner:
         response_status_code = response.Status_Code.decode("utf-8")
         
         request_data = {
-            "number": number,
+            "number": attempt_number,
             "request": request,
             "deviation_count": deviation_count,
             "request_length": len(request),

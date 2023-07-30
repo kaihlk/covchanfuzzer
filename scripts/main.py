@@ -1,10 +1,7 @@
 #main
 from runner import ExperimentRunner
 
-
-
-
-class_mapping_requests ={
+""" class_mapping_requests ={
     1: HTTP1_Request_Builder,
     2: HTTP1_Request_CC_Case_Insensitivity,
     3: HTTP1_Request_CC_Random_Whitespace,
@@ -25,7 +22,7 @@ class_mapping_timing  = {
     1: Standard,
     2: Frequency_Modulation,
     3: Amplitude_Modulation,
-}
+} """
 
 def main():
     '''Function that runs the connection, selection of the CC and the fuzzer'''

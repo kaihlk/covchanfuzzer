@@ -106,10 +106,9 @@ class HTTP1_Request_Builder:
         # Return the extracted parts as a tuple
         return scheme, subdomain, hostname, domain, port, path
 
-
-    def generate_request(self, 
-        host, port, url="/", method="GET", headers=None, fuzzvalue=None
-    ):
+    def generate_standard_request(self, 
+    host, port, url="/", method="GET", headers=None, fuzzvalue=None
+):
         '''Generation of request package without insertion of a covert channel'''
         # Check if headers are provided elsewise take default headers
         if headers is None:
@@ -136,4 +135,9 @@ class HTTP1_Request_Builder:
         deviation_count = 0
         return request_string, deviation_count
 
+        def generate_request(self, 
+            host, port, url="/", method="GET", headers=None, fuzzvalue=None
+        ):
+            '''Covered Channel Classes must implement this method'''
+            return self.generate_standard_request(host, port, url="/", method="GET", headers=None, fuzzvalue=None)
 

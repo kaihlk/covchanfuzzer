@@ -6,127 +6,33 @@
 import random
 from urllib.parse import quote
 
-class Http1_Covered_Channel:
-    def __init__(self, target_host, target_port):
-        self.target_host = target_host
-        self.target_port = target_port   
-        self. default_headers = [
-            # The field with the Host and the url must be generated and inserted in the functions
-            (
-                "User-Agent",
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
-            ),
-            (
-                "Accept",
-                "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-            ),
-            ("Accept-Encoding", "gzip, deflate, br"),
-            ("Accept-Language", "en-US,en;q=0.9"),
-            ("Connection", "keep-alive"),
-        ]
-
-    def parse_host(self):
-        '''Parse host uris'''
-        # Initialize variables
-        scheme = ""
-        subdomain = ""
-        hostname = ""
-        domain = ""
-        port = ""
-        path = ""
-        host = self.target_host
-        # Check if the host contains a scheme
-        if "://" in host:
-            # Split the host into scheme and the rest of the URL
-            parts = host.split("://", 1)
-            scheme = parts[0]
-            remaining = parts[1]
-        else:
-            remaining = host
-
-        # Split the remaining URL into subdomain, hostname, domain, and port (if present)
-        parts = remaining.split("/", 1)
-        if len(parts) == 2:
-            remaining, path = parts
-
-        subdomain_parts = remaining.split(".", 1)
-        if len(subdomain_parts) == 2:
-            subdomain = subdomain_parts[0]
-            remaining = subdomain_parts[1]
-
-        hostname_parts = remaining.split(".", 1)
-        if len(hostname_parts) == 2:
-            hostname = hostname_parts[0]
-            domain_port = hostname_parts[1].split(":", 1)
-            domain = domain_port[0]
-            if len(domain_port) == 2:
-                port = domain_port[1]
-
-        # Return the extracted parts as a tuple
-        return scheme, subdomain, hostname, domain, port, path
 
 
-    def random_switch_case_of_char_in_string(self, original_string, fuzzvalue):
-        modified_string = ""
-        deviation_count = 0
-        # Randomly change the case of the field name
-        for c in original_string:
-            # The value of the probabiltiy to change a char is defined by the fuzzvalue
-            # the char functions doesn't affect signs and symbols
-            if random.random() < fuzzvalue:
-                if c.isupper():
-                    modified_string = modified_string + c.lower()
-                    deviation_count += 1
-                elif c.islower:
-                    modified_string = modified_string + c.upper()
-                    deviation_count += 1
-                else:
-                    modified_string = modified_string + c
+def random_switch_case_of_char_in_string(self, original_string, fuzzvalue):
+    modified_string = ""
+    deviation_count = 0
+    # Randomly change the case of the field name
+    for c in original_string:
+        # The value of the probabiltiy to change a char is defined by the fuzzvalue
+        # the char functions doesn't affect signs and symbols
+        if random.random() < fuzzvalue:
+            if c.isupper():
+                modified_string = modified_string + c.lower()
+                deviation_count += 1
+            elif c.islower:
+                modified_string = modified_string + c.upper()
+                deviation_count += 1
             else:
                 modified_string = modified_string + c
-        return modified_string, deviation_count
-
-
-    def generate_standard_request(self, 
-        host, port, url="/", method="GET", headers=None, fuzzvalue=None
-    ):
-        '''Generation of request package without insertion of a covert channel'''
-        # Check if headers are provided elsewise take default headers
-        if headers is None:
-            headers = default_headers.copy()
         else:
-            # Create a copy to avoid modifying the original list
-            headers = headers.copy()
-
-        # Insert the Host header at the beginning of the list
-        headers.insert(0, ("Host", host))
-
-        # Build the request_line from the provided arguments
-        request_line = f"{method} {url} HTTP/1.1\r\n"
-
-        # Build the request from request line and headers
-        request_string = request_line
-        for header in headers:
-            request_string += f"{header[0]}: {header[1]}\r\n"
-
-        # Add the ending of the request
-        request_string += "\r\n"
-
-        # No deviation
-        deviation_count = 0
-        return request_string, deviation_count
+            modified_string = modified_string + c
+    return modified_string, deviation_count
 
 
-
-class generate_request_CC_case_insensitivity(
-    host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
+def generate_standard_request(self, 
+    host, port, url="/", method="GET", headers=None, fuzzvalue=None
 ):
-    '''Covertchannel suggested by Kwecka et al: Case-insensitivity of header key names, fuzzvalue defines the probability that a character of a header field is changed'''
-
-    # Check fuzzvalue
-    if fuzzvalue < 0 or fuzzvalue > 1:
-        raise ValueError("fuzzvalue must be between 0 and 1.")
-
+    '''Generation of request package without insertion of a covert channel'''
     # Check if headers are provided elsewise take default headers
     if headers is None:
         headers = default_headers.copy()
@@ -140,23 +46,59 @@ class generate_request_CC_case_insensitivity(
     # Build the request_line from the provided arguments
     request_line = f"{method} {url} HTTP/1.1\r\n"
 
-    # Define Request first line
+    # Build the request from request line and headers
     request_string = request_line
-    deviation_count = 0
-    # Iterate over the header fields
     for header in headers:
-        field_name, field_value = header
-        modified_field_name, deviation = random_switch_case_of_char_in_string(
-            original_string=field_name, fuzzvalue=fuzzvalue
-        )
-        # Build request string from modified field name, :, and field value
-        request_string += f"{modified_field_name}: {field_value}\r\n"
-        deviation_count += deviation
+        request_string += f"{header[0]}: {header[1]}\r\n"
 
-    # Add ending of request
+    # Add the ending of the request
     request_string += "\r\n"
 
+    # No deviation
+    deviation_count = 0
     return request_string, deviation_count
+
+
+class HTTP1_Request_CC_Case_Insensitivity(HTTP1_Request_Builder):
+    def generate_request(
+        host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
+    ):
+        '''Covertchannel suggested by Kwecka et al: Case-insensitivity of header key names, fuzzvalue defines the probability that a character of a header field is changed'''
+
+        # Check fuzzvalue
+        if fuzzvalue < 0 or fuzzvalue > 1:
+            raise ValueError("fuzzvalue must be between 0 and 1.")
+
+        # Check if headers are provided elsewise take default headers
+        if headers is None:
+            headers = default_headers.copy()
+        else:
+            # Create a copy to avoid modifying the original list
+            headers = headers.copy()
+
+        # Insert the Host header at the beginning of the list
+        headers.insert(0, ("Host", host))
+
+        # Build the request_line from the provided arguments
+        request_line = f"{method} {url} HTTP/1.1\r\n"
+
+        # Define Request first line
+        request_string = request_line
+        deviation_count = 0
+        # Iterate over the header fields
+        for header in headers:
+            field_name, field_value = header
+            modified_field_name, deviation = random_switch_case_of_char_in_string(
+                original_string=field_name, fuzzvalue=fuzzvalue
+            )
+            # Build request string from modified field name, :, and field value
+            request_string += f"{modified_field_name}: {field_value}\r\n"
+            deviation_count += deviation
+
+        # Add ending of request
+        request_string += "\r\n"
+
+        return request_string, deviation_count
 
 
 # Covertchannel suggested by Kwecka et al: Linear whitespacing
