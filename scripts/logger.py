@@ -6,6 +6,7 @@ import time
 import os
 import json
 
+
 class ExperimentLogger:
     def __init__(self, experiment_configuration, target_ip, target_port):
         self.experiment_configuration = experiment_configuration
