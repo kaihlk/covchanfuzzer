@@ -9,7 +9,7 @@ requests_builders ={
     4: HTTP1_Request_CC_Reordering_Header_Fields,
     5: HTTP1_Request_CC_URI_Represenation,
     6: HTTP1_Request_CC_URI_Case_Insentivity,
-    7: HTTP1_Reqeust_CC_URI_Hex_Hex,
+    7: HTTP1_Request_CC_URI_Hex_Hex,
 }
 
 """ class_mapping_connection = {

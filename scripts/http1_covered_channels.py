@@ -148,7 +148,7 @@ class HTTP1_Request_CC_Random_Whitespace(HTTP1_Request_Builder):
 # Covertchannel suggested by Kwecka et al: Reordering ofHeaderfields#
 # Fuzz Parameter no effect, due to Implementation of Shuffle
 
-class HTTP1_Request_CC_Reordering_Headerfields(HTTP1_Request_Builder):
+class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
     def generate_request(
         host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
         ):

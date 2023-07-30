@@ -136,5 +136,5 @@ class HTTP1_Request_Builder:
     def generate_request(self, host, port, url="/", method="GET", headers=None, fuzzvalue=None
         ):
         '''Covered Channel Classes must implement this method'''
-        return self.generate_standard_request(host, port, url="/", method="GET", headers=None, fuzzvalue=None)
+        return self.generate_standard_request(host=host, port = port, url="/", method="GET", headers=None, fuzzvalue=None)
 
