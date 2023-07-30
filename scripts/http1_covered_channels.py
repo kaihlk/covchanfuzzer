@@ -60,7 +60,7 @@ def generate_standard_request(self,
 
 
 class HTTP1_Request_CC_Case_Insensitivity(HTTP1_Request_Builder):
-    def generate_cc_request(self, host, port, url="/", method="GET", headers=None, fuzzvalue=None):
+    def generate_cc_request(host, port, url="/", method="GET", headers=None, fuzzvalue=None):
         '''Covertchannel suggested by Kwecka et al: Case-insensitivity of header key names, fuzzvalue defines the probability that a character of a header field is changed'''
 
         # Check fuzzvalue
@@ -146,7 +146,7 @@ class HTTP1_Request_CC_Random_Whitespace(HTTP1_Request_Builder):
 # Fuzz Parameter no effect, due to Implementation of Shuffle
 
 class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
-    def generate_request(
+    def generate_cc_request(
         host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
         ):
         # Check if headers are provided elsewise take default headers
@@ -184,7 +184,7 @@ class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
         return request_string, deviation_count
 
 class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
-    def generate_request(
+    def generate_cc_request(
         host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
     ):
         '''URI in the request line
@@ -258,7 +258,7 @@ class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
         return request_string, deviation_count
 
 class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
-    def generate_request(
+    def generate_cc_request(
         host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
     ):
         '''CC URI  with addional changes in Case insensitvity'''
@@ -303,7 +303,7 @@ class HTTP1_Request_CC_URI_Hex_Hex(HTTP1_Request_Builder):
     # CC with addional changes in the URL,  HEX Representation of the URL
     # empty absolute path interpreta as "/"
     #  Hex representation can  7e or 7E
-    def generate_request(
+    def generate_cc_request(
         host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
     ):
         # Check if headers are provided elsewise take default headers
@@ -397,36 +397,4 @@ class HTTP1_Request_CC_URI_Hex_Hex(HTTP1_Request_Builder):
     #   Try catch blocks?
 
 
-    def forge_http_request(
-        cc_number, host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
-    ):
-        if cc_number == 1:
-            return generate_standard_request(host, port, url, method, headers, fuzzvalue)
-        elif cc_number == 2:
-            return generate_request_CC_case_insensitivity(
-                host, port, url, method, headers, fuzzvalue
-            )
-        elif cc_number == 3:
-            return generate_request_CC_random_whitespace(
-                host, port, url, method, headers, fuzzvalue
-            )
-        elif cc_number == 4:
-            return generate_request_CC_reordering_headerfields(
-                host, port, url, method, headers, fuzzvalue
-            )
-        elif cc_number == 5:
-            return generate_request_CC_change_uri_representation(
-                host, port, url, method, headers, fuzzvalue
-            )
-        elif cc_number == 6:
-            return generate_request_CC_change_uri_case_insensitivity(
-                host, port, url, method, headers, fuzzvalue
-            )
-        elif cc_number == 7:
-            return generate_request_CC_change_uri_HEXHEX(
-                host, port, url, method, headers, fuzzvalue
-            )
-        else:
-            raise ValueError(
-                "Invalid method number. Supported methods are 1, 2, 3, 4 , 5, 6 and 7."
-            )
+    

@@ -4,7 +4,10 @@
 # TODO HTTP/2 request generation, with method:
 
 import random
+import logging
 from urllib.parse import quote
+logging.basicConfig(level=logging.DEBUG)
+
 
 class HTTP1_Request_Builder:
     def __init__(self): 
@@ -155,5 +158,4 @@ class HTTP1_Request_Builder:
         print(method)
         print(headers)
         print(fuzzvalue)
-        return self.egenerate_cc_request(self, host, port, url, method, headers, fuzzvalue)
-
+        return self.generate_cc_request(host, port, url, method, headers, fuzzvalue)
