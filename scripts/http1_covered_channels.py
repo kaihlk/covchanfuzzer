@@ -5,7 +5,7 @@
 
 import random
 from urllib.parse import quote
-
+from http1_request_builder import HTTP1_Request_Builder
 
 
 def random_switch_case_of_char_in_string(self, original_string, fuzzvalue):

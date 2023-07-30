@@ -108,38 +108,52 @@ class CustomHTTP(HTTP):
         sock = self.create_tcp_socket(host_ip_info)
         # Upgrade to TLS depending on the port
         if 443 == port:
-            tls_socket = self.upgrade_to_tls(sock, host)
-            # Connect Socket to TCP Endpoint
-            tls_socket.connect(host_ip_info[0][4])
-            tls_socket.settimeout(timeout)
-            assert "http/1.1" == tls_socket.selected_alpn_protocol()
-            stream_socket = SuperSocket.SSLStreamSocket(tls_socket, basecls=HTTP)
+            try:
+                tls_socket = self.upgrade_to_tls(sock, host)
+                # Connect Socket to TCP Endpoint
+                tls_socket.connect(host_ip_info[0][4])
+                tls_socket.settimeout(timeout)
+                assert "http/1.1" == tls_socket.selected_alpn_protocol()
+                stream_socket = SuperSocket.SSLStreamSocket(tls_socket, basecls=HTTP)
+            except socket.error as ex:
+                error_message = str(ex)
+                stream_socket = None 
         else:
-            sock.connect((host_ip_info[0][4]))
-            sock.settimeout(timeout)
-            stream_socket = SuperSocket.StreamSocket(sock, basecls=HTTP)
-
+            try:
+                sock.connect((host_ip_info[0][4]))
+                sock.settimeout(timeout)
+                stream_socket = SuperSocket.StreamSocket(sock, basecls=HTTP)
+            except socket.error as ex:
+                error_message = str(ex)
+                stream_socket = None 
         response = None
-        try:
-            # Send the request over the socket
-            start_time=time.time()
-            stream_socket.send(req)
+        response_time=0
+        error_message = None 
 
-            # Receive the response
-            response = stream_socket.recv()
-            end_time = time.time()
-            response_time=end_time-start_time
-  
-        except socket.timeout:
-            print("Timeout Limit reached")
-            response = None
-        finally:
-            # Close the socket
-            if 443 == port:
-                tls_socket.shutdown(1)
-                stream_socket.close()
-            else:
-                sock.shutdown(1)
-                stream_socket.close()
+        if stream_socket is not None:
+            try:
+                # Send the request over the socket
+                start_time=time.time()
+                stream_socket.send(req)
 
-        return response, response_time
+                # Receive the response
+                response = stream_socket.recv()
+                end_time = time.time()
+                response_time=end_time-start_time
+    
+            except socket.timeout:
+                error_message="Timeout Limit reached"
+                response = None
+            except socket.error as ex:
+                error_message=str(ex)
+                response=None
+            finally:
+                # Close the socket
+                if 443 == port:
+                    tls_socket.shutdown(1)
+                    stream_socket.close()
+                else:
+                    sock.shutdown(1)            
+                    stream_socket.close()
+
+        return response, response_time, error_message

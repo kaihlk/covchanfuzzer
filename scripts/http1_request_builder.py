@@ -10,7 +10,7 @@ class HTTP1_Request_Builder:
     def __init__(self, target_host, target_port):
         self.target_host = target_host
         self.target_port = target_port   
-        self. default_headers = [
+        self.default_headers = [
             # The field with the Host and the url must be generated and inserted in the functions
             (
                 "User-Agent",
@@ -106,13 +106,11 @@ class HTTP1_Request_Builder:
         # Return the extracted parts as a tuple
         return scheme, subdomain, hostname, domain, port, path
 
-    def generate_standard_request(self, 
-    host, port, url="/", method="GET", headers=None, fuzzvalue=None
-):
+    def generate_standard_request(self,host, port, url="/", method="GET", headers=None, fuzzvalue=None):
         '''Generation of request package without insertion of a covert channel'''
         # Check if headers are provided elsewise take default headers
         if headers is None:
-            headers = default_headers.copy()
+            headers = self.default_headers.copy()
         else:
             # Create a copy to avoid modifying the original list
             headers = headers.copy()
@@ -135,9 +133,8 @@ class HTTP1_Request_Builder:
         deviation_count = 0
         return request_string, deviation_count
 
-        def generate_request(self, 
-            host, port, url="/", method="GET", headers=None, fuzzvalue=None
+    def generate_request(self, host, port, url="/", method="GET", headers=None, fuzzvalue=None
         ):
-            '''Covered Channel Classes must implement this method'''
-            return self.generate_standard_request(host, port, url="/", method="GET", headers=None, fuzzvalue=None)
+        '''Covered Channel Classes must implement this method'''
+        return self.generate_standard_request(host, port, url="/", method="GET", headers=None, fuzzvalue=None)
 

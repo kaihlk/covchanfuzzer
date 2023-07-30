@@ -37,7 +37,7 @@ def main():
     # Experiment Configuration Values
     experiment_configuration = {
         "comment": "Some text describing the Testrun",
-        "covertchannel_request_number": 3,
+        "covertchannel_request_number": 1,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
         "num_attempts": 100,

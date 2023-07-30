@@ -28,10 +28,9 @@ class ExperimentRunner:
 
     def forge_and_send_requests(self, attempt_number):
         '''Build a HTTP Request Package and sends it and processes the response'''
-        #Build HTTP Request
-        selected_covered_channel = class_mapping_requests[self.experiment_configuration["covertchannel_request_number"]]()
+        #Build HTTP Request after the selected covered channel
+        selected_covered_channel = class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]](self.experiment_configuration["target_host"],self.experiment_configuration["target_port"])
         request, deviation_count = selected_covered_channel.generate_request(
-                    cc_number=self.experiment_configuration["covertchannel_number"],
                     host=self.experiment_configuration["target_host"],
                     port=self.target_port,
                     url="/",
@@ -39,29 +38,21 @@ class ExperimentRunner:
                     headers=None,
                     fuzzvalue=self.experiment_configuration["fuzz_value"],
                 )
-        """ request, deviation_count = http1_covered_channels.forge_http_request(
-                    cc_number=self.experiment_configuration["covertchannel_number"],
-                    host=self.experiment_configuration["target_host"],
-                    port=self.target_port,
-                    url="/",
-                    method="GET",
-                    headers=None,
-                    fuzzvalue=self.experiment_configuration["fuzz_value"],
-                )
-         """#Send request and get response
+
+        #Send request and get response
         print(request)
         #
-        response, response_time = CustomHTTP().http_request(
+        response, response_time, error_message = CustomHTTP().http_request(
             host=self.experiment_configuration["target_host"],
             port=self.target_port,
             host_ip_info=self.target_ip_info,
             custom_request=request,
         )
-       #except Exception as ex:
-       #     print("An error occurred during the HTTP request:", ex)
-       #     response = None
-         #   response_time = None
-        response_status_code = response.Status_Code.decode("utf-8")
+
+        if response is not None:
+            response_status_code = response.Status_Code.decode("utf-8")
+        else:
+            response_status_code="Error"
         
         request_data = {
             "number": attempt_number,
@@ -70,6 +61,7 @@ class ExperimentRunner:
             "request_length": len(request),
             "status_code": response_status_code,
             "response_time": response_time,
+            "error_message": error_message,
         }
        
         return request, request_data
