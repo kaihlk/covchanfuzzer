@@ -1,5 +1,6 @@
 #main
 from runner import ExperimentRunner
+import class_mapping
 
 """ class_mapping_requests ={
     1: HTTP1_Request_Builder,
@@ -41,7 +42,7 @@ def main():
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
         "num_attempts": 100,
-        "conn_timeout": 20.0,
+        "conn_timeout": 3,
         "nw_interface": "lo",
         "fuzz_value": 0.5,
         "use_ipv4": True,

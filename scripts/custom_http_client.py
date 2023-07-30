@@ -81,6 +81,12 @@ class CustomHTTP(HTTP):
 
         returns: the HTTPResponse packet
         """
+        #Initialize Variables
+        response = None
+        response_time=0
+        error_message = None
+        
+        
         # DNS Lookup if info not provided
         if host_ip_info is None:
             host_ip_info = self.lookup_dns(host, port)
@@ -123,19 +129,16 @@ class CustomHTTP(HTTP):
                 sock.connect((host_ip_info[0][4]))
                 sock.settimeout(timeout)
                 stream_socket = SuperSocket.StreamSocket(sock, basecls=HTTP)
-            except socket.error as ex:
-                error_message = str(ex)
+            except socket.error as ex2:
+                error_message = str(ex2)
                 stream_socket = None 
-        response = None
-        response_time=0
-        error_message = None 
+
 
         if stream_socket is not None:
             try:
                 # Send the request over the socket
                 start_time=time.time()
                 stream_socket.send(req)
-
                 # Receive the response
                 response = stream_socket.recv()
                 end_time = time.time()
@@ -144,8 +147,8 @@ class CustomHTTP(HTTP):
             except socket.timeout:
                 error_message="Timeout Limit reached"
                 response = None
-            except socket.error as ex:
-                error_message=str(ex)
+            except socket.error as ex3:
+                error_message=str(ex3)
                 response=None
             finally:
                 # Close the socket

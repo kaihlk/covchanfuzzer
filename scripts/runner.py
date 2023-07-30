@@ -47,12 +47,13 @@ class ExperimentRunner:
             port=self.target_port,
             host_ip_info=self.target_ip_info,
             custom_request=request,
+            timeout=self.experiment_configuration["conn_timeout"],
         )
 
         if response is not None:
             response_status_code = response.Status_Code.decode("utf-8")
         else:
-            response_status_code="Error"
+            response_status_code="error"
         
         request_data = {
             "number": attempt_number,
@@ -84,6 +85,8 @@ class ExperimentRunner:
                 print(f"Port: {self.target_port}")
                 print(f"Status Code: {request_data['status_code']}")
                 print(f"Deviation Count: {request_data['deviation_count']}\n")
+                print(f"Error Message: {request_data['error_message']}\n")
+                
         return status_code_count, request_data_list  
 
     def setup_and_start_experiment(self):
@@ -118,6 +121,7 @@ class ExperimentRunner:
 
         # Save Experiment Metadata
         result_variables = {
+            "covertchannel_request_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]), 
             "Received_Status_Codes": status_code_count,
             #Here maybe more information would be nice, successful attempts/failures, count of successfull baseline checks, statistical data? medium response time?
         }
