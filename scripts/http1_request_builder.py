@@ -7,66 +7,66 @@ import random
 from urllib.parse import quote
 
 class HTTP1_Request_Builder:
-    def __init__(self, target_host, target_port):
-        self.target_host = target_host
-        self.target_port = target_port   
-        self.default_headers = [
+    def __init__(self): 
+        self.default_headers_sets = {
             # The field with the Host and the url must be generated and inserted in the functions
-            (
-                "User-Agent",
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
-            ),
-            (
-                "Accept",
-                "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-            ),
-            ("Accept-Encoding", "gzip, deflate, br"),
-            ("Accept-Language", "en-US,en;q=0.9"),
-            ("Connection", "keep-alive"),
-        ]
-        self.default_headers_firefox = [
-            # The field with the Host and the url must be generated and inserted in the functions
-            (
-                "User-Agent",
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
-            ),
-            (
-                "Accept",
-                "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-            ),
-            ("Accept-Encoding", "gzip, deflate, br"),
-            ("Accept-Language", "en-US,en;q=0.9"),
-            ("Connection", "keep-alive"),
-        ]
-        self.default_headers_chromium = [
-            # The field with the Host and the url must be generated and inserted in the functions
-            (
-                "User-Agent",
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
-            ),
-            (
-                "Accept",
-                "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-            ),
-            ("Accept-Encoding", "gzip, deflate, br"),
-            ("Accept-Language", "en-US,en;q=0.9"),
-            ("Connection", "keep-alive"),
-        ]
-        self.default_headers_safari = [
-            # The field with the Host and the url must be generated and inserted in the functions
-            (
-                "User-Agent",
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
-            ),
-            (
-                "Accept",
-                "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-            ),
-            ("Accept-Encoding", "gzip, deflate, br"),
-            ("Accept-Language", "en-US,en;q=0.9"),
-            ("Connection", "keep-alive"),
-        ]
-    def parse_host(self):
+            "rfc": [
+                ("User-Agent",
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
+                ),
+                (
+                    "Accept",
+                    "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                ),
+                ("Accept-Encoding", "gzip, deflate, br"),
+                ("Accept-Language", "en-US,en;q=0.9"),
+                ("Connection", "keep-alive"),
+            ],
+            "safari": [
+                # The field with the Host and the url must be generated and inserted in the functions
+                (
+                    "User-Agent",
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
+                ),
+                (
+                    "Accept",
+                    "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                ),
+                ("Accept-Encoding", "gzip, deflate, br"),
+                ("Accept-Language", "en-US,en;q=0.9"),
+                ("Connection", "keep-alive"),
+            ],
+            "chrome": [
+                # The field with the Host and the url must be generated and inserted in the functions
+                (
+                    "User-Agent",
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
+                ),
+                (
+                    "Accept",
+                    "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                ),
+                ("Accept-Encoding", "gzip, deflate, br"),
+                ("Accept-Language", "en-US,en;q=0.9"),
+                ("Connection", "keep-alive"),
+            ],
+            "firefox": [
+                # The field with the Host and the url must be generated and inserted in the functions
+                (
+                    "User-Agent",
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
+                ),
+                (
+                    "Accept",
+                    "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                ),
+                ("Accept-Encoding", "gzip, deflate, br"),
+                ("Accept-Language", "en-US,en;q=0.9"),
+                ("Connection", "keep-alive"),
+            ],
+        }
+
+    def parse_host(self, host):
         '''Parse host uris'''
         # Initialize variables
         scheme = ""
@@ -106,14 +106,12 @@ class HTTP1_Request_Builder:
         # Return the extracted parts as a tuple
         return scheme, subdomain, hostname, domain, port, path
 
-    def generate_standard_request(self,host, port, url="/", method="GET", headers=None, fuzzvalue=None):
+    def generate_cc_request(self, host, port, url="/", method="GET", headers=None, fuzzvalue=None):
+
+
+
         '''Generation of request package without insertion of a covert channel'''
-        # Check if headers are provided elsewise take default headers
-        if headers is None:
-            headers = self.default_headers.copy()
-        else:
-            # Create a copy to avoid modifying the original list
-            headers = headers.copy()
+       
 
         # Insert the Host header at the beginning of the list
         headers.insert(0, ("Host", host))
@@ -133,8 +131,29 @@ class HTTP1_Request_Builder:
         deviation_count = 0
         return request_string, deviation_count
 
-    def generate_request(self, host, port, url="/", method="GET", headers=None, fuzzvalue=None
-        ):
+    def generate_request(self, experiment_configuration):
         '''Covered Channel Classes must implement this method'''
-        return self.generate_standard_request(host=host, port = port, url="/", method="GET", headers=None, fuzzvalue=None)
+        host=experiment_configuration["target_host"]
+        port=experiment_configuration["target_port"]
+        url=experiment_configuration["url"]
+        method=experiment_configuration["method"]
+        headers=experiment_configuration["headers"]
+        standard_headers=experiment_configuration["standard_headers"]
+        fuzzvalue=experiment_configuration["fuzz_value"]
+         # Check if headers are provided elsewise take default headers
+        if headers is None: 
+            if standard_headers in self.default_headers_sets:
+                headers= self.default_headers_sets[standard_headers].copy()       
+            else:
+                headers = self.default_headers_sets["rfc"].copy()
+
+            # Create a copy to avoid modifying the original list
+        print("Arguments:")
+        print(host)
+        print(port)
+        print(url)
+        print(method)
+        print(headers)
+        print(fuzzvalue)
+        return self.egenerate_cc_request(self, host, port, url, method, headers, fuzzvalue)
 

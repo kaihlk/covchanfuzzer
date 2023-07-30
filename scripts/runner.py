@@ -29,15 +29,10 @@ class ExperimentRunner:
     def forge_and_send_requests(self, attempt_number):
         '''Build a HTTP Request Package and sends it and processes the response'''
         #Build HTTP Request after the selected covered channel
-        selected_covered_channel = class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]](self.experiment_configuration["target_host"],self.experiment_configuration["target_port"])
-        request, deviation_count = selected_covered_channel.generate_request(
-                    host=self.experiment_configuration["target_host"],
-                    port=self.target_port,
-                    url="/",
-                    method="GET",
-                    headers=None,
-                    fuzzvalue=self.experiment_configuration["fuzz_value"],
-                )
+        selected_covered_channel = class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]()
+        #TODO Change of PORT due to Upgrade
+        print(self.experiment_configuration["target_host"])
+        request, deviation_count = selected_covered_channel.generate_request(self.experiment_configuration)
 
         #Send request and get response
         print(request)
@@ -53,7 +48,7 @@ class ExperimentRunner:
         if response is not None:
             response_status_code = response.Status_Code.decode("utf-8")
         else:
-            response_status_code="error"
+            response_status_code="Errors"
         
         request_data = {
             "number": attempt_number,

@@ -60,9 +60,7 @@ def generate_standard_request(self,
 
 
 class HTTP1_Request_CC_Case_Insensitivity(HTTP1_Request_Builder):
-    def generate_request(
-        host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
-    ):
+    def generate_cc_request(self, host, port, url="/", method="GET", headers=None, fuzzvalue=None):
         '''Covertchannel suggested by Kwecka et al: Case-insensitivity of header key names, fuzzvalue defines the probability that a character of a header field is changed'''
 
         # Check fuzzvalue
@@ -106,8 +104,7 @@ class HTTP1_Request_CC_Random_Whitespace(HTTP1_Request_Builder):
 # Covertchannel suggested by Kwecka et al: Linear whitespacing
 # fuzzvalue defines the propability whether a value is changed and how many whitespaces/tabs/newlines are added
 # Possible endless Loop, here is CC to learn something about the maximum size of the Request size
-    def generate_request(host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
-    ):
+    def generate_cc_request(self, host, port, url="/", method="GET", headers=None, fuzzvalue=None):
         # Check if headers are provided elsewise take default headers
         if headers is None:
             headers = default_headers.copy()

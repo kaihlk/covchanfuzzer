@@ -38,7 +38,7 @@ def main():
     # Experiment Configuration Values
     experiment_configuration = {
         "comment": "Some text describing the Testrun",
-        "covertchannel_request_number": 1,
+        "covertchannel_request_number": 2,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
         "num_attempts": 100,
@@ -48,6 +48,11 @@ def main():
         "use_ipv4": True,
         "target_host": "localhost",
         "target_port": 8080,
+        "method" : "GET",
+        "url": "/",
+        "headers": None,
+        "standard_headers": "rfc",
+
     }
     ExperimentRunner(experiment_configuration).setup_and_start_experiment()
 
