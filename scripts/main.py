@@ -41,10 +41,10 @@ def main():
     try:
         experiment_configuration = {
             "comment": "Some text describing the Testrun",
-            "covertchannel_request_number": 7,
+            "covertchannel_request_number": 2,
             "covertchannel_connection_number": 1,
             "covertchannel_timing_number": 1,
-            "num_attempts": 100,
+            "num_attempts": 10,
             "conn_timeout": 3,
             "nw_interface": "lo",
             "fuzz_value": 0.9,
@@ -55,6 +55,7 @@ def main():
             "url": "/",
             "headers": None,
             "standard_headers": "rfc",
+            "verbose": True,
 
         }
         ExperimentRunner(experiment_configuration).setup_and_start_experiment()

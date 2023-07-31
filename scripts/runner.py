@@ -35,20 +35,26 @@ class ExperimentRunner:
         request, deviation_count = selected_covered_channel.generate_request(self.experiment_configuration)
 
         #Send request and get response
-        print(request)
-        #
-        response, response_time, error_message = CustomHTTP().http_request(
+        if self.experiment_configuration["verbose"]==True:
+            print(request)
+        
+        response, response_time, error_message, response_header_fields = CustomHTTP().http_request(
             host=self.experiment_configuration["target_host"],
+            use_ipv4=self.experiment_configuration["use_ipv4"],
             port=self.target_port,
             host_ip_info=self.target_ip_info,
             custom_request=request,
             timeout=self.experiment_configuration["conn_timeout"],
+            verbose=self.experiment_configuration["verbose"],
         )
 
         if response is not None:
             response_status_code = response.Status_Code.decode("utf-8")
+            reason_phrase = response.Reason_Phrase.decode("utf-8")
+            
         else:
             response_status_code="Errors"
+            response_phrase = "Error"
         
         request_data = {
             "number": attempt_number,
@@ -56,8 +62,10 @@ class ExperimentRunner:
             "deviation_count": deviation_count,
             "request_length": len(request),
             "status_code": response_status_code,
+            "reason_phrase": reason_phrase,
             "response_time": response_time,
             "error_message": error_message,
+            "response_header_fields": response_header_fields,
         }
        
         return request, request_data
@@ -75,12 +83,14 @@ class ExperimentRunner:
                 response, request_data=self.forge_and_send_requests(i)
                 status_code_count[request_data["status_code"]] = (status_code_count.get(request_data["status_code"], 0) + 1)
                 request_data_list.append(request_data)
-                # Print the response status code and deviation count
-                print(f"Host: {self.experiment_configuration['target_host']}")
-                print(f"Port: {self.target_port}")
-                print(f"Status Code: {request_data['status_code']}")
-                print(f"Deviation Count: {request_data['deviation_count']}\n")
-                print(f"Error Message: {request_data['error_message']}\n")
+                if self.experiment_configuration["verbose"]==True:
+                    # Print the response status code and deviation count
+                    print(f"Results:")
+                    print(f"Host: {self.experiment_configuration['target_host']}")
+                    print(f"Port: {self.target_port}")
+                    print(f"Status Code: {request_data['status_code']}")
+                    print(f"Deviation Count: {request_data['deviation_count']}")
+                    print(f"Error Message: {request_data['error_message']}\n")
                 
         return status_code_count, request_data_list  
 

@@ -1,0 +1,26 @@
+{
+    "configuration_variables": {
+        "comment": "Some text describing the Testrun",
+        "covertchannel_request_number": 2,
+        "covertchannel_connection_number": 1,
+        "covertchannel_timing_number": 1,
+        "num_attempts": 10,
+        "conn_timeout": 3,
+        "nw_interface": "lo",
+        "fuzz_value": 0.9,
+        "use_ipv4": true,
+        "target_host": "localhost",
+        "target_port": 8080,
+        "method": "GET",
+        "url": "/",
+        "headers": null,
+        "standard_headers": "rfc",
+        "verbose": true
+    },
+    "result_variables": {
+        "covertchannel_request_name": "<class 'http1_covered_channels.HTTP1_Request_CC_Case_Insensitivity'>",
+        "Received_Status_Codes": {
+            "200": 10
+        }
+    }
+}

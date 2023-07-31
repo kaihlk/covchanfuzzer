@@ -70,8 +70,6 @@ class ExperimentLogger:
         self.create_wireshark_script()
         self.save_request_data(request_data)
 
-
-
     def capture_packets_dumpcap(
         self,
         stop_capture_flag,
@@ -106,7 +104,7 @@ class ExperimentLogger:
             while not stop_capture_flag.is_set():
                 # Continue capturing packets until the response is received or timeout occurs
                 pass
-            time.sleep(0.1)
+            time.sleep(1)
             # If the response arrived, terminate the capturing process early
             print("End of run. Capturing terminated.")
             subprocess.run(["pkill", "dumpcap"], check=False)  # Terminate dumpcap process      

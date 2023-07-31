@@ -2,15 +2,19 @@
 # Provides Connection over Sockets instead of tcpclient
 # Also provides a method to build a TLS Connection over the Socket
 
+# Inspired by
+# See http://www.secdev.org/projects/scapy for more information
+# Copyright (C) Philippe Biondi <phil@secdev.org>
+# This program is published under a GPLv2 license
 
-from scapy.layers.http import HTTP, HTTPRequest
+from scapy.layers.http import HTTP, HTTPRequest, HTTPResponse
 
 import socket
 import sys
 import scapy.supersocket as SuperSocket
 import ssl
 import time
-
+import re
 
 class CustomHTTP(HTTP):
     '''Class to build up a http/1 connection to host via a socket'''
@@ -28,21 +32,35 @@ class CustomHTTP(HTTP):
                 socket.SOCK_STREAM,
                 socket.IPPROTO_TCP,
             )
+            print(address)
         except socket.gaierror as ex:
             print(f"DNS Lookup failed: {str(ex)}")
             sys.exit(1)
         return address
 
-    def create_tcp_socket(self, addrlist):
-        '''Create a TCP socket'''
-        # Build socket
-        s = socket.socket(addrlist[0][0], addrlist[0][1], addrlist[0][2])
-        # Set socket options
-        s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        # Allow reuse immediately after closed
-        if hasattr(socket, "SO_REUSEPORT"):
-            s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
-        return s
+    def create_tcp_socket(self, ip_info, use_ipv4):
+        '''Create and Connect a TCP socket'''
+        try:
+            # Build socket
+            if use_ipv4==True:
+                s = socket.socket(ip_info[0][0], ip_info[0][1], ip_info[0][2])
+                # Set socket options
+                s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+                # Allow reuse immediately after closed
+                if hasattr(socket, "SO_REUSEPORT"):
+                    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+                    
+            else:
+                s = socket.socket(ip_info[1][0], ip_info[1][1], ip_info[1][2])
+                # Set socket options
+                s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+                # Allow reuse immediately after closed
+                if hasattr(socket, "SO_REUSEPORT"):
+                    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+            return s
+        except socket.error as ex:
+                error_message = str(ex)
+                return None
 
     def upgrade_to_tls(self, s, hostname):
         '''Upgrade a tcp socket connection to TLS'''
@@ -55,18 +73,99 @@ class CustomHTTP(HTTP):
         ssl_ctx.keylog_filename = "sessionkeys.txt"
         ssl_ctx.set_alpn_protocols(["http/1.1"])  # h2 is a RFC7540-hardcoded value
         ssl_sock = ssl_ctx.wrap_socket(s, server_hostname=hostname)
-
         return ssl_sock
+
+    def connect_tcp_socket(self, sock, host_ip_info, host, use_ipv4, timeout):
+            try: 
+                error_message="" 
+                if use_ipv4==True:             
+                    sock.connect(host_ip_info[0][4])
+                else:
+                    sock.connect(host_ip_info[1][4])
+                sock.settimeout(timeout)
+                stream_socket = SuperSocket.StreamSocket(sock, basecls=HTTP)
+                return stream_socket, error_message
+            except socket.error as ex:
+                error_message = str(ex)
+                return None, error_message
+
+    def connect_tls_socket(self, sock, host_ip_info, host, use_ipv4, timeout):
+            try: 
+                error_message=""
+                tls_socket = self.upgrade_to_tls(sock, host)
+                if use_ipv4==True:             
+                    sock.connect(host_ip_info[0][4])
+                else:
+                    sock.connect(host_ip_info[1][4])
+                sock.settimeout(timeout)
+                assert "http/1.1" == tls_socket.selected_alpn_protocol()
+                stream_socket = SuperSocket.SSLStreamSocket(tls_socket, basecls=HTTP)
+                return stream_socket, error_message
+            except socket.error as ex:
+                error_message = str(ex)
+                return None, error_message
+
+    def build_http_headers(self, host, path, headers, custom_request):
+        http_headers = {
+            "Accept_Encoding": b"gzip, deflate",
+            "Cache_Control": b"no-cache",
+            "Pragma": b"no-cache",
+            "Connection": b"keep-alive",
+            "Host": host,
+            "Path": path,
+        }
+        http_headers.update(headers)
+
+        if custom_request is not None:
+          #  http_headers = custom_request
+            req = custom_request.encode()
+        else:
+            req = HTTP() / HTTPRequest(**http_headers)
+
+        return req
+
+    
+
+    def extract_response_headers(self, http_response):
+        """Extract the header fields from the response"""
+        response_str=str(bytes(http_response),"utf-8") #due to type HTTP
+
+        date_pattern = re.compile(r'Date:\s+(.*?)\r\n')
+        server_pattern = re.compile(r'Server:\s+(.*?)\r\n')
+        content_type_pattern = re.compile(r'Content-Type:\s+(.*?)\r\n')
+        content_length_pattern = re.compile(r'Content-Length:\s+(.*?)\r\n')
+        content_encoding_pattern = re.compile(r'Content-Encoding:\s+(.*?)\r\n')
+        cache_control_pattern = re.compile(r'Cache-Control:\s+(.*?)\r\n')
+        expires_pattern = re.compile(r'Expires:\s+(.*?)\r\n')
+        last_modified_pattern = re.compile(r'Last-Modified:\s+(.*?)\r\n')
+        location_pattern = re.compile(r'Location:\s+(.*?)\r\n')
+        
+        response_header_fields = {
+        "Date": date_pattern.search(response_str).group(1) if date_pattern.search(response_str) else "not found",
+        "Server": server_pattern.search(response_str).group(1) if server_pattern.search(response_str) else "not found",
+        "Content-Type": content_type_pattern.search(response_str).group(1) if content_type_pattern.search(response_str) else "not found",
+        "Content-Length": content_length_pattern.search(response_str).group(1) if content_length_pattern.search(response_str) else "not found",
+        "Content-Encoding": content_encoding_pattern.search(response_str).group(1) if content_encoding_pattern.search(response_str) else "not found",
+        "Cache-Control": cache_control_pattern.search(response_str).group(1) if cache_control_pattern.search(response_str) else "not found",
+        "Expires": expires_pattern.search(response_str).group(1) if expires_pattern.search(response_str) else "not found",
+        "Last-Modified": last_modified_pattern.search(response_str).group(1) if last_modified_pattern.search(response_str) else "not found",
+        "Location": location_pattern.search(response_str).group(1) if location_pattern.search(response_str) else "not found",
+        }   
+
+        return response_header_fields
+
+    
 
     def http_request(
         self,
         host,
-        path="/",
+        use_ipv4,
         port=80,
+        path="/",
         host_ip_info=None,
         timeout=3,
         #display=False,
-        #verbose=0,
+        verbose=True,
         custom_request=None,
         **headers,
     ):
@@ -84,71 +183,47 @@ class CustomHTTP(HTTP):
         #Initialize Variables
         response = None
         response_time=0
-        error_message = None
+ 
         
         
-        # DNS Lookup if info not provided
+        # DNS Lookup if info not provided, maybe delete it
         if host_ip_info is None:
             host_ip_info = self.lookup_dns(host, port)
 
         #TODO Add IPV6 support
-        http_headers = {
-            "Accept_Encoding": b"gzip, deflate",
-            "Cache_Control": b"no-cache",
-            "Pragma": b"no-cache",
-            "Connection": b"keep-alive",
-            "Host": host,
-            "Path": path,
-        }
-        http_headers.update(headers)
-        if custom_request is not None:
-            http_headers = custom_request
-            req = custom_request.encode()
-        else:
-            req = HTTP() / HTTPRequest(**http_headers)
+        req = self.build_http_headers(host, path, headers, custom_request)
 
         # Check
-        print(req)
-
+        if verbose==True:
+            print(req)
+        
+        
         # Establish a socket connection
-        sock = self.create_tcp_socket(host_ip_info)
-        # Upgrade to TLS depending on the port
+        sock = self.create_tcp_socket(host_ip_info, use_ipv4)
+        # Upgrade to TLS depending on the port     
         if 443 == port:
-            try:
-                tls_socket = self.upgrade_to_tls(sock, host)
-                # Connect Socket to TCP Endpoint
-                tls_socket.connect(host_ip_info[0][4])
-                tls_socket.settimeout(timeout)
-                assert "http/1.1" == tls_socket.selected_alpn_protocol()
-                stream_socket = SuperSocket.SSLStreamSocket(tls_socket, basecls=HTTP)
-            except socket.error as ex:
-                error_message = str(ex)
-                stream_socket = None 
+            stream_socket, error_message=self.connect_tls_socket(sock, host_ip_info, host, use_ipv4, timeout)
         else:
-            try:
-                sock.connect((host_ip_info[0][4]))
-                sock.settimeout(timeout)
-                stream_socket = SuperSocket.StreamSocket(sock, basecls=HTTP)
-            except socket.error as ex2:
-                error_message = str(ex2)
-                stream_socket = None 
+            stream_socket, error_message=self.connect_tcp_socket(sock, host_ip_info, host, use_ipv4, timeout)
 
-
+       
         if stream_socket is not None:
             try:
                 # Send the request over the socket
                 start_time=time.time()
                 stream_socket.send(req)
+
+                
                 # Receive the response
                 response = stream_socket.recv()
                 end_time = time.time()
                 response_time=end_time-start_time
-    
+                
             except socket.timeout:
                 error_message="Timeout Limit reached"
                 response = None
-            except socket.error as ex3:
-                error_message=str(ex3)
+            except socket.error as ex:
+                error_message=str(ex)
                 response=None
             finally:
                 # Close the socket
@@ -158,5 +233,7 @@ class CustomHTTP(HTTP):
                 else:
                     sock.shutdown(1)            
                     stream_socket.close()
-
-        return response, response_time, error_message
+        
+        response_header_fields=self.extract_response_headers(response)
+       
+        return response, response_time, error_message, response_header_fields
