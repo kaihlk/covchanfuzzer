@@ -47,14 +47,14 @@ class ExperimentRunner:
             timeout=self.experiment_configuration["conn_timeout"],
             verbose=self.experiment_configuration["verbose"],
         )
-
+   
         if response is not None:
             response_status_code = response.Status_Code.decode("utf-8")
             reason_phrase = response.Reason_Phrase.decode("utf-8")
             
         else:
             response_status_code="Errors"
-            response_phrase = "Error"
+            reason_phrase = "Error"
         
         request_data = {
             "number": attempt_number,
@@ -126,7 +126,9 @@ class ExperimentRunner:
 
         # Save Experiment Metadata
         result_variables = {
-            "covertchannel_request_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]), 
+            "covertchannel_request_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]),
+            "covertchannel_request_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_connection_number"]]),
+            "covertchannel_timing_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_timing_number"]]),
             "Received_Status_Codes": status_code_count,
             #Here maybe more information would be nice, successful attempts/failures, count of successfull baseline checks, statistical data? medium response time?
         }

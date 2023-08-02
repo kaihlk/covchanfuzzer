@@ -1,0 +1,112 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nhOST: www.example.com\r\nUSER-aGENt: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\naCCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\naCCEPT-eNCOdING: gzip, deflate\r\nACCEPT-lANGUAGE: en-US,en;q=0.5\r\ndnt: 1\r\ncONNECTION: keep-alive\r\n\r\n",
+        "deviation_count": 59,
+        "request_length": 315,
+        "status_code": "Errors",
+        "reason_phrase": "Error",
+        "response_time": 0,
+        "error_message": "timed out",
+        "response_header_fields": null
+    },
+    {
+        "number": 1,
+        "request": "GET / HTTP/1.1\r\nhOST: www.example.com\r\nuSER-aGENT: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\naCCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\naCCEPt-eNCOdING: gzip, deflate\r\naCCEPT-laNGUAGE: en-US,en;q=0.5\r\ndnt: 1\r\ncONNECTIOn: keep-alive\r\n\r\n",
+        "deviation_count": 59,
+        "request_length": 315,
+        "status_code": "Errors",
+        "reason_phrase": "Error",
+        "response_time": 0,
+        "error_message": "timed out",
+        "response_header_fields": null
+    },
+    {
+        "number": 2,
+        "request": "GET / HTTP/1.1\r\nhOST: www.example.com\r\nuSER-aGENT: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nacCePT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\naCCEPT-eNCoDING: gzip, deflate\r\naCCEPT-lAnGuAGE: en-US,en;q=0.5\r\ndnt: 1\r\ncoNNECtION: keep-alive\r\n\r\n",
+        "deviation_count": 55,
+        "request_length": 315,
+        "status_code": "Errors",
+        "reason_phrase": "Error",
+        "response_time": 0,
+        "error_message": "timed out",
+        "response_header_fields": null
+    },
+    {
+        "number": 3,
+        "request": "GET / HTTP/1.1\r\nhOST: www.example.com\r\nuSER-aGENT: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccEpT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\naCCEPT-enCODING: gzip, deflate\r\naCCePT-lANgUAGE: en-US,en;q=0.5\r\ndnt: 1\r\ncONNECTION: keep-alive\r\n\r\n",
+        "deviation_count": 56,
+        "request_length": 315,
+        "status_code": "Errors",
+        "reason_phrase": "Error",
+        "response_time": 0,
+        "error_message": "timed out",
+        "response_header_fields": null
+    },
+    {
+        "number": 4,
+        "request": "GET / HTTP/1.1\r\nhOst: www.example.com\r\nuSeR-AGENT: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\naCcEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\naCCEPt-eNCODING: gzip, deflate\r\naCCEPt-lANGUAGE: en-US,en;q=0.5\r\nDnt: 1\r\ncONNECTION: keep-alive\r\n\r\n",
+        "deviation_count": 55,
+        "request_length": 315,
+        "status_code": "Errors",
+        "reason_phrase": "Error",
+        "response_time": 0,
+        "error_message": "timed out",
+        "response_header_fields": null
+    },
+    {
+        "number": 5,
+        "request": "GET / HTTP/1.1\r\nhOST: www.example.com\r\nuSeR-AgENT: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\naCCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\naCCEPT-eNCODiNg: gzip, deflate\r\naCCEPT-lANGUAgE: en-US,en;q=0.5\r\ndnt: 1\r\ncONNECtIoN: keep-alive\r\n\r\n",
+        "deviation_count": 55,
+        "request_length": 315,
+        "status_code": "Errors",
+        "reason_phrase": "Error",
+        "response_time": 0,
+        "error_message": "timed out",
+        "response_header_fields": null
+    },
+    {
+        "number": 6,
+        "request": "GET / HTTP/1.1\r\nhOST: www.example.com\r\nuSER-aGENT: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\naCCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\naCCEPT-ENCODINg: gzip, deflate\r\naCCEPT-lANGUAGE: en-US,en;q=0.5\r\ndnt: 1\r\ncONNECTION: keep-alive\r\n\r\n",
+        "deviation_count": 60,
+        "request_length": 315,
+        "status_code": "Errors",
+        "reason_phrase": "Error",
+        "response_time": 0,
+        "error_message": "timed out",
+        "response_header_fields": null
+    },
+    {
+        "number": 7,
+        "request": "GET / HTTP/1.1\r\nhOST: www.example.com\r\nuSER-aGENT: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\naCCePt: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\naCCePT-eNCODING: gzip, deflate\r\naCCEPT-lANGUAGE: en-US,en;q=0.5\r\ndnt: 1\r\ncOnNEcTION: keep-alive\r\n\r\n",
+        "deviation_count": 58,
+        "request_length": 315,
+        "status_code": "Errors",
+        "reason_phrase": "Error",
+        "response_time": 0,
+        "error_message": "timed out",
+        "response_header_fields": null
+    },
+    {
+        "number": 8,
+        "request": "GET / HTTP/1.1\r\nhOsT: www.example.com\r\nuSEr-aGENT: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\naCCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\naCCEPt-eNCOdING: gzip, deflate\r\naCCEPT-lANGUagE: en-US,en;q=0.5\r\ndnt: 1\r\ncONNECTION: keep-alive\r\n\r\n",
+        "deviation_count": 57,
+        "request_length": 315,
+        "status_code": "Errors",
+        "reason_phrase": "Error",
+        "response_time": 0,
+        "error_message": "timed out",
+        "response_header_fields": null
+    },
+    {
+        "number": 9,
+        "request": "GET / HTTP/1.1\r\nhOsT: www.example.com\r\nuSeR-AgENT: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\naCCEPT-enCODiNG: gzip, deflate\r\naCCEPT-lANGUAGE: en-US,en;q=0.5\r\ndnt: 1\r\ncoNNECTION: keep-alive\r\n\r\n",
+        "deviation_count": 52,
+        "request_length": 315,
+        "status_code": "Errors",
+        "reason_phrase": "Error",
+        "response_time": 0,
+        "error_message": "timed out",
+        "response_header_fields": null
+    }
+]
