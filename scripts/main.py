@@ -41,10 +41,13 @@ def main():
     try:
         experiment_configuration = {
             "comment": "Test Case Sensitivity on www.example.com",
+            "comment": "Test Case Sensitivity on www.example.com",
             "covertchannel_request_number": 2,
             "covertchannel_connection_number": 1,
             "covertchannel_timing_number": 1,
             "num_attempts": 10,
+            "conn_timeout": 0.5,
+            "nw_interface": "enp0s3",  #lo, docker, enp0s3
             "conn_timeout": 0.5,
             "nw_interface": "enp0s3",  #lo, docker, enp0s3
             "fuzz_value": 0.9,
@@ -55,6 +58,7 @@ def main():
             "method" : "TRACE",
             "url": "/",
             "headers": None,
+            "standard_headers": "firefox_HTTP/1.1",  #curl, firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
             "standard_headers": "firefox_HTTP/1.1",  #curl, firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
             "verbose": True,
 

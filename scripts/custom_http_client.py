@@ -59,7 +59,9 @@ class CustomHTTP(HTTP):
                 if hasattr(socket, "SO_REUSEPORT"):
                     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
             return s 
+            return s 
         except socket.error as ex:
+                print("Error Socket")
                 print("Error Socket")
                 error_message = str(ex)
                 return None
@@ -81,11 +83,13 @@ class CustomHTTP(HTTP):
             try: 
                 error_message="" 
                 
+              
+                
                 if use_ipv4==True:            
                     sock.connect(host_ip_info[0][4])
                 else:
                     sock.connect(host_ip_info[1][4]) 
-                sock.settimeout(thttimeout)               
+                sock.settimeout(timeout)               
                 stream_socket = SuperSocket.StreamSocket(sock, basecls=HTTP)
                 return stream_socket, error_message
             except socket.error as ex:
@@ -212,6 +216,9 @@ class CustomHTTP(HTTP):
         
         # Establish a socket connection
         sock = self.create_tcp_socket(host_ip_info, use_ipv4)
+        
+        # Upgrade to TLS depending on the port  
+        #    
         
         # Upgrade to TLS depending on the port  
         #    
