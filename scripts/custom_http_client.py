@@ -85,7 +85,7 @@ class CustomHTTP(HTTP):
                     sock.connect(host_ip_info[0][4])
                 else:
                     sock.connect(host_ip_info[1][4]) 
-                sock.settimeout(timeout)               
+                sock.settimeout(thttimeout)               
                 stream_socket = SuperSocket.StreamSocket(sock, basecls=HTTP)
                 return stream_socket, error_message
             except socket.error as ex:
@@ -133,27 +133,35 @@ class CustomHTTP(HTTP):
         """Extract the header fields from the response"""
         if http_response is not None:
             response_str=str(bytes(http_response),"utf-8") #due to type HTTP
-
-            date_pattern = re.compile(r'Date:\s+(.*?)\r\n')
-            server_pattern = re.compile(r'Server:\s+(.*?)\r\n')
-            content_type_pattern = re.compile(r'Content-Type:\s+(.*?)\r\n')
-            content_length_pattern = re.compile(r'Content-Length:\s+(.*?)\r\n')
-            content_encoding_pattern = re.compile(r'Content-Encoding:\s+(.*?)\r\n')
+            accept_ranges_pattern= re.compile(r'Accept-Ranges:\s+(.*?)\r\n')
+            age_pattern= re.compile(r'Age:\s+(.*?)\r\n')
             cache_control_pattern = re.compile(r'Cache-Control:\s+(.*?)\r\n')
+            content_encoding_pattern = re.compile(r'Content-Encoding:\s+(.*?)\r\n')
+            content_length_pattern = re.compile(r'Content-Length:\s+(.*?)\r\n')
+            content_type_pattern = re.compile(r'Content-Type:\s+(.*?)\r\n')
+            date_pattern = re.compile(r'Date:\s+(.*?)\r\n')
+            etag_pattern = re.compile(r'Etag:\s+"(.*?)"\r\n')
             expires_pattern = re.compile(r'Expires:\s+(.*?)\r\n')
             last_modified_pattern = re.compile(r'Last-Modified:\s+(.*?)\r\n')
             location_pattern = re.compile(r'Location:\s+(.*?)\r\n')
+            server_pattern = re.compile(r'Server:\s+(.*?)\r\n')
+            x_cache_pattern = re.compile(r'X-Cache:\s+(.*?)\r\n')
             
             response_header_fields = {
-            "Date": date_pattern.search(response_str).group(1) if date_pattern.search(response_str) else "not found",
-            "Server": server_pattern.search(response_str).group(1) if server_pattern.search(response_str) else "not found",
-            "Content-Type": content_type_pattern.search(response_str).group(1) if content_type_pattern.search(response_str) else "not found",
-            "Content-Length": content_length_pattern.search(response_str).group(1) if content_length_pattern.search(response_str) else "not found",
-            "Content-Encoding": content_encoding_pattern.search(response_str).group(1) if content_encoding_pattern.search(response_str) else "not found",
-            "Cache-Control": cache_control_pattern.search(response_str).group(1) if cache_control_pattern.search(response_str) else "not found",
-            "Expires": expires_pattern.search(response_str).group(1) if expires_pattern.search(response_str) else "not found",
-            "Last-Modified": last_modified_pattern.search(response_str).group(1) if last_modified_pattern.search(response_str) else "not found",
-            "Location": location_pattern.search(response_str).group(1) if location_pattern.search(response_str) else "not found",
+            "Accept-Ranges": accept_ranges_pattern.search(response_str).group(1) if accept_ranges_pattern.search(response_str) else "header field not found",
+            "Age": age_pattern.search(response_str).group(1) if age_pattern.search(response_str) else "header field not found",
+            "Cache-Control": cache_control_pattern.search(response_str).group(1) if cache_control_pattern.search(response_str) else "header field not found",
+            "Content-Encoding": content_encoding_pattern.search(response_str).group(1) if content_encoding_pattern.search(response_str) else "header field not found",
+            "Content-Length": content_length_pattern.search(response_str).group(1) if content_length_pattern.search(response_str) else "header field not found",
+            "Content-Type": content_type_pattern.search(response_str).group(1) if content_type_pattern.search(response_str) else "header field not found",
+            "Date": date_pattern.search(response_str).group(1) if date_pattern.search(response_str) else "header field not found",
+            "E-Tag": etag_pattern.search(response_str).group(1) if etag_pattern.search(response_str) else "header field not found",
+            "Expires": expires_pattern.search(response_str).group(1) if expires_pattern.search(response_str) else "header field not found",
+            "Last-Modified": last_modified_pattern.search(response_str).group(1) if last_modified_pattern.search(response_str) else "header field not found",
+            "Location": location_pattern.search(response_str).group(1) if location_pattern.search(response_str) else "header field not found",
+            "Server": server_pattern.search(response_str).group(1) if server_pattern.search(response_str) else "header field not found",
+            "X-Cache": x_cache_pattern.search(response_str).group(1) if x_cache_pattern.search(response_str) else "header field not found",
+            
             }   
         else: return None
         return response_header_fields
@@ -216,7 +224,7 @@ class CustomHTTP(HTTP):
         if stream_socket is not None:
             try:
                 # Send the request over the socket
-                print("a")
+                
                 start_time=time.time()
                 stream_socket.send(req)
 

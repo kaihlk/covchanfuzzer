@@ -52,7 +52,7 @@ def main():
             "use_TLS": False,
             "target_host": "www.example.com",
             "target_port": 80,
-            "method" : "GET",
+            "method" : "TRACE",
             "url": "/",
             "headers": None,
             "standard_headers": "firefox_HTTP/1.1",  #curl, firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
