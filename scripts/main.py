@@ -2,7 +2,7 @@
 
 from runner import ExperimentRunner
 import class_mapping
-
+##For Infoe
 """ class_mapping_requests ={
     1: HTTP1_Request_Builder,
     2: HTTP1_Request_CC_Case_Insensitivity,
@@ -40,21 +40,22 @@ def main():
     # Experiment Configuration Values
     try:
         experiment_configuration = {
-            "comment": "Some text describing the Testrun",
+            "comment": "Test Case Sensitivity on www.example.com",
             "covertchannel_request_number": 2,
             "covertchannel_connection_number": 1,
             "covertchannel_timing_number": 1,
             "num_attempts": 10,
-            "conn_timeout": 3,
-            "nw_interface": "lo",
+            "conn_timeout": 0.5,
+            "nw_interface": "enp0s3",  #lo, docker, enp0s3
             "fuzz_value": 0.9,
             "use_ipv4": True,
-            "target_host": "localhost",
-            "target_port": 8080,
+            "use_TLS": False,
+            "target_host": "www.example.com",
+            "target_port": 80,
             "method" : "GET",
             "url": "/",
             "headers": None,
-            "standard_headers": "rfc",
+            "standard_headers": "firefox_HTTP/1.1",  #curl, firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
             "verbose": True,
 
         }

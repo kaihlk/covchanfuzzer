@@ -40,6 +40,7 @@ class CustomHTTP(HTTP):
 
     def create_tcp_socket(self, ip_info, use_ipv4):
         '''Create and Connect a TCP socket'''
+           
         try:
             # Build socket
             if use_ipv4==True:
@@ -57,8 +58,9 @@ class CustomHTTP(HTTP):
                 # Allow reuse immediately after closed
                 if hasattr(socket, "SO_REUSEPORT"):
                     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
-            return s
+            return s 
         except socket.error as ex:
+                print("Error Socket")
                 error_message = str(ex)
                 return None
 
@@ -78,11 +80,12 @@ class CustomHTTP(HTTP):
     def connect_tcp_socket(self, sock, host_ip_info, host, use_ipv4, timeout):
             try: 
                 error_message="" 
-                if use_ipv4==True:             
+                
+                if use_ipv4==True:            
                     sock.connect(host_ip_info[0][4])
                 else:
-                    sock.connect(host_ip_info[1][4])
-                sock.settimeout(timeout)
+                    sock.connect(host_ip_info[1][4]) 
+                sock.settimeout(timeout)               
                 stream_socket = SuperSocket.StreamSocket(sock, basecls=HTTP)
                 return stream_socket, error_message
             except socket.error as ex:
@@ -128,30 +131,31 @@ class CustomHTTP(HTTP):
 
     def extract_response_headers(self, http_response):
         """Extract the header fields from the response"""
-        response_str=str(bytes(http_response),"utf-8") #due to type HTTP
+        if http_response is not None:
+            response_str=str(bytes(http_response),"utf-8") #due to type HTTP
 
-        date_pattern = re.compile(r'Date:\s+(.*?)\r\n')
-        server_pattern = re.compile(r'Server:\s+(.*?)\r\n')
-        content_type_pattern = re.compile(r'Content-Type:\s+(.*?)\r\n')
-        content_length_pattern = re.compile(r'Content-Length:\s+(.*?)\r\n')
-        content_encoding_pattern = re.compile(r'Content-Encoding:\s+(.*?)\r\n')
-        cache_control_pattern = re.compile(r'Cache-Control:\s+(.*?)\r\n')
-        expires_pattern = re.compile(r'Expires:\s+(.*?)\r\n')
-        last_modified_pattern = re.compile(r'Last-Modified:\s+(.*?)\r\n')
-        location_pattern = re.compile(r'Location:\s+(.*?)\r\n')
-        
-        response_header_fields = {
-        "Date": date_pattern.search(response_str).group(1) if date_pattern.search(response_str) else "not found",
-        "Server": server_pattern.search(response_str).group(1) if server_pattern.search(response_str) else "not found",
-        "Content-Type": content_type_pattern.search(response_str).group(1) if content_type_pattern.search(response_str) else "not found",
-        "Content-Length": content_length_pattern.search(response_str).group(1) if content_length_pattern.search(response_str) else "not found",
-        "Content-Encoding": content_encoding_pattern.search(response_str).group(1) if content_encoding_pattern.search(response_str) else "not found",
-        "Cache-Control": cache_control_pattern.search(response_str).group(1) if cache_control_pattern.search(response_str) else "not found",
-        "Expires": expires_pattern.search(response_str).group(1) if expires_pattern.search(response_str) else "not found",
-        "Last-Modified": last_modified_pattern.search(response_str).group(1) if last_modified_pattern.search(response_str) else "not found",
-        "Location": location_pattern.search(response_str).group(1) if location_pattern.search(response_str) else "not found",
-        }   
-
+            date_pattern = re.compile(r'Date:\s+(.*?)\r\n')
+            server_pattern = re.compile(r'Server:\s+(.*?)\r\n')
+            content_type_pattern = re.compile(r'Content-Type:\s+(.*?)\r\n')
+            content_length_pattern = re.compile(r'Content-Length:\s+(.*?)\r\n')
+            content_encoding_pattern = re.compile(r'Content-Encoding:\s+(.*?)\r\n')
+            cache_control_pattern = re.compile(r'Cache-Control:\s+(.*?)\r\n')
+            expires_pattern = re.compile(r'Expires:\s+(.*?)\r\n')
+            last_modified_pattern = re.compile(r'Last-Modified:\s+(.*?)\r\n')
+            location_pattern = re.compile(r'Location:\s+(.*?)\r\n')
+            
+            response_header_fields = {
+            "Date": date_pattern.search(response_str).group(1) if date_pattern.search(response_str) else "not found",
+            "Server": server_pattern.search(response_str).group(1) if server_pattern.search(response_str) else "not found",
+            "Content-Type": content_type_pattern.search(response_str).group(1) if content_type_pattern.search(response_str) else "not found",
+            "Content-Length": content_length_pattern.search(response_str).group(1) if content_length_pattern.search(response_str) else "not found",
+            "Content-Encoding": content_encoding_pattern.search(response_str).group(1) if content_encoding_pattern.search(response_str) else "not found",
+            "Cache-Control": cache_control_pattern.search(response_str).group(1) if cache_control_pattern.search(response_str) else "not found",
+            "Expires": expires_pattern.search(response_str).group(1) if expires_pattern.search(response_str) else "not found",
+            "Last-Modified": last_modified_pattern.search(response_str).group(1) if last_modified_pattern.search(response_str) else "not found",
+            "Location": location_pattern.search(response_str).group(1) if location_pattern.search(response_str) else "not found",
+            }   
+        else: return None
         return response_header_fields
 
     
@@ -200,16 +204,19 @@ class CustomHTTP(HTTP):
         
         # Establish a socket connection
         sock = self.create_tcp_socket(host_ip_info, use_ipv4)
-        # Upgrade to TLS depending on the port     
+        
+        # Upgrade to TLS depending on the port  
+        #    
         if 443 == port:
             stream_socket, error_message=self.connect_tls_socket(sock, host_ip_info, host, use_ipv4, timeout)
         else:
             stream_socket, error_message=self.connect_tcp_socket(sock, host_ip_info, host, use_ipv4, timeout)
 
-       
+        
         if stream_socket is not None:
             try:
                 # Send the request over the socket
+                print("a")
                 start_time=time.time()
                 stream_socket.send(req)
 

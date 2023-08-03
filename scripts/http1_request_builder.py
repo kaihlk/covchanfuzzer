@@ -12,60 +12,81 @@ from urllib.parse import quote
 class HTTP1_Request_Builder:
     def __init__(self): 
         self.default_headers_sets = {
-            # The field with the Host and the url must be generated and inserted in the functions
-            "rfc": [
-                ("User-Agent",
-                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
-                ),
-                (
-                    "Accept",
-                    "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-                ),
-                ("Accept-Encoding", "gzip, deflate, br"),
-                ("Accept-Language", "en-US,en;q=0.9"),
-                ("Connection", "keep-alive"),
+            # The request line and the host and the url field must be generated and inserted in the functions
+            "curl_HTTP/1.1(TLS)": [
+                ("User-Agent", "curl/7.87.0",),
+                ("Accept", "*/*",),
             ],
-            "safari": [
+            "firefox_HTTP/1.1": [
                 # The field with the Host and the url must be generated and inserted in the functions
                 (
                     "User-Agent",
-                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
+                    "Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0",
                 ),
                 (
                     "Accept",
-                    "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                    "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
                 ),
-                ("Accept-Encoding", "gzip, deflate, br"),
-                ("Accept-Language", "en-US,en;q=0.9"),
+                ("Accept-Encoding", "gzip, deflate"),
+                ("Accept-Language", "en-US,en;q=0.5"),
+                ("DNT", "1"), #Do not track 1 or 0
                 ("Connection", "keep-alive"),
+                #("Upgrade-Insecure-Requests", "1"), # Request the server to upgrade to https if possible, this may affect the servers response, so by now it is deactivated
             ],
-            "chrome": [
+            "firefox_HTTP/1.1_TLS": [
                 # The field with the Host and the url must be generated and inserted in the functions
                 (
                     "User-Agent",
-                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
+                    "Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0",
                 ),
                 (
                     "Accept",
-                    "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                    "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
                 ),
                 ("Accept-Encoding", "gzip, deflate, br"),
-                ("Accept-Language", "en-US,en;q=0.9"),
+                ("Accept-Language", "en-US,en;q=0.5"),
+                ("DNT", "1"), #Do not track 1 or 0
                 ("Connection", "keep-alive"),
+                ("Upgrade-Insecure-Requests", "1"), # Request the server to upgrade to https if possible, at TLS Mode should be no problem
+                ("Sec-Fetch-Dest", "document"), #destination of the fetch request type document
+                ("Sec-Fetch-Mode", "navigate"), # naviagion request, typically by user action
+                ("Sec-Fetch-Site", "cross-site"), # Context of the request, origin from another site
             ],
-            "firefox": [
+            "chromium_HTTP/1.1":  [
                 # The field with the Host and the url must be generated and inserted in the functions
+                ("Connection", "keep-alive"),
                 (
                     "User-Agent",
-                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
+                    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36", #Linux OP
                 ),
                 (
                     "Accept",
-                    "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                    "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
                 ),
-                ("Accept-Encoding", "gzip, deflate, br"),
+                ("Accept-Encoding", "gzip, deflate"),
                 ("Accept-Language", "en-US,en;q=0.9"),
-                ("Connection", "keep-alive"),
+            ],
+            "chromium_HTTP/1.1_TLS":  [
+                # The field with the Host and the url must be generated and inserted in the functions
+                ("sec-ch-ua", '"Chromium";v="115", "Not/A)Brand";v="99"'),  #hint to provide information about user-agent without exposing it, carefull with the " "
+                ("sec-ch-ua-mobile:", "?0"), # no information if the user-agent is a mobile device
+                ("sec-ch-ua-platform", "Linux"), # Hint to the OS
+                ("Upgrade-Insecure-Requests", "1"), # Request the server to upgrade to https if possible, at TLS Mode should be no problem
+                (
+                    "User-Agent",
+                    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36", #Linux OP
+                ),
+                (
+                    "Accept",
+                    "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                ),
+                ("Sec-Fetch-Site", "none"), # Context of the request, same origin 
+                ("Sec-Fetch-Mode", "navigate"), # naviagion request, typically by user action
+                ("Sec-Fetch-User", "?1"), # indicates that the user is activly browsing
+                ("Sec-Fetch-Dest", "document"), #destination of the fetch request type document
+                ("Accept-Encoding", "gzip, deflate"),
+                ("Accept-Language", "en-US,en;q=0.9"),
+
             ],
         }
 
@@ -148,6 +169,6 @@ class HTTP1_Request_Builder:
             if standard_headers in self.default_headers_sets:
                 headers= self.default_headers_sets[standard_headers].copy()       
             else:
-                headers = self.default_headers_sets["rfc"].copy()
+                headers = self.default_headers_sets["curl"].copy()
             # Create a copy to avoid modifying the original list
         return self.generate_cc_request(host, port, url, method, headers, fuzzvalue)
