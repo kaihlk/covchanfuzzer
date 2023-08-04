@@ -165,11 +165,14 @@ class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
         # Reorder the header fields, Note: the RandomValue random.shuffle(List, RandomValue[0,1]) is deprecated (Python 3.9)
         shuffled_headers = headers[:]
         random.shuffle(shuffled_headers)
-
+        
         # Insert the Host header at the beginning of the list
         shuffled_headers.insert(0, ("Host", host))
-        request_string = request_line
+        # Both list has to be the same length, otherwise one header field might be left out
+        headers.insert(0, ("Host", host))
 
+        request_string = request_line
+       
         # Iterate over the shuffled headers and compare with the original order
         for shuffled_header, original_header in zip(shuffled_headers, headers):
             # Check if the header is not 'Host' and the order has deviated and increment the deviation count
@@ -212,7 +215,7 @@ class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
         
         if scheme == "":
             scheme = "https"
-        new_scheme = random.choice([scheme + "://"])#, "", "http://"])#, scheme, "https://"])
+        new_scheme = random.choice([scheme + "://", "", "http://", scheme, "https://"])
         if new_scheme != scheme:
             deviation_count += 1
 
@@ -463,7 +466,7 @@ class HTTP1_Request_CC_URI_Hex_Hex(HTTP1_Request_Builder):
         return request_string, deviation_count
 
     # CC Absence or PResense of a header field
-    
+
     # CC with uncommon header
     # CC with self defined headers (size limit?)
     # CC with host and port

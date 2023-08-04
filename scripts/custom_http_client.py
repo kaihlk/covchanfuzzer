@@ -136,7 +136,7 @@ class CustomHTTP(HTTP):
     def extract_response_headers(self, http_response):
         """Extract the header fields from the response"""
         if http_response is not None:
-            response_str=str(bytes(http_response),"utf-8") #due to type HTTP
+            response_str=str(bytes(http_response),"utf-8", errors="replace") #due to type HTTP
             accept_ranges_pattern= re.compile(r'Accept-Ranges:\s+(.*?)\r\n')
             age_pattern= re.compile(r'Age:\s+(.*?)\r\n')
             cache_control_pattern = re.compile(r'Cache-Control:\s+(.*?)\r\n')

@@ -1,0 +1,52 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.google.com\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nAccept-Encoding: gzip, deflate\r\nConnection: keep-alive\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 306,
+        "status_code": "302",
+        "reason_phrase": "Found",
+        "response_time": 0.0749509334564209,
+        "error_message": "",
+        "response_header_fields": {
+            "Accept-Ranges": "header field not found",
+            "Age": "header field not found",
+            "Cache-Control": "private",
+            "Content-Encoding": "header field not found",
+            "Content-Length": "231",
+            "Content-Type": "text/html; charset=UTF-8",
+            "Date": "Fri, 04 Aug 2023 23:11:36 GMT",
+            "E-Tag": "header field not found",
+            "Expires": "header field not found",
+            "Last-Modified": "header field not found",
+            "Location": "https://www.google.com/?gws_rd=ssl",
+            "Server": "gws",
+            "X-Cache": "header field not found"
+        }
+    },
+    {
+        "number": 1,
+        "request": "GET / HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept-Encoding: gzip, deflate\r\nConnection: keep-alive\r\nAccept-Language: en-US,en;q=0.5\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 306,
+        "status_code": "302",
+        "reason_phrase": "Found",
+        "response_time": 0.044679880142211914,
+        "error_message": "",
+        "response_header_fields": {
+            "Accept-Ranges": "header field not found",
+            "Age": "header field not found",
+            "Cache-Control": "private",
+            "Content-Encoding": "header field not found",
+            "Content-Length": "231",
+            "Content-Type": "text/html; charset=UTF-8",
+            "Date": "Fri, 04 Aug 2023 23:11:36 GMT",
+            "E-Tag": "header field not found",
+            "Expires": "header field not found",
+            "Last-Modified": "header field not found",
+            "Location": "https://www.google.com/?gws_rd=ssl",
+            "Server": "gws",
+            "X-Cache": "header field not found"
+        }
+    }
+]

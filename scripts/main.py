@@ -41,22 +41,24 @@ def main():
    # try:
     experiment_configuration = {
         "comment": "Test: URI Representation_Apache Docker",
-        "covertchannel_request_number": 7,
+        "covertchannel_request_number": 4,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
         "num_attempts": 100,
+        "wait_between_request": 0,
+        "base_line_check_frequency": 0,
         "conn_timeout": 0.5,
-        "nw_interface": "lo",  #lo, docker, enp0s3
+        "nw_interface": "enp0s3",  #lo, docker, enp0s3
         "fuzz_value": 0.1,
         "use_ipv4": True,
         "use_TLS": False,
-        "target_host": "localhost",
-        "target_port": 8080, #443, 8080 Apache
+        "target_host": "www.google.com",
+        "target_port": 80, #443, 8080 Apache
         "method" : "GET",
         "url": "/",
         "headers": None,
-        "standard_headers": "firefox_HTTP/1.1",  #curl, firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
-        "verbose": False,    
+        "standard_headers": "firefox_HTTP/1.1",  #curl_HTTP/1.1(TLS), firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
+        "verbose": True,    
 
     }
     ExperimentRunner(experiment_configuration).setup_and_start_experiment()
