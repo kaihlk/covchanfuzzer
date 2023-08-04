@@ -200,29 +200,29 @@ class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
         else:
             # Create a copy to avoid modifying the original list
             headers = headers.copy()
-
+        
         # Insert the Host header at the beginning of the list
         headers.insert(0, ("Host", host))
 
         # Parse the given host
-        scheme, subdomain, hostname, domain, hostport, path = self.parse_host(host)
+        scheme, subdomain, hostname, domain, hostport, path = self.parse_host(url,host)
 
         # Build a new URL from the given host
         deviation_count = 0
-
+        
         if scheme == "":
-            scheme = "http"
-        new_scheme = random.choice([scheme + "://", "", "http://", "https://"])
+            scheme = "https"
+        new_scheme = random.choice([scheme + "://"])#, "", "http://"])#, scheme, "https://"])
         if new_scheme != scheme:
             deviation_count += 1
 
         if subdomain == "":
-            subdomain = "www."
-        new_subdomain = random.choice([subdomain + ".", "", "www."])
+            subdomain = "www"
+        new_subdomain = random.choice([subdomain, subdomain + ".", "", "www."])
         if new_subdomain != subdomain:
             deviation_count += 1
 
-        new_hostname = random.choice([hostname + "." + domain, ""])
+        new_hostname = random.choice([hostname, hostname + "." + domain, domain, "", "." + domain])
         if new_hostname != hostname + "." + domain:
             deviation_count += 1
 
@@ -233,9 +233,9 @@ class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
                 "",
                 ":" + str(hostport),
                 ":" + str(port),
-                ":" + "80",
-                ":" + "443",
-                ":" + str(random.randint(0, 65535)),
+                #":" + "80",
+                #":" + "443",
+                #":" + str(random.randint(0, 65535)),  #Hard to analyze
             ]
         )
         if new_port != hostport:
@@ -257,6 +257,82 @@ class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
 
         return request_string, deviation_count
 
+class HTTP1_Request_CC_URI_Represenation_Apache_Localhost(HTTP1_Request_Builder):
+    def generate_cc_request(self,
+        host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
+    ):
+        '''URI in the request line
+        Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers
+        Divide in 3 cover channels due to difference of technique
+        Change the part of the path to make an absolute URI, may include scheme, port or
+        Empty or not given port assune 80
+        http as scheme name and host name case insenitivity'''
+        
+        # Check if headers are provided elsewise take default headers
+        if headers is None:
+            headers = default_headers.copy()
+        else:
+            # Create a copy to avoid modifying the original list
+            headers = headers.copy()
+        
+        # Insert the Host header at the beginning of the list
+        headers.insert(0, ("Host", host))
+
+        # Parse the given host
+        scheme, subdomain, hostname, domain, hostport, path = self.parse_host(url,host)
+
+        # Build a new URL from the given host
+        deviation_count = 0
+        
+        if scheme == "":
+            scheme = "http"
+        new_scheme = random.choice([scheme + "://"])#, "", "http://"])#, scheme, "https://"])
+        if new_scheme != scheme:
+            deviation_count += 1
+
+        if subdomain == "":
+            subdomain = "www"
+        new_subdomain = random.choice([subdomain, subdomain + ".", "", "www."])
+        if new_subdomain != subdomain:
+            deviation_count += 1
+
+        new_hostname = random.choice([hostname, hostname + "." + domain, domain, "",])# "." + domain])
+        if new_hostname != hostname + "." + domain:
+            deviation_count += 1
+
+        if hostport == "":
+            hostport = port
+        new_port = random.choice(
+            [
+                "",
+                ":" + str(hostport),
+                ":" + str(port),
+                #":" + "80",
+                #":" + "443",
+                #":" + str(random.randint(0, 65535)),  #Hard to analyze
+            ]
+        )
+        if new_port != hostport:
+            deviation_count += 1
+
+        new_path = random.choice(["", "/", "/" + path])
+        if new_path != path:
+            deviation_count += 1
+
+        new_url = new_scheme + new_subdomain + new_hostname + new_port + new_path
+
+        request_line = f"{method} {new_url} HTTP/1.1\r\n"
+
+        request_string = request_line
+        for header in headers:
+            request_string += f"{header[0]}: {header[1]}\r\n"
+
+        request_string += "\r\n"
+
+        return request_string, deviation_count
+
+
+
 class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
     def generate_cc_request(self,
         host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
@@ -273,7 +349,7 @@ class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
         headers.insert(0, ("Host", host))
 
         # Parse the given host
-        scheme, subdomain, hostname, domain, hostport, path = self.parse_host(host)
+        scheme, subdomain, hostname, domain, hostport, path = self.parse_host(url,host)
 
         # Build a new URL from the given host, add some deviation if not all fields are provided
 
@@ -303,6 +379,9 @@ class HTTP1_Request_CC_URI_Hex_Hex(HTTP1_Request_Builder):
     # CC with addional changes in the URL,  HEX Representation of the URL
     # empty absolute path interpreta as "/"
     #  Hex representation can  7e or 7E
+    
+    
+    
     def generate_cc_request(self,
         host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
     ):
@@ -317,7 +396,7 @@ class HTTP1_Request_CC_URI_Hex_Hex(HTTP1_Request_Builder):
         headers.insert(0, ("Host", host))
 
         # Parse the given host
-        scheme, subdomain, hostname, domain, hostport, path = self.parse_host(host)
+        scheme, subdomain, hostname, domain, hostport, path = self.parse_host(url,host)
 
         # Build a new URL from the given host, add some deviation if not all fields are provided
 
@@ -383,7 +462,8 @@ class HTTP1_Request_CC_URI_Hex_Hex(HTTP1_Request_Builder):
 
         return request_string, deviation_count
 
-
+    # CC Absence or PResense of a header field
+    
     # CC with uncommon header
     # CC with self defined headers (size limit?)
     # CC with host and port

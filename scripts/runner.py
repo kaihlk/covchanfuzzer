@@ -54,7 +54,7 @@ class ExperimentRunner:
             
         else:
             response_status_code="Errors"
-            reason_phrase = "Error"
+            reason_phrase = "000"
         
         request_data = {
             "number": attempt_number,

@@ -1,0 +1,31 @@
+import json
+from collections import defaultdict
+
+file_path = "logs/20230804_223630_localhost/log_file.json"
+uri_status_count = defaultdict(lambda: defaultdict(int))
+
+with open(file_path, "r") as file:
+    data = json.load(file)
+
+for entry in data:
+    request_lines = entry["request"].split("\r\n")
+    first_line_parts = request_lines[0].split()
+
+    if len(first_line_parts) >= 3:
+        method, uri, _ = first_line_parts
+        status_code = entry["status_code"]
+
+        uri_status_count[status_code][uri] += 1
+
+# Sort status codes in ascending order
+sorted_status_codes = sorted(uri_status_count.keys(), key=int)
+
+print("Status Code\tCount\t\tURI")
+print("-------------------------------------------")
+for status_code in sorted_status_codes:
+    uri_counts = uri_status_count[status_code]
+    sorted_uris = sorted(uri_counts.keys(), key=lambda uri: (len(uri), uri))
+    
+    for uri in sorted_uris:
+        count = uri_counts[uri]
+        print(f"{status_code}\t\t{count}\t{uri}")
