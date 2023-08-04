@@ -38,34 +38,30 @@ def main():
     #Add Verbose mode
 
     # Experiment Configuration Values
-    try:
-        experiment_configuration = {
-            "comment": "Test Case Sensitivity on www.example.com",
-            "comment": "Test Case Sensitivity on www.example.com",
-            "covertchannel_request_number": 2,
-            "covertchannel_connection_number": 1,
-            "covertchannel_timing_number": 1,
-            "num_attempts": 10,
-            "conn_timeout": 0.5,
-            "nw_interface": "enp0s3",  #lo, docker, enp0s3
-            "conn_timeout": 0.5,
-            "nw_interface": "enp0s3",  #lo, docker, enp0s3
-            "fuzz_value": 0.9,
-            "use_ipv4": True,
-            "use_TLS": False,
-            "target_host": "www.example.com",
-            "target_port": 80,
-            "method" : "TRACE",
-            "url": "/",
-            "headers": None,
-            "standard_headers": "firefox_HTTP/1.1",  #curl, firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
-            "standard_headers": "firefox_HTTP/1.1",  #curl, firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
-            "verbose": True,
+   # try:
+    experiment_configuration = {
+        "comment": "Test: URI Representation_Apache Docker",
+        "covertchannel_request_number": 7,
+        "covertchannel_connection_number": 1,
+        "covertchannel_timing_number": 1,
+        "num_attempts": 100,
+        "conn_timeout": 0.5,
+        "nw_interface": "lo",  #lo, docker, enp0s3
+        "fuzz_value": 0.1,
+        "use_ipv4": True,
+        "use_TLS": False,
+        "target_host": "localhost",
+        "target_port": 8080, #443, 8080 Apache
+        "method" : "GET",
+        "url": "/",
+        "headers": None,
+        "standard_headers": "firefox_HTTP/1.1",  #curl, firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
+        "verbose": False,    
 
-        }
-        ExperimentRunner(experiment_configuration).setup_and_start_experiment()
-    except Exception as ex:
-        print("Error: ", str(ex))
+    }
+    ExperimentRunner(experiment_configuration).setup_and_start_experiment()
+    #except Exception as ex:
+     #   print("Error: ", str(ex))
 
 if __name__ == "__main__":
     main()
