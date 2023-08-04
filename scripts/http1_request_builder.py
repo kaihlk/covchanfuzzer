@@ -172,6 +172,6 @@ class HTTP1_Request_Builder:
             if standard_headers in self.default_headers_sets:
                 headers= self.default_headers_sets[standard_headers].copy()       
             else:
-                headers = self.default_headers_sets["curl"].copy()
+                headers = self.default_headers_sets["curl_HTTP/1.1(TLS)"].copy()
             # Create a copy to avoid modifying the original list
         return self.generate_cc_request(host, port, url, method, headers, fuzzvalue)
