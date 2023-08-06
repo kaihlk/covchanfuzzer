@@ -16,6 +16,130 @@ import ssl
 import time
 import re
 
+GENERAL_HEADERS = [
+    "Cache-Control",
+    "Connection",
+    "Permanent",
+    "Content-Length",
+    "Content-MD5",
+    "Content-Type",
+    "Date",
+    "Keep-Alive",
+    "Pragma",
+    "Upgrade",
+    "Via",
+    "Warning"
+]
+
+COMMON_UNSTANDARD_GENERAL_HEADERS = [
+    "X-Request-ID",
+    "X-Correlation-ID"
+]
+
+REQUEST_HEADERS = [
+    "A-IM",
+    "Accept",
+    "Accept-Charset",
+    "Accept-Encoding",
+    "Accept-Language",
+    "Accept-Datetime",
+    "Access-Control-Request-Method",
+    "Access-Control-Request-Headers",
+    "Authorization",
+    "Cookie",
+    "Expect",
+    "Forwarded",
+    "From",
+    "Host",
+    "HTTP2-Settings",
+    "If-Match",
+    "If-Modified-Since",
+    "If-None-Match",
+    "If-Range",
+    "If-Unmodified-Since",
+    "Max-Forwards",
+    "Origin",
+    "Proxy-Authorization",
+    "Range",
+    "Referer",
+    "TE",
+    "User-Agent"
+]
+
+COMMON_UNSTANDARD_REQUEST_HEADERS = [
+    "Upgrade-Insecure-Requests",
+    "Upgrade-Insecure-Requests",
+    "X-Requested-With",
+    "DNT",
+    "X-Forwarded-For",
+    "X-Forwarded-Host",
+    "X-Forwarded-Proto",
+    "Front-End-Https",
+    "X-Http-Method-Override",
+    "X-ATT-DeviceId",
+    "X-Wap-Profile",
+    "Proxy-Connection",
+    "X-UIDH",
+    "X-Csrf-Token",
+    "Save-Data",
+]
+
+RESPONSE_HEADERS = [
+    "Access-Control-Allow-Origin",
+    "Access-Control-Allow-Credentials",
+    "Access-Control-Expose-Headers",
+    "Access-Control-Max-Age",
+    "Access-Control-Allow-Methods",
+    "Access-Control-Allow-Headers",
+    "Accept-Patch",
+    "Accept-Ranges",
+    "Age",
+    "Allow",
+    "Alt-Svc",
+    "Content-Disposition",
+    "Content-Encoding",
+    "Content-Language",
+    "Content-Location",
+    "Content-Range",
+    "Delta-Base",
+    "ETag",
+    "Expires",
+    "IM",
+    "Last-Modified",
+    "Link",
+    "Location",
+    "Permanent",
+    "P3P",
+    "Proxy-Authenticate",
+    "Public-Key-Pins",
+    "Retry-After",
+    "Server",
+    "Set-Cookie",
+    "Strict-Transport-Security",
+    "Trailer",
+    "Transfer-Encoding",
+    "Tk",
+    "Vary",
+    "WWW-Authenticate",
+    "X-Frame-Options",
+]
+
+COMMON_UNSTANDARD_RESPONSE_HEADERS = [
+    "Content-Security-Policy",
+    "X-Content-Security-Policy",
+    "X-WebKit-CSP",
+    "Refresh",
+    "Status",
+    "Timing-Allow-Origin",
+    "X-Content-Duration",
+    "X-Content-Type-Options",
+    "X-Powered-By",
+    "X-UA-Compatible",
+    "X-XSS-Protection",
+]
+
+
+
 class CustomHTTP(HTTP):
     '''Class to build up a http/1 connection to host via a socket'''
     
@@ -131,107 +255,48 @@ class CustomHTTP(HTTP):
 
         return req
 
-    def _strip_header_name(self, name):
-        """Takes a header key (i.e., "Host" in "Host: www.google.com",
-        and returns a stripped representation of it
-        """
-        return plain_str(name.strip()).replace("-", "_")
 
 
-    def _header_line(self, name, val):
-        """Creates a HTTP header line"""
-        # Python 3.4 doesn't support % on bytes
-        return bytes_encode(name) + b": " + bytes_encode(val)
-
-
-    def _parse_headers(self, s):
-        headers = s.split(b"\r\n")
-        headers_found = {}
-        for header_line in headers:
-            try:
-                key, value = header_line.split(b':', 1)
+    def parse_headers(self, headers_str):
+        """Extract the header fields from the response"""
+        response_headers = {}
+        for header_line in headers_str.split('\r\n'):
+            try: 
+                if ':' in header_line:
+                    key, value = header_line.split(':', 1)
+                    header_key = key.strip().lower()
+                    response_headers[header_key] = value.strip()
             except ValueError:
                 continue
-            header_key = self._strip_header_name(key).lower()
-            headers_found[header_key] = (key, value.strip())
-        return headers_found
+            
+        return response_headers
 
 
-    def _parse_headers_and_body(self, s):
-        ''' Takes a HTTP packet, and returns a tuple containing:
-        _ the first line (e.g., "GET ...")
-        _ the headers in a dictionary
-        _ the body
-        '''
-        print("s:")
-        print(type(s))
-        print(s)
-        crlfcrlf = b'\r\n\r\n'
-        crlfcrlfIndex = s.find(crlfcrlf)
-        print(crlfcrlfIndex)
-
-        if crlfcrlfIndex != -1:
-            headers = s[:crlfcrlfIndex + len(crlfcrlf)]
-            body = s[crlfcrlfIndex + len(crlfcrlf):]
-        else:
-            headers = s
-            body = b''
-        first_line, headers = headers.split(b"\r\n", 1)
-        return first_line.strip(), self._parse_headers(headers), body
-
-    def extract_response_headers(self, http_response, obj):
-        """Extract the header fields from the response"""
-        response_str=str(bytes(http_response))
-        first_line, headers, body = self._parse_headers_and_body(response_str)
-        for f in obj.fields_desc:
-            # We want to still parse wrongly capitalized fields
-            stripped_name = self._strip_header_name(f.name).lower()
-            try:
-                _, value = headers.pop(stripped_name)
-            except KeyError:
-                continue
-            obj.setfieldval(f.name, value)
-            if headers:
-                headers = {key: value for key, value in six.itervalues(headers)}
-            obj.setfieldval('Unknown_Headers', headers)
-        return first_line, body
+    def parse_response(self, http_response):
+        """Split the response into response line, headers, and body,    TRAILERS not supported"""
+        response_str=str(bytes(http_response),"utf-8", errors="replace")
+        crlf_firstline = response_str.find('\r\n')
+        if crlf_firstline != -1:
+            response_line=response_str[:crlf_firstline+2]
+            headers_body=response_str[crlf_firstline+2:]
+        crlfcrlfIndex = response_str.find('\r\n\r\n')
+        if crlf_firstline != -1:
+            headers=response_str[:crlfcrlfIndex +4]
+            body=response_str[crlfcrlfIndex+4:]
         
-        """ if http_response is not None:
-            response_str=str(bytes(http_response),"utf-8", errors="replace") #due to type HTTP
-            accept_ranges_pattern= re.compile(r'Accept-Ranges:\s+(.*?)\r\n')
-            age_pattern= re.compile(r'Age:\s+(.*?)\r\n')
-            cache_control_pattern = re.compile(r'Cache-Control:\s+(.*?)\r\n')
-            content_encoding_pattern = re.compile(r'Content-Encoding:\s+(.*?)\r\n')
-            content_length_pattern = re.compile(r'Content-Length:\s+(.*?)\r\n')
-            content_type_pattern = re.compile(r'Content-Type:\s+(.*?)\r\n')
-            date_pattern = re.compile(r'Date:\s+(.*?)\r\n')
-            etag_pattern = re.compile(r'Etag:\s+"(.*?)"\r\n')
-            expires_pattern = re.compile(r'Expires:\s+(.*?)\r\n')
-            last_modified_pattern = re.compile(r'Last-Modified:\s+(.*?)\r\n')
-            location_pattern = re.compile(r'Location:\s+(.*?)\r\n')
-            server_pattern = re.compile(r'Server:\s+(.*?)\r\n')
-            x_cache_pattern = re.compile(r'X-Cache:\s+(.*?)\r\n')
-            
-            response_header_fields = {
-            "Accept-Ranges": accept_ranges_pattern.search(response_str).group(1) if accept_ranges_pattern.search(response_str) else "header field not found",
-            "Age": age_pattern.search(response_str).group(1) if age_pattern.search(response_str) else "header field not found",
-            "Cache-Control": cache_control_pattern.search(response_str).group(1) if cache_control_pattern.search(response_str) else "header field not found",
-            "Content-Encoding": content_encoding_pattern.search(response_str).group(1) if content_encoding_pattern.search(response_str) else "header field not found",
-            "Content-Length": content_length_pattern.search(response_str).group(1) if content_length_pattern.search(response_str) else "header field not found",
-            "Content-Type": content_type_pattern.search(response_str).group(1) if content_type_pattern.search(response_str) else "header field not found",
-            "Date": date_pattern.search(response_str).group(1) if date_pattern.search(response_str) else "header field not found",
-            "E-Tag": etag_pattern.search(response_str).group(1) if etag_pattern.search(response_str) else "header field not found",
-            "Expires": expires_pattern.search(response_str).group(1) if expires_pattern.search(response_str) else "header field not found",
-            "Last-Modified": last_modified_pattern.search(response_str).group(1) if last_modified_pattern.search(response_str) else "header field not found",
-            "Location": location_pattern.search(response_str).group(1) if location_pattern.search(response_str) else "header field not found",
-            "Server": server_pattern.search(response_str).group(1) if server_pattern.search(response_str) else "header field not found",
-            "X-Cache": x_cache_pattern.search(response_str).group(1) if x_cache_pattern.search(response_str) else "header field not found",
-            
-            }   
-        else: return None """
-        return response_header_fields
+        return response_line, headers, body
 
-    
+
+    def parse_response_line(self, response_line_str):
+        #Split the line
+        http_version, status_code, reason_phrase= response_line_str.split(None, 2)
+        response_line = {
+            "HTTP_version": http_version,
+            "status_code": int(status_code),
+            "reason_phrase": reason_phrase.strip(),
+        }
+        return response_line
+
 
     def http_request(
         self,
@@ -316,18 +381,22 @@ class CustomHTTP(HTTP):
                 else:
                     sock.shutdown(1)            
                     stream_socket.close()
-
-        print(type(response))
-"""         
-        firstline, body=response.do_dissect(s)
-
-        response_header_fields=None
+        
+        
+        
+    
+        #
+        response_line=None
+        response_headers=None
+        body=None
         if response is not None:
-            response_obj=HTTPResponse()
-            firstline, body =self.extract_response_headers(response, response_obj)
-            print(response_obj)
-            response_header_fields=response_obj.headers
+            response_line_str, headers_str, body_str=self.parse_response(response)
+            response_line= self.parse_response_line(response_line_str)
+            response_headers =self.parse_headers(headers_str)
+         
+            
+
         
        
- """
-        return response#, response_time, error_message, response_header_fields
+
+        return response_line, response_headers, body, response_time, error_message

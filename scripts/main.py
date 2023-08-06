@@ -44,7 +44,7 @@ def main():
         "covertchannel_request_number": 1,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
-        "num_attempts": 100,
+        "num_attempts": 1,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
         "conn_timeout": 0.5,

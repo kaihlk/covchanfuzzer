@@ -38,7 +38,7 @@ class ExperimentRunner:
         if self.experiment_configuration["verbose"]==True:
             print(request)
         
-        response, response_time, error_message, response_header_fields = CustomHTTP().http_request(
+        response_line, response_header_fields, body, response_time, error_message  = CustomHTTP().http_request(
             host=self.experiment_configuration["target_host"],
             use_ipv4=self.experiment_configuration["use_ipv4"],
             port=self.target_port,
@@ -48,21 +48,25 @@ class ExperimentRunner:
             verbose=self.experiment_configuration["verbose"],
         )
    
-        if response is not None:
-            response_status_code = response.Status_Code.decode("utf-8")
-            reason_phrase = response.Reason_Phrase.decode("utf-8")
+        if response_line is not None:
+            response_http_version = response_line["HTTP_version"]
+            response_status_code = response_line["status_code"]
+            response_reason_phrase = response_line["reason_phrase"]
             
         else:
-            response_status_code="Errors"
-            reason_phrase = "000"
-        
+            response_http_version = ""
+            response_status_code = 000
+            response_reason_phrase = "Error"
+            
+                   
         request_data = {
             "number": attempt_number,
             "request": request,
             "deviation_count": deviation_count,
             "request_length": len(request),
+            "http_version": response_http_version,
             "status_code": response_status_code,
-            "reason_phrase": reason_phrase,
+            "reason_phrase": response_reason_phrase ,
             "response_time": response_time,
             "error_message": error_message,
             "response_header_fields": response_header_fields,
