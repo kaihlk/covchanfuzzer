@@ -57,6 +57,44 @@ def request_inspector():
             count = status_counts[status_code]
             print(f"{request}\t{status_code}\t\t{count}")
 
+
+def request_inspector_CC_add_content():
+    file_path = "logs/20230806_172732_www.google.com/log_file.json"
+    
+
+    with open(file_path, "r") as file:
+        data = json.load(file)
+
+    for entry in data:
+        request_lines = entry['request'].split('\r\n')
+        has_content_length = any('Content-Length' in line for line in request_lines)
+
+    content_length_counts = defaultdict(int)
+    status_code_counts_with_content_length = defaultdict(int)
+    status_code_counts_without_content_length = defaultdict(int)
+
+    for entry in data:
+        request_lines = entry['request'].split('\r\n')
+        has_content_length = any('Content-Length' in line for line in request_lines)
+        
+        content_length_counts[has_content_length] += 1
+        status_code = entry['status_code']
+        
+        if has_content_length:
+            status_code_counts_with_content_length[status_code] += 1
+        else:
+            status_code_counts_without_content_length[status_code] += 1
+
+
+    print("Content-Length Counts:")
+    print(content_length_counts)
+
+    print("\nStatus Code Counts with Content-Length:")
+    print(status_code_counts_with_content_length)
+
+    print("\nStatus Code Counts without Content-Length:")
+    print(status_code_counts_without_content_length)
+
 # Call the function to execute
-request_inspector()
+request_inspector_CC_add_content()
 

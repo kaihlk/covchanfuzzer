@@ -61,7 +61,7 @@ def random_slice_and_swap_string(s: str) -> str :
     return s[pos:] + s[:pos]
 
 def generate_random_string(char_set: str, length: int, minlength=0) -> str :
-    # Generate a random string from a charse
+    # Generate a random string from a charset
     random_chars = [random.choice(char_set) for _ in range(minlength, length)]
     return ''.join(random_chars)
 

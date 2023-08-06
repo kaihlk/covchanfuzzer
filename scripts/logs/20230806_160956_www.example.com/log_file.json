@@ -1,0 +1,19 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.example.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\nContent-Length: 2\r\n\r\n]W",
+        "deviation_count": 0,
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "response_time": 0.0994729995727539,
+        "error_message": "",
+        "response_header_fields": {
+            "content-type": "text/html",
+            "content-length": "349",
+            "date": "Sun, 06 Aug 2023 14:09:55 GMT",
+            "server": "ECSF (nyb/1D16)"
+        }
+    }
+]

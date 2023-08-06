@@ -132,10 +132,7 @@ class HTTP1_Request_Builder:
      
         return scheme, subdomain, hostname, domain, port, path
 
-    def generate_cc_request(self, host, port, url="/", method="GET", headers=None, fuzzvalue=None):
-
-
-
+    def generate_cc_request(self, host, port, url="/", method="GET", headers=None, content=None, fuzzvalue=None):
         '''Generation of request package, CCs mut implement this '''
        
 
@@ -166,6 +163,7 @@ class HTTP1_Request_Builder:
         method=experiment_configuration["method"]
         headers=experiment_configuration["headers"]
         standard_headers=experiment_configuration["standard_headers"]
+        content=experiment_configuration["content"]
         fuzzvalue=experiment_configuration["fuzz_value"]
          # Check if headers are provided elsewise take default headers
         if headers is None: 
@@ -174,4 +172,4 @@ class HTTP1_Request_Builder:
             else:
                 headers = self.default_headers_sets["curl_HTTP/1.1(TLS)"].copy()
             # Create a copy to avoid modifying the original list
-        return self.generate_cc_request(host, port, url, method, headers, fuzzvalue)
+        return self.generate_cc_request(host, port, url, method, headers, content, fuzzvalue)

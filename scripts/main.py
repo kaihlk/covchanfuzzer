@@ -11,6 +11,9 @@ import class_mapping
     5: HTTP1_Reqeust_CC_URI_Represenation,
     6: HTTP1_Request_CC_URI_Case_Insentivity,
     7: HTTP1_Reqeust_CC_URI_Hex_Hex,
+    8: HTTP1_Request_CC_Random_Content,
+    9: HTTP1_Request_CC_Random_Content_No_Lenght_Field,
+
 }
 
 class_mapping_connection = {
@@ -40,19 +43,20 @@ def main():
     # Experiment Configuration Values
    # try:
     experiment_configuration = {
-        "comment": "Test: URI Representation_Apache Docker",
-        "covertchannel_request_number": 1,
+        "comment": "Test: google.com_Add_Content_to_get_request",
+        "covertchannel_request_number": 8,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
-        "num_attempts": 1,
+        "content": "random",  #"random", "some_text"  
+        "num_attempts": 100,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
         "conn_timeout": 0.5,
         "nw_interface": "enp0s3",  #lo, docker, enp0s3
-        "fuzz_value": 0.1,
+        "fuzz_value": 0.5,
         "use_ipv4": True,
         "use_TLS": False,
-        "target_host": "www.example.com",
+        "target_host": "www.google.com",
         "target_port": 80, #443, 8080 Apache
         "method" : "GET",
         "url": "/",
