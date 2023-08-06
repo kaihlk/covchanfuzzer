@@ -465,6 +465,92 @@ class HTTP1_Request_CC_URI_Hex_Hex(HTTP1_Request_Builder):
 
         return request_string, deviation_count
 
+
+class HTTP1_Request_CC_Extend_Header_Common(HTTP1_Request_Builder):
+    # CC which adds header fields from the common and uncommon header list
+ 
+    
+    
+    def generate_cc_request(self,
+        host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
+    ):
+        # Check if headers are provided elsewise take default headers
+        if headers is None:
+            headers = default_headers.copy()
+        else:
+            # Create a copy to avoid modifying the original list
+            headers = headers.copy()
+
+        # Insert the Host header at the beginning of the list
+        headers.insert(0, ("Host", host))
+
+        # Parse the given host
+        scheme, subdomain, hostname, domain, hostport, path = self.parse_host(url,host)
+
+        # Build a new URL from the given host, add some deviation if not all fields are provided
+
+        if scheme == "":
+            scheme = random.choice(["http://", "https://"])
+
+        if subdomain == "":
+            subdomain = "www"
+
+        new_hostname = subdomain + "." + hostname + "." + domain
+
+        if hostport == "":
+            hostport = random.choice(["", ":" + str(port)])
+
+        # Add some spezial Stuff to the path like HEX value? Maybe change it should work over the whole string?
+        if random.random() < fuzzvalue and path == "":
+            new_path = random.choice(["/?", "/%3F", "/%3f"])
+
+        else:
+            new_path = path
+
+        new_url = scheme + new_hostname + hostport + new_path
+
+        if random.random() < fuzzvalue:
+            # Convert the URL using parse lib quote (recommended for handling URLs in Python)
+            new_url = quote(new_url)
+
+        # Convert other characters in the URL to HEXHEX
+        new_url_temp = ""
+        for char in new_url:
+            if random.random() < fuzzvalue:
+                # find unicode point of the char, convert it to hex string
+                hex_code = hex(ord(char))
+                # slice string to remove leading "0x"
+                hex_code = hex_code[2:]
+                # randomly make chars of the Hex value upper or lower case
+                if random.random() < fuzzvalue:
+                    hex_code = hex_code.upper()
+                else:
+                    hex_code = hex_code.lower()
+                new_url_temp += "%" + hex_code
+            else:
+                new_url_temp += char
+
+        new_url = new_url_temp
+
+        # Compare strings to count deviation, this is not perfect, maybe find a better way
+        deviation_count = 0
+        min_len = min(len(url), len(new_url))
+        for i in range(min_len):
+            if url[i] != new_url[i]:
+                deviation_count += 1
+        # Account for any remaining characters in the longer string
+        deviation_count += abs(len(url) - len(new_url))
+
+        request_line = f"{method} {new_url} HTTP/1.1\r\n"
+
+        request_string = request_line
+        for header in headers:
+            request_string += f"{header[0]}: {header[1]}\r\n"
+
+        request_string += "\r\n"
+
+        return request_string, deviation_count
+
     # CC Absence or PResense of a header field
 
     # CC with uncommon header
