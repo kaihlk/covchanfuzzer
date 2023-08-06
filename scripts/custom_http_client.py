@@ -131,11 +131,72 @@ class CustomHTTP(HTTP):
 
         return req
 
-    
+    def _strip_header_name(self, name):
+        """Takes a header key (i.e., "Host" in "Host: www.google.com",
+        and returns a stripped representation of it
+        """
+        return plain_str(name.strip()).replace("-", "_")
 
-    def extract_response_headers(self, http_response):
+
+    def _header_line(self, name, val):
+        """Creates a HTTP header line"""
+        # Python 3.4 doesn't support % on bytes
+        return bytes_encode(name) + b": " + bytes_encode(val)
+
+
+    def _parse_headers(self, s):
+        headers = s.split(b"\r\n")
+        headers_found = {}
+        for header_line in headers:
+            try:
+                key, value = header_line.split(b':', 1)
+            except ValueError:
+                continue
+            header_key = self._strip_header_name(key).lower()
+            headers_found[header_key] = (key, value.strip())
+        return headers_found
+
+
+    def _parse_headers_and_body(self, s):
+        ''' Takes a HTTP packet, and returns a tuple containing:
+        _ the first line (e.g., "GET ...")
+        _ the headers in a dictionary
+        _ the body
+        '''
+        print("s:")
+        print(type(s))
+        print(s)
+        crlfcrlf = b'\r\n\r\n'
+        crlfcrlfIndex = s.find(crlfcrlf)
+        print(crlfcrlfIndex)
+
+        if crlfcrlfIndex != -1:
+            headers = s[:crlfcrlfIndex + len(crlfcrlf)]
+            body = s[crlfcrlfIndex + len(crlfcrlf):]
+        else:
+            headers = s
+            body = b''
+        first_line, headers = headers.split(b"\r\n", 1)
+        return first_line.strip(), self._parse_headers(headers), body
+
+    def extract_response_headers(self, http_response, obj):
         """Extract the header fields from the response"""
-        if http_response is not None:
+        response_str=str(bytes(http_response))
+        first_line, headers, body = self._parse_headers_and_body(response_str)
+        for f in obj.fields_desc:
+            # We want to still parse wrongly capitalized fields
+            stripped_name = self._strip_header_name(f.name).lower()
+            try:
+                _, value = headers.pop(stripped_name)
+            except KeyError:
+                continue
+            obj.setfieldval(f.name, value)
+            if headers:
+                headers = {key: value for key, value in six.itervalues(headers)}
+            obj.setfieldval('Unknown_Headers', headers)
+        return first_line, body
+        
+        """ if http_response is not None:
             response_str=str(bytes(http_response),"utf-8", errors="replace") #due to type HTTP
             accept_ranges_pattern= re.compile(r'Accept-Ranges:\s+(.*?)\r\n')
             age_pattern= re.compile(r'Age:\s+(.*?)\r\n')
@@ -167,7 +228,7 @@ class CustomHTTP(HTTP):
             "X-Cache": x_cache_pattern.search(response_str).group(1) if x_cache_pattern.search(response_str) else "header field not found",
             
             }   
-        else: return None
+        else: return None """
         return response_header_fields
 
     
@@ -255,7 +316,18 @@ class CustomHTTP(HTTP):
                 else:
                     sock.shutdown(1)            
                     stream_socket.close()
+
+        print(type(response))
+"""         
+        firstline, body=response.do_dissect(s)
+
+        response_header_fields=None
+        if response is not None:
+            response_obj=HTTPResponse()
+            firstline, body =self.extract_response_headers(response, response_obj)
+            print(response_obj)
+            response_header_fields=response_obj.headers
         
-        response_header_fields=self.extract_response_headers(response)
        
-        return response, response_time, error_message, response_header_fields
+ """
+        return response#, response_time, error_message, response_header_fields

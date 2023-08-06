@@ -41,7 +41,7 @@ def main():
    # try:
     experiment_configuration = {
         "comment": "Test: URI Representation_Apache Docker",
-        "covertchannel_request_number": 4,
+        "covertchannel_request_number": 1,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
         "num_attempts": 100,
@@ -52,7 +52,7 @@ def main():
         "fuzz_value": 0.1,
         "use_ipv4": True,
         "use_TLS": False,
-        "target_host": "www.google.com",
+        "target_host": "www.example.com",
         "target_port": 80, #443, 8080 Apache
         "method" : "GET",
         "url": "/",
