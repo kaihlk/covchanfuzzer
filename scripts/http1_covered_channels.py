@@ -61,7 +61,7 @@ def generate_standard_request(
 
 
 class HTTP1_Request_CC_Case_Insensitivity(HTTP1_Request_Builder):
-    def generate_cc_request(self, host, port, url="/", method="GET", headers=None, fuzzvalue=None):
+    def generate_cc_request(self, host, port, url="/", method="GET", headers=None, content=None, fuzzvalue=None):
 
         '''Covertchannel suggested by Kwecka et al: Case-insensitivity of header key names, fuzzvalue defines the probability that a character of a header field is changed'''
 
@@ -105,7 +105,7 @@ class HTTP1_Request_CC_Random_Whitespace(HTTP1_Request_Builder):
 # Covertchannel suggested by Kwecka et al: Linear whitespacing
 # fuzzvalue defines the propability whether a value is changed and how many whitespaces/tabs/newlines are added
 # Possible endless Loop, here is CC to learn something about the maximum size of the Request size
-    def generate_cc_request(self, host, port, url="/", method="GET", headers=None, fuzzvalue=None):
+    def generate_cc_request(self, host, port, url="/", method="GET", headers=None, content=None, fuzzvalue=None):
         # Check if headers are provided elsewise take default headers
         if headers is None:
             headers = default_headers.copy()
@@ -148,7 +148,7 @@ class HTTP1_Request_CC_Random_Whitespace(HTTP1_Request_Builder):
 
 class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
     def generate_cc_request(self,
-        host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
+        host, port, url="/", method="GET", headers=None, content=None, fuzzvalue=0.5
         ):
         # Check if headers are provided elsewise take default headers
         if headers is None:
@@ -161,16 +161,12 @@ class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
         request_line = f"{method} {url} HTTP/1.1\r\n"
 
         deviation_count = 0
+        headers.insert(0, ("Host", host))
 
         # Shuffle the header fields randomly
         # Reorder the header fields, Note: the RandomValue random.shuffle(List, RandomValue[0,1]) is deprecated (Python 3.9)
         shuffled_headers = headers[:]
         random.shuffle(shuffled_headers)
-        
-        # Insert the Host header at the beginning of the list
-        shuffled_headers.insert(0, ("Host", host))
-        # Both list has to be the same length, otherwise one header field might be left out
-        headers.insert(0, ("Host", host))
 
         request_string = request_line
        
@@ -189,7 +185,7 @@ class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
 
 class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
     def generate_cc_request(self,
-        host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
+        host, port, url="/", method="GET", headers=None, content=None, fuzzvalue=0.5
     ):
         '''URI in the request line
         Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers
@@ -263,7 +259,7 @@ class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
 
 class HTTP1_Request_CC_URI_Represenation_Apache_Localhost(HTTP1_Request_Builder):
     def generate_cc_request(self,
-        host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
+        host, port, url="/", method="GET", headers=None, content=None, fuzzvalue=0.5
     ):
         '''URI in the request line
         Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers

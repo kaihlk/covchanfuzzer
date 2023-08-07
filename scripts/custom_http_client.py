@@ -327,8 +327,6 @@ class CustomHTTP(HTTP):
         response = None
         response_time=0
  
-        
-        
         # DNS Lookup if info not provided, maybe delete it
         if host_ip_info is None:
             host_ip_info = self.lookup_dns(host, port)
@@ -339,35 +337,26 @@ class CustomHTTP(HTTP):
         # Check
         if verbose==True:
             print(req)
-        
-        
+          
         # Establish a socket connection
         sock = self.create_tcp_socket(host_ip_info, use_ipv4)
         
         # Upgrade to TLS depending on the port  
-        #    
-        
-        # Upgrade to TLS depending on the port  
-        #    
+
         if 443 == port:
             stream_socket, error_message=self.connect_tls_socket(sock, host_ip_info, host, use_ipv4, timeout)
         else:
             stream_socket, error_message=self.connect_tcp_socket(sock, host_ip_info, host, use_ipv4, timeout)
-
-        
+     
         if stream_socket is not None:
             try:
-                # Send the request over the socket
-                
+                # Send the request over the socket               
                 start_time=time.time()
-                stream_socket.send(req)
-
-                
+                stream_socket.send(req)       
                 # Receive the response
                 response = stream_socket.recv()
                 end_time = time.time()
                 response_time=end_time-start_time
-                
             except socket.timeout:
                 error_message="Timeout Limit reached"
                 response = None
@@ -382,11 +371,7 @@ class CustomHTTP(HTTP):
                 else:
                     sock.shutdown(1)            
                     stream_socket.close()
-        
-        
-        
-    
-        #
+
         response_line=None
         response_headers=None
         body=None
@@ -395,9 +380,6 @@ class CustomHTTP(HTTP):
             response_line= self.parse_response_line(response_line_str)
             response_headers =self.parse_headers(headers_str)
          
-            
 
-        
-       
 
         return response_line, response_headers, body, response_time, error_message
