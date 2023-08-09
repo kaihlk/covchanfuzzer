@@ -1,0 +1,77 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nHost: www.example.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nConnection: keep-alive\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nAccept-Encoding: gzip, deflate\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 315,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "response_time": 0.5068058967590332,
+        "error_message": "",
+        "response_header_fields": {
+            "content-encoding": "gzip",
+            "age": "66963",
+            "cache-control": "max-age=604800",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Wed, 09 Aug 2023 20:13:15 GMT",
+            "etag": "\"3147526947+gzip\"",
+            "expires": "Wed, 16 Aug 2023 20:13:15 GMT",
+            "last-modified": "Thu, 17 Oct 2019 07:18:26 GMT",
+            "server": "ECS (nyb/1D1E)",
+            "vary": "Accept-Encoding",
+            "x-cache": "HIT",
+            "content-length": "648"
+        }
+    },
+    {
+        "number": 1,
+        "request": "GET / HTTP/1.1\r\nDNT: 1\r\nAccept-Language: en-US,en;q=0.5\r\nHost: www.example.com\r\nConnection: keep-alive\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\n\r\n",
+        "deviation_count": 7,
+        "request_length": 315,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "response_time": 0.4831271171569824,
+        "error_message": "",
+        "response_header_fields": {
+            "content-encoding": "gzip",
+            "age": "66965",
+            "cache-control": "max-age=604800",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Wed, 09 Aug 2023 20:13:17 GMT",
+            "etag": "\"3147526947+gzip\"",
+            "expires": "Wed, 16 Aug 2023 20:13:17 GMT",
+            "last-modified": "Thu, 17 Oct 2019 07:18:26 GMT",
+            "server": "ECS (nyb/1D1E)",
+            "vary": "Accept-Encoding",
+            "x-cache": "HIT",
+            "content-length": "648"
+        }
+    },
+    {
+        "number": 2,
+        "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nDNT: 1\r\nConnection: keep-alive\r\nAccept-Language: en-US,en;q=0.5\r\nAccept-Encoding: gzip, deflate\r\nHost: www.example.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n\r\n",
+        "deviation_count": 7,
+        "request_length": 315,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "response_time": 0.09873127937316895,
+        "error_message": "",
+        "response_header_fields": {
+            "content-encoding": "gzip",
+            "age": "66966",
+            "cache-control": "max-age=604800",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Wed, 09 Aug 2023 20:13:18 GMT",
+            "etag": "\"3147526947+gzip\"",
+            "expires": "Wed, 16 Aug 2023 20:13:18 GMT",
+            "last-modified": "Thu, 17 Oct 2019 07:18:26 GMT",
+            "server": "ECS (nyb/1D1E)",
+            "vary": "Accept-Encoding",
+            "x-cache": "HIT",
+            "content-length": "648"
+        }
+    }
+]

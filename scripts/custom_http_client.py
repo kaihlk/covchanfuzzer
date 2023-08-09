@@ -157,7 +157,6 @@ class CustomHTTP(HTTP):
                 socket.SOCK_STREAM,
                 socket.IPPROTO_TCP,
             )
-            print(address)
         except socket.gaierror as ex:
             print(f"DNS Lookup failed: {str(ex)}")
             sys.exit(1)
@@ -184,10 +183,8 @@ class CustomHTTP(HTTP):
                 if hasattr(socket, "SO_REUSEPORT"):
                     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
             return s 
-            return s 
+         
         except socket.error as ex:
-                print("Error Socket")
-                print("Error Socket")
                 error_message = str(ex)
                 return None
 
@@ -202,14 +199,13 @@ class CustomHTTP(HTTP):
         ssl_ctx.keylog_filename = "sessionkeys.txt"
         ssl_ctx.set_alpn_protocols(["http/1.1"])  # h2 is a RFC7540-hardcoded value
         ssl_sock = ssl_ctx.wrap_socket(s, server_hostname=hostname)
+        
         return ssl_sock
 
     def connect_tcp_socket(self, sock, host_ip_info, host, use_ipv4, timeout):
             try: 
                 error_message="" 
-                
               
-                
                 if use_ipv4==True:            
                     sock.connect(host_ip_info[0][4])
                 else:
@@ -218,22 +214,23 @@ class CustomHTTP(HTTP):
                 stream_socket = SuperSocket.StreamSocket(sock, basecls=HTTP)
                 return stream_socket, error_message
             except socket.error as ex:
+
                 error_message = str(ex)
                 return None, error_message
 
-    def connect_tls_socket(self, sock, host_ip_info, host, use_ipv4, timeout):
+    def connect_tls_socket(self, tls_socket, host_ip_info, host, use_ipv4, timeout):
             try: 
                 error_message=""
-                tls_socket = self.upgrade_to_tls(sock, host)
                 if use_ipv4==True:             
-                    sock.connect(host_ip_info[0][4])
+                    tls_socket.connect(host_ip_info[0][4])
                 else:
-                    sock.connect(host_ip_info[1][4])
-                sock.settimeout(timeout)
+                    tls_socket.connect(host_ip_info[1][4])
+                tls_socket.settimeout(timeout)
                 assert "http/1.1" == tls_socket.selected_alpn_protocol()
                 stream_socket = SuperSocket.SSLStreamSocket(tls_socket, basecls=HTTP)
                 return stream_socket, error_message
             except socket.error as ex:
+                print("Scoket Error")
                 error_message = str(ex)
                 return None, error_message
 
@@ -329,8 +326,8 @@ class CustomHTTP(HTTP):
  
         # DNS Lookup if info not provided, maybe delete it
         if host_ip_info is None:
-            host_ip_info = self.lookup_dns(host, port)
-
+            host_ip_info = self.lookup_dns(host,port)
+        print(host_ip_info)
         #TODO Add IPV6 support
         req = self.build_http_headers(host, path, headers, custom_request)
 
@@ -344,7 +341,8 @@ class CustomHTTP(HTTP):
         # Upgrade to TLS depending on the port  
 
         if 443 == port:
-            stream_socket, error_message=self.connect_tls_socket(sock, host_ip_info, host, use_ipv4, timeout)
+            tls_socket=self.upgrade_to_tls(sock, host)
+            stream_socket, error_message=self.connect_tls_socket(tls_socket, host_ip_info, host, use_ipv4, timeout)
         else:
             stream_socket, error_message=self.connect_tcp_socket(sock, host_ip_info, host, use_ipv4, timeout)
      
@@ -364,7 +362,6 @@ class CustomHTTP(HTTP):
                 error_message=str(ex)
                 response=None
             finally:
-                # Close the socket
                 if 443 == port:
                     tls_socket.shutdown(1)
                     stream_socket.close()

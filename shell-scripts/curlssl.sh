@@ -1,4 +1,4 @@
-SSLKEYLOGFILE=home/kai/git/pcap/curlssl.log curl https://www.example.com
+SSLKEYLOGFILE=$HOME/git/pcap/curlssl.log curl https://www.example.com
 
 Add path to wireshark TLS Premaster Secret Path
 

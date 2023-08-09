@@ -159,7 +159,7 @@ class CustomHTTP(HTTP):
                     tls_socket.shutdown(1)
                     stream_socket.close()
                 else:
-                    sock.shutdown(1)            
+                    stream_socket.shutdown()            
                     stream_socket.close()
 
         return response, response_time, error_message

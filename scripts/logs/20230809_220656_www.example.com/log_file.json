@@ -1,0 +1,50 @@
+[
+    {
+        "number": 0,
+        "request": "TRACE / HTTP/1.1\r\nDNT: 1\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nConnection: keep-alive\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nHost: www.example.com\r\nAccept-Language: en-US,en;q=0.5\r\n\r\n",
+        "deviation_count": 7,
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 405,
+        "reason_phrase": "Method Not Allowed",
+        "response_time": 0.14074277877807617,
+        "error_message": "",
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Wed, 09 Aug 2023 20:07:00 GMT",
+            "server": "ECSF (nyb/1D08)"
+        }
+    },
+    {
+        "number": 1,
+        "request": "TRACE / HTTP/1.1\r\nConnection: keep-alive\r\nDNT: 1\r\nAccept-Language: en-US,en;q=0.5\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept-Encoding: gzip, deflate\r\nHost: www.example.com\r\n\r\n",
+        "deviation_count": 7,
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 405,
+        "reason_phrase": "Method Not Allowed",
+        "response_time": 0.10144853591918945,
+        "error_message": "",
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Wed, 09 Aug 2023 20:07:00 GMT",
+            "server": "ECSF (nyb/1D32)"
+        }
+    },
+    {
+        "number": 2,
+        "request": "TRACE / HTTP/1.1\r\nAccept-Language: en-US,en;q=0.5\r\nAccept-Encoding: gzip, deflate\r\nConnection: keep-alive\r\nDNT: 1\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nHost: www.example.com\r\n\r\n",
+        "deviation_count": 7,
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 405,
+        "reason_phrase": "Method Not Allowed",
+        "response_time": 0.48825812339782715,
+        "error_message": "",
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Wed, 09 Aug 2023 20:07:01 GMT",
+            "server": "ECSF (nyb/1D34)"
+        }
+    }
+]
