@@ -2,6 +2,7 @@
 
 from runner import ExperimentRunner
 import class_mapping
+import csv
 ##For Infoe
 """ class_mapping_requests ={
     1: HTTP1_Request_Builder,
@@ -48,11 +49,11 @@ def main():
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
         "content": "random",  #"random", "some_text"  
-        "num_attempts": 3,
+        "num_attempts": 10,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
         "conn_timeout": 0.5,
-        "nw_interface": "lo",#"enp0s3",  #lo, docker, enp0s3
+        "nw_interface": "enp0s3",  #lo, docker, enp0s3
         "fuzz_value": 0.9,
         "use_ipv4": True,
         "use_TLS": False,
@@ -65,7 +66,21 @@ def main():
         "verbose": True,    
 
     }
-    ExperimentRunner(experiment_configuration).setup_and_start_experiment()
+
+    
+    # Load the list back from the CSV file
+    loaded_list = []
+    with open('target_list.csv', 'r') as csvfile:
+        csv_reader = csv.reader(csvfile)
+        next(csv_reader)  # Skip header row
+        for row in csv_reader:
+            rank, domain = row
+            loaded_list.append(domain)
+
+    print("List loaded from target_list.csv")
+
+
+    ExperimentRunner(experiment_configuration, loaded_list).setup_and_start_experiment()
     #except Exception as ex:
      #   print("Error: ", str(ex))
 

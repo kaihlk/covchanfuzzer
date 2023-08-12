@@ -46,7 +46,7 @@ class ExperimentLogger:
         wireshark_cmd = [
             "wireshark",
             "-r",
-            "captured_packets.pcap",
+            "captured_packets.pcapng",
             "-o",
             "tls.keylog_file:sessionkeys.txt",
         ]
@@ -84,7 +84,7 @@ class ExperimentLogger:
         # Consider if destination port is need or if it is a problem when the connection is updated to TLS
 
         # Set the output file for captured packets
-        pcap_path = f"{self.log_dir}/captured_packets.pcap"
+        pcap_path = f"{self.log_dir}/captured_packets.pcapng"
 
         # Filter for packets related to the specific connection, host filter both directions
         filter_expression = f"host {self.target_ip}"

@@ -13,18 +13,41 @@ import http1_request_builder
 
 class ExperimentRunner:
     '''Runs the experiment itself'''
-    def __init__(self, experiment_configuration):
+    def __init__(self, experiment_configuration, target_list):
         self.experiment_configuration = experiment_configuration
         # Dns Lookup has to be done here  to get thark parameters 
         self.target_ip_info = CustomHTTP().lookup_dns(experiment_configuration["target_host"], experiment_configuration["target_port"])
+        self.target_list=target_list
+        
+        #TODO DELETE THIS PART IT SHOULD BE DONE SOMEWHERE ELSE
         if experiment_configuration["use_ipv4"]:
             self.target_ip, self.target_port = self.target_ip_info[0][4]
         else:
             self.target_ip, self.target_port = self.target_ip_info[1][4]
-       
+      
+
+    def get_target_subset(self, start_position=0, count=10)-> list:
+        """Takes a subset from the target list to reduce the traffic to one target, in order to """
+        
+        if start_position <1 or start_position > len(self.target_list):
+            raise ValueError("Invalid start_no")
+        sub_set=self.target_list[start_position -1:]
+        if count > len(sub_set):
+            count = len(sub_set)
+        
+        sub_set=sub_set[:count]
+        return sub_set
+
+    def round_robin_target_selector():
+        return 0
+
+
     def baseline_check(self):
         #Todo
         return True
+
+
+
 
     def forge_and_send_requests(self, attempt_number):
         '''Build a HTTP Request Package and sends it and processes the response'''
@@ -76,6 +99,11 @@ class ExperimentRunner:
 
 
     def run_experiment(self):
+  
+        
+
+
+       
         '''Run the experiment'''
         status_code_count = {}
         request_data_list = []
@@ -100,8 +128,21 @@ class ExperimentRunner:
 
     def setup_and_start_experiment(self):
         '''Setups the Experiment, creates an experiment logger, and starts the experiment run'''
+        #Loop over List
+        #Take  Subset
+        # Create an Experiment Folder
+        # Create Subfolders for each target
+        # start parallel capturing processes
+        # loop over the list
+        # save meta data for each target.
+
+
+
         logger=ExperimentLogger(self.experiment_configuration, self.target_ip, self.target_port)
 
+
+
+        """
         # Create a flag to stop the capturing process when the response is received
         stop_capture_flag = threading.Event()
 
@@ -137,4 +178,4 @@ class ExperimentRunner:
             #Here maybe more information would be nice, successful attempts/failures, count of successfull baseline checks, statistical data? medium response time?
         }
         logger.save_logfiles(request_data_list, result_variables)
-
+ """
