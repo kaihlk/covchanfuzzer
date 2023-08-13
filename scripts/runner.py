@@ -66,7 +66,7 @@ class ExperimentRunner:
                 self.target_port=80
 
         #Lookup DNS for each entry
-        #TODO Catch the case that on IP Type is not provided, maybe wikipeia
+        #TODO Catch the case that IPv4 or IPv6 is not provided, some sites sends more than one IP/Port set per protocoll version,  example macromedia.com and criteo.com
         for entry in sub_set:
             print(entry)
             socket_info = CustomHTTP().lookup_dns(entry, self.target_port)
@@ -159,21 +159,35 @@ class ExperimentRunner:
 
     def setup_and_start_experiment(self):
         '''Setups the Experiment, creates an experiment logger, and starts the experiment run'''
-        
+        capture_threads=[]
 
         #Create Log Folder and save the path
         
         #Loop over List
        
         start_position=1
-        while start_position <= len(self.target_list):
+        while start_position <= 100: #len(self.target_list):
             #Get target subset
-            sub_set=self.get_target_subset(start_position,self.experiment_configuration["target_subsetsize"])
+            sub_set=self.get_target_subset(start_position,self.experiment_configuration["target_sub_setsize"])
             #Get DNS Infomation 
             sub_set_dns=self.add_dns_info(sub_set)
-            print(sub_set_dns)
+            for entry in sub_set_dns:
+                #Create logger object for each target
+                logger=ExperimentLogger(self.experiment_configuration, entry["ip_address"], entry["port"])
+                # Create a flag to stop the capturing process
+                stop_capture_flag = threading.Event()
+                # Create an start thread for the packet capture
+                capture_thread = threading.Thread(
+                    target=logger.capture_packets_dumpcap,
+                    args=(
+                        stop_capture_flag,
+                        self.experiment_configuration["nw_interface"],
+                capture_thread.start() 
+                    )
+                )
+                capture_threads.append(capture_thread)   
 
-            start_position += self.experiment_configuration["target_subsetsize"]
+            start_position += self.experiment_configuration["target_sub_setsize"]
 
          #Take  Subset
         # Create an Experiment Folder
@@ -181,26 +195,21 @@ class ExperimentRunner:
         # start parallel capturing processes
         # loop over the list
         # save meta data for each target.
-
-
-        logger=ExperimentLogger(self.experiment_configuration, self.target_ip, self.target_port)
-
-        print("DNS Lookup Erros")
-        print(self.dns_error)
+        result_variables = {
+            "covertchannel_request_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]),
+            "covertchannel_request_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_connection_number"]]),
+            "covertchannel_timing_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_timing_number"]]),
+            "Received_Status_Codes": status_code_count,
+            "Message_Count": 1234,
+            "Share_2xx": 100.0,
+            "Response_2xx": 1200,
+            "Response_4xx": 30,
+            "Response_Error": 4,
+            #Here maybe more information would be nice, successful attempts/failures, count of successfull baseline checks, statistical data? medium response time?
+        }
 
         """
-        # Create a flag to stop the capturing process when the response is received
-        stop_capture_flag = threading.Event()
-
-        # Create an start thread for the packet capture
-        capture_thread = threading.Thread(
-            target=logger.capture_packets_dumpcap,
-            args=(
-                stop_capture_flag,
-                self.experiment_configuration["nw_interface"],
-            )
-        )
-        capture_thread.start()
+        
         time.sleep(1)
         status_code_count, request_data_list = self.run_experiment()
         # Time to let the packet dumper work
@@ -216,12 +225,13 @@ class ExperimentRunner:
             print(f"{status_code}: {count}")
 
         # Save Experiment Metadata
-        result_variables = {
-            "covertchannel_request_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]),
-            "covertchannel_request_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_connection_number"]]),
-            "covertchannel_timing_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_timing_number"]]),
-            "Received_Status_Codes": status_code_count,
-            #Here maybe more information would be nice, successful attempts/failures, count of successfull baseline checks, statistical data? medium response time?
-        }
+
         logger.save_logfiles(request_data_list, result_variables)
  """
+
+    #TODO
+    def calculate_statistics():
+        return 0
+    #TODO
+    def make_entry_to_experiment_list():
+        return 0

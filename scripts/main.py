@@ -1,8 +1,10 @@
 #main
 
 from runner import ExperimentRunner
+from logger import ExperimentLogger
 import class_mapping
 import csv
+import time
 ##For Infoe
 """ class_mapping_requests ={
     1: HTTP1_Request_Builder,
@@ -44,10 +46,13 @@ def main():
     # Experiment Configuration Values
    # try:
     description= input("Input Experiment Description:")
+    exp_no=1
 
     experiment_configuration = {
+        "experiment_no": exp_no,
         "comment": description,
         "verbose": True,
+        "timestamp": time.strftime("%Y%m%d_%H%M%S"),
         #Covert Channel Option
         "covertchannel_request_number": 4,
         "covertchannel_connection_number": 1,
@@ -81,7 +86,7 @@ def main():
     
     # Load the list back from the CSV file
     loaded_list = []
-    with open('target_list.csv', 'r') as csvfile:
+    with open(experiment_configuration["target_list"], 'r') as csvfile:
         csv_reader = csv.reader(csvfile)
         next(csv_reader)  # Skip header row
         for row in csv_reader:
@@ -91,9 +96,13 @@ def main():
     print("List loaded from target_list.csv")
 
 
-    ExperimentRunner(experiment_configuration, loaded_list).setup_and_start_experiment()
+    experiment_outcome=ExperimentRunner(experiment_configuration, loaded_list).setup_and_start_experiment()
+    
+    logger
     #except Exception as ex:
      #   print("Error: ", str(ex))
+    
+    
 
 if __name__ == "__main__":
     main()

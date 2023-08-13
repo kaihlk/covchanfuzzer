@@ -5,26 +5,43 @@ import subprocess
 import time
 import os
 import json
+import csv
 
 
-class ExperimentLogger:
-    def __init__(self, experiment_configuration, target_ip, target_port):
+def write_experiment_list(self, experiment_configuration, logger_objects):
+        """Adds an entry describing the experiment and the outcome into a list"""
+        
+        with open(f"/logs/experiment_list.csv", "w", newline="") as csvfile:
+            csv_writer=csv.writer(csvfile)
+            csv_writer.writerow(["Key","Value"])
+            for key,value in self.experiment_configuration:
+                csv_writer.writerow([key,value])
+
+
+
+
+class TestRunLogger:
+    def __init__(self, experiment_configuration, target_host, target_ip, target_port):
         self.experiment_configuration = experiment_configuration
         self.target_ip = target_ip
         self.target_port = target_port
-        self.log_dir = self.create_logging_folder(experiment_configuration["target_host"])
+        self.target_host =target_host
+        self.log_folder = self.create_logging_folder(target_host)
 
 
-    def create_logging_folder(self, target_host):
-        '''Create a directory to store the logs'''
+
+
+    def create_logging_folder(self):
+        '''Creates in not exists to store the logs'''
         timestamp = time.strftime("%Y%m%d_%H%M%S")
-        log_dir = f"logs/{timestamp}_{target_host}"
-        os.makedirs(log_dir, exist_ok=True)
-        return log_dir
-    
-    def save_experiment_metadata(self, result_variables):
+        log_folder = f"{self.experiment_folder}/{timestamp}_{target_host}"
+        os.makedirs(log_folder, exist_ok=True)
+        return log_folder
+
+    def save_run_metadata(self, result_variables):
         '''Save Meta Data connected to experiment'''
         metafile_path = f"{self.log_dir}/metafile.json"
+        self.write_experiment_list(result_variables)
         data = {
             "configuration_variables": self.experiment_configuration,
             "result_variables": result_variables,
@@ -33,11 +50,12 @@ class ExperimentLogger:
         with open(metafile_path, "w", encoding="utf-8") as file:
             json.dump(data, file, indent=4)
 
+     #TODO: better naming
     def move_tls_keys(self):
         '''Move the TLS seessionkeys to the experiment folder, they are created by the custom http client'''
         if os.path.exists("sessionkeys.txt"):
             try:
-                os.rename("sessionkeys.txt", f"{self.log_dir}/sessionkeys.txt")
+                os.rename("sessionkeys.txt", f"{self.log_folder}/sessionkeys.txt")
             except OSError as ex:
                 print(f"An error occurred while moving the file: {str(ex)}")
 
@@ -69,6 +87,25 @@ class ExperimentLogger:
         self.move_tls_keys()
         self.create_wireshark_script()
         self.save_request_data(request_data)
+
+class ExperimentLogger:
+    def __init__(self, experiment_configuration, target_host, target_ip, target_port):
+        self.experiment_configuration = experiment_configuration
+        self.target_ip = target_ip
+        self.target_port = target_port
+        self.target_host =target_host
+        self.experiment_folder = self.create_logging_folder(experiment_configuration["experiment_no"])
+        self.log_folder = self.create_logging_folder(experiment_configuration["target_host"])
+
+
+        
+    def create_experiment_folder(self, exp_number):
+        '''Create an experiment folder, if not already exist '''
+       
+        exp_folder = f"logs/experiment_{exp_number}"
+        os.makedirs(exp_folder, exist_ok=True) #If it already exists, doesn't care
+        return exp_folder
+
 
     def capture_packets_dumpcap(
         self,
