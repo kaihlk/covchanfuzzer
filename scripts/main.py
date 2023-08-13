@@ -43,28 +43,39 @@ def main():
 
     # Experiment Configuration Values
    # try:
+    description= input("Input Experiment Description:")
+
     experiment_configuration = {
-        "comment": "Bugfixing",
+        "comment": description,
+        "verbose": True,
+        #Covert Channel Option
         "covertchannel_request_number": 4,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
-        "content": "random",  #"random", "some_text"  
+        #Target Selection Options  
         "num_attempts": 10,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
-        "conn_timeout": 0.5,
-        "nw_interface": "enp0s3",  #lo, docker, enp0s3
-        "fuzz_value": 0.9,
-        "use_ipv4": True,
-        "use_TLS": False,
+        "target_list": "target_list.csv",
+        "target_subsetsize": 10,
         "target_host": "www.example.com",
         "target_port": 80, #443, 8080 Apache
+        #Connection Options
+        "conn_timeout": 0.5,
+        "nw_interface": "enp0s3",  #lo, docker, enp0s3     
+        "use_ipv4": True,
+        "use_TLS": False,
+
+        #HTTP Message Options
         "method" : "GET",
         "url": "/",
         "headers": None,
         "standard_headers": "firefox_HTTP/1.1",  #curl_HTTP/1.1(TLS), firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
-        "verbose": True,    
+        "content": "random",  #"random", "some_text""fuzz_value": 0.9,
+            
 
+        
+        
     }
 
     

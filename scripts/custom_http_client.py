@@ -159,7 +159,8 @@ class CustomHTTP(HTTP):
             )
         except socket.gaierror as ex:
             print(f"DNS Lookup failed: {str(ex)}")
-            sys.exit(1)
+           # sys.exit(1)
+            address=None
         return address
 
     def create_tcp_socket(self, ip_info, use_ipv4):

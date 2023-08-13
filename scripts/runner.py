@@ -20,11 +20,13 @@ class ExperimentRunner:
         self.target_list=target_list
         
         #TODO DELETE THIS PART IT SHOULD BE DONE SOMEWHERE ELSE
+        
+        
         if experiment_configuration["use_ipv4"]:
             self.target_ip, self.target_port = self.target_ip_info[0][4]
         else:
             self.target_ip, self.target_port = self.target_ip_info[1][4]
-      
+        self.dns_error=[]
 
     def get_target_subset(self, start_position=0, count=10)-> list:
         """Takes a subset from the target list to reduce the traffic to one target, in order to """
@@ -46,7 +48,40 @@ class ExperimentRunner:
         #Todo
         return True
 
+    def add_dns_info(self, sub_set):
+        """Adds DNS Information to each entry. Port and IP depending on Experiment_Configuration Options use_IPv4, use_TLS"""
+        sub_set_dns=[]
+        #Configure Port
+        if self.experiment_configuration["target_port"] is not None:
+            try:
+                self.target_port=int(self.experiment_configuration["target_port"])
+                if not 0 <= self.target_port <= 65535:
+                    raise(ValueError())
+            except ValueError:
+                print("Invalid Portnumber in Experiment Configuratiion")
+        else:
+            if self.experiment_configuration["use_TLS"]:
+                self.target_port=443
+            else: 
+                self.target_port=80
 
+        #Lookup DNS for each entry
+        #TODO Catch the case that on IP Type is not provided, maybe wikipeia
+        for entry in sub_set:
+            print(entry)
+            socket_info = CustomHTTP().lookup_dns(entry, self.target_port)
+            if socket_info:
+                print(socket_info)
+                if self.experiment_configuration["use_ipv4"]:
+                    ip_address, port=  socket_info[0][4]
+                else:#IPv6
+                    ip_address, port=  socket_info[1][4]     
+                if port!=self.target_port:
+                    print("Warning: Retrieved port doesn't match configured port (r. Port/c.Port"+str(port)+"/"+str(self.target_port))
+                sub_set_dns.append({"Sub_set":sub_set, "socket_info":socket_info, "ip_address":ip_address, "port":port })
+            else:
+                self.dns_error.append(entry)
+        return sub_set_dns
 
 
     def forge_and_send_requests(self, attempt_number):
@@ -99,11 +134,7 @@ class ExperimentRunner:
 
 
     def run_experiment(self):
-  
-        
 
-
-       
         '''Run the experiment'''
         status_code_count = {}
         request_data_list = []
@@ -128,8 +159,23 @@ class ExperimentRunner:
 
     def setup_and_start_experiment(self):
         '''Setups the Experiment, creates an experiment logger, and starts the experiment run'''
+        
+
+        #Create Log Folder and save the path
+        
         #Loop over List
-        #Take  Subset
+       
+        start_position=1
+        while start_position <= len(self.target_list):
+            #Get target subset
+            sub_set=self.get_target_subset(start_position,self.experiment_configuration["target_subsetsize"])
+            #Get DNS Infomation 
+            sub_set_dns=self.add_dns_info(sub_set)
+            print(sub_set_dns)
+
+            start_position += self.experiment_configuration["target_subsetsize"]
+
+         #Take  Subset
         # Create an Experiment Folder
         # Create Subfolders for each target
         # start parallel capturing processes
@@ -137,10 +183,10 @@ class ExperimentRunner:
         # save meta data for each target.
 
 
-
         logger=ExperimentLogger(self.experiment_configuration, self.target_ip, self.target_port)
 
-
+        print("DNS Lookup Erros")
+        print(self.dns_error)
 
         """
         # Create a flag to stop the capturing process when the response is received
