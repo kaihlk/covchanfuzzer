@@ -5,6 +5,7 @@ from logger import ExperimentLogger
 import class_mapping
 import csv
 import time
+import os
 ##For Infoe
 """ class_mapping_requests ={
     1: HTTP1_Request_Builder,
@@ -31,7 +32,19 @@ class_mapping_timing  = {
     2: Frequency_Modulation,
     3: Amplitude_Modulation,
 } """
-
+def get_last_experiment_number():
+    file_path = "logs/experiment_list.csv"
+    
+    if not os.path.exists(file_path) or os.path.getsize(file_path) == 0:
+        return 0 # First Experiment
+    
+    with open(file_path, "r") as csvfile:
+        csv_reader = csv.DictReader(csvfile)
+        last_row = None
+        for row in csv_reader:
+            last_row = row
+        
+        return int(last_row["experiment_no"])
 def main():
     '''Function that runs the connection, selection of the CC and the fuzzer'''
     # TODO
@@ -46,7 +59,8 @@ def main():
     # Experiment Configuration Values
    # try:
     description= input("Input Experiment Description:")
-    exp_no=1
+    exp_no=get_last_experiment_number()+1
+
 
     experiment_configuration = {
         "experiment_no": exp_no,
@@ -65,11 +79,13 @@ def main():
         "target_subsetsize": 10,
         "target_host": "www.example.com",
         "target_port": 80, #443, 8080 Apache
+
         #Connection Options
         "conn_timeout": 0.5,
         "nw_interface": "enp0s3",  #lo, docker, enp0s3     
         "use_ipv4": True,
         "use_TLS": False,
+        "use_HTTP2": False,
 
         #HTTP Message Options
         "method" : "GET",

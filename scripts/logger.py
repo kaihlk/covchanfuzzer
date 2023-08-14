@@ -8,14 +8,8 @@ import json
 import csv
 
 
-def write_experiment_list(self, experiment_configuration, logger_objects):
-        """Adds an entry describing the experiment and the outcome into a list"""
-        
-        with open(f"/logs/experiment_list.csv", "w", newline="") as csvfile:
-            csv_writer=csv.writer(csvfile)
-            csv_writer.writerow(["Key","Value"])
-            for key,value in self.experiment_configuration:
-                csv_writer.writerow([key,value])
+
+
 
 
 
@@ -29,14 +23,13 @@ class TestRunLogger:
         self.log_folder = self.create_logging_folder(target_host)
 
 
-
-
     def create_logging_folder(self):
         '''Creates in not exists to store the logs'''
         timestamp = time.strftime("%Y%m%d_%H%M%S")
         log_folder = f"{self.experiment_folder}/{timestamp}_{target_host}"
         os.makedirs(log_folder, exist_ok=True)
         return log_folder
+
 
     def save_run_metadata(self, result_variables):
         '''Save Meta Data connected to experiment'''
@@ -50,6 +43,7 @@ class TestRunLogger:
         with open(metafile_path, "w", encoding="utf-8") as file:
             json.dump(data, file, indent=4)
 
+
      #TODO: better naming
     def move_tls_keys(self):
         '''Move the TLS seessionkeys to the experiment folder, they are created by the custom http client'''
@@ -59,6 +53,7 @@ class TestRunLogger:
             except OSError as ex:
                 print(f"An error occurred while moving the file: {str(ex)}")
 
+    
     def create_wireshark_script(self):
         ''' Creates a wireshark script to easily analyze the captured packets, with the need TLS keys'''
         wireshark_cmd = [
@@ -75,11 +70,13 @@ class TestRunLogger:
 
         os.chmod(wireshark_script_path, 0o755)
 
+    
     def save_request_data(self, request_data):
         '''Save the recorded requests'''
         log_file_path = f"{self.log_dir}/log_file.json"
         with open(log_file_path, "w", encoding="utf-8") as file:
             json.dump(request_data, file, indent=4)
+    
     
     def save_logfiles(self, request_data, result_variables):
         '''Save all files after the experiments'''
@@ -89,16 +86,13 @@ class TestRunLogger:
         self.save_request_data(request_data)
 
 class ExperimentLogger:
-    def __init__(self, experiment_configuration, target_host, target_ip, target_port):
+    def __init__(self, experiment_configuration):
         self.experiment_configuration = experiment_configuration
-        self.target_ip = target_ip
-        self.target_port = target_port
-        self.target_host =target_host
-        self.experiment_folder = self.create_logging_folder(experiment_configuration["experiment_no"])
-        self.log_folder = self.create_logging_folder(experiment_configuration["target_host"])
+        self.experiment_folder = self.create_experiment_folder(experiment_configuration["experiment_no"])
+    
+    def get_experiment_folder(self):
+        return self.experiment_folder
 
-
-        
     def create_experiment_folder(self, exp_number):
         '''Create an experiment folder, if not already exist '''
        
@@ -106,6 +100,30 @@ class ExperimentLogger:
         os.makedirs(exp_folder, exist_ok=True) #If it already exists, doesn't care
         return exp_folder
 
+
+    def add_global_entry_to_experiment_list(self, exp_no):
+        """Adds an entry describing the experiment and the outcome into a list"""
+        #TODO update header line when new keys are added to experiment konfiguration
+
+        file_path = "logs/experiment_list.csv"
+        exists = os.path.exists(file_path)
+        
+        with open(file_path, "a+", newline="") as csvfile:
+            csv_writer = csv.DictWriter(csvfile, fieldnames=self.experiment_configuration.keys())
+            if not exists:
+                csv_writer.writeheader()
+            row = self.experiment_configuration.copy()
+            csv_writer.writerow(row)
+ 
+
+    def update_entry_to_experiment_list():
+        """TODO add statistical data to experiment list"""
+
+        with open(f"/logs/experiment_list.csv", "w", newline="") as csvfile:
+            csv_writer=csv.writer(csvfile)
+            csv_writer.writerow(["Key","Value"])
+            for key,value in self.experiment_configuration:
+                csv_writer.writerow([key,value])
 
     def capture_packets_dumpcap(
         self,
@@ -157,3 +175,6 @@ class ExperimentLogger:
         
         except subprocess.CalledProcessError as ex:
             print("Error occurred during packet capture:", ex)
+    
+    def extract_packets_per_host(host_list):
+        return 0

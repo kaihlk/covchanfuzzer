@@ -159,19 +159,50 @@ class ExperimentRunner:
 
     def setup_and_start_experiment(self):
         '''Setups the Experiment, creates an experiment logger, and starts the experiment run'''
-        capture_threads=[]
+        
 
-        #Create Log Folder and save the path
+        #Create Folder for the experiment and save the path
+        exp_log=ExperimentLogger(self.experiment_configuration)
+        
+        #This should be done in the end, added with some sttistics
+        exp_log.add_global_entry_to_experiment_list(self.experiment_configuration["experiment_no"])
+
+        
+
         
         #Loop over List
-       
+        sub_set_no=1
         start_position=1
-        while start_position <= 100: #len(self.target_list):
+        while start_position <= 20: #len(self.target_list):
             #Get target subset
             sub_set=self.get_target_subset(start_position,self.experiment_configuration["target_sub_setsize"])
+            
             #Get DNS Infomation 
             sub_set_dns=self.add_dns_info(sub_set)
-            for entry in sub_set_dns:
+            
+            #Start Capturing SubProcess
+
+            #Create logger object for each target
+
+            #Iterate over List
+
+
+
+            #End Capturing
+
+            #Filter packets and save them to subfolders
+            
+            
+            
+            
+            start_position += self.experiment_configuration["target_sub_setsize"] 
+
+            
+            
+            
+            """capture_threads=[] 
+
+                       for entry in sub_set_dns:
                 #Create logger object for each target
                 logger=ExperimentLogger(self.experiment_configuration, entry["ip_address"], entry["port"])
                 # Create a flag to stop the capturing process
@@ -187,7 +218,7 @@ class ExperimentRunner:
                 )
                 capture_threads.append(capture_thread)   
 
-            start_position += self.experiment_configuration["target_sub_setsize"]
+            start_position += self.experiment_configuration["target_sub_setsize"] """
 
          #Take  Subset
         # Create an Experiment Folder
