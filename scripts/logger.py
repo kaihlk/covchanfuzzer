@@ -141,7 +141,7 @@ class TestRunLogger:
         self.move_tls_keys()
         self.create_wireshark_script()
         self.save_request_data(self.request_data_list)
-        self.capture =None
+        
 
     def capture_packets(
         self,
@@ -158,10 +158,18 @@ class TestRunLogger:
 
         # Set the output file for captured packets
         pcap_path = f"{self.log_folder}/captured_packets.pcapng"
+        #Filter host Address
+        filter_host= f"host {self.target_ip}"
+        self.capture=pyshark.LiveCapture(interface=self.experiment_configuration["nw_interface"], filter_host, output_file=pcap_path)
 
-        self.capture=pyshark.LiveCapture(interface=self.experiment_configuration["nw_interface"], output_file=pcap_path)
+        while not stop_capture_flag.is_set():
+            # Continue capturing packets until the stop flag is set
+            pass
 
+        if self.capture:
+            self.capture.close()
 
+    
         # Filter for packets related to the specific connection, host filter both directions
         #filter_expression = f"host {self.target_ip}"
 
