@@ -5,7 +5,7 @@
 import threading
 import time
 import http1_covered_channels
-from logger import ExperimentLogger
+from logger import ExperimentLogger , TestRunLogger
 from custom_http_client import CustomHTTP
 import class_mapping
 import http1_request_builder
@@ -78,84 +78,75 @@ class ExperimentRunner:
                     ip_address, port=  socket_info[1][4]     
                 if port!=self.target_port:
                     print("Warning: Retrieved port doesn't match configured port (r. Port/c.Port"+str(port)+"/"+str(self.target_port))
-                sub_set_dns.append({"Sub_set":sub_set, "socket_info":socket_info, "ip_address":ip_address, "port":port })
+                sub_set_dns.append({"host":entry, "socket_info":socket_info, "ip_address":ip_address, "port":port })
             else:
                 self.dns_error.append(entry)
         return sub_set_dns
 
 
-    def forge_and_send_requests(self, attempt_number):
+    def forge_requests(self, host_data):
         '''Build a HTTP Request Package and sends it and processes the response'''
         #Build HTTP Request after the selected covered channel
         selected_covered_channel = class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]()
         #TODO Change of PORT due to Upgrade
         
-        request, deviation_count = selected_covered_channel.generate_request(self.experiment_configuration)
+        request, deviation_count = selected_covered_channel.generate_request(self.experiment_configuration, host_data)
 
         #Send request and get response
         if self.experiment_configuration["verbose"]==True:
             print(request)
-        
+
+        return request, deviation_count
+
+    def check_content(self, body):
+        #TODO add hash function and standard body
+        return True
+    
+    def send_and_receive_request(self, attempt_number, request, deviation_count, host_data, logger):    
         response_line, response_header_fields, body, response_time, error_message  = CustomHTTP().http_request(
-            host=self.experiment_configuration["target_host"],
+            host=host_data["host"],
             use_ipv4=self.experiment_configuration["use_ipv4"],
-            port=self.target_port,
-            host_ip_info=self.target_ip_info,
+            port=host_data["port"],
+            host_ip_info=host_data["socket_info"],
             custom_request=request,
             timeout=self.experiment_configuration["conn_timeout"],
             verbose=self.experiment_configuration["verbose"],
         )
-   
-        if response_line is not None:
-            response_http_version = response_line["HTTP_version"]
-            response_status_code = response_line["status_code"]
-            response_reason_phrase = response_line["reason_phrase"]
-            
-        else:
-            response_http_version = ""
-            response_status_code = 000
-            response_reason_phrase = "Error"
-            
-                   
-        request_data = {
-            "number": attempt_number,
-            "request": request,
-            "deviation_count": deviation_count,
-            "request_length": len(request),
-            "http_version": response_http_version,
-            "status_code": response_status_code,
-            "reason_phrase": response_reason_phrase ,
-            "response_time": response_time,
-            "error_message": error_message,
-            "response_header_fields": response_header_fields,
-        }
+        self.check_content(body)
+        logger.add_request_response_data(attempt_number, request, deviation_count, response_line, response_header_fields, body, response_time, error_message)
+
+      
        
-        return request, request_data
+        return request
 
 
-    def run_experiment(self):
+    def run_experiment(self, logger_list, sub_set_dns):
 
         '''Run the experiment'''
-        status_code_count = {}
-        request_data_list = []
+     
         for i in range(self.experiment_configuration["num_attempts"]):
-            if self.baseline_check() is False:
-                print("Baseline Check Failure, Connection maybe blocked")
-            else:     
-                # Send the HTTP request and get the response in the main thread
-                response, request_data=self.forge_and_send_requests(i)
-                status_code_count[request_data["status_code"]] = (status_code_count.get(request_data["status_code"], 0) + 1)
-                request_data_list.append(request_data)
-                if self.experiment_configuration["verbose"]==True:
+            for host_data,logger in zip(sub_set_dns, logger_list):
+            #Round Robin one Host after each other
+                if self.baseline_check() is False:
+                    #TODO
+                    print("Baseline Check Failure, Connection maybe blocked")
+                else:     
+                    # Send the HTTP request and get the response in the main thread
+                    request, deviation_count=self.forge_requests(host_data)
+                    self.send_and_receive_request(i, request, deviation_count, host_data, logger)
+                    
+                   
+                    
+                    """                 if self.experiment_configuration["verbose"]==True:
                     # Print the response status code and deviation count
                     print(f"Results:")
                     print(f"Host: {self.experiment_configuration['target_host']}")
                     print(f"Port: {self.target_port}")
                     print(f"Status Code: {request_data['status_code']}")
                     print(f"Deviation Count: {request_data['deviation_count']}")
-                    print(f"Error Message: {request_data['error_message']}\n")
-                
-        return status_code_count, request_data_list  
+                    print(f"Error Message: {request_data['error_message']}\n") """
+                    
+        return  
 
     def setup_and_start_experiment(self):
         '''Setups the Experiment, creates an experiment logger, and starts the experiment run'''
@@ -164,41 +155,59 @@ class ExperimentRunner:
         #Create Folder for the experiment and save the path
         exp_log=ExperimentLogger(self.experiment_configuration)
         
-        #This should be done in the end, added with some sttistics
-        exp_log.add_global_entry_to_experiment_list(self.experiment_configuration["experiment_no"])
-
-        
-
-        
         #Loop over List
         sub_set_no=1
         start_position=1
         while start_position <= 20: #len(self.target_list):
             #Get target subset
-            sub_set=self.get_target_subset(start_position,self.experiment_configuration["target_sub_setsize"])
+            subset=self.get_target_subset(start_position,self.experiment_configuration["target_subset_size"])
             
             #Get DNS Infomation 
-            sub_set_dns=self.add_dns_info(sub_set)
-            
+            subset_dns=self.add_dns_info(subset)
+            stop_capture_flag = threading.Event()
             #Start Capturing SubProcess
+            #TODO change name of the file per run. Add to one bigfile
+            
+            capture_thread = threading.Thread(
+                    target=exp_log.capture_packets_dumpcap,
+                    args=(
 
-            #Create logger object for each target
+                        stop_capture_flag,
+                        self.experiment_configuration["nw_interface"],
+                        
+                    )
+            ) 
+            capture_thread.start()    
+            #Create logger object for each target #Iterate over List
+            time.sleep(1)
+           
+            logger_list=[]
+            for entry in subset_dns:    
+                print(entry)
+                logger=TestRunLogger(self.experiment_configuration, exp_log.get_experiment_folder(), entry["host"], entry["ip_address"], entry["port"])
+                logger_list.append(logger)
 
-            #Iterate over List
-
-
+            #Start sending packages
+            self.run_experiment(logger_list, subset_dns)
+            for logger in logger_list:
+                logger.save_logfiles()
 
             #End Capturing
 
             #Filter packets and save them to subfolders
             
+            #Save OutCome to experiment Folder csv.
             
+            #End capture thread
+            start_position += self.experiment_configuration["target_subset_size"] 
+            stop_capture_flag.set()
+            # Wait for the capture thread to finish
+            capture_thread.join()
+             #This should be done in the end, added with some sttistics
+            exp_log.add_global_entry_to_experiment_list(self.experiment_configuration["experiment_no"])
+        
             
-            
-            start_position += self.experiment_configuration["target_sub_setsize"] 
-
-            
-            
+        
             
             """capture_threads=[] 
 
@@ -226,23 +235,11 @@ class ExperimentRunner:
         # start parallel capturing processes
         # loop over the list
         # save meta data for each target.
-        result_variables = {
-            "covertchannel_request_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]),
-            "covertchannel_request_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_connection_number"]]),
-            "covertchannel_timing_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_timing_number"]]),
-            "Received_Status_Codes": status_code_count,
-            "Message_Count": 1234,
-            "Share_2xx": 100.0,
-            "Response_2xx": 1200,
-            "Response_4xx": 30,
-            "Response_Error": 4,
-            #Here maybe more information would be nice, successful attempts/failures, count of successfull baseline checks, statistical data? medium response time?
-        }
-
+        """
         """
         
-        time.sleep(1)
-        status_code_count, request_data_list = self.run_experiment()
+       
+        
         # Time to let the packet dumper work
         time.sleep(1)
 
@@ -251,14 +248,12 @@ class ExperimentRunner:
         capture_thread.join()
         
 
-        print("Status Code Counts:")
-        for status_code, count in status_code_count.items():
-            print(f"{status_code}: {count}")
+        
 
         # Save Experiment Metadata
 
-        logger.save_logfiles(request_data_list, result_variables)
- """
+        #logger.save_logfiles(request_data_list, result_variables)
+   
 
     #TODO
     def calculate_statistics():

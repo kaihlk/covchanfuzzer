@@ -1,7 +1,7 @@
 #main
 
 from runner import ExperimentRunner
-from logger import ExperimentLogger
+from logger import ExperimentLogger, TestRunLogger
 import class_mapping
 import csv
 import time
@@ -71,12 +71,13 @@ def main():
         "covertchannel_request_number": 4,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
+        "fuzz_value":0.5,
         #Target Selection Options  
         "num_attempts": 10,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
         "target_list": "target_list.csv",
-        "target_subsetsize": 10,
+        "target_subset_size": 10,
         "target_host": "www.example.com",
         "target_port": 80, #443, 8080 Apache
 
@@ -112,9 +113,9 @@ def main():
     print("List loaded from target_list.csv")
 
 
-    experiment_outcome=ExperimentRunner(experiment_configuration, loaded_list).setup_and_start_experiment()
+    experiment=ExperimentRunner(experiment_configuration, loaded_list).setup_and_start_experiment()
     
-    logger
+    #logger
     #except Exception as ex:
      #   print("Error: ", str(ex))
     

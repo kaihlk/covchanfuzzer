@@ -154,11 +154,11 @@ class HTTP1_Request_Builder:
         deviation_count = 0
         return request_string, deviation_count
 
-    def generate_request(self, experiment_configuration):
+    def generate_request(self, experiment_configuration, host_data):
         
-        host=experiment_configuration["target_host"]
+        host=host_data["host"]
        
-        port=experiment_configuration["target_port"]
+        port=host_data["port"]
         url=experiment_configuration["url"]
         method=experiment_configuration["method"]
         headers=experiment_configuration["headers"]
