@@ -167,13 +167,13 @@ class ExperimentRunner:
                 target=exp_log.capture_packets_dumpcap,
                 args=(
 
-                    stop_capture_flag,
+                    stop_capture_flag_global,
                     self.experiment_configuration["nw_interface"],
                     
                 )
         ) 
         capture_thread.start()
-
+        time.sleep(1)
         #Loop over List
         sub_set_no=1
         start_position=1
@@ -198,8 +198,8 @@ class ExperimentRunner:
                 logger_list.append(logger)
                 stop_capture_flag=threading.Event()
                 stop_capture_flags.append(stop_capture_flag)
-                capture_thread= threading.Thread(target=logger.start_packet_capture, args=(stop_capture_flag,))
-                capture_thread.append(capture_thread)
+                capture_thread= threading.Thread(target=logger.capture_packets, args=(stop_capture_flag,))
+                capture_threads.append(capture_thread)
                 capture_thread.start()
                 
 
@@ -211,6 +211,7 @@ class ExperimentRunner:
             self.run_experiment(logger_list, subset_dns)
             
             #End capturing
+            time.sleep(1)
             for stop_flag in stop_capture_flags:
                 stop_flag.set()
             for capture_thread in capture_threads:
@@ -227,6 +228,8 @@ class ExperimentRunner:
             start_position += self.experiment_configuration["target_subset_size"] 
            
             # Wait for the capture thread to finish
+        time.sleep(1)       
+        stop_capture_flag_global.set()
         capture_thread.join()
              #This should be done in the end, added with some sttistics
         exp_log.add_global_entry_to_experiment_list(self.experiment_configuration["experiment_no"])

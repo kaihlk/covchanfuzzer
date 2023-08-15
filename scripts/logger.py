@@ -25,7 +25,7 @@ class TestRunLogger:
         self.request_data_list=[]
         self.status_code_count= {}
         self.result_variables={}
-
+        self.capture=None
 
     def create_logging_folder(self):
         '''Creates in not exists to store the logs'''
@@ -160,7 +160,7 @@ class TestRunLogger:
         pcap_path = f"{self.log_folder}/captured_packets.pcapng"
         #Filter host Address
         filter_host= f"host {self.target_ip}"
-        self.capture=pyshark.LiveCapture(interface=self.experiment_configuration["nw_interface"], filter_host, output_file=pcap_path)
+        self.capture=pyshark.LiveCapture(interface=self.experiment_configuration["nw_interface"], capture_filter=filter_host, output_file=pcap_path)
 
         while not stop_capture_flag.is_set():
             # Continue capturing packets until the stop flag is set
@@ -173,7 +173,7 @@ class TestRunLogger:
         # Filter for packets related to the specific connection, host filter both directions
         #filter_expression = f"host {self.target_ip}"
 
-        # Generate command to run Dumpcap
+        """ # Generate command to run Dumpcap
         dumpcap_cmd = [
             "dumpcap",
             "-i", nw_interface,
@@ -203,7 +203,7 @@ class TestRunLogger:
             print("Packets captured and saved to", pcap_path)
         
         except subprocess.CalledProcessError as ex:
-            print("Error occurred during packet capture:", ex)
+            print("Error occurred during packet capture:", ex) """
         #TODO
         return
 
