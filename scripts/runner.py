@@ -155,6 +155,23 @@ class ExperimentRunner:
         #Create Folder for the experiment and save the path
         exp_log=ExperimentLogger(self.experiment_configuration)
         
+
+        #Start Global Capturing Processs
+        stop_capture_flag = threading.Event()
+        #Start Capturing SubProcess
+        #TODO change name of the file per run. Add to one bigfile
+        
+        capture_thread = threading.Thread(
+                target=exp_log.capture_packets_dumpcap,
+                args=(
+
+                    stop_capture_flag,
+                    self.experiment_configuration["nw_interface"],
+                    
+                )
+        ) 
+        capture_thread.start()
+
         #Loop over List
         sub_set_no=1
         start_position=1
@@ -164,20 +181,7 @@ class ExperimentRunner:
             
             #Get DNS Infomation 
             subset_dns=self.add_dns_info(subset)
-            stop_capture_flag = threading.Event()
-            #Start Capturing SubProcess
-            #TODO change name of the file per run. Add to one bigfile
-            
-            capture_thread = threading.Thread(
-                    target=exp_log.capture_packets_dumpcap,
-                    args=(
-
-                        stop_capture_flag,
-                        self.experiment_configuration["nw_interface"],
-                        
-                    )
-            ) 
-            capture_thread.start()    
+    
             #Create logger object for each target #Iterate over List
             time.sleep(1)
            
@@ -185,6 +189,7 @@ class ExperimentRunner:
             for entry in subset_dns:    
                 print(entry)
                 logger=TestRunLogger(self.experiment_configuration, exp_log.get_experiment_folder(), entry["host"], entry["ip_address"], entry["port"])
+                logger.packet_capturing()
                 logger_list.append(logger)
 
             #Start sending packages
@@ -200,13 +205,13 @@ class ExperimentRunner:
             
             #End capture thread
             start_position += self.experiment_configuration["target_subset_size"] 
-            stop_capture_flag.set()
+           
             # Wait for the capture thread to finish
             capture_thread.join()
              #This should be done in the end, added with some sttistics
             exp_log.add_global_entry_to_experiment_list(self.experiment_configuration["experiment_no"])
         
-            
+        
         
             
             """capture_threads=[] 

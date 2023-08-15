@@ -6,7 +6,7 @@ import time
 import os
 import json
 import csv
-
+import pyshark
 
 
 
@@ -141,9 +141,80 @@ class TestRunLogger:
         self.move_tls_keys()
         self.create_wireshark_script()
         self.save_request_data(self.request_data_list)
+        self.capture =None
 
-    def extract_pcapng():
+    def capture_packets(
+        self,
+        stop_capture_flag,
+        nw_interface="eth0",
+    ):
+        '''Function to start a dumpcap network packet capturing process to record the traffic to and from a specified host'''
+        # PCAP Files
+        # dumpcap needs less privilige than tshark and is maybe faster.
+        # Prerequsites:
+        #  sudo usermod -a -G wireshark your_username
+        #  sudo setcap cap_net_raw=eip $(which dumpcap)
+        # Consider if destination port is need or if it is a problem when the connection is updated to TLS
+
+        # Set the output file for captured packets
+        pcap_path = f"{self.log_folder}/captured_packets.pcapng"
+
+        self.capture=pyshark.LiveCapture(interface=self.experiment_configuration["nw_interface"], output_file=pcap_path)
+
+
+        # Filter for packets related to the specific connection, host filter both directions
+        #filter_expression = f"host {self.target_ip}"
+
+        # Generate command to run Dumpcap
+        dumpcap_cmd = [
+            "dumpcap",
+            "-i", nw_interface,
+            "-w", pcap_path,
+            #"-f", filter_expression,
+            "-q",
+        ]
+
+        try:
+            subprocess.Popen(dumpcap_cmd)
+            # Wait for stop flag
+            while not stop_capture_flag.is_set():
+                # Continue capturing packets until the response is received or timeout occurs
+                pass
+            time.sleep(1)
+            # If the response arrived, terminate the capturing process early
+            print("End of run. Capturing terminated.")
+            subprocess.run(["pkill", "dumpcap"], check=False)  # Terminate dumpcap process      
+            print("Packets captured and saved to", pcap_path)       
+            time.sleep(1)
+
+        except subprocess.TimeoutExpired:
+            # If a timeout occurs, terminate the dumpcap process
+            print("Timeout limit reached. Capturing terminated.")
+            subprocess.run(["pkill", "dumpcap"], check=False)  # Terminate dumpcap process
+            print("Process 'dumpcap' was successfully terminated.")
+            print("Packets captured and saved to", pcap_path)
+        
+        except subprocess.CalledProcessError as ex:
+            print("Error occurred during packet capture:", ex)
         #TODO
+        return
+
+        def capture_thread():
+            try:
+                self.capture.apply_on_packets(self.packet_handler, timeout=1)
+            except KeyboardInterrupt:
+                pass
+
+        capture_thread = threading.Thread(target=capture_thread)
+        capture_thread.start()
+
+        while not stop_capture_flag.is_set():
+            time.sleep(1)
+
+        print("End of run. Capturing terminated.")
+        self.capture.close()
+
+        print("Packets captured and saved to", pcap_path)
         return
 
 class ExperimentLogger:
