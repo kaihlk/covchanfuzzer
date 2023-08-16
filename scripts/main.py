@@ -73,12 +73,12 @@ def main():
         "covertchannel_timing_number": 1,
         "fuzz_value":0.5,
         #Target Selection Options  
-        "num_attempts": 10,
+        "num_attempts": 3,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
         "target_list": "target_list.csv",
-        "target_subset_size": 10,
-        "target_host": "www.example.com",
+        "target_subset_size": 5,
+        #"target_host": "www.example.com",  #Just for special use
         "target_port": 80, #443, 8080 Apache
 
         #Connection Options

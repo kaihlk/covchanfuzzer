@@ -1,0 +1,59 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nHost: amazonaws.com\r\nAccept-Language: en-US,en;q=0.5\r\nConnection: keep-alive\r\nDNT: 1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 313,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "response_time": 0.10852909088134766,
+        "error_message": "",
+        "response_header_fields": {
+            "date": "Wed, 16 Aug 2023 00:12:27 GMT",
+            "server": "Server",
+            "location": "http://aws.amazon.com",
+            "content-length": "229",
+            "cneonction": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+        }
+    },
+    {
+        "number": 1,
+        "request": "GET / HTTP/1.1\r\nConnection: keep-alive\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nHost: amazonaws.com\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nDNT: 1\r\n\r\n",
+        "deviation_count": 7,
+        "request_length": 313,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "response_time": 0.11307549476623535,
+        "error_message": "",
+        "response_header_fields": {
+            "date": "Wed, 16 Aug 2023 00:12:29 GMT",
+            "server": "Server",
+            "location": "http://aws.amazon.com",
+            "content-length": "229",
+            "cneonction": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+        }
+    },
+    {
+        "number": 2,
+        "request": "GET / HTTP/1.1\r\nDNT: 1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nHost: amazonaws.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept-Language: en-US,en;q=0.5\r\nAccept-Encoding: gzip, deflate\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 5,
+        "request_length": 313,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "response_time": 0.48667240142822266,
+        "error_message": "",
+        "response_header_fields": {
+            "date": "Wed, 16 Aug 2023 00:12:31 GMT",
+            "server": "Server",
+            "location": "http://aws.amazon.com",
+            "content-length": "229",
+            "cneonction": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+        }
+    }
+]

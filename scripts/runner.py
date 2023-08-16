@@ -15,17 +15,7 @@ class ExperimentRunner:
     '''Runs the experiment itself'''
     def __init__(self, experiment_configuration, target_list):
         self.experiment_configuration = experiment_configuration
-        # Dns Lookup has to be done here  to get thark parameters 
-        self.target_ip_info = CustomHTTP().lookup_dns(experiment_configuration["target_host"], experiment_configuration["target_port"])
         self.target_list=target_list
-        
-        #TODO DELETE THIS PART IT SHOULD BE DONE SOMEWHERE ELSE
-        
-        
-        if experiment_configuration["use_ipv4"]:
-            self.target_ip, self.target_port = self.target_ip_info[0][4]
-        else:
-            self.target_ip, self.target_port = self.target_ip_info[1][4]
         self.dns_error=[]
 
     def get_target_subset(self, start_position=0, count=10)-> list:
@@ -177,7 +167,7 @@ class ExperimentRunner:
         #Loop over List
         sub_set_no=1
         start_position=1
-        while start_position <= 20: #len(self.target_list):
+        while start_position <= 5: #len(self.target_list):
             #Get target subset
             subset=self.get_target_subset(start_position,self.experiment_configuration["target_subset_size"])
             
@@ -212,8 +202,9 @@ class ExperimentRunner:
             
             #End capturing
             time.sleep(1)
-            for stop_flag in stop_capture_flags:
-                stop_flag.set()
+            for stop_capture_flag in stop_capture_flags:
+                print("Stopping flag set")
+                stop_capture_flag.set()
             for capture_thread in capture_threads:
                 capture_thread.join()
             for logger in logger_list:
@@ -264,19 +255,7 @@ class ExperimentRunner:
         # loop over the list
         # save meta data for each target.
         """
-        """
-        
-       
-        
-        # Time to let the packet dumper work
-        time.sleep(1)
-
-        stop_capture_flag.set()
-        # Wait for the capture thread to finish
-        capture_thread.join()
-        
-
-        
+        """       
 
         # Save Experiment Metadata
 

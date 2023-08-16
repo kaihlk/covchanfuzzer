@@ -1,0 +1,77 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nDNT: 1\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nHost: google.com\r\nConnection: keep-alive\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\n\r\n",
+        "deviation_count": 7,
+        "request_length": 310,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "response_time": 0.047775983810424805,
+        "error_message": "",
+        "response_header_fields": {
+            "location": "http://www.google.com/",
+            "content-type": "text/html; charset=UTF-8",
+            "content-security-policy-report-only": "object-src 'none';base-uri 'self';script-src 'nonce-V1i4PjP_VNLUqjrY1wBlUg' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+            "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/other\"}]}",
+            "date": "Wed, 16 Aug 2023 00:12:27 GMT",
+            "expires": "Fri, 15 Sep 2023 00:12:27 GMT",
+            "cache-control": "public, max-age=2592000",
+            "server": "gws",
+            "content-length": "219",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        }
+    },
+    {
+        "number": 1,
+        "request": "GET / HTTP/1.1\r\nAccept-Language: en-US,en;q=0.5\r\nAccept-Encoding: gzip, deflate\r\nConnection: keep-alive\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nDNT: 1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n\r\n",
+        "deviation_count": 7,
+        "request_length": 310,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "response_time": 0.026246070861816406,
+        "error_message": "",
+        "response_header_fields": {
+            "location": "http://www.google.com/",
+            "content-type": "text/html; charset=UTF-8",
+            "content-security-policy-report-only": "object-src 'none';base-uri 'self';script-src 'nonce-fqhqMbmGZ6n5-944PtSrHQ' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+            "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/other\"}]}",
+            "date": "Wed, 16 Aug 2023 00:12:28 GMT",
+            "expires": "Fri, 15 Sep 2023 00:12:28 GMT",
+            "cache-control": "public, max-age=2592000",
+            "server": "gws",
+            "content-length": "219",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        }
+    },
+    {
+        "number": 2,
+        "request": "GET / HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nDNT: 1\r\nAccept-Encoding: gzip, deflate\r\nConnection: keep-alive\r\nAccept-Language: en-US,en;q=0.5\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 310,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "response_time": 0.09001016616821289,
+        "error_message": "",
+        "response_header_fields": {
+            "location": "http://www.google.com/",
+            "content-type": "text/html; charset=UTF-8",
+            "content-security-policy-report-only": "object-src 'none';base-uri 'self';script-src 'nonce-34UG9IIBQLmr6BLodM-nxw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+            "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/other\"}]}",
+            "date": "Wed, 16 Aug 2023 00:12:30 GMT",
+            "expires": "Fri, 15 Sep 2023 00:12:30 GMT",
+            "cache-control": "public, max-age=2592000",
+            "server": "gws",
+            "content-length": "219",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        }
+    }
+]

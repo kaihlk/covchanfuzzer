@@ -1,0 +1,56 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nDNT: 1\r\nConnection: keep-alive\r\nAccept-Encoding: gzip, deflate\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nHost: microsoft.com\r\n\r\n",
+        "deviation_count": 6,
+        "request_length": 313,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "response_time": 0.2818717956542969,
+        "error_message": "",
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Wed, 16 Aug 2023 00:24:24 GMT",
+            "server": "Kestrel",
+            "location": "https://www.microsoft.com/",
+            "strict-transport-security": "max-age=31536000"
+        }
+    },
+    {
+        "number": 1,
+        "request": "GET / HTTP/1.1\r\nDNT: 1\r\nHost: microsoft.com\r\nAccept-Language: en-US,en;q=0.5\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nConnection: keep-alive\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept-Encoding: gzip, deflate\r\n\r\n",
+        "deviation_count": 7,
+        "request_length": 313,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "response_time": 0.34182262420654297,
+        "error_message": "",
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Wed, 16 Aug 2023 00:24:27 GMT",
+            "server": "Kestrel",
+            "location": "https://www.microsoft.com/",
+            "strict-transport-security": "max-age=31536000"
+        }
+    },
+    {
+        "number": 2,
+        "request": "GET / HTTP/1.1\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nConnection: keep-alive\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nDNT: 1\r\nAccept-Encoding: gzip, deflate\r\nHost: microsoft.com\r\n\r\n",
+        "deviation_count": 6,
+        "request_length": 313,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "response_time": 1.000624656677246,
+        "error_message": "",
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Wed, 16 Aug 2023 00:24:40 GMT",
+            "server": "Kestrel",
+            "location": "https://www.microsoft.com/",
+            "strict-transport-security": "max-age=31536000"
+        }
+    }
+]

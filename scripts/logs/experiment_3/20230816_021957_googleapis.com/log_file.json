@@ -1,0 +1,53 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nAccept-Encoding: gzip, deflate\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nConnection: keep-alive\r\nHost: googleapis.com\r\n\r\n",
+        "deviation_count": 6,
+        "request_length": 314,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "response_time": 0.13450145721435547,
+        "error_message": "",
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1561",
+            "date": "Wed, 16 Aug 2023 00:19:58 GMT"
+        }
+    },
+    {
+        "number": 1,
+        "request": "GET / HTTP/1.1\r\nDNT: 1\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nHost: googleapis.com\r\nAccept-Encoding: gzip, deflate\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 4,
+        "request_length": 314,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "response_time": 0.17045974731445312,
+        "error_message": "",
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1561",
+            "date": "Wed, 16 Aug 2023 00:19:59 GMT"
+        }
+    },
+    {
+        "number": 2,
+        "request": "GET / HTTP/1.1\r\nAccept-Language: en-US,en;q=0.5\r\nConnection: keep-alive\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nHost: googleapis.com\r\nDNT: 1\r\nAccept-Encoding: gzip, deflate\r\n\r\n",
+        "deviation_count": 6,
+        "request_length": 314,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "response_time": 0.3211538791656494,
+        "error_message": "",
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1561",
+            "date": "Wed, 16 Aug 2023 00:20:01 GMT"
+        }
+    }
+]

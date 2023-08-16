@@ -167,8 +167,9 @@ class TestRunLogger:
             pass
 
         if self.capture:
+            print("capture close")
             self.capture.close()
-
+        return
     
         # Filter for packets related to the specific connection, host filter both directions
         #filter_expression = f"host {self.target_ip}"

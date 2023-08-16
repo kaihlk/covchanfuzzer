@@ -326,15 +326,15 @@ class CustomHTTP(HTTP):
         response_time=0
  
         # DNS Lookup if info not provided, maybe delete it
-        if host_ip_info is None:
-            host_ip_info = self.lookup_dns(host,port)
-        print(host_ip_info)
+        #if host_ip_info is None:
+        #    host_ip_info = self.lookup_dns(host,port)
+        #print(host_ip_info)
         #TODO Add IPV6 support
         req = self.build_http_headers(host, path, headers, custom_request)
 
         # Check
-        if verbose==True:
-            print(req)
+       # if verbose==True:
+          #  print(req)
           
         # Establish a socket connection
         sock = self.create_tcp_socket(host_ip_info, use_ipv4)
