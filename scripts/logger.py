@@ -6,7 +6,7 @@ import time
 import os
 import json
 import csv
-import pyshark
+# import pyshark # doesnt work so well, probably a sudo problem
 
 
 
@@ -33,7 +33,8 @@ class TestRunLogger:
         log_folder = f"{self.experiment_folder}/{timestamp}_{self.target_host}"
         os.makedirs(log_folder, exist_ok=True)
         return log_folder
-
+    def get_logging_folder(self):
+        return self.log_folder
 
     def save_run_metadata(self, result_variables):
         '''Save Meta Data connected to experiment'''
@@ -145,8 +146,7 @@ class TestRunLogger:
 
     def capture_packets(
         self,
-        stop_capture_flag,
-        nw_interface="eth0",
+        stop_capture_flag
     ):
         '''Function to start a dumpcap network packet capturing process to record the traffic to and from a specified host'''
         # PCAP Files
@@ -155,13 +155,13 @@ class TestRunLogger:
         #  sudo usermod -a -G wireshark your_username
         #  sudo setcap cap_net_raw=eip $(which dumpcap)
         # Consider if destination port is need or if it is a problem when the connection is updated to TLS
-
+        """ 
         # Set the output file for captured packets
         pcap_path = f"{self.log_folder}/captured_packets.pcapng"
         #Filter host Address
         filter_host= f"host {self.target_ip}"
         self.capture=pyshark.LiveCapture(interface=self.experiment_configuration["nw_interface"], capture_filter=filter_host, output_file=pcap_path)
-
+        print("Capturing started, Pcapng saved to: "+pcap_path)
         while not stop_capture_flag.is_set():
             # Continue capturing packets until the stop flag is set
             pass
@@ -169,17 +169,17 @@ class TestRunLogger:
         if self.capture:
             print("capture close")
             self.capture.close()
-        return
+        return """
     
         # Filter for packets related to the specific connection, host filter both directions
-        #filter_expression = f"host {self.target_ip}"
-
-        """ # Generate command to run Dumpcap
+        filter_expression = f"host {self.target_ip}"
+        pcap_path = f"{self.log_folder}/captured_packets.pcapng"
+        # Generate command to run Dumpcap
         dumpcap_cmd = [
             "dumpcap",
-            "-i", nw_interface,
+            "-i", self.experiment_configuration["nw_interface"],
             "-w", pcap_path,
-            #"-f", filter_expression,
+            "-f", filter_expression,
             "-q",
         ]
 
@@ -189,12 +189,12 @@ class TestRunLogger:
             while not stop_capture_flag.is_set():
                 # Continue capturing packets until the response is received or timeout occurs
                 pass
-            time.sleep(1)
+            
             # If the response arrived, terminate the capturing process early
             print("End of run. Capturing terminated.")
             subprocess.run(["pkill", "dumpcap"], check=False)  # Terminate dumpcap process      
             print("Packets captured and saved to", pcap_path)       
-            time.sleep(1)
+            
 
         except subprocess.TimeoutExpired:
             # If a timeout occurs, terminate the dumpcap process
@@ -204,8 +204,7 @@ class TestRunLogger:
             print("Packets captured and saved to", pcap_path)
         
         except subprocess.CalledProcessError as ex:
-            print("Error occurred during packet capture:", ex) """
-        #TODO
+            print("Error occurred during packet capture:", ex)
         return
 
         def capture_thread():

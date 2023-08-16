@@ -144,6 +144,7 @@ COMMON_UNSTANDARD_RESPONSE_HEADERS = [
 class CustomHTTP(HTTP):
     '''Class to build up a http/1 connection to host via a socket'''
     
+
     def lookup_dns(self, hostname, portnumber):
         '''Function to make a DNS Lookup for a specified host or localhost using sockets and return the received data as a dictionary of tuples ''' 
         if hostname.lower() == "localhost":
@@ -189,7 +190,7 @@ class CustomHTTP(HTTP):
                 error_message = str(ex)
                 return None
 
-    def upgrade_to_tls(self, s, hostname):
+    def upgrade_to_tls(self, s, hostname, log_path):
         '''Upgrade a tcp socket connection to TLS'''
         # Testing support for ALPN
         assert ssl.HAS_ALPN
@@ -197,7 +198,7 @@ class CustomHTTP(HTTP):
         ssl_ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
         ssl_ctx.load_verify_locations("/etc/ssl/certs/ca-certificates.crt")
         # Export Sessionkeys, to be able to analyze encrypted Traffic with Wireshark etc.
-        ssl_ctx.keylog_filename = "sessionkeys.txt"
+        ssl_ctx.keylog_filename = f"{self.logpath}/sessionkeys.txt"
         ssl_ctx.set_alpn_protocols(["http/1.1"])  # h2 is a RFC7540-hardcoded value
         ssl_sock = ssl_ctx.wrap_socket(s, server_hostname=hostname)
         
@@ -231,7 +232,7 @@ class CustomHTTP(HTTP):
                 stream_socket = SuperSocket.SSLStreamSocket(tls_socket, basecls=HTTP)
                 return stream_socket, error_message
             except socket.error as ex:
-                print("Scoket Error")
+                print("Socket Error")
                 error_message = str(ex)
                 return None, error_message
 
@@ -301,13 +302,14 @@ class CustomHTTP(HTTP):
         self,
         host,
         use_ipv4,
+        log_path,
         port=80,
         path="/",
         host_ip_info=None,
         timeout=3,
         #display=False,
         verbose=True,
-        custom_request=None,
+        custom_request=None,      
         **headers,
     ):
         """Util to perform an HTTP request, using a socket connection.
@@ -342,7 +344,7 @@ class CustomHTTP(HTTP):
         # Upgrade to TLS depending on the port  
 
         if 443 == port:
-            tls_socket=self.upgrade_to_tls(sock, host)
+            tls_socket=self.upgrade_to_tls(sock, host, log_path)
             stream_socket, error_message=self.connect_tls_socket(tls_socket, host_ip_info, host, use_ipv4, timeout)
         else:
             stream_socket, error_message=self.connect_tcp_socket(sock, host_ip_info, host, use_ipv4, timeout)
