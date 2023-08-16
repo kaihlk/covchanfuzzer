@@ -80,15 +80,7 @@ class TestRunLogger:
 
 
 
-     #TODO: better naming
-    def move_tls_keys(self):
-        '''Move the TLS seessionkeys to the experiment folder, they are created by the custom http client'''
-        if os.path.exists("sessionkeys.txt"):
-            try:
-                os.rename("sessionkeys.txt", f"{self.log_folder}/sessionkeys.txt")
-            except OSError as ex:
-                print(f"An error occurred while moving the file: {str(ex)}")
-
+  
     
     def create_wireshark_script(self):
         ''' Creates a wireshark script to easily analyze the captured packets, with the need TLS keys'''

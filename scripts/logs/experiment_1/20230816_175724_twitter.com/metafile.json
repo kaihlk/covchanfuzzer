@@ -1,0 +1,29 @@
+{
+    "configuration_variables": {
+        "experiment_no": 1,
+        "comment": "less attempts",
+        "verbose": false,
+        "timestamp": "20230816_175526",
+        "covertchannel_request_number": 1,
+        "covertchannel_connection_number": 1,
+        "covertchannel_timing_number": 1,
+        "fuzz_value": 0.5,
+        "num_attempts": 5,
+        "wait_between_request": 0,
+        "base_line_check_frequency": 0,
+        "target_list": "target_list.csv",
+        "target_subset_size": 5,
+        "target_port": null,
+        "conn_timeout": 0.1,
+        "nw_interface": "enp0s3",
+        "use_ipv4": true,
+        "use_TLS": true,
+        "use_HTTP2": false,
+        "method": "GET",
+        "url": "/",
+        "headers": null,
+        "standard_headers": "firefox_HTTP/1.1",
+        "content": "random"
+    },
+    "result_variables": {}
+}

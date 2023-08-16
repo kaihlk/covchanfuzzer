@@ -164,26 +164,30 @@ class CustomHTTP(HTTP):
             address=None
         return address
 
-    def create_tcp_socket(self, ip_info, use_ipv4):
+    def create_tcp_socket(self, ip_info, use_ipv4, timeout):
         '''Create and Connect a TCP socket'''
-           
+        timeout_ms = int(timeout * 1000)   
         try:
             # Build socket
             if use_ipv4==True:
                 s = socket.socket(ip_info[0][0], ip_info[0][1], ip_info[0][2])
                 # Set socket options
                 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+                s.setsockopt(socket.SOL_SOCKET, socket.SO_RCVTIMEO, timeout_ms)
                 # Allow reuse immediately after closed
                 if hasattr(socket, "SO_REUSEPORT"):
                     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+                    s.setsockopt(socket.SOL_SOCKET, socket.SO_RCVTIMEO, timeout_ms)
                     
             else:
                 s = socket.socket(ip_info[1][0], ip_info[1][1], ip_info[1][2])
                 # Set socket options
-                s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+                s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+                s.setsockopt(socket.SOL_SOCKET, socket.SO_RCVTIMEO, timeout_ms)
                 # Allow reuse immediately after closed
                 if hasattr(socket, "SO_REUSEPORT"):
                     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+                    s.setsockopt(socket.SOL_SOCKET, socket.SO_RCVTIMEO, timeout_ms)
             return s 
          
         except socket.error as ex:
@@ -198,13 +202,13 @@ class CustomHTTP(HTTP):
         ssl_ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
         ssl_ctx.load_verify_locations("/etc/ssl/certs/ca-certificates.crt")
         # Export Sessionkeys, to be able to analyze encrypted Traffic with Wireshark etc.
-        ssl_ctx.keylog_filename = f"{self.logpath}/sessionkeys.txt"
+        ssl_ctx.keylog_filename = f"{log_path}/sessionkeys.txt"
         ssl_ctx.set_alpn_protocols(["http/1.1"])  # h2 is a RFC7540-hardcoded value
         ssl_sock = ssl_ctx.wrap_socket(s, server_hostname=hostname)
         
         return ssl_sock
 
-    def connect_tcp_socket(self, sock, host_ip_info, host, use_ipv4, timeout):
+    def connect_tcp_socket(self, sock, host_ip_info, use_ipv4, timeout):
             try: 
                 error_message="" 
               
@@ -220,7 +224,7 @@ class CustomHTTP(HTTP):
                 error_message = str(ex)
                 return None, error_message
 
-    def connect_tls_socket(self, tls_socket, host_ip_info, host, use_ipv4, timeout):
+    def connect_tls_socket(self, tls_socket, host_ip_info, use_ipv4, timeout):
             try: 
                 error_message=""
                 if use_ipv4==True:             
@@ -232,7 +236,7 @@ class CustomHTTP(HTTP):
                 stream_socket = SuperSocket.SSLStreamSocket(tls_socket, basecls=HTTP)
                 return stream_socket, error_message
             except socket.error as ex:
-                print("Socket Error")
+                print("Socket Error while connecting to :"+str(host_ip_info["host"]))
                 error_message = str(ex)
                 return None, error_message
 
@@ -339,15 +343,15 @@ class CustomHTTP(HTTP):
           #  print(req)
           
         # Establish a socket connection
-        sock = self.create_tcp_socket(host_ip_info, use_ipv4)
+        sock = self.create_tcp_socket(host_ip_info, use_ipv4, timeout)
         
         # Upgrade to TLS depending on the port  
 
         if 443 == port:
             tls_socket=self.upgrade_to_tls(sock, host, log_path)
-            stream_socket, error_message=self.connect_tls_socket(tls_socket, host_ip_info, host, use_ipv4, timeout)
+            stream_socket, error_message=self.connect_tls_socket(tls_socket, host_ip_info, use_ipv4, timeout)
         else:
-            stream_socket, error_message=self.connect_tcp_socket(sock, host_ip_info, host, use_ipv4, timeout)
+            stream_socket, error_message=self.connect_tcp_socket(sock, host_ip_info, use_ipv4, timeout)
      
         if stream_socket is not None:
             try:

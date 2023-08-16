@@ -17,6 +17,7 @@ class ExperimentRunner:
         self.experiment_configuration = experiment_configuration
         self.target_list=target_list
         self.dns_error=[]
+        self.message_count=0
 
     def get_target_subset(self, start_position=0, count=10)-> list:
         """Takes a subset from the target list to reduce the traffic to one target, in order to """
@@ -30,8 +31,7 @@ class ExperimentRunner:
         sub_set=sub_set[:count]
         return sub_set
 
-    def round_robin_target_selector():
-        return 0
+ 
 
 
     def baseline_check(self):
@@ -54,11 +54,11 @@ class ExperimentRunner:
                 self.target_port=443
             else: 
                 self.target_port=80
-
+        print(self.target_port)
         #Lookup DNS for each entry
         #TODO Catch the case that IPv4 or IPv6 is not provided, some sites sends more than one IP/Port set per protocoll version,  example macromedia.com and criteo.com
         for entry in sub_set:
-            print(entry)
+            #print(entry)
             socket_info = CustomHTTP().lookup_dns(entry, self.target_port)
             if socket_info:
                 print(socket_info)
@@ -124,8 +124,12 @@ class ExperimentRunner:
                 else:     
                     # Send the HTTP request and get the response in the main thread
                     request, deviation_count=self.forge_requests(host_data)
+                    start_time=time.time()
                     self.send_and_receive_request(i, request, deviation_count, host_data, logger)
-                    
+                    self.message_count+=1
+                    end_time=time.time()
+                    response_time=end_time-start_time
+                    print("Message No: " + str(self.message_count)+" Host: "+str(host_data["host"])+" Message Time: " + str(response_time))
                    
                     
                     """                 if self.experiment_configuration["verbose"]==True:
@@ -184,7 +188,7 @@ class ExperimentRunner:
             capture_threads=[]
             stop_capture_flags=[]
             for entry in subset_dns:    
-                print(entry)
+                #print(entry)
                 logger=TestRunLogger(self.experiment_configuration, exp_log.get_experiment_folder(), entry["host"], entry["ip_address"], entry["port"])
                 logger_list.append(logger)
                 stop_capture_flag=threading.Event()
@@ -197,17 +201,17 @@ class ExperimentRunner:
 
             #TODO change name of the file per run. Add to one bigfile
             #Start capturing threads
-            print("Sleep1")
+          
             time.sleep(1) #Every capturing process should be ready
             
             #Start sending packages
             self.run_experiment(logger_list, subset_dns)
             
             #End capturing
-            print("Sleep2")
+            
             time.sleep(1)
             for stop_capture_flag in stop_capture_flags:
-                print("Stopping flag set")
+              
                 stop_capture_flag.set()
             for capture_thread in capture_threads:
                 capture_thread.join()

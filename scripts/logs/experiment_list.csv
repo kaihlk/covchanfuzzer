@@ -1,0 +1,2 @@
+experiment_no,comment,verbose,timestamp,covertchannel_request_number,covertchannel_connection_number,covertchannel_timing_number,fuzz_value,num_attempts,wait_between_request,base_line_check_frequency,target_list,target_subset_size,target_port,conn_timeout,nw_interface,use_ipv4,use_TLS,use_HTTP2,method,url,headers,standard_headers,content
+1,less attempts,False,20230816_175526,1,1,1,0.5,5,0,0,target_list.csv,5,,0.1,enp0s3,True,True,False,GET,/,,firefox_HTTP/1.1,random
