@@ -93,7 +93,7 @@ class ExperimentRunner:
         return True
     
     def send_and_receive_request(self, attempt_number, request, deviation_count, host_data, logger):    
-        response_line, response_header_fields, body, response_time, error_message  = CustomHTTP().http_request(
+        response_line, response_header_fields, body, measured_times, error_message  = CustomHTTP().http_request(
             host=host_data["host"],
             use_ipv4=self.experiment_configuration["use_ipv4"],
             port=host_data["port"],
@@ -105,7 +105,7 @@ class ExperimentRunner:
         )
         
         self.check_content(body)
-        logger.add_request_response_data(attempt_number, request, deviation_count, response_line, response_header_fields, body, response_time, error_message)
+        logger.add_request_response_data(attempt_number, request, deviation_count, response_line, response_header_fields, body, measured_times, error_message)
 
       
        
@@ -191,7 +191,7 @@ class ExperimentRunner:
             stop_capture_flags=[]
             for entry in subset_dns:    
                 #print(entry)
-                logger=TestRunLogger(self.experiment_configuration, exp_log.get_experiment_folder(), entry["host"], entry["ip_address"], entry["port"])
+                logger=TestRunLogger(self.experiment_configuration, exp_log.get_experiment_folder(), entry, entry["host"], entry["ip_address"], entry["port"])
                 logger_list.append(logger)
                 stop_capture_flag=threading.Event()
                 stop_capture_flags.append(stop_capture_flag)

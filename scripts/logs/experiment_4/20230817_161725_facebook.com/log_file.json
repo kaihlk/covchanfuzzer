@@ -1,0 +1,267 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "request_length": 312,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.21668195724487305,
+            "Socket_Close_Time": 0.09863686561584473,
+            "Response_Time": 0.06611323356628418
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.facebook.com/",
+            "strict-transport-security": "max-age=15552000; includeSubDomains",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "+plUGtBiJAT2iL7/JhP13cJ5BakSJy+FF8wSxW4iEiCxXsCmk3iPTE+hJcu6jP8IB5Q8RXSNSKK2WUw+W+MDeg==",
+            "date": "Thu, 17 Aug 2023 14:17:26 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        }
+    },
+    {
+        "number": 1,
+        "request": "GET / HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "request_length": 312,
+        "http_version": "",
+        "status_code": 0,
+        "reason_phrase": [
+            "_ssl.c:1106: The handshake operation timed out",
+            "[Errno 9] Bad file descriptor"
+        ],
+        "measured_times": {
+            "Socket_Connect_Time": 16.396265506744385,
+            "Socket_Close_Time": 0,
+            "Response_Time": 0
+        },
+        "error_message": [
+            "_ssl.c:1106: The handshake operation timed out",
+            "[Errno 9] Bad file descriptor"
+        ],
+        "response_header_fields": null
+    },
+    {
+        "number": 2,
+        "request": "GET / HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "request_length": 312,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 10.954862594604492,
+            "Socket_Close_Time": 0.011718273162841797,
+            "Response_Time": 0.07428812980651855
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.facebook.com/",
+            "strict-transport-security": "max-age=15552000; includeSubDomains",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "XQc10aqXIvYsH8C/6phzJrLfqXreUcqpxJ7xFrV6Oxck1uLgZkQWJCyDXENXpOE8FQSVrR7tu+E0r40e1l60WQ==",
+            "date": "Thu, 17 Aug 2023 14:17:54 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        }
+    },
+    {
+        "number": 3,
+        "request": "GET / HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "request_length": 312,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 76.21111583709717,
+            "Socket_Close_Time": 0.03452038764953613,
+            "Response_Time": 0.08017730712890625
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.facebook.com/",
+            "strict-transport-security": "max-age=15552000; includeSubDomains",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "KS+LdUarpwSJjhzBggTb2A8rdgtwv/suJms9Vw26vWGwMTJoZ8/9iO1TSDbChcYn9tc/I3vtmMzQYdB2pNkubw==",
+            "date": "Thu, 17 Aug 2023 14:19:11 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "close",
+            "content-length": "0"
+        }
+    },
+    {
+        "number": 4,
+        "request": "GET / HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "request_length": 312,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1341996192932129,
+            "Socket_Close_Time": 0.0005846023559570312,
+            "Response_Time": 0.05936741828918457
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.facebook.com/",
+            "strict-transport-security": "max-age=15552000; includeSubDomains",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "u83wdek38dUR8UWlOJfK4k4zTtd2bQeUBXwnou9tgQuvM8qb0Z63u2uETB0EtElWDr35zJ92LP6mjEOmAKSEPA==",
+            "date": "Thu, 17 Aug 2023 14:19:13 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        }
+    },
+    {
+        "number": 5,
+        "request": "GET / HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "request_length": 312,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 1.4720535278320312,
+            "Socket_Close_Time": 0.05858635902404785,
+            "Response_Time": 0.04435253143310547
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.facebook.com/",
+            "strict-transport-security": "max-age=15552000; includeSubDomains",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "bCqYuXJ6K1DeV5obKwQed09336yxHhfipztlyC4dQbRUpaRgi/37JYjUsSvU9WkkFT7hmPsYtBCZ5MDa6kpWmg==",
+            "date": "Thu, 17 Aug 2023 14:19:15 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        }
+    },
+    {
+        "number": 6,
+        "request": "GET / HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "request_length": 312,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.4401862621307373,
+            "Socket_Close_Time": 0.0008013248443603516,
+            "Response_Time": 0.27126121520996094
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.facebook.com/",
+            "strict-transport-security": "max-age=15552000; includeSubDomains",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "jb/z1xbFwbJwfYG4g0xxNKsGUdtER2PRBnXk1cQSdPmZsUtLQ+5KGXajEe2zBT9h8aMEgJ/KWkfdXs+fZuTSAg==",
+            "date": "Thu, 17 Aug 2023 14:19:16 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        }
+    },
+    {
+        "number": 7,
+        "request": "GET / HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "request_length": 312,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.12564516067504883,
+            "Socket_Close_Time": 0.0005412101745605469,
+            "Response_Time": 0.10030531883239746
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.facebook.com/",
+            "strict-transport-security": "max-age=15552000; includeSubDomains",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "QIQRcHkQS2mJxo1NlfpI9m1+YSUoZ4Q7A/qE4WGovmAUenimztG3CK8Sn5zRaOTeq9cuSsWEl+pUZmZF3Hn9aA==",
+            "date": "Thu, 17 Aug 2023 14:19:17 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        }
+    },
+    {
+        "number": 8,
+        "request": "GET / HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "request_length": 312,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.3961637020111084,
+            "Socket_Close_Time": 0.07114267349243164,
+            "Response_Time": 0.06911301612854004
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.facebook.com/",
+            "strict-transport-security": "max-age=15552000; includeSubDomains",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "PbCFJLQZ4Mr66/IJqvGslWLfeJqC+26jQAAqc1xDFtyzwZcyOea4f11ce+NWgOfa/kXP16AkuosIXJCSkjQSFQ==",
+            "date": "Thu, 17 Aug 2023 14:19:18 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        }
+    },
+    {
+        "number": 9,
+        "request": "GET / HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "request_length": 312,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2010815143585205,
+            "Socket_Close_Time": 0.0007987022399902344,
+            "Response_Time": 0.06807279586791992
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.facebook.com/",
+            "strict-transport-security": "max-age=15552000; includeSubDomains",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "IcSoulcl+E8rm02YnwaGMxRBjmjgaZlHsSLgtXd5DOa/F73tlyrLnOuq5Z2QsawjKdLkALFK1pTBtPwd3yxzpA==",
+            "date": "Thu, 17 Aug 2023 14:19:19 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        }
+    }
+]

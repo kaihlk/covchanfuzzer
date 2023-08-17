@@ -16,9 +16,10 @@ import class_mapping
 
 
 class TestRunLogger:
-    def __init__(self, experiment_configuration, experiment_folder, target_host, target_ip, target_port):
+    def __init__(self, experiment_configuration, experiment_folder, host_ip_info, target_host, target_ip, target_port):
         self.experiment_configuration = experiment_configuration
         self.experiment_folder=experiment_folder
+        self.host_ip_info=host_ip_info
         self.target_ip = target_ip
         self.target_port = target_port
         self.target_host =target_host
@@ -51,7 +52,7 @@ class TestRunLogger:
 
         return
 
-    def add_request_response_data(self, attempt_number, request, deviation_count, response_line, response_header_fields, body, response_time, error_message):
+    def add_request_response_data(self, attempt_number, request, deviation_count, response_line, response_header_fields, body, measured_times, error_message):
         if response_line is not None:
             response_http_version = response_line["HTTP_version"]
             response_status_code = response_line["status_code"]
@@ -59,7 +60,7 @@ class TestRunLogger:
             
         else:
             response_http_version = ""
-            response_status_code = 000
+            response_status_code = "000"
             response_reason_phrase = error_message
         
                    
@@ -70,8 +71,8 @@ class TestRunLogger:
             "request_length": len(request),
             "http_version": response_http_version,
             "status_code": response_status_code,
-            "reason_phrase": response_reason_phrase ,
-            "response_time": response_time,
+            "reason_phrase": response_reason_phrase,
+            "measured_times": measured_times,
             "error_message": error_message,
             "response_header_fields": response_header_fields,
         }
@@ -131,6 +132,7 @@ class TestRunLogger:
                 status_code_distribution[status_range]=0
 
         self.result_variables = {
+            "host_ip_info": self.host_ip_info,
             "covertchannel_request_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]),
             "covertchannel_request_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_connection_number"]]),
             "covertchannel_timing_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_timing_number"]]),

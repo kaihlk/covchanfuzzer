@@ -1,0 +1,8 @@
+experiment_no,comment,verbose,timestamp,covertchannel_request_number,covertchannel_connection_number,covertchannel_timing_number,fuzz_value,num_attempts,wait_between_request,base_line_check_frequency,target_list,target_subset_size,target_port,conn_timeout,nw_interface,use_ipv4,use_TLS,use_HTTP2,method,url,headers,standard_headers,content
+1,Logger Issues,False,20230817_153222,1,1,1,0.5,10,0,0,target_list.csv,3,,1,enp0s3,True,False,False,GET,/,,firefox_HTTP/1.1,random
+2,error messages,False,20230817_155746,1,1,1,0.5,10,0,0,target_list.csv,3,,1,enp0s3,True,False,False,GET,/,,firefox_HTTP/1.1,random
+3,test2,False,20230817_155901,1,1,1,0.5,10,0,0,target_list.csv,3,,1,enp0s3,True,False,False,GET,/,,firefox_HTTP/1.1,random
+4,TLS,False,20230817_161724,1,1,1,0.5,10,0,0,target_list.csv,3,,1,enp0s3,True,True,False,GET,/,,firefox_HTTP/1.1,random
+5,neext,False,20230817_163340,1,1,1,0.5,10,0,0,target_list.csv,3,,2,enp0s3,True,True,False,GET,/,,firefox_HTTP/1.1,random
+6,test,False,20230817_164430,1,1,1,0.5,10,0,0,target_list.csv,3,,2,enp0s3,True,True,False,GET,/,,firefox_HTTP/1.1,random
+7,Test Status Codes,False,20230817_164806,1,1,1,0.5,10,0,0,target_list.csv,3,,2,enp0s3,True,True,False,GET,/,,firefox_HTTP/1.1,random

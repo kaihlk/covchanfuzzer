@@ -95,10 +95,10 @@ def main():
         "target_port": None, #443, 8080 Apache
 
         #Connection Options
-        "conn_timeout": 1, #seconds
+        "conn_timeout": 2, #seconds
         "nw_interface": "enp0s3",  #lo, docker, enp0s3     
         "use_ipv4": True,
-        "use_TLS": False,
+        "use_TLS": True,
         "use_HTTP2": False,
 
         #HTTP Message Options
