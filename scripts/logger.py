@@ -93,8 +93,8 @@ class TestRunLogger:
         wireshark_script_path = f"{self.log_folder}/wireshark_script.sh"
         with open(wireshark_script_path, "w", encoding="utf-8") as file:
             file.write("#!/bin/bash\n")
-            file.write('script_dir="$(dirname "$0")"')
-            file.write('cd "$script_dir" || exit 1')       
+            file.write('script_dir="$(dirname "$0")"\n')
+            file.write('cd "$script_dir" || exit 1\n')       
             file.write(" ".join(wireshark_cmd))
 
         os.chmod(wireshark_script_path, 0o755)
