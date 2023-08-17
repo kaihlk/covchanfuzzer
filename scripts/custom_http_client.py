@@ -174,11 +174,11 @@ class CustomHTTP(HTTP):
             else:
                 s = socket.socket(ip_info[1][0], ip_info[1][1], ip_info[1][2])    
             # Set socket options
-            s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            #s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             s.settimeout(timeout)
             # Allow reuse immediately after closed
-            if hasattr(socket, "SO_REUSEPORT"):
-                s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
+            #if hasattr(socket, "SO_REUSEPORT"):
+            #    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
             return s        
         except socket.error as ex:
             error_message = str(ex)
