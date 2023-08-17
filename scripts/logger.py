@@ -30,13 +30,13 @@ class TestRunLogger:
         self.logged_attempts=0
         self.run_values= []
         self.data_count={
-            "Attempts": 0,
-            "000-Errors": 0,
+            "Messages": 0,
             "1xx": 0,
             "2xx": 0,
             "3xx": 0,
             "4xx": 0,
             "5xx": 0,
+            "999-Errors": 0,
             "Total Response_Time": 0,
             "Total Deviation Count": 0,
             "Total Response Header Length": 0,
@@ -73,7 +73,7 @@ class TestRunLogger:
             
         else:
             response_http_version = ""
-            response_status_code = "000"
+            response_status_code = 999
             response_reason_phrase = error_message
         
                    
@@ -92,7 +92,40 @@ class TestRunLogger:
         self.request_data_list.append(request_data)
         self.status_code_count[request_data["status_code"]] = (self.status_code_count.get(request_data["status_code"], 0) + 1)
         self.logged_attempts+=1
-        
+        self.run_values["Messages"]+=1
+        first_digit = response_code[0]
+        if first_digit == "1":
+            self.run_values["1xx"]+=1
+        elif first_digit == "2":
+            self.run_values["2xx"]+=1
+        elif first_digit == "3":
+            self.run_values["3xx"]+=1
+        elif first_digit == "4":
+            self.run_values["4xx"]+=1
+        elif first_digit == "5":
+            self.run_values["5xx"]+=1
+        elif first_digit== "9":
+            self.run_values["9xx"]+=1
+
+        self.run_values["Total Response_Time"] += measured_times["Response_Time"]
+        self.run_values["Total Response_Time"] += measured_times["Response_Time"]
+        self.run_values["Total Deviation Count"] += deviation_count
+        self.run_values["Total Request Header Lenght"]+= len(request)
+        self.run_values["Total URI Length"] += len (uri) #TODO
+        self.run_values["Total Response Header Length"] += len(response_header)
+        self.run_values["Total Response Body Length"] += len(response_header_fields)
+            
+
+        response_time = request_metrics["response_time"]
+        deviation_count = request_metrics["deviation_count"]
+        response_header_length = request_metrics["response_header_length"]
+        response_body_length = request_metrics["response_body_length"]
+
+     
+
+    
+
+
         return    
 
 
@@ -135,12 +168,13 @@ class TestRunLogger:
             "TLS": self.experiment_configuration["use_TLS"],
             "HTTP/2": self.experiment_configuration["use_HTTP2"],
             "Messages Send": self.logged_attempts,
-            "000-Errors": 0,
+            
             "1xx": 0,
             "2xx": 0,
             "3xx": 0,
             "4xx": 0,
             "5xx": 0,
+            "999-Errors": 0,
             "Avg Response Time": 0,
             "Avg Deviation Count": 0,
             "Avg Response Header Length": 0,
@@ -157,7 +191,7 @@ class TestRunLogger:
             '3xx': range(300, 400),
             '4xx': range(400, 500),
             '5xx': range(500, 600),
-            '000': [0]  # Socket Errors
+            '999': 999,  # Socket Errors
         }
         status_code_distribution = {}
         for status_range, code_range in status_code_ranges.items():
