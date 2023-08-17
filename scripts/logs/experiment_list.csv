@@ -1,7 +1,0 @@
-experiment_no,comment,verbose,timestamp,covertchannel_request_number,covertchannel_connection_number,covertchannel_timing_number,fuzz_value,num_attempts,wait_between_request,base_line_check_frequency,target_list,target_subset_size,target_port,conn_timeout,nw_interface,use_ipv4,use_TLS,use_HTTP2,method,url,headers,standard_headers,content
-1,Test,False,20230817_124956,1,1,1,0.5,10,0,0,target_list.csv,3,,1,enp0s3,True,False,False,GET,/,,firefox_HTTP/1.1,random
-2,Test other closing,False,20230817_130453,1,1,1,0.5,10,0,0,target_list.csv,3,,1,enp0s3,True,False,False,GET,/,,firefox_HTTP/1.1,random
-3,terst,False,20230817_134621,1,1,1,0.5,10,0,0,target_list.csv,3,,1,enp0s3,True,False,False,GET,/,,firefox_HTTP/1.1,random
-4,test clicqu,False,20230817_142859,1,1,1,0.5,10,0,0,target_list.csv,3,,1,enp0s3,True,False,False,GET,/,,firefox_HTTP/1.1,random
-5,Test clique,False,20230817_143040,1,1,1,0.5,10,0,0,target_list.csv,3,,1,enp0s3,True,False,False,GET,/,,firefox_HTTP/1.1,random
-6,test without focus,False,20230817_143213,1,1,1,0.5,10,0,0,target_list.csv,3,,1,enp0s3,True,False,False,GET,/,,firefox_HTTP/1.1,random
