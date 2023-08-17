@@ -27,8 +27,21 @@ class TestRunLogger:
         self.request_data_list=[]
         self.status_code_count= {}
         self.result_variables={}
-        self.capture=None
         self.logged_attempts=0
+        self.run_values= []
+        self.data_count={
+            "Attempts": 0,
+            "000-Errors": 0,
+            "1xx": 0,
+            "2xx": 0,
+            "3xx": 0,
+            "4xx": 0,
+            "5xx": 0,
+            "Total Response_Time": 0,
+            "Total Deviation Count": 0,
+            "Total Response Header Length": 0,
+            "Total Response Body Length": 0,
+        }
 
     def create_logging_folder(self):
         '''Creates in not exists to store the logs'''
@@ -79,6 +92,7 @@ class TestRunLogger:
         self.request_data_list.append(request_data)
         self.status_code_count[request_data["status_code"]] = (self.status_code_count.get(request_data["status_code"], 0) + 1)
         self.logged_attempts+=1
+        
         return    
 
 
@@ -111,6 +125,28 @@ class TestRunLogger:
         log_file_path = f"{self.log_folder}/log_file.json"
         with open(log_file_path, "w", encoding="utf-8") as file:
             json.dump(request_data, file, indent=4)
+    
+    
+    def calculate_statistics():
+        statistics= {
+            "Host": self.target_host,
+            "IP": self.target_ip,
+            "IPv4": self.experiment_configuration["use_ipv4"],
+            "TLS": self.experiment_configuration["use_TLS"],
+            "HTTP/2": self.experiment_configuration["use_HTTP2"],
+            "Messages Send": self.logged_attempts,
+            "000-Errors": 0,
+            "1xx": 0,
+            "2xx": 0,
+            "3xx": 0,
+            "4xx": 0,
+            "5xx": 0,
+            "Avg Response Time": 0,
+            "Avg Deviation Count": 0,
+            "Avg Response Header Length": 0,
+            "Avg Response Body Length": 0,
+        }
+    return statistics    
     
     def create_result_variables(self):
         #TODO
