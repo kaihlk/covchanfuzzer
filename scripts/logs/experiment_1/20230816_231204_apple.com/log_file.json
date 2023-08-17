@@ -1,0 +1,95 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "request_length": 309,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Redirect",
+        "response_time": 0.16688942909240723,
+        "error_message": "",
+        "response_header_fields": {
+            "date": "Wed, 16 Aug 2023 21:12:07 GMT",
+            "connection": "close",
+            "via": "http/1.1 dedus1-edge-bx-005.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "location": "https://www.apple.com/",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "e78663ca-cdef-4442-bc62-a59408685f2c-1845161904",
+            "content-length": "304"
+        }
+    },
+    {
+        "number": 1,
+        "request": "GET / HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "request_length": 309,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Redirect",
+        "response_time": 0.021161794662475586,
+        "error_message": "",
+        "response_header_fields": {
+            "date": "Wed, 16 Aug 2023 21:12:11 GMT",
+            "connection": "close",
+            "via": "http/1.1 dedus1-edge-bx-001.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "location": "https://www.apple.com/",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "dd33b93b-1743-40bd-8fef-02243c8afdf6-1767797287",
+            "content-length": "304"
+        }
+    },
+    {
+        "number": 2,
+        "request": "GET / HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "request_length": 309,
+        "http_version": "",
+        "status_code": 0,
+        "reason_phrase": "Error",
+        "response_time": 0,
+        "error_message": "_ssl.c:1106: The handshake operation timed out",
+        "response_header_fields": null
+    },
+    {
+        "number": 3,
+        "request": "GET / HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "request_length": 309,
+        "http_version": "",
+        "status_code": 0,
+        "reason_phrase": "Error",
+        "response_time": 0,
+        "error_message": "[Errno 32] Broken pipe",
+        "response_header_fields": null
+    },
+    {
+        "number": 4,
+        "request": "GET / HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "request_length": 309,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Redirect",
+        "response_time": 0.23981618881225586,
+        "error_message": "",
+        "response_header_fields": {
+            "date": "Wed, 16 Aug 2023 21:13:48 GMT",
+            "connection": "close",
+            "via": "http/1.1 dedus1-edge-bx-001.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "location": "https://www.apple.com/",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "dd33b93b-1743-40bd-8fef-02243c8afdf6-1769032217",
+            "content-length": "304"
+        }
+    }
+]

@@ -1,0 +1,46 @@
+{
+    "configuration_variables": {
+        "experiment_no": 5,
+        "comment": "timing",
+        "verbose": false,
+        "timestamp": "20230817_021411",
+        "covertchannel_request_number": 1,
+        "covertchannel_connection_number": 1,
+        "covertchannel_timing_number": 1,
+        "fuzz_value": 0.5,
+        "num_attempts": 10,
+        "wait_between_request": 0,
+        "base_line_check_frequency": 0,
+        "target_list": "target_list.csv",
+        "target_subset_size": 3,
+        "target_port": null,
+        "conn_timeout": 1,
+        "nw_interface": "enp0s3",
+        "use_ipv4": true,
+        "use_TLS": true,
+        "use_HTTP2": false,
+        "method": "GET",
+        "url": "/",
+        "headers": null,
+        "standard_headers": "firefox_HTTP/1.1",
+        "content": "random"
+    },
+    "result_variables": {
+        "covertchannel_request_name": "<class 'http1_request_builder.HTTP1_Request_Builder'>",
+        "covertchannel_timing_name": "<class 'http1_request_builder.HTTP1_Request_Builder'>",
+        "Received_Status_Codes": {
+            "404": 8,
+            "0": 2
+        },
+        "Logged_Messages": 10,
+        "Logged_Messages_of_scheduled_attempts": 1.0,
+        "Distribution_of_status_codes": {
+            "1xx": 0.0,
+            "2xx": 0.0,
+            "3xx": 0.0,
+            "4xx": 80.0,
+            "5xx": 0.0,
+            "000": 20.0
+        }
+    }
+}

@@ -1,0 +1,33 @@
+No.     Time           Source                Destination           Protocol Length Info
+     33 4.232593657    142.251.209.142       10.0.2.15             HTTP     1996   HTTP/1.1 301 Moved Permanently 
+
+Frame 33: 1996 bytes on wire (15968 bits), 1996 bytes captured (15968 bits) on interface enp0s3, id 0
+Ethernet II, Src: RealtekU_12:35:02 (52:54:00:12:35:02), Dst: PcsCompu_e2:fb:80 (08:00:27:e2:fb:80)
+Internet Protocol Version 4, Src: 142.251.209.142, Dst: 10.0.2.15
+Transmission Control Protocol, Src Port: 443, Dst Port: 38324, Seq: 6794, Ack: 931, Len: 1942
+Transport Layer Security
+Hypertext Transfer Protocol
+    HTTP/1.1 301 Moved Permanently\r\n
+    Content-Type: application/binary\r\n
+    X-Content-Type-Options: nosniff\r\n
+    Expires: Wed, 16 Aug 2023 21:12:12 GMT\r\n
+    Date: Wed, 16 Aug 2023 21:12:12 GMT\r\n
+    Cache-Control: private, max-age=31536000\r\n
+    Location: https://www.youtube.com/\r\n
+    Strict-Transport-Security: max-age=31536000; includeSubDomains; preload\r\n
+    X-Frame-Options: SAMEORIGIN\r\n
+    Permissions-Policy: ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*\r\n
+     [truncated]Origin-Trial: AvC9UlR6RDk2crliDsFl66RWLnTbHrDbp+DiY6AYz/PNQ4G4tdUTjrHYr2sghbkhGQAVxb7jaPTHpEVBz0uzQwkAAAB4eyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWaWV3WFJlcXVlc3RlZFdpdGhEZXByZWNhdGlvbiIsImV4cGlyeSI6
+    Report-To: {"group":"youtube_main","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/youtube_main"}]}\r\n
+    Cross-Origin-Opener-Policy: same-origin-allow-popups; report-to="youtube_main"\r\n
+    Server: ESF\r\n
+    Content-Length: 0\r\n
+    X-XSS-Protection: 0\r\n
+    Set-Cookie: CONSENT=PENDING+335; expires=Fri, 15-Aug-2025 21:12:12 GMT; path=/; domain=.youtube.com; Secure\r\n
+    P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."\r\n
+    Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000\r\n
+    \r\n
+    [HTTP response 1/1]
+    [Time since request: 0.030051022 seconds]
+    [Request in frame: 31]
+    [Request URI: https://youtube.com/]

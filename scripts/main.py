@@ -73,19 +73,19 @@ def main():
         "covertchannel_timing_number": 1,
         "fuzz_value":0.5,
         #Target Selection Options  
-        "num_attempts": 5,
+        "num_attempts": 10,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
         "target_list": "target_list.csv",
-        "target_subset_size": 5,
+        "target_subset_size": 3,
         #"target_host": "www.example.com",  #Just for special use
         "target_port": None, #443, 8080 Apache
 
         #Connection Options
-        "conn_timeout": 0.1,
+        "conn_timeout": 1, #seconds
         "nw_interface": "enp0s3",  #lo, docker, enp0s3     
         "use_ipv4": True,
-        "use_TLS": True,
+        "use_TLS": False,
         "use_HTTP2": False,
 
         #HTTP Message Options

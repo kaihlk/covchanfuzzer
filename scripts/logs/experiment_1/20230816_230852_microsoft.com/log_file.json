@@ -1,0 +1,80 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "request_length": 313,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "response_time": 0.6150088310241699,
+        "error_message": "",
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Wed, 16 Aug 2023 21:09:02 GMT",
+            "server": "Kestrel",
+            "location": "https://www.microsoft.com/",
+            "strict-transport-security": "max-age=31536000"
+        }
+    },
+    {
+        "number": 1,
+        "request": "GET / HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "request_length": 313,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "response_time": 0.27798032760620117,
+        "error_message": "",
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Wed, 16 Aug 2023 21:09:26 GMT",
+            "server": "Kestrel",
+            "location": "https://www.microsoft.com/",
+            "strict-transport-security": "max-age=31536000"
+        }
+    },
+    {
+        "number": 2,
+        "request": "GET / HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "request_length": 313,
+        "http_version": "",
+        "status_code": 0,
+        "reason_phrase": "Error",
+        "response_time": 0,
+        "error_message": "timed out",
+        "response_header_fields": null
+    },
+    {
+        "number": 3,
+        "request": "GET / HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "request_length": 313,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "response_time": 2.5327038764953613,
+        "error_message": "",
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Wed, 16 Aug 2023 21:10:33 GMT",
+            "server": "Kestrel",
+            "location": "https://www.microsoft.com/",
+            "strict-transport-security": "max-age=31536000"
+        }
+    },
+    {
+        "number": 4,
+        "request": "GET / HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "request_length": 313,
+        "http_version": "",
+        "status_code": 0,
+        "reason_phrase": "Error",
+        "response_time": 0,
+        "error_message": "EOF occurred in violation of protocol (_ssl.c:1123)",
+        "response_header_fields": null
+    }
+]
