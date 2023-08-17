@@ -6,6 +6,7 @@ import time
 import os
 import json
 import csv
+import class_mapping
 # import pyshark # doesnt work so well, probably a sudo problem
 
 
@@ -26,6 +27,7 @@ class TestRunLogger:
         self.status_code_count= {}
         self.result_variables={}
         self.capture=None
+        self.logged_attempts=0
 
     def create_logging_folder(self):
         '''Creates in not exists to store the logs'''
@@ -58,7 +60,7 @@ class TestRunLogger:
         else:
             response_http_version = ""
             response_status_code = 000
-            response_reason_phrase = "Error"
+            response_reason_phrase = error_message
         
                    
         request_data = {
@@ -75,13 +77,10 @@ class TestRunLogger:
         }
         self.request_data_list.append(request_data)
         self.status_code_count[request_data["status_code"]] = (self.status_code_count.get(request_data["status_code"], 0) + 1)
-
+        self.logged_attempts+=1
         return    
 
 
-
-  
-    
     def create_wireshark_script(self):
         ''' Creates a wireshark script to easily analyze the captured packets, with the need TLS keys'''
         wireshark_cmd = [
@@ -94,6 +93,8 @@ class TestRunLogger:
         wireshark_script_path = f"{self.log_folder}/wireshark_script.sh"
         with open(wireshark_script_path, "w", encoding="utf-8") as file:
             file.write("#!/bin/bash\n")
+            file.write('script_dir="$(dirname "$0")"')
+            file.write('cd "$script_dir" || exit 1')       
             file.write(" ".join(wireshark_cmd))
 
         os.chmod(wireshark_script_path, 0o755)
@@ -110,18 +111,33 @@ class TestRunLogger:
         with open(log_file_path, "w", encoding="utf-8") as file:
             json.dump(request_data, file, indent=4)
     
-    def create_result_variables():
+    def create_result_variables(self):
         #TODO
+        codes_count = sum(self.status_code_count.values())
+        status_code_ranges = {
+            '1xx': range(100, 200),
+            '2xx': range(200, 300),
+            '3xx': range(300, 400),
+            '4xx': range(400, 500),
+            '5xx': range(500, 600),
+            '000': [0]  # Socket Errors
+        }
+        status_code_distribution = {}
+        for status_range, code_range in status_code_ranges.items():
+            count = sum(self.status_code_count.get(code, 0) for code in code_range)
+            if codes_count > 0:
+                status_code_distribution[status_range] = count / codes_count * 100 
+            else:
+                status_code_distribution[status_range]=0
+
         self.result_variables = {
             "covertchannel_request_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]),
             "covertchannel_request_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_connection_number"]]),
             "covertchannel_timing_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_timing_number"]]),
             "Received_Status_Codes": self.status_code_count,
-            "Message_Count": 1234,
-            "Share_2xx": 100.0,
-            "Response_2xx": 1200,
-            "Response_4xx": 30,
-            "Response_Error": 4,
+            "Logged_Messages": self.logged_attempts,
+            "Logged_Messages_of_scheduled_attempts": self.logged_attempts/self.experiment_configuration["num_attempts"],
+            "Distribution_of_status_codes": status_code_distribution,
             #Here maybe more information would be nice, successful attempts/failures, count of successfull baseline checks, statistical data? medium response time?
         }   
         
@@ -130,8 +146,9 @@ class TestRunLogger:
 
     def save_logfiles(self):#, request_data, result_variables):
         '''Save all files after the experiments'''
+        self.create_result_variables()
         self.save_run_metadata(self.result_variables)
-        self.move_tls_keys()
+
         self.create_wireshark_script()
         self.save_request_data(self.request_data_list)
         
@@ -147,7 +164,7 @@ class TestRunLogger:
         #  sudo usermod -a -G wireshark your_username
         #  sudo setcap cap_net_raw=eip $(which dumpcap)
         # Consider if destination port is need or if it is a problem when the connection is updated to TLS
-        """ 
+        """ PYSHARK ALTERNATIV IS NOT WORKING
         # Set the output file for captured packets
         pcap_path = f"{self.log_folder}/captured_packets.pcapng"
         #Filter host Address

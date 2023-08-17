@@ -169,33 +169,27 @@ class CustomHTTP(HTTP):
         timeout_ms = int(timeout * 1000)   
         try:
             # Build socket
-            if use_ipv4==True:
+            if use_ipv4:
                 s = socket.socket(ip_info[0][0], ip_info[0][1], ip_info[0][2])
-                # Set socket options
-                s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-                s.setsockopt(socket.SOL_SOCKET, socket.SO_RCVTIMEO, timeout_ms)
-                # Allow reuse immediately after closed
-                if hasattr(socket, "SO_REUSEPORT"):
-                    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
-                    s.setsockopt(socket.SOL_SOCKET, socket.SO_RCVTIMEO, timeout_ms)
-                    
             else:
-                s = socket.socket(ip_info[1][0], ip_info[1][1], ip_info[1][2])
-                # Set socket options
+                s = socket.socket(ip_info[1][0], ip_info[1][1], ip_info[1][2])    
+            # Set socket options
+            s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            s.settimeout(timeout)
+            # Allow reuse immediately after closed
+            if hasattr(socket, "SO_REUSEPORT"):
                 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
-                s.setsockopt(socket.SOL_SOCKET, socket.SO_RCVTIMEO, timeout_ms)
-                # Allow reuse immediately after closed
-                if hasattr(socket, "SO_REUSEPORT"):
-                    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
-                    s.setsockopt(socket.SOL_SOCKET, socket.SO_RCVTIMEO, timeout_ms)
-            return s 
-         
+            return s        
         except socket.error as ex:
-                error_message = str(ex)
-                return None
+            error_message = str(ex)
+            print(error_message)
+            return None
+        
 
     def upgrade_to_tls(self, s, hostname, log_path):
+
         '''Upgrade a tcp socket connection to TLS'''
+        start_time=time.time()      
         # Testing support for ALPN
         assert ssl.HAS_ALPN
         # Building the SSL context
@@ -205,39 +199,54 @@ class CustomHTTP(HTTP):
         ssl_ctx.keylog_filename = f"{log_path}/sessionkeys.txt"
         ssl_ctx.set_alpn_protocols(["http/1.1"])  # h2 is a RFC7540-hardcoded value
         ssl_sock = ssl_ctx.wrap_socket(s, server_hostname=hostname)
-        
+        end_time = time.time()
+        response_time=end_time-start_time
+        print("TLS Context  Time")
+        print(response_time)
         return ssl_sock
 
     def connect_tcp_socket(self, sock, host_ip_info, use_ipv4, timeout):
             try: 
                 error_message="" 
-              
+                start_time=time.time()
                 if use_ipv4==True:            
                     sock.connect(host_ip_info[0][4])
                 else:
                     sock.connect(host_ip_info[1][4]) 
+                end_time = time.time()
+                response_time=end_time-start_time
+                print("Sock Connect  Time")
+                print(response_time)
                 sock.settimeout(timeout)               
                 stream_socket = SuperSocket.StreamSocket(sock, basecls=HTTP)
                 return stream_socket, error_message
             except socket.error as ex:
-
                 error_message = str(ex)
                 return None, error_message
 
     def connect_tls_socket(self, tls_socket, host_ip_info, use_ipv4, timeout):
             try: 
                 error_message=""
+                start_time=time.time()
                 if use_ipv4==True:             
                     tls_socket.connect(host_ip_info[0][4])
                 else:
                     tls_socket.connect(host_ip_info[1][4])
+                end_time = time.time()
+                response_time=end_time-start_time
+                print("TLS Sock Connect  Time")
+                print(response_time)
                 tls_socket.settimeout(timeout)
                 assert "http/1.1" == tls_socket.selected_alpn_protocol()
+                start_time=time.time()
                 stream_socket = SuperSocket.SSLStreamSocket(tls_socket, basecls=HTTP)
+                response_time=end_time-start_time
+                print("TLS Stream Sock  Time")
+                print(response_time)
                 return stream_socket, error_message
             except socket.error as ex:
-                print("Socket Error while connecting to :"+str(host_ip_info["host"]))
                 error_message = str(ex)
+                print(error_message)
                 return None, error_message
 
     def build_http_headers(self, host, path, headers, custom_request):
@@ -336,22 +345,31 @@ class CustomHTTP(HTTP):
         #    host_ip_info = self.lookup_dns(host,port)
         #print(host_ip_info)
         #TODO Add IPV6 support
+        
         req = self.build_http_headers(host, path, headers, custom_request)
-
+ 
         # Check
        # if verbose==True:
           #  print(req)
-          
+        start_time=time.time()  
         # Establish a socket connection
         sock = self.create_tcp_socket(host_ip_info, use_ipv4, timeout)
-        
+        end_time = time.time()
+        response_time=end_time-start_time
+        print("TCP Socket Time")
+        print(response_time)
         # Upgrade to TLS depending on the port  
-
+        start_time=time.time() 
         if 443 == port:
             tls_socket=self.upgrade_to_tls(sock, host, log_path)
             stream_socket, error_message=self.connect_tls_socket(tls_socket, host_ip_info, use_ipv4, timeout)
         else:
             stream_socket, error_message=self.connect_tcp_socket(sock, host_ip_info, use_ipv4, timeout)
+        end_time = time.time()
+        response_time=end_time-start_time
+        print("Stream Socket Connection Time")
+        print(response_time)
+
      
         if stream_socket is not None:
             try:
@@ -362,6 +380,8 @@ class CustomHTTP(HTTP):
                 response = stream_socket.recv()
                 end_time = time.time()
                 response_time=end_time-start_time
+                print("Response Time")
+                print(response_time)
             except socket.timeout:
                 error_message="Timeout Limit reached"
                 response = None
@@ -369,13 +389,23 @@ class CustomHTTP(HTTP):
                 error_message=str(ex)
                 response=None
             finally:
-                if 443 == port:
-                    tls_socket.shutdown(1)
-                    stream_socket.close()
-                else:
-                    sock.shutdown(1)            
-                    stream_socket.close()
+                start_time=time.time()
+                try:
+                    if 443 == port:
+                        tls_socket.shutdown(1)
+                        stream_socket.close()
+                    else:
+                        sock.shutdown(1)            
+                        stream_socket.close()
+                    end_time = time.time()
+                    response_time=end_time-start_time
+                    print("Socket close time")
+                    print(response_time)
+                except socket.error as ex2:
+                    pass
 
+        
+        
         response_line=None
         response_headers=None
         body=None
@@ -384,6 +414,5 @@ class CustomHTTP(HTTP):
             response_line= self.parse_response_line(response_line_str)
             response_headers =self.parse_headers(headers_str)
          
-
 
         return response_line, response_headers, body, response_time, error_message
