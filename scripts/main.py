@@ -43,8 +43,21 @@ def get_last_experiment_number():
         last_row = None
         for row in csv_reader:
             last_row = row
+    return int(last_row["experiment_no"])
+
+def load_target_list(target_list_csv):
+     # Load the list back from the CSV file
+    loaded_list = []
+    with open(target_list_csv, 'r') as csvfile:
+        csv_reader = csv.reader(csvfile)
+        next(csv_reader)  # Skip header row
+        for row in csv_reader:
+            rank, domain = row
+            loaded_list.append(domain)
+
+    print("List loaded from: " + target_list_csv)            
+    return loaded_list     
         
-        return int(last_row["experiment_no"])
 def main():
     '''Function that runs the connection, selection of the CC and the fuzzer'''
     # TODO
@@ -101,23 +114,12 @@ def main():
     }
 
     
-    # Load the list back from the CSV file
-    loaded_list = []
-    with open(experiment_configuration["target_list"], 'r') as csvfile:
-        csv_reader = csv.reader(csvfile)
-        next(csv_reader)  # Skip header row
-        for row in csv_reader:
-            rank, domain = row
-            loaded_list.append(domain)
-
-    print("List loaded from target_list.csv")
 
 
-    experiment=ExperimentRunner(experiment_configuration, loaded_list).setup_and_start_experiment()
+
+    experiment=ExperimentRunner(experiment_configuration, load_target_list(experiment_configuration["target_list"])).setup_and_start_experiment()
     
-    #logger
-    #except Exception as ex:
-     #   print("Error: ", str(ex))
+    
     
     
 
