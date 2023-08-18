@@ -1,8 +1,23 @@
 #Update System
 sudo apt update
 sudo apt upgrade -y
-sudo apt full-upgrade -y
-sudo apt autoremove -y
+#Python Environment
+mkdir covchannfuzzer
+sudo install pip
+pip install matplotlib
+pip install pyx
+sudo apt install graphiviz
+
+
+
+#Wireshark
+supo apt install wireshark
+
+pip install scapy
+
+
+#sudo apt full-upgrade -y
+#sudo apt autoremove -y
 #cd ~
 #mkdir covchanfuzzer
 #cd covchanfuzzer
