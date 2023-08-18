@@ -2,6 +2,7 @@
 sudo apt update
 sudo apt upgrade -y
 #Python Environment
+sudo apt install python3.8-venv
 mkdir covchannfuzzer
 sudo install pip
 pip install matplotlib
@@ -19,27 +20,31 @@ pip install scapy
 #sudo apt full-upgrade -y
 #sudo apt autoremove -y
 #cd ~
-#mkdir covchanfuzzer
+#mkdir git/covchanfuzzer
 #cd covchanfuzzer
 #Install Scapy
 #mkdir scapy
 #cd scapy
-#python3 -m venv scapy-env 
-#source scapy-env/bin/activate
+#python3 -m venv ccfuzz 
+#source ccfuzz/bin/activate
+pip install wheel
+pip install  matplotlib
+pip install pyx
+sudo apt install graphviz
+pip install cryptography
+#Install Wireshark
+sudo apt install wireshark
+##yes to dumpcapk
+
+
 
 #install anaconda
 conda activate env-scapy
 
-conda install  matplotlib
-conda install pyx
-sudo apt install graphviz
-conda install cryptograpy
 conda install  scapy
 conda list --export  > requirements.txt
 deactivate
 cd ~
-#Install Wireshark
-sudo apt install wireshark
 sudo usermod -a -G wireshark kai
 #Install boofuzz
 
