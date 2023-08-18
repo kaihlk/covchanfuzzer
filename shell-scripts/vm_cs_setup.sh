@@ -1,18 +1,26 @@
 #Update System
 sudo apt update
 sudo apt upgrade -y
+supo apt install wireshark
+
 #Python Environment
-sudo apt install python3.8-venv
-mkdir covchannfuzzer
-sudo install pip
+
+sudo apt-get install libpcap-dev
+sudo apt install graphviz
+sudo apt install pip
 pip install matplotlib
 pip install pyx
-sudo apt install graphiviz
+pip install scapy
+echo PATH=$PATH:/home/user/.local/bin >> ~/.bashrc #Linux
+
+git clone https://github.com/kaihlk/covchanfuzzer
+cd covchanfuzzer
+git init
+
 
 
 
 #Wireshark
-supo apt install wireshark
 
 pip install scapy
 
