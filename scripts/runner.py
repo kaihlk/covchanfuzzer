@@ -16,7 +16,7 @@ class ExperimentRunner:
     def __init__(self, experiment_configuration, target_list):
         self.experiment_configuration = experiment_configuration
         self.target_list=target_list
-        self.dns_error=[]
+        self.dns_fails=[]
         self.message_count=0
 
     def get_target_subset(self, start_position=0, count=10)-> list:
@@ -70,7 +70,7 @@ class ExperimentRunner:
                     print("Warning: Retrieved port doesn't match configured port (r. Port/c.Port"+str(port)+"/"+str(self.target_port))
                 sub_set_dns.append({"host":entry, "socket_info":socket_info, "ip_address":ip_address, "port":port })
             else:
-                self.dns_error.append(entry)
+                self.dns_fails.append(entry)
         return sub_set_dns
 
 
@@ -232,10 +232,10 @@ class ExperimentRunner:
              
         stop_capture_flag_global.set()
         capture_thread.join()
-             #This should be done in the end, added with some sttistics
+        
+
         exp_log.add_global_entry_to_experiment_list(self.experiment_configuration["experiment_no"])
-        
-        
+        exp_log.save_dns_fails(self.dns_fails)
         
             
         """capture_threads=[] 

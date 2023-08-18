@@ -1,0 +1,372 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 314,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 3.51092529296875,
+            "Socket_Close_Time": 0.00041794776916503906,
+            "Response_Time": 3.3674299716949463
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Fri, 18 Aug 2023 09:24:59 GMT",
+            "expires": "-1",
+            "cache-control": "private, max-age=0",
+            "content-type": "text/html; charset=UTF-8",
+            "strict-transport-security": "max-age=31536000",
+            "content-security-policy-report-only": "object-src 'none';base-uri 'self';script-src 'nonce-Ikwyy6SZfKShKqmoZYB5Tw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+            "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/other\"}]}",
+            "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+            "content-encoding": "gzip",
+            "server": "gws",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "set-cookie": "CONSENT=PENDING+459; expires=Sun, 17-Aug-2025 09:24:59 GMT; path=/; domain=.google.com; Secure",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET / HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 314,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1833784580230713,
+            "Socket_Close_Time": 0.0002846717834472656,
+            "Response_Time": 0.14365649223327637
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Fri, 18 Aug 2023 09:25:07 GMT",
+            "expires": "-1",
+            "cache-control": "private, max-age=0",
+            "content-type": "text/html; charset=UTF-8",
+            "strict-transport-security": "max-age=31536000",
+            "content-security-policy-report-only": "object-src 'none';base-uri 'self';script-src 'nonce-GsMcwixZkAbp-03ZvjRSVg' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+            "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/other\"}]}",
+            "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+            "content-encoding": "gzip",
+            "server": "gws",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "set-cookie": "CONSENT=PENDING+702; expires=Sun, 17-Aug-2025 09:25:07 GMT; path=/; domain=.google.com; Secure",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET / HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 314,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.7738833427429199,
+            "Socket_Close_Time": 0.01388239860534668,
+            "Response_Time": 0.09282898902893066
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Fri, 18 Aug 2023 09:25:13 GMT",
+            "expires": "-1",
+            "cache-control": "private, max-age=0",
+            "content-type": "text/html; charset=UTF-8",
+            "strict-transport-security": "max-age=31536000",
+            "content-security-policy-report-only": "object-src 'none';base-uri 'self';script-src 'nonce-Aa4t31WUXgm_95bPG22eZA' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+            "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/other\"}]}",
+            "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+            "content-encoding": "gzip",
+            "server": "gws",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "set-cookie": "CONSENT=PENDING+319; expires=Sun, 17-Aug-2025 09:25:13 GMT; path=/; domain=.google.com; Secure",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET / HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 314,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.4206399917602539,
+            "Socket_Close_Time": 0.00030803680419921875,
+            "Response_Time": 0.12472033500671387
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Fri, 18 Aug 2023 09:25:37 GMT",
+            "expires": "-1",
+            "cache-control": "private, max-age=0",
+            "content-type": "text/html; charset=UTF-8",
+            "strict-transport-security": "max-age=31536000",
+            "content-security-policy-report-only": "object-src 'none';base-uri 'self';script-src 'nonce-LFbfegOIzSpJmDBm6JPSog' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+            "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/other\"}]}",
+            "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+            "content-encoding": "gzip",
+            "server": "gws",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "set-cookie": "CONSENT=PENDING+934; expires=Sun, 17-Aug-2025 09:25:37 GMT; path=/; domain=.google.com; Secure",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET / HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 314,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 2.811356782913208,
+            "Socket_Close_Time": 0.007100343704223633,
+            "Response_Time": 0.31111574172973633
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Fri, 18 Aug 2023 09:26:43 GMT",
+            "expires": "-1",
+            "cache-control": "private, max-age=0",
+            "content-type": "text/html; charset=UTF-8",
+            "strict-transport-security": "max-age=31536000",
+            "content-security-policy-report-only": "object-src 'none';base-uri 'self';script-src 'nonce-tTgaez7DsNpzLb0ejXteSw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+            "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/other\"}]}",
+            "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+            "content-encoding": "gzip",
+            "server": "gws",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "set-cookie": "CONSENT=PENDING+584; expires=Sun, 17-Aug-2025 09:26:42 GMT; path=/; domain=.google.com; Secure",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 5,
+        "request": "GET / HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 314,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.5602657794952393,
+            "Socket_Close_Time": 0.11214756965637207,
+            "Response_Time": 0.10345840454101562
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Fri, 18 Aug 2023 09:26:48 GMT",
+            "expires": "-1",
+            "cache-control": "private, max-age=0",
+            "content-type": "text/html; charset=UTF-8",
+            "strict-transport-security": "max-age=31536000",
+            "content-security-policy-report-only": "object-src 'none';base-uri 'self';script-src 'nonce-BisGdt41xNSKV8NtTFTUtQ' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+            "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/other\"}]}",
+            "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+            "content-encoding": "gzip",
+            "server": "gws",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "set-cookie": "CONSENT=PENDING+027; expires=Sun, 17-Aug-2025 09:26:48 GMT; path=/; domain=.google.com; Secure",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET / HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 314,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.4882626533508301,
+            "Socket_Close_Time": 0.13156366348266602,
+            "Response_Time": 0.3175315856933594
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Fri, 18 Aug 2023 09:26:55 GMT",
+            "expires": "-1",
+            "cache-control": "private, max-age=0",
+            "content-type": "text/html; charset=UTF-8",
+            "strict-transport-security": "max-age=31536000",
+            "content-security-policy-report-only": "object-src 'none';base-uri 'self';script-src 'nonce-wiyQNQXgt-XQ3OTqCzQUOg' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+            "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/other\"}]}",
+            "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+            "content-encoding": "gzip",
+            "server": "gws",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "set-cookie": "CONSENT=PENDING+675; expires=Sun, 17-Aug-2025 09:26:55 GMT; path=/; domain=.google.com; Secure",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET / HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 314,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.4651505947113037,
+            "Socket_Close_Time": 0.02579355239868164,
+            "Response_Time": 0.19269824028015137
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Fri, 18 Aug 2023 09:27:32 GMT",
+            "expires": "-1",
+            "cache-control": "private, max-age=0",
+            "content-type": "text/html; charset=UTF-8",
+            "strict-transport-security": "max-age=31536000",
+            "content-security-policy-report-only": "object-src 'none';base-uri 'self';script-src 'nonce--yHA2Y-dFuaOYXTdyLB5Rg' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+            "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/other\"}]}",
+            "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+            "content-encoding": "gzip",
+            "server": "gws",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "set-cookie": "CONSENT=PENDING+069; expires=Sun, 17-Aug-2025 09:27:32 GMT; path=/; domain=.google.com; Secure",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET / HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 314,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.5479023456573486,
+            "Socket_Close_Time": 0.16765975952148438,
+            "Response_Time": 0.4104311466217041
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Fri, 18 Aug 2023 09:27:43 GMT",
+            "expires": "-1",
+            "cache-control": "private, max-age=0",
+            "content-type": "text/html; charset=UTF-8",
+            "strict-transport-security": "max-age=31536000",
+            "content-security-policy-report-only": "object-src 'none';base-uri 'self';script-src 'nonce-ISy2sDm_Dfz0ymLZCTiqRA' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+            "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/other\"}]}",
+            "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+            "content-encoding": "gzip",
+            "server": "gws",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "set-cookie": "CONSENT=PENDING+104; expires=Sun, 17-Aug-2025 09:27:43 GMT; path=/; domain=.google.com; Secure",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET / HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 314,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 1.4069006443023682,
+            "Socket_Close_Time": 0.0003428459167480469,
+            "Response_Time": 0.1532752513885498
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Fri, 18 Aug 2023 09:27:50 GMT",
+            "expires": "-1",
+            "cache-control": "private, max-age=0",
+            "content-type": "text/html; charset=UTF-8",
+            "strict-transport-security": "max-age=31536000",
+            "content-security-policy-report-only": "object-src 'none';base-uri 'self';script-src 'nonce-OjADSR3gxhHk44JFdGDJHg' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+            "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/other\"}]}",
+            "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+            "content-encoding": "gzip",
+            "server": "gws",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "set-cookie": "CONSENT=PENDING+747; expires=Sun, 17-Aug-2025 09:27:50 GMT; path=/; domain=.google.com; Secure",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "response_length": 0
+    }
+]

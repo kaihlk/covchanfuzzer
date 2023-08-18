@@ -421,6 +421,7 @@ class CustomHTTP(HTTP):
             response_line_str, headers_str, body_str=self.parse_response(response)
             response_line= self.parse_response_line(response_line_str)
             response_headers =self.parse_headers(headers_str)
+            body=body_str
          
         measured_times= {
             "Socket_Connect_Time": socket_connect_time,

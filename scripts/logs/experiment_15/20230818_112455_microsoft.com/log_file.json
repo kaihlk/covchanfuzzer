@@ -1,0 +1,252 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 1.061934232711792,
+            "Socket_Close_Time": 0.03510785102844238,
+            "Response_Time": 0.2862107753753662
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Fri, 18 Aug 2023 09:25:03 GMT",
+            "server": "Kestrel",
+            "transfer-encoding": "chunked",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET / HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 1.5144100189208984,
+            "Socket_Close_Time": 0.0559084415435791,
+            "Response_Time": 0.3023366928100586
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Fri, 18 Aug 2023 09:25:09 GMT",
+            "server": "Kestrel",
+            "transfer-encoding": "chunked",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET / HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 317,
+        "http_version": "",
+        "status_code": 999,
+        "reason_phrase": [
+            "",
+            "(100, 'Underlying stream socket tore down')",
+            "[Errno 107] Transport endpoint is not connected"
+        ],
+        "measured_times": {
+            "Socket_Connect_Time": 11.437634706497192,
+            "Socket_Close_Time": 0,
+            "Response_Time": 0
+        },
+        "error_message": [
+            "",
+            "(100, 'Underlying stream socket tore down')",
+            "[Errno 107] Transport endpoint is not connected"
+        ],
+        "response_header_fields": null,
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET / HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 1.3810124397277832,
+            "Socket_Close_Time": 0.028208494186401367,
+            "Response_Time": 0.353424072265625
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Fri, 18 Aug 2023 09:26:37 GMT",
+            "server": "Kestrel",
+            "transfer-encoding": "chunked",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET / HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 1.0338892936706543,
+            "Socket_Close_Time": 0.05708622932434082,
+            "Response_Time": 0.35022592544555664
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Fri, 18 Aug 2023 09:26:45 GMT",
+            "server": "Kestrel",
+            "transfer-encoding": "chunked",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 5,
+        "request": "GET / HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 1.606032133102417,
+            "Socket_Close_Time": 0.1121060848236084,
+            "Response_Time": 0.5933322906494141
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Fri, 18 Aug 2023 09:26:50 GMT",
+            "server": "Kestrel",
+            "transfer-encoding": "chunked",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET / HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 317,
+        "http_version": "",
+        "status_code": 999,
+        "reason_phrase": [
+            "",
+            "(100, 'Underlying stream socket tore down')"
+        ],
+        "measured_times": {
+            "Socket_Connect_Time": 10.98036003112793,
+            "Socket_Close_Time": 0.07415175437927246,
+            "Response_Time": 0
+        },
+        "error_message": [
+            "",
+            "(100, 'Underlying stream socket tore down')"
+        ],
+        "response_header_fields": null,
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET / HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 1.4891414642333984,
+            "Socket_Close_Time": 0.20630645751953125,
+            "Response_Time": 0.8875687122344971
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Fri, 18 Aug 2023 09:27:39 GMT",
+            "server": "Kestrel",
+            "transfer-encoding": "chunked",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET / HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.829775333404541,
+            "Socket_Close_Time": 0.07247138023376465,
+            "Response_Time": 0.3266458511352539
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Fri, 18 Aug 2023 09:27:45 GMT",
+            "server": "Kestrel",
+            "transfer-encoding": "chunked",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET / HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 1.4729056358337402,
+            "Socket_Close_Time": 0.0008723735809326172,
+            "Response_Time": 0.29188966751098633
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Fri, 18 Aug 2023 09:27:52 GMT",
+            "server": "Kestrel",
+            "transfer-encoding": "chunked",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 0
+    }
+]

@@ -61,10 +61,7 @@ def load_target_list(target_list_csv):
 def main():
     '''Function that runs the connection, selection of the CC and the fuzzer'''
     # TODO
-    # host and channelselction, number of attempts as arguments?
-
-    # Add a cautios mode that leaves some time between requests to the same adress (Not getting caught by Denial of service counter measures)
-    # Add a mode that sends a well formed request every x attempts to verify not being blocked
+  
 
     # Control the body of the response as well (?)
     #Add Verbose mode
@@ -89,7 +86,7 @@ def main():
         "num_attempts": 10,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
-        "target_list": "target_list.csv",
+        "target_list": "target_list_subdomain.csv",
         "target_subset_size": 3,
         #"target_host": "www.example.com",  #Just for special use
         "target_port": None, #443, 8080 Apache
@@ -118,8 +115,7 @@ def main():
 
 
     experiment=ExperimentRunner(experiment_configuration, load_target_list(experiment_configuration["target_list"])).setup_and_start_experiment()
-    
-    
+  
     
     
 

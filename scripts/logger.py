@@ -172,12 +172,12 @@ class TestRunLogger:
     
     def calculate_standard_deviation(self, value_list):
         #Sum of differences
-        if len(valuelist)==0:
+        if len(value_list)==0:
             standard_deviation=0
             avg=0
         else:
             avg=sum(value_list)/len(value_list)
-            squared_difference_sum=0
+            squared_difference_sum=0.0
             for value in value_list:
                 squared_difference_sum+=(value-avg)**2
             variance=squared_difference_sum / len(value_list)
@@ -205,7 +205,7 @@ class TestRunLogger:
                 "Avg Response Time": self.calcluate_avg(self.reponse_time_list),
                 "StdD Response Time": self.calculate_standard_deviation(self.reponse_time_list),
                 "Avg Deviation Count": self.calcluate_avg(self.deviation_count_list),
-                "StdD Response Time": self.calculate_standard_deviation(self.deviation_count_list),
+                "StdD Deviation Count": self.calculate_standard_deviation(self.deviation_count_list),
                 "Avg Request Length": self.calcluate_avg(self.request_length_list),
                 "StdD Request Length": self.calculate_standard_deviation(self.request_length_list),
                 "Avg URI Length": self.calcluate_avg(self.uri_length_list),
@@ -370,7 +370,19 @@ class ExperimentLogger:
                 csv_writer.writeheader()
             row = self.experiment_configuration.copy()
             csv_writer.writerow(row)
- 
+    
+    def save_dns_fails(self, dns_fails):
+        """Adds an entry describing the experiment and the outcome into a list"""
+        #TODO update header line when new keys are added to experiment konfiguration
+
+        file_path = f"{self.experiment_folder}/dns_lookup_fails.csv"
+        
+        
+        with open(file_path, "a+", newline="") as csvfile:
+            csv_writer = csv.writer(csvfile)
+            csv_writer.writerows(dns_fails)
+        print("DNS Lookup Fails Saved")
+        return
 
     
 

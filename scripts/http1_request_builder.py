@@ -156,7 +156,7 @@ class HTTP1_Request_Builder:
 
     def generate_request(self, experiment_configuration, host_data):
         
-        host=host_data["host"]
+        host="www."+host_data["host"]
        
         port=host_data["port"]
         url=experiment_configuration["url"]
