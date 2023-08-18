@@ -132,7 +132,7 @@ class HTTP1_Request_Builder:
      
         return scheme, subdomain, hostname, domain, port, path
 
-    def generate_cc_request(self, host, port, url="/", method="GET", headers=None, content=None, fuzzvalue=None):
+    def generate_cc_request(self, host, port, uri="/", method="GET", headers=None, content=None, fuzzvalue=None):
         '''Generation of request package, CCs mut implement this '''
        
 
@@ -140,7 +140,7 @@ class HTTP1_Request_Builder:
         headers.insert(0, ("Host", host))
 
         # Build the request_line from the provided arguments
-        request_line = f"{method} {url} HTTP/1.1\r\n"
+        request_line = f"{method} {uri} HTTP/1.1\r\n"
 
         # Build the request from request line and headers
         request_string = request_line
@@ -152,7 +152,7 @@ class HTTP1_Request_Builder:
 
         # No deviation
         deviation_count = 0
-        return request_string, deviation_count
+        return request_string, deviation_count, uri
 
     def generate_request(self, experiment_configuration, host_data):
         

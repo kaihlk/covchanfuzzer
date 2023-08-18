@@ -7,6 +7,7 @@ import os
 import json
 import csv
 import class_mapping
+import math
 # import pyshark # doesnt work so well, probably a sudo problem
 
 
@@ -28,7 +29,6 @@ class TestRunLogger:
         self.status_code_count= {}
         self.result_variables={}
         self.logged_attempts=0
-        self.run_values= []
         self.data_count={
             "Messages": 0,
             "1xx": 0,
@@ -36,12 +36,15 @@ class TestRunLogger:
             "3xx": 0,
             "4xx": 0,
             "5xx": 0,
-            "999-Errors": 0,
-            "Total Response_Time": 0,
-            "Total Deviation Count": 0,
-            "Total Response Header Length": 0,
-            "Total Response Body Length": 0,
+            "9xx": 0,
+       
         }
+        self.reponse_time_list=[]
+        self.request_length_list=[]
+        self.uri_length_list=[]
+        self.deviation_count_list=[]
+        self.response_header_keys_list=[]
+        self.response_body_list=[]
 
     def create_logging_folder(self):
         '''Creates in not exists to store the logs'''
@@ -52,12 +55,13 @@ class TestRunLogger:
     def get_logging_folder(self):
         return self.log_folder
 
-    def save_run_metadata(self, result_variables):
+    def save_run_metadata(self, result_variables, statistics):
         '''Save Meta Data connected to experiment'''
         metafile_path = f"{self.log_folder}/metafile.json"
         data = {
             "configuration_variables": self.experiment_configuration,
             "result_variables": result_variables,
+            "statistics": statistics,
         }
 
         with open(metafile_path, "w", encoding="utf-8") as file:
@@ -65,7 +69,7 @@ class TestRunLogger:
 
         return
 
-    def add_request_response_data(self, attempt_number, request, deviation_count, response_line, response_header_fields, body, measured_times, error_message):
+    def add_request_response_data(self, attempt_number, request, deviation_count, uri, response_line, response_header_fields, body, measured_times, error_message):
         if response_line is not None:
             response_http_version = response_line["HTTP_version"]
             response_status_code = response_line["status_code"]
@@ -76,11 +80,21 @@ class TestRunLogger:
             response_status_code = 999
             response_reason_phrase = error_message
         
+        if body is None:
+            length_body=0
+        else:
+            length_body=len(body)
+        
+        if response_header_fields is None:
+            length_header=0
+        else: 
+            length_header=len(response_header_fields.items())
                    
         request_data = {
             "number": attempt_number,
             "request": request,
             "deviation_count": deviation_count,
+            "uri":uri,
             "request_length": len(request),
             "http_version": response_http_version,
             "status_code": response_status_code,
@@ -88,44 +102,34 @@ class TestRunLogger:
             "measured_times": measured_times,
             "error_message": error_message,
             "response_header_fields": response_header_fields,
+            "response_length": length_body
         }
         self.request_data_list.append(request_data)
         self.status_code_count[request_data["status_code"]] = (self.status_code_count.get(request_data["status_code"], 0) + 1)
         self.logged_attempts+=1
-        self.run_values["Messages"]+=1
-        first_digit = response_code[0]
+        self.data_count["Messages"]+=1
+        first_digit = str(response_status_code)[0]
         if first_digit == "1":
-            self.run_values["1xx"]+=1
+            self.data_count["1xx"]+=1
         elif first_digit == "2":
-            self.run_values["2xx"]+=1
+            self.data_count["2xx"]+=1
         elif first_digit == "3":
-            self.run_values["3xx"]+=1
+            self.data_count["3xx"]+=1
         elif first_digit == "4":
-            self.run_values["4xx"]+=1
+            self.data_count["4xx"]+=1
         elif first_digit == "5":
-            self.run_values["5xx"]+=1
+            self.data_count["5xx"]+=1
         elif first_digit== "9":
-            self.run_values["9xx"]+=1
+            self.data_count["9xx"]+=1
 
-        self.run_values["Total Response_Time"] += measured_times["Response_Time"]
-        self.run_values["Total Response_Time"] += measured_times["Response_Time"]
-        self.run_values["Total Deviation Count"] += deviation_count
-        self.run_values["Total Request Header Lenght"]+= len(request)
-        self.run_values["Total URI Length"] += len (uri) #TODO
-        self.run_values["Total Response Header Length"] += len(response_header)
-        self.run_values["Total Response Body Length"] += len(response_header_fields)
+        
+        self.reponse_time_list.append(measured_times["Response_Time"])
+        self.deviation_count_list.append(deviation_count)
+        self.request_length_list.append(len(request))
+        self.uri_length_list.append(len (uri))
+        self.response_header_keys_list.append(length_header)
+        self.response_body_list.append(length_body)
             
-
-        response_time = request_metrics["response_time"]
-        deviation_count = request_metrics["deviation_count"]
-        response_header_length = request_metrics["response_header_length"]
-        response_body_length = request_metrics["response_body_length"]
-
-     
-
-    
-
-
         return    
 
 
@@ -159,47 +163,63 @@ class TestRunLogger:
         with open(log_file_path, "w", encoding="utf-8") as file:
             json.dump(request_data, file, indent=4)
     
+    def calcluate_avg(self,value_list):
+        if len(value_list)==0:
+            avg=0
+        else:
+            avg=sum(value_list)/len(value_list)
+        return avg
     
-    def calculate_statistics():
-        statistics= {
-            "Host": self.target_host,
-            "IP": self.target_ip,
-            "IPv4": self.experiment_configuration["use_ipv4"],
-            "TLS": self.experiment_configuration["use_TLS"],
-            "HTTP/2": self.experiment_configuration["use_HTTP2"],
-            "Messages Send": self.logged_attempts,
-            
-            "1xx": 0,
-            "2xx": 0,
-            "3xx": 0,
-            "4xx": 0,
-            "5xx": 0,
-            "999-Errors": 0,
-            "Avg Response Time": 0,
-            "Avg Deviation Count": 0,
-            "Avg Response Header Length": 0,
-            "Avg Response Body Length": 0,
-        }
-    return statistics    
+    def calculate_standard_deviation(self, value_list):
+        #Sum of differences
+        if len(valuelist)==0:
+            standard_deviation=0
+            avg=0
+        else:
+            avg=sum(value_list)/len(value_list)
+            squared_difference_sum=0
+            for value in value_list:
+                squared_difference_sum+=(value-avg)**2
+            variance=squared_difference_sum / len(value_list)
+            std_deviation=math.sqrt(variance)
+        return std_deviation
+    
+    def calculate_statistics(self):
+        statistics={}
+        if self.data_count["Messages"]==0:  #Prevent division by zero
+            return statistics
+        else:
+            statistics= {
+                "Host": self.target_host,
+                "IP": self.target_ip,
+                "IPv4": self.experiment_configuration["use_ipv4"],
+                "TLS": self.experiment_configuration["use_TLS"],
+                "HTTP/2": self.experiment_configuration["use_HTTP2"],
+                "Messages Send": self.data_count["Messages"],    
+                "1xx": self.data_count["1xx"]/self.data_count["Messages"]*100,
+                "2xx": self.data_count["2xx"]/self.data_count["Messages"]*100,
+                "3xx": self.data_count["3xx"]/self.data_count["Messages"]*100,
+                "4xx": self.data_count["4xx"]/self.data_count["Messages"]*100,
+                "5xx": self.data_count["5xx"]/self.data_count["Messages"]*100,
+                "9xx": self.data_count["9xx"]/self.data_count["Messages"]*100,
+                "Avg Response Time": self.calcluate_avg(self.reponse_time_list),
+                "StdD Response Time": self.calculate_standard_deviation(self.reponse_time_list),
+                "Avg Deviation Count": self.calcluate_avg(self.deviation_count_list),
+                "StdD Response Time": self.calculate_standard_deviation(self.deviation_count_list),
+                "Avg Request Length": self.calcluate_avg(self.request_length_list),
+                "StdD Request Length": self.calculate_standard_deviation(self.request_length_list),
+                "Avg URI Length": self.calcluate_avg(self.uri_length_list),
+                "StdD URI Length": self.calculate_standard_deviation(self.uri_length_list),
+                "Avg Response Header Keys":self.calcluate_avg(self.response_header_keys_list),
+                "StdD Response Header Keys": self.calculate_standard_deviation(self.response_header_keys_list),
+                "Avg Response Body Length": self.calcluate_avg(self.response_body_list),
+                "StdD Response Body Length": self.calculate_standard_deviation(self.response_body_list),
+            }
+        
+        return statistics    
     
     def create_result_variables(self):
-        #TODO
-        codes_count = sum(self.status_code_count.values())
-        status_code_ranges = {
-            '1xx': range(100, 200),
-            '2xx': range(200, 300),
-            '3xx': range(300, 400),
-            '4xx': range(400, 500),
-            '5xx': range(500, 600),
-            '999': 999,  # Socket Errors
-        }
-        status_code_distribution = {}
-        for status_range, code_range in status_code_ranges.items():
-            count = sum(self.status_code_count.get(code, 0) for code in code_range)
-            if codes_count > 0:
-                status_code_distribution[status_range] = count / codes_count * 100 
-            else:
-                status_code_distribution[status_range]=0
+    
 
         self.result_variables = {
             "host_ip_info": self.host_ip_info,
@@ -209,18 +229,33 @@ class TestRunLogger:
             "Received_Status_Codes": self.status_code_count,
             "Logged_Messages": self.logged_attempts,
             "Logged_Messages_of_scheduled_attempts": self.logged_attempts/self.experiment_configuration["num_attempts"],
-            "Distribution_of_status_codes": status_code_distribution,
             #Here maybe more information would be nice, successful attempts/failures, count of successfull baseline checks, statistical data? medium response time?
+            "Response Properties": self.data_count,
         }   
         
         return self.result_variables
 
 
+    def update_entry_to_experiment_list(self, statistics):
+        file_path = f"{self.experiment_folder}/experiment_stats.csv"
+        exists = os.path.exists(file_path)
+        
+        with open(file_path, "a+", newline="") as csvfile:
+            csv_writer = csv.DictWriter(csvfile, fieldnames=statistics.keys())
+            if not exists:
+                csv_writer.writeheader()
+            row = statistics.copy()
+            csv_writer.writerow(row)
+        
+        
+        return
+
     def save_logfiles(self):#, request_data, result_variables):
         '''Save all files after the experiments'''
         self.create_result_variables()
-        self.save_run_metadata(self.result_variables)
-
+        statistics= self.calculate_statistics()
+        self.save_run_metadata(self.result_variables, statistics)
+        self.update_entry_to_experiment_list(statistics)
         self.create_wireshark_script()
         self.save_request_data(self.request_data_list)
         
@@ -337,14 +372,7 @@ class ExperimentLogger:
             csv_writer.writerow(row)
  
 
-    def update_entry_to_experiment_list():
-        """TODO add statistical data to experiment list"""
-
-        with open(f"/logs/experiment_list.csv", "w", newline="") as csvfile:
-            csv_writer=csv.writer(csvfile)
-            csv_writer.writerow(["Key","Value"])
-            for key,value in self.experiment_configuration:
-                csv_writer.writerow([key,value])
+    
 
     def capture_packets_dumpcap(
         self,

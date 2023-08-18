@@ -80,19 +80,19 @@ class ExperimentRunner:
         selected_covered_channel = class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]()
         #TODO Change of PORT due to Upgrade
         
-        request, deviation_count = selected_covered_channel.generate_request(self.experiment_configuration, host_data)
+        request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration, host_data)
 
         #Send request and get response
         if self.experiment_configuration["verbose"]==True:
             print(request)
 
-        return request, deviation_count
+        return request, deviation_count, uri
 
     def check_content(self, body):
         #TODO add hash function and standard body
         return True
     
-    def send_and_receive_request(self, attempt_number, request, deviation_count, host_data, logger):    
+    def send_and_receive_request(self, attempt_number, request, deviation_count, uri, host_data, logger):    
         response_line, response_header_fields, body, measured_times, error_message  = CustomHTTP().http_request(
             host=host_data["host"],
             use_ipv4=self.experiment_configuration["use_ipv4"],
@@ -105,7 +105,7 @@ class ExperimentRunner:
         )
         
         self.check_content(body)
-        logger.add_request_response_data(attempt_number, request, deviation_count, response_line, response_header_fields, body, measured_times, error_message)
+        logger.add_request_response_data(attempt_number, request, deviation_count, uri, response_line, response_header_fields, body, measured_times, error_message)
 
       
        
@@ -125,9 +125,9 @@ class ExperimentRunner:
                 else:     
                     # Send the HTTP request and get the response in the main thread
                     
-                    request, deviation_count=self.forge_requests(host_data)
+                    request, deviation_count,uri=self.forge_requests(host_data)
                     start_time=time.time()
-                    self.send_and_receive_request(i, request, deviation_count, host_data, logger)
+                    self.send_and_receive_request(i, request, deviation_count, uri, host_data, logger)
                     self.message_count+=1
                     end_time=time.time()
                     response_time=end_time-start_time
@@ -170,7 +170,7 @@ class ExperimentRunner:
                 )
         ) 
         capture_thread.start()
-        
+       
         #Loop over List
         sub_set_no=1
         start_position=1
