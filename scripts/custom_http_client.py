@@ -418,18 +418,13 @@ class CustomHTTP(HTTP):
                     print(ex4)
                     pass     """
         print("Response Payload")
-        
-        print("response")
         print(response)
         response_line=None
         response_headers=None
         body=None
         if response is not None:
             response_line_str, headers_str, body_str=self.parse_response(response)
-            print("response_line_str: "+response_line_str)
-            print("header_str: "+headers_str)
-            print("body_str")
-            print(body_str)
+
             response_line= self.parse_response_line(response_line_str)
             response_headers =self.parse_headers(headers_str)
             body=body_str
