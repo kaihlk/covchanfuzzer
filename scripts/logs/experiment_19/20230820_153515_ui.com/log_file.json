@@ -1,0 +1,41 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 310,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 1.5566551685333252,
+            "Socket_Close_Time": 0.3255133628845215,
+            "Response_Time": 0.3267040252685547
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "date": "Sun, 20 Aug 2023 13:27:00 GMT",
+            "server": "nginx",
+            "x-frame-options": "SAMEORIGIN",
+            "x-xss-protection": "1; mode=block",
+            "x-content-type-options": "nosniff",
+            "content-encoding": "gzip",
+            "x-cache": "Hit from cloudfront",
+            "via": "1.1 c08e2480b7edc38ca37e62153bcb77fe.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "j0KQKh0pfB-UwqM3ssNiegjgVqr_RRs15Ku1bqqkclKHHrABkop8CA==",
+            "age": "510",
+            "referrer-policy": "same-origin",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "vary": "Origin"
+        },
+        "response_length": 9951
+    }
+]

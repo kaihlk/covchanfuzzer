@@ -1,0 +1,35 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.ftl.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.9332513809204102,
+            "Socket_Close_Time": 0.2961854934692383,
+            "Response_Time": 0.10733628273010254
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "keep-alive",
+            "content-language": "en",
+            "content-length": "431",
+            "content-type": "text/html;charset=utf-8",
+            "date": "Sun, 20 Aug 2023 13:40:00 GMT",
+            "server": "api-prod i-09f0d4a3eb654e202",
+            "set-cookie": "nfvdid=BQFmAAEBEKO_DLTJFWK9KGQlgtYvynJAbmyNhPxegGGFNkGPEOrnH5HrhBe7q72geKAplxQnFxbh_RhRnvMOlGRvaJ2g-H4Z7MQVWcXvZ8u52yHjzOIobA%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "via": "2 i-0af98244a5996cb05 (eu-west-1), 1.1 c000.fra002.ix.nflxvideo.net (FTL-QZn4)",
+            "x-netflix.nfstatus": "1_3",
+            "x-netflix.proxy.execution-time": "5",
+            "x-netflix.zuul.utilization": "9.7/50.0",
+            "x-originating-url": "https://www.ftl.netflix.com:51029/"
+        },
+        "response_length": 0
+    }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 315,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.8602218627929688,
+            "Socket_Close_Time": 0.2716503143310547,
+            "Response_Time": 0.27489256858825684
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 13:41:26 GMT",
+            "content-type": "text/html",
+            "location": "https://www.spotify.com/de/",
+            "set-cookie": "sp_m=de; Path=/; Domain=.spotify.com; Max-Age=115516800; Expires=Sun, 18 Apr 2027 13:41:26 GMT; Secure; HttpOnly; SameSite=Lax",
+            "sp-trace-id": "b84489eaad481962",
+            "x-envoy-upstream-service-time": "5",
+            "server": "envoy",
+            "strict-transport-security": "max-age=31536000",
+            "x-content-type-options": "nosniff",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding",
+            "via": "HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "response_length": 138
+    }
+]

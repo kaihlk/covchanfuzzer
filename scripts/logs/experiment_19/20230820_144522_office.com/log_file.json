@@ -1,0 +1,43 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.office.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 314,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.6548395156860352,
+            "Socket_Close_Time": 0.25487446784973145,
+            "Response_Time": 0.1032400131225586
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "cache-control": "no-store,no-cache",
+            "pragma": "no-cache",
+            "transfer-encoding": "chunked",
+            "content-type": "text/html; charset=utf-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding",
+            "set-cookie": "MUID=279DE3A4112662D61663F0D710AD632A; path=/; secure; expires=Fri, 13-Sep-2024 12:45:47 GMT; domain=office.com",
+            "request-context": "appId=",
+            "strict-transport-security": "max-age=31536000; includeSubDomains",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "x-ua-compatible": "IE=edge,chrome=1",
+            "nel": "{\"report_to\":\"NelOfficeHubUpload1\",\"max_age\":3600,\"failure_fraction\":1.0,\"success_fraction\":0.01}",
+            "report-to": "{ \"group\": \"csp-endpoint\", \"max_age\": 86400, \"endpoints\": [{ \"url\": \"https://csp.microsoft.com/report/Harmony-App-PROD\" }]}",
+            "content-security-policy": "default-src 'self';base-uri 'self';script-src 'nonce-pEH8U6d2JASKnKlIMxhb0Q==' 'strict-dynamic' 'report-sample' https:;report-to csp-endpoint;upgrade-insecure-requests;style-src 'self' *.cdn.office.net *.microsoft.com res-dev.cdn.officeppe.net 'unsafe-inline' https://www.microsoft.com/;font-src 'self' data: *.cdn.office.net res-dev.cdn.officeppe.net data c.s-microsoft.com *.microsoft.com;connect-src 'self' https://browser.pipe.aria.microsoft.com https://browser.events.data.microsoft.com *.office.com *.cdn.office.net res-dev.cdn.officeppe.net https://consentreceiverfd-prod.azurefd.net data:;frame-src https://login.microsoftonline.com https://login.live.com mem.gfx.ms amcdn.msftauth.net amcdn.msauth.net;img-src * data: blob:;worker-src 'self' blob:;child-src 'self' blob:;report-uri https://csp.microsoft.com/report/Harmony-App-PROD;",
+            "x-cache": "CONFIG_NOCACHE",
+            "x-msedge-ref": "Ref A: F31F758A00A84FF8B733BF427636E762 Ref B: AMS231032601049 Ref C: 2023-08-20T12:45:47Z",
+            "date": "Sun, 20 Aug 2023 12:45:47 GMT"
+        },
+        "response_length": 10
+    }
+]

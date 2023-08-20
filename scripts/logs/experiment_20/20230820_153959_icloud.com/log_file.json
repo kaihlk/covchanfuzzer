@@ -1,0 +1,38 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 314,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.647068977355957,
+            "Socket_Close_Time": 0.1703934669494629,
+            "Response_Time": 0.1808006763458252
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AppleHttpServer/3faf4ee9434b",
+            "content-type": "text/html",
+            "content-length": "57432",
+            "etag": "\"18a04bc8f88e058\"",
+            "content-language": "en-us",
+            "content-encoding": "gzip",
+            "content-location": "/system/icloud.com/index.html.en-us.gzip",
+            "vary": "accept-encoding",
+            "content-version": "V1",
+            "x-frame-options": "SAMEORIGIN",
+            "x-robots-tag": "noarchive",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "cache-control": "public, max-age=300",
+            "x-content-type-options": "nosniff",
+            "content-security-policy": "img-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com *.mzstatic.com; media-src 'self' blob: data: *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn; font-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com; connect-src blob: 'self' icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com; frame-src 'self' blob: mailto: tel: *.icloud.com *.apple.com *.icloud-sandbox.com *.icloud-content.com *.icloud-content.com.cn; frame-ancestors 'self' *.icloud.com *.apple.com; form-action 'self' *.icloud.com *.apple.com; child-src blob: 'self'; base-uri 'self' *.icloud.com *.cdn-apple.com; report-u"
+        },
+        "response_length": 0
+    }
+]

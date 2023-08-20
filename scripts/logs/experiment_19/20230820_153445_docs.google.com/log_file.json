@@ -1,0 +1,43 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.docs.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 307,
+        "reason_phrase": "Temporary Redirect",
+        "measured_times": {
+            "Socket_Connect_Time": 1.7379283905029297,
+            "Socket_Close_Time": 0.30837464332580566,
+            "Response_Time": 0.3954503536224365
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Sun, 20 Aug 2023 13:34:59 GMT",
+            "location": "https://docs.google.com/",
+            "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+            "content-security-policy": "script-src 'unsafe-inline' 'self' https://apis.google.com https://ssl.gstatic.com https://www.google.com https://www.googletagmanager.com https://www.gstatic.com https://www.google-analytics.com;report-uri /_/DriveWildcardRedirectHttp/cspreport/allowlist",
+            "cross-origin-resource-policy": "same-site",
+            "permissions-policy": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*",
+            "cross-origin-opener-policy": "same-origin",
+            "accept-ch": "Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factor, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "set-cookie": "NID=511=lr6Pot0EaMraLJ84DjY4GhtvkqOX3VZfoe_F5_a53ZQxcQvI-oDii5phkGlJdY_6hiRfoJEmL4S-u0ntwBOfW6zPfwphIdqNsISJFtvYGzqM66hoHW5KfCRhHSTrmYxfF6xty27J1SWVZtzj8gp3eiEHzdKPqyEIyXk00Kf69Gc; expires=Mon, 19-Feb-2024 13:34:59 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=none",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 0
+    }
+]

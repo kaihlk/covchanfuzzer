@@ -1,0 +1,35 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.linkedin.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 429,
+        "reason_phrase": "Request denied",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2639148235321045,
+            "Socket_Close_Time": 0.06174755096435547,
+            "Response_Time": 0.5815742015838623
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "cache-control": "no-cache, no-store",
+            "pragma": "no-cache",
+            "content-length": "24558",
+            "content-type": "text/html",
+            "expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+            "x-li-fabric": "prod-ltx1",
+            "x-li-pop": "afd-prod-ltx1-x",
+            "x-li-proto": "http/1.1",
+            "x-li-uuid": "AAYDW2rY5sb8rMypHLTZmg==",
+            "x-cache": "CONFIG_NOCACHE",
+            "x-msedge-ref": "Ref A: 055BAE24051741799FFA107E246FFA6A Ref B: FRAEDGE1822 Ref C: 2023-08-20T14:17:09Z",
+            "date": "Sun, 20 Aug 2023 14:17:09 GMT"
+        },
+        "response_length": 8192
+    }
+]

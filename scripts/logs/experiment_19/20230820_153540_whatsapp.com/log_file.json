@@ -1,0 +1,33 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.whatsapp.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.9423685073852539,
+            "Socket_Close_Time": 0.10059046745300293,
+            "Response_Time": 0.28226208686828613
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-encoding": "gzip",
+            "cross-origin-opener-policy": "same-origin-allow-popups",
+            "vary": "Accept-Encoding",
+            "strict-transport-security": "max-age=31536000; preload; includeSubDomains",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "7Z++seIoHzqdzBBTPQWzVM/NW5EZlSiKprPTD4lqVsIMOESgjE/FFe/9WvAaJlX+5SxVVZJTIeNmMN5afTPRCQ==",
+            "date": "Sun, 20 Aug 2023 13:35:58 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "2621"
+        },
+        "response_length": 933
+    }
+]

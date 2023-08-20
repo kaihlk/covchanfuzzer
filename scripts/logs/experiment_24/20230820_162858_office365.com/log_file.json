@@ -1,0 +1,30 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.18856287002563477,
+            "Socket_Close_Time": 0.00020194053649902344,
+            "Response_Time": 1.1288444995880127
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Sun, 20 Aug 2023 14:29:02 GMT",
+            "server": "Kestrel",
+            "cache-control": "public,max-age=30",
+            "location": "https://www.microsoft.com/microsoft-365?ms.url=office365com",
+            "vary": "User-Agent",
+            "request-context": "appId=cid-v1:27f0a7a8-dd10-4827-bbd3-5edd1d46ab25"
+        },
+        "response_length": 0
+    }
+]

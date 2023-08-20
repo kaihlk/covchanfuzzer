@@ -1,0 +1,32 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.twitter.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 315,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 1.521132230758667,
+            "Socket_Close_Time": 5.909933567047119,
+            "Response_Time": 0.22652196884155273
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "perf": "7626143928",
+            "location": "https://twitter.com/",
+            "cache-control": "no-cache, no-store, max-age=0",
+            "content-length": "0",
+            "x-transaction-id": "098a451d20e577a4",
+            "x-response-time": "98",
+            "x-connection-hash": "d4c88a0b2b786daae720dff93f7a221b33eddb49c41c47df92a539872f0598a7",
+            "date": "Sun, 20 Aug 2023 12:40:03 GMT",
+            "server": "tsa_o"
+        },
+        "response_length": 0
+    }
+]

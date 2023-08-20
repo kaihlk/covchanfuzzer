@@ -1,0 +1,35 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.bing.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 312,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.030068397521972656,
+            "Socket_Close_Time": 0.00022840499877929688,
+            "Response_Time": 0.7279391288757324
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "cache-control": "private",
+            "transfer-encoding": "chunked",
+            "content-type": "text/html; charset=utf-8",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding",
+            "p3p": "CP=\"NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND\"",
+            "set-cookie": "_HPVN=CS=eyJQbiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiUCJ9LCJTYyI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiSCJ9LCJReiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiVCJ9LCJBcCI6dHJ1ZSwiTXV0ZSI6dHJ1ZSwiTGFkIjoiMjAyMy0wOC0yMFQwMDowMDowMFoiLCJJb3RkIjowLCJHd2IiOjAsIkRmdCI6bnVsbCwiTXZzIjowLCJGbHQiOjAsIkltcCI6MX0=; domain=.bing.com; expires=Fri, 13-Sep-2024 14:17:29 GMT; path=/; SameSite=None",
+            "x-eventid": "64e22079191c40c5aeeaae0dd0aa7807",
+            "useragentreductionoptout": "A7kgTC5xdZ2WIVGZEfb1hUoNuvjzOZX3VIV/BA6C18kQOOF50Q0D3oWoAm49k3BQImkujKILc7JmPysWk3CSjwUAAACMeyJvcmlnaW4iOiJodHRwczovL3d3dy5iaW5nLmNvbTo0NDMiLCJmZWF0dXJlIjoiU2VuZEZ1bGxVc2VyQWdlbnRBZnRlclJlZHVjdGlvbiIsImV4cGlyeSI6MTY4NDg4NjM5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=",
+            "x-cache": "CONFIG_NOCACHE",
+            "x-msedge-ref": "Ref A: 272A77D556664E1FAA79C6286A04C3B7 Ref B: FRA31EDGE0607 Ref C: 2023-08-20T14:17:29Z",
+            "date": "Sun, 20 Aug 2023 14:17:29 GMT"
+        },
+        "response_length": 108502
+    }
+]

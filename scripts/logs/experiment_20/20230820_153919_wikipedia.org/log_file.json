@@ -1,0 +1,42 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.wikipedia.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.33809924125671387,
+            "Socket_Close_Time": 0.4670557975769043,
+            "Response_Time": 0.18019628524780273
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 03:49:01 GMT",
+            "cache-control": "s-maxage=86400, must-revalidate, max-age=3600",
+            "server": "ATS/9.1.4",
+            "etag": "W/\"129a3-601ca71ccf5c5\"",
+            "last-modified": "Mon, 31 Jul 2023 15:54:24 GMT",
+            "content-type": "text/html",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding",
+            "age": "35426",
+            "x-cache": "cp6016 hit, cp6011 hit/31227244",
+            "x-cache-status": "hit-front",
+            "server-timing": "cache;desc=\"hit-front\", host;desc=\"cp6011\"",
+            "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+            "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 604800, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+            "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 604800, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+            "set-cookie": "NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600",
+            "x-client-ip": "89.56.127.202",
+            "accept-ranges": "bytes",
+            "content-length": "18256"
+        },
+        "response_length": 13014
+    }
+]

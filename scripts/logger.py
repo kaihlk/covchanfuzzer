@@ -373,14 +373,11 @@ class ExperimentLogger:
     
     def save_dns_fails(self, dns_fails):
         """Adds an entry describing the experiment and the outcome into a list"""
-        #TODO update header line when new keys are added to experiment konfiguration
-
-        file_path = f"{self.experiment_folder}/dns_lookup_fails.csv"
-        
-        
+        file_path = f"{self.experiment_folder}/dns_lookup_fails.csv"            
         with open(file_path, "a+", newline="") as csvfile:
             csv_writer = csv.writer(csvfile)
-            csv_writer.writerows(dns_fails)
+            for entry in dns_fails:
+                csv_writer.writerow([entry])
         print("DNS Lookup Fails Saved")
         return
 

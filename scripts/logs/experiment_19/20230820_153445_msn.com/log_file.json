@@ -1,0 +1,36 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.msn.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 311,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 1.4684269428253174,
+            "Socket_Close_Time": 0.15576815605163574,
+            "Response_Time": 0.33711910247802734
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "cache-control": "no-store, no-cache",
+            "pragma": "no-cache",
+            "location": "/de-de",
+            "set-cookie": "_EDGE_V=1; expires=Fri, 13 Sep 2024 13:35:08 GMT; domain=.msn.com; path=/; httponly",
+            "x-fabric-cluster": "pmeprodneu",
+            "report-to": "{\"group\":\"network-errors\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://deff.nelreports.net/api/report?cat=msn\"}]},{\"group\":\"csp-endpoint\",\"max_age\":86400,\"endpoints\":[{\"url\":\"https://deff.nelreports.net/api/report\"}]}",
+            "nel": "{\"report_to\":\"network-errors\",\"max_age\":604800,\"success_fraction\":0.001,\"failure_fraction\":0.5}",
+            "x-ceto-ref": "B8659FC83DF44D6EA948FCE69EB44143|2023-08-20T13:35:08.080Z",
+            "x-cache": "CONFIG_NOCACHE",
+            "accept-ch": "Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version",
+            "x-msedge-ref": "Ref A: B8659FC83DF44D6EA948FCE69EB44143 Ref B: FRA31EDGE0721 Ref C: 2023-08-20T13:35:08Z",
+            "date": "Sun, 20 Aug 2023 13:35:07 GMT",
+            "content-length": "0"
+        },
+        "response_length": 0
+    }
+]

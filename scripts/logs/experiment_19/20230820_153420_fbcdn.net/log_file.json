@@ -1,0 +1,31 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.fbcdn.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 313,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 2.962709426879883,
+            "Socket_Close_Time": 0.18820524215698242,
+            "Response_Time": 0.4895179271697998
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.facebook.com/",
+            "strict-transport-security": "max-age=31536000; preload; includeSubDomains",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "nsoCc8JoozpApbMxJD+nAqgMu9XGPkdVTn942s4m3EKRzDjnSEEEYyA6tLiiunysDfX8hOcBDkq1gNfmj2kZTg==",
+            "date": "Sun, 20 Aug 2023 13:34:34 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    }
+]

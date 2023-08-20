@@ -1,0 +1,42 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.yahoo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 313,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1508800983428955,
+            "Socket_Close_Time": 0.0006051063537597656,
+            "Response_Time": 0.3866269588470459
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "expect-ct": "max-age=31536000, report-uri=\"http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only",
+            "referrer-policy": "no-referrer-when-downgrade",
+            "strict-transport-security": "max-age=31536000",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "x-xss-protection": "1; mode=block",
+            "content-type": "text/html; charset=utf-8",
+            "content-encoding": "gzip",
+            "date": "Sun, 20 Aug 2023 14:17:47 GMT",
+            "x-envoy-upstream-service-time": "50",
+            "server": "ATS",
+            "age": "0",
+            "cache-control": "no-store, no-cache, max-age=0, private",
+            "expires": "-1",
+            "content-security-policy": "sandbox allow-scripts; default-src 'self'; img-src https:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; report-uri http://csp.yahoo.com/beacon/csp?src=redirect",
+            "set-cookie": "A1S=d=AQABBIsg4mQCEJi3lWSpy0ARSskGP3STRUMFEgEBAQFy42TsZNxV0iMA_eMAAA&S=AQAAAtL96p3cU0OBJ8-dDZta3bo&j=US; Domain=.yahoo.com; Path=/; SameSite=Lax; Secure",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "via": "https/1.1 ip-10-101-0-237.ec2.internal (ApacheTrafficServer)"
+        },
+        "response_length": 7411
+    }
+]

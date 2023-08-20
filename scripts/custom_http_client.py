@@ -223,7 +223,7 @@ class CustomHTTP(HTTP):
                 print(host_ip_info[0][4])
                 tls_socket.connect(host_ip_info[0][4])
                 tls_socket.settimeout(timeout)
-                assert "http/1.1" == tls_socket.selected_alpn_protocol()
+                #assert "http/1.1" == tls_socket.selected_alpn_protocol()
                 stream_socket = SuperSocket.SSLStreamSocket(tls_socket, basecls=HTTP)
                 return stream_socket, error_message
             except socket.error as ex:
@@ -286,13 +286,25 @@ class CustomHTTP(HTTP):
 
 
     def parse_response_line(self, response_line_str):
-        #Split the line
-        http_version, status_code, reason_phrase= response_line_str.split(None, 2)
-        response_line = {
-            "HTTP_version": http_version,
-            "status_code": int(status_code),
-            "reason_phrase": reason_phrase.strip(),
-        }
+        
+        parts = response_line_str.split(None, 2)   #WIKIMEDIDA did not send reason phrase, cause crash
+        #Split the line 
+        if len(parts)==3:
+            http_version, status_code, reason_phrase=parts
+            response_line = {
+                "HTTP_version": http_version,
+                "status_code": int(status_code),
+                "reason_phrase": reason_phrase.strip(),
+            }
+        elif len(parts)==2:
+            http_version, status_code=parts
+            response_line = {
+                "HTTP_version": http_version,
+                "status_code": int(status_code),
+                "reason_phrase": "",
+            }
+        else:
+            raise ValueError("Invalid Response Line")    
         return response_line
 
 
@@ -323,6 +335,7 @@ class CustomHTTP(HTTP):
         """
         #Initialize Variables
         response = None
+        stream_socket=None
         
         socket_connect_time=0
         response_time=0
@@ -363,10 +376,10 @@ class CustomHTTP(HTTP):
         except Exception as ex0:
             print("An error occurred:", ex0)
             error_messages.append(ex0)
-            if 'stream_socket' in locals():
+            if 'stream_socket' in locals() and stream_socket is not None:
                 stream_socket.close()
             if 'tls_socket' in locals():
-                stream_socket.close()
+                tls_socket.close()
             if 'sock' in locals():
                 sock.close()
                     
@@ -393,11 +406,12 @@ class CustomHTTP(HTTP):
                 print(ex2)
                 response=None
             finally:
-                time.sleep(0.1)
+                
                 start_time=time.time()
                 try:
                     if 443 == port:
                         tls_socket.shutdown(1)
+                        time.sleep(0.1)
                         stream_socket.close()
                     else:
                         sock.shutdown(1)            

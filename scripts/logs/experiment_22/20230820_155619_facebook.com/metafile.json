@@ -1,0 +1,89 @@
+{
+    "configuration_variables": {
+        "experiment_no": 22,
+        "comment": "test tcp",
+        "verbose": false,
+        "timestamp": "20230820_155619",
+        "covertchannel_request_number": 1,
+        "covertchannel_connection_number": 1,
+        "covertchannel_timing_number": 1,
+        "fuzz_value": 0.5,
+        "num_attempts": 1,
+        "wait_between_request": 0,
+        "base_line_check_frequency": 0,
+        "target_list": "target_list_subdomain.csv",
+        "target_subset_size": 10,
+        "target_port": null,
+        "conn_timeout": 2,
+        "nw_interface": "enp0s3",
+        "use_ipv4": true,
+        "use_TLS": false,
+        "use_HTTP2": false,
+        "method": "GET",
+        "url": "/",
+        "headers": null,
+        "standard_headers": "firefox_HTTP/1.1",
+        "content": "random"
+    },
+    "result_variables": {
+        "host_ip_info": {
+            "host": "facebook.com",
+            "socket_info": [
+                [
+                    2,
+                    1,
+                    6,
+                    "",
+                    [
+                        "157.240.210.35",
+                        80
+                    ]
+                ]
+            ],
+            "ip_address": "157.240.210.35",
+            "port": 80
+        },
+        "covertchannel_request_name": "<class 'http1_request_builder.HTTP1_Request_Builder'>",
+        "covertchannel_timing_name": "<class 'http1_request_builder.HTTP1_Request_Builder'>",
+        "Received_Status_Codes": {
+            "301": 1
+        },
+        "Logged_Messages": 1,
+        "Logged_Messages_of_scheduled_attempts": 1.0,
+        "Response Properties": {
+            "Messages": 1,
+            "1xx": 0,
+            "2xx": 0,
+            "3xx": 1,
+            "4xx": 0,
+            "5xx": 0,
+            "9xx": 0
+        }
+    },
+    "statistics": {
+        "Host": "facebook.com",
+        "IP": "157.240.210.35",
+        "IPv4": true,
+        "TLS": false,
+        "HTTP/2": false,
+        "Messages Send": 1,
+        "1xx": 0.0,
+        "2xx": 0.0,
+        "3xx": 100.0,
+        "4xx": 0.0,
+        "5xx": 0.0,
+        "9xx": 0.0,
+        "Avg Response Time": 0.4402194023132324,
+        "StdD Response Time": 0.0,
+        "Avg Deviation Count": 0.0,
+        "StdD Deviation Count": 0.0,
+        "Avg Request Length": 316.0,
+        "StdD Request Length": 0.0,
+        "Avg URI Length": 1.0,
+        "StdD URI Length": 0.0,
+        "Avg Response Header Keys": 6.0,
+        "StdD Response Header Keys": 0.0,
+        "Avg Response Body Length": 0.0,
+        "StdD Response Body Length": 0.0
+    }
+}

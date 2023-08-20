@@ -1,0 +1,35 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 403,
+        "reason_phrase": "Forbidden",
+        "measured_times": {
+            "Socket_Connect_Time": 0.31304931640625,
+            "Socket_Close_Time": 0.09052133560180664,
+            "Response_Time": 0.07733273506164551
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 14:29:05 GMT",
+            "content-type": "text/html; charset=UTF-8",
+            "transfer-encoding": "chunked",
+            "connection": "close",
+            "x-frame-options": "SAMEORIGIN",
+            "referrer-policy": "same-origin",
+            "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+            "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+            "vary": "Accept-Encoding",
+            "server": "cloudflare",
+            "cf-ray": "7f9b53968839b77f-AMS",
+            "content-encoding": "gzip"
+        },
+        "response_length": 6054
+    }
+]

@@ -1,0 +1,36 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.tiktokv.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 315,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.13834619522094727,
+            "Socket_Close_Time": 0.005525827407836914,
+            "Response_Time": 0.6424250602722168
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "TLB",
+            "content-type": "text/html",
+            "content-length": "160",
+            "location": "https://www.tiktok.com/",
+            "proxy-status": "0000201301026000",
+            "x-tt-trace-host": "01eb47591de83e9c041459c08e554b5a0774123c2d412c8f9d4bccfd44819709750dcea8264af99641a1cabce195df785380ae93aac2a0cdde26ae1237e1c98ca72750787902e8a340179eccddcfa197dd",
+            "x-tt-logid": "202308201417500ACEDA032A029E2181D8",
+            "x-origin-response-time": "8,23.48.172.79",
+            "date": "Sun, 20 Aug 2023 14:17:51 GMT",
+            "connection": "keep-alive",
+            "x-tt-trace-tag": "id=16;cdn-cache=miss;type=dyn",
+            "server-timing": "cdn-cache; desc=MISS, edge; dur=503, origin; dur=8",
+            "x-parent-response-time": "510,184.28.198.196"
+        },
+        "response_length": 160
+    }
+]

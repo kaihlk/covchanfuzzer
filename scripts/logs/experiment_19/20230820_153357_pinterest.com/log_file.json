@@ -1,0 +1,34 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.pinterest.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.7638390064239502,
+            "Socket_Close_Time": 0.14861321449279785,
+            "Response_Time": 1.0097346305847168
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "keep-alive",
+            "x-xss-protection": "1; mode=block",
+            "x-content-type-options": "nosniff",
+            "strict-transport-security": "max-age=63072000; includeSubDomains; preload",
+            "x-ua-compatible": "IE=edge",
+            "reporting-endpoints": "coop-endpoint=\"https://www.pinterest.com/_/_/coop_report/\", coep-endpoint=\"https://www.pinterest.com/_/_/coep_report/\"",
+            "cross-origin-opener-policy-report-only": "same-origin; report-to=\"coop-endpoint\"",
+            "cross-origin-embedder-policy-report-only": "require-corp; report-to=\"coep-endpoint\"",
+            "set-cookie": "_auth=0; path=/; expires=Wed, 14 Aug 2024 13:34:09 GMT; domain=.pinterest.com; secure; httponly",
+            "p3p": "CP=\"This is not a P3P policy. See https://www.pinterest.com/_/_/help/articles/pinterest-and-p3p for more info.\"",
+            "content-security-policy": "default-src 'self' blob: s.pinimg.com; font-src 'self' s.pinimg.com data: fonts.googleapis.com fonts.gstatic.com use.typekit.net; style-src 'self' blob: 'unsafe-inlin"
+        },
+        "response_length": 0
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 310,
+        "http_version": "",
+        "status_code": 999,
+        "reason_phrase": [
+            "",
+            "(100, 'Underlying stream socket tore down')"
+        ],
+        "measured_times": {
+            "Socket_Connect_Time": 2.569319486618042,
+            "Socket_Close_Time": 0.31061220169067383,
+            "Response_Time": 0
+        },
+        "error_message": [
+            "",
+            "(100, 'Underlying stream socket tore down')"
+        ],
+        "response_header_fields": null,
+        "response_length": 0
+    }
+]

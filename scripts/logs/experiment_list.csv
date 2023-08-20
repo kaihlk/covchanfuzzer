@@ -17,3 +17,9 @@ experiment_no,comment,verbose,timestamp,covertchannel_request_number,covertchann
 16,Test,False,20230818_114919,1,1,1,0.5,10,0,0,target_list_subdomain.csv,3,,1,enp0s3,True,True,False,GET,/,,firefox_HTTP/1.1,random
 17,Body,False,20230818_120257,1,1,1,0.5,10,0,0,target_list_subdomain.csv,3,,1,enp0s3,True,True,False,GET,/,,firefox_HTTP/1.1,random
 18,test 2,False,20230818_121535,1,1,1,0.5,10,0,0,target_list_subdomain.csv,3,,2,enp0s3,True,True,False,GET,/,,firefox_HTTP/1.1,random
+19,Reasonphrase,False,20230820_153218,1,1,1,0.5,1,0,0,target_list_subdomain.csv,10,,2,enp0s3,True,True,False,GET,/,,firefox_HTTP/1.1,random
+20,10x1,False,20230820_153836,1,1,1,0.5,1,0,0,target_list_subdomain.csv,10,,2,enp0s3,True,True,False,GET,/,,firefox_HTTP/1.1,random
+21,tCP,False,20230820_155533,1,1,1,0.5,1,0,0,target_list_subdomain.csv,10,,2,enp0s3,True,False,False,GET,/,,firefox_HTTP/1.1,random
+22,test tcp,False,20230820_155619,1,1,1,0.5,1,0,0,target_list_subdomain.csv,10,,2,enp0s3,True,False,False,GET,/,,firefox_HTTP/1.1,random
+23,DNS Fails check,False,20230820_161630,1,1,1,0.5,1,0,0,target_list_subdomain.csv,10,,2,enp0s3,True,False,False,GET,/,,firefox_HTTP/1.1,random
+24,dns faisl,False,20230820_162717,1,1,1,0.5,1,0,0,target_list_subdomain.csv,10,,2,enp0s3,True,False,False,GET,/,,firefox_HTTP/1.1,random

@@ -1,0 +1,29 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 403,
+        "reason_phrase": "Forbidden",
+        "measured_times": {
+            "Socket_Connect_Time": 0.18138813972473145,
+            "Socket_Close_Time": 0.0021343231201171875,
+            "Response_Time": 0.4672355651855469
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "proxy-status": "http_request_error; e_clientaddr=\"AcJ_HHGmmRxJZGC7xbwz2_WsKf_EPhe2EUCL8V1sw60MouEGI72QDfdTonu3UgKyt9PiozLhVdcNDQ-N0w\"; e_fb_vipaddr=\"AcLJb_B8PQz2pcq3fjqsOfrkBoR7kTNzUaaH_TYiqysSYbIEkyomzaVRwUACPpHFzVmdaUSMmdU\"; e_fb_builduser=\"AcK7lqyy16h4EKUpHPWbST14FKMThRch8N9QtnoaaYWOOxoc5lKDHWUdOMasKK74uVU\"; e_fb_binaryversion=\"AcKo1bQ_sibAxsEM5tf46t2emvVDKlnt0Ypk8Pd4GlhTC_lBAsoDYT5PWWK2oyg3lLqWyS3JQZCS2flMFZUxrp_KiL5E5u3Eg8g\"; e_proxy=\"AcLKUZnFy5R-YcpANrkGC_dpu5oCcXcHGa-XyDJ7ZdAUgqMXi4TEEFVWJu6cWKY1XwdAT7WHTGuVXD0\"",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Sun, 20 Aug 2023 14:29:38 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    }
+]

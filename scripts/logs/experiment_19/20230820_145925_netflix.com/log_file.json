@@ -1,0 +1,47 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 315,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 1.0678133964538574,
+            "Socket_Close_Time": 79.87062501907349,
+            "Response_Time": 0.6013193130493164
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nq_website_nonmember-prod-release 3cd6a2e4-6c8e-4128-9b3b-4dff209479a2",
+            "x-frame-options": "DENY",
+            "content-type": "text/html",
+            "cache-control": "no-cache, no-store",
+            "pragma": "no-cache",
+            "expires": "0",
+            "x-robots-tag": "index",
+            "location": "https://www.netflix.com/de-en/",
+            "date": "Sun, 20 Aug 2023 12:59:29 GMT",
+            "x-envoy-upstream-service-time": "168",
+            "x-b3-traceid": "0be2b464a089fce3",
+            "x-request-id": "0bd8c348-72ec-49c8-a072-6546cbde5de6",
+            "x-envoy-decorator-operation": "lo_svc",
+            "x-http2-stream-id": "11",
+            "transfer-encoding": "chunked",
+            "via": "1.1 i-0208f512c3a193d0e (eu-west-1)",
+            "x-xss-protection": "1; mode=block; report=https://www.netflix.com/ichnaea/log/freeform/xssreport",
+            "x-content-type-options": "nosniff",
+            "strict-transport-security": "max-age=31536000; includeSubDomains",
+            "x-originating-url": "http://www.netflix.com/",
+            "edge-control": "no-cache, no-store",
+            "set-cookie": "NetflixId=v%3D2%26ct%3DBQAOAAEBEBFRxlS6igLW5OafgObEmw-BAI9AyGXzdLN6PIXmpqxgI0k29QFoXZZGbsVyTUE-t8OnHY6iCdMQKm72l3Ih6nrAzOjn-KOrM7sAsZ85-rZvEa9I8Ym6BtpMFVHV018GqJaYACa0LEMHIbahp8ePtL0t0Yk7L18YbVFGKbzmG1qdP7f2ao37_GFyQGAweZu0C9ETxvhXvlz3qOo3brsiIhtl45rBJqLuPMrLatMvO9ei2F7vrVtO6etqI117prkTxOaY9ACJcw_hURS6mK3NCNf2MmrAVJhAFqNEQ44zyUvQ5QG19Ljyvm1ErlxJYBgv_Bjkef9E5jkpvoZGsyG9KSWZqXpgZ9ZbJLHOlCNm34_Zb1Q.%26bt%3Ddev%26mac%3DAQEAEAABABTDgMucKztHtgwtU1M2d4j_p5ilH5gSE-o.; Domain=.netflix.com; Expires=Mon, 19 Aug 2024 12:59:29 GMT; Path=/; HttpOnly; Secure; SameSite=Lax",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "758"
+        },
+        "response_length": 0
+    }
+]

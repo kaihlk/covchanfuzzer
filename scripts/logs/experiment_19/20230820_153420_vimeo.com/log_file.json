@@ -1,0 +1,45 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.vimeo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 313,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.9307022094726562,
+            "Socket_Close_Time": 0.4288747310638428,
+            "Response_Time": 0.20395278930664062
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 13:34:40 GMT",
+            "content-type": "text/html; charset=iso-8859-1",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "location": "https://vimeo.com/",
+            "expires": "Sun, 08 May 2033 02:13:15 GMT",
+            "age": "8767285",
+            "via": "1.1 varnish (Varnish/6.0), 1.1 varnish, 1.1 varnish",
+            "cache-control": "no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+            "x-varnish-cache": "1",
+            "x-vserver": "web-varnish-prod-varnish-14",
+            "x-backend-proxy": "webproxy15",
+            "x-bapp-server": "",
+            "accept-ranges": "bytes",
+            "x-served-by": "cache-iad-kiad7000156-IAD, cache-ams21030-AMS",
+            "x-cache": "MISS, MISS",
+            "x-cache-hits": "0, 0",
+            "x-timer": "S1692538481.571022,VS0,VE105",
+            "cf-cache-status": "DYNAMIC",
+            "set-cookie": "__cf_bm=xsnraSr2huoVux5tKVKvx0EmkYMqVj3BlteHd43qltE-1692538480-0-ARPjR27OBm/tfoa4VxOU3NVObyLceY06+67Nq/4VcVQ8G8N2MkyZCs1HFMhRAK6St6K8m3DeNByoh4DKTF1sV7E=; path=/; expires=Sun, 20-Aug-23 14:04:40 GMT; domain=.vimeo.com; HttpOnly; Secure; SameSite=None",
+            "server": "cloudflare",
+            "cf-ray": "7f9b03df7def0a53-AMS"
+        },
+        "response_length": 226
+    }
+]
