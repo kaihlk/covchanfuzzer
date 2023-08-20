@@ -1,0 +1,502 @@
+[
+    {
+        "number": 0,
+        "request": "GET http://www.googleapis.com/index.html HTTP/1.1\r\nHost: googleapis.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.googleapis.com/index.html",
+        "request_length": 349,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06125211715698242,
+            "Socket_Close_Time": 0.17077064514160156,
+            "Response_Time": 0.12262773513793945
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1571",
+            "date": "Sun, 20 Aug 2023 20:17:05 GMT"
+        },
+        "response_length": 1567
+    },
+    {
+        "number": 1,
+        "request": "GET http://www.googleapis.com/services HTTP/1.1\r\nHost: googleapis.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.googleapis.com/services",
+        "request_length": 347,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1067955493927002,
+            "Socket_Close_Time": 0.2849087715148926,
+            "Response_Time": 1.0370392799377441
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1569",
+            "date": "Sun, 20 Aug 2023 20:17:13 GMT"
+        },
+        "response_length": 1565
+    },
+    {
+        "number": 2,
+        "request": "GET http://www.googleapis.com HTTP/1.1\r\nHost: googleapis.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "http://www.googleapis.com",
+        "request_length": 338,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08771514892578125,
+            "Socket_Close_Time": 0.11033368110656738,
+            "Response_Time": 0.28455066680908203
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1561",
+            "date": "Sun, 20 Aug 2023 20:17:19 GMT"
+        },
+        "response_length": 1557
+    },
+    {
+        "number": 3,
+        "request": "GET http://www.googleapis.com/ HTTP/1.1\r\nHost: googleapis.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.googleapis.com/",
+        "request_length": 339,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.048563480377197266,
+            "Socket_Close_Time": 0.1753997802734375,
+            "Response_Time": 0.15860700607299805
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1561",
+            "date": "Sun, 20 Aug 2023 20:17:25 GMT"
+        },
+        "response_length": 1557
+    },
+    {
+        "number": 4,
+        "request": "GET http://www.googleapis.com HTTP/1.1\r\nHost: googleapis.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "http://www.googleapis.com",
+        "request_length": 338,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10257792472839355,
+            "Socket_Close_Time": 0.2001354694366455,
+            "Response_Time": 0.4329822063446045
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1561",
+            "date": "Sun, 20 Aug 2023 20:17:31 GMT"
+        },
+        "response_length": 1557
+    },
+    {
+        "number": 5,
+        "request": "GET http://www.googleapis.com/contact HTTP/1.1\r\nHost: googleapis.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.googleapis.com/contact",
+        "request_length": 346,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09601426124572754,
+            "Socket_Close_Time": 0.5891938209533691,
+            "Response_Time": 0.6072406768798828
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1568",
+            "date": "Sun, 20 Aug 2023 20:18:08 GMT"
+        },
+        "response_length": 1564
+    },
+    {
+        "number": 6,
+        "request": "GET http://www.googleapis.com/favicon.ico HTTP/1.1\r\nHost: googleapis.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.googleapis.com/favicon.ico",
+        "request_length": 350,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09783291816711426,
+            "Socket_Close_Time": 0.9821145534515381,
+            "Response_Time": 0.3845958709716797
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1572",
+            "date": "Sun, 20 Aug 2023 20:18:14 GMT"
+        },
+        "response_length": 1568
+    },
+    {
+        "number": 7,
+        "request": "GET http://www.googleapis.com/services HTTP/1.1\r\nHost: googleapis.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.googleapis.com/services",
+        "request_length": 347,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.055199384689331055,
+            "Socket_Close_Time": 0.15199518203735352,
+            "Response_Time": 1.0462234020233154
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1569",
+            "date": "Sun, 20 Aug 2023 20:18:18 GMT"
+        },
+        "response_length": 1565
+    },
+    {
+        "number": 8,
+        "request": "GET http://www.googleapis.com/contact HTTP/1.1\r\nHost: googleapis.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.googleapis.com/contact",
+        "request_length": 346,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09810256958007812,
+            "Socket_Close_Time": 0.1965928077697754,
+            "Response_Time": 0.17693758010864258
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1568",
+            "date": "Sun, 20 Aug 2023 20:18:25 GMT"
+        },
+        "response_length": 1564
+    },
+    {
+        "number": 9,
+        "request": "GET http://www.googleapis.com/index.php HTTP/1.1\r\nHost: googleapis.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.googleapis.com/index.php",
+        "request_length": 348,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1447739601135254,
+            "Socket_Close_Time": 0.2671957015991211,
+            "Response_Time": 0.17177700996398926
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1570",
+            "date": "Sun, 20 Aug 2023 20:18:30 GMT"
+        },
+        "response_length": 1566
+    },
+    {
+        "number": 10,
+        "request": "GET http://www.googleapis.com/support HTTP/1.1\r\nHost: googleapis.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.googleapis.com/support",
+        "request_length": 346,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08874177932739258,
+            "Socket_Close_Time": 0.1985018253326416,
+            "Response_Time": 0.22849798202514648
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1568",
+            "date": "Sun, 20 Aug 2023 20:18:34 GMT"
+        },
+        "response_length": 1564
+    },
+    {
+        "number": 11,
+        "request": "GET http://www.googleapis.com/index.html HTTP/1.1\r\nHost: googleapis.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.googleapis.com/index.html",
+        "request_length": 349,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05523252487182617,
+            "Socket_Close_Time": 0.42987871170043945,
+            "Response_Time": 0.12952923774719238
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1571",
+            "date": "Sun, 20 Aug 2023 20:18:38 GMT"
+        },
+        "response_length": 1567
+    },
+    {
+        "number": 12,
+        "request": "GET http://www.googleapis.com/index.php HTTP/1.1\r\nHost: googleapis.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.googleapis.com/index.php",
+        "request_length": 348,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.13712263107299805,
+            "Socket_Close_Time": 0.14260506629943848,
+            "Response_Time": 0.2915520668029785
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1570",
+            "date": "Sun, 20 Aug 2023 20:18:42 GMT"
+        },
+        "response_length": 1566
+    },
+    {
+        "number": 13,
+        "request": "GET http://www.googleapis.com/contact HTTP/1.1\r\nHost: googleapis.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.googleapis.com/contact",
+        "request_length": 346,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0372011661529541,
+            "Socket_Close_Time": 0.11325883865356445,
+            "Response_Time": 0.22167086601257324
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1568",
+            "date": "Sun, 20 Aug 2023 20:18:55 GMT"
+        },
+        "response_length": 1564
+    },
+    {
+        "number": 14,
+        "request": "GET http://www.googleapis.com/favicon.ico HTTP/1.1\r\nHost: googleapis.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.googleapis.com/favicon.ico",
+        "request_length": 350,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05356621742248535,
+            "Socket_Close_Time": 0.26564955711364746,
+            "Response_Time": 46.66815161705017
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1572",
+            "date": "Sun, 20 Aug 2023 20:19:01 GMT"
+        },
+        "response_length": 1568
+    },
+    {
+        "number": 15,
+        "request": "GET http://www.googleapis.com/about HTTP/1.1\r\nHost: googleapis.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.googleapis.com/about",
+        "request_length": 344,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06636285781860352,
+            "Socket_Close_Time": 0.1293032169342041,
+            "Response_Time": 0.2547492980957031
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1566",
+            "date": "Sun, 20 Aug 2023 20:19:52 GMT"
+        },
+        "response_length": 1562
+    },
+    {
+        "number": 16,
+        "request": "GET http://www.googleapis.com/index.html HTTP/1.1\r\nHost: googleapis.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.googleapis.com/index.html",
+        "request_length": 349,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.039536237716674805,
+            "Socket_Close_Time": 0.5931422710418701,
+            "Response_Time": 0.2038888931274414
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1571",
+            "date": "Sun, 20 Aug 2023 20:19:57 GMT"
+        },
+        "response_length": 1567
+    },
+    {
+        "number": 17,
+        "request": "GET http://www.googleapis.com/contact HTTP/1.1\r\nHost: googleapis.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.googleapis.com/contact",
+        "request_length": 346,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.23828816413879395,
+            "Socket_Close_Time": 0.20582914352416992,
+            "Response_Time": 0.31828904151916504
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1568",
+            "date": "Sun, 20 Aug 2023 20:20:10 GMT"
+        },
+        "response_length": 1564
+    },
+    {
+        "number": 18,
+        "request": "GET http://www.googleapis.com/index.php HTTP/1.1\r\nHost: googleapis.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.googleapis.com/index.php",
+        "request_length": 348,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.032344818115234375,
+            "Socket_Close_Time": 0.12098979949951172,
+            "Response_Time": 0.40305018424987793
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1570",
+            "date": "Sun, 20 Aug 2023 20:20:16 GMT"
+        },
+        "response_length": 1566
+    },
+    {
+        "number": 19,
+        "request": "GET http://www.googleapis.com/index.html HTTP/1.1\r\nHost: googleapis.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.googleapis.com/index.html",
+        "request_length": 349,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.13618254661560059,
+            "Socket_Close_Time": 0.21330857276916504,
+            "Response_Time": 3.344217300415039
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1571",
+            "date": "Sun, 20 Aug 2023 20:20:22 GMT"
+        },
+        "response_length": 1567
+    }
+]

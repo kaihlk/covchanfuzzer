@@ -1,0 +1,90 @@
+{
+    "configuration_variables": {
+        "experiment_no": 27,
+        "comment": "tet",
+        "verbose": false,
+        "timestamp": "20230820_221627",
+        "covertchannel_request_number": 10,
+        "covertchannel_connection_number": 1,
+        "covertchannel_timing_number": 1,
+        "fuzz_value": 0.5,
+        "num_attempts": 20,
+        "wait_between_request": 0,
+        "base_line_check_frequency": 0,
+        "target_list": "target_list_subdomain.csv",
+        "target_subset_size": 5,
+        "target_port": null,
+        "conn_timeout": 2,
+        "nw_interface": "enp0s3",
+        "use_ipv4": true,
+        "use_TLS": false,
+        "use_HTTP2": false,
+        "method": "GET",
+        "url": "",
+        "headers": null,
+        "standard_headers": "firefox_HTTP/1.1",
+        "content": "random"
+    },
+    "result_variables": {
+        "host_ip_info": {
+            "host": "www.google.com",
+            "socket_info": [
+                [
+                    2,
+                    1,
+                    6,
+                    "",
+                    [
+                        "172.217.16.68",
+                        80
+                    ]
+                ]
+            ],
+            "ip_address": "172.217.16.68",
+            "port": 80
+        },
+        "covertchannel_request_name": "<class 'http1_request_builder.HTTP1_Request_Builder'>",
+        "covertchannel_timing_name": "<class 'http1_request_builder.HTTP1_Request_Builder'>",
+        "Received_Status_Codes": {
+            "404": 17,
+            "301": 3
+        },
+        "Logged_Messages": 20,
+        "Logged_Messages_of_scheduled_attempts": 1.0,
+        "Response Properties": {
+            "Messages": 20,
+            "1xx": 0,
+            "2xx": 0,
+            "3xx": 3,
+            "4xx": 17,
+            "5xx": 0,
+            "9xx": 0
+        }
+    },
+    "statistics": {
+        "Host": "www.google.com",
+        "IP": "172.217.16.68",
+        "IPv4": true,
+        "TLS": false,
+        "HTTP/2": false,
+        "Messages Send": 20,
+        "1xx": 0.0,
+        "2xx": 0.0,
+        "3xx": 15.0,
+        "4xx": 85.0,
+        "5xx": 0.0,
+        "9xx": 0.0,
+        "Avg Response Time": 0.25137847661972046,
+        "StdD Response Time": 0.19623257776831193,
+        "Avg Deviation Count": 0.9,
+        "StdD Deviation Count": 0.30000000000000004,
+        "Avg Request Length": 340.2,
+        "StdD Request Length": 3.429285639896449,
+        "Avg URI Length": 27.2,
+        "StdD URI Length": 3.4292856398964497,
+        "Avg Response Header Keys": 4.95,
+        "StdD Response Header Keys": 2.268810260907686,
+        "Avg Response Body Length": 1362.75,
+        "StdD Response Body Length": 480.05456721085363
+    }
+}

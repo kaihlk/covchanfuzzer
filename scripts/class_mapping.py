@@ -12,6 +12,7 @@ requests_builders ={
     7: HTTP1_Request_CC_URI_Hex_Hex,
     8: HTTP1_Request_CC_Random_Content,
     9: HTTP1_Request_CC_Random_Content_No_Lenght_Field,
+    10: HTTP1_Request_CC_URI_Common_Addresses,
 }
 
 """ class_mapping_connection = {

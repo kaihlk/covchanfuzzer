@@ -89,8 +89,27 @@ class HTTP1_Request_Builder:
 
             ],
         }
+    def parse_host(self,host):
+        #Initialize variables
+        subdomain = ""
+        hostname = ""
+        domain = ""
+        
+        parts = host.split(".", 2)
+        if len(parts) == 2:
+            subdomain=""
+            host = parts[0]
+            domain = parts[1]
+        elif len(parts) == 3:
+            subdomain= parts[0]
+            host = parts[1]
+            domain = parts[2]
+        else: raise ValueError()
 
-    def parse_host(self, uri, host):
+        return subdomain, host, domain
+
+        #host may be part of the uri
+    """ def parse_host(self, uri, host):
         '''Parse host uris'''
         # Initialize variables
         scheme = ""
@@ -130,7 +149,7 @@ class HTTP1_Request_Builder:
             hostname = host
         # Return the extracted parts as a tuple
      
-        return scheme, subdomain, hostname, domain, port, path
+        return scheme, subdomain, hostname, domain, port, path """
 
     def generate_cc_request(self, host, port, uri="/", method="GET", headers=None, content=None, fuzzvalue=None):
         '''Generation of request package, CCs mut implement this '''
@@ -156,8 +175,7 @@ class HTTP1_Request_Builder:
 
     def generate_request(self, experiment_configuration, host_data):
         
-        host="www."+host_data["host"]
-       
+        host=host_data["host"]
         port=host_data["port"]
         url=experiment_configuration["url"]
         method=experiment_configuration["method"]

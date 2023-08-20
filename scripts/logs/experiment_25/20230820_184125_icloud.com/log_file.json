@@ -1,0 +1,31 @@
+[
+    {
+        "number": 0,
+        "request": "GET  HTTP/1.1\r\nHost: www.icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "",
+        "request_length": 313,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Invalid HTTP Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.19676995277404785,
+            "Socket_Close_Time": 0.11756134033203125,
+            "Response_Time": 0.1076364517211914
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 16:41:56 GMT",
+            "via": "http/1.1 dedus1-edge-bx-007.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "255528aa-8ddf-437c-b860-c7797508a5aa-4809687890",
+            "content-length": "219"
+        },
+        "response_length": 219
+    }
+]

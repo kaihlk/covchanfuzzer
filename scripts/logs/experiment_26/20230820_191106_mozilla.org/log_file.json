@@ -1,0 +1,27 @@
+[
+    {
+        "number": 0,
+        "request": "GET  HTTP/1.1\r\nHost: www.mozilla.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "",
+        "request_length": 314,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.6365947723388672,
+            "Socket_Close_Time": 0.10664129257202148,
+            "Response_Time": 0.44370222091674805
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 17:11:49 GMT",
+            "content-type": "text/html",
+            "content-length": "150",
+            "connection": "close"
+        },
+        "response_length": 150
+    }
+]

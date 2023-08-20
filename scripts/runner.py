@@ -175,7 +175,7 @@ class ExperimentRunner:
         #Loop over List
         sub_set_no=1
         start_position=1
-        while start_position <= 100: #len(self.target_list):
+        while start_position <= 10: #len(self.target_list):
             #Get target subset
             subset=self.get_target_subset(start_position,self.experiment_configuration["target_subset_size"])
             

@@ -57,8 +57,7 @@ def generate_standard_request(
 
     # No deviation
     deviation_count = 0
-    return request_string, deviation_count
-
+    return request_string, deviation_count, url
 
 class HTTP1_Request_CC_Case_Insensitivity(HTTP1_Request_Builder):
     def generate_cc_request(self, host, port, url="/", method="GET", headers=None, content=None, fuzzvalue=None):
@@ -97,7 +96,7 @@ class HTTP1_Request_CC_Case_Insensitivity(HTTP1_Request_Builder):
         # Add ending of request
         request_string += "\r\n"
 
-        return request_string, deviation_count
+        return request_string, deviation_count, url
 
 
 
@@ -140,8 +139,7 @@ class HTTP1_Request_CC_Random_Whitespace(HTTP1_Request_Builder):
         # End the request Sclass HTTP1_Request_CC_tring
         request_string += "\r\n"
 
-        return request_string, deviation_count
-
+        return request_string, deviation_count, url
 
 # Covertchannel suggested by Kwecka et al: Reordering ofHeaderfields#
 # Fuzz Parameter no effect, due to Implementation of Shuffle
@@ -181,7 +179,7 @@ class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
         request_string += "\r\n"
 
         # Return the request string and deviation count
-        return request_string, deviation_count
+        return request_string, deviation_count, url
 
 class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
     def generate_cc_request(self,
@@ -255,7 +253,7 @@ class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
 
         request_string += "\r\n"
 
-        return request_string, deviation_count
+        return request_string, deviation_count, new_url
 
 class HTTP1_Request_CC_URI_Represenation_Apache_Localhost(HTTP1_Request_Builder):
     def generate_cc_request(self,
@@ -329,7 +327,7 @@ class HTTP1_Request_CC_URI_Represenation_Apache_Localhost(HTTP1_Request_Builder)
 
         request_string += "\r\n"
 
-        return request_string, deviation_count
+        return request_string, deviation_count, new_url
 
 
 
@@ -373,7 +371,7 @@ class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
 
         request_string += "\r\n"
 
-        return request_string, deviation_count
+        return request_string, deviation_count, new_url
 
 class HTTP1_Request_CC_URI_Hex_Hex(HTTP1_Request_Builder):
     # CC with addional changes in the URL,  HEX Representation of the URL
@@ -460,7 +458,7 @@ class HTTP1_Request_CC_URI_Hex_Hex(HTTP1_Request_Builder):
 
         request_string += "\r\n"
 
-        return request_string, deviation_count
+        return request_string, deviation_count, new_url
 
 
 class HTTP1_Request_CC_Random_Content(HTTP1_Request_Builder):
@@ -511,7 +509,7 @@ class HTTP1_Request_CC_Random_Content(HTTP1_Request_Builder):
 
         # No deviation
         deviation_count = len(content)
-        return request_string, deviation_count
+        return request_string, deviation_count, new_url
 
 
 class HTTP1_Request_CC_Random_Content_No_Lenght_Field(HTTP1_Request_Builder):
@@ -550,14 +548,80 @@ class HTTP1_Request_CC_Random_Content_No_Lenght_Field(HTTP1_Request_Builder):
         # Add Content
         if content is not None:
             request_string += content
-    
-
-
-        # No deviation
+    #new_path = random.choice(["", "/", "/" + path])
         deviation_count = len(content)
-        return request_string, deviation_count
+        return request_string, deviation_count, new_url
 
+class HTTP1_Request_CC_URI_Common_Addresses(HTTP1_Request_Builder):
+    def generate_cc_request(self,
+        host, port, url="/", method="GET", headers=None, content=None, fuzzvalue=0.5
+    ):
+        '''URI in the request line
+        Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers
+        Divide in 3 cover channels due to difference of technique
+        Change the part of the path to make an absolute URI, may include scheme, port or
+        Empty or not given port assune 80
+        http as scheme name and host name case insenitivity'''
+        
+        # Check if headers are provided elsewise take default headers
+        if headers is None:
+            headers = default_headers.copy()
+        else:
+            # Create a copy to avoid modifying the original list
+            headers = headers.copy()
+        
+        # Insert the Host header at the beginning of the list
+        headers.insert(0, ("Host", host))
 
+        # Parse the given host
+        subdomain, hostname, domain= self.parse_host(host)
+
+        # Build a new URL from the given host
+        deviation_count = 0
+        
+        if port==443:
+                new_scheme = "https://"
+        elif port==80:
+                new_scheme = "http://"
+      
+
+        if subdomain == "":
+            new_subdomain = "www."
+        else:
+            new_subdomain= subdomain
+                
+        new_hostname = hostname + "." + domain
+
+        
+
+        standard_paths = [
+            url,
+            "/",
+            "/index.html",
+            "/index.php",
+            "/about",
+            "/contact",
+            "/services",
+            "/support",
+            "/blog",
+            "/favicon.ico",
+        ]
+        
+        new_path= random.choice(standard_paths)
+        if new_path != url:
+            deviation_count += 1
+
+        new_url = new_scheme + new_subdomain + new_hostname + new_path
+
+        request_line = f"{method} {new_url} HTTP/1.1\r\n"
+
+        request_string = request_line
+        for header in headers:
+            request_string += f"{header[0]}: {header[1]}\r\n"
+
+        request_string += "\r\n"
+        print(request_string)    
+        return request_string, deviation_count, new_url
 
 
     # CC Absence or PResense of a header field

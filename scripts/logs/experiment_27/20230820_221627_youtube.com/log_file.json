@@ -1,0 +1,642 @@
+[
+    {
+        "number": 0,
+        "request": "GET http://www.youtube.com/support HTTP/1.1\r\nHost: youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.youtube.com/support",
+        "request_length": 340,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.034169673919677734,
+            "Socket_Close_Time": 1.5125646591186523,
+            "Response_Time": 0.4302361011505127
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Sun, 20 Aug 2023 20:17:05 GMT",
+            "location": "https://www.youtube.com/support",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET http://www.youtube.com/index.php HTTP/1.1\r\nHost: youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.youtube.com/index.php",
+        "request_length": 342,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.14189696311950684,
+            "Socket_Close_Time": 0.13129258155822754,
+            "Response_Time": 0.027538776397705078
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Sun, 20 Aug 2023 20:17:14 GMT",
+            "location": "https://www.youtube.com/index.php",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET http://www.youtube.com/blog HTTP/1.1\r\nHost: youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.youtube.com/blog",
+        "request_length": 337,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.053052663803100586,
+            "Socket_Close_Time": 1.6553642749786377,
+            "Response_Time": 0.1413125991821289
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Sun, 20 Aug 2023 20:17:19 GMT",
+            "location": "https://www.youtube.com/blog",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET http://www.youtube.com/blog HTTP/1.1\r\nHost: youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.youtube.com/blog",
+        "request_length": 337,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.028507232666015625,
+            "Socket_Close_Time": 0.22782039642333984,
+            "Response_Time": 0.5665912628173828
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Sun, 20 Aug 2023 20:17:25 GMT",
+            "location": "https://www.youtube.com/blog",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET http://www.youtube.com/about HTTP/1.1\r\nHost: youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.youtube.com/about",
+        "request_length": 338,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0739898681640625,
+            "Socket_Close_Time": 0.8075144290924072,
+            "Response_Time": 6.433574914932251
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.youtube.com/about",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "226",
+            "x-xss-protection": "0",
+            "date": "Sun, 20 Aug 2023 20:15:37 GMT",
+            "expires": "Sun, 20 Aug 2023 20:45:37 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "115"
+        },
+        "response_length": 226
+    },
+    {
+        "number": 5,
+        "request": "GET http://www.youtube.com/ HTTP/1.1\r\nHost: youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.youtube.com/",
+        "request_length": 333,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.50705885887146,
+            "Socket_Close_Time": 0.11638021469116211,
+            "Response_Time": 0.057949066162109375
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Sun, 20 Aug 2023 20:18:09 GMT",
+            "location": "https://www.youtube.com/",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET http://www.youtube.com/ HTTP/1.1\r\nHost: youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.youtube.com/",
+        "request_length": 333,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10965538024902344,
+            "Socket_Close_Time": 0.12218308448791504,
+            "Response_Time": 0.3788292407989502
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Sun, 20 Aug 2023 20:18:15 GMT",
+            "location": "https://www.youtube.com/",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET http://www.youtube.com/support HTTP/1.1\r\nHost: youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.youtube.com/support",
+        "request_length": 340,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0721902847290039,
+            "Socket_Close_Time": 0.22738099098205566,
+            "Response_Time": 0.35433387756347656
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Sun, 20 Aug 2023 20:18:20 GMT",
+            "location": "https://www.youtube.com/support",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET http://www.youtube.com/support HTTP/1.1\r\nHost: youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.youtube.com/support",
+        "request_length": 340,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.48965883255004883,
+            "Socket_Close_Time": 0.37621355056762695,
+            "Response_Time": 0.07451152801513672
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Sun, 20 Aug 2023 20:18:26 GMT",
+            "location": "https://www.youtube.com/support",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET http://www.youtube.com/index.html HTTP/1.1\r\nHost: youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.youtube.com/index.html",
+        "request_length": 343,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.13631916046142578,
+            "Socket_Close_Time": 0.1874101161956787,
+            "Response_Time": 0.03261089324951172
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Sun, 20 Aug 2023 20:18:31 GMT",
+            "location": "https://www.youtube.com/index.html",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 10,
+        "request": "GET http://www.youtube.com/services HTTP/1.1\r\nHost: youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.youtube.com/services",
+        "request_length": 341,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06599998474121094,
+            "Socket_Close_Time": 0.1114048957824707,
+            "Response_Time": 0.1196596622467041
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Sun, 20 Aug 2023 20:18:34 GMT",
+            "location": "https://www.youtube.com/services",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 11,
+        "request": "GET http://www.youtube.com/index.php HTTP/1.1\r\nHost: youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.youtube.com/index.php",
+        "request_length": 342,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06467986106872559,
+            "Socket_Close_Time": 0.11100316047668457,
+            "Response_Time": 0.10090160369873047
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Sun, 20 Aug 2023 20:18:39 GMT",
+            "location": "https://www.youtube.com/index.php",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 12,
+        "request": "GET http://www.youtube.com HTTP/1.1\r\nHost: youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "http://www.youtube.com",
+        "request_length": 332,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09690737724304199,
+            "Socket_Close_Time": 0.36531519889831543,
+            "Response_Time": 0.3889491558074951
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Sun, 20 Aug 2023 20:18:43 GMT",
+            "location": "https://www.youtube.com/",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 13,
+        "request": "GET http://www.youtube.com/index.html HTTP/1.1\r\nHost: youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.youtube.com/index.html",
+        "request_length": 343,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06270575523376465,
+            "Socket_Close_Time": 0.14502882957458496,
+            "Response_Time": 0.04607987403869629
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Sun, 20 Aug 2023 20:18:55 GMT",
+            "location": "https://www.youtube.com/index.html",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 14,
+        "request": "GET http://www.youtube.com/about HTTP/1.1\r\nHost: youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.youtube.com/about",
+        "request_length": 338,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1153264045715332,
+            "Socket_Close_Time": 0.15252184867858887,
+            "Response_Time": 0.06566596031188965
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.youtube.com/about",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "226",
+            "x-xss-protection": "0",
+            "date": "Sun, 20 Aug 2023 20:15:37 GMT",
+            "expires": "Sun, 20 Aug 2023 20:45:37 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "251"
+        },
+        "response_length": 226
+    },
+    {
+        "number": 15,
+        "request": "GET http://www.youtube.com/index.html HTTP/1.1\r\nHost: youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.youtube.com/index.html",
+        "request_length": 343,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05198383331298828,
+            "Socket_Close_Time": 0.11884140968322754,
+            "Response_Time": 0.3166329860687256
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Sun, 20 Aug 2023 20:19:53 GMT",
+            "location": "https://www.youtube.com/index.html",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 16,
+        "request": "GET http://www.youtube.com HTTP/1.1\r\nHost: youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "http://www.youtube.com",
+        "request_length": 332,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.03268575668334961,
+            "Socket_Close_Time": 0.1576070785522461,
+            "Response_Time": 0.3405015468597412
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Sun, 20 Aug 2023 20:19:58 GMT",
+            "location": "https://www.youtube.com/",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 17,
+        "request": "GET http://www.youtube.com/index.php HTTP/1.1\r\nHost: youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.youtube.com/index.php",
+        "request_length": 342,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05033302307128906,
+            "Socket_Close_Time": 0.2099146842956543,
+            "Response_Time": 0.05082845687866211
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Sun, 20 Aug 2023 20:20:12 GMT",
+            "location": "https://www.youtube.com/index.php",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 18,
+        "request": "GET http://www.youtube.com/about HTTP/1.1\r\nHost: youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.youtube.com/about",
+        "request_length": 338,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 1.029367208480835,
+            "Socket_Close_Time": 0.1358492374420166,
+            "Response_Time": 0.08790278434753418
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.youtube.com/about",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "226",
+            "x-xss-protection": "0",
+            "date": "Sun, 20 Aug 2023 20:15:37 GMT",
+            "expires": "Sun, 20 Aug 2023 20:45:37 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "281"
+        },
+        "response_length": 226
+    },
+    {
+        "number": 19,
+        "request": "GET http://www.youtube.com/blog HTTP/1.1\r\nHost: youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.youtube.com/blog",
+        "request_length": 337,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.16582870483398438,
+            "Socket_Close_Time": 0.3833131790161133,
+            "Response_Time": 5.920682907104492
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Sun, 20 Aug 2023 20:20:25 GMT",
+            "location": "https://www.youtube.com/blog",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 0
+    }
+]

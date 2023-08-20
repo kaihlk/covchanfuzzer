@@ -1,0 +1,521 @@
+[
+    {
+        "number": 0,
+        "request": "GET http://wwwgoogle.com/blog HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://wwwgoogle.com/blog",
+        "request_length": 338,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0718543529510498,
+            "Socket_Close_Time": 0.3323969841003418,
+            "Response_Time": 0.2236335277557373
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1565",
+            "date": "Sun, 20 Aug 2023 20:20:39 GMT"
+        },
+        "response_length": 1561
+    },
+    {
+        "number": 1,
+        "request": "GET http://wwwgoogle.com/about HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://wwwgoogle.com/about",
+        "request_length": 339,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06858372688293457,
+            "Socket_Close_Time": 0.13944673538208008,
+            "Response_Time": 0.22667765617370605
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1566",
+            "date": "Sun, 20 Aug 2023 20:20:42 GMT"
+        },
+        "response_length": 1562
+    },
+    {
+        "number": 2,
+        "request": "GET http://wwwgoogle.com HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "http://wwwgoogle.com",
+        "request_length": 333,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11008167266845703,
+            "Socket_Close_Time": 0.2774922847747803,
+            "Response_Time": 0.0702662467956543
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Sun, 20 Aug 2023 20:20:46 GMT",
+            "expires": "Sun, 20 Aug 2023 20:50:46 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "220",
+            "x-xss-protection": "0"
+        },
+        "response_length": 220
+    },
+    {
+        "number": 3,
+        "request": "GET http://wwwgoogle.com/services HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://wwwgoogle.com/services",
+        "request_length": 342,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.14642643928527832,
+            "Socket_Close_Time": 0.2343747615814209,
+            "Response_Time": 0.1326894760131836
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1569",
+            "date": "Sun, 20 Aug 2023 20:20:48 GMT"
+        },
+        "response_length": 1565
+    },
+    {
+        "number": 4,
+        "request": "GET http://wwwgoogle.com/services HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://wwwgoogle.com/services",
+        "request_length": 342,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.20002341270446777,
+            "Socket_Close_Time": 0.17161011695861816,
+            "Response_Time": 0.2673304080963135
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1569",
+            "date": "Sun, 20 Aug 2023 20:20:51 GMT"
+        },
+        "response_length": 1565
+    },
+    {
+        "number": 5,
+        "request": "GET http://wwwgoogle.com/services HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://wwwgoogle.com/services",
+        "request_length": 342,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0576176643371582,
+            "Socket_Close_Time": 0.12526202201843262,
+            "Response_Time": 0.7864551544189453
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1569",
+            "date": "Sun, 20 Aug 2023 20:20:54 GMT"
+        },
+        "response_length": 1565
+    },
+    {
+        "number": 6,
+        "request": "GET http://wwwgoogle.com/index.php HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://wwwgoogle.com/index.php",
+        "request_length": 343,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 1.0982179641723633,
+            "Socket_Close_Time": 0.10267877578735352,
+            "Response_Time": 0.17189860343933105
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1570",
+            "date": "Sun, 20 Aug 2023 20:20:56 GMT"
+        },
+        "response_length": 1566
+    },
+    {
+        "number": 7,
+        "request": "GET http://wwwgoogle.com/contact HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://wwwgoogle.com/contact",
+        "request_length": 341,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08974814414978027,
+            "Socket_Close_Time": 0.11543869972229004,
+            "Response_Time": 0.20197772979736328
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1568",
+            "date": "Sun, 20 Aug 2023 20:20:59 GMT"
+        },
+        "response_length": 1564
+    },
+    {
+        "number": 8,
+        "request": "GET http://wwwgoogle.com/ HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://wwwgoogle.com/",
+        "request_length": 334,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 12.736603021621704,
+            "Socket_Close_Time": 0.2674984931945801,
+            "Response_Time": 0.04388737678527832
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Sun, 20 Aug 2023 20:21:15 GMT",
+            "expires": "Sun, 20 Aug 2023 20:51:15 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "220",
+            "x-xss-protection": "0"
+        },
+        "response_length": 220
+    },
+    {
+        "number": 9,
+        "request": "GET http://wwwgoogle.com/about HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://wwwgoogle.com/about",
+        "request_length": 339,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11927413940429688,
+            "Socket_Close_Time": 0.18089604377746582,
+            "Response_Time": 0.26848697662353516
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1566",
+            "date": "Sun, 20 Aug 2023 20:21:17 GMT"
+        },
+        "response_length": 1562
+    },
+    {
+        "number": 10,
+        "request": "GET http://wwwgoogle.com/support HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://wwwgoogle.com/support",
+        "request_length": 341,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.25142526626586914,
+            "Socket_Close_Time": 0.18251442909240723,
+            "Response_Time": 0.796879768371582
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1568",
+            "date": "Sun, 20 Aug 2023 20:21:20 GMT"
+        },
+        "response_length": 1564
+    },
+    {
+        "number": 11,
+        "request": "GET http://wwwgoogle.com/index.html HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://wwwgoogle.com/index.html",
+        "request_length": 344,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.012977123260498047,
+            "Socket_Close_Time": 0.30857324600219727,
+            "Response_Time": 0.15892267227172852
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1571",
+            "date": "Sun, 20 Aug 2023 20:21:23 GMT"
+        },
+        "response_length": 1567
+    },
+    {
+        "number": 12,
+        "request": "GET http://wwwgoogle.com/blog HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://wwwgoogle.com/blog",
+        "request_length": 338,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.028858661651611328,
+            "Socket_Close_Time": 0.19858551025390625,
+            "Response_Time": 0.390230655670166
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1565",
+            "date": "Sun, 20 Aug 2023 20:21:26 GMT"
+        },
+        "response_length": 1561
+    },
+    {
+        "number": 13,
+        "request": "GET http://wwwgoogle.com/favicon.ico HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://wwwgoogle.com/favicon.ico",
+        "request_length": 345,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.052175045013427734,
+            "Socket_Close_Time": 0.15905094146728516,
+            "Response_Time": 0.20973968505859375
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1572",
+            "date": "Sun, 20 Aug 2023 20:21:30 GMT"
+        },
+        "response_length": 1568
+    },
+    {
+        "number": 14,
+        "request": "GET http://wwwgoogle.com/index.php HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://wwwgoogle.com/index.php",
+        "request_length": 343,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.13108086585998535,
+            "Socket_Close_Time": 0.23031830787658691,
+            "Response_Time": 0.14843058586120605
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1570",
+            "date": "Sun, 20 Aug 2023 20:21:33 GMT"
+        },
+        "response_length": 1566
+    },
+    {
+        "number": 15,
+        "request": "GET http://wwwgoogle.com/support HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://wwwgoogle.com/support",
+        "request_length": 341,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.03108358383178711,
+            "Socket_Close_Time": 1.499894618988037,
+            "Response_Time": 0.28145480155944824
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1568",
+            "date": "Sun, 20 Aug 2023 20:21:35 GMT"
+        },
+        "response_length": 1564
+    },
+    {
+        "number": 16,
+        "request": "GET http://wwwgoogle.com HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "http://wwwgoogle.com",
+        "request_length": 333,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1025853157043457,
+            "Socket_Close_Time": 0.23061466217041016,
+            "Response_Time": 0.133026123046875
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "220",
+            "x-xss-protection": "0",
+            "date": "Sun, 20 Aug 2023 20:20:46 GMT",
+            "expires": "Sun, 20 Aug 2023 20:50:46 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "52"
+        },
+        "response_length": 220
+    },
+    {
+        "number": 17,
+        "request": "GET http://wwwgoogle.com/index.html HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://wwwgoogle.com/index.html",
+        "request_length": 344,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1547400951385498,
+            "Socket_Close_Time": 0.19422507286071777,
+            "Response_Time": 0.13333630561828613
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1571",
+            "date": "Sun, 20 Aug 2023 20:21:40 GMT"
+        },
+        "response_length": 1567
+    },
+    {
+        "number": 18,
+        "request": "GET http://wwwgoogle.com/contact HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://wwwgoogle.com/contact",
+        "request_length": 341,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02125859260559082,
+            "Socket_Close_Time": 0.1926729679107666,
+            "Response_Time": 0.2595794200897217
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1568",
+            "date": "Sun, 20 Aug 2023 20:21:42 GMT"
+        },
+        "response_length": 1564
+    },
+    {
+        "number": 19,
+        "request": "GET http://wwwgoogle.com/support HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://wwwgoogle.com/support",
+        "request_length": 341,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.03497481346130371,
+            "Socket_Close_Time": 0.29959964752197266,
+            "Response_Time": 0.1226663589477539
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1568",
+            "date": "Sun, 20 Aug 2023 20:21:44 GMT"
+        },
+        "response_length": 1564
+    }
+]

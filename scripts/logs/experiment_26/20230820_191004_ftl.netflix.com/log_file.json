@@ -1,0 +1,34 @@
+[
+    {
+        "number": 0,
+        "request": "GET  HTTP/1.1\r\nHost: www.ftl.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08617186546325684,
+            "Socket_Close_Time": 0.586357593536377,
+            "Response_Time": 0.022331714630126953
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sun, 20 Aug 2023 17:10:33 GMT",
+            "content-type": "text/html",
+            "content-length": "150",
+            "connection": "close",
+            "timing-allow-origin": "*",
+            "cache-control": "no-store",
+            "pragma": "no-cache",
+            "access-control-allow-origin": "*",
+            "access-control-expose-headers": "X-TCP-Info",
+            "x-tcp-info": "addr=89.56.127.202;port=54249;sc="
+        },
+        "response_length": 150
+    }
+]

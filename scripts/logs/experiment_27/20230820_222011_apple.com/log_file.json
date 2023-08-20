@@ -1,0 +1,602 @@
+[
+    {
+        "number": 0,
+        "request": "GET http://www.apple.com/contact HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.apple.com/contact",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2111072540283203,
+            "Socket_Close_Time": 0.21086859703063965,
+            "Response_Time": 0.20648431777954102
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 20:20:38 GMT",
+            "connection": "keep-alive",
+            "via": "http/1.1 dedus1-edge-bx-003.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "92d80277-2402-415e-8140-c58370fe279d-5642335937",
+            "content-length": "287"
+        },
+        "response_length": 287
+    },
+    {
+        "number": 1,
+        "request": "GET http://www.apple.com/favicon.ico HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.apple.com/favicon.ico",
+        "request_length": 340,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02440929412841797,
+            "Socket_Close_Time": 0.3360891342163086,
+            "Response_Time": 0.31989288330078125
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 20:20:41 GMT",
+            "connection": "keep-alive",
+            "via": "http/1.1 dedus1-edge-bx-003.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "92d80277-2402-415e-8140-c58370fe279d-5642366419",
+            "content-length": "287"
+        },
+        "response_length": 287
+    },
+    {
+        "number": 2,
+        "request": "GET http://www.apple.com/index.html HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.apple.com/index.html",
+        "request_length": 339,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.181260347366333,
+            "Socket_Close_Time": 0.12123656272888184,
+            "Response_Time": 0.02002739906311035
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 20:20:46 GMT",
+            "connection": "keep-alive",
+            "via": "http/1.1 dedus1-edge-bx-007.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "255528aa-8ddf-437c-b860-c7797508a5aa-4974152995",
+            "content-length": "287"
+        },
+        "response_length": 287
+    },
+    {
+        "number": 3,
+        "request": "GET http://www.apple.com HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "http://www.apple.com",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.04292654991149902,
+            "Socket_Close_Time": 0.10748910903930664,
+            "Response_Time": 0.05190253257751465
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 20:20:48 GMT",
+            "connection": "keep-alive",
+            "via": "http/1.1 dedus1-edge-bx-001.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "dd33b93b-1743-40bd-8fef-02243c8afdf6-5549684293",
+            "content-length": "287"
+        },
+        "response_length": 287
+    },
+    {
+        "number": 4,
+        "request": "GET http://www.apple.com/about HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.apple.com/about",
+        "request_length": 334,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06276345252990723,
+            "Socket_Close_Time": 0.14142274856567383,
+            "Response_Time": 0.10441303253173828
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 20:20:51 GMT",
+            "connection": "keep-alive",
+            "via": "http/1.1 dedus1-edge-bx-001.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "dd33b93b-1743-40bd-8fef-02243c8afdf6-5549725416",
+            "content-length": "287"
+        },
+        "response_length": 287
+    },
+    {
+        "number": 5,
+        "request": "GET http://www.apple.com/index.php HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.apple.com/index.php",
+        "request_length": 338,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.03415369987487793,
+            "Socket_Close_Time": 0.1837165355682373,
+            "Response_Time": 0.09224700927734375
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 20:20:53 GMT",
+            "connection": "keep-alive",
+            "via": "http/1.1 dedus1-edge-bx-001.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "dd33b93b-1743-40bd-8fef-02243c8afdf6-5549754669",
+            "content-length": "287"
+        },
+        "response_length": 287
+    },
+    {
+        "number": 6,
+        "request": "GET http://www.apple.com/ HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.apple.com/",
+        "request_length": 329,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10729646682739258,
+            "Socket_Close_Time": 0.12215662002563477,
+            "Response_Time": 0.07445716857910156
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 20:20:55 GMT",
+            "connection": "keep-alive",
+            "via": "http/1.1 dedus1-edge-bx-005.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "e78663ca-cdef-4442-bc62-a59408685f2c-5616695038",
+            "content-length": "287"
+        },
+        "response_length": 287
+    },
+    {
+        "number": 7,
+        "request": "GET http://www.apple.com HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "http://www.apple.com",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0958247184753418,
+            "Socket_Close_Time": 0.1940774917602539,
+            "Response_Time": 0.1706836223602295
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 20:20:58 GMT",
+            "connection": "keep-alive",
+            "via": "http/1.1 dedus1-edge-bx-001.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "dd33b93b-1743-40bd-8fef-02243c8afdf6-5549835287",
+            "content-length": "287"
+        },
+        "response_length": 287
+    },
+    {
+        "number": 8,
+        "request": "GET http://www.apple.com/favicon.ico HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.apple.com/favicon.ico",
+        "request_length": 340,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06018805503845215,
+            "Socket_Close_Time": 0.2572958469390869,
+            "Response_Time": 0.10663461685180664
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 20:21:02 GMT",
+            "connection": "keep-alive",
+            "via": "http/1.1 dedus1-edge-bx-005.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "e78663ca-cdef-4442-bc62-a59408685f2c-5616798745",
+            "content-length": "287"
+        },
+        "response_length": 287
+    },
+    {
+        "number": 9,
+        "request": "GET http://www.apple.com/blog HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.apple.com/blog",
+        "request_length": 333,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.050930023193359375,
+            "Socket_Close_Time": 0.14750075340270996,
+            "Response_Time": 0.3063786029815674
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 20:21:17 GMT",
+            "connection": "keep-alive",
+            "via": "http/1.1 dedus1-edge-bx-005.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "e78663ca-cdef-4442-bc62-a59408685f2c-5617001185",
+            "content-length": "287"
+        },
+        "response_length": 287
+    },
+    {
+        "number": 10,
+        "request": "GET http://www.apple.com/support HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.apple.com/support",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.20921587944030762,
+            "Socket_Close_Time": 0.19949841499328613,
+            "Response_Time": 0.11442041397094727
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 20:21:19 GMT",
+            "connection": "keep-alive",
+            "via": "http/1.1 dedus1-edge-bx-001.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "dd33b93b-1743-40bd-8fef-02243c8afdf6-5550124385",
+            "content-length": "287"
+        },
+        "response_length": 287
+    },
+    {
+        "number": 11,
+        "request": "GET http://www.apple.com/index.html HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.apple.com/index.html",
+        "request_length": 339,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.04968380928039551,
+            "Socket_Close_Time": 0.21828866004943848,
+            "Response_Time": 0.20323848724365234
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 20:21:22 GMT",
+            "connection": "keep-alive",
+            "via": "http/1.1 dedus1-edge-bx-007.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "255528aa-8ddf-437c-b860-c7797508a5aa-4974653972",
+            "content-length": "287"
+        },
+        "response_length": 287
+    },
+    {
+        "number": 12,
+        "request": "GET http://www.apple.com/favicon.ico HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.apple.com/favicon.ico",
+        "request_length": 340,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05456352233886719,
+            "Socket_Close_Time": 0.3263216018676758,
+            "Response_Time": 0.11981463432312012
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 20:21:25 GMT",
+            "connection": "keep-alive",
+            "via": "http/1.1 dedus1-edge-bx-001.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "dd33b93b-1743-40bd-8fef-02243c8afdf6-5550199640",
+            "content-length": "287"
+        },
+        "response_length": 287
+    },
+    {
+        "number": 13,
+        "request": "GET http://www.apple.com/support HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.apple.com/support",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.026149272918701172,
+            "Socket_Close_Time": 0.14757609367370605,
+            "Response_Time": 0.10193467140197754
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 20:21:29 GMT",
+            "connection": "keep-alive",
+            "via": "http/1.1 dedus1-edge-bx-001.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "dd33b93b-1743-40bd-8fef-02243c8afdf6-5550263789",
+            "content-length": "287"
+        },
+        "response_length": 287
+    },
+    {
+        "number": 14,
+        "request": "GET http://www.apple.com/index.php HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.apple.com/index.php",
+        "request_length": 338,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.04926323890686035,
+            "Socket_Close_Time": 0.19790983200073242,
+            "Response_Time": 0.09390401840209961
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 20:21:32 GMT",
+            "connection": "keep-alive",
+            "via": "http/1.1 dedus1-edge-bx-007.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "255528aa-8ddf-437c-b860-c7797508a5aa-4974781033",
+            "content-length": "287"
+        },
+        "response_length": 287
+    },
+    {
+        "number": 15,
+        "request": "GET http://www.apple.com/favicon.ico HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.apple.com/favicon.ico",
+        "request_length": 340,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05158829689025879,
+            "Socket_Close_Time": 0.2562851905822754,
+            "Response_Time": 0.12619972229003906
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 20:21:34 GMT",
+            "connection": "keep-alive",
+            "via": "http/1.1 dedus1-edge-bx-001.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "dd33b93b-1743-40bd-8fef-02243c8afdf6-5550331020",
+            "content-length": "287"
+        },
+        "response_length": 287
+    },
+    {
+        "number": 16,
+        "request": "GET http://www.apple.com/favicon.ico HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.apple.com/favicon.ico",
+        "request_length": 340,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.34354281425476074,
+            "Socket_Close_Time": 0.20485210418701172,
+            "Response_Time": 0.0634002685546875
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 20:21:38 GMT",
+            "connection": "keep-alive",
+            "via": "http/1.1 dedus1-edge-bx-001.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "dd33b93b-1743-40bd-8fef-02243c8afdf6-5550376985",
+            "content-length": "287"
+        },
+        "response_length": 287
+    },
+    {
+        "number": 17,
+        "request": "GET http://www.apple.com/blog HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.apple.com/blog",
+        "request_length": 333,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08091950416564941,
+            "Socket_Close_Time": 0.14380621910095215,
+            "Response_Time": 0.023821592330932617
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 20:21:40 GMT",
+            "connection": "keep-alive",
+            "via": "http/1.1 dedus1-edge-bx-003.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "92d80277-2402-415e-8140-c58370fe279d-5643189230",
+            "content-length": "287"
+        },
+        "response_length": 287
+    },
+    {
+        "number": 18,
+        "request": "GET http://www.apple.com/favicon.ico HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.apple.com/favicon.ico",
+        "request_length": 340,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05645346641540527,
+            "Socket_Close_Time": 0.18228864669799805,
+            "Response_Time": 0.02490687370300293
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 20:21:42 GMT",
+            "connection": "keep-alive",
+            "via": "http/1.1 dedus1-edge-bx-005.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "e78663ca-cdef-4442-bc62-a59408685f2c-5617340393",
+            "content-length": "287"
+        },
+        "response_length": 287
+    },
+    {
+        "number": 19,
+        "request": "GET http://www.apple.com/ HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://www.apple.com/",
+        "request_length": 329,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05931687355041504,
+            "Socket_Close_Time": 0.18841910362243652,
+            "Response_Time": 0.12925505638122559
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sun, 20 Aug 2023 20:21:44 GMT",
+            "connection": "keep-alive",
+            "via": "http/1.1 dedus1-edge-bx-007.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "255528aa-8ddf-437c-b860-c7797508a5aa-4974940937",
+            "content-length": "287"
+        },
+        "response_length": 287
+    }
+]

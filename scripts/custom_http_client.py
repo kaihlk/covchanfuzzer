@@ -223,7 +223,7 @@ class CustomHTTP(HTTP):
                 print(host_ip_info[0][4])
                 tls_socket.connect(host_ip_info[0][4])
                 tls_socket.settimeout(timeout)
-                #assert "http/1.1" == tls_socket.selected_alpn_protocol()
+                #assert "http/1.1" == tls_socket.selected_alpn_protocol()  # Assert Error Problem with saving log to json
                 stream_socket = SuperSocket.SSLStreamSocket(tls_socket, basecls=HTTP)
                 return stream_socket, error_message
             except socket.error as ex:
@@ -360,7 +360,6 @@ class CustomHTTP(HTTP):
             # Establish a socket connection
             start_time=time.time() 
             sock = self.create_tcp_socket(host_ip_info, timeout) 
-            print(sock)
             # Upgrade to TLS depending on the port  
             if 443 == port:
                 tls_socket=self.upgrade_to_tls(sock, host, log_path)
@@ -375,14 +374,15 @@ class CustomHTTP(HTTP):
                 print(socket_connect_time)
         except Exception as ex0:
             print("An error occurred:", ex0)
-            error_messages.append(ex0)
-            if 'stream_socket' in locals() and stream_socket is not None:
-                stream_socket.close()
+            error_messages.append(ex0)            
             if 'tls_socket' in locals():
+                #tls_socket.shutdown(1)
                 tls_socket.close()
             if 'sock' in locals():
+                #sock.shutdown(1)
                 sock.close()
-                    
+            if 'stream_socket' in locals() and stream_socket is not None:
+                stream_socket.close()
      
         if stream_socket is not None:
             try:
@@ -410,11 +410,12 @@ class CustomHTTP(HTTP):
                 start_time=time.time()
                 try:
                     if 443 == port:
-                        tls_socket.shutdown(1)
+                      #  tls_socket.shutdown(1)
                         time.sleep(0.1)
                         stream_socket.close()
                     else:
-                        sock.shutdown(1)            
+                       # sock.shutdown(1)
+                        time.sleep(0.1) #Preventing RST Packets           
                         stream_socket.close()
                     end_time = time.time()
                     socket_close_time=end_time-start_time
@@ -424,14 +425,7 @@ class CustomHTTP(HTTP):
                     error_messages.append(str(ex3))
                     print(ex3)
                     pass
-        """   else:
-            try:
-                sock.shutdown(1)
-            except socket.error as ex4:
-                    error_messages.append(str(ex4))
-                    print(ex4)
-                    pass     """
-        print("Response Payload")
+
         print(response)
         response_line=None
         response_headers=None
