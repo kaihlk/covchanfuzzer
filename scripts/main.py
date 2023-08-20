@@ -87,8 +87,8 @@ def main():
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
         "target_list": "target_list_subdomain.csv",
-        "target_subset_size": 3,
-        #"target_host": "www.example.com",  #Just for special use
+        "target_subset_size": 10,
+        #"target_host": "www.example.com",  #Just for special useipvs
         "target_port": None, #443, 8080 Apache
 
         #Connection Options
@@ -106,8 +106,7 @@ def main():
         "content": "random",  #"random", "some_text""fuzz_value": 0.9,
             
 
-        
-        
+
     }
 
     

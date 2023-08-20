@@ -58,14 +58,15 @@ class ExperimentRunner:
         #Lookup DNS for each entry
         #TODO Catch the case that IPv4 or IPv6 is not provided, some sites sends more than one IP/Port set per protocoll version,  example macromedia.com and criteo.com
         for entry in sub_set:
-            #print(entry)
-            socket_info = CustomHTTP().lookup_dns(entry, self.target_port)
+            print("DNS Lookup for:"+entry)
+            socket_info = CustomHTTP().lookup_dns(entry, self.target_port, self.experiment_configuration["use_ipv4"])
             if socket_info:
                 print(socket_info)
                 if self.experiment_configuration["use_ipv4"]:
                     ip_address, port=  socket_info[0][4]
                 else:#IPv6
-                    ip_address, port=  socket_info[1][4]     
+                    ip_address=  socket_info[0][4][0]
+                    port = socket_info[0][4][1]
                 if port!=self.target_port:
                     print("Warning: Retrieved port doesn't match configured port (r. Port/c.Port"+str(port)+"/"+str(self.target_port))
                 sub_set_dns.append({"host":entry, "socket_info":socket_info, "ip_address":ip_address, "port":port })
@@ -174,7 +175,7 @@ class ExperimentRunner:
         #Loop over List
         sub_set_no=1
         start_position=1
-        while start_position <= 6: #len(self.target_list):
+        while start_position <= 100: #len(self.target_list):
             #Get target subset
             subset=self.get_target_subset(start_position,self.experiment_configuration["target_subset_size"])
             
@@ -258,23 +259,5 @@ class ExperimentRunner:
 
             start_position += self.experiment_configuration["target_sub_setsize"] """
 
-         #Take  Subset
-        # Create an Experiment Folder
-        # Create Subfolders for each target
-        # start parallel capturing processes
-        # loop over the list
-        # save meta data for each target.
-        """
-        """       
-
-        # Save Experiment Metadata
-
-        #logger.save_logfiles(request_data_list, result_variables)
-   
-
-    #TODO
-    def calculate_statistics():
-        return 0
-    #TODO
-    def make_entry_to_experiment_list():
-        return 0
+  
+        return

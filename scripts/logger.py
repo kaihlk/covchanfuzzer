@@ -323,7 +323,7 @@ class TestRunLogger:
             print("Error occurred during packet capture:", ex)
         return
 
-        def capture_thread():
+        """  def capture_thread():
             try:
                 self.capture.apply_on_packets(self.packet_handler, timeout=1)
             except KeyboardInterrupt:
@@ -339,7 +339,7 @@ class TestRunLogger:
         self.capture.close()
 
         print("Packets captured and saved to", pcap_path)
-        return
+        return """
 
 class ExperimentLogger:
     def __init__(self, experiment_configuration):
@@ -424,7 +424,7 @@ class ExperimentLogger:
             # If the response arrived, terminate the capturing process early
             print("End of run. Capturing terminated.")
             subprocess.run(["pkill", "dumpcap"], check=False)  # Terminate dumpcap process      
-            print("Packets captured and saved to", pcap_path)       
+            print("Packets of all communication captured and saved to", pcap_path)       
             time.sleep(1)
 
         except subprocess.TimeoutExpired:
@@ -432,7 +432,7 @@ class ExperimentLogger:
             print("Timeout limit reached. Capturing terminated.")
             subprocess.run(["pkill", "dumpcap"], check=False)  # Terminate dumpcap process
             print("Process 'dumpcap' was successfully terminated.")
-            print("Packets captured and saved to", pcap_path)
+            
         
         except subprocess.CalledProcessError as ex:
             print("Error occurred during packet capture:", ex)
