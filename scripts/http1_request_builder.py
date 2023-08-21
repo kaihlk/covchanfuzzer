@@ -11,6 +11,9 @@ from urllib.parse import quote
 
 class HTTP1_Request_Builder:
     def __init__(self): 
+        self.host_placeholder= ">>HOST_PLACEHOLDER<<"
+        self.domain_placeholder=">>DOMAIN_PLACEHOLDER<<"
+        self.generated_request=""
         self.default_headers_sets = {
             # The request line and the host and the url field must be generated and inserted in the functions
             "curl_HTTP/1.1(TLS)": [
@@ -151,15 +154,15 @@ class HTTP1_Request_Builder:
      
         return scheme, subdomain, hostname, domain, port, path """
 
-    def generate_cc_request(self, host, port, uri="/", method="GET", headers=None, content=None, fuzzvalue=None):
+    def generate_cc_request(self, port, uri="/", method="GET", headers=None, content=None, fuzzvalue=None):
         '''Generation of request package, CCs mut implement this '''
        
 
         # Insert the Host header at the beginning of the list
-        headers.insert(0, ("Host", host))
+        headers.insert(0, ("Host", self.host_placeholder))
 
         # Build the request_line from the provided arguments
-        request_line = f"{method} {uri} HTTP/1.1\r\n"
+        request_line = f"{method} {domain_placeholder} HTTP/1.1\r\n"
 
         # Build the request from request line and headers
         request_string = request_line
@@ -173,11 +176,11 @@ class HTTP1_Request_Builder:
         deviation_count = 0
         return request_string, deviation_count, uri
 
-    def generate_request(self, experiment_configuration, host_data):
+    def generate_request(self, experiment_configuration):
         
-        host=host_data["host"]
-        port=host_data["port"]
-        url=experiment_configuration["url"]
+        #host=host_data["host"]
+        port=experiment_configuration["target_port"]
+        uri=experiment_configuration["url"]
         method=experiment_configuration["method"]
         headers=experiment_configuration["headers"]
         standard_headers=experiment_configuration["standard_headers"]
@@ -190,4 +193,13 @@ class HTTP1_Request_Builder:
             else:
                 headers = self.default_headers_sets["curl_HTTP/1.1(TLS)"].copy()
             # Create a copy to avoid modifying the original list
-        return self.generate_cc_request(host, port, url, method, headers, content, fuzzvalue)
+        return self.generate_cc_request(port, method, uri, headers, content, fuzzvalue)
+
+    def replace_host_and_domain(self, prerequest, host, domain=None):
+        if domain==None:
+            domain=host
+        request=prerequest.replace(self.domain_placeholder,domain)
+
+        request=request.replace(self.host_placeholder, host)
+
+        return request

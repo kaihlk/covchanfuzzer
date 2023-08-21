@@ -1,0 +1,252 @@
+[
+    {
+        "number": 0,
+        "request": "GET microsoft.com/blog HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.6684315204620361,
+            "Socket_Close_Time": 0.48333001136779785,
+            "Response_Time": 0.5384457111358643
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:22:53 GMT",
+            "server": "Kestrel"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET microsoft.com/blog HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.0053074359893799,
+            "Socket_Close_Time": 0.3806416988372803,
+            "Response_Time": 0.5602200031280518
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:23:48 GMT",
+            "server": "Kestrel"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET microsoft.com/index.html HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.24039626121520996,
+            "Socket_Close_Time": 0.2686197757720947,
+            "Response_Time": 0.17935705184936523
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:24:43 GMT",
+            "server": "Kestrel"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET microsoft.com/ HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.19016456604003906,
+            "Socket_Close_Time": 0.7426762580871582,
+            "Response_Time": 0.7010884284973145
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:25:54 GMT",
+            "server": "Kestrel"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET microsoft.com/index.html HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.6977639198303223,
+            "Socket_Close_Time": 0.31894588470458984,
+            "Response_Time": 0.24700713157653809
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:27:12 GMT",
+            "server": "Kestrel"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 5,
+        "request": "GET microsoft.com/blog HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.22131133079528809,
+            "Socket_Close_Time": 0.19350099563598633,
+            "Response_Time": 0.6196460723876953
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:28:47 GMT",
+            "server": "Kestrel"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET microsoft.com/index.html HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.842498779296875,
+            "Socket_Close_Time": 1.797804832458496,
+            "Response_Time": 0.2341768741607666
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:30:10 GMT",
+            "server": "Kestrel"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET microsoft.com/index.html HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.4935762882232666,
+            "Socket_Close_Time": 0.7018303871154785,
+            "Response_Time": 0.7121527194976807
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:31:27 GMT",
+            "server": "Kestrel"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET microsoft.com/ HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2524878978729248,
+            "Socket_Close_Time": 2.752326488494873,
+            "Response_Time": 1.0478410720825195
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:32:57 GMT",
+            "server": "Kestrel"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET microsoft.com/blog HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.24832725524902344,
+            "Socket_Close_Time": 0.5365798473358154,
+            "Response_Time": 0.2946920394897461
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:34:09 GMT",
+            "server": "Kestrel"
+        },
+        "response_length": 0
+    }
+]

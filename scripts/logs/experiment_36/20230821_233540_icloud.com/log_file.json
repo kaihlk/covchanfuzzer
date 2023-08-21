@@ -1,0 +1,302 @@
+[
+    {
+        "number": 0,
+        "request": "GET icloud.com HTTP/1.1\r\nHost: icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Invalid HTTP Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.6648221015930176,
+            "Socket_Close_Time": 0.39549827575683594,
+            "Response_Time": 0.9472794532775879
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 21 Aug 2023 21:35:58 GMT",
+            "connection": "close",
+            "via": "http/1.1 dedus1-edge-bx-001.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "dd33b93b-1743-40bd-8fef-02243c8afdf6-6494061419",
+            "content-length": "219"
+        },
+        "response_length": 219
+    },
+    {
+        "number": 1,
+        "request": "GET icloud.com/index.html HTTP/1.1\r\nHost: icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Invalid HTTP Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08524394035339355,
+            "Socket_Close_Time": 0.576911449432373,
+            "Response_Time": 1.901524305343628
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 21 Aug 2023 21:37:23 GMT",
+            "connection": "close",
+            "via": "http/1.1 dedus1-edge-bx-007.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "255528aa-8ddf-437c-b860-c7797508a5aa-5913635141",
+            "content-length": "219"
+        },
+        "response_length": 219
+    },
+    {
+        "number": 2,
+        "request": "GET icloud.com/contact HTTP/1.1\r\nHost: icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Invalid HTTP Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.3110167980194092,
+            "Socket_Close_Time": 0.4254136085510254,
+            "Response_Time": 0.4074275493621826
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 21 Aug 2023 21:38:57 GMT",
+            "connection": "close",
+            "via": "http/1.1 dedus1-edge-bx-001.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "dd33b93b-1743-40bd-8fef-02243c8afdf6-6496395084",
+            "content-length": "219"
+        },
+        "response_length": 219
+    },
+    {
+        "number": 3,
+        "request": "GET icloud.com/about HTTP/1.1\r\nHost: icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Invalid HTTP Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2789950370788574,
+            "Socket_Close_Time": 0.45670413970947266,
+            "Response_Time": 0.6593058109283447
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 21 Aug 2023 21:40:36 GMT",
+            "connection": "close",
+            "via": "http/1.1 dedus1-edge-bx-003.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "bd7ea167-ce5b-44eb-b68b-dec9bbe0b3e4-693340716",
+            "content-length": "219"
+        },
+        "response_length": 219
+    },
+    {
+        "number": 4,
+        "request": "GET icloud.com/ HTTP/1.1\r\nHost: icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Invalid HTTP Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.17079448699951172,
+            "Socket_Close_Time": 0.10786008834838867,
+            "Response_Time": 1.1966276168823242
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 21 Aug 2023 21:42:15 GMT",
+            "connection": "close",
+            "via": "http/1.1 dedus1-edge-bx-005.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "e78663ca-cdef-4442-bc62-a59408685f2c-6572126724",
+            "content-length": "219"
+        },
+        "response_length": 219
+    },
+    {
+        "number": 5,
+        "request": "GET icloud.com/contact HTTP/1.1\r\nHost: icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Invalid HTTP Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.3991541862487793,
+            "Socket_Close_Time": 0.32747340202331543,
+            "Response_Time": 10.249491453170776
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 21 Aug 2023 21:44:07 GMT",
+            "connection": "close",
+            "via": "http/1.1 dedus1-edge-bx-007.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "255528aa-8ddf-437c-b860-c7797508a5aa-5918840821",
+            "content-length": "219"
+        },
+        "response_length": 219
+    },
+    {
+        "number": 6,
+        "request": "GET icloud.com/about HTTP/1.1\r\nHost: icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Invalid HTTP Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.23968267440795898,
+            "Socket_Close_Time": 0.13368701934814453,
+            "Response_Time": 1.7904980182647705
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 21 Aug 2023 21:45:30 GMT",
+            "connection": "close",
+            "via": "http/1.1 dedus1-edge-bx-005.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "e78663ca-cdef-4442-bc62-a59408685f2c-6574625456",
+            "content-length": "219"
+        },
+        "response_length": 219
+    },
+    {
+        "number": 7,
+        "request": "GET icloud.com/support HTTP/1.1\r\nHost: icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</support",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Invalid HTTP Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0888376235961914,
+            "Socket_Close_Time": 0.570068359375,
+            "Response_Time": 0.9044926166534424
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 21 Aug 2023 21:46:56 GMT",
+            "connection": "close",
+            "via": "http/1.1 dedus1-edge-bx-003.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "bd7ea167-ce5b-44eb-b68b-dec9bbe0b3e4-698189665",
+            "content-length": "219"
+        },
+        "response_length": 219
+    },
+    {
+        "number": 8,
+        "request": "GET icloud.com/ HTTP/1.1\r\nHost: icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Invalid HTTP Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.6269865036010742,
+            "Socket_Close_Time": 0.10571980476379395,
+            "Response_Time": 0.07436943054199219
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 21 Aug 2023 21:48:33 GMT",
+            "connection": "close",
+            "via": "http/1.1 dedus1-edge-bx-005.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "e78663ca-cdef-4442-bc62-a59408685f2c-6576909234",
+            "content-length": "219"
+        },
+        "response_length": 219
+    },
+    {
+        "number": 9,
+        "request": "GET icloud.com HTTP/1.1\r\nHost: icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Invalid HTTP Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.3844723701477051,
+            "Socket_Close_Time": 0.24950838088989258,
+            "Response_Time": 0.04304909706115723
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 21 Aug 2023 21:49:58 GMT",
+            "connection": "close",
+            "via": "http/1.1 dedus1-edge-bx-005.ts.apple.com (acdn/84.14362)",
+            "cache-control": "no-store",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "e78663ca-cdef-4442-bc62-a59408685f2c-6577952009",
+            "content-length": "219"
+        },
+        "response_length": 219
+    }
+]

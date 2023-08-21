@@ -1,0 +1,302 @@
+[
+    {
+        "number": 0,
+        "request": "GET goo.gl HTTP/1.1\r\nHost: goo.gl\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 311,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.31020498275756836,
+            "Socket_Close_Time": 0.11358952522277832,
+            "Response_Time": 0.13856291770935059
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-encoding": "gzip",
+            "transfer-encoding": "chunked",
+            "date": "Mon, 21 Aug 2023 21:36:39 GMT",
+            "server": "ESF",
+            "cache-control": "private",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 40
+    },
+    {
+        "number": 1,
+        "request": "GET goo.gl/index.html HTTP/1.1\r\nHost: goo.gl\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.6999073028564453,
+            "Socket_Close_Time": 0.8243982791900635,
+            "Response_Time": 0.3981037139892578
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-encoding": "gzip",
+            "transfer-encoding": "chunked",
+            "date": "Mon, 21 Aug 2023 21:38:11 GMT",
+            "server": "ESF",
+            "cache-control": "private",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 40
+    },
+    {
+        "number": 2,
+        "request": "GET goo.gl/contact HTTP/1.1\r\nHost: goo.gl\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 2.0207791328430176,
+            "Socket_Close_Time": 0.5051009654998779,
+            "Response_Time": 1.7120964527130127
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-encoding": "gzip",
+            "transfer-encoding": "chunked",
+            "date": "Mon, 21 Aug 2023 21:39:48 GMT",
+            "server": "ESF",
+            "cache-control": "private",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 40
+    },
+    {
+        "number": 3,
+        "request": "GET goo.gl/about HTTP/1.1\r\nHost: goo.gl\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.33196258544921875,
+            "Socket_Close_Time": 0.6231515407562256,
+            "Response_Time": 0.12922167778015137
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-encoding": "gzip",
+            "transfer-encoding": "chunked",
+            "date": "Mon, 21 Aug 2023 21:41:20 GMT",
+            "server": "ESF",
+            "cache-control": "private",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 40
+    },
+    {
+        "number": 4,
+        "request": "GET goo.gl/ HTTP/1.1\r\nHost: goo.gl\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 312,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.135446310043335,
+            "Socket_Close_Time": 0.6958835124969482,
+            "Response_Time": 0.6123013496398926
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-encoding": "gzip",
+            "transfer-encoding": "chunked",
+            "date": "Mon, 21 Aug 2023 21:43:20 GMT",
+            "server": "ESF",
+            "cache-control": "private",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 40
+    },
+    {
+        "number": 5,
+        "request": "GET goo.gl/contact HTTP/1.1\r\nHost: goo.gl\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.6143856048583984,
+            "Socket_Close_Time": 0.11008691787719727,
+            "Response_Time": 0.45676326751708984
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-encoding": "gzip",
+            "transfer-encoding": "chunked",
+            "date": "Mon, 21 Aug 2023 21:45:00 GMT",
+            "server": "ESF",
+            "cache-control": "private",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 40
+    },
+    {
+        "number": 6,
+        "request": "GET goo.gl/about HTTP/1.1\r\nHost: goo.gl\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.35925960540771484,
+            "Socket_Close_Time": 0.6727237701416016,
+            "Response_Time": 0.1645650863647461
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-encoding": "gzip",
+            "transfer-encoding": "chunked",
+            "date": "Mon, 21 Aug 2023 21:46:10 GMT",
+            "server": "ESF",
+            "cache-control": "private",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 40
+    },
+    {
+        "number": 7,
+        "request": "GET goo.gl/support HTTP/1.1\r\nHost: goo.gl\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</support",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.6146011352539062,
+            "Socket_Close_Time": 0.9463095664978027,
+            "Response_Time": 0.916945219039917
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-encoding": "gzip",
+            "transfer-encoding": "chunked",
+            "date": "Mon, 21 Aug 2023 21:47:35 GMT",
+            "server": "ESF",
+            "cache-control": "private",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 40
+    },
+    {
+        "number": 8,
+        "request": "GET goo.gl/ HTTP/1.1\r\nHost: goo.gl\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 312,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.054206132888794,
+            "Socket_Close_Time": 0.7703452110290527,
+            "Response_Time": 0.09212946891784668
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-encoding": "gzip",
+            "transfer-encoding": "chunked",
+            "date": "Mon, 21 Aug 2023 21:49:22 GMT",
+            "server": "ESF",
+            "cache-control": "private",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 40
+    },
+    {
+        "number": 9,
+        "request": "GET goo.gl HTTP/1.1\r\nHost: goo.gl\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 311,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.5824925899505615,
+            "Socket_Close_Time": 0.17186355590820312,
+            "Response_Time": 0.32138705253601074
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-encoding": "gzip",
+            "transfer-encoding": "chunked",
+            "date": "Mon, 21 Aug 2023 21:50:36 GMT",
+            "server": "ESF",
+            "cache-control": "private",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 40
+    }
+]

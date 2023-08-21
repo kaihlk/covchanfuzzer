@@ -1,0 +1,262 @@
+[
+    {
+        "number": 0,
+        "request": "GET amazonaws.com/blog HTTP/1.1\r\nHost: amazonaws.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11110091209411621,
+            "Socket_Close_Time": 0.3271486759185791,
+            "Response_Time": 0.6580338478088379
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 21 Aug 2023 21:23:23 GMT",
+            "server": "Server",
+            "content-length": "11",
+            "cneonction": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+        },
+        "response_length": 11
+    },
+    {
+        "number": 1,
+        "request": "GET amazonaws.com/blog HTTP/1.1\r\nHost: amazonaws.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.19468927383422852,
+            "Socket_Close_Time": 0.12191319465637207,
+            "Response_Time": 0.562140703201294
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 21 Aug 2023 21:24:17 GMT",
+            "server": "Server",
+            "content-length": "11",
+            "cneonction": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+        },
+        "response_length": 11
+    },
+    {
+        "number": 2,
+        "request": "GET amazonaws.com/index.html HTTP/1.1\r\nHost: amazonaws.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.27521276473999023,
+            "Socket_Close_Time": 0.15333127975463867,
+            "Response_Time": 1.9081780910491943
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 21 Aug 2023 21:25:15 GMT",
+            "server": "Server",
+            "content-length": "11",
+            "cneonction": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+        },
+        "response_length": 11
+    },
+    {
+        "number": 3,
+        "request": "GET amazonaws.com/ HTTP/1.1\r\nHost: amazonaws.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.6326882839202881,
+            "Socket_Close_Time": 1.5285944938659668,
+            "Response_Time": 0.5627906322479248
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 21 Aug 2023 21:26:40 GMT",
+            "server": "Server",
+            "content-length": "11",
+            "cneonction": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+        },
+        "response_length": 11
+    },
+    {
+        "number": 4,
+        "request": "GET amazonaws.com/index.html HTTP/1.1\r\nHost: amazonaws.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2391207218170166,
+            "Socket_Close_Time": 0.6950891017913818,
+            "Response_Time": 0.19071006774902344
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 21 Aug 2023 21:28:23 GMT",
+            "server": "Server",
+            "content-length": "11",
+            "cneonction": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+        },
+        "response_length": 11
+    },
+    {
+        "number": 5,
+        "request": "GET amazonaws.com/blog HTTP/1.1\r\nHost: amazonaws.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.5287759304046631,
+            "Socket_Close_Time": 0.1992321014404297,
+            "Response_Time": 0.6779532432556152
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 21 Aug 2023 21:29:17 GMT",
+            "server": "Server",
+            "content-length": "11",
+            "cneonction": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+        },
+        "response_length": 11
+    },
+    {
+        "number": 6,
+        "request": "GET amazonaws.com/index.html HTTP/1.1\r\nHost: amazonaws.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.2586145401000977,
+            "Socket_Close_Time": 0.8007457256317139,
+            "Response_Time": 2.8182601928710938
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 21 Aug 2023 21:30:53 GMT",
+            "server": "Server",
+            "content-length": "11",
+            "cneonction": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+        },
+        "response_length": 11
+    },
+    {
+        "number": 7,
+        "request": "GET amazonaws.com/index.html HTTP/1.1\r\nHost: amazonaws.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10469722747802734,
+            "Socket_Close_Time": 0.2508540153503418,
+            "Response_Time": 0.261197566986084
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 21 Aug 2023 21:32:14 GMT",
+            "server": "Server",
+            "content-length": "11",
+            "cneonction": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+        },
+        "response_length": 11
+    },
+    {
+        "number": 8,
+        "request": "GET amazonaws.com/ HTTP/1.1\r\nHost: amazonaws.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.617929220199585,
+            "Socket_Close_Time": 0.2252821922302246,
+            "Response_Time": 0.5715739727020264
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 21 Aug 2023 21:33:37 GMT",
+            "server": "Server",
+            "content-length": "11",
+            "cneonction": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+        },
+        "response_length": 11
+    },
+    {
+        "number": 9,
+        "request": "GET amazonaws.com/blog HTTP/1.1\r\nHost: amazonaws.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.6092979907989502,
+            "Socket_Close_Time": 0.7825319766998291,
+            "Response_Time": 0.38718175888061523
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 21 Aug 2023 21:34:51 GMT",
+            "server": "Server",
+            "content-length": "11",
+            "cneonction": "close",
+            "content-type": "text/html; charset=iso-8859-1"
+        },
+        "response_length": 11
+    }
+]

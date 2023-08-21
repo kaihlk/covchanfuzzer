@@ -1,0 +1,252 @@
+[
+    {
+        "number": 0,
+        "request": "GET skype.com/support HTTP/1.1\r\nHost: skype.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</support",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.03575396537780762,
+            "Socket_Close_Time": 0.3276939392089844,
+            "Response_Time": 0.1551508903503418
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:52:27 GMT",
+            "server": "Kestrel"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET skype.com/about HTTP/1.1\r\nHost: skype.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.44606852531433105,
+            "Socket_Close_Time": 0.15426421165466309,
+            "Response_Time": 0.32939648628234863
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:53:35 GMT",
+            "server": "Kestrel"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET skype.com/index.html HTTP/1.1\r\nHost: skype.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.24962472915649414,
+            "Socket_Close_Time": 1.1781110763549805,
+            "Response_Time": 0.19110369682312012
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:54:38 GMT",
+            "server": "Kestrel"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET skype.com/index.php HTTP/1.1\r\nHost: skype.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.php",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.49672722816467285,
+            "Socket_Close_Time": 0.3511624336242676,
+            "Response_Time": 0.8276543617248535
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:55:35 GMT",
+            "server": "Kestrel"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET skype.com/blog HTTP/1.1\r\nHost: skype.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.8746802806854248,
+            "Socket_Close_Time": 0.18435931205749512,
+            "Response_Time": 0.72635817527771
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:56:44 GMT",
+            "server": "Kestrel"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 5,
+        "request": "GET skype.com/services HTTP/1.1\r\nHost: skype.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</services",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0555264949798584,
+            "Socket_Close_Time": 0.2775585651397705,
+            "Response_Time": 0.06651067733764648
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:57:38 GMT",
+            "server": "Kestrel"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET skype.com/ HTTP/1.1\r\nHost: skype.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.15790987014770508,
+            "Socket_Close_Time": 0.6521925926208496,
+            "Response_Time": 0.05557608604431152
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:58:45 GMT",
+            "server": "Kestrel"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET skype.com/blog HTTP/1.1\r\nHost: skype.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07692933082580566,
+            "Socket_Close_Time": 0.6362438201904297,
+            "Response_Time": 0.14266633987426758
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 22:00:11 GMT",
+            "server": "Kestrel"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET skype.com/index.php HTTP/1.1\r\nHost: skype.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.php",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.28308773040771484,
+            "Socket_Close_Time": 0.14182662963867188,
+            "Response_Time": 0.7227785587310791
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 22:01:31 GMT",
+            "server": "Kestrel"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET skype.com/ HTTP/1.1\r\nHost: skype.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06837224960327148,
+            "Socket_Close_Time": 0.2232966423034668,
+            "Response_Time": 0.2669408321380615
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 22:02:26 GMT",
+            "server": "Kestrel"
+        },
+        "response_length": 0
+    }
+]

@@ -1,0 +1,316 @@
+[
+    {
+        "number": 0,
+        "request": "GET plus.google.com HTTP/1.1\r\nHost: plus.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 329,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.5717678070068359,
+            "Socket_Close_Time": 0.10779333114624023,
+            "Response_Time": 0.4314088821411133
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://workspace.google.com/blog/product-announcements/what-you-need-to-know-about-the-sunset-of-consumer-google-plus-on-april-second",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Mon, 21 Aug 2023 21:36:51 GMT",
+            "expires": "Mon, 21 Aug 2023 22:06:51 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "331",
+            "x-xss-protection": "0"
+        },
+        "response_length": 331
+    },
+    {
+        "number": 1,
+        "request": "GET plus.google.com/index.html HTTP/1.1\r\nHost: plus.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 340,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2663869857788086,
+            "Socket_Close_Time": 0.3548128604888916,
+            "Response_Time": 1.5254955291748047
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://workspace.google.com/blog/product-announcements/what-you-need-to-know-about-the-sunset-of-consumer-google-plus-on-april-second",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Mon, 21 Aug 2023 21:38:33 GMT",
+            "expires": "Mon, 21 Aug 2023 22:08:33 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "331",
+            "x-xss-protection": "0"
+        },
+        "response_length": 331
+    },
+    {
+        "number": 2,
+        "request": "GET plus.google.com/contact HTTP/1.1\r\nHost: plus.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 337,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 1.2075135707855225,
+            "Socket_Close_Time": 0.1402602195739746,
+            "Response_Time": 0.5822911262512207
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://workspace.google.com/blog/product-announcements/what-you-need-to-know-about-the-sunset-of-consumer-google-plus-on-april-second",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Mon, 21 Aug 2023 21:40:04 GMT",
+            "expires": "Mon, 21 Aug 2023 22:10:04 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "331",
+            "x-xss-protection": "0"
+        },
+        "response_length": 331
+    },
+    {
+        "number": 3,
+        "request": "GET plus.google.com/about HTTP/1.1\r\nHost: plus.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 335,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.26643824577331543,
+            "Socket_Close_Time": 1.3837525844573975,
+            "Response_Time": 0.04374384880065918
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://workspace.google.com/blog/product-announcements/what-you-need-to-know-about-the-sunset-of-consumer-google-plus-on-april-second",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Mon, 21 Aug 2023 21:41:41 GMT",
+            "expires": "Mon, 21 Aug 2023 22:11:41 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "331",
+            "x-xss-protection": "0"
+        },
+        "response_length": 331
+    },
+    {
+        "number": 4,
+        "request": "GET plus.google.com/ HTTP/1.1\r\nHost: plus.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.3056981563568115,
+            "Socket_Close_Time": 1.617929220199585,
+            "Response_Time": 0.19063258171081543
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://workspace.google.com/blog/product-announcements/what-you-need-to-know-about-the-sunset-of-consumer-google-plus-on-april-second",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Mon, 21 Aug 2023 21:43:34 GMT",
+            "expires": "Mon, 21 Aug 2023 22:13:34 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "331",
+            "x-xss-protection": "0"
+        },
+        "response_length": 331
+    },
+    {
+        "number": 5,
+        "request": "GET plus.google.com/contact HTTP/1.1\r\nHost: plus.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 337,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.74900221824646,
+            "Socket_Close_Time": 0.41867685317993164,
+            "Response_Time": 0.7158901691436768
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://workspace.google.com/blog/product-announcements/what-you-need-to-know-about-the-sunset-of-consumer-google-plus-on-april-second",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "331",
+            "x-xss-protection": "0",
+            "date": "Mon, 21 Aug 2023 21:40:04 GMT",
+            "expires": "Mon, 21 Aug 2023 22:10:04 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "305"
+        },
+        "response_length": 331
+    },
+    {
+        "number": 6,
+        "request": "GET plus.google.com/about HTTP/1.1\r\nHost: plus.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 335,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2673759460449219,
+            "Socket_Close_Time": 1.1796395778656006,
+            "Response_Time": 0.43517446517944336
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://workspace.google.com/blog/product-announcements/what-you-need-to-know-about-the-sunset-of-consumer-google-plus-on-april-second",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "331",
+            "x-xss-protection": "0",
+            "date": "Mon, 21 Aug 2023 21:41:41 GMT",
+            "expires": "Mon, 21 Aug 2023 22:11:41 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "280"
+        },
+        "response_length": 331
+    },
+    {
+        "number": 7,
+        "request": "GET plus.google.com/support HTTP/1.1\r\nHost: plus.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</support",
+        "request_length": 337,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1051487922668457,
+            "Socket_Close_Time": 0.5845630168914795,
+            "Response_Time": 0.03663063049316406
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://workspace.google.com/blog/product-announcements/what-you-need-to-know-about-the-sunset-of-consumer-google-plus-on-april-second",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Mon, 21 Aug 2023 21:48:02 GMT",
+            "expires": "Mon, 21 Aug 2023 22:18:02 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "331",
+            "x-xss-protection": "0"
+        },
+        "response_length": 331
+    },
+    {
+        "number": 8,
+        "request": "GET plus.google.com/ HTTP/1.1\r\nHost: plus.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.019751310348510742,
+            "Socket_Close_Time": 1.415621280670166,
+            "Response_Time": 1.2351620197296143
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://workspace.google.com/blog/product-announcements/what-you-need-to-know-about-the-sunset-of-consumer-google-plus-on-april-second",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "331",
+            "x-xss-protection": "0",
+            "date": "Mon, 21 Aug 2023 21:43:34 GMT",
+            "expires": "Mon, 21 Aug 2023 22:13:34 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "361"
+        },
+        "response_length": 331
+    },
+    {
+        "number": 9,
+        "request": "GET plus.google.com HTTP/1.1\r\nHost: plus.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 329,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.38504958152770996,
+            "Socket_Close_Time": 0.4135925769805908,
+            "Response_Time": 1.9063761234283447
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://workspace.google.com/blog/product-announcements/what-you-need-to-know-about-the-sunset-of-consumer-google-plus-on-april-second",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "331",
+            "x-xss-protection": "0",
+            "date": "Mon, 21 Aug 2023 21:36:51 GMT",
+            "expires": "Mon, 21 Aug 2023 22:06:51 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "851"
+        },
+        "response_length": 331
+    }
+]

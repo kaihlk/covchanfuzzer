@@ -1,0 +1,232 @@
+[
+    {
+        "number": 0,
+        "request": "GET github.com HTTP/1.1\r\nHost: github.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.39247560501098633,
+            "Socket_Close_Time": 0.8390662670135498,
+            "Response_Time": 1.046597957611084
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://github.com/"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET github.com/index.html HTTP/1.1\r\nHost: github.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.19193625450134277,
+            "Socket_Close_Time": 0.33748435974121094,
+            "Response_Time": 0.0452427864074707
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://github.com/"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET github.com/contact HTTP/1.1\r\nHost: github.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 1.0343687534332275,
+            "Socket_Close_Time": 0.11504387855529785,
+            "Response_Time": 0.8597469329833984
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://github.com/"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET github.com/about HTTP/1.1\r\nHost: github.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.026502132415771484,
+            "Socket_Close_Time": 0.7037482261657715,
+            "Response_Time": 0.20490193367004395
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://github.com/"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET github.com/ HTTP/1.1\r\nHost: github.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.161668062210083,
+            "Socket_Close_Time": 0.12828516960144043,
+            "Response_Time": 0.5837504863739014
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://github.com/"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 5,
+        "request": "GET github.com/contact HTTP/1.1\r\nHost: github.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.17417383193969727,
+            "Socket_Close_Time": 0.6179583072662354,
+            "Response_Time": 1.2579476833343506
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://github.com/"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET github.com/about HTTP/1.1\r\nHost: github.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.46028971672058105,
+            "Socket_Close_Time": 0.5939209461212158,
+            "Response_Time": 0.08742737770080566
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://github.com/"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET github.com/support HTTP/1.1\r\nHost: github.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</support",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.7353403568267822,
+            "Socket_Close_Time": 0.14464402198791504,
+            "Response_Time": 0.03313565254211426
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://github.com/"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET github.com/ HTTP/1.1\r\nHost: github.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 1.6008238792419434,
+            "Socket_Close_Time": 5.184296131134033,
+            "Response_Time": 0.6261675357818604
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://github.com/"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET github.com HTTP/1.1\r\nHost: github.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.7641885280609131,
+            "Socket_Close_Time": 0.4142003059387207,
+            "Response_Time": 0.018748760223388672
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://github.com/"
+        },
+        "response_length": 0
+    }
+]

@@ -1,0 +1,272 @@
+[
+    {
+        "number": 0,
+        "request": "GET cloudflare.com HTTP/1.1\r\nHost: cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.4870800971984863,
+            "Socket_Close_Time": 0.5509946346282959,
+            "Response_Time": 0.5014209747314453
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "cloudflare",
+            "date": "Mon, 21 Aug 2023 21:36:49 GMT",
+            "content-type": "text/html",
+            "content-length": "155",
+            "connection": "close",
+            "cf-ray": "-"
+        },
+        "response_length": 155
+    },
+    {
+        "number": 1,
+        "request": "GET cloudflare.com/index.html HTTP/1.1\r\nHost: cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 338,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.4631156921386719,
+            "Socket_Close_Time": 1.1577835083007812,
+            "Response_Time": 0.45435261726379395
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "cloudflare",
+            "date": "Mon, 21 Aug 2023 21:38:31 GMT",
+            "content-type": "text/html",
+            "content-length": "155",
+            "connection": "close",
+            "cf-ray": "-"
+        },
+        "response_length": 155
+    },
+    {
+        "number": 2,
+        "request": "GET cloudflare.com/contact HTTP/1.1\r\nHost: cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 335,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 2.7397515773773193,
+            "Socket_Close_Time": 1.5141398906707764,
+            "Response_Time": 0.231003999710083
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "cloudflare",
+            "date": "Mon, 21 Aug 2023 21:40:01 GMT",
+            "content-type": "text/html",
+            "content-length": "155",
+            "connection": "close",
+            "cf-ray": "-"
+        },
+        "response_length": 155
+    },
+    {
+        "number": 3,
+        "request": "GET cloudflare.com/about HTTP/1.1\r\nHost: cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 333,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.8437697887420654,
+            "Socket_Close_Time": 1.941528558731079,
+            "Response_Time": 0.7423825263977051
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "cloudflare",
+            "date": "Mon, 21 Aug 2023 21:41:37 GMT",
+            "content-type": "text/html",
+            "content-length": "155",
+            "connection": "close",
+            "cf-ray": "-"
+        },
+        "response_length": 155
+    },
+    {
+        "number": 4,
+        "request": "GET cloudflare.com/ HTTP/1.1\r\nHost: cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.3174784183502197,
+            "Socket_Close_Time": 0.16646766662597656,
+            "Response_Time": 0.5475435256958008
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "cloudflare",
+            "date": "Mon, 21 Aug 2023 21:43:32 GMT",
+            "content-type": "text/html",
+            "content-length": "155",
+            "connection": "close",
+            "cf-ray": "-"
+        },
+        "response_length": 155
+    },
+    {
+        "number": 5,
+        "request": "GET cloudflare.com/contact HTTP/1.1\r\nHost: cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 335,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.17350435256958008,
+            "Socket_Close_Time": 0.5803568363189697,
+            "Response_Time": 0.592444896697998
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "cloudflare",
+            "date": "Mon, 21 Aug 2023 21:45:06 GMT",
+            "content-type": "text/html",
+            "content-length": "155",
+            "connection": "close",
+            "cf-ray": "-"
+        },
+        "response_length": 155
+    },
+    {
+        "number": 6,
+        "request": "GET cloudflare.com/about HTTP/1.1\r\nHost: cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 333,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.479569673538208,
+            "Socket_Close_Time": 0.15460705757141113,
+            "Response_Time": 0.4431033134460449
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "cloudflare",
+            "date": "Mon, 21 Aug 2023 21:46:19 GMT",
+            "content-type": "text/html",
+            "content-length": "155",
+            "connection": "close",
+            "cf-ray": "-"
+        },
+        "response_length": 155
+    },
+    {
+        "number": 7,
+        "request": "GET cloudflare.com/support HTTP/1.1\r\nHost: cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</support",
+        "request_length": 335,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.028855562210083008,
+            "Socket_Close_Time": 0.6059601306915283,
+            "Response_Time": 0.0840461254119873
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "cloudflare",
+            "date": "Mon, 21 Aug 2023 21:48:01 GMT",
+            "content-type": "text/html",
+            "content-length": "155",
+            "connection": "close",
+            "cf-ray": "-"
+        },
+        "response_length": 155
+    },
+    {
+        "number": 8,
+        "request": "GET cloudflare.com/ HTTP/1.1\r\nHost: cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.4793727397918701,
+            "Socket_Close_Time": 0.4416213035583496,
+            "Response_Time": 0.5422666072845459
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "cloudflare",
+            "date": "Mon, 21 Aug 2023 21:49:32 GMT",
+            "content-type": "text/html",
+            "content-length": "155",
+            "connection": "close",
+            "cf-ray": "-"
+        },
+        "response_length": 155
+    },
+    {
+        "number": 9,
+        "request": "GET cloudflare.com HTTP/1.1\r\nHost: cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 2.3556084632873535,
+            "Socket_Close_Time": 0.5876367092132568,
+            "Response_Time": 0.3116495609283447
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "cloudflare",
+            "date": "Mon, 21 Aug 2023 21:51:00 GMT",
+            "content-type": "text/html",
+            "content-length": "155",
+            "connection": "close",
+            "cf-ray": "-"
+        },
+        "response_length": 155
+    }
+]

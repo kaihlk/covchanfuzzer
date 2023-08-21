@@ -1,0 +1,482 @@
+[
+    {
+        "number": 0,
+        "request": " www.google.com/index.php HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</index.php",
+        "request_length": 334,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1413557529449463,
+            "Socket_Close_Time": 0.1634690761566162,
+            "Response_Time": 0.2726409435272217
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "54",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Mon, 21 Aug 2023 20:52:49 GMT"
+        },
+        "response_length": 54
+    },
+    {
+        "number": 1,
+        "request": " www.google.com/contact HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</contact",
+        "request_length": 332,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11673545837402344,
+            "Socket_Close_Time": 0.11984586715698242,
+            "Response_Time": 0.1214761734008789
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "54",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Mon, 21 Aug 2023 20:52:52 GMT"
+        },
+        "response_length": 54
+    },
+    {
+        "number": 2,
+        "request": " www.google.com/blog HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</blog",
+        "request_length": 329,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.029640913009643555,
+            "Socket_Close_Time": 0.11206483840942383,
+            "Response_Time": 0.14257097244262695
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "54",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Mon, 21 Aug 2023 20:52:55 GMT"
+        },
+        "response_length": 54
+    },
+    {
+        "number": 3,
+        "request": " www.google.com/contact HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</contact",
+        "request_length": 332,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06293940544128418,
+            "Socket_Close_Time": 0.21366381645202637,
+            "Response_Time": 0.13855218887329102
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "54",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Mon, 21 Aug 2023 20:52:56 GMT"
+        },
+        "response_length": 54
+    },
+    {
+        "number": 4,
+        "request": " www.google.com/about HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</about",
+        "request_length": 330,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10680913925170898,
+            "Socket_Close_Time": 0.10891151428222656,
+            "Response_Time": 0.20452260971069336
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "54",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Mon, 21 Aug 2023 20:52:58 GMT"
+        },
+        "response_length": 54
+    },
+    {
+        "number": 5,
+        "request": " www.google.com/contact HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</contact",
+        "request_length": 332,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0170900821685791,
+            "Socket_Close_Time": 0.23794984817504883,
+            "Response_Time": 0.13088464736938477
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "54",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Mon, 21 Aug 2023 20:53:00 GMT"
+        },
+        "response_length": 54
+    },
+    {
+        "number": 6,
+        "request": " www.google.com/favicon.ico HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</favicon.ico",
+        "request_length": 336,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.16500020027160645,
+            "Socket_Close_Time": 0.7840545177459717,
+            "Response_Time": 0.2598891258239746
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "54",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Mon, 21 Aug 2023 20:53:05 GMT"
+        },
+        "response_length": 54
+    },
+    {
+        "number": 7,
+        "request": " www.google.com/support HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</support",
+        "request_length": 332,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06204986572265625,
+            "Socket_Close_Time": 0.21093082427978516,
+            "Response_Time": 0.12616419792175293
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "54",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Mon, 21 Aug 2023 20:53:07 GMT"
+        },
+        "response_length": 54
+    },
+    {
+        "number": 8,
+        "request": " www.google.com/support HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</support",
+        "request_length": 332,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.12905430793762207,
+            "Socket_Close_Time": 0.11733150482177734,
+            "Response_Time": 0.14043903350830078
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "54",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Mon, 21 Aug 2023 20:53:10 GMT"
+        },
+        "response_length": 54
+    },
+    {
+        "number": 9,
+        "request": " www.google.com/favicon.ico HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</favicon.ico",
+        "request_length": 336,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10172533988952637,
+            "Socket_Close_Time": 0.2868044376373291,
+            "Response_Time": 0.27410435676574707
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "54",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Mon, 21 Aug 2023 20:53:11 GMT"
+        },
+        "response_length": 54
+    },
+    {
+        "number": 10,
+        "request": " www.google.com/blog HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</blog",
+        "request_length": 329,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.047234296798706055,
+            "Socket_Close_Time": 0.21947455406188965,
+            "Response_Time": 0.14942049980163574
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "54",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Mon, 21 Aug 2023 20:53:14 GMT"
+        },
+        "response_length": 54
+    },
+    {
+        "number": 11,
+        "request": " www.google.com/ HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</",
+        "request_length": 325,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1907351016998291,
+            "Socket_Close_Time": 0.11290979385375977,
+            "Response_Time": 0.3229665756225586
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "54",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Mon, 21 Aug 2023 20:53:16 GMT"
+        },
+        "response_length": 54
+    },
+    {
+        "number": 12,
+        "request": " www.google.com/contact HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</contact",
+        "request_length": 332,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06498837471008301,
+            "Socket_Close_Time": 0.16384434700012207,
+            "Response_Time": 0.48347020149230957
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "54",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Mon, 21 Aug 2023 20:53:18 GMT"
+        },
+        "response_length": 54
+    },
+    {
+        "number": 13,
+        "request": " www.google.com/ HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</",
+        "request_length": 325,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10117578506469727,
+            "Socket_Close_Time": 0.1495370864868164,
+            "Response_Time": 0.2248685359954834
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "54",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Mon, 21 Aug 2023 20:53:20 GMT"
+        },
+        "response_length": 54
+    },
+    {
+        "number": 14,
+        "request": " www.google.com/about HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</about",
+        "request_length": 330,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11904001235961914,
+            "Socket_Close_Time": 0.11142754554748535,
+            "Response_Time": 0.13793325424194336
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "54",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Mon, 21 Aug 2023 20:53:22 GMT"
+        },
+        "response_length": 54
+    },
+    {
+        "number": 15,
+        "request": " www.google.com/contact HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</contact",
+        "request_length": 332,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09624099731445312,
+            "Socket_Close_Time": 0.15801143646240234,
+            "Response_Time": 0.2321779727935791
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "54",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Mon, 21 Aug 2023 20:53:24 GMT"
+        },
+        "response_length": 54
+    },
+    {
+        "number": 16,
+        "request": " www.google.com/index.php HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</index.php",
+        "request_length": 334,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.01912069320678711,
+            "Socket_Close_Time": 0.1232752799987793,
+            "Response_Time": 0.11283564567565918
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "54",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Mon, 21 Aug 2023 20:53:28 GMT"
+        },
+        "response_length": 54
+    },
+    {
+        "number": 17,
+        "request": " www.google.com/favicon.ico HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</favicon.ico",
+        "request_length": 336,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07648062705993652,
+            "Socket_Close_Time": 0.7753963470458984,
+            "Response_Time": 0.14780044555664062
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "54",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Mon, 21 Aug 2023 20:53:35 GMT"
+        },
+        "response_length": 54
+    },
+    {
+        "number": 18,
+        "request": " www.google.com/ HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</",
+        "request_length": 325,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.14129328727722168,
+            "Socket_Close_Time": 0.16030216217041016,
+            "Response_Time": 0.2694356441497803
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "54",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Mon, 21 Aug 2023 20:53:38 GMT"
+        },
+        "response_length": 54
+    },
+    {
+        "number": 19,
+        "request": " www.google.com/blog HTTP/1.1\r\nHost: www.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</blog",
+        "request_length": 329,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.01492166519165039,
+            "Socket_Close_Time": 0.1537950038909912,
+            "Response_Time": 0.2134106159210205
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "54",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Mon, 21 Aug 2023 20:53:40 GMT"
+        },
+        "response_length": 54
+    }
+]

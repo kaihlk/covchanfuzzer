@@ -31,7 +31,7 @@ def random_switch_case_of_char_in_string(original_string, fuzzvalue):
 
 
 def generate_standard_request(
-    host, port, url="/", method="GET", headers=None, fuzzvalue=None
+     port, url="/", method="GET", headers=None, fuzzvalue=None
 ):
     '''Generation of request package without insertion of a covert channel'''
     # Check if headers are provided elsewise take default headers
@@ -42,7 +42,7 @@ def generate_standard_request(
         headers = headers.copy()
 
     # Insert the Host header at the beginning of the list
-    headers.insert(0, ("Host", host))
+    headers.insert(0, ("Host", self.host_placeholder))
 
     # Build the request_line from the provided arguments
     request_line = f"{method} {url} HTTP/1.1\r\n"
@@ -60,7 +60,7 @@ def generate_standard_request(
     return request_string, deviation_count, url
 
 class HTTP1_Request_CC_Case_Insensitivity(HTTP1_Request_Builder):
-    def generate_cc_request(self, host, port, url="/", method="GET", headers=None, content=None, fuzzvalue=None):
+    def generate_cc_request(self,  port, url="/", method="GET", headers=None, content=None, fuzzvalue=None):
 
         '''Covertchannel suggested by Kwecka et al: Case-insensitivity of header key names, fuzzvalue defines the probability that a character of a header field is changed'''
 
@@ -76,7 +76,7 @@ class HTTP1_Request_CC_Case_Insensitivity(HTTP1_Request_Builder):
             headers = headers.copy()
 
         # Insert the Host header at the beginning of the list
-        headers.insert(0, ("Host", host))
+        headers.insert(0, ("Host", self.host_placeholder))
 
         # Build the request_line from the provided arguments
         request_line = f"{method} {url} HTTP/1.1\r\n"
@@ -104,7 +104,7 @@ class HTTP1_Request_CC_Random_Whitespace(HTTP1_Request_Builder):
 # Covertchannel suggested by Kwecka et al: Linear whitespacing
 # fuzzvalue defines the propability whether a value is changed and how many whitespaces/tabs/newlines are added
 # Possible endless Loop, here is CC to learn something about the maximum size of the Request size
-    def generate_cc_request(self, host, port, url="/", method="GET", headers=None, content=None, fuzzvalue=None):
+    def generate_cc_request(self, port, url="/", method="GET", headers=None, content=None, fuzzvalue=None):
         # Check if headers are provided elsewise take default headers
         if headers is None:
             headers = default_headers.copy()
@@ -113,7 +113,7 @@ class HTTP1_Request_CC_Random_Whitespace(HTTP1_Request_Builder):
             headers = headers.copy()
 
         # Insert the Host header at the beginning of the list
-        headers.insert(0, ("Host", host))
+        headers.insert(0, ("Host", self.host_placeholder))
         print(fuzzvalue)
         # Build the request_line from the provided arguments
         request_line = f"{method} {url} HTTP/1.1\r\n"
@@ -146,7 +146,7 @@ class HTTP1_Request_CC_Random_Whitespace(HTTP1_Request_Builder):
 
 class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
     def generate_cc_request(self,
-        host, port, url="/", method="GET", headers=None, content=None, fuzzvalue=0.5
+         port, url="/", method="GET", headers=None, content=None, fuzzvalue=0.5
         ):
         # Check if headers are provided elsewise take default headers
         if headers is None:
@@ -159,7 +159,7 @@ class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
         request_line = f"{method} {url} HTTP/1.1\r\n"
 
         deviation_count = 0
-        headers.insert(0, ("Host", host))
+        headers.insert(0, ("Host", self.host_placeholder))
 
         # Shuffle the header fields randomly
         # Reorder the header fields, Note: the RandomValue random.shuffle(List, RandomValue[0,1]) is deprecated (Python 3.9)
@@ -183,7 +183,7 @@ class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
 
 class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
     def generate_cc_request(self,
-        host, port, url="/", method="GET", headers=None, content=None, fuzzvalue=0.5
+         port, url="/", method="GET", headers=None, content=None, fuzzvalue=0.5
     ):
         '''URI in the request line
         Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers
@@ -200,10 +200,11 @@ class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
             headers = headers.copy()
         
         # Insert the Host header at the beginning of the list
-        headers.insert(0, ("Host", host))
+        headers.insert(0, ("Host", self.host_placeholder))
 
         # Parse the given host
-        scheme, subdomain, hostname, domain, hostport, path = self.parse_host(url,host)
+        #TODO
+        #scheme, subdomain, self.host_placeholder, domain, hostport, path = self.parse_host(url,host)
 
         # Build a new URL from the given host
         deviation_count = 0
@@ -257,7 +258,7 @@ class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
 
 class HTTP1_Request_CC_URI_Represenation_Apache_Localhost(HTTP1_Request_Builder):
     def generate_cc_request(self,
-        host, port, url="/", method="GET", headers=None, content=None, fuzzvalue=0.5
+         port, url="/", method="GET", headers=None, content=None, fuzzvalue=0.5
     ):
         '''URI in the request line
         Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers
@@ -274,10 +275,11 @@ class HTTP1_Request_CC_URI_Represenation_Apache_Localhost(HTTP1_Request_Builder)
             headers = headers.copy()
         
         # Insert the Host header at the beginning of the list
-        headers.insert(0, ("Host", host))
+        headers.insert(0, ("Host", self.host_placeholder))
 
         # Parse the given host
-        scheme, subdomain, hostname, domain, hostport, path = self.parse_host(url,host)
+        #TODO
+        #scheme, subdomain, self.host_placeholder hostport, path = self.parse_host(url,host)
 
         # Build a new URL from the given host
         deviation_count = 0
@@ -344,9 +346,10 @@ class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
             headers = headers.copy()
 
         # Insert the Host header at the beginning of the list
-        headers.insert(0, ("Host", host))
+        headers.insert(0, ("Host", self.host_placeholder))
 
         # Parse the given host
+        #TODO
         scheme, subdomain, hostname, domain, hostport, path = self.parse_host(url,host)
 
         # Build a new URL from the given host, add some deviation if not all fields are provided
@@ -381,7 +384,7 @@ class HTTP1_Request_CC_URI_Hex_Hex(HTTP1_Request_Builder):
     
     
     def generate_cc_request(self,
-        host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
+         port, url="/", method="GET", headers=None, fuzzvalue=0.5
     ):
         # Check if headers are provided elsewise take default headers
         if headers is None:
@@ -391,7 +394,7 @@ class HTTP1_Request_CC_URI_Hex_Hex(HTTP1_Request_Builder):
             headers = headers.copy()
 
         # Insert the Host header at the beginning of the list
-        headers.insert(0, ("Host", host))
+        headers.insert(0, ("Host", self.host_placeholder))
 
         # Parse the given host
         scheme, subdomain, hostname, domain, hostport, path = self.parse_host(url,host)
@@ -467,14 +470,14 @@ class HTTP1_Request_CC_Random_Content(HTTP1_Request_Builder):
     
     
     def generate_cc_request(self,
-        host, port, url="/", method="GET", headers=None, content=None, fuzzvalue=0.5
+         port, url="/", method="GET", headers=None, content=None, fuzzvalue=0.5
     ):
         '''Generation of request package '''
 
 
 
         # Insert the Host header at the beginning of the list
-        headers.insert(0, ("Host", host))
+        headers.insert(0, ("Host", self.host_placeholder))
 
         # Build the request_line from the provided arguments
         request_line = f"{method} {url} HTTP/1.1\r\n"
@@ -516,14 +519,14 @@ class HTTP1_Request_CC_Random_Content_No_Lenght_Field(HTTP1_Request_Builder):
     # CC which adds header fields from the common and uncommon header list
   
     def generate_cc_request(self,
-        host, port, url="/", method="GET", headers=None, content=None, fuzzvalue=0.5
+         port, url="/", method="GET", headers=None, content=None, fuzzvalue=0.5
     ):
         '''Generation of request package '''
 
 
 
         # Insert the Host header at the beginning of the list
-        headers.insert(0, ("Host", host))
+        headers.insert(0, ("Host", self.host_placeholder))
 
         # Build the request_line from the provided arguments
         request_line = f"{method} {url} HTTP/1.1\r\n"
@@ -553,8 +556,9 @@ class HTTP1_Request_CC_Random_Content_No_Lenght_Field(HTTP1_Request_Builder):
         return request_string, deviation_count, new_url
 
 class HTTP1_Request_CC_URI_Common_Addresses(HTTP1_Request_Builder):
+    
     def generate_cc_request(self,
-        host, port, url="/", method="GET", headers=None, content=None, fuzzvalue=0.5
+         port, method="GET", url="/", headers=None, content=None, fuzzvalue=0.5
     ):
         '''URI in the request line
         Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers
@@ -563,6 +567,8 @@ class HTTP1_Request_CC_URI_Common_Addresses(HTTP1_Request_Builder):
         Empty or not given port assune 80
         http as scheme name and host name case insenitivity'''
         
+        print("METHODE::")
+        print(method)
         # Check if headers are provided elsewise take default headers
         if headers is None:
             headers = default_headers.copy()
@@ -571,10 +577,8 @@ class HTTP1_Request_CC_URI_Common_Addresses(HTTP1_Request_Builder):
             headers = headers.copy()
         
         # Insert the Host header at the beginning of the list
-        headers.insert(0, ("Host", host))
+        headers.insert(0, ("Host", self.host_placeholder))
 
-        # Parse the given host
-        subdomain, hostname, domain= self.parse_host(host)
 
         # Build a new URL from the given host
         deviation_count = 0
@@ -583,16 +587,8 @@ class HTTP1_Request_CC_URI_Common_Addresses(HTTP1_Request_Builder):
                 new_scheme = "https://"
         elif port==80:
                 new_scheme = "http://"
-      
-
-        if subdomain == "":
-            new_subdomain = "www."
         else:
-            new_subdomain= subdomain
-                
-        new_hostname = hostname + "." + domain
-
-        
+            new_scheme=""
 
         standard_paths = [
             url,
@@ -611,7 +607,8 @@ class HTTP1_Request_CC_URI_Common_Addresses(HTTP1_Request_Builder):
         if new_path != url:
             deviation_count += 1
 
-        new_url = new_scheme + new_subdomain + new_hostname + new_path
+        new_url = new_scheme + self.domain_placeholder + new_path
+
 
         request_line = f"{method} {new_url} HTTP/1.1\r\n"
 
@@ -620,7 +617,7 @@ class HTTP1_Request_CC_URI_Common_Addresses(HTTP1_Request_Builder):
             request_string += f"{header[0]}: {header[1]}\r\n"
 
         request_string += "\r\n"
-        print(request_string)    
+          
         return request_string, deviation_count, new_url
 
 

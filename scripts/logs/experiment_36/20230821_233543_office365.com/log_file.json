@@ -1,0 +1,244 @@
+[
+    {
+        "number": 0,
+        "request": "GET office365.com HTTP/1.1\r\nHost: office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 405,
+        "reason_phrase": "Method Not Allowed",
+        "measured_times": {
+            "Socket_Connect_Time": 1.0535948276519775,
+            "Socket_Close_Time": 0.21053361892700195,
+            "Response_Time": 0.43256521224975586
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:36:43 GMT",
+            "allow": "CONNECT"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET office365.com/index.html HTTP/1.1\r\nHost: office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.9496674537658691,
+            "Socket_Close_Time": 0.36664867401123047,
+            "Response_Time": 2.2015206813812256
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:38:19 GMT"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET office365.com/contact HTTP/1.1\r\nHost: office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 333,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.5758810043334961,
+            "Socket_Close_Time": 0.5747365951538086,
+            "Response_Time": 0.16651606559753418
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:39:54 GMT"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET office365.com/about HTTP/1.1\r\nHost: office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 331,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.1940529346466064,
+            "Socket_Close_Time": 0.618525505065918,
+            "Response_Time": 1.0739331245422363
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:41:31 GMT"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET office365.com/ HTTP/1.1\r\nHost: office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.1605017185211182,
+            "Socket_Close_Time": 0.15205097198486328,
+            "Response_Time": 0.883101224899292
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:43:28 GMT"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 5,
+        "request": "GET office365.com/contact HTTP/1.1\r\nHost: office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 333,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.41333556175231934,
+            "Socket_Close_Time": 0.13356494903564453,
+            "Response_Time": 0.1662440299987793
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:45:03 GMT"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET office365.com/about HTTP/1.1\r\nHost: office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 331,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.24423670768737793,
+            "Socket_Close_Time": 0.635103702545166,
+            "Response_Time": 0.5832023620605469
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:46:15 GMT"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET office365.com/support HTTP/1.1\r\nHost: office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</support",
+        "request_length": 333,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.45958948135375977,
+            "Socket_Close_Time": 0.49050426483154297,
+            "Response_Time": 1.7257280349731445
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:47:41 GMT"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET office365.com/ HTTP/1.1\r\nHost: office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.860811710357666,
+            "Socket_Close_Time": 0.3912365436553955,
+            "Response_Time": 1.537139654159546
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:49:27 GMT"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET office365.com HTTP/1.1\r\nHost: office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 405,
+        "reason_phrase": "Method Not Allowed",
+        "measured_times": {
+            "Socket_Connect_Time": 3.659550905227661,
+            "Socket_Close_Time": 0.1767444610595703,
+            "Response_Time": 0.21814417839050293
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "connection": "close",
+            "date": "Mon, 21 Aug 2023 21:50:44 GMT",
+            "allow": "CONNECT"
+        },
+        "response_length": 0
+    }
+]

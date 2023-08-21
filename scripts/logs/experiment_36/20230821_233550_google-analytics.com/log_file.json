@@ -1,0 +1,284 @@
+[
+    {
+        "number": 0,
+        "request": "GET google-analytics.com HTTP/1.1\r\nHost: google-analytics.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 339,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.20228862762451172,
+            "Socket_Close_Time": 0.5587565898895264,
+            "Response_Time": 0.2454235553741455
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "x-xss-protection": "0",
+            "content-type": "text/html; charset=UTF-8",
+            "cross-origin-embedder-policy": "require-corp",
+            "cross-origin-resource-policy": "cross-origin",
+            "date": "Mon, 21 Aug 2023 21:37:05 GMT",
+            "server": "Golfe2",
+            "content-length": "1561"
+        },
+        "response_length": 1557
+    },
+    {
+        "number": 1,
+        "request": "GET google-analytics.com/index.html HTTP/1.1\r\nHost: google-analytics.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 350,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 1.3915331363677979,
+            "Socket_Close_Time": 0.413524866104126,
+            "Response_Time": 0.09342789649963379
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "x-xss-protection": "0",
+            "content-type": "text/html; charset=UTF-8",
+            "cross-origin-embedder-policy": "require-corp",
+            "cross-origin-resource-policy": "cross-origin",
+            "date": "Mon, 21 Aug 2023 21:38:41 GMT",
+            "server": "Golfe2",
+            "content-length": "1571"
+        },
+        "response_length": 1567
+    },
+    {
+        "number": 2,
+        "request": "GET google-analytics.com/contact HTTP/1.1\r\nHost: google-analytics.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 347,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 2.755406141281128,
+            "Socket_Close_Time": 1.2479758262634277,
+            "Response_Time": 2.76383638381958
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "x-xss-protection": "0",
+            "content-type": "text/html; charset=UTF-8",
+            "cross-origin-embedder-policy": "require-corp",
+            "cross-origin-resource-policy": "cross-origin",
+            "date": "Mon, 21 Aug 2023 21:40:16 GMT",
+            "server": "Golfe2",
+            "content-length": "1568"
+        },
+        "response_length": 1564
+    },
+    {
+        "number": 3,
+        "request": "GET google-analytics.com/about HTTP/1.1\r\nHost: google-analytics.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 345,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2322375774383545,
+            "Socket_Close_Time": 0.14775323867797852,
+            "Response_Time": 0.5751962661743164
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "x-xss-protection": "0",
+            "content-type": "text/html; charset=UTF-8",
+            "cross-origin-embedder-policy": "require-corp",
+            "cross-origin-resource-policy": "cross-origin",
+            "date": "Mon, 21 Aug 2023 21:41:48 GMT",
+            "server": "Golfe2",
+            "content-length": "1566"
+        },
+        "response_length": 1562
+    },
+    {
+        "number": 4,
+        "request": "GET google-analytics.com/ HTTP/1.1\r\nHost: google-analytics.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 340,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 1.36370849609375,
+            "Socket_Close_Time": 1.6325483322143555,
+            "Response_Time": 0.03383445739746094
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/analytics/",
+            "strict-transport-security": "max-age=10886400; includeSubDomains; preload",
+            "content-type": "text/html; charset=UTF-8",
+            "cross-origin-embedder-policy": "require-corp",
+            "cross-origin-resource-policy": "cross-origin",
+            "date": "Mon, 21 Aug 2023 21:43:40 GMT",
+            "server": "Golfe2",
+            "content-length": "230"
+        },
+        "response_length": 230
+    },
+    {
+        "number": 5,
+        "request": "GET google-analytics.com/contact HTTP/1.1\r\nHost: google-analytics.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 347,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 1.1894023418426514,
+            "Socket_Close_Time": 0.8498272895812988,
+            "Response_Time": 2.6852641105651855
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "x-xss-protection": "0",
+            "content-type": "text/html; charset=UTF-8",
+            "cross-origin-embedder-policy": "require-corp",
+            "cross-origin-resource-policy": "cross-origin",
+            "date": "Mon, 21 Aug 2023 21:45:14 GMT",
+            "server": "Golfe2",
+            "content-length": "1568"
+        },
+        "response_length": 1564
+    },
+    {
+        "number": 6,
+        "request": "GET google-analytics.com/about HTTP/1.1\r\nHost: google-analytics.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 345,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.6714859008789062,
+            "Socket_Close_Time": 5.552863359451294,
+            "Response_Time": 3.2378268241882324
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "x-xss-protection": "0",
+            "content-type": "text/html; charset=UTF-8",
+            "cross-origin-embedder-policy": "require-corp",
+            "cross-origin-resource-policy": "cross-origin",
+            "date": "Mon, 21 Aug 2023 21:46:29 GMT",
+            "server": "Golfe2",
+            "content-length": "1566"
+        },
+        "response_length": 1562
+    },
+    {
+        "number": 7,
+        "request": "GET google-analytics.com/support HTTP/1.1\r\nHost: google-analytics.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</support",
+        "request_length": 347,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 1.4861085414886475,
+            "Socket_Close_Time": 0.47446346282958984,
+            "Response_Time": 0.8906621932983398
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "x-xss-protection": "0",
+            "content-type": "text/html; charset=UTF-8",
+            "cross-origin-embedder-policy": "require-corp",
+            "cross-origin-resource-policy": "cross-origin",
+            "date": "Mon, 21 Aug 2023 21:48:11 GMT",
+            "server": "Golfe2",
+            "content-length": "1568"
+        },
+        "response_length": 1564
+    },
+    {
+        "number": 8,
+        "request": "GET google-analytics.com/ HTTP/1.1\r\nHost: google-analytics.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 340,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.5191512107849121,
+            "Socket_Close_Time": 0.5130119323730469,
+            "Response_Time": 0.6135578155517578
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/analytics/",
+            "strict-transport-security": "max-age=10886400; includeSubDomains; preload",
+            "content-type": "text/html; charset=UTF-8",
+            "cross-origin-embedder-policy": "require-corp",
+            "cross-origin-resource-policy": "cross-origin",
+            "date": "Mon, 21 Aug 2023 21:49:43 GMT",
+            "server": "Golfe2",
+            "content-length": "230"
+        },
+        "response_length": 230
+    },
+    {
+        "number": 9,
+        "request": "GET google-analytics.com HTTP/1.1\r\nHost: google-analytics.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 339,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.017815351486206055,
+            "Socket_Close_Time": 0.6006448268890381,
+            "Response_Time": 0.0903024673461914
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "x-xss-protection": "0",
+            "content-type": "text/html; charset=UTF-8",
+            "cross-origin-embedder-policy": "require-corp",
+            "cross-origin-resource-policy": "cross-origin",
+            "date": "Mon, 21 Aug 2023 21:51:22 GMT",
+            "server": "Golfe2",
+            "content-length": "1561"
+        },
+        "response_length": 1557
+    }
+]

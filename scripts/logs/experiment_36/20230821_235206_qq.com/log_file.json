@@ -1,0 +1,262 @@
+[
+    {
+        "number": 0,
+        "request": "GET qq.com/support HTTP/1.1\r\nHost: qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</support",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.4011032581329346,
+            "Socket_Close_Time": 0.3005828857421875,
+            "Response_Time": 0.3083007335662842
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "stgw",
+            "date": "Mon, 21 Aug 2023 21:53:07 GMT",
+            "content-type": "text/html",
+            "content-length": "149",
+            "connection": "close"
+        },
+        "response_length": 149
+    },
+    {
+        "number": 1,
+        "request": "GET qq.com/about HTTP/1.1\r\nHost: qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.661482572555542,
+            "Socket_Close_Time": 0.12447094917297363,
+            "Response_Time": 1.862548828125
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "stgw",
+            "date": "Mon, 21 Aug 2023 21:54:17 GMT",
+            "content-type": "text/html",
+            "content-length": "149",
+            "connection": "close"
+        },
+        "response_length": 149
+    },
+    {
+        "number": 2,
+        "request": "GET qq.com/index.html HTTP/1.1\r\nHost: qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2665414810180664,
+            "Socket_Close_Time": 0.7040526866912842,
+            "Response_Time": 0.38234901428222656
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "stgw",
+            "date": "Mon, 21 Aug 2023 21:55:14 GMT",
+            "content-type": "text/html",
+            "content-length": "149",
+            "connection": "close"
+        },
+        "response_length": 149
+    },
+    {
+        "number": 3,
+        "request": "GET qq.com/index.php HTTP/1.1\r\nHost: qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.php",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.8437223434448242,
+            "Socket_Close_Time": 0.961134672164917,
+            "Response_Time": 0.3032567501068115
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "stgw",
+            "date": "Mon, 21 Aug 2023 21:56:14 GMT",
+            "content-type": "text/html",
+            "content-length": "149",
+            "connection": "close"
+        },
+        "response_length": 149
+    },
+    {
+        "number": 4,
+        "request": "GET qq.com/blog HTTP/1.1\r\nHost: qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.5036110877990723,
+            "Socket_Close_Time": 0.594639778137207,
+            "Response_Time": 0.3868551254272461
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "stgw",
+            "date": "Mon, 21 Aug 2023 21:57:21 GMT",
+            "content-type": "text/html",
+            "content-length": "149",
+            "connection": "close"
+        },
+        "response_length": 149
+    },
+    {
+        "number": 5,
+        "request": "GET qq.com/services HTTP/1.1\r\nHost: qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</services",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 2.6201231479644775,
+            "Socket_Close_Time": 0.46308159828186035,
+            "Response_Time": 0.4709804058074951
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "stgw",
+            "date": "Mon, 21 Aug 2023 21:58:20 GMT",
+            "content-type": "text/html",
+            "content-length": "149",
+            "connection": "close"
+        },
+        "response_length": 149
+    },
+    {
+        "number": 6,
+        "request": "GET qq.com/ HTTP/1.1\r\nHost: qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 312,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.4901561737060547,
+            "Socket_Close_Time": 0.5372111797332764,
+            "Response_Time": 0.5958507061004639
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "stgw",
+            "date": "Mon, 21 Aug 2023 21:59:32 GMT",
+            "content-type": "text/html",
+            "content-length": "149",
+            "connection": "close"
+        },
+        "response_length": 149
+    },
+    {
+        "number": 7,
+        "request": "GET qq.com/blog HTTP/1.1\r\nHost: qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.43343448638916016,
+            "Socket_Close_Time": 2.3779048919677734,
+            "Response_Time": 0.7266759872436523
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "stgw",
+            "date": "Mon, 21 Aug 2023 22:01:06 GMT",
+            "content-type": "text/html",
+            "content-length": "149",
+            "connection": "close"
+        },
+        "response_length": 149
+    },
+    {
+        "number": 8,
+        "request": "GET qq.com/index.php HTTP/1.1\r\nHost: qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.php",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 3.061753034591675,
+            "Socket_Close_Time": 0.1978604793548584,
+            "Response_Time": 1.1177821159362793
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "stgw",
+            "date": "Mon, 21 Aug 2023 22:02:07 GMT",
+            "content-type": "text/html",
+            "content-length": "149",
+            "connection": "close"
+        },
+        "response_length": 149
+    },
+    {
+        "number": 9,
+        "request": "GET qq.com/ HTTP/1.1\r\nHost: qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 312,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.613316535949707,
+            "Socket_Close_Time": 0.11635088920593262,
+            "Response_Time": 0.4936349391937256
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "stgw",
+            "date": "Mon, 21 Aug 2023 22:03:01 GMT",
+            "content-type": "text/html",
+            "content-length": "149",
+            "connection": "close"
+        },
+        "response_length": 149
+    }
+]

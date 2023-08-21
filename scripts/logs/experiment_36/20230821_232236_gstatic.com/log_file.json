@@ -1,0 +1,319 @@
+[
+    {
+        "number": 0,
+        "request": "GET gstatic.com/blog HTTP/1.1\r\nHost: gstatic.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2307279109954834,
+            "Socket_Close_Time": 0.22482895851135254,
+            "Response_Time": 0.19073867797851562
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://www.gstatic.com/blog",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Mon, 21 Aug 2023 21:23:12 GMT",
+            "expires": "Mon, 21 Aug 2023 21:53:12 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "224",
+            "x-xss-protection": "0"
+        },
+        "response_length": 224
+    },
+    {
+        "number": 1,
+        "request": "GET gstatic.com/blog HTTP/1.1\r\nHost: gstatic.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.046965837478637695,
+            "Socket_Close_Time": 1.0403549671173096,
+            "Response_Time": 0.077056884765625
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://www.gstatic.com/blog",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "224",
+            "x-xss-protection": "0",
+            "date": "Mon, 21 Aug 2023 21:23:12 GMT",
+            "expires": "Mon, 21 Aug 2023 21:53:12 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "58"
+        },
+        "response_length": 224
+    },
+    {
+        "number": 2,
+        "request": "GET gstatic.com/index.html HTTP/1.1\r\nHost: gstatic.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 332,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.16042399406433105,
+            "Socket_Close_Time": 0.826514720916748,
+            "Response_Time": 0.19888567924499512
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://www.gstatic.com/index.html",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Mon, 21 Aug 2023 21:25:07 GMT",
+            "expires": "Mon, 21 Aug 2023 21:55:07 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "230",
+            "x-xss-protection": "0"
+        },
+        "response_length": 230
+    },
+    {
+        "number": 3,
+        "request": "GET gstatic.com/ HTTP/1.1\r\nHost: gstatic.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.6141507625579834,
+            "Socket_Close_Time": 4.434916973114014,
+            "Response_Time": 0.989473819732666
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://www.gstatic.com/",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Mon, 21 Aug 2023 21:26:24 GMT",
+            "expires": "Mon, 21 Aug 2023 21:56:24 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "220",
+            "x-xss-protection": "0"
+        },
+        "response_length": 220
+    },
+    {
+        "number": 4,
+        "request": "GET gstatic.com/index.html HTTP/1.1\r\nHost: gstatic.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 332,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.14421653747558594,
+            "Socket_Close_Time": 1.0315918922424316,
+            "Response_Time": 0.12469601631164551
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://www.gstatic.com/index.html",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "230",
+            "x-xss-protection": "0",
+            "date": "Mon, 21 Aug 2023 21:25:07 GMT",
+            "expires": "Mon, 21 Aug 2023 21:55:07 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "164"
+        },
+        "response_length": 230
+    },
+    {
+        "number": 5,
+        "request": "GET gstatic.com/blog HTTP/1.1\r\nHost: gstatic.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.14811134338378906,
+            "Socket_Close_Time": 0.1647636890411377,
+            "Response_Time": 0.07047057151794434
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://www.gstatic.com/blog",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "224",
+            "x-xss-protection": "0",
+            "date": "Mon, 21 Aug 2023 21:23:12 GMT",
+            "expires": "Mon, 21 Aug 2023 21:53:12 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "360"
+        },
+        "response_length": 224
+    },
+    {
+        "number": 6,
+        "request": "GET gstatic.com/index.html HTTP/1.1\r\nHost: gstatic.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 332,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.7150406837463379,
+            "Socket_Close_Time": 2.1545052528381348,
+            "Response_Time": 0.3686516284942627
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://www.gstatic.com/index.html",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "230",
+            "x-xss-protection": "0",
+            "date": "Mon, 21 Aug 2023 21:25:07 GMT",
+            "expires": "Mon, 21 Aug 2023 21:55:07 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "326"
+        },
+        "response_length": 230
+    },
+    {
+        "number": 7,
+        "request": "GET gstatic.com/index.html HTTP/1.1\r\nHost: gstatic.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 332,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.45180606842041016,
+            "Socket_Close_Time": 3.5463175773620605,
+            "Response_Time": 0.006910562515258789
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://www.gstatic.com/index.html",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "230",
+            "x-xss-protection": "0",
+            "date": "Mon, 21 Aug 2023 21:25:07 GMT",
+            "expires": "Mon, 21 Aug 2023 21:55:07 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "409"
+        },
+        "response_length": 230
+    },
+    {
+        "number": 8,
+        "request": "GET gstatic.com/ HTTP/1.1\r\nHost: gstatic.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.23619914054870605,
+            "Socket_Close_Time": 0.25285863876342773,
+            "Response_Time": 0.7494347095489502
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://www.gstatic.com/",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "220",
+            "x-xss-protection": "0",
+            "date": "Mon, 21 Aug 2023 21:26:24 GMT",
+            "expires": "Mon, 21 Aug 2023 21:56:24 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "422"
+        },
+        "response_length": 220
+    },
+    {
+        "number": 9,
+        "request": "GET gstatic.com/blog HTTP/1.1\r\nHost: gstatic.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 1.0290110111236572,
+            "Socket_Close_Time": 1.1707026958465576,
+            "Response_Time": 0.06828522682189941
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://www.gstatic.com/blog",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "224",
+            "x-xss-protection": "0",
+            "date": "Mon, 21 Aug 2023 21:23:12 GMT",
+            "expires": "Mon, 21 Aug 2023 21:53:12 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "682"
+        },
+        "response_length": 224
+    }
+]

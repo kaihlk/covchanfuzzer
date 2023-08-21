@@ -1,0 +1,315 @@
+[
+    {
+        "number": 0,
+        "request": "GET drive.google.com/support HTTP/1.1\r\nHost: drive.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</support",
+        "request_length": 339,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 1.1912109851837158,
+            "Socket_Close_Time": 0.6424169540405273,
+            "Response_Time": 0.07605171203613281
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://support.google.com/drive/",
+            "date": "Mon, 21 Aug 2023 21:52:58 GMT",
+            "expires": "Mon, 21 Aug 2023 21:52:58 GMT",
+            "cache-control": "private, max-age=0",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "server": "support-content-ui",
+            "content-length": "230",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 230
+    },
+    {
+        "number": 1,
+        "request": "GET drive.google.com/about HTTP/1.1\r\nHost: drive.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 337,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.7482297420501709,
+            "Socket_Close_Time": 0.17454886436462402,
+            "Response_Time": 0.5073878765106201
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "date": "Mon, 21 Aug 2023 21:54:09 GMT",
+            "expires": "Mon, 21 Aug 2023 21:54:09 GMT",
+            "cache-control": "private, max-age=0",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'self'",
+            "x-xss-protection": "1; mode=block",
+            "content-length": "117",
+            "server": "GSE"
+        },
+        "response_length": 141
+    },
+    {
+        "number": 2,
+        "request": "GET drive.google.com/index.html HTTP/1.1\r\nHost: drive.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 342,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.6893951892852783,
+            "Socket_Close_Time": 0.5876917839050293,
+            "Response_Time": 0.8696188926696777
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-encoding": "gzip",
+            "transfer-encoding": "chunked",
+            "date": "Mon, 21 Aug 2023 21:55:01 GMT",
+            "server": "ESF",
+            "cache-control": "private",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 40
+    },
+    {
+        "number": 3,
+        "request": "GET drive.google.com/index.php HTTP/1.1\r\nHost: drive.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.php",
+        "request_length": 341,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1962268352508545,
+            "Socket_Close_Time": 0.7080588340759277,
+            "Response_Time": 0.6030280590057373
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "date": "Mon, 21 Aug 2023 21:56:00 GMT",
+            "expires": "Mon, 21 Aug 2023 21:56:00 GMT",
+            "cache-control": "private, max-age=0",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'self'",
+            "x-xss-protection": "1; mode=block",
+            "content-length": "117",
+            "server": "GSE"
+        },
+        "response_length": 141
+    },
+    {
+        "number": 4,
+        "request": "GET drive.google.com/blog HTTP/1.1\r\nHost: drive.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 1.093209981918335,
+            "Socket_Close_Time": 0.9357109069824219,
+            "Response_Time": 1.6235971450805664
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "date": "Mon, 21 Aug 2023 21:57:05 GMT",
+            "expires": "Mon, 21 Aug 2023 21:57:05 GMT",
+            "cache-control": "private, max-age=0",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'self'",
+            "x-xss-protection": "1; mode=block",
+            "content-length": "117",
+            "server": "GSE"
+        },
+        "response_length": 141
+    },
+    {
+        "number": 5,
+        "request": "GET drive.google.com/services HTTP/1.1\r\nHost: drive.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</services",
+        "request_length": 340,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.03671097755432129,
+            "Socket_Close_Time": 0.4950442314147949,
+            "Response_Time": 0.5821022987365723
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "date": "Mon, 21 Aug 2023 21:58:00 GMT",
+            "expires": "Mon, 21 Aug 2023 21:58:00 GMT",
+            "cache-control": "private, max-age=0",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'self'",
+            "x-xss-protection": "1; mode=block",
+            "content-length": "117",
+            "server": "GSE"
+        },
+        "response_length": 141
+    },
+    {
+        "number": 6,
+        "request": "GET drive.google.com/ HTTP/1.1\r\nHost: drive.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 332,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09694886207580566,
+            "Socket_Close_Time": 0.624053955078125,
+            "Response_Time": 0.9678001403808594
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-encoding": "gzip",
+            "transfer-encoding": "chunked",
+            "date": "Mon, 21 Aug 2023 21:59:16 GMT",
+            "server": "ESF",
+            "cache-control": "private",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 40
+    },
+    {
+        "number": 7,
+        "request": "GET drive.google.com/blog HTTP/1.1\r\nHost: drive.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.41767096519470215,
+            "Socket_Close_Time": 1.3575704097747803,
+            "Response_Time": 0.3788716793060303
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "date": "Mon, 21 Aug 2023 22:00:52 GMT",
+            "expires": "Mon, 21 Aug 2023 22:00:52 GMT",
+            "cache-control": "private, max-age=0",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'self'",
+            "x-xss-protection": "1; mode=block",
+            "content-length": "117",
+            "server": "GSE"
+        },
+        "response_length": 141
+    },
+    {
+        "number": 8,
+        "request": "GET drive.google.com/index.php HTTP/1.1\r\nHost: drive.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.php",
+        "request_length": 341,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.7698981761932373,
+            "Socket_Close_Time": 0.3326408863067627,
+            "Response_Time": 0.21505379676818848
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "date": "Mon, 21 Aug 2023 22:01:51 GMT",
+            "expires": "Mon, 21 Aug 2023 22:01:51 GMT",
+            "cache-control": "private, max-age=0",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'self'",
+            "x-xss-protection": "1; mode=block",
+            "content-length": "117",
+            "server": "GSE"
+        },
+        "response_length": 141
+    },
+    {
+        "number": 9,
+        "request": "GET drive.google.com/ HTTP/1.1\r\nHost: drive.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 332,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.12610602378845215,
+            "Socket_Close_Time": 0.18250560760498047,
+            "Response_Time": 0.22767066955566406
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-encoding": "gzip",
+            "transfer-encoding": "chunked",
+            "date": "Mon, 21 Aug 2023 22:02:53 GMT",
+            "server": "ESF",
+            "cache-control": "private",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 40
+    }
+]

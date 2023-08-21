@@ -1,0 +1,265 @@
+[
+    {
+        "number": 0,
+        "request": "GET googlevideo.com/blog HTTP/1.1\r\nHost: googlevideo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 334,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.44089794158935547,
+            "Socket_Close_Time": 0.1332859992980957,
+            "Response_Time": 0.32346010208129883
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1565",
+            "date": "Mon, 21 Aug 2023 21:23:26 GMT"
+        },
+        "response_length": 1561
+    },
+    {
+        "number": 1,
+        "request": "GET googlevideo.com/blog HTTP/1.1\r\nHost: googlevideo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 334,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.19220614433288574,
+            "Socket_Close_Time": 0.3858323097229004,
+            "Response_Time": 0.2820007801055908
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1565",
+            "date": "Mon, 21 Aug 2023 21:24:21 GMT"
+        },
+        "response_length": 1561
+    },
+    {
+        "number": 2,
+        "request": "GET googlevideo.com/index.html HTTP/1.1\r\nHost: googlevideo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 340,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.8404996395111084,
+            "Socket_Close_Time": 0.46300268173217773,
+            "Response_Time": 0.594519853591919
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1571",
+            "date": "Mon, 21 Aug 2023 21:25:22 GMT"
+        },
+        "response_length": 1567
+    },
+    {
+        "number": 3,
+        "request": "GET googlevideo.com/ HTTP/1.1\r\nHost: googlevideo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.8696048259735107,
+            "Socket_Close_Time": 0.10612058639526367,
+            "Response_Time": 0.4031224250793457
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://video.google.com/",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Mon, 21 Aug 2023 21:26:48 GMT",
+            "expires": "Mon, 21 Aug 2023 21:56:48 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "221",
+            "x-xss-protection": "0"
+        },
+        "response_length": 221
+    },
+    {
+        "number": 4,
+        "request": "GET googlevideo.com/index.html HTTP/1.1\r\nHost: googlevideo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 340,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1420116424560547,
+            "Socket_Close_Time": 0.14408087730407715,
+            "Response_Time": 0.5706815719604492
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1571",
+            "date": "Mon, 21 Aug 2023 21:28:26 GMT"
+        },
+        "response_length": 1567
+    },
+    {
+        "number": 5,
+        "request": "GET googlevideo.com/blog HTTP/1.1\r\nHost: googlevideo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 334,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 1.2426974773406982,
+            "Socket_Close_Time": 5.201942205429077,
+            "Response_Time": 0.7544710636138916
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1565",
+            "date": "Mon, 21 Aug 2023 21:29:24 GMT"
+        },
+        "response_length": 1561
+    },
+    {
+        "number": 6,
+        "request": "GET googlevideo.com/index.html HTTP/1.1\r\nHost: googlevideo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 340,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.4022097587585449,
+            "Socket_Close_Time": 0.21636629104614258,
+            "Response_Time": 0.3113868236541748
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1571",
+            "date": "Mon, 21 Aug 2023 21:31:00 GMT"
+        },
+        "response_length": 1567
+    },
+    {
+        "number": 7,
+        "request": "GET googlevideo.com/index.html HTTP/1.1\r\nHost: googlevideo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 340,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09976696968078613,
+            "Socket_Close_Time": 0.27668023109436035,
+            "Response_Time": 3.3004603385925293
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1571",
+            "date": "Mon, 21 Aug 2023 21:32:23 GMT"
+        },
+        "response_length": 1567
+    },
+    {
+        "number": 8,
+        "request": "GET googlevideo.com/ HTTP/1.1\r\nHost: googlevideo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.5313928127288818,
+            "Socket_Close_Time": 0.35547804832458496,
+            "Response_Time": 0.04539084434509277
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://video.google.com/",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "221",
+            "x-xss-protection": "0",
+            "date": "Mon, 21 Aug 2023 21:26:48 GMT",
+            "expires": "Mon, 21 Aug 2023 21:56:48 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "412"
+        },
+        "response_length": 221
+    },
+    {
+        "number": 9,
+        "request": "GET googlevideo.com/blog HTTP/1.1\r\nHost: googlevideo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 334,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.7157700061798096,
+            "Socket_Close_Time": 0.6226491928100586,
+            "Response_Time": 1.0981101989746094
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1565",
+            "date": "Mon, 21 Aug 2023 21:34:55 GMT"
+        },
+        "response_length": 1561
+    }
+]

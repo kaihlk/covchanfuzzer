@@ -1,0 +1,262 @@
+[
+    {
+        "number": 0,
+        "request": "GET wordpress.org/blog HTTP/1.1\r\nHost: wordpress.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.3057999610900879,
+            "Socket_Close_Time": 0.17146062850952148,
+            "Response_Time": 0.3115577697753906
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 21 Aug 2023 21:23:42 GMT",
+            "content-type": "text/html",
+            "content-length": "150",
+            "connection": "close"
+        },
+        "response_length": 150
+    },
+    {
+        "number": 1,
+        "request": "GET wordpress.org/blog HTTP/1.1\r\nHost: wordpress.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.564507007598877,
+            "Socket_Close_Time": 0.9464538097381592,
+            "Response_Time": 0.12833714485168457
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 21 Aug 2023 21:24:34 GMT",
+            "content-type": "text/html",
+            "content-length": "150",
+            "connection": "close"
+        },
+        "response_length": 150
+    },
+    {
+        "number": 2,
+        "request": "GET wordpress.org/index.html HTTP/1.1\r\nHost: wordpress.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.5299239158630371,
+            "Socket_Close_Time": 0.36752843856811523,
+            "Response_Time": 0.15544986724853516
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 21 Aug 2023 21:25:47 GMT",
+            "content-type": "text/html",
+            "content-length": "150",
+            "connection": "close"
+        },
+        "response_length": 150
+    },
+    {
+        "number": 3,
+        "request": "GET wordpress.org/ HTTP/1.1\r\nHost: wordpress.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.6410608291625977,
+            "Socket_Close_Time": 0.9726424217224121,
+            "Response_Time": 0.19858193397521973
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 21 Aug 2023 21:27:04 GMT",
+            "content-type": "text/html",
+            "content-length": "150",
+            "connection": "close"
+        },
+        "response_length": 150
+    },
+    {
+        "number": 4,
+        "request": "GET wordpress.org/index.html HTTP/1.1\r\nHost: wordpress.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.6051328182220459,
+            "Socket_Close_Time": 0.6603000164031982,
+            "Response_Time": 1.747767448425293
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 21 Aug 2023 21:28:37 GMT",
+            "content-type": "text/html",
+            "content-length": "150",
+            "connection": "close"
+        },
+        "response_length": 150
+    },
+    {
+        "number": 5,
+        "request": "GET wordpress.org/blog HTTP/1.1\r\nHost: wordpress.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 10.373133420944214,
+            "Socket_Close_Time": 0.6772799491882324,
+            "Response_Time": 5.435625791549683
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 21 Aug 2023 21:29:57 GMT",
+            "content-type": "text/html",
+            "content-length": "150",
+            "connection": "close"
+        },
+        "response_length": 150
+    },
+    {
+        "number": 6,
+        "request": "GET wordpress.org/index.html HTTP/1.1\r\nHost: wordpress.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.42873501777648926,
+            "Socket_Close_Time": 0.501288890838623,
+            "Response_Time": 0.7767822742462158
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 21 Aug 2023 21:31:20 GMT",
+            "content-type": "text/html",
+            "content-length": "150",
+            "connection": "close"
+        },
+        "response_length": 150
+    },
+    {
+        "number": 7,
+        "request": "GET wordpress.org/index.html HTTP/1.1\r\nHost: wordpress.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.6540796756744385,
+            "Socket_Close_Time": 1.1394612789154053,
+            "Response_Time": 0.5360403060913086
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 21 Aug 2023 21:32:45 GMT",
+            "content-type": "text/html",
+            "content-length": "150",
+            "connection": "close"
+        },
+        "response_length": 150
+    },
+    {
+        "number": 8,
+        "request": "GET wordpress.org/ HTTP/1.1\r\nHost: wordpress.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.24780583381652832,
+            "Socket_Close_Time": 0.6697325706481934,
+            "Response_Time": 0.3946225643157959
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 21 Aug 2023 21:33:54 GMT",
+            "content-type": "text/html",
+            "content-length": "150",
+            "connection": "close"
+        },
+        "response_length": 150
+    },
+    {
+        "number": 9,
+        "request": "GET wordpress.org/blog HTTP/1.1\r\nHost: wordpress.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.4258747100830078,
+            "Socket_Close_Time": 1.4115197658538818,
+            "Response_Time": 0.43016815185546875
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 21 Aug 2023 21:35:24 GMT",
+            "content-type": "text/html",
+            "content-length": "150",
+            "connection": "close"
+        },
+        "response_length": 150
+    }
+]

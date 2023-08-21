@@ -1,0 +1,502 @@
+[
+    {
+        "number": 0,
+        "request": " facebook.com/about HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</about",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.044097185134887695,
+            "Socket_Close_Time": 0.1389000415802002,
+            "Response_Time": 0.028725147247314453
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 21 Aug 2023 20:50:28 GMT",
+            "connection": "close",
+            "content-length": "2959"
+        },
+        "response_length": 2959
+    },
+    {
+        "number": 1,
+        "request": " facebook.com/ HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08299374580383301,
+            "Socket_Close_Time": 0.19880294799804688,
+            "Response_Time": 0.1543872356414795
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 21 Aug 2023 20:50:32 GMT",
+            "connection": "close",
+            "content-length": "2959"
+        },
+        "response_length": 2959
+    },
+    {
+        "number": 2,
+        "request": " facebook.com/support HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</support",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.03975057601928711,
+            "Socket_Close_Time": 0.2091827392578125,
+            "Response_Time": 0.18113923072814941
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 21 Aug 2023 20:50:36 GMT",
+            "connection": "close",
+            "content-length": "2959"
+        },
+        "response_length": 2959
+    },
+    {
+        "number": 3,
+        "request": " facebook.com/favicon.ico HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</favicon.ico",
+        "request_length": 332,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07714080810546875,
+            "Socket_Close_Time": 0.2465658187866211,
+            "Response_Time": 0.02551865577697754
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 21 Aug 2023 20:50:39 GMT",
+            "connection": "close",
+            "content-length": "2959"
+        },
+        "response_length": 2959
+    },
+    {
+        "number": 4,
+        "request": " facebook.com/index.php HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</index.php",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.190943717956543,
+            "Socket_Close_Time": 0.10607433319091797,
+            "Response_Time": 0.04353523254394531
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 21 Aug 2023 20:50:43 GMT",
+            "connection": "close",
+            "content-length": "2959"
+        },
+        "response_length": 2959
+    },
+    {
+        "number": 5,
+        "request": " facebook.com/services HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</services",
+        "request_length": 329,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.029170751571655273,
+            "Socket_Close_Time": 0.2093946933746338,
+            "Response_Time": 0.10995125770568848
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 21 Aug 2023 20:50:48 GMT",
+            "connection": "close",
+            "content-length": "2959"
+        },
+        "response_length": 2959
+    },
+    {
+        "number": 6,
+        "request": " facebook.com/index.html HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</index.html",
+        "request_length": 331,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.018737077713012695,
+            "Socket_Close_Time": 0.11509490013122559,
+            "Response_Time": 0.2354269027709961
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 21 Aug 2023 20:50:54 GMT",
+            "connection": "close",
+            "content-length": "2959"
+        },
+        "response_length": 2959
+    },
+    {
+        "number": 7,
+        "request": " facebook.com/about HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</about",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07249855995178223,
+            "Socket_Close_Time": 0.1371002197265625,
+            "Response_Time": 0.19742321968078613
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 21 Aug 2023 20:50:58 GMT",
+            "connection": "close",
+            "content-length": "2959"
+        },
+        "response_length": 2959
+    },
+    {
+        "number": 8,
+        "request": " facebook.com/support HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</support",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.18519020080566406,
+            "Socket_Close_Time": 0.15309524536132812,
+            "Response_Time": 0.13304471969604492
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 21 Aug 2023 20:51:01 GMT",
+            "connection": "close",
+            "content-length": "2959"
+        },
+        "response_length": 2959
+    },
+    {
+        "number": 9,
+        "request": " facebook.com/support HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</support",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.03545188903808594,
+            "Socket_Close_Time": 56.44672203063965,
+            "Response_Time": 0.03012824058532715
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 21 Aug 2023 20:51:05 GMT",
+            "connection": "close",
+            "content-length": "2959"
+        },
+        "response_length": 2959
+    },
+    {
+        "number": 10,
+        "request": " facebook.com/support HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</support",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02509903907775879,
+            "Socket_Close_Time": 0.21190619468688965,
+            "Response_Time": 0.02945232391357422
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 21 Aug 2023 20:52:05 GMT",
+            "connection": "close",
+            "content-length": "2959"
+        },
+        "response_length": 2959
+    },
+    {
+        "number": 11,
+        "request": " facebook.com/about HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</about",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.04567098617553711,
+            "Socket_Close_Time": 0.1282670497894287,
+            "Response_Time": 0.11159777641296387
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 21 Aug 2023 20:52:08 GMT",
+            "connection": "close",
+            "content-length": "2959"
+        },
+        "response_length": 2959
+    },
+    {
+        "number": 12,
+        "request": " facebook.com/contact HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</contact",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.13832640647888184,
+            "Socket_Close_Time": 0.11349153518676758,
+            "Response_Time": 0.07857465744018555
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 21 Aug 2023 20:52:12 GMT",
+            "connection": "close",
+            "content-length": "2959"
+        },
+        "response_length": 2959
+    },
+    {
+        "number": 13,
+        "request": " facebook.com/index.php HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</index.php",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08523058891296387,
+            "Socket_Close_Time": 0.35780835151672363,
+            "Response_Time": 0.2639894485473633
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 21 Aug 2023 20:52:16 GMT",
+            "connection": "close",
+            "content-length": "2959"
+        },
+        "response_length": 2959
+    },
+    {
+        "number": 14,
+        "request": " facebook.com/index.html HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</index.html",
+        "request_length": 331,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0969541072845459,
+            "Socket_Close_Time": 0.24412083625793457,
+            "Response_Time": 0.056688547134399414
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 21 Aug 2023 20:52:20 GMT",
+            "connection": "close",
+            "content-length": "2959"
+        },
+        "response_length": 2959
+    },
+    {
+        "number": 15,
+        "request": " facebook.com/favicon.ico HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</favicon.ico",
+        "request_length": 332,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.20114684104919434,
+            "Socket_Close_Time": 0.11448121070861816,
+            "Response_Time": 0.07207322120666504
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 21 Aug 2023 20:52:23 GMT",
+            "connection": "close",
+            "content-length": "2959"
+        },
+        "response_length": 2959
+    },
+    {
+        "number": 16,
+        "request": " facebook.com/support HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</support",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.022909879684448242,
+            "Socket_Close_Time": 0.15259814262390137,
+            "Response_Time": 0.07454156875610352
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 21 Aug 2023 20:52:28 GMT",
+            "connection": "close",
+            "content-length": "2959"
+        },
+        "response_length": 2959
+    },
+    {
+        "number": 17,
+        "request": " facebook.com/ HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.01925492286682129,
+            "Socket_Close_Time": 0.16585230827331543,
+            "Response_Time": 0.11347484588623047
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 21 Aug 2023 20:52:33 GMT",
+            "connection": "close",
+            "content-length": "2959"
+        },
+        "response_length": 2959
+    },
+    {
+        "number": 18,
+        "request": " facebook.com/blog HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</blog",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.16231012344360352,
+            "Socket_Close_Time": 0.3331465721130371,
+            "Response_Time": 0.10551953315734863
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 21 Aug 2023 20:52:36 GMT",
+            "connection": "close",
+            "content-length": "2959"
+        },
+        "response_length": 2959
+    },
+    {
+        "number": 19,
+        "request": " facebook.com/ HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>HOST_PLACEHOLDER<</",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.048264741897583,
+            "Socket_Close_Time": 0.27671194076538086,
+            "Response_Time": 0.03233027458190918
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Mon, 21 Aug 2023 20:52:43 GMT",
+            "connection": "close",
+            "content-length": "2959"
+        },
+        "response_length": 2959
+    }
+]

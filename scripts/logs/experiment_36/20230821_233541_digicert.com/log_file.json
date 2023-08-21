@@ -1,0 +1,262 @@
+[
+    {
+        "number": 0,
+        "request": "GET digicert.com HTTP/1.1\r\nHost: digicert.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.13994359970092773,
+            "Socket_Close_Time": 1.0202460289001465,
+            "Response_Time": 0.13562774658203125
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "cache-control": "no-cache, no-store",
+            "connection": "close",
+            "content-length": "779",
+            "x-iinfo": "4-31018245-0 0NNN RT(1692653791948 28) q(-1 -1 -1 -1) r(0 -1) b1"
+        },
+        "response_length": 779
+    },
+    {
+        "number": 1,
+        "request": "GET digicert.com/index.html HTTP/1.1\r\nHost: digicert.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 334,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 4.711690664291382,
+            "Socket_Close_Time": 0.3026914596557617,
+            "Response_Time": 0.3961904048919678
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "cache-control": "no-cache, no-store",
+            "connection": "close",
+            "content-length": "780",
+            "x-iinfo": "5-38110578-0 0NNN RT(1692653887934 333) q(-1 -1 -1 -1) r(0 -1) b1"
+        },
+        "response_length": 780
+    },
+    {
+        "number": 2,
+        "request": "GET digicert.com/contact HTTP/1.1\r\nHost: digicert.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 331,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.13575077056884766,
+            "Socket_Close_Time": 0.39571046829223633,
+            "Response_Time": 0.22785735130310059
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "cache-control": "no-cache, no-store",
+            "connection": "close",
+            "content-length": "780",
+            "x-iinfo": "10-39484987-0 0NNN RT(1692653982257 33) q(-1 -1 -1 -1) r(0 -1) b1"
+        },
+        "response_length": 780
+    },
+    {
+        "number": 3,
+        "request": "GET digicert.com/about HTTP/1.1\r\nHost: digicert.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 329,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.16119074821472168,
+            "Socket_Close_Time": 0.7289113998413086,
+            "Response_Time": 1.7067937850952148
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "cache-control": "no-cache, no-store",
+            "connection": "close",
+            "content-length": "779",
+            "x-iinfo": "3-22530414-0 0NNN RT(1692654073715 51) q(-1 -1 -1 -1) r(0 -1) b1"
+        },
+        "response_length": 779
+    },
+    {
+        "number": 4,
+        "request": "GET digicert.com/ HTTP/1.1\r\nHost: digicert.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1741466522216797,
+            "Socket_Close_Time": 2.7434074878692627,
+            "Response_Time": 0.6984066963195801
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "cache-control": "no-cache, no-store",
+            "connection": "close",
+            "content-length": "777",
+            "x-iinfo": "8-16644319-0 0NNN RT(1692654193156 59) q(-1 -1 -1 -1) r(0 -1) b1"
+        },
+        "response_length": 777
+    },
+    {
+        "number": 5,
+        "request": "GET digicert.com/contact HTTP/1.1\r\nHost: digicert.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 331,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.4511399269104004,
+            "Socket_Close_Time": 0.36371660232543945,
+            "Response_Time": 1.1410479545593262
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "cache-control": "no-cache, no-store",
+            "connection": "close",
+            "content-length": "780",
+            "x-iinfo": "5-38204518-0 0NNN RT(1692654294333 126) q(-1 -1 -1 -1) r(0 -1) b1"
+        },
+        "response_length": 780
+    },
+    {
+        "number": 6,
+        "request": "GET digicert.com/about HTTP/1.1\r\nHost: digicert.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 329,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2547469139099121,
+            "Socket_Close_Time": 0.9573366641998291,
+            "Response_Time": 0.6260850429534912
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "cache-control": "no-cache, no-store",
+            "connection": "close",
+            "content-length": "781",
+            "x-iinfo": "10-39580997-0 0NNN RT(1692654366460 143) q(-1 -1 -1 -1) r(0 -1) b1"
+        },
+        "response_length": 781
+    },
+    {
+        "number": 7,
+        "request": "GET digicert.com/support HTTP/1.1\r\nHost: digicert.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</support",
+        "request_length": 331,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.156418800354004,
+            "Socket_Close_Time": 0.5577764511108398,
+            "Response_Time": 0.9143567085266113
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "cache-control": "no-cache, no-store",
+            "connection": "close",
+            "content-length": "777",
+            "x-iinfo": "8-16683250-0 0NNN RT(1692654449716 46) q(-1 -1 -1 -1) r(0 -1) b1"
+        },
+        "response_length": 777
+    },
+    {
+        "number": 8,
+        "request": "GET digicert.com/ HTTP/1.1\r\nHost: digicert.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.13742566108703613,
+            "Socket_Close_Time": 0.4627835750579834,
+            "Response_Time": 0.2709321975708008
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "cache-control": "no-cache, no-store",
+            "connection": "close",
+            "content-length": "780",
+            "x-iinfo": "10-39621811-0 0NNN RT(1692654552565 44) q(-1 -1 -1 -1) r(0 -1) b1"
+        },
+        "response_length": 780
+    },
+    {
+        "number": 9,
+        "request": "GET digicert.com HTTP/1.1\r\nHost: digicert.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.28035902976989746,
+            "Socket_Close_Time": 0.49687957763671875,
+            "Response_Time": 0.5564436912536621
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "cache-control": "no-cache, no-store",
+            "connection": "close",
+            "content-length": "780",
+            "x-iinfo": "5-38282540-0 0NNN RT(1692654631220 536) q(-1 -1 -1 -1) r(0 -1) b1"
+        },
+        "response_length": 780
+    }
+]

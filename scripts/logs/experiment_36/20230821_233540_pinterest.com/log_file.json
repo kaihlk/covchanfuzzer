@@ -1,0 +1,282 @@
+[
+    {
+        "number": 0,
+        "request": "GET pinterest.com HTTP/1.1\r\nHost: pinterest.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 308,
+        "reason_phrase": "Permanent Redirect",
+        "measured_times": {
+            "Socket_Connect_Time": 0.8968372344970703,
+            "Socket_Close_Time": 0.16580533981323242,
+            "Response_Time": 0.0771324634552002
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "close",
+            "content-length": "273",
+            "retry-after": "0",
+            "content-type": "text/html",
+            "accept-ranges": "bytes",
+            "date": "Mon, 21 Aug 2023 21:36:05 GMT",
+            "location": "https://pinterest.com/pinterest.com"
+        },
+        "response_length": 273
+    },
+    {
+        "number": 1,
+        "request": "GET pinterest.com/index.html HTTP/1.1\r\nHost: pinterest.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 308,
+        "reason_phrase": "Permanent Redirect",
+        "measured_times": {
+            "Socket_Connect_Time": 1.3357229232788086,
+            "Socket_Close_Time": 3.7556612491607666,
+            "Response_Time": 0.33891749382019043
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "close",
+            "content-length": "295",
+            "retry-after": "0",
+            "content-type": "text/html",
+            "accept-ranges": "bytes",
+            "date": "Mon, 21 Aug 2023 21:37:32 GMT",
+            "location": "https://pinterest.com/pinterest.com/index.html"
+        },
+        "response_length": 295
+    },
+    {
+        "number": 2,
+        "request": "GET pinterest.com/contact HTTP/1.1\r\nHost: pinterest.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 333,
+        "http_version": "HTTP/1.1",
+        "status_code": 308,
+        "reason_phrase": "Permanent Redirect",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05180215835571289,
+            "Socket_Close_Time": 0.4193863868713379,
+            "Response_Time": 0.232008695602417
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "close",
+            "content-length": "289",
+            "retry-after": "0",
+            "content-type": "text/html",
+            "accept-ranges": "bytes",
+            "date": "Mon, 21 Aug 2023 21:39:05 GMT",
+            "location": "https://pinterest.com/pinterest.com/contact"
+        },
+        "response_length": 289
+    },
+    {
+        "number": 3,
+        "request": "GET pinterest.com/about HTTP/1.1\r\nHost: pinterest.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 331,
+        "http_version": "HTTP/1.1",
+        "status_code": 308,
+        "reason_phrase": "Permanent Redirect",
+        "measured_times": {
+            "Socket_Connect_Time": 0.35820698738098145,
+            "Socket_Close_Time": 0.268817663192749,
+            "Response_Time": 0.3961341381072998
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "close",
+            "content-length": "285",
+            "retry-after": "0",
+            "content-type": "text/html",
+            "accept-ranges": "bytes",
+            "date": "Mon, 21 Aug 2023 21:40:53 GMT",
+            "location": "https://pinterest.com/pinterest.com/about"
+        },
+        "response_length": 285
+    },
+    {
+        "number": 4,
+        "request": "GET pinterest.com/ HTTP/1.1\r\nHost: pinterest.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 308,
+        "reason_phrase": "Permanent Redirect",
+        "measured_times": {
+            "Socket_Connect_Time": 7.223820924758911,
+            "Socket_Close_Time": 0.740103006362915,
+            "Response_Time": 3.719789505004883
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "close",
+            "content-length": "275",
+            "retry-after": "0",
+            "content-type": "text/html",
+            "accept-ranges": "bytes",
+            "date": "Mon, 21 Aug 2023 21:42:38 GMT",
+            "location": "https://pinterest.com/pinterest.com/"
+        },
+        "response_length": 275
+    },
+    {
+        "number": 5,
+        "request": "GET pinterest.com/contact HTTP/1.1\r\nHost: pinterest.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 333,
+        "http_version": "HTTP/1.1",
+        "status_code": 308,
+        "reason_phrase": "Permanent Redirect",
+        "measured_times": {
+            "Socket_Connect_Time": 0.33213305473327637,
+            "Socket_Close_Time": 0.10982656478881836,
+            "Response_Time": 0.3532860279083252
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "close",
+            "content-length": "289",
+            "retry-after": "0",
+            "content-type": "text/html",
+            "accept-ranges": "bytes",
+            "date": "Mon, 21 Aug 2023 21:44:28 GMT",
+            "location": "https://pinterest.com/pinterest.com/contact"
+        },
+        "response_length": 289
+    },
+    {
+        "number": 6,
+        "request": "GET pinterest.com/about HTTP/1.1\r\nHost: pinterest.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 331,
+        "http_version": "HTTP/1.1",
+        "status_code": 308,
+        "reason_phrase": "Permanent Redirect",
+        "measured_times": {
+            "Socket_Connect_Time": 1.3567843437194824,
+            "Socket_Close_Time": 0.5903785228729248,
+            "Response_Time": 0.31591129302978516
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "close",
+            "content-length": "285",
+            "retry-after": "0",
+            "content-type": "text/html",
+            "accept-ranges": "bytes",
+            "date": "Mon, 21 Aug 2023 21:45:40 GMT",
+            "location": "https://pinterest.com/pinterest.com/about"
+        },
+        "response_length": 285
+    },
+    {
+        "number": 7,
+        "request": "GET pinterest.com/support HTTP/1.1\r\nHost: pinterest.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</support",
+        "request_length": 333,
+        "http_version": "HTTP/1.1",
+        "status_code": 308,
+        "reason_phrase": "Permanent Redirect",
+        "measured_times": {
+            "Socket_Connect_Time": 0.13021516799926758,
+            "Socket_Close_Time": 0.2925455570220947,
+            "Response_Time": 0.6886558532714844
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "close",
+            "content-length": "289",
+            "retry-after": "0",
+            "content-type": "text/html",
+            "accept-ranges": "bytes",
+            "date": "Mon, 21 Aug 2023 21:47:02 GMT",
+            "location": "https://pinterest.com/pinterest.com/support"
+        },
+        "response_length": 289
+    },
+    {
+        "number": 8,
+        "request": "GET pinterest.com/ HTTP/1.1\r\nHost: pinterest.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 308,
+        "reason_phrase": "Permanent Redirect",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10353946685791016,
+            "Socket_Close_Time": 2.169231414794922,
+            "Response_Time": 0.1927189826965332
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "close",
+            "content-length": "275",
+            "retry-after": "0",
+            "content-type": "text/html",
+            "accept-ranges": "bytes",
+            "date": "Mon, 21 Aug 2023 21:48:36 GMT",
+            "location": "https://pinterest.com/pinterest.com/"
+        },
+        "response_length": 275
+    },
+    {
+        "number": 9,
+        "request": "GET pinterest.com HTTP/1.1\r\nHost: pinterest.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 308,
+        "reason_phrase": "Permanent Redirect",
+        "measured_times": {
+            "Socket_Connect_Time": 0.43973827362060547,
+            "Socket_Close_Time": 0.5642681121826172,
+            "Response_Time": 0.33910608291625977
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "close",
+            "content-length": "273",
+            "retry-after": "0",
+            "content-type": "text/html",
+            "accept-ranges": "bytes",
+            "date": "Mon, 21 Aug 2023 21:50:03 GMT",
+            "location": "https://pinterest.com/pinterest.com"
+        },
+        "response_length": 273
+    }
+]

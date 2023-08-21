@@ -1,0 +1,301 @@
+[
+    {
+        "number": 0,
+        "request": "GET maps.google.com HTTP/1.1\r\nHost: maps.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 329,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2571542263031006,
+            "Socket_Close_Time": 0.41193366050720215,
+            "Response_Time": 0.44722509384155273
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://maps.google.com/maps",
+            "cache-control": "private",
+            "content-type": "text/html; charset=UTF-8",
+            "content-security-policy": "object-src 'none';base-uri 'self';script-src 'nonce-iF3FUABCYc5QiZQVwdMRug' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+            "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/other\"}]}",
+            "date": "Mon, 21 Aug 2023 21:36:34 GMT",
+            "server": "gws",
+            "content-length": "224",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 224
+    },
+    {
+        "number": 1,
+        "request": "GET maps.google.com/index.html HTTP/1.1\r\nHost: maps.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 340,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11018538475036621,
+            "Socket_Close_Time": 0.517784833908081,
+            "Response_Time": 0.6055643558502197
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1571",
+            "date": "Mon, 21 Aug 2023 21:38:09 GMT"
+        },
+        "response_length": 1567
+    },
+    {
+        "number": 2,
+        "request": "GET maps.google.com/contact HTTP/1.1\r\nHost: maps.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 337,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.17457318305969238,
+            "Socket_Close_Time": 0.4091217517852783,
+            "Response_Time": 0.8054330348968506
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1568",
+            "date": "Mon, 21 Aug 2023 21:39:43 GMT"
+        },
+        "response_length": 1564
+    },
+    {
+        "number": 3,
+        "request": "GET maps.google.com/about HTTP/1.1\r\nHost: maps.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 335,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2653181552886963,
+            "Socket_Close_Time": 0.6736979484558105,
+            "Response_Time": 0.1748652458190918
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/maps/about/",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Mon, 21 Aug 2023 21:41:19 GMT",
+            "expires": "Mon, 21 Aug 2023 22:11:19 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "231",
+            "x-xss-protection": "0"
+        },
+        "response_length": 231
+    },
+    {
+        "number": 4,
+        "request": "GET maps.google.com/ HTTP/1.1\r\nHost: maps.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.38477492332458496,
+            "Socket_Close_Time": 0.3179905414581299,
+            "Response_Time": 0.33519840240478516
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://maps.google.com/maps",
+            "cache-control": "private",
+            "content-type": "text/html; charset=UTF-8",
+            "content-security-policy-report-only": "object-src 'none';base-uri 'self';script-src 'nonce-N22kmG11sgCVxep60Sp7LQ' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+            "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/other\"}]}",
+            "date": "Mon, 21 Aug 2023 21:43:17 GMT",
+            "server": "gws",
+            "content-length": "224",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "set-cookie": "AEC=Ad49MVFwyBcolW79Mv8BSSNowEFoISmS4W_iCompkLHz6zyhGqTpEuku-k0; expires=Sat, 17-Feb-2024 21:43:17 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax"
+        },
+        "response_length": 224
+    },
+    {
+        "number": 5,
+        "request": "GET maps.google.com/contact HTTP/1.1\r\nHost: maps.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 337,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.042380571365356445,
+            "Socket_Close_Time": 0.6178524494171143,
+            "Response_Time": 1.1215448379516602
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1568",
+            "date": "Mon, 21 Aug 2023 21:44:55 GMT"
+        },
+        "response_length": 1564
+    },
+    {
+        "number": 6,
+        "request": "GET maps.google.com/about HTTP/1.1\r\nHost: maps.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 335,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.3753163814544678,
+            "Socket_Close_Time": 0.11074566841125488,
+            "Response_Time": 0.3994712829589844
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/maps/about/",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "231",
+            "x-xss-protection": "0",
+            "date": "Mon, 21 Aug 2023 21:41:19 GMT",
+            "expires": "Mon, 21 Aug 2023 22:11:19 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "289"
+        },
+        "response_length": 231
+    },
+    {
+        "number": 7,
+        "request": "GET maps.google.com/support HTTP/1.1\r\nHost: maps.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</support",
+        "request_length": 337,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.24448680877685547,
+            "Socket_Close_Time": 0.11537432670593262,
+            "Response_Time": 0.33499956130981445
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://support.google.com/maps/",
+            "date": "Mon, 21 Aug 2023 21:47:32 GMT",
+            "expires": "Mon, 21 Aug 2023 21:47:32 GMT",
+            "cache-control": "private, max-age=0",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "server": "support-content-ui",
+            "content-length": "229",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 229
+    },
+    {
+        "number": 8,
+        "request": "GET maps.google.com/ HTTP/1.1\r\nHost: maps.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.18758678436279297,
+            "Socket_Close_Time": 0.2714879512786865,
+            "Response_Time": 0.8505070209503174
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://maps.google.com/maps",
+            "cache-control": "private",
+            "content-type": "text/html; charset=UTF-8",
+            "content-security-policy-report-only": "object-src 'none';base-uri 'self';script-src 'nonce-P0dBcMbU84urMGegqjmJ2w' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+            "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/other\"}]}",
+            "date": "Mon, 21 Aug 2023 21:49:18 GMT",
+            "server": "gws",
+            "content-length": "224",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "set-cookie": "AEC=Ad49MVFQp7oem1iWiEZXJJof9BtmJ6hx_2UgT-NCjdhgjdJmSk8wfi9UjQ; expires=Sat, 17-Feb-2024 21:49:18 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax"
+        },
+        "response_length": 224
+    },
+    {
+        "number": 9,
+        "request": "GET maps.google.com HTTP/1.1\r\nHost: maps.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 329,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.04957222938537598,
+            "Socket_Close_Time": 0.31340765953063965,
+            "Response_Time": 0.38118863105773926
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://maps.google.com/maps",
+            "cache-control": "private",
+            "content-type": "text/html; charset=UTF-8",
+            "content-security-policy": "object-src 'none';base-uri 'self';script-src 'nonce-_4Oi-NtaxsFEgMJQ1rshtg' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+            "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/other\"}]}",
+            "date": "Mon, 21 Aug 2023 21:50:32 GMT",
+            "server": "gws",
+            "content-length": "224",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 224
+    }
+]

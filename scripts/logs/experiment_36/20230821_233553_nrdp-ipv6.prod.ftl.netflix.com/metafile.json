@@ -1,0 +1,100 @@
+{
+    "configuration_variables": {
+        "experiment_no": 36,
+        "comment": "Long test ",
+        "verbose": false,
+        "timestamp": "20230821_232234",
+        "covertchannel_request_number": 10,
+        "covertchannel_connection_number": 1,
+        "covertchannel_timing_number": 1,
+        "fuzz_value": 0.5,
+        "num_attempts": 10,
+        "wait_between_request": 0,
+        "base_line_check_frequency": 0,
+        "target_list": "target_list_subdomain.csv",
+        "target_subset_size": 33,
+        "target_port": null,
+        "conn_timeout": 2,
+        "nw_interface": "enp0s3",
+        "use_ipv4": true,
+        "use_TLS": false,
+        "use_HTTP2": false,
+        "method": "GET",
+        "url": "",
+        "standard_subdomain": "www",
+        "headers": null,
+        "standard_headers": "firefox_HTTP/1.1",
+        "content": "random"
+    },
+    "result_variables": {
+        "host_ip_info": {
+            "host": "nrdp-ipv6.prod.ftl.netflix.com",
+            "socket_info": [
+                [
+                    2,
+                    1,
+                    6,
+                    "",
+                    [
+                        "45.57.40.1",
+                        80
+                    ]
+                ],
+                [
+                    2,
+                    1,
+                    6,
+                    "",
+                    [
+                        "45.57.41.1",
+                        80
+                    ]
+                ]
+            ],
+            "ip_address": "45.57.40.1",
+            "port": 80
+        },
+        "covertchannel_request_name": "<class 'http1_request_builder.HTTP1_Request_Builder'>",
+        "covertchannel_timing_name": "<class 'http1_request_builder.HTTP1_Request_Builder'>",
+        "Received_Status_Codes": {
+            "400": 10
+        },
+        "Logged_Messages": 10,
+        "Logged_Messages_of_scheduled_attempts": 1.0,
+        "Response Properties": {
+            "Messages": 10,
+            "1xx": 0,
+            "2xx": 0,
+            "3xx": 0,
+            "4xx": 10,
+            "5xx": 0,
+            "9xx": 0
+        }
+    },
+    "statistics": {
+        "Host": "nrdp-ipv6.prod.ftl.netflix.com",
+        "IP": "45.57.40.1",
+        "IPv4": true,
+        "TLS": false,
+        "HTTP/2": false,
+        "Messages Send": 10,
+        "1xx": 0.0,
+        "2xx": 0.0,
+        "3xx": 0.0,
+        "4xx": 100.0,
+        "5xx": 0.0,
+        "9xx": 0.0,
+        "Avg Response Time": 0.7288953065872192,
+        "StdD Response Time": 0.30821905481903145,
+        "Avg Deviation Count": 0.8,
+        "StdD Deviation Count": 0.4000000000000001,
+        "Avg Request Length": 363.9,
+        "StdD Request Length": 3.83275357934736,
+        "Avg URI Length": 26.9,
+        "StdD URI Length": 3.8327535793473606,
+        "Avg Response Header Keys": 11.0,
+        "StdD Response Header Keys": 0.0,
+        "Avg Response Body Length": 150.0,
+        "StdD Response Body Length": 0.0
+    }
+}

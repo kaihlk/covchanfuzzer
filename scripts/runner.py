@@ -8,7 +8,7 @@ import http1_covered_channels
 from logger import ExperimentLogger , TestRunLogger
 from custom_http_client import CustomHTTP
 import class_mapping
-import http1_request_builder
+import http1_request_builder as request_builder
 
 
 class ExperimentRunner:
@@ -18,6 +18,7 @@ class ExperimentRunner:
         self.target_list=target_list
         self.dns_fails=[]
         self.message_count=0
+        self.prerequest_list=[]
 
     def get_target_subset(self, start_position=0, count=10)-> list:
         """Takes a subset from the target list to reduce the traffic to one target, in order to """
@@ -75,15 +76,11 @@ class ExperimentRunner:
         return sub_set_dns
 
 
-    def forge_requests(self, host_data):
+    def pregenerate_request(self):
         '''Build a HTTP Request Package and sends it and processes the response'''
         #Build HTTP Request after the selected covered channel
         selected_covered_channel = class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]()
-        #TODO Change of PORT due to Upgrade
-        
-        request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration, host_data)
-
-        #Send request and get response
+        request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration)
         if self.experiment_configuration["verbose"]==True:
             print(request)
 
@@ -118,6 +115,12 @@ class ExperimentRunner:
         '''Run the experiment'''
      
         for i in range(self.experiment_configuration["num_attempts"]):
+            
+            prerequest, deviation_count, uri=self.pregenerate_request()
+            self.prerequest_list.append(prerequest)
+            print("Prerequest:")
+            print(prerequest)
+
             for host_data,logger in zip(sub_set_dns, logger_list):
             #Round Robin one Host after each other
                 if self.baseline_check() is False:
@@ -126,7 +129,10 @@ class ExperimentRunner:
                 else:     
                     # Send the HTTP request and get the response in the main thread
                     
-                    request, deviation_count,uri=self.forge_requests(host_data)
+                    request=request_builder.HTTP1_Request_Builder().replace_host_and_domain(prerequest,host_data["host"])
+                    print("Request")
+                    print(request)
+
                     start_time=time.time()
                     self.send_and_receive_request(i, request, deviation_count, uri, host_data, logger)
                     self.message_count+=1
@@ -175,7 +181,7 @@ class ExperimentRunner:
         #Loop over List
         sub_set_no=1
         start_position=1
-        while start_position <= 10: #len(self.target_list):
+        while start_position <= 100: #len(self.target_list):
             #Get target subset
             subset=self.get_target_subset(start_position,self.experiment_configuration["target_subset_size"])
             

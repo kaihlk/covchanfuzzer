@@ -1,0 +1,272 @@
+[
+    {
+        "number": 0,
+        "request": "GET vimeo.com HTTP/1.1\r\nHost: vimeo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.21938753128051758,
+            "Socket_Close_Time": 0.7400922775268555,
+            "Response_Time": 0.7376449108123779
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "cloudflare",
+            "date": "Mon, 21 Aug 2023 21:36:29 GMT",
+            "content-type": "text/html",
+            "content-length": "155",
+            "connection": "close",
+            "cf-ray": "-"
+        },
+        "response_length": 155
+    },
+    {
+        "number": 1,
+        "request": "GET vimeo.com/index.html HTTP/1.1\r\nHost: vimeo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.14183998107910156,
+            "Socket_Close_Time": 0.44092321395874023,
+            "Response_Time": 0.35975050926208496
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "cloudflare",
+            "date": "Mon, 21 Aug 2023 21:38:02 GMT",
+            "content-type": "text/html",
+            "content-length": "155",
+            "connection": "close",
+            "cf-ray": "-"
+        },
+        "response_length": 155
+    },
+    {
+        "number": 2,
+        "request": "GET vimeo.com/contact HTTP/1.1\r\nHost: vimeo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07370257377624512,
+            "Socket_Close_Time": 0.6694111824035645,
+            "Response_Time": 0.29593324661254883
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "cloudflare",
+            "date": "Mon, 21 Aug 2023 21:39:41 GMT",
+            "content-type": "text/html",
+            "content-length": "155",
+            "connection": "close",
+            "cf-ray": "-"
+        },
+        "response_length": 155
+    },
+    {
+        "number": 3,
+        "request": "GET vimeo.com/about HTTP/1.1\r\nHost: vimeo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.041210174560546875,
+            "Socket_Close_Time": 0.6907839775085449,
+            "Response_Time": 0.7961232662200928
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "cloudflare",
+            "date": "Mon, 21 Aug 2023 21:41:10 GMT",
+            "content-type": "text/html",
+            "content-length": "155",
+            "connection": "close",
+            "cf-ray": "-"
+        },
+        "response_length": 155
+    },
+    {
+        "number": 4,
+        "request": "GET vimeo.com/ HTTP/1.1\r\nHost: vimeo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1539440155029297,
+            "Socket_Close_Time": 2.3994510173797607,
+            "Response_Time": 0.7620575428009033
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "cloudflare",
+            "date": "Mon, 21 Aug 2023 21:43:09 GMT",
+            "content-type": "text/html",
+            "content-length": "155",
+            "connection": "close",
+            "cf-ray": "-"
+        },
+        "response_length": 155
+    },
+    {
+        "number": 5,
+        "request": "GET vimeo.com/contact HTTP/1.1\r\nHost: vimeo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07228922843933105,
+            "Socket_Close_Time": 0.21535253524780273,
+            "Response_Time": 0.3775036334991455
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "cloudflare",
+            "date": "Mon, 21 Aug 2023 21:44:53 GMT",
+            "content-type": "text/html",
+            "content-length": "155",
+            "connection": "close",
+            "cf-ray": "-"
+        },
+        "response_length": 155
+    },
+    {
+        "number": 6,
+        "request": "GET vimeo.com/about HTTP/1.1\r\nHost: vimeo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.031479597091674805,
+            "Socket_Close_Time": 0.6246099472045898,
+            "Response_Time": 0.020235776901245117
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "cloudflare",
+            "date": "Mon, 21 Aug 2023 21:46:05 GMT",
+            "content-type": "text/html",
+            "content-length": "155",
+            "connection": "close",
+            "cf-ray": "-"
+        },
+        "response_length": 155
+    },
+    {
+        "number": 7,
+        "request": "GET vimeo.com/support HTTP/1.1\r\nHost: vimeo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</support",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.36724066734313965,
+            "Socket_Close_Time": 0.22063040733337402,
+            "Response_Time": 1.1288468837738037
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "cloudflare",
+            "date": "Mon, 21 Aug 2023 21:47:26 GMT",
+            "content-type": "text/html",
+            "content-length": "155",
+            "connection": "close",
+            "cf-ray": "-"
+        },
+        "response_length": 155
+    },
+    {
+        "number": 8,
+        "request": "GET vimeo.com/ HTTP/1.1\r\nHost: vimeo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.6157255172729492,
+            "Socket_Close_Time": 1.1547768115997314,
+            "Response_Time": 0.5369441509246826
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "cloudflare",
+            "date": "Mon, 21 Aug 2023 21:49:10 GMT",
+            "content-type": "text/html",
+            "content-length": "155",
+            "connection": "close",
+            "cf-ray": "-"
+        },
+        "response_length": 155
+    },
+    {
+        "number": 9,
+        "request": "GET vimeo.com HTTP/1.1\r\nHost: vimeo.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": ">>DOMAIN_PLACEHOLDER<<",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.22686338424682617,
+            "Socket_Close_Time": 0.38925814628601074,
+            "Response_Time": 0.2480325698852539
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "cloudflare",
+            "date": "Mon, 21 Aug 2023 21:50:30 GMT",
+            "content-type": "text/html",
+            "content-length": "155",
+            "connection": "close",
+            "cf-ray": "-"
+        },
+        "response_length": 155
+    }
+]

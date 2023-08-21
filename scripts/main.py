@@ -83,12 +83,12 @@ def main():
         "covertchannel_timing_number": 1,
         "fuzz_value":0.5,
         #Target Selection Options  
-        "num_attempts": 20,
+        "num_attempts": 10,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
         "target_list": "target_list_subdomain.csv",
-        "target_subset_size": 5,
-        #"target_host": "www.example.com",  #Just for special useipvs
+        "target_subset_size": 33,
+        #"target_host": "www.example.com",  #Just for special useipvstt
         "target_port": None, #443, 8080 Apache
 
         #Connection Options
@@ -98,9 +98,10 @@ def main():
         "use_TLS": False,
         "use_HTTP2": False,
 
-        #HTTP Message Options
+        #HTTP Message Optionsa
         "method" : "GET",
         "url": "",
+        "standard_subdomain": "www",
         "headers": None,
         "standard_headers": "firefox_HTTP/1.1",  #curl_HTTP/1.1(TLS), firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
         "content": "random",  #"random", "some_text""fuzz_value": 0.9,

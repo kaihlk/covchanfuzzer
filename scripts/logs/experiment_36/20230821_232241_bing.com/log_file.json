@@ -1,0 +1,252 @@
+[
+    {
+        "number": 0,
+        "request": "GET bing.com/blog HTTP/1.1\r\nHost: bing.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.7606849670410156,
+            "Socket_Close_Time": 0.3132903575897217,
+            "Response_Time": 0.03092646598815918
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=us-ascii",
+            "date": "Mon, 21 Aug 2023 21:23:40 GMT",
+            "connection": "close",
+            "content-length": "324"
+        },
+        "response_length": 324
+    },
+    {
+        "number": 1,
+        "request": "GET bing.com/blog HTTP/1.1\r\nHost: bing.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.04056119918823242,
+            "Socket_Close_Time": 0.5619900226593018,
+            "Response_Time": 0.5718555450439453
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=us-ascii",
+            "date": "Mon, 21 Aug 2023 21:24:30 GMT",
+            "connection": "close",
+            "content-length": "324"
+        },
+        "response_length": 324
+    },
+    {
+        "number": 2,
+        "request": "GET bing.com/index.html HTTP/1.1\r\nHost: bing.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2104785442352295,
+            "Socket_Close_Time": 0.14409160614013672,
+            "Response_Time": 0.18978571891784668
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=us-ascii",
+            "date": "Mon, 21 Aug 2023 21:25:45 GMT",
+            "connection": "close",
+            "content-length": "324"
+        },
+        "response_length": 324
+    },
+    {
+        "number": 3,
+        "request": "GET bing.com/ HTTP/1.1\r\nHost: bing.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1456923484802246,
+            "Socket_Close_Time": 0.31523823738098145,
+            "Response_Time": 0.12819314002990723
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=us-ascii",
+            "date": "Mon, 21 Aug 2023 21:27:02 GMT",
+            "connection": "close",
+            "content-length": "324"
+        },
+        "response_length": 324
+    },
+    {
+        "number": 4,
+        "request": "GET bing.com/index.html HTTP/1.1\r\nHost: bing.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1587657928466797,
+            "Socket_Close_Time": 0.11690783500671387,
+            "Response_Time": 0.5445539951324463
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=us-ascii",
+            "date": "Mon, 21 Aug 2023 21:28:34 GMT",
+            "connection": "close",
+            "content-length": "324"
+        },
+        "response_length": 324
+    },
+    {
+        "number": 5,
+        "request": "GET bing.com/blog HTTP/1.1\r\nHost: bing.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08551263809204102,
+            "Socket_Close_Time": 2.8545546531677246,
+            "Response_Time": 0.03096914291381836
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=us-ascii",
+            "date": "Mon, 21 Aug 2023 21:29:43 GMT",
+            "connection": "close",
+            "content-length": "324"
+        },
+        "response_length": 324
+    },
+    {
+        "number": 6,
+        "request": "GET bing.com/index.html HTTP/1.1\r\nHost: bing.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.14566731452941895,
+            "Socket_Close_Time": 0.4227898120880127,
+            "Response_Time": 0.06985139846801758
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=us-ascii",
+            "date": "Mon, 21 Aug 2023 21:31:19 GMT",
+            "connection": "close",
+            "content-length": "324"
+        },
+        "response_length": 324
+    },
+    {
+        "number": 7,
+        "request": "GET bing.com/index.html HTTP/1.1\r\nHost: bing.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 2.916813850402832,
+            "Socket_Close_Time": 2.625807285308838,
+            "Response_Time": 0.925574779510498
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=us-ascii",
+            "date": "Mon, 21 Aug 2023 21:32:40 GMT",
+            "connection": "close",
+            "content-length": "324"
+        },
+        "response_length": 324
+    },
+    {
+        "number": 8,
+        "request": "GET bing.com/ HTTP/1.1\r\nHost: bing.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.46948719024658203,
+            "Socket_Close_Time": 0.34766054153442383,
+            "Response_Time": 0.5233187675476074
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=us-ascii",
+            "date": "Mon, 21 Aug 2023 21:33:52 GMT",
+            "connection": "close",
+            "content-length": "324"
+        },
+        "response_length": 324
+    },
+    {
+        "number": 9,
+        "request": "GET bing.com/blog HTTP/1.1\r\nHost: bing.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": ">>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.2332050800323486,
+            "Socket_Close_Time": 0.3675520420074463,
+            "Response_Time": 1.872196912765503
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=us-ascii",
+            "date": "Mon, 21 Aug 2023 21:35:18 GMT",
+            "connection": "close",
+            "content-length": "324"
+        },
+        "response_length": 324
+    }
+]
