@@ -154,13 +154,35 @@ class HTTP1_Request_Builder:
      
         return scheme, subdomain, hostname, domain, port, path """
 
-    def generate_cc_request(self, port, uri="/", method="GET", headers=None, content=None, fuzzvalue=None):
+    def build_uri(self, host, port, path, relative_uri, port_uri):
+                #Check if subdomain
+        
+        if relative_uri:
+            uri=path
+        else:
+            if port==443:
+                scheme="https://"
+            else:
+                scheme="http://"
+            subdomain, hostname, domain = parse_host(host)
+            if subdomain=="":
+                sudomain=self.experiment_configuration["standard_subdomain"]#TODO PORT?S
+            new_port=""
+            if port_uri!="":
+                new_port=":"+str(port)
+            uri=scheme+subdomain+"."+hostname+"."+domain+new_port+path
+        return uri    
+
+    
+    
+    def generate_cc_request(self, port, method="GET", path="/", relative_uri=True, headers=None, content=None, fuzzvalue=None):
         '''Generation of request package, CCs mut implement this '''
        
 
         # Insert the Host header at the beginning of the list
         headers.insert(0, ("Host", self.host_placeholder))
 
+        
         # Build the request_line from the provided arguments
         request_line = f"{method} {domain_placeholder} HTTP/1.1\r\n"
 
@@ -174,18 +196,19 @@ class HTTP1_Request_Builder:
 
         # No deviation
         deviation_count = 0
-        return request_string, deviation_count, uri
+        return request_string, deviation_count, path
 
     def generate_request(self, experiment_configuration):
         
         #host=host_data["host"]
         port=experiment_configuration["target_port"]
-        uri=experiment_configuration["url"]
+        path=experiment_configuration["path"]
         method=experiment_configuration["method"]
         headers=experiment_configuration["headers"]
         standard_headers=experiment_configuration["standard_headers"]
         content=experiment_configuration["content"]
         fuzzvalue=experiment_configuration["fuzz_value"]
+        relative_uri=experiment_configuration["relative_uri"]
          # Check if headers are provided elsewise take default headers
         if headers is None: 
             if standard_headers in self.default_headers_sets:
@@ -193,7 +216,7 @@ class HTTP1_Request_Builder:
             else:
                 headers = self.default_headers_sets["curl_HTTP/1.1(TLS)"].copy()
             # Create a copy to avoid modifying the original list
-        return self.generate_cc_request(port, method, uri, headers, content, fuzzvalue)
+        return self.generate_cc_request(port, method, path, relative_uri, headers, content, fuzzvalue)
 
     def replace_host_and_domain(self, prerequest, host, domain=None):
         if domain==None:

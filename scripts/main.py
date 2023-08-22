@@ -98,9 +98,12 @@ def main():
         "use_TLS": False,
         "use_HTTP2": False,
 
-        #HTTP Message Optionsa
+        #HTTP Message Options
         "method" : "GET",
-        "url": "",
+        "url": "",   #Complete URl
+        "paths": "", #Dynamic, List, ?
+        "standard_subdomain": "www", #use www if not provided
+        "relative_uri": True, # build a relative uri without the host in the requestline: /index.html
         "standard_subdomain": "www",
         "headers": None,
         "standard_headers": "firefox_HTTP/1.1",  #curl_HTTP/1.1(TLS), firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"

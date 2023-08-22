@@ -583,12 +583,6 @@ class HTTP1_Request_CC_URI_Common_Addresses(HTTP1_Request_Builder):
         # Build a new URL from the given host
         deviation_count = 0
         
-        if port==443:
-                new_scheme = "https://"
-        elif port==80:
-                new_scheme = "http://"
-        else:
-            new_scheme=""
 
         standard_paths = [
             url,
@@ -607,8 +601,7 @@ class HTTP1_Request_CC_URI_Common_Addresses(HTTP1_Request_Builder):
         if new_path != url:
             deviation_count += 1
 
-        new_url = new_scheme + self.domain_placeholder + new_path
-
+        new_url = self.domain_placeholder + new_path
 
         request_line = f"{method} {new_url} HTTP/1.1\r\n"
 
