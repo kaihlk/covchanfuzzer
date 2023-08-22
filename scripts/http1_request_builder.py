@@ -12,7 +12,7 @@ from urllib.parse import quote
 class HTTP1_Request_Builder:
     def __init__(self): 
         self.host_placeholder= ">>HOST_PLACEHOLDER<<"
-        self.domain_placeholder=">>DOMAIN_PLACEHOLDER<<"
+        self.uri_placeholder=">>DOMAIN_PLACEHOLDER<<"
         self.generated_request=""
         self.default_headers_sets = {
             # The request line and the host and the url field must be generated and inserted in the functions
@@ -221,7 +221,7 @@ class HTTP1_Request_Builder:
     def replace_host_and_domain(self, prerequest, host, domain=None):
         if domain==None:
             domain=host
-        request=prerequest.replace(self.domain_placeholder,domain)
+        request=prerequest.replace(self.uri_placeholder,domain)
 
         request=request.replace(self.host_placeholder, host)
 
