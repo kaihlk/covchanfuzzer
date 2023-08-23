@@ -104,7 +104,7 @@ def main():
         "url": "",   #Complete URl
         "path": "", #Dynamic, List, ?
         "standard_subdomain": "www", #use www if not provided
-        "relative_uri": False, # build a relative uri without the host in the requestline: /index.html
+        "relative_uri": True, # build a relative uri without the host in the requestline: /index.html
         "include_subdomain": True,
         "headers": None,
         "standard_headers": "firefox_HTTP/1.1",  #curl_HTTP/1.1(TLS), firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"

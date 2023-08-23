@@ -1,0 +1,542 @@
+[
+    {
+        "number": 0,
+        "request": "GET /index.php HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1367356777191162,
+            "Socket_Close_Time": 0.10950040817260742,
+            "Response_Time": 0.04955124855041504
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://facebook.com/index.php",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Wed, 23 Aug 2023 21:22:45 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET /about HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06923341751098633,
+            "Socket_Close_Time": 0.114288330078125,
+            "Response_Time": 0.11939001083374023
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://facebook.com/about",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Wed, 23 Aug 2023 21:22:47 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET /favicon.ico HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.055353403091430664,
+            "Socket_Close_Time": 0.2525973320007324,
+            "Response_Time": 0.0991814136505127
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://facebook.com/favicon.ico",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Wed, 23 Aug 2023 21:22:49 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET /services HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.013856649398803711,
+            "Socket_Close_Time": 0.17516183853149414,
+            "Response_Time": 0.1607654094696045
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://facebook.com/services",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Wed, 23 Aug 2023 21:22:50 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET /blog HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1334679126739502,
+            "Socket_Close_Time": 0.20880436897277832,
+            "Response_Time": 0.1309809684753418
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://facebook.com/blog",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Wed, 23 Aug 2023 21:22:53 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 5,
+        "request": "GET /index.html HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.024431467056274414,
+            "Socket_Close_Time": 0.15257930755615234,
+            "Response_Time": 0.05249285697937012
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://facebook.com/index.html",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Wed, 23 Aug 2023 21:22:55 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET /about HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.013720273971557617,
+            "Socket_Close_Time": 0.11298918724060059,
+            "Response_Time": 0.14149022102355957
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://facebook.com/about",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Wed, 23 Aug 2023 21:22:56 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET /support HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.15981268882751465,
+            "Socket_Close_Time": 0.2137458324432373,
+            "Response_Time": 0.08459925651550293
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://facebook.com/support",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Wed, 23 Aug 2023 21:22:59 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET / HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/",
+        "request_length": 312,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09720063209533691,
+            "Socket_Close_Time": 0.17553305625915527,
+            "Response_Time": 0.09157371520996094
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://facebook.com/",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Wed, 23 Aug 2023 21:23:05 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET / HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/",
+        "request_length": 312,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07390952110290527,
+            "Socket_Close_Time": 0.24705982208251953,
+            "Response_Time": 0.10384464263916016
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://facebook.com/",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Wed, 23 Aug 2023 21:23:06 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 10,
+        "request": "GET /about HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06450152397155762,
+            "Socket_Close_Time": 0.19655442237854004,
+            "Response_Time": 0.03924679756164551
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://facebook.com/about",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Wed, 23 Aug 2023 21:23:09 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 11,
+        "request": "GET /about HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06128406524658203,
+            "Socket_Close_Time": 0.12221455574035645,
+            "Response_Time": 0.07976794242858887
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://facebook.com/about",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Wed, 23 Aug 2023 21:23:13 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 12,
+        "request": "GET / HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/",
+        "request_length": 312,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.01694464683532715,
+            "Socket_Close_Time": 0.1432325839996338,
+            "Response_Time": 0.00735020637512207
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://facebook.com/",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Wed, 23 Aug 2023 21:23:15 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 13,
+        "request": "GET /index.php HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05942869186401367,
+            "Socket_Close_Time": 0.17019224166870117,
+            "Response_Time": 0.027264118194580078
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://facebook.com/index.php",
+            "content-type": "text/plain",
+            "server": "proxygen-asan",
+            "date": "Wed, 23 Aug 2023 21:23:17 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 14,
+        "request": "GET /services HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11994695663452148,
+            "Socket_Close_Time": 0.11359882354736328,
+            "Response_Time": 0.1381680965423584
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://facebook.com/services",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Wed, 23 Aug 2023 21:23:19 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 15,
+        "request": "GET /favicon.ico HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.14189863204956055,
+            "Socket_Close_Time": 0.1638791561126709,
+            "Response_Time": 0.09131312370300293
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://facebook.com/favicon.ico",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Wed, 23 Aug 2023 21:23:22 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 16,
+        "request": "GET /about HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.024915695190429688,
+            "Socket_Close_Time": 0.12600994110107422,
+            "Response_Time": 0.03345346450805664
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://facebook.com/about",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Wed, 23 Aug 2023 21:23:24 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 17,
+        "request": "GET /about HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.023520469665527344,
+            "Socket_Close_Time": 0.19186902046203613,
+            "Response_Time": 0.013284921646118164
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://facebook.com/about",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Wed, 23 Aug 2023 21:23:25 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 18,
+        "request": "GET /favicon.ico HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.015239477157592773,
+            "Socket_Close_Time": 0.13735055923461914,
+            "Response_Time": 0.049462080001831055
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://facebook.com/favicon.ico",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Wed, 23 Aug 2023 21:23:28 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 19,
+        "request": "GET /index.php HTTP/1.1\r\nHost: facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10727453231811523,
+            "Socket_Close_Time": 0.1335294246673584,
+            "Response_Time": 0.04644656181335449
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://facebook.com/index.php",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Wed, 23 Aug 2023 21:23:30 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    }
+]
