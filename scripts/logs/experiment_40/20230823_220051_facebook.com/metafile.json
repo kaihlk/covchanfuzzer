@@ -1,0 +1,95 @@
+{
+    "configuration_variables": {
+        "experiment_no": 40,
+        "comment": "adda",
+        "verbose": false,
+        "timestamp": "20230823_220051",
+        "covertchannel_request_number": 10,
+        "covertchannel_connection_number": 1,
+        "covertchannel_timing_number": 1,
+        "fuzz_value": 0.5,
+        "num_attempts": 10,
+        "max_targets": 3,
+        "wait_between_request": 0,
+        "base_line_check_frequency": 0,
+        "target_list": "target_list_subdomain.csv",
+        "target_subset_size": 3,
+        "target_port": null,
+        "conn_timeout": 2,
+        "nw_interface": "enp0s3",
+        "use_ipv4": true,
+        "use_TLS": false,
+        "use_HTTP2": false,
+        "method": "GET",
+        "url": "",
+        "path": "",
+        "standard_subdomain": "www",
+        "relative_uri": false,
+        "include_subdomain": true,
+        "headers": null,
+        "standard_headers": "firefox_HTTP/1.1",
+        "content": "random"
+    },
+    "result_variables": {
+        "host_ip_info": {
+            "host": "facebook.com",
+            "socket_info": [
+                [
+                    2,
+                    1,
+                    6,
+                    "",
+                    [
+                        "157.240.210.35",
+                        80
+                    ]
+                ]
+            ],
+            "ip_address": "157.240.210.35",
+            "port": 80
+        },
+        "covertchannel_request_name": "<class 'http1_request_builder.HTTP1_Request_Builder'>",
+        "covertchannel_timing_name": "<class 'http1_request_builder.HTTP1_Request_Builder'>",
+        "Received_Status_Codes": {
+            "400": 9,
+            "999": 1
+        },
+        "Logged_Messages": 10,
+        "Logged_Messages_of_scheduled_attempts": 1.0,
+        "Response Properties": {
+            "Messages": 10,
+            "1xx": 0,
+            "2xx": 0,
+            "3xx": 0,
+            "4xx": 9,
+            "5xx": 0,
+            "9xx": 1
+        }
+    },
+    "statistics": {
+        "Host": "facebook.com",
+        "IP": "157.240.210.35",
+        "IPv4": true,
+        "TLS": false,
+        "HTTP/2": false,
+        "Messages Send": 10,
+        "1xx": 0.0,
+        "2xx": 0.0,
+        "3xx": 0.0,
+        "4xx": 90.0,
+        "5xx": 0.0,
+        "9xx": 10.0,
+        "Avg Response Time": 0.24428203105926513,
+        "StdD Response Time": 0.4352323233278594,
+        "Avg Deviation Count": 1.0,
+        "StdD Deviation Count": 0.0,
+        "Avg Request Length": 339.8,
+        "StdD Request Length": 2.2271057451320084,
+        "Avg URI Length": 57.8,
+        "StdD URI Length": 2.227105745132009,
+        "Avg Response Header Keys": 3.6,
+        "StdD Response Header Keys": 1.2000000000000002,
+        "Avg Response Body Length": 2663.1,
+        "StdD Response Body Length": 887.7000000000002
+    }
+}

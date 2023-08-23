@@ -584,7 +584,6 @@ class HTTP1_Request_CC_URI_Common_Addresses(HTTP1_Request_Builder):
         
 
         standard_paths = [
-            path,
             "/",
             "/index.html",
             "/index.php",
@@ -596,15 +595,26 @@ class HTTP1_Request_CC_URI_Common_Addresses(HTTP1_Request_Builder):
             "/favicon.ico",
         ]
         
+        if path!="":
+            standard_paths.append(path)
+
         new_path= random.choice(standard_paths)
         if new_path != path:
             deviation_count += 1
+        
         if relative_uri==False:        
+            #Scheme:
+            if port==443:
+                scheme="https://"
+            else:
+                scheme="http://"
+            #subdomains                      
             if include_subdomain:
                subdomain=self.subdomain_placeholder+"."
             else:
                subdomain="" 
-            new_url =subdomain + self.domain_placeholder + new_path
+            #absolute uri
+            new_url =scheme + subdomain + self.domain_placeholder + new_path
         else:
             new_url=new_path
 
