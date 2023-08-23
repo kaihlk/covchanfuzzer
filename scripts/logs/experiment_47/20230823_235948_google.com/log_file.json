@@ -1,0 +1,620 @@
+[
+    {
+        "number": 0,
+        "request": "GET /favicon.ico# HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.039992332458496094,
+            "Socket_Close_Time": 0.1413896083831787,
+            "Response_Time": 0.2282109260559082
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/favicon.ico",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Wed, 23 Aug 2023 21:59:47 GMT",
+            "expires": "Wed, 23 Aug 2023 22:29:47 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "231",
+            "x-xss-protection": "0"
+        },
+        "response_length": 231
+    },
+    {
+        "number": 1,
+        "request": "GET /index.php# HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.059796810150146484,
+            "Socket_Close_Time": 0.21097707748413086,
+            "Response_Time": 0.2154984474182129
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1570",
+            "date": "Wed, 23 Aug 2023 21:59:50 GMT"
+        },
+        "response_length": 1566
+    },
+    {
+        "number": 2,
+        "request": "GET /support# HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.012622356414794922,
+            "Socket_Close_Time": 0.28368067741394043,
+            "Response_Time": 0.1906297206878662
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://www.google.com/support",
+            "date": "Wed, 23 Aug 2023 21:59:52 GMT",
+            "expires": "Wed, 23 Aug 2023 21:59:52 GMT",
+            "cache-control": "private, max-age=0",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "server": "support-content-ui",
+            "content-length": "226",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 226
+    },
+    {
+        "number": 3,
+        "request": "GET /services# HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.024541378021240234,
+            "Socket_Close_Time": 0.11614370346069336,
+            "Response_Time": 0.12297940254211426
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/services",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Wed, 23 Aug 2023 21:59:54 GMT",
+            "expires": "Wed, 23 Aug 2023 22:29:54 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "228",
+            "x-xss-protection": "0"
+        },
+        "response_length": 228
+    },
+    {
+        "number": 4,
+        "request": "GET /contact# HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.04986262321472168,
+            "Socket_Close_Time": 0.12609338760375977,
+            "Response_Time": 0.04282641410827637
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/contact",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Wed, 23 Aug 2023 21:59:55 GMT",
+            "expires": "Wed, 23 Aug 2023 22:29:55 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "227",
+            "x-xss-protection": "0"
+        },
+        "response_length": 227
+    },
+    {
+        "number": 5,
+        "request": "GET /services# HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.057379722595214844,
+            "Socket_Close_Time": 0.13106060028076172,
+            "Response_Time": 0.1491994857788086
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/services",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "228",
+            "x-xss-protection": "0",
+            "date": "Wed, 23 Aug 2023 21:59:54 GMT",
+            "expires": "Wed, 23 Aug 2023 22:29:54 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "3"
+        },
+        "response_length": 228
+    },
+    {
+        "number": 6,
+        "request": "GET /services# HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.03883242607116699,
+            "Socket_Close_Time": 0.13608050346374512,
+            "Response_Time": 0.02841973304748535
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/services",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "228",
+            "x-xss-protection": "0",
+            "date": "Wed, 23 Aug 2023 21:59:54 GMT",
+            "expires": "Wed, 23 Aug 2023 22:29:54 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "6"
+        },
+        "response_length": 228
+    },
+    {
+        "number": 7,
+        "request": "GET /blog# HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#",
+        "request_length": 315,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.01788926124572754,
+            "Socket_Close_Time": 0.13799619674682617,
+            "Response_Time": 0.12818694114685059
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/blog",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Wed, 23 Aug 2023 22:00:03 GMT",
+            "expires": "Wed, 23 Aug 2023 22:30:03 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "224",
+            "x-xss-protection": "0"
+        },
+        "response_length": 224
+    },
+    {
+        "number": 8,
+        "request": "GET /support# HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.03490114212036133,
+            "Socket_Close_Time": 0.15888619422912598,
+            "Response_Time": 0.19326400756835938
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://www.google.com/support",
+            "date": "Wed, 23 Aug 2023 22:00:07 GMT",
+            "expires": "Wed, 23 Aug 2023 22:00:07 GMT",
+            "cache-control": "private, max-age=0",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "server": "support-content-ui",
+            "content-length": "226",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 226
+    },
+    {
+        "number": 9,
+        "request": "GET /about# HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05636787414550781,
+            "Socket_Close_Time": 0.16866087913513184,
+            "Response_Time": 0.22769689559936523
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/about",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Wed, 23 Aug 2023 22:00:09 GMT",
+            "expires": "Wed, 23 Aug 2023 22:30:09 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "225",
+            "x-xss-protection": "0"
+        },
+        "response_length": 225
+    },
+    {
+        "number": 10,
+        "request": "GET /favicon.ico# HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.026278257369995117,
+            "Socket_Close_Time": 0.1314396858215332,
+            "Response_Time": 0.022554397583007812
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/favicon.ico",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "231",
+            "x-xss-protection": "0",
+            "date": "Wed, 23 Aug 2023 21:59:47 GMT",
+            "expires": "Wed, 23 Aug 2023 22:29:47 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "24"
+        },
+        "response_length": 231
+    },
+    {
+        "number": 11,
+        "request": "GET /services# HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.041383981704711914,
+            "Socket_Close_Time": 0.10478663444519043,
+            "Response_Time": 0.03197598457336426
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/services",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "228",
+            "x-xss-protection": "0",
+            "date": "Wed, 23 Aug 2023 21:59:54 GMT",
+            "expires": "Wed, 23 Aug 2023 22:29:54 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "20"
+        },
+        "response_length": 228
+    },
+    {
+        "number": 12,
+        "request": "GET /support# HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07754707336425781,
+            "Socket_Close_Time": 0.10578608512878418,
+            "Response_Time": 0.09420180320739746
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://www.google.com/support",
+            "date": "Wed, 23 Aug 2023 22:00:18 GMT",
+            "expires": "Wed, 23 Aug 2023 22:00:18 GMT",
+            "cache-control": "private, max-age=0",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "server": "support-content-ui",
+            "content-length": "226",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 226
+    },
+    {
+        "number": 13,
+        "request": "GET /index.php# HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 1.046032190322876,
+            "Socket_Close_Time": 0.11083340644836426,
+            "Response_Time": 0.6796834468841553
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1570",
+            "date": "Wed, 23 Aug 2023 22:00:21 GMT"
+        },
+        "response_length": 1566
+    },
+    {
+        "number": 14,
+        "request": "GET /about# HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.03617715835571289,
+            "Socket_Close_Time": 0.15232276916503906,
+            "Response_Time": 0.2111072540283203
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/about",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "225",
+            "x-xss-protection": "0",
+            "date": "Wed, 23 Aug 2023 22:00:09 GMT",
+            "expires": "Wed, 23 Aug 2023 22:30:09 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "13"
+        },
+        "response_length": 225
+    },
+    {
+        "number": 15,
+        "request": "GET /contact# HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.04580092430114746,
+            "Socket_Close_Time": 0.11440014839172363,
+            "Response_Time": 0.02856159210205078
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/contact",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "227",
+            "x-xss-protection": "0",
+            "date": "Wed, 23 Aug 2023 21:59:55 GMT",
+            "expires": "Wed, 23 Aug 2023 22:29:55 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "30"
+        },
+        "response_length": 227
+    },
+    {
+        "number": 16,
+        "request": "GET /services# HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.019501686096191406,
+            "Socket_Close_Time": 0.23348736763000488,
+            "Response_Time": 0.09676241874694824
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/services",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "228",
+            "x-xss-protection": "0",
+            "date": "Wed, 23 Aug 2023 21:59:54 GMT",
+            "expires": "Wed, 23 Aug 2023 22:29:54 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "32"
+        },
+        "response_length": 228
+    },
+    {
+        "number": 17,
+        "request": "GET /about# HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09245920181274414,
+            "Socket_Close_Time": 0.15336871147155762,
+            "Response_Time": 0.06559562683105469
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/about",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "225",
+            "x-xss-protection": "0",
+            "date": "Wed, 23 Aug 2023 22:00:09 GMT",
+            "expires": "Wed, 23 Aug 2023 22:30:09 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "21"
+        },
+        "response_length": 225
+    },
+    {
+        "number": 18,
+        "request": "GET /services# HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06030869483947754,
+            "Socket_Close_Time": 0.10659241676330566,
+            "Response_Time": 0.03581571578979492
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/services",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "228",
+            "x-xss-protection": "0",
+            "date": "Wed, 23 Aug 2023 21:59:54 GMT",
+            "expires": "Wed, 23 Aug 2023 22:29:54 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "39"
+        },
+        "response_length": 228
+    },
+    {
+        "number": 19,
+        "request": "GET /services# HTTP/1.1\r\nHost: google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.012343883514404297,
+            "Socket_Close_Time": 0.1685466766357422,
+            "Response_Time": 0.18098783493041992
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/services",
+            "cross-origin-resource-policy": "cross-origin",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "content-length": "228",
+            "x-xss-protection": "0",
+            "date": "Wed, 23 Aug 2023 21:59:54 GMT",
+            "expires": "Wed, 23 Aug 2023 22:29:54 GMT",
+            "cache-control": "public, max-age=1800",
+            "content-type": "text/html; charset=UTF-8",
+            "age": "41"
+        },
+        "response_length": 228
+    }
+]

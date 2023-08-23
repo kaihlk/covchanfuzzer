@@ -629,6 +629,91 @@ class HTTP1_Request_CC_URI_Common_Addresses(HTTP1_Request_Builder):
         return request_string, deviation_count, new_url
 
 
+class HTTP1_Request_CC_URI_Common_Addresses_And_Anchors(HTTP1_Request_Builder):
+    
+    def generate_cc_request(self,
+         port, method="GET", path="/", headers=None, content=None, fuzzvalue=0.5, relative_uri=True, include_subdomain=True):
+        '''URI in the request line
+        Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers
+        Divide in 3 cover channels due to difference of technique
+        Change the part of the path to make an absolute URI, may include scheme, port or
+        Empty or not given port assune 80
+        http as scheme name and host name case insenitivity'''
+        
+        print("METHODE::")
+        print(method)
+        # Check if headers are provided elsewise take default headers
+        if headers is None:
+            headers = default_headers.copy()
+        else:
+            # Create a copy to avoid modifying the original list
+            headers = headers.copy()
+        
+        # Insert the Host header at the beginning of the list
+        headers.insert(0, ("Host", self.host_placeholder))
+
+
+        # Build a new URL from the given host
+        deviation_count = 0
+        
+
+        standard_paths = [
+            "/",
+            "/index.html",
+            "/index.php",
+            "/about",
+            "/contact",
+            "/services",
+            "/support",
+            "/blog",
+            "/favicon.ico",
+        ]
+        
+        if path!="":
+            standard_paths.append(path)
+
+        new_path= random.choice(standard_paths)
+
+        length=0
+        #Add Fragments
+        while random.random() < fuzzvalue:
+            length+=1
+        anchor="#"+mutators.generate_random_string(string.ascii_letters+string.digits, length) 
+
+        new_path+=anchor
+
+        if new_path != path:
+            deviation_count += 1
+        
+        if relative_uri==False:        
+            #Scheme:
+            if port==443:
+                scheme="https://"
+            else:
+                scheme="http://"
+            #subdomains                      
+            if include_subdomain:
+               subdomain=self.subdomain_placeholder+"."
+            else:
+               subdomain="" 
+            #absolute uri
+            new_url =scheme + subdomain + self.domain_placeholder + new_path
+        else:
+            new_url=new_path
+
+        request_line = f"{method} {new_url} HTTP/1.1\r\n"
+
+        request_string = request_line
+        for header in headers:
+            request_string += f"{header[0]}: {header[1]}\r\n"
+
+        request_string += "\r\n"
+          
+        return request_string, deviation_count, new_url
+
+
+
+
     # CC Absence or PResense of a header field
 
     # CC with uncommon header

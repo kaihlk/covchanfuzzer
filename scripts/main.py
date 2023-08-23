@@ -78,10 +78,10 @@ def main():
         "verbose": False,
         "timestamp": time.strftime("%Y%m%d_%H%M%S"),
         #Covert Channel Option
-        "covertchannel_request_number": 10,
+        "covertchannel_request_number": 11,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
-        "fuzz_value":0.5,
+        "fuzz_value":0.8,
         #Target Selection Options  
         "num_attempts": 20,
         "max_targets":3, #len(self.target_list):
