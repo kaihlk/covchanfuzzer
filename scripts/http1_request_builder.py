@@ -218,11 +218,20 @@ class HTTP1_Request_Builder:
             # Create a copy to avoid modifying the original list
         return self.generate_cc_request(port, method, path, relative_uri, headers, content, fuzzvalue)
 
-    def replace_host_and_domain(self, prerequest, host, domain=None):
+def replace_host_and_domain(self, prerequest, host, port, path, domain=None, relative_uri=True, port_uri=False):
         if domain==None:
-            domain=host
-        request=prerequest.replace(self.uri_placeholder,domain)
+            domain=self.build_uri(host, port, path, relative_uri, port_uri)
+        request=prerequest.replace(self.domain_placeholder,domain)
 
         request=request.replace(self.host_placeholder, host)
 
         return request
+
+
+
+###Domain Handling
+#CC builds complete Request,
+#CC defines 3 Placeholders,uri_subdomain, hostname(host+topleveldomain), host (may include subdomain)
+#CC defines port, path and schemme, here is the checked if relative or absolute uri should be used
+#RB take URI and parse it, extract subdomain, hostname, 
+# replaces them
