@@ -558,8 +558,7 @@ class HTTP1_Request_CC_Random_Content_No_Lenght_Field(HTTP1_Request_Builder):
 class HTTP1_Request_CC_URI_Common_Addresses(HTTP1_Request_Builder):
     
     def generate_cc_request(self,
-         port, method="GET", url="/", headers=None, content=None, fuzzvalue=0.5
-    ):
+         port, method="GET", path="/", headers=None, content=None, fuzzvalue=0.5, relative_uri=True, include_subdomain=True):
         '''URI in the request line
         Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers
         Divide in 3 cover channels due to difference of technique
@@ -585,7 +584,7 @@ class HTTP1_Request_CC_URI_Common_Addresses(HTTP1_Request_Builder):
         
 
         standard_paths = [
-            url,
+            path,
             "/",
             "/index.html",
             "/index.php",
@@ -598,10 +597,16 @@ class HTTP1_Request_CC_URI_Common_Addresses(HTTP1_Request_Builder):
         ]
         
         new_path= random.choice(standard_paths)
-        if new_path != url:
+        if new_path != path:
             deviation_count += 1
-
-        new_url = self.domain_placeholder + new_path
+        if relative_uri==False:        
+            if include_subdomain:
+               subdomain=self.subdomain_placeholder+"."
+            else:
+               subdomain="" 
+            new_url =subdomain + self.domain_placeholder + new_path
+        else:
+            new_url=new_path
 
         request_line = f"{method} {new_url} HTTP/1.1\r\n"
 

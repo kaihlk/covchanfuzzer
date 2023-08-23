@@ -83,11 +83,12 @@ def main():
         "covertchannel_timing_number": 1,
         "fuzz_value":0.5,
         #Target Selection Options  
-        "num_attempts": 10,
+        "num_attempts": 1,
+        "max_targets":3, #len(self.target_list):
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
         "target_list": "target_list_subdomain.csv",
-        "target_subset_size": 33,
+        "target_subset_size": 3,
         #"target_host": "www.example.com",  #Just for special useipvstt
         "target_port": None, #443, 8080 Apache
 
@@ -101,10 +102,10 @@ def main():
         #HTTP Message Options
         "method" : "GET",
         "url": "",   #Complete URl
-        "paths": "", #Dynamic, List, ?
+        "path": "", #Dynamic, List, ?
         "standard_subdomain": "www", #use www if not provided
         "relative_uri": True, # build a relative uri without the host in the requestline: /index.html
-        "standard_subdomain": "www",
+        "include_subdomain": True,
         "headers": None,
         "standard_headers": "firefox_HTTP/1.1",  #curl_HTTP/1.1(TLS), firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
         "content": "random",  #"random", "some_text""fuzz_value": 0.9,

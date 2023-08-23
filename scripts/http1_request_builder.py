@@ -12,7 +12,8 @@ from urllib.parse import quote
 class HTTP1_Request_Builder:
     def __init__(self): 
         self.host_placeholder= ">>HOST_PLACEHOLDER<<"
-        self.uri_placeholder=">>DOMAIN_PLACEHOLDER<<"
+        self.domain_placeholder=">>DOMAIN_PLACEHOLDER<<"
+        self.subdomain_placeholder=">>SUDBDOMAIN_PLACEHOLDER<<"
         self.generated_request=""
         self.default_headers_sets = {
             # The request line and the host and the url field must be generated and inserted in the functions
@@ -94,22 +95,20 @@ class HTTP1_Request_Builder:
         }
     def parse_host(self,host):
         #Initialize variables
-        subdomain = ""
+        subdomains = ""
         hostname = ""
         domain = ""
         
-        parts = host.split(".", 2)
-        if len(parts) == 2:
-            subdomain=""
-            host = parts[0]
-            domain = parts[1]
-        elif len(parts) == 3:
-            subdomain= parts[0]
-            host = parts[1]
-            domain = parts[2]
+        parts = host.split(".")
+
+        if len(parts) >= 2:
+            domain = parts[-1]
+            hostname = parts[-2]
+            subdomain=".".join(parts[:-2])  #Multiple Subodmains possible
+
         else: raise ValueError()
 
-        return subdomain, host, domain
+        return subdomains, host, domain
 
         #host may be part of the uri
     """ def parse_host(self, uri, host):
@@ -208,7 +207,10 @@ class HTTP1_Request_Builder:
         standard_headers=experiment_configuration["standard_headers"]
         content=experiment_configuration["content"]
         fuzzvalue=experiment_configuration["fuzz_value"]
+        
         relative_uri=experiment_configuration["relative_uri"]
+        include_subdomain=experiment_configuration["include_subdomain"]
+  
          # Check if headers are provided elsewise take default headers
         if headers is None: 
             if standard_headers in self.default_headers_sets:
@@ -216,16 +218,21 @@ class HTTP1_Request_Builder:
             else:
                 headers = self.default_headers_sets["curl_HTTP/1.1(TLS)"].copy()
             # Create a copy to avoid modifying the original list
-        return self.generate_cc_request(port, method, path, relative_uri, headers, content, fuzzvalue)
 
-def replace_host_and_domain(self, prerequest, host, port, path, domain=None, relative_uri=True, port_uri=False):
-        if domain==None:
-            domain=self.build_uri(host, port, path, relative_uri, port_uri)
-        request=prerequest.replace(self.domain_placeholder,domain)
 
-        request=request.replace(self.host_placeholder, host)
+        return self.generate_cc_request(port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain)
 
-        return request
+    def replace_host_and_domain(self, prerequest, host, standard_subdomain, domain=None):
+            subdomains, hostname, tldomain =self.parse_host(host)
+            if domain==None:
+                domain=hostname+"."+tldomain
+            if subdomains=="":
+                subdomains=standard_subdomain
+            request=prerequest.replace(self.subdomain_placeholder,subdomains)
+            request=request.replace(self.domain_placeholder, domain)
+            request=request.replace(self.host_placeholder, host)
+
+            return request
 
 
 

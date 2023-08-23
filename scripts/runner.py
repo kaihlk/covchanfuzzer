@@ -127,9 +127,9 @@ class ExperimentRunner:
                     #TODO
                     print("Baseline Check Failure, Connection maybe blocked")
                 else:     
-                    # Send the HTTP request and get the response in the main thread
+                    # Send the HTTP request and get the response in the main threads
                     
-                    request=request_builder.HTTP1_Request_Builder().replace_host_and_domain(prerequest,host_data["host"])
+                    request=request_builder.HTTP1_Request_Builder().replace_host_and_domain(prerequest,host_data["host"], self.experiment_configuration["standard_subdomain"])
                     print("Request")
                     print(request)
 
@@ -181,7 +181,7 @@ class ExperimentRunner:
         #Loop over List
         sub_set_no=1
         start_position=1
-        while start_position <= 100: #len(self.target_list):
+        while start_position <= self.experiment_configuration["max_targets"]: 
             #Get target subset
             subset=self.get_target_subset(start_position,self.experiment_configuration["target_subset_size"])
             
