@@ -576,7 +576,7 @@ class HTTP1_Request_CC_URI_Common_Addresses(HTTP1_Request_Builder):
             headers = headers.copy()
         
         # Insert the Host header at the beginning of the list
-        headers.insert(0, ("Host", self.host_placeholder))
+        headers.insert(0, ("Host", "www."+self.host_placeholder))
 
 
         # Build a new URL from the given host

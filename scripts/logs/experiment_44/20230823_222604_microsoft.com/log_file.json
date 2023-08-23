@@ -1,0 +1,252 @@
+[
+    {
+        "number": 0,
+        "request": "GET http://www.microsoft.com/index.html HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 351,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.30091333389282227,
+            "Socket_Close_Time": 0.13787412643432617,
+            "Response_Time": 0.30838823318481445
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Wed, 23 Aug 2023 20:26:07 GMT",
+            "server": "Kestrel",
+            "transfer-encoding": "chunked",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 2906
+    },
+    {
+        "number": 1,
+        "request": "GET http://www.microsoft.com/support HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</support",
+        "request_length": 348,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.3797130584716797,
+            "Socket_Close_Time": 0.14153838157653809,
+            "Response_Time": 0.28596067428588867
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Wed, 23 Aug 2023 20:26:11 GMT",
+            "server": "Kestrel",
+            "transfer-encoding": "chunked",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 2906
+    },
+    {
+        "number": 2,
+        "request": "GET http://www.microsoft.com/index.html HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 351,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.29924917221069336,
+            "Socket_Close_Time": 0.14986109733581543,
+            "Response_Time": 0.42169189453125
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Wed, 23 Aug 2023 20:26:13 GMT",
+            "server": "Kestrel",
+            "transfer-encoding": "chunked",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 2906
+    },
+    {
+        "number": 3,
+        "request": "GET http://www.microsoft.com/contact HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 348,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.42475080490112305,
+            "Socket_Close_Time": 0.12464022636413574,
+            "Response_Time": 0.4054701328277588
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Wed, 23 Aug 2023 20:26:16 GMT",
+            "server": "Kestrel",
+            "transfer-encoding": "chunked",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 2906
+    },
+    {
+        "number": 4,
+        "request": "GET http://www.microsoft.com/blog HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 345,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2980952262878418,
+            "Socket_Close_Time": 0.15215587615966797,
+            "Response_Time": 0.9042341709136963
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Wed, 23 Aug 2023 20:26:20 GMT",
+            "server": "Kestrel",
+            "transfer-encoding": "chunked",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 2906
+    },
+    {
+        "number": 5,
+        "request": "GET http://www.microsoft.com/services HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</services",
+        "request_length": 349,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.3871884346008301,
+            "Socket_Close_Time": 0.20982718467712402,
+            "Response_Time": 0.3813290596008301
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Wed, 23 Aug 2023 20:26:22 GMT",
+            "server": "Kestrel",
+            "transfer-encoding": "chunked",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 2906
+    },
+    {
+        "number": 6,
+        "request": "GET http://www.microsoft.com/about HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 346,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.3258225917816162,
+            "Socket_Close_Time": 0.5065760612487793,
+            "Response_Time": 0.4032561779022217
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Wed, 23 Aug 2023 20:26:24 GMT",
+            "server": "Kestrel",
+            "transfer-encoding": "chunked",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 2906
+    },
+    {
+        "number": 7,
+        "request": "GET http://www.microsoft.com/index.php HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</index.php",
+        "request_length": 350,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.31749653816223145,
+            "Socket_Close_Time": 0.10447454452514648,
+            "Response_Time": 0.945878267288208
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Wed, 23 Aug 2023 20:26:27 GMT",
+            "server": "Kestrel",
+            "transfer-encoding": "chunked",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 2906
+    },
+    {
+        "number": 8,
+        "request": "GET http://www.microsoft.com/contact HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 348,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.3258628845214844,
+            "Socket_Close_Time": 0.3180420398712158,
+            "Response_Time": 0.3256645202636719
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Wed, 23 Aug 2023 20:26:30 GMT",
+            "server": "Kestrel",
+            "transfer-encoding": "chunked",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 2906
+    },
+    {
+        "number": 9,
+        "request": "GET http://www.microsoft.com/blog HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</blog",
+        "request_length": 345,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.292985200881958,
+            "Socket_Close_Time": 0.22164344787597656,
+            "Response_Time": 0.28925085067749023
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Wed, 23 Aug 2023 20:26:31 GMT",
+            "server": "Kestrel",
+            "transfer-encoding": "chunked",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 2906
+    }
+]

@@ -102,13 +102,14 @@ class HTTP1_Request_Builder:
         parts = host.split(".")
 
         if len(parts) >= 2:
-            domain = parts[-1]
+            tldomain = parts[-1]
             hostname = parts[-2]
             subdomain=".".join(parts[:-2])  #Multiple Subodmains possible
 
         else: raise ValueError()
+  
 
-        return subdomains, host, domain
+        return subdomains, hostname, tldomain
 
         #host may be part of the uri
     """ def parse_host(self, uri, host):
@@ -225,6 +226,7 @@ class HTTP1_Request_Builder:
     def replace_host_and_domain(self, prerequest, host, standard_subdomain, domain=None):
             subdomains, hostname, tldomain =self.parse_host(host)
             if domain==None:
+                print("Hostname:"+hostname)
                 domain=hostname+"."+tldomain
             if subdomains=="":
                 subdomains=standard_subdomain

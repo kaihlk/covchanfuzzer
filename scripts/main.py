@@ -83,7 +83,7 @@ def main():
         "covertchannel_timing_number": 1,
         "fuzz_value":0.5,
         #Target Selection Options  
-        "num_attempts": 10,
+        "num_attempts": 20,
         "max_targets":3, #len(self.target_list):
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
