@@ -1,0 +1,126 @@
+{
+    "configuration_variables": {
+        "experiment_no": 58,
+        "comment": "test",
+        "verbose": false,
+        "timestamp": "20230826_194339",
+        "covertchannel_request_number": 11,
+        "covertchannel_connection_number": 1,
+        "covertchannel_timing_number": 1,
+        "fuzz_value": 0.8,
+        "num_attempts": 10,
+        "max_targets": 20,
+        "max_workers": 1,
+        "wait_between_request": 0,
+        "base_line_check_frequency": 0,
+        "target_list": "target_list_subdomain.csv",
+        "target_subset_size": 3,
+        "target_port": null,
+        "conn_timeout": 2,
+        "nw_interface": "enp0s3",
+        "use_ipv4": true,
+        "use_TLS": false,
+        "use_HTTP2": false,
+        "method": "GET",
+        "url": "",
+        "path": "",
+        "standard_subdomain": "www",
+        "relative_uri": true,
+        "include_subdomain": true,
+        "headers": null,
+        "standard_headers": "firefox_HTTP/1.1",
+        "content": "random"
+    },
+    "result_variables": {
+        "host_ip_info": {
+            "host": "pinterest.com",
+            "socket_info": [
+                [
+                    2,
+                    1,
+                    6,
+                    "",
+                    [
+                        "151.101.128.84",
+                        80
+                    ]
+                ],
+                [
+                    2,
+                    1,
+                    6,
+                    "",
+                    [
+                        "151.101.192.84",
+                        80
+                    ]
+                ],
+                [
+                    2,
+                    1,
+                    6,
+                    "",
+                    [
+                        "151.101.64.84",
+                        80
+                    ]
+                ],
+                [
+                    2,
+                    1,
+                    6,
+                    "",
+                    [
+                        "151.101.0.84",
+                        80
+                    ]
+                ]
+            ],
+            "ip_address": "151.101.128.84",
+            "port": 80
+        },
+        "covertchannel_request_name": "<class 'http1_request_builder.HTTP1_Request_Builder'>",
+        "covertchannel_timing_name": "<class 'http1_request_builder.HTTP1_Request_Builder'>",
+        "Received_Status_Codes": {
+            "308": 9,
+            "999": 1
+        },
+        "Logged_Messages": 10,
+        "Logged_Messages_of_scheduled_attempts": 1.0,
+        "Response Properties": {
+            "Messages": 10,
+            "1xx": 0,
+            "2xx": 0,
+            "3xx": 9,
+            "4xx": 0,
+            "5xx": 0,
+            "9xx": 1
+        }
+    },
+    "statistics": {
+        "Host": "pinterest.com",
+        "IP": "151.101.128.84",
+        "IPv4": true,
+        "TLS": false,
+        "HTTP/2": false,
+        "Messages Send": 10,
+        "1xx": 0.0,
+        "2xx": 0.0,
+        "3xx": 90.0,
+        "4xx": 0.0,
+        "5xx": 0.0,
+        "9xx": 10.0,
+        "Avg Response Time": 0.04634833335876465,
+        "StdD Response Time": 0.06866323437993488,
+        "Avg Deviation Count": 1.0,
+        "StdD Deviation Count": 0.0,
+        "Avg Request Length": 326.2,
+        "StdD Request Length": 7.413501197140256,
+        "Avg URI Length": 14.2,
+        "StdD URI Length": 7.413501197140255,
+        "Avg Response Header Keys": 6.3,
+        "StdD Response Header Keys": 2.1,
+        "Avg Response Body Length": 245.3,
+        "StdD Response Body Length": 83.0614832518659
+    }
+}

@@ -1,0 +1,272 @@
+[
+    {
+        "number": 0,
+        "request": "GET /index.html#ZG HTTP/1.1\r\nHost: whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#ZG",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.01883983612060547,
+            "Socket_Close_Time": 0.14731788635253906,
+            "Response_Time": 0.07545781135559082
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://whatsapp.net/index.html#ZG",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Sat, 26 Aug 2023 17:54:45 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET /about# HTTP/1.1\r\nHost: whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02643871307373047,
+            "Socket_Close_Time": 0.16323471069335938,
+            "Response_Time": 0.019972801208496094
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://whatsapp.net/about#",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Sat, 26 Aug 2023 17:55:32 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET /index.html# HTTP/1.1\r\nHost: whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.14333367347717285,
+            "Socket_Close_Time": 0.10967087745666504,
+            "Response_Time": 0.14255404472351074
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://whatsapp.net/index.html#",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Sat, 26 Aug 2023 17:56:06 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET /index.php#UsMA HTTP/1.1\r\nHost: whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#UsMA",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.01330113410949707,
+            "Socket_Close_Time": 0.11083602905273438,
+            "Response_Time": 0.006281375885009766
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://whatsapp.net/index.php#UsMA",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Sat, 26 Aug 2023 17:56:30 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET /index.php# HTTP/1.1\r\nHost: whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.012455940246582031,
+            "Socket_Close_Time": 0.12080526351928711,
+            "Response_Time": 0.012368917465209961
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://whatsapp.net/index.php#",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Sat, 26 Aug 2023 17:57:05 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 5,
+        "request": "GET /index.php#o HTTP/1.1\r\nHost: whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#o",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0086669921875,
+            "Socket_Close_Time": 0.13778424263000488,
+            "Response_Time": 0.019110441207885742
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://whatsapp.net/index.php#o",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Sat, 26 Aug 2023 17:57:27 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET /index.php#pJIsiXmhHp5onzuMO HTTP/1.1\r\nHost: whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#pJIsiXmhHp5onzuMO",
+        "request_length": 339,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.017132043838500977,
+            "Socket_Close_Time": 0.1077721118927002,
+            "Response_Time": 0.019854068756103516
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://whatsapp.net/index.php#pJIsiXmhHp5onzuMO",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Sat, 26 Aug 2023 17:57:51 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET /index.php#r1Pd HTTP/1.1\r\nHost: whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#r1Pd",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.013782501220703125,
+            "Socket_Close_Time": 0.11291313171386719,
+            "Response_Time": 0.0703425407409668
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://whatsapp.net/index.php#r1Pd",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Sat, 26 Aug 2023 17:58:17 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET /support#Sk HTTP/1.1\r\nHost: whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#Sk",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.011633872985839844,
+            "Socket_Close_Time": 0.11357831954956055,
+            "Response_Time": 0.012768268585205078
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://whatsapp.net/support#Sk",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Sat, 26 Aug 2023 17:58:37 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET /contact#SBESw HTTP/1.1\r\nHost: whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#SBESw",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.013137578964233398,
+            "Socket_Close_Time": 0.11263775825500488,
+            "Response_Time": 0.01602649688720703
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://whatsapp.net/contact#SBESw",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Sat, 26 Aug 2023 17:59:00 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    }
+]

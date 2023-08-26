@@ -1,0 +1,54 @@
+[
+    {
+        "number": 0,
+        "request": "GET /favicon.ico#4fWiQhj6g HTTP/1.1\r\nHost: twitter.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#4fWiQhj6g",
+        "request_length": 332,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.8518218994140625,
+            "Socket_Close_Time": 0.5919995307922363,
+            "Response_Time": 2.3814210891723633
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "x-connection-hash": "275ccf6a3480844e7704f151aac456d51a9fe6c6588056da5d72362f9b69fe07",
+            "date": "Sat, 26 Aug 2023 20:34:03 GMT",
+            "server": "tsa_o",
+            "connection": "close",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET /support#oQW HTTP/1.1\r\nHost: twitter.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#oQW",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07389450073242188,
+            "Socket_Close_Time": 0.9597461223602295,
+            "Response_Time": 0.05220198631286621
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "x-connection-hash": "40ed4879b573c36cc7b44d7980ca5ffb2497b51fc253fec4f960b740364beb42",
+            "date": "Sat, 26 Aug 2023 20:34:42 GMT",
+            "server": "tsa_o",
+            "connection": "close",
+            "content-length": "0"
+        },
+        "response_length": 0
+    }
+]

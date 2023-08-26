@@ -1,0 +1,258 @@
+[
+    {
+        "number": 0,
+        "request": "GET /blog# HTTP/1.1\r\nHost: app-measurement.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.01704883575439453,
+            "Socket_Close_Time": 0.12847089767456055,
+            "Response_Time": 0.13673758506774902
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1565",
+            "date": "Sat, 26 Aug 2023 17:55:37 GMT"
+        },
+        "response_length": 1561
+    },
+    {
+        "number": 1,
+        "request": "GET /support#2EjwR HTTP/1.1\r\nHost: app-measurement.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#2EjwR",
+        "request_length": 332,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06946492195129395,
+            "Socket_Close_Time": 0.13409185409545898,
+            "Response_Time": 0.12585806846618652
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1568",
+            "date": "Sat, 26 Aug 2023 17:56:16 GMT"
+        },
+        "response_length": 1564
+    },
+    {
+        "number": 2,
+        "request": "GET /about#hdtS HTTP/1.1\r\nHost: app-measurement.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#hdtS",
+        "request_length": 329,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.011846780776977539,
+            "Socket_Close_Time": 0.11252355575561523,
+            "Response_Time": 0.11855030059814453
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1566",
+            "date": "Sat, 26 Aug 2023 17:56:45 GMT"
+        },
+        "response_length": 1562
+    },
+    {
+        "number": 3,
+        "request": "GET /favicon.ico#unU9Bmz HTTP/1.1\r\nHost: app-measurement.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#unU9Bmz",
+        "request_length": 338,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.027375459671020508,
+            "Socket_Close_Time": 0.11606979370117188,
+            "Response_Time": 0.13597965240478516
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1572",
+            "date": "Sat, 26 Aug 2023 17:57:12 GMT"
+        },
+        "response_length": 1568
+    },
+    {
+        "number": 4,
+        "request": "GET /#D HTTP/1.1\r\nHost: app-measurement.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#D",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10887622833251953,
+            "Socket_Close_Time": 0.11424851417541504,
+            "Response_Time": 3.3799610137939453
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Sat, 26 Aug 2023 17:57:40 GMT",
+            "server": "sffe",
+            "content-length": "1561",
+            "x-xss-protection": "0"
+        },
+        "response_length": 1557
+    },
+    {
+        "number": 5,
+        "request": "GET /index.html#I HTTP/1.1\r\nHost: app-measurement.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#I",
+        "request_length": 331,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.027180910110473633,
+            "Socket_Close_Time": 0.1300516128540039,
+            "Response_Time": 0.12121391296386719
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1571",
+            "date": "Sat, 26 Aug 2023 17:58:12 GMT"
+        },
+        "response_length": 1567
+    },
+    {
+        "number": 6,
+        "request": "GET /about#vOpt HTTP/1.1\r\nHost: app-measurement.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#vOpt",
+        "request_length": 329,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.011675834655761719,
+            "Socket_Close_Time": 0.11145329475402832,
+            "Response_Time": 0.11723089218139648
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1566",
+            "date": "Sat, 26 Aug 2023 17:58:35 GMT"
+        },
+        "response_length": 1562
+    },
+    {
+        "number": 7,
+        "request": "GET /support#HzJLUsisv7 HTTP/1.1\r\nHost: app-measurement.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#HzJLUsisv7",
+        "request_length": 337,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.03162789344787598,
+            "Socket_Close_Time": 0.11376810073852539,
+            "Response_Time": 0.32022571563720703
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1568",
+            "date": "Sat, 26 Aug 2023 17:59:01 GMT"
+        },
+        "response_length": 1564
+    },
+    {
+        "number": 8,
+        "request": "GET /index.php#CTYca5 HTTP/1.1\r\nHost: app-measurement.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#CTYca5",
+        "request_length": 335,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.012651205062866211,
+            "Socket_Close_Time": 0.11191368103027344,
+            "Response_Time": 0.11413741111755371
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1570",
+            "date": "Sat, 26 Aug 2023 18:00:58 GMT"
+        },
+        "response_length": 1566
+    },
+    {
+        "number": 9,
+        "request": "GET /# HTTP/1.1\r\nHost: app-measurement.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.015532493591308594,
+            "Socket_Close_Time": 0.11118483543395996,
+            "Response_Time": 0.03221845626831055
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Sat, 26 Aug 2023 18:01:37 GMT",
+            "server": "sffe",
+            "content-length": "1561",
+            "x-xss-protection": "0"
+        },
+        "response_length": 1557
+    }
+]

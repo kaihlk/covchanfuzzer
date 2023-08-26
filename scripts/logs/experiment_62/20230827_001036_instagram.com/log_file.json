@@ -1,0 +1,56 @@
+[
+    {
+        "number": 0,
+        "request": "GET /blog#qsvL HTTP/1.1\r\nHost: instagram.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#qsvL",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02994370460510254,
+            "Socket_Close_Time": 0.10546588897705078,
+            "Response_Time": 0.12090754508972168
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://instagram.com/blog#qsvL",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Sat, 26 Aug 2023 22:10:48 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET /#yI5 HTTP/1.1\r\nHost: instagram.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#yI5",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.21483898162841797,
+            "Socket_Close_Time": 0.5592660903930664,
+            "Response_Time": 0.015503406524658203
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://instagram.com/#yI5",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Sat, 26 Aug 2023 22:10:55 GMT",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    }
+]

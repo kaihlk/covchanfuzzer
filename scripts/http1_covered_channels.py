@@ -640,8 +640,7 @@ class HTTP1_Request_CC_URI_Common_Addresses_And_Anchors(HTTP1_Request_Builder):
         Empty or not given port assune 80
         http as scheme name and host name case insenitivity'''
         
-        print("METHODE::")
-        print(method)
+
         # Check if headers are provided elsewise take default headers
         if headers is None:
             headers = default_headers.copy()

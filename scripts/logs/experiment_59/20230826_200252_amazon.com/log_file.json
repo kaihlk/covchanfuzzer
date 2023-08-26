@@ -1,0 +1,272 @@
+[
+    {
+        "number": 0,
+        "request": "GET /services# HTTP/1.1\r\nHost: amazon.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.23322057723999023,
+            "Socket_Close_Time": 0.11286401748657227,
+            "Response_Time": 0.14100289344787598
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "Server",
+            "date": "Sat, 26 Aug 2023 18:03:01 GMT",
+            "content-type": "text/html",
+            "content-length": "163",
+            "connection": "keep-alive",
+            "location": "https://amazon.com/services#"
+        },
+        "response_length": 163
+    },
+    {
+        "number": 1,
+        "request": "GET /index.php#USI HTTP/1.1\r\nHost: amazon.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#USI",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1039435863494873,
+            "Socket_Close_Time": 0.13800263404846191,
+            "Response_Time": 0.12265348434448242
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "Server",
+            "date": "Sat, 26 Aug 2023 18:03:09 GMT",
+            "content-type": "text/html",
+            "content-length": "163",
+            "connection": "keep-alive",
+            "location": "https://amazon.com/index.php#USI"
+        },
+        "response_length": 163
+    },
+    {
+        "number": 2,
+        "request": "GET /favicon.ico# HTTP/1.1\r\nHost: amazon.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10883259773254395,
+            "Socket_Close_Time": 0.10698390007019043,
+            "Response_Time": 0.10843896865844727
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "Server",
+            "date": "Sat, 26 Aug 2023 18:03:17 GMT",
+            "content-type": "text/html",
+            "content-length": "163",
+            "connection": "keep-alive",
+            "location": "https://amazon.com/favicon.ico#"
+        },
+        "response_length": 163
+    },
+    {
+        "number": 3,
+        "request": "GET /# HTTP/1.1\r\nHost: amazon.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#",
+        "request_length": 311,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 1.1448109149932861,
+            "Socket_Close_Time": 0.10764002799987793,
+            "Response_Time": 0.10553765296936035
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "Server",
+            "date": "Sat, 26 Aug 2023 18:03:25 GMT",
+            "content-type": "text/html",
+            "content-length": "163",
+            "connection": "keep-alive",
+            "location": "https://amazon.com/#"
+        },
+        "response_length": 163
+    },
+    {
+        "number": 4,
+        "request": "GET /favicon.ico#J HTTP/1.1\r\nHost: amazon.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#J",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2925684452056885,
+            "Socket_Close_Time": 0.20009946823120117,
+            "Response_Time": 0.10757803916931152
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "Server",
+            "date": "Sat, 26 Aug 2023 18:03:32 GMT",
+            "content-type": "text/html",
+            "content-length": "163",
+            "connection": "keep-alive",
+            "location": "https://amazon.com/favicon.ico#J"
+        },
+        "response_length": 163
+    },
+    {
+        "number": 5,
+        "request": "GET /services#ksJh HTTP/1.1\r\nHost: amazon.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#ksJh",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10724830627441406,
+            "Socket_Close_Time": 0.14082717895507812,
+            "Response_Time": 0.11310696601867676
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "Server",
+            "date": "Sat, 26 Aug 2023 18:03:39 GMT",
+            "content-type": "text/html",
+            "content-length": "163",
+            "connection": "keep-alive",
+            "location": "https://amazon.com/services#ksJh"
+        },
+        "response_length": 163
+    },
+    {
+        "number": 6,
+        "request": "GET /index.php#RWkO HTTP/1.1\r\nHost: amazon.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#RWkO",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 1.1641898155212402,
+            "Socket_Close_Time": 0.27488112449645996,
+            "Response_Time": 0.11389541625976562
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "Server",
+            "date": "Sat, 26 Aug 2023 18:03:47 GMT",
+            "content-type": "text/html",
+            "content-length": "163",
+            "connection": "keep-alive",
+            "location": "https://amazon.com/index.php#RWkO"
+        },
+        "response_length": 163
+    },
+    {
+        "number": 7,
+        "request": "GET /favicon.ico# HTTP/1.1\r\nHost: amazon.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10734248161315918,
+            "Socket_Close_Time": 0.11127114295959473,
+            "Response_Time": 0.10718226432800293
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "Server",
+            "date": "Sat, 26 Aug 2023 18:03:55 GMT",
+            "content-type": "text/html",
+            "content-length": "163",
+            "connection": "keep-alive",
+            "location": "https://amazon.com/favicon.ico#"
+        },
+        "response_length": 163
+    },
+    {
+        "number": 8,
+        "request": "GET /support#T HTTP/1.1\r\nHost: amazon.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#T",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11935758590698242,
+            "Socket_Close_Time": 0.1075737476348877,
+            "Response_Time": 0.1470966339111328
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "Server",
+            "date": "Sat, 26 Aug 2023 18:04:05 GMT",
+            "content-type": "text/html",
+            "content-length": "163",
+            "connection": "keep-alive",
+            "location": "https://amazon.com/support#T"
+        },
+        "response_length": 163
+    },
+    {
+        "number": 9,
+        "request": "GET /index.php#Tm4Yqn63 HTTP/1.1\r\nHost: amazon.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#Tm4Yqn63",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.12649011611938477,
+            "Socket_Close_Time": 0.11623501777648926,
+            "Response_Time": 0.19618868827819824
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "Server",
+            "date": "Sat, 26 Aug 2023 18:04:13 GMT",
+            "content-type": "text/html",
+            "content-length": "163",
+            "connection": "keep-alive",
+            "location": "https://amazon.com/index.php#Tm4Yqn63"
+        },
+        "response_length": 163
+    }
+]

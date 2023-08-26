@@ -1,0 +1,292 @@
+[
+    {
+        "number": 0,
+        "request": "GET /index.html#ZG HTTP/1.1\r\nHost: office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#ZG",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.140700101852417,
+            "Socket_Close_Time": 0.1342601776123047,
+            "Response_Time": 0.1471996307373047
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Sat, 26 Aug 2023 17:54:28 GMT",
+            "server": "Kestrel",
+            "cache-control": "public,max-age=30",
+            "location": "https://www.microsoft.com/microsoft-365?ms.url=office365com&shorturl=index.html#ZG",
+            "vary": "User-Agent",
+            "request-context": "appId=cid-v1:27f0a7a8-dd10-4827-bbd3-5edd1d46ab25",
+            "x-response-cache-status": "True"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET /about# HTTP/1.1\r\nHost: office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.16247129440307617,
+            "Socket_Close_Time": 0.12303638458251953,
+            "Response_Time": 0.6079719066619873
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Sat, 26 Aug 2023 17:55:14 GMT",
+            "server": "Kestrel",
+            "cache-control": "public,max-age=30",
+            "location": "https://www.microsoft.com/microsoft-365?ms.url=office365com&shorturl=about#",
+            "vary": "User-Agent",
+            "request-context": "appId=cid-v1:27f0a7a8-dd10-4827-bbd3-5edd1d46ab25",
+            "x-response-cache-status": "True"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET /index.html# HTTP/1.1\r\nHost: office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.14837026596069336,
+            "Socket_Close_Time": 0.13100266456604004,
+            "Response_Time": 0.3139164447784424
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Sat, 26 Aug 2023 17:55:48 GMT",
+            "server": "Kestrel",
+            "cache-control": "public,max-age=30",
+            "location": "https://www.microsoft.com/microsoft-365?ms.url=office365com&shorturl=index.html#",
+            "vary": "User-Agent",
+            "request-context": "appId=cid-v1:27f0a7a8-dd10-4827-bbd3-5edd1d46ab25",
+            "x-response-cache-status": "True"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET /index.php#UsMA HTTP/1.1\r\nHost: office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#UsMA",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.13911676406860352,
+            "Socket_Close_Time": 0.11740326881408691,
+            "Response_Time": 0.15482068061828613
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Sat, 26 Aug 2023 17:56:18 GMT",
+            "server": "Kestrel",
+            "cache-control": "public,max-age=30",
+            "location": "https://www.microsoft.com/microsoft-365?ms.url=office365com&shorturl=index.php#UsMA",
+            "vary": "User-Agent",
+            "request-context": "appId=cid-v1:27f0a7a8-dd10-4827-bbd3-5edd1d46ab25",
+            "x-response-cache-status": "True"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET /index.php# HTTP/1.1\r\nHost: office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1643083095550537,
+            "Socket_Close_Time": 0.11445403099060059,
+            "Response_Time": 0.18708109855651855
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Sat, 26 Aug 2023 17:56:54 GMT",
+            "server": "Kestrel",
+            "cache-control": "public,max-age=30",
+            "location": "https://www.microsoft.com/microsoft-365?ms.url=office365com&shorturl=index.php#",
+            "vary": "User-Agent",
+            "request-context": "appId=cid-v1:27f0a7a8-dd10-4827-bbd3-5edd1d46ab25",
+            "x-response-cache-status": "True"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 5,
+        "request": "GET /index.php#o HTTP/1.1\r\nHost: office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#o",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.16011810302734375,
+            "Socket_Close_Time": 0.11163783073425293,
+            "Response_Time": 0.15037298202514648
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Sat, 26 Aug 2023 17:57:14 GMT",
+            "server": "Kestrel",
+            "cache-control": "public,max-age=30",
+            "location": "https://www.microsoft.com/microsoft-365?ms.url=office365com&shorturl=index.php#o",
+            "vary": "User-Agent",
+            "request-context": "appId=cid-v1:27f0a7a8-dd10-4827-bbd3-5edd1d46ab25",
+            "x-response-cache-status": "True"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET /index.php#pJIsiXmhHp5onzuMO HTTP/1.1\r\nHost: office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#pJIsiXmhHp5onzuMO",
+        "request_length": 340,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.14737796783447266,
+            "Socket_Close_Time": 0.11137747764587402,
+            "Response_Time": 0.16082334518432617
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Sat, 26 Aug 2023 17:57:36 GMT",
+            "server": "Kestrel",
+            "cache-control": "public,max-age=30",
+            "location": "https://www.microsoft.com/microsoft-365?ms.url=office365com&shorturl=index.php#pJIsiXmhHp5onzuMO",
+            "vary": "User-Agent",
+            "request-context": "appId=cid-v1:27f0a7a8-dd10-4827-bbd3-5edd1d46ab25",
+            "x-response-cache-status": "True"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET /index.php#r1Pd HTTP/1.1\r\nHost: office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#r1Pd",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1454310417175293,
+            "Socket_Close_Time": 0.11313748359680176,
+            "Response_Time": 0.1423625946044922
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Sat, 26 Aug 2023 17:58:05 GMT",
+            "server": "Kestrel",
+            "cache-control": "public,max-age=30",
+            "location": "https://www.microsoft.com/microsoft-365?ms.url=office365com&shorturl=index.php#r1Pd",
+            "vary": "User-Agent",
+            "request-context": "appId=cid-v1:27f0a7a8-dd10-4827-bbd3-5edd1d46ab25",
+            "x-response-cache-status": "True"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET /support#Sk HTTP/1.1\r\nHost: office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#Sk",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.14302921295166016,
+            "Socket_Close_Time": 0.10394740104675293,
+            "Response_Time": 0.1446843147277832
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Sat, 26 Aug 2023 17:58:28 GMT",
+            "server": "Kestrel",
+            "cache-control": "public,max-age=30",
+            "location": "https://www.microsoft.com/microsoft-365?ms.url=office365com&shorturl=support#Sk",
+            "vary": "User-Agent",
+            "request-context": "appId=cid-v1:27f0a7a8-dd10-4827-bbd3-5edd1d46ab25",
+            "x-response-cache-status": "True"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET /contact#SBESw HTTP/1.1\r\nHost: office365.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#SBESw",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.14363622665405273,
+            "Socket_Close_Time": 0.3693563938140869,
+            "Response_Time": 0.4963691234588623
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Sat, 26 Aug 2023 17:58:49 GMT",
+            "server": "Kestrel",
+            "cache-control": "public,max-age=30",
+            "location": "https://www.microsoft.com/microsoft-365?ms.url=office365com&shorturl=contact#SBESw",
+            "vary": "User-Agent",
+            "request-context": "appId=cid-v1:27f0a7a8-dd10-4827-bbd3-5edd1d46ab25",
+            "x-response-cache-status": "True"
+        },
+        "response_length": 0
+    }
+]

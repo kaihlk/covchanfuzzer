@@ -1,0 +1,64 @@
+[
+    {
+        "number": 0,
+        "request": "GET /blog#dLC02kgdZNr1svD044ZDF HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#dLC02kgdZNr1svD044ZDF",
+        "request_length": 335,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Redirect",
+        "measured_times": {
+            "Socket_Connect_Time": 0.015617847442626953,
+            "Socket_Close_Time": 0.10029935836791992,
+            "Response_Time": 0.014892578125
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 20:13:11 GMT",
+            "connection": "close",
+            "via": "http/1.1 dedus1-edge-bx-003.ts.apple.com (acdn/14362.4)",
+            "cache-control": "no-store",
+            "location": "https://www.apple.com/blog",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "903d43b5-84ac-4971-98f8-ede441af1ce8-840317724",
+            "content-length": "308"
+        },
+        "response_length": 308
+    },
+    {
+        "number": 1,
+        "request": "GET /blog#6y HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#6y",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Redirect",
+        "measured_times": {
+            "Socket_Connect_Time": 0.01428985595703125,
+            "Socket_Close_Time": 0.10036492347717285,
+            "Response_Time": 0.2328324317932129
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 20:13:12 GMT",
+            "connection": "close",
+            "via": "http/1.1 dedus1-edge-bx-005.ts.apple.com (acdn/14362.4)",
+            "cache-control": "no-store",
+            "location": "https://www.apple.com/blog",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "889e0420-a4e1-40b0-877c-2ef0fe1043ff-842427454",
+            "content-length": "308"
+        },
+        "response_length": 308
+    }
+]

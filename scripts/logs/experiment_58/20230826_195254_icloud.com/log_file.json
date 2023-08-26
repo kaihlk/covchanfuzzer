@@ -1,0 +1,342 @@
+[
+    {
+        "number": 0,
+        "request": "GET /services#dlAElgqwW HTTP/1.1\r\nHost: icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#dlAElgqwW",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.018251895904541016,
+            "Socket_Close_Time": 0.11973118782043457,
+            "Response_Time": 0.02713155746459961
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AppleHttpServer/3faf4ee9434b",
+            "date": "Sat, 26 Aug 2023 17:49:12 GMT",
+            "content-length": "17",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "cache-control": "max-age=3600",
+            "location": "https://icloud.com/services",
+            "via": "49ed01272a7e88a19263fc26c7d05c4e:c3c669cec1a004c6e7eee2272aa36d43:dedus1, http/1.1 dedus1-edge-bx-005.ts.apple.com (acdn/14362.4)",
+            "x-apple-request-uuid": "a3224bd0-20c5-41e7-9c4c-a5092876688b",
+            "access-control-expose-headers": "X-Apple-Request-UUID,Via",
+            "age": "230",
+            "connection": "keep-alive",
+            "x-cache": "hit-fresh",
+            "cdnuuid": "889e0420-a4e1-40b0-877c-2ef0fe1043ff-747464082"
+        },
+        "response_length": 17
+    },
+    {
+        "number": 1,
+        "request": "GET /index.html#CA HTTP/1.1\r\nHost: icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#CA",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.04114389419555664,
+            "Socket_Close_Time": 0.1125636100769043,
+            "Response_Time": 0.09035944938659668
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AppleHttpServer/3faf4ee9434b",
+            "date": "Sat, 26 Aug 2023 17:53:23 GMT",
+            "content-length": "17",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "cache-control": "max-age=3600",
+            "location": "https://icloud.com/index.html",
+            "via": "49ed01272a7e88a19263fc26c7d05c4e:25f54122c0d96e1f6c33c3883d99f26f:dedus1, http/1.1 dedus1-edge-bx-005.ts.apple.com (acdn/14362.4)",
+            "x-apple-request-uuid": "038bbd32-3328-4528-b477-9ec4a7773f2a",
+            "access-control-expose-headers": "X-Apple-Request-UUID,Via",
+            "age": "0",
+            "connection": "keep-alive",
+            "x-cache": "miss",
+            "cdnuuid": "889e0420-a4e1-40b0-877c-2ef0fe1043ff-747703989"
+        },
+        "response_length": 17
+    },
+    {
+        "number": 2,
+        "request": "GET /favicon.ico#DpH HTTP/1.1\r\nHost: icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#DpH",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.030502796173095703,
+            "Socket_Close_Time": 0.1108710765838623,
+            "Response_Time": 1.2618651390075684
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AppleHttpServer/3faf4ee9434b",
+            "date": "Sat, 26 Aug 2023 17:52:42 GMT",
+            "content-length": "17",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "cache-control": "max-age=3600",
+            "location": "https://icloud.com/favicon.ico",
+            "via": "49ed01272a7e88a19263fc26c7d05c4e:c3c669cec1a004c6e7eee2272aa36d43:dedus1, http/1.1 dedus1-edge-bx-007.ts.apple.com (acdn/14362.4)",
+            "x-apple-request-uuid": "40d244ee-460c-4cfa-8ce0-f205407a2037",
+            "access-control-expose-headers": "X-Apple-Request-UUID,Via",
+            "age": "51",
+            "connection": "keep-alive",
+            "x-cache": "hit-fresh",
+            "cdnuuid": "d7bd8ca0-6cf5-497f-a69b-b05ae6b872c8-745800683"
+        },
+        "response_length": 17
+    },
+    {
+        "number": 3,
+        "request": "GET /contact#qOe HTTP/1.1\r\nHost: icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#qOe",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.032820701599121094,
+            "Socket_Close_Time": 0.10767221450805664,
+            "Response_Time": 0.02645421028137207
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AppleHttpServer/3faf4ee9434b",
+            "date": "Sat, 26 Aug 2023 17:53:57 GMT",
+            "content-length": "17",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "cache-control": "max-age=3600",
+            "location": "https://icloud.com/contact",
+            "via": "49ed01272a7e88a19263fc26c7d05c4e:25f54122c0d96e1f6c33c3883d99f26f:dedus1, http/1.1 dedus1-edge-bx-007.ts.apple.com (acdn/14362.4)",
+            "x-apple-request-uuid": "8010cb58-76f5-4c60-bbdc-706ef29d5d11",
+            "access-control-expose-headers": "X-Apple-Request-UUID,Via",
+            "age": "0",
+            "connection": "keep-alive",
+            "x-cache": "miss",
+            "cdnuuid": "d7bd8ca0-6cf5-497f-a69b-b05ae6b872c8-746076903"
+        },
+        "response_length": 17
+    },
+    {
+        "number": 4,
+        "request": "GET /blog#v9 HTTP/1.1\r\nHost: icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#v9",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.36429929733276367,
+            "Socket_Close_Time": 0.19072771072387695,
+            "Response_Time": 0.05077934265136719
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AppleHttpServer/3faf4ee9434b",
+            "date": "Sat, 26 Aug 2023 17:52:47 GMT",
+            "content-length": "17",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "cache-control": "max-age=3600",
+            "location": "https://icloud.com/blog",
+            "via": "49ed01272a7e88a19263fc26c7d05c4e:c3c669cec1a004c6e7eee2272aa36d43:dedus1, http/1.1 dedus1-edge-bx-007.ts.apple.com (acdn/14362.4)",
+            "x-apple-request-uuid": "a03db057-6b8b-49f7-8e30-999a3c327728",
+            "access-control-expose-headers": "X-Apple-Request-UUID,Via",
+            "age": "87",
+            "connection": "keep-alive",
+            "x-cache": "hit-fresh",
+            "cdnuuid": "d7bd8ca0-6cf5-497f-a69b-b05ae6b872c8-746270573"
+        },
+        "response_length": 17
+    },
+    {
+        "number": 5,
+        "request": "GET /blog#omQ HTTP/1.1\r\nHost: icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#omQ",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05443859100341797,
+            "Socket_Close_Time": 0.14424490928649902,
+            "Response_Time": 0.03666853904724121
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AppleHttpServer/3faf4ee9434b",
+            "date": "Sat, 26 Aug 2023 17:48:58 GMT",
+            "content-length": "17",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "cache-control": "max-age=3600",
+            "location": "https://icloud.com/blog",
+            "via": "49ed01272a7e88a19263fc26c7d05c4e:c3c669cec1a004c6e7eee2272aa36d43:dedus1, http/1.1 dedus1-edge-bx-003.ts.apple.com (acdn/14362.4)",
+            "x-apple-request-uuid": "f9b7f680-fbf1-4b07-9693-42e775b93d10",
+            "access-control-expose-headers": "X-Apple-Request-UUID,Via",
+            "age": "329",
+            "connection": "keep-alive",
+            "x-cache": "hit-fresh",
+            "cdnuuid": "903d43b5-84ac-4971-98f8-ede441af1ce8-746285593"
+        },
+        "response_length": 17
+    },
+    {
+        "number": 6,
+        "request": "GET /index.php#wowNdRfT HTTP/1.1\r\nHost: icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#wowNdRfT",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.026384353637695312,
+            "Socket_Close_Time": 0.463545560836792,
+            "Response_Time": 0.029673099517822266
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AppleHttpServer/3faf4ee9434b",
+            "date": "Sat, 26 Aug 2023 17:54:05 GMT",
+            "content-length": "17",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "cache-control": "max-age=3600",
+            "location": "https://icloud.com/index.php",
+            "via": "49ed01272a7e88a19263fc26c7d05c4e:25f54122c0d96e1f6c33c3883d99f26f:dedus1, http/1.1 dedus1-edge-bx-007.ts.apple.com (acdn/14362.4)",
+            "x-apple-request-uuid": "ac8fb947-7893-4fdf-ad91-1620179fed36",
+            "access-control-expose-headers": "X-Apple-Request-UUID,Via",
+            "age": "31",
+            "connection": "keep-alive",
+            "x-cache": "hit-fresh",
+            "cdnuuid": "d7bd8ca0-6cf5-497f-a69b-b05ae6b872c8-746536196"
+        },
+        "response_length": 17
+    },
+    {
+        "number": 7,
+        "request": "GET /#Gb HTTP/1.1\r\nHost: icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#Gb",
+        "request_length": 313,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0741434097290039,
+            "Socket_Close_Time": 0.10287761688232422,
+            "Response_Time": 0.11506199836730957
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AppleHttpServer/3faf4ee9434b",
+            "date": "Sat, 26 Aug 2023 17:53:44 GMT",
+            "content-length": "17",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "cache-control": "max-age=3600",
+            "location": "https://icloud.com/",
+            "via": "49ed01272a7e88a19263fc26c7d05c4e:25f54122c0d96e1f6c33c3883d99f26f:dedus1, http/1.1 dedus1-edge-bx-001.ts.apple.com (acdn/14362.4)",
+            "x-apple-request-uuid": "61080c60-47e9-4da3-bc2d-54c7ef9db4bc",
+            "access-control-expose-headers": "X-Apple-Request-UUID,Via",
+            "age": "89",
+            "connection": "keep-alive",
+            "x-cache": "hit-fresh",
+            "cdnuuid": "4b6ce55d-d184-4ccb-8efa-8956dea7406a-745229554"
+        },
+        "response_length": 17
+    },
+    {
+        "number": 8,
+        "request": "GET /#8 HTTP/1.1\r\nHost: icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#8",
+        "request_length": 312,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.22228407859802246,
+            "Socket_Close_Time": 0.15197396278381348,
+            "Response_Time": 0.07877421379089355
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AppleHttpServer/3faf4ee9434b",
+            "date": "Sat, 26 Aug 2023 17:53:44 GMT",
+            "content-length": "17",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "cache-control": "max-age=3600",
+            "location": "https://icloud.com/",
+            "via": "49ed01272a7e88a19263fc26c7d05c4e:25f54122c0d96e1f6c33c3883d99f26f:dedus1, http/1.1 dedus1-edge-bx-001.ts.apple.com (acdn/14362.4)",
+            "x-apple-request-uuid": "61080c60-47e9-4da3-bc2d-54c7ef9db4bc",
+            "access-control-expose-headers": "X-Apple-Request-UUID,Via",
+            "age": "103",
+            "connection": "keep-alive",
+            "x-cache": "hit-fresh",
+            "cdnuuid": "4b6ce55d-d184-4ccb-8efa-8956dea7406a-745397403"
+        },
+        "response_length": 17
+    },
+    {
+        "number": 9,
+        "request": "GET /about#RwE HTTP/1.1\r\nHost: icloud.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#RwE",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0365445613861084,
+            "Socket_Close_Time": 0.1981358528137207,
+            "Response_Time": 0.14477205276489258
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AppleHttpServer/3faf4ee9434b",
+            "date": "Sat, 26 Aug 2023 17:53:56 GMT",
+            "content-length": "17",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "cache-control": "max-age=3600",
+            "location": "https://icloud.com/about",
+            "via": "49ed01272a7e88a19263fc26c7d05c4e:25f54122c0d96e1f6c33c3883d99f26f:dedus1, http/1.1 dedus1-edge-bx-007.ts.apple.com (acdn/14362.4)",
+            "x-apple-request-uuid": "68a0f776-4652-4a79-93fe-d2a43c430fc0",
+            "access-control-expose-headers": "X-Apple-Request-UUID,Via",
+            "age": "109",
+            "connection": "keep-alive",
+            "x-cache": "hit-fresh",
+            "cdnuuid": "d7bd8ca0-6cf5-497f-a69b-b05ae6b872c8-747354644"
+        },
+        "response_length": 17
+    }
+]

@@ -1,0 +1,64 @@
+[
+    {
+        "number": 0,
+        "request": "GET /about#42 HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#42",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Redirect",
+        "measured_times": {
+            "Socket_Connect_Time": 1.3134608268737793,
+            "Socket_Close_Time": 1.078688383102417,
+            "Response_Time": 0.03995871543884277
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 22:13:19 GMT",
+            "connection": "close",
+            "via": "http/1.1 dedus1-edge-bx-001.ts.apple.com (acdn/14362.4)",
+            "cache-control": "no-store",
+            "location": "https://www.apple.com/about",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "4b6ce55d-d184-4ccb-8efa-8956dea7406a-909088441",
+            "content-length": "309"
+        },
+        "response_length": 309
+    },
+    {
+        "number": 1,
+        "request": "GET /#JRIB HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#JRIB",
+        "request_length": 314,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Redirect",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0885019302368164,
+            "Socket_Close_Time": 0.11540842056274414,
+            "Response_Time": 0.07896876335144043
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 22:13:26 GMT",
+            "connection": "close",
+            "via": "http/1.1 dedus1-edge-bx-003.ts.apple.com (acdn/14362.4)",
+            "cache-control": "no-store",
+            "location": "https://www.apple.com/",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "903d43b5-84ac-4971-98f8-ede441af1ce8-911992857",
+            "content-length": "304"
+        },
+        "response_length": 304
+    }
+]

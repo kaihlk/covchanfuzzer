@@ -1,0 +1,252 @@
+[
+    {
+        "number": 0,
+        "request": "GET /services# HTTP/1.1\r\nHost: msn.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09343671798706055,
+            "Socket_Close_Time": 0.1018679141998291,
+            "Response_Time": 0.02581501007080078
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=us-ascii",
+            "date": "Sat, 26 Aug 2023 17:53:22 GMT",
+            "connection": "close",
+            "content-length": "324"
+        },
+        "response_length": 324
+    },
+    {
+        "number": 1,
+        "request": "GET /about#8fZ4 HTTP/1.1\r\nHost: msn.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#8fZ4",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08150839805603027,
+            "Socket_Close_Time": 0.11611628532409668,
+            "Response_Time": 0.23033356666564941
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=us-ascii",
+            "date": "Sat, 26 Aug 2023 17:53:43 GMT",
+            "connection": "close",
+            "content-length": "324"
+        },
+        "response_length": 324
+    },
+    {
+        "number": 2,
+        "request": "GET /blog#S HTTP/1.1\r\nHost: msn.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#S",
+        "request_length": 313,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1632554531097412,
+            "Socket_Close_Time": 0.1170358657836914,
+            "Response_Time": 0.04355788230895996
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=us-ascii",
+            "date": "Sat, 26 Aug 2023 17:54:07 GMT",
+            "connection": "close",
+            "content-length": "324"
+        },
+        "response_length": 324
+    },
+    {
+        "number": 3,
+        "request": "GET /contact#lKGj HTTP/1.1\r\nHost: msn.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#lKGj",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.036431074142456,
+            "Socket_Close_Time": 0.12978053092956543,
+            "Response_Time": 0.01961541175842285
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=us-ascii",
+            "date": "Sat, 26 Aug 2023 17:54:24 GMT",
+            "connection": "close",
+            "content-length": "324"
+        },
+        "response_length": 324
+    },
+    {
+        "number": 4,
+        "request": "GET /index.php#lZC HTTP/1.1\r\nHost: msn.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#lZC",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09410619735717773,
+            "Socket_Close_Time": 0.23558807373046875,
+            "Response_Time": 0.1455371379852295
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=us-ascii",
+            "date": "Sat, 26 Aug 2023 17:54:40 GMT",
+            "connection": "close",
+            "content-length": "324"
+        },
+        "response_length": 324
+    },
+    {
+        "number": 5,
+        "request": "GET /index.php# HTTP/1.1\r\nHost: msn.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06097579002380371,
+            "Socket_Close_Time": 0.10248351097106934,
+            "Response_Time": 0.08087563514709473
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=us-ascii",
+            "date": "Sat, 26 Aug 2023 17:55:23 GMT",
+            "connection": "close",
+            "content-length": "324"
+        },
+        "response_length": 324
+    },
+    {
+        "number": 6,
+        "request": "GET /#hv HTTP/1.1\r\nHost: msn.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#hv",
+        "request_length": 310,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.058592796325683594,
+            "Socket_Close_Time": 0.1293041706085205,
+            "Response_Time": 0.15571117401123047
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=us-ascii",
+            "date": "Sat, 26 Aug 2023 17:55:41 GMT",
+            "connection": "close",
+            "content-length": "324"
+        },
+        "response_length": 324
+    },
+    {
+        "number": 7,
+        "request": "GET /contact#umfHG HTTP/1.1\r\nHost: msn.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#umfHG",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1117093563079834,
+            "Socket_Close_Time": 0.11439037322998047,
+            "Response_Time": 0.0926823616027832
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=us-ascii",
+            "date": "Sat, 26 Aug 2023 17:56:04 GMT",
+            "connection": "close",
+            "content-length": "324"
+        },
+        "response_length": 324
+    },
+    {
+        "number": 8,
+        "request": "GET /index.html#ong HTTP/1.1\r\nHost: msn.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#ong",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.0197663307189941,
+            "Socket_Close_Time": 0.12755250930786133,
+            "Response_Time": 0.044295549392700195
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=us-ascii",
+            "date": "Sat, 26 Aug 2023 17:56:20 GMT",
+            "connection": "close",
+            "content-length": "324"
+        },
+        "response_length": 324
+    },
+    {
+        "number": 9,
+        "request": "GET /favicon.ico#l HTTP/1.1\r\nHost: msn.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#l",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.029220104217529297,
+            "Socket_Close_Time": 0.10652923583984375,
+            "Response_Time": 0.04091501235961914
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=us-ascii",
+            "date": "Sat, 26 Aug 2023 17:56:38 GMT",
+            "connection": "close",
+            "content-length": "324"
+        },
+        "response_length": 324
+    }
+]

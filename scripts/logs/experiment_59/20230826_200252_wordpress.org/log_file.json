@@ -1,0 +1,272 @@
+[
+    {
+        "number": 0,
+        "request": "GET /services# HTTP/1.1\r\nHost: wordpress.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.13472747802734375,
+            "Socket_Close_Time": 0.10724616050720215,
+            "Response_Time": 0.17371845245361328
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sat, 26 Aug 2023 18:03:02 GMT",
+            "content-type": "text/html",
+            "content-length": "162",
+            "connection": "keep-alive",
+            "location": "https://wordpress.org/services#"
+        },
+        "response_length": 162
+    },
+    {
+        "number": 1,
+        "request": "GET /index.php#USI HTTP/1.1\r\nHost: wordpress.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#USI",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.12355160713195801,
+            "Socket_Close_Time": 0.11059236526489258,
+            "Response_Time": 0.12919163703918457
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sat, 26 Aug 2023 18:03:11 GMT",
+            "content-type": "text/html",
+            "content-length": "162",
+            "connection": "keep-alive",
+            "location": "https://wordpress.org/index.php#USI"
+        },
+        "response_length": 162
+    },
+    {
+        "number": 2,
+        "request": "GET /favicon.ico# HTTP/1.1\r\nHost: wordpress.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1164085865020752,
+            "Socket_Close_Time": 0.10892772674560547,
+            "Response_Time": 0.493727445602417
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sat, 26 Aug 2023 18:03:18 GMT",
+            "content-type": "text/html",
+            "content-length": "162",
+            "connection": "keep-alive",
+            "location": "https://wordpress.org/favicon.ico#"
+        },
+        "response_length": 162
+    },
+    {
+        "number": 3,
+        "request": "GET /# HTTP/1.1\r\nHost: wordpress.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#",
+        "request_length": 314,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1260814666748047,
+            "Socket_Close_Time": 0.1352841854095459,
+            "Response_Time": 0.5035738945007324
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sat, 26 Aug 2023 18:03:26 GMT",
+            "content-type": "text/html",
+            "content-length": "162",
+            "connection": "keep-alive",
+            "location": "https://wordpress.org/#"
+        },
+        "response_length": 162
+    },
+    {
+        "number": 4,
+        "request": "GET /favicon.ico#J HTTP/1.1\r\nHost: wordpress.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#J",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.14683079719543457,
+            "Socket_Close_Time": 0.12053442001342773,
+            "Response_Time": 0.11763834953308105
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sat, 26 Aug 2023 18:03:33 GMT",
+            "content-type": "text/html",
+            "content-length": "162",
+            "connection": "keep-alive",
+            "location": "https://wordpress.org/favicon.ico#J"
+        },
+        "response_length": 162
+    },
+    {
+        "number": 5,
+        "request": "GET /services#ksJh HTTP/1.1\r\nHost: wordpress.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#ksJh",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.12618565559387207,
+            "Socket_Close_Time": 0.12571382522583008,
+            "Response_Time": 0.11181783676147461
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sat, 26 Aug 2023 18:03:40 GMT",
+            "content-type": "text/html",
+            "content-length": "162",
+            "connection": "keep-alive",
+            "location": "https://wordpress.org/services#ksJh"
+        },
+        "response_length": 162
+    },
+    {
+        "number": 6,
+        "request": "GET /index.php#RWkO HTTP/1.1\r\nHost: wordpress.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#RWkO",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11942839622497559,
+            "Socket_Close_Time": 0.13623332977294922,
+            "Response_Time": 0.11153173446655273
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sat, 26 Aug 2023 18:03:48 GMT",
+            "content-type": "text/html",
+            "content-length": "162",
+            "connection": "keep-alive",
+            "location": "https://wordpress.org/index.php#RWkO"
+        },
+        "response_length": 162
+    },
+    {
+        "number": 7,
+        "request": "GET /favicon.ico# HTTP/1.1\r\nHost: wordpress.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 1.1458029747009277,
+            "Socket_Close_Time": 0.11446404457092285,
+            "Response_Time": 0.15383672714233398
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sat, 26 Aug 2023 18:03:57 GMT",
+            "content-type": "text/html",
+            "content-length": "162",
+            "connection": "keep-alive",
+            "location": "https://wordpress.org/favicon.ico#"
+        },
+        "response_length": 162
+    },
+    {
+        "number": 8,
+        "request": "GET /support#T HTTP/1.1\r\nHost: wordpress.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#T",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.12236976623535156,
+            "Socket_Close_Time": 0.13758635520935059,
+            "Response_Time": 0.32244873046875
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sat, 26 Aug 2023 18:04:06 GMT",
+            "content-type": "text/html",
+            "content-length": "162",
+            "connection": "keep-alive",
+            "location": "https://wordpress.org/support#T"
+        },
+        "response_length": 162
+    },
+    {
+        "number": 9,
+        "request": "GET /index.php#Tm4Yqn63 HTTP/1.1\r\nHost: wordpress.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#Tm4Yqn63",
+        "request_length": 331,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11943721771240234,
+            "Socket_Close_Time": 0.1558670997619629,
+            "Response_Time": 0.2997567653656006
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sat, 26 Aug 2023 18:04:14 GMT",
+            "content-type": "text/html",
+            "content-length": "162",
+            "connection": "keep-alive",
+            "location": "https://wordpress.org/index.php#Tm4Yqn63"
+        },
+        "response_length": 162
+    }
+]

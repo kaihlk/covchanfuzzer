@@ -1,0 +1,66 @@
+[
+    {
+        "number": 0,
+        "request": "GET /index.html# HTTP/1.1\r\nHost: netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.674562931060791,
+            "Socket_Close_Time": 1.490734577178955,
+            "Response_Time": 0.46311140060424805
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://netflix.com/index.html#",
+            "content-length": "0",
+            "via": "1.1 i-0a13526afa3298a6a (eu-west-1)",
+            "server": "nq_website_core-prod-release UNKNOWN",
+            "x-xss-protection": "1; mode=block; report=https://www.netflix.com/ichnaea/log/freeform/xssreport",
+            "x-content-type-options": "nosniff",
+            "strict-transport-security": "max-age=31536000; includeSubDomains",
+            "x-originating-url": "http://netflix.com/index.html#",
+            "set-cookie": "nfvdid=BQFmAAEBELdxUQ_GWkdg0uW2T3UrwE1AekrVVzEWGig6RUH8OzQ7E8IT7Xroca06TgtsXhPPaRK54SHupb2-3_MUWjvB6dF_CHGhXeSTqorB89Z3T_WceQ%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "x-netflix.nfstatus": "1_21",
+            "x-netflix.proxy.execution-time": "656"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET /services#esiNLCAk HTTP/1.1\r\nHost: netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#esiNLCAk",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.21107077598571777,
+            "Socket_Close_Time": 0.4751465320587158,
+            "Response_Time": 0.19386601448059082
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://netflix.com/services#esiNLCAk",
+            "content-length": "0",
+            "via": "1.1 i-0c6ba670019a46ce9 (eu-west-1)",
+            "server": "nq_website_core-prod-release UNKNOWN",
+            "x-xss-protection": "1; mode=block; report=https://www.netflix.com/ichnaea/log/freeform/xssreport",
+            "x-content-type-options": "nosniff",
+            "strict-transport-security": "max-age=31536000; includeSubDomains",
+            "x-originating-url": "http://netflix.com/services#esiNLCAk",
+            "set-cookie": "nfvdid=BQFmAAEBEJLRW4smg_86tlkkwRqZyFVAdox7iSmYfMFPIbT4ja9UmIZHaVBXn_8t4V9s8mDPwVOKrgXHZQB8KLOGWquuTwfa-kZ8Pu66cNxlyUlJwaSW4g%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "x-netflix.nfstatus": "1_21",
+            "x-netflix.proxy.execution-time": "182"
+        },
+        "response_length": 0
+    }
+]

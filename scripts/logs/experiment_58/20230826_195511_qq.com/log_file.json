@@ -1,0 +1,262 @@
+[
+    {
+        "number": 0,
+        "request": "GET /blog# HTTP/1.1\r\nHost: qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#",
+        "request_length": 311,
+        "http_version": "",
+        "status_code": 999,
+        "reason_phrase": [
+            "timed out"
+        ],
+        "measured_times": {
+            "Socket_Connect_Time": 2.08380126953125,
+            "Socket_Close_Time": 0,
+            "Response_Time": 0
+        },
+        "error_message": [
+            "timed out"
+        ],
+        "response_header_fields": null,
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET /support#2EjwR HTTP/1.1\r\nHost: qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#2EjwR",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.24191069602966309,
+            "Socket_Close_Time": 0.10895967483520508,
+            "Response_Time": 0.24523138999938965
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "stgw",
+            "date": "Sat, 26 Aug 2023 17:56:19 GMT",
+            "content-type": "text/html",
+            "content-length": "137",
+            "connection": "keep-alive",
+            "location": "https://www.qq.com/support#2EjwR"
+        },
+        "response_length": 137
+    },
+    {
+        "number": 2,
+        "request": "GET /about#hdtS HTTP/1.1\r\nHost: qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#hdtS",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.45930981636047363,
+            "Socket_Close_Time": 0.1494135856628418,
+            "Response_Time": 2.0191500186920166
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "stgw",
+            "date": "Sat, 26 Aug 2023 17:56:53 GMT",
+            "content-type": "text/html",
+            "content-length": "137",
+            "connection": "keep-alive",
+            "location": "https://www.qq.com/about#hdtS"
+        },
+        "response_length": 137
+    },
+    {
+        "number": 3,
+        "request": "GET /favicon.ico#unU9Bmz HTTP/1.1\r\nHost: qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#unU9Bmz",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.37891387939453125,
+            "Socket_Close_Time": 0.11130785942077637,
+            "Response_Time": 0.4008941650390625
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "stgw",
+            "date": "Sat, 26 Aug 2023 17:57:17 GMT",
+            "content-type": "text/html",
+            "content-length": "137",
+            "connection": "keep-alive",
+            "location": "https://www.qq.com/favicon.ico#unU9Bmz"
+        },
+        "response_length": 137
+    },
+    {
+        "number": 4,
+        "request": "GET /#D HTTP/1.1\r\nHost: qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#D",
+        "request_length": 308,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2650759220123291,
+            "Socket_Close_Time": 0.10296893119812012,
+            "Response_Time": 0.27167463302612305
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "stgw",
+            "date": "Sat, 26 Aug 2023 17:57:47 GMT",
+            "content-type": "text/html",
+            "content-length": "137",
+            "connection": "keep-alive",
+            "location": "https://www.qq.com/#D"
+        },
+        "response_length": 137
+    },
+    {
+        "number": 5,
+        "request": "GET /index.html#I HTTP/1.1\r\nHost: qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#I",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.24147629737854004,
+            "Socket_Close_Time": 0.11376380920410156,
+            "Response_Time": 0.252225399017334
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "stgw",
+            "date": "Sat, 26 Aug 2023 17:58:15 GMT",
+            "content-type": "text/html",
+            "content-length": "137",
+            "connection": "keep-alive",
+            "location": "https://www.qq.com/index.html#I"
+        },
+        "response_length": 137
+    },
+    {
+        "number": 6,
+        "request": "GET /about#vOpt HTTP/1.1\r\nHost: qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#vOpt",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.33316683769226074,
+            "Socket_Close_Time": 0.11577200889587402,
+            "Response_Time": 0.3221902847290039
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "stgw",
+            "date": "Sat, 26 Aug 2023 17:58:38 GMT",
+            "content-type": "text/html",
+            "content-length": "137",
+            "connection": "keep-alive",
+            "location": "https://www.qq.com/about#vOpt"
+        },
+        "response_length": 137
+    },
+    {
+        "number": 7,
+        "request": "GET /support#HzJLUsisv7 HTTP/1.1\r\nHost: qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#HzJLUsisv7",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.3860642910003662,
+            "Socket_Close_Time": 0.11278247833251953,
+            "Response_Time": 0.38182663917541504
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "stgw",
+            "date": "Sat, 26 Aug 2023 17:59:04 GMT",
+            "content-type": "text/html",
+            "content-length": "137",
+            "connection": "keep-alive",
+            "location": "https://www.qq.com/support#HzJLUsisv7"
+        },
+        "response_length": 137
+    },
+    {
+        "number": 8,
+        "request": "GET /index.php#CTYca5 HTTP/1.1\r\nHost: qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#CTYca5",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2799832820892334,
+            "Socket_Close_Time": 0.1573929786682129,
+            "Response_Time": 1.745640516281128
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "stgw",
+            "date": "Sat, 26 Aug 2023 18:01:13 GMT",
+            "content-type": "text/html",
+            "content-length": "137",
+            "connection": "keep-alive",
+            "location": "https://www.qq.com/index.php#CTYca5"
+        },
+        "response_length": 137
+    },
+    {
+        "number": 9,
+        "request": "GET /# HTTP/1.1\r\nHost: qq.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#",
+        "request_length": 307,
+        "http_version": "",
+        "status_code": 999,
+        "reason_phrase": [
+            "timed out"
+        ],
+        "measured_times": {
+            "Socket_Connect_Time": 2.0127334594726562,
+            "Socket_Close_Time": 0,
+            "Response_Time": 0
+        },
+        "error_message": [
+            "timed out"
+        ],
+        "response_header_fields": null,
+        "response_length": 0
+    }
+]

@@ -226,7 +226,6 @@ class HTTP1_Request_Builder:
     def replace_host_and_domain(self, prerequest, host, standard_subdomain, domain=None):
             subdomains, hostname, tldomain =self.parse_host(host)
             if domain==None:
-                print("Hostname:"+hostname)
                 domain=hostname+"."+tldomain
             if subdomains=="":
                 subdomains=standard_subdomain

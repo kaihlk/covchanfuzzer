@@ -1,0 +1,64 @@
+[
+    {
+        "number": 0,
+        "request": "GET /favicon.ico#4fWiQhj6g HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#4fWiQhj6g",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Redirect",
+        "measured_times": {
+            "Socket_Connect_Time": 0.019631385803222656,
+            "Socket_Close_Time": 0.5937378406524658,
+            "Response_Time": 0.06309938430786133
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 20:33:57 GMT",
+            "connection": "close",
+            "via": "http/1.1 dedus1-edge-bx-005.ts.apple.com (acdn/14362.4)",
+            "cache-control": "no-store",
+            "location": "https://www.apple.com/favicon.ico",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "889e0420-a4e1-40b0-877c-2ef0fe1043ff-855798036",
+            "content-length": "315"
+        },
+        "response_length": 315
+    },
+    {
+        "number": 1,
+        "request": "GET /support#oQW HTTP/1.1\r\nHost: apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#oQW",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Redirect",
+        "measured_times": {
+            "Socket_Connect_Time": 0.044035911560058594,
+            "Socket_Close_Time": 0.5477786064147949,
+            "Response_Time": 1.2491428852081299
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 20:34:33 GMT",
+            "connection": "close",
+            "via": "http/1.1 dedus1-edge-bx-003.ts.apple.com (acdn/14362.4)",
+            "cache-control": "no-store",
+            "location": "https://www.apple.com/support",
+            "content-type": "text/html",
+            "content-language": "en",
+            "x-cache": "none",
+            "cdnuuid": "903d43b5-84ac-4971-98f8-ede441af1ce8-854248495",
+            "content-length": "311"
+        },
+        "response_length": 311
+    }
+]

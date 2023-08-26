@@ -1,0 +1,342 @@
+[
+    {
+        "number": 0,
+        "request": "GET /favicon.ico#N HTTP/1.1\r\nHost: cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#N",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02335333824157715,
+            "Socket_Close_Time": 0.11198854446411133,
+            "Response_Time": 0.030466556549072266
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 17:53:33 GMT",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "cache-control": "max-age=3600",
+            "expires": "Sat, 26 Aug 2023 18:53:33 GMT",
+            "location": "https://www.cloudflare.com/favicon.ico#N",
+            "set-cookie": "__cf_bm=KUztbcUAZAJH1skY6ProO5BKgrDDxoAXC1C8XkWxSJc-1693072413-0-Af866WFk2Tocf7aktkf4Q4k0oO7g7lHcAiiNZDsWtuaDAWufwt+ARVNnjT2kVS5GkupiisbMiFZzGvqu4+iwpnk=; path=/; expires=Sat, 26-Aug-23 18:23:33 GMT; domain=.cloudflare.com; HttpOnly; SameSite=None",
+            "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=4ZIKN6Za1pX8n6z3Pcd1c5sWmD4hJz0DigltB9q7yT808GZhfg6KPkHDXHlPl0R4Kz9hJhk8Bcf%2FNo%2B7MYT8hEJVMB37Vde9F7nu%2Bmr7wHXqcwcDPhuf%2BY2b4%2BKrQyQN\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+            "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+            "vary": "Accept-Encoding",
+            "server": "cloudflare",
+            "cf-ray": "7fcdef59be0fb7af-AMS",
+            "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET /about#jINs3MSb HTTP/1.1\r\nHost: cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#jINs3MSb",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06284141540527344,
+            "Socket_Close_Time": 0.12218260765075684,
+            "Response_Time": 0.10243487358093262
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 17:54:08 GMT",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "cache-control": "max-age=3600",
+            "expires": "Sat, 26 Aug 2023 18:54:08 GMT",
+            "location": "https://www.cloudflare.com/about#jINs3MSb",
+            "set-cookie": "__cf_bm=GFIx1VOipCz1HIXyHi7dqhVGfPHnbglpZHgmjLZR87c-1693072448-0-AR6wu1ZNwrSHdfGWMHagge5ewKqcuKot0APMD0/TRY3KV1Ym5+BQ+0QYD3E+MP5FfpbFopt5ER4Wtbag2Sk5dV8=; path=/; expires=Sat, 26-Aug-23 18:24:08 GMT; domain=.cloudflare.com; HttpOnly; SameSite=None",
+            "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=NYqntrSnWGcjaZxIalRiAcUwg4zCmOYfzC6L31j2FCY6HYkZO01xnpRbVmW3%2FSWmZd5QOVqcazhMwZJSJVnKeharFaEyiW2qPRRpei0LAqay6PcTCRvLixQ7eroyRI7K\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+            "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+            "vary": "Accept-Encoding",
+            "server": "cloudflare",
+            "cf-ray": "7fcdf030ba990e2e-AMS",
+            "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET /services# HTTP/1.1\r\nHost: cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0415339469909668,
+            "Socket_Close_Time": 0.11180615425109863,
+            "Response_Time": 0.05594658851623535
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 17:54:33 GMT",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "cache-control": "max-age=3600",
+            "expires": "Sat, 26 Aug 2023 18:54:33 GMT",
+            "location": "https://www.cloudflare.com/services#",
+            "set-cookie": "__cf_bm=4_7Gr6pfFJlf4ik1jVRzM8rRgG8deaMYLQxO.C2AfnE-1693072473-0-AQX1ZMJdraWkj3UBhocNpk7tR0S4wodyQwtZxtg+Z6oD08Pojoo+BGHK2n3x6301NcVs4h0/wrNYvsCadzyWtwg=; path=/; expires=Sat, 26-Aug-23 18:24:33 GMT; domain=.cloudflare.com; HttpOnly; SameSite=None",
+            "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=p8CFyZa0tR0tYrsCGDFOcRN9Gsn%2FBjsJBh0vfLMciRvrtInXBMVVH0qaR9wsc%2F6mDmb67dsO0rmE3HBCvvcZIBKn2%2F%2FGuzfbIubcXRRH5LBsYqrHdsM%2FLbTD%2FcEWBmzh\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+            "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+            "vary": "Accept-Encoding",
+            "server": "cloudflare",
+            "cf-ray": "7fcdf0cf3891b896-AMS",
+            "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET /favicon.ico#2R HTTP/1.1\r\nHost: cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#2R",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.037480831146240234,
+            "Socket_Close_Time": 0.15596628189086914,
+            "Response_Time": 0.08551335334777832
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 17:55:15 GMT",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "cache-control": "max-age=3600",
+            "expires": "Sat, 26 Aug 2023 18:55:15 GMT",
+            "location": "https://www.cloudflare.com/favicon.ico#2R",
+            "set-cookie": "__cf_bm=xdlhcAD2i1F2BZIZnz_C1J44VG1DOFVdnySAk1gqtzc-1693072515-0-AeZ46Q7PPYt0TmH3uTD593pzzDG9G6P/jmUfLIPtiYf0ZnNLcVOXxtSXJ3cWoKc3lx5ZD4W9ghY9NzZQ9s+fozY=; path=/; expires=Sat, 26-Aug-23 18:25:15 GMT; domain=.cloudflare.com; HttpOnly; SameSite=None",
+            "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=pYxp8cACUleEOuE%2BWna9oX%2F7NlkWdhTgSNs1N3HrAs%2B%2BkOSFdwyf9288FOzNzVyqzIGObW7cWER07YIH8S7PJiJmdZx5iziFmtwKlM02WNpdppXlcBeacR811M%2BACRGU\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+            "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+            "vary": "Accept-Encoding",
+            "server": "cloudflare",
+            "cf-ray": "7fcdf1d72da8b918-AMS",
+            "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET /support#XbM4 HTTP/1.1\r\nHost: cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#XbM4",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10333538055419922,
+            "Socket_Close_Time": 0.1385056972503662,
+            "Response_Time": 0.41137099266052246
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 17:55:40 GMT",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "cache-control": "max-age=3600",
+            "expires": "Sat, 26 Aug 2023 18:55:40 GMT",
+            "location": "https://www.cloudflare.com/support#XbM4",
+            "set-cookie": "__cf_bm=JMGU5YEnqJn34FcqD5dXLfOpLDspwFTmBo_SZbdUvcY-1693072540-0-AeNj/+miLtBhERmMEdImXAlqGhAvfn7BW8gnj/yA8+goIi5cB+7b5FTSqit2NQd9RlpIyXjjM+05tly7AFZ9+tA=; path=/; expires=Sat, 26-Aug-23 18:25:40 GMT; domain=.cloudflare.com; HttpOnly; SameSite=None",
+            "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=VrsyWPzXWtB9GCieTAG2sKD7BCaWLz3M%2FVb3mHhEaFhn4K8KXVtuefMrizJ3JYVcGdATNl4XZ8GUUCjuvPhIjLxM6i3vt5iy8hvqCnpIr38ODLAw4vpTnaaGsDdI79yV\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+            "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+            "vary": "Accept-Encoding",
+            "server": "cloudflare",
+            "cf-ray": "7fcdf271da090eb2-AMS",
+            "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 5,
+        "request": "GET /#ZUH HTTP/1.1\r\nHost: cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#ZUH",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 1.0261852741241455,
+            "Socket_Close_Time": 0.20777082443237305,
+            "Response_Time": 0.4043154716491699
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 17:56:12 GMT",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "cache-control": "max-age=3600",
+            "expires": "Sat, 26 Aug 2023 18:56:12 GMT",
+            "location": "https://www.cloudflare.com/#ZUH",
+            "set-cookie": "__cf_bm=PD2Bq7G9NwOIySfNwckB0PnRlEWi8hFKT_EEb05BfU8-1693072572-0-AesCbQ12IV/RpnC06DpY3SRjVmLa33jG8V9kdR7RGRKXKlbyTXEfQqadrHK6t4FEaEZ3C6b4M1iTzc10549Ljgw=; path=/; expires=Sat, 26-Aug-23 18:26:12 GMT; domain=.cloudflare.com; HttpOnly; SameSite=None",
+            "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=IbH%2BrNPL8wzAD%2FOstbmsA%2Bp9jsZRdfRR%2BR7LepZRKQn68s3v1ba5H%2FxfLCY4Yuof2Pchx%2Bo0IOai5ygu7RpvH%2FH1sa%2BVyM7%2FNBqnQAGEBGn3eXoO1%2Fjuie9AVsbWo5q%2F\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+            "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+            "vary": "Accept-Encoding",
+            "server": "cloudflare",
+            "cf-ray": "7fcdf339bf4eb7d3-AMS",
+            "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET /services# HTTP/1.1\r\nHost: cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.03317689895629883,
+            "Socket_Close_Time": 0.14673471450805664,
+            "Response_Time": 0.08313941955566406
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 17:56:40 GMT",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "cache-control": "max-age=3600",
+            "expires": "Sat, 26 Aug 2023 18:56:40 GMT",
+            "location": "https://www.cloudflare.com/services#",
+            "set-cookie": "__cf_bm=nmw0VaJPGqz1Dr.lRRuKdI7xfN8HH_58V0mNu443UKM-1693072600-0-AR6uQXdjFnsgx2d2YZa2SbSTpAry8rwIGB3pL+yNOLgble9W2rAinzujBRYFH/O1axo3JKvf5CQU8lZBI8rnt08=; path=/; expires=Sat, 26-Aug-23 18:26:40 GMT; domain=.cloudflare.com; HttpOnly; SameSite=None",
+            "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=5IsUOegCc%2FMEJNDezL1KXKrI33Nca91%2B%2FSfbbQakOm%2FAGzsNqilLGUADbjPas2V6Jlv1AcklJ%2BZaIN%2BqVJnqEpux%2BKZPMjWOdWogEmzvHDmi8JpM8q3EiCu2oXZj5PPK\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+            "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+            "vary": "Accept-Encoding",
+            "server": "cloudflare",
+            "cf-ray": "7fcdf3e959450b42-AMS",
+            "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET /index.html# HTTP/1.1\r\nHost: cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.040381431579589844,
+            "Socket_Close_Time": 0.11070418357849121,
+            "Response_Time": 0.0399622917175293
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 17:57:03 GMT",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "cache-control": "max-age=3600",
+            "expires": "Sat, 26 Aug 2023 18:57:03 GMT",
+            "location": "https://www.cloudflare.com/index.html#",
+            "set-cookie": "__cf_bm=QxXVdEYxBxR9uuaPy.DtL02sMBlOT5ZVtgBWnC9tPZs-1693072623-0-AYLCb9oDIoAPuijZB9i3uzwC0aWxOjAcR/9AILW5YBrk2oDImu650A0APXC5swdVtyFYuyrK16Kt1Oa879JojB0=; path=/; expires=Sat, 26-Aug-23 18:27:03 GMT; domain=.cloudflare.com; HttpOnly; SameSite=None",
+            "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=%2FUo7qwRufnt7Gaisu1ZbuIPIuOQpoEHEuKmL8fa90%2F9tNd0DouIQo%2BOwFL2tF1N6UedSQOn4CRvnYh7aMQbFBOuwZbblkGkXg0XGnvzOBN%2BzE8HTNR9YV2eIKS5%2FxUwn\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+            "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+            "vary": "Accept-Encoding",
+            "server": "cloudflare",
+            "cf-ray": "7fcdf4771dc30b89-AMS",
+            "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET /about#gu3b HTTP/1.1\r\nHost: cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#gu3b",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.03339838981628418,
+            "Socket_Close_Time": 0.11227822303771973,
+            "Response_Time": 0.06890463829040527
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 17:57:21 GMT",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "cache-control": "max-age=3600",
+            "expires": "Sat, 26 Aug 2023 18:57:21 GMT",
+            "location": "https://www.cloudflare.com/about#gu3b",
+            "set-cookie": "__cf_bm=phd4qgH74FW2adThmKmMJgXU7hFItCwSnAy1WypPNXU-1693072641-0-AcXRcDkx3zzFSTfEdCw7wYUOuRs4ewkxN24CXOuHH4MkGALQNohScH9ijxS/DBIzxu85XjjDJSiFpac+E95+j9k=; path=/; expires=Sat, 26-Aug-23 18:27:21 GMT; domain=.cloudflare.com; HttpOnly; SameSite=None",
+            "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=B53zofbZciEMLSP%2FVDjbaD%2F24qp36Ra6ShiQCDmaKCZnI03B9%2BgxEb3wJNN9%2BZ8bTLM9d%2FPKLjHXgyeMtWM%2BKT3%2B00UCsTjK48GJBQt9FZymqWB9FNKFR3ryQIhZ0%2Fb3\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+            "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+            "vary": "Accept-Encoding",
+            "server": "cloudflare",
+            "cf-ray": "7fcdf4e83801b894-AMS",
+            "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET /index.html# HTTP/1.1\r\nHost: cloudflare.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.090484619140625,
+            "Socket_Close_Time": 0.10609889030456543,
+            "Response_Time": 0.042424678802490234
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 17:57:43 GMT",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "cache-control": "max-age=3600",
+            "expires": "Sat, 26 Aug 2023 18:57:43 GMT",
+            "location": "https://www.cloudflare.com/index.html#",
+            "set-cookie": "__cf_bm=avCyOZHnGFEmGzVMoFybsLDNjfktQPEBbBwMp8dZuew-1693072663-0-Aca3QeyJaKRQ5PXSWaMuBOiz520cC+d3loaqXoF0VBHZn9TImlrvto07Dpto2w9K+3xV5nWI8ugwX9qYcKaQriA=; path=/; expires=Sat, 26-Aug-23 18:27:43 GMT; domain=.cloudflare.com; HttpOnly; SameSite=None",
+            "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=iD5UJUB28jim5PQDj0rSumaMHd4ObTYMiq1HtkoFn31MZISasAFxTi4STI5TMv3yaXJG5LjSblvDcwTYgN6wUCjjSrdjTqU136QftI%2B5Mdo%2BWPSXWvXn%2FyfGglR8diDF\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+            "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+            "vary": "Accept-Encoding",
+            "server": "cloudflare",
+            "cf-ray": "7fcdf5759d5706ca-AMS",
+            "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "response_length": 0
+    }
+]

@@ -1,0 +1,284 @@
+[
+    {
+        "number": 0,
+        "request": "GET /contact#R HTTP/1.1\r\nHost: bit.ly\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#R",
+        "request_length": 315,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.027924060821533203,
+            "Socket_Close_Time": 0.10570883750915527,
+            "Response_Time": 0.10518980026245117
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sat, 26 Aug 2023 18:03:42 GMT",
+            "content-length": "0",
+            "via": "1.1 google"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET /blog#3XNn HTTP/1.1\r\nHost: bit.ly\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#3XNn",
+        "request_length": 315,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09602808952331543,
+            "Socket_Close_Time": 0.11804890632629395,
+            "Response_Time": 0.201873779296875
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sat, 26 Aug 2023 18:04:00 GMT",
+            "content-type": "text/html",
+            "content-length": "178",
+            "location": "http://bitly.com/blog/",
+            "via": "1.1 google"
+        },
+        "response_length": 178
+    },
+    {
+        "number": 2,
+        "request": "GET /# HTTP/1.1\r\nHost: bit.ly\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#",
+        "request_length": 307,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.027726411819458008,
+            "Socket_Close_Time": 0.10988926887512207,
+            "Response_Time": 0.10344958305358887
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sat, 26 Aug 2023 18:04:17 GMT",
+            "content-type": "text/html",
+            "content-length": "154",
+            "location": "https://bitly.com/",
+            "via": "1.1 google"
+        },
+        "response_length": 154
+    },
+    {
+        "number": 3,
+        "request": "GET /index.html#o HTTP/1.1\r\nHost: bit.ly\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#o",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.020785093307495117,
+            "Socket_Close_Time": 0.11567020416259766,
+            "Response_Time": 0.13774704933166504
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sat, 26 Aug 2023 18:04:34 GMT",
+            "content-type": "text/html; charset=UTF-8",
+            "content-length": "0",
+            "location": "https://bitly.com/index.html#o",
+            "pragma": "no-cache",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "x-frame-options": "DENY",
+            "via": "1.1 google"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET /index.html#EV HTTP/1.1\r\nHost: bit.ly\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#EV",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.021564722061157227,
+            "Socket_Close_Time": 0.11214876174926758,
+            "Response_Time": 0.10854125022888184
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sat, 26 Aug 2023 18:04:50 GMT",
+            "content-type": "text/html; charset=UTF-8",
+            "content-length": "0",
+            "location": "https://bitly.com/index.html#EV",
+            "pragma": "no-cache",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "x-frame-options": "DENY",
+            "via": "1.1 google"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 5,
+        "request": "GET /contact#L HTTP/1.1\r\nHost: bit.ly\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#L",
+        "request_length": 315,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.020395755767822266,
+            "Socket_Close_Time": 0.11240100860595703,
+            "Response_Time": 0.1062309741973877
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sat, 26 Aug 2023 18:05:08 GMT",
+            "content-length": "0",
+            "via": "1.1 google"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET /# HTTP/1.1\r\nHost: bit.ly\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#",
+        "request_length": 307,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.016716480255126953,
+            "Socket_Close_Time": 0.20278167724609375,
+            "Response_Time": 0.12501096725463867
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sat, 26 Aug 2023 18:05:24 GMT",
+            "content-type": "text/html",
+            "content-length": "154",
+            "location": "https://bitly.com/",
+            "via": "1.1 google"
+        },
+        "response_length": 154
+    },
+    {
+        "number": 7,
+        "request": "GET /favicon.ico#odJ HTTP/1.1\r\nHost: bit.ly\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#odJ",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.01803278923034668,
+            "Socket_Close_Time": 0.1056070327758789,
+            "Response_Time": 0.10753774642944336
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sat, 26 Aug 2023 18:05:53 GMT",
+            "content-type": "image/x-icon",
+            "content-length": "5430",
+            "last-modified": "Tue, 09 Jul 2019 19:20:53 GMT",
+            "etag": "\"5d24e915-1536\"",
+            "expires": "Sat, 02 Sep 2023 18:05:53 GMT",
+            "cache-control": "max-age=604800",
+            "accept-ranges": "bytes",
+            "via": "1.1 google"
+        },
+        "response_length": 5366
+    },
+    {
+        "number": 8,
+        "request": "GET /index.html#W HTTP/1.1\r\nHost: bit.ly\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#W",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.019617319107055664,
+            "Socket_Close_Time": 0.11278462409973145,
+            "Response_Time": 0.11392474174499512
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sat, 26 Aug 2023 18:06:08 GMT",
+            "content-type": "text/html; charset=UTF-8",
+            "content-length": "0",
+            "location": "https://bitly.com/index.html#W",
+            "pragma": "no-cache",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "x-frame-options": "DENY",
+            "via": "1.1 google"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET /index.php#FanudMlJS HTTP/1.1\r\nHost: bit.ly\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#FanudMlJS",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02102351188659668,
+            "Socket_Close_Time": 0.11071634292602539,
+            "Response_Time": 0.11725258827209473
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Sat, 26 Aug 2023 18:06:24 GMT",
+            "content-type": "text/html; charset=UTF-8",
+            "content-length": "0",
+            "location": "https://bitly.com/index.php#FanudMlJS",
+            "pragma": "no-cache",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "x-frame-options": "DENY",
+            "via": "1.1 google"
+        },
+        "response_length": 0
+    }
+]

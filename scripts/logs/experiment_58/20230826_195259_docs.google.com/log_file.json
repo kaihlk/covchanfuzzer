@@ -1,0 +1,327 @@
+[
+    {
+        "number": 0,
+        "request": "GET /services# HTTP/1.1\r\nHost: docs.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.04668569564819336,
+            "Socket_Close_Time": 0.12104487419128418,
+            "Response_Time": 0.3525874614715576
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://docs.google.com/services",
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "date": "Sat, 26 Aug 2023 17:53:19 GMT",
+            "expires": "Sat, 26 Aug 2023 17:53:19 GMT",
+            "cache-control": "private, max-age=0",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'self'",
+            "x-xss-protection": "1; mode=block",
+            "content-length": "177",
+            "server": "GSE"
+        },
+        "response_length": 214
+    },
+    {
+        "number": 1,
+        "request": "GET /about#8fZ4 HTTP/1.1\r\nHost: docs.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#8fZ4",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 1.0163042545318604,
+            "Socket_Close_Time": 0.10468649864196777,
+            "Response_Time": 1.4904882907867432
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://docs.google.com/about",
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "date": "Sat, 26 Aug 2023 17:53:41 GMT",
+            "expires": "Sat, 26 Aug 2023 17:53:41 GMT",
+            "cache-control": "private, max-age=0",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'self'",
+            "x-xss-protection": "1; mode=block",
+            "content-length": "176",
+            "server": "GSE"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET /blog#S HTTP/1.1\r\nHost: docs.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#S",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.03638291358947754,
+            "Socket_Close_Time": 0.11050653457641602,
+            "Response_Time": 0.13100409507751465
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://docs.google.com/blog",
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "date": "Sat, 26 Aug 2023 17:54:05 GMT",
+            "expires": "Sat, 26 Aug 2023 17:54:05 GMT",
+            "cache-control": "private, max-age=0",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'self'",
+            "x-xss-protection": "1; mode=block",
+            "content-length": "175",
+            "server": "GSE"
+        },
+        "response_length": 210
+    },
+    {
+        "number": 3,
+        "request": "GET /contact#lKGj HTTP/1.1\r\nHost: docs.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#lKGj",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.025726795196533203,
+            "Socket_Close_Time": 0.10675263404846191,
+            "Response_Time": 0.27321386337280273
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://docs.google.com/contact",
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "date": "Sat, 26 Aug 2023 17:54:22 GMT",
+            "expires": "Sat, 26 Aug 2023 17:54:22 GMT",
+            "cache-control": "private, max-age=0",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'self'",
+            "x-xss-protection": "1; mode=block",
+            "content-length": "177",
+            "server": "GSE"
+        },
+        "response_length": 213
+    },
+    {
+        "number": 4,
+        "request": "GET /index.php#lZC HTTP/1.1\r\nHost: docs.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#lZC",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.47295355796813965,
+            "Socket_Close_Time": 0.14774537086486816,
+            "Response_Time": 0.14527082443237305
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://docs.google.com/index.php",
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "date": "Sat, 26 Aug 2023 17:54:38 GMT",
+            "expires": "Sat, 26 Aug 2023 17:54:38 GMT",
+            "cache-control": "private, max-age=0",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'self'",
+            "x-xss-protection": "1; mode=block",
+            "content-length": "179",
+            "server": "GSE"
+        },
+        "response_length": 215
+    },
+    {
+        "number": 5,
+        "request": "GET /index.php# HTTP/1.1\r\nHost: docs.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02517843246459961,
+            "Socket_Close_Time": 0.15017986297607422,
+            "Response_Time": 0.34752750396728516
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://docs.google.com/index.php",
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "date": "Sat, 26 Aug 2023 17:55:23 GMT",
+            "expires": "Sat, 26 Aug 2023 17:55:23 GMT",
+            "cache-control": "private, max-age=0",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'self'",
+            "x-xss-protection": "1; mode=block",
+            "content-length": "179",
+            "server": "GSE"
+        },
+        "response_length": 215
+    },
+    {
+        "number": 6,
+        "request": "GET /#hv HTTP/1.1\r\nHost: docs.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#hv",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.028567790985107422,
+            "Socket_Close_Time": 0.2240738868713379,
+            "Response_Time": 0.21793484687805176
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Sat, 26 Aug 2023 17:55:39 GMT",
+            "location": "https://docs.google.com/",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET /contact#umfHG HTTP/1.1\r\nHost: docs.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#umfHG",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.027652263641357422,
+            "Socket_Close_Time": 0.11379504203796387,
+            "Response_Time": 0.12699007987976074
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://docs.google.com/contact",
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "date": "Sat, 26 Aug 2023 17:56:03 GMT",
+            "expires": "Sat, 26 Aug 2023 17:56:03 GMT",
+            "cache-control": "private, max-age=0",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'self'",
+            "x-xss-protection": "1; mode=block",
+            "content-length": "177",
+            "server": "GSE"
+        },
+        "response_length": 213
+    },
+    {
+        "number": 8,
+        "request": "GET /index.html#ong HTTP/1.1\r\nHost: docs.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#ong",
+        "request_length": 329,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.046921491622924805,
+            "Socket_Close_Time": 0.11224675178527832,
+            "Response_Time": 0.4000885486602783
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Sat, 26 Aug 2023 17:56:19 GMT",
+            "location": "https://docs.google.com/index.html",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET /favicon.ico#l HTTP/1.1\r\nHost: docs.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#l",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.03578352928161621,
+            "Socket_Close_Time": 0.10817956924438477,
+            "Response_Time": 0.05113363265991211
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png",
+            "cache-control": "private",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Sat, 26 Aug 2023 17:56:38 GMT",
+            "server": "sffe",
+            "content-length": "268",
+            "x-xss-protection": "0"
+        },
+        "response_length": 268
+    }
+]

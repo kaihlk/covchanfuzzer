@@ -1,0 +1,54 @@
+[
+    {
+        "number": 0,
+        "request": "GET /blog#qsvL HTTP/1.1\r\nHost: twitter.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#qsvL",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.97590970993042,
+            "Socket_Close_Time": 0.3865032196044922,
+            "Response_Time": 0.047853946685791016
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "x-connection-hash": "3a713b5a74836651d5f7762788b193e638972a6a5ab060347c8319103ac90ffe",
+            "date": "Sat, 26 Aug 2023 22:10:47 GMT",
+            "server": "tsa_o",
+            "connection": "close",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET /#yI5 HTTP/1.1\r\nHost: twitter.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#yI5",
+        "request_length": 315,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.48371005058288574,
+            "Socket_Close_Time": 0.26347875595092773,
+            "Response_Time": 0.03641104698181152
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "x-connection-hash": "96533c8a69b9a45bc7b503b797389f9afaeeded92f47ae5476b551f9ffcae24c",
+            "date": "Sat, 26 Aug 2023 22:10:53 GMT",
+            "server": "tsa_o",
+            "connection": "close",
+            "content-length": "0"
+        },
+        "response_length": 0
+    }
+]

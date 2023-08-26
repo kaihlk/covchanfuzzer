@@ -261,8 +261,7 @@ class TestRunLogger:
         
 
     def capture_packets(
-        self,
-        stop_capture_flag
+        self, stop_event
     ):
         '''Function to start a dumpcap network packet capturing process to record the traffic to and from a specified host'''
         # PCAP Files
@@ -278,8 +277,7 @@ class TestRunLogger:
         filter_host= f"host {self.target_ip}"
         self.capture=pyshark.LiveCapture(interface=self.experiment_configuration["nw_interface"], capture_filter=filter_host, output_file=pcap_path)
         print("Capturing started, Pcapng saved to: "+pcap_path)
-        while not stop_capture_flag.is_set():
-            # Continue capturing packets until the stop flag is set
+        while no termntinue capturing packets until the stop flag is set
             pass
 
         if self.capture:
@@ -302,13 +300,16 @@ class TestRunLogger:
         try:
             subprocess.Popen(dumpcap_cmd)
             # Wait for stop flag
-            while not stop_capture_flag.is_set():
+            while not stop_event.is_set():
                 # Continue capturing packets until the response is received or timeout occurs
                 pass
             
             # If the response arrived, terminate the capturing process early
             print("End of run. Capturing terminated.")
-            subprocess.run(["pkill", "dumpcap"], check=False)  # Terminate dumpcap process      
+            subprocess.run(["pkill", "dumpcap"], check=False)  # Terminate dumpcap process
+            #capture_process.terminate()
+            #capture_process.wait()
+            #subprocess.run(["pkill", "dumpcap"], check=False)  # Terminate dumpcap process      
             print("Packets captured and saved to", pcap_path)       
             
 
@@ -384,9 +385,7 @@ class ExperimentLogger:
     
 
     def capture_packets_dumpcap(
-        self,
-        stop_capture_flag,
-        nw_interface="eth0",
+        self, stop_capture_flag
     ):
         '''Function to start a dumpcap network packet capturing process to record the traffic to and from a specified host'''
         # PCAP Files
@@ -405,7 +404,7 @@ class ExperimentLogger:
         # Generate command to run Dumpcap
         dumpcap_cmd = [
             "dumpcap",
-            "-i", nw_interface,
+            "-i", self.experiment_configuration["nw_interface"],
             "-w", pcap_path,
             #"-f", filter_expression,
             "-q",

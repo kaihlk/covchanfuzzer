@@ -204,8 +204,8 @@ class CustomHTTP(HTTP):
     def connect_tcp_socket(self, sock, host_ip_info, timeout):
             try: 
                 error_message="" 
-                print("Host IP Info")
-                print(host_ip_info[0][4])
+                #print("Host IP Info")
+                #print(host_ip_info[0][4])
                 sock.settimeout(timeout)   #Can be reset by some functions of the socket libary, just to make sure          
                 sock.connect(host_ip_info[0][4])
                 stream_socket = SuperSocket.StreamSocket(sock, basecls=HTTP)
@@ -219,8 +219,8 @@ class CustomHTTP(HTTP):
             try: 
                 error_message=""
                 tls_socket.settimeout(timeout)
-                print("Host IP Info")
-                print(host_ip_info[0][4])
+                #print("Host IP Info")
+               #print(host_ip_info[0][4])
                 tls_socket.connect(host_ip_info[0][4])
                 tls_socket.settimeout(timeout)
                 #assert "http/1.1" == tls_socket.selected_alpn_protocol()  # Assert Error Problem with saving log to json
@@ -391,7 +391,7 @@ class CustomHTTP(HTTP):
                 stream_socket.send(req)       
                 # Receive the response
                 response = stream_socket.recv()
-                print(response)
+                
                 end_time = time.time()
                 response_time=end_time-start_time
                 print("Response Time")
@@ -426,7 +426,7 @@ class CustomHTTP(HTTP):
                     print(ex3)
                     pass
 
-        print(response)
+        
         response_line=None
         response_headers=None
         body=None

@@ -2,8 +2,9 @@
 # runs a http fuzzing experiment
 
 
-import threading
+import concurrent.futures
 import time
+import threading
 import http1_covered_channels
 from logger import ExperimentLogger , TestRunLogger
 from custom_http_client import CustomHTTP
@@ -19,17 +20,18 @@ class ExperimentRunner:
         self.dns_fails=[]
         self.message_count=0
         self.prerequest_list=[]
+        self.exp_log=None
 
-    def get_target_subset(self, start_position=0, count=10)-> list:
+    def get_target_subset(self, start_position=0, length=10)-> list:
         """Takes a subset from the target list to reduce the traffic to one target, in order to """
         
-        if start_position <1 or start_position > len(self.target_list):
-            raise ValueError("Invalid start_no")
-        sub_set=self.target_list[start_position -1:]
-        if count > len(sub_set):
-            count = len(sub_set)
+        if start_position <0 or start_position > len(self.target_list):
+            raise ValueError("Invalid start_position")
+        sub_set=self.target_list[start_position:]
+        if length > len(sub_set):
+            length = len(sub_set)
         
-        sub_set=sub_set[:count]
+        sub_set=sub_set[:length]
         return sub_set
 
  
@@ -55,14 +57,14 @@ class ExperimentRunner:
                 self.target_port=443
             else: 
                 self.target_port=80
-        print(self.target_port)
+       
         #Lookup DNS for each entry
         #TODO Catch the case that IPv4 or IPv6 is not provided, some sites sends more than one IP/Port set per protocoll version,  example macromedia.com and criteo.com
         for entry in sub_set:
             print("DNS Lookup for:"+entry)
             socket_info = CustomHTTP().lookup_dns(entry, self.target_port, self.experiment_configuration["use_ipv4"])
             if socket_info:
-                print(socket_info)
+                
                 if self.experiment_configuration["use_ipv4"]:
                     ip_address, port=  socket_info[0][4]
                 else:#IPv6
@@ -110,7 +112,7 @@ class ExperimentRunner:
         return request
 
 
-    def run_experiment(self, logger_list, sub_set_dns):
+    def run_experiment_subset(self, logger_list, sub_set_dns):
 
         '''Run the experiment'''
      
@@ -152,97 +154,98 @@ class ExperimentRunner:
                     
         return  
 
+    def fuzz_subset(self, subset):
+        #Get DNS Infomation 
+        subset_dns=self.add_dns_info(subset)
+
+        #Create logger object for each target #Iterate over List
+        
+        
+        #Create Logger object for each host and start package capturing process
+        capture_threads=[]
+        logger_list=[]
+        stop_events=[]
+                    
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            for entry in subset_dns: 
+                try:   
+                    logger=TestRunLogger(self.experiment_configuration, self.exp_log.get_experiment_folder(), entry, entry["host"], entry["ip_address"], entry["port"])
+                    logger_list.append(logger)           
+                    stop_event=threading.Event()
+                    stop_events.append(stop_event)
+                    #Start capturing threads
+                    capture_thread = executor.submit(logger.capture_packets, stop_event)
+                    capture_threads.append(capture_thread)
+                   
+                except Exception as e:
+                    print("Error while creating logger objects:", e)    
+            
+
+        time.sleep(1) #Every capturing process should be ready
+            
+        #Start sending packages
+        self.run_experiment_subset(logger_list, subset_dns)
+        
+        #End capturing
+        time.sleep(1)
+        for event in stop_events:
+            event.set()
+        # Wait for canceled and completed capturing threads
+        concurrent.futures.cancel(capture_threads)
+        concurrent.futures.wait(capture_threads)
+        for logger in logger_list:
+            logger.save_logfiles()
+
+        #End Capturing
+
+        return
+
+
     def setup_and_start_experiment(self):
         '''Setups the Experiment, creates an experiment logger, and starts the experiment run'''
         
 
         #Create Folder for the experiment and save the path
-        exp_log=ExperimentLogger(self.experiment_configuration)
-        
+        self.exp_log=ExperimentLogger(self.experiment_configuration)
 
-        #Start Global Capturing Processs
-        
-
-        stop_capture_flag_global = threading.Event()
-        #Start Capturing SubProcess
-        
-        
-        capture_thread = threading.Thread(
-                target=exp_log.capture_packets_dumpcap,
-                args=(
-
-                    stop_capture_flag_global,
-                    self.experiment_configuration["nw_interface"],
-                    
-                )
-        ) 
-        capture_thread.start()
-       
         #Loop over List
-        sub_set_no=1
-        start_position=1
-        while start_position <= self.experiment_configuration["max_targets"]: 
-            #Get target subset
-            subset=self.get_target_subset(start_position,self.experiment_configuration["target_subset_size"])
-            
-            #Get DNS Infomation 
-            subset_dns=self.add_dns_info(subset)
-    
-            #Create logger object for each target #Iterate over List
-            
-           
-            logger_list=[]
-            
-            #Create Logger object for each host and start package capturing process
-            capture_threads=[]
-            stop_capture_flags=[]
-            for entry in subset_dns:    
-                #print(entry)
-                logger=TestRunLogger(self.experiment_configuration, exp_log.get_experiment_folder(), entry, entry["host"], entry["ip_address"], entry["port"])
-                logger_list.append(logger)
-                stop_capture_flag=threading.Event()
-                stop_capture_flags.append(stop_capture_flag)
-                capture_thread= threading.Thread(target=logger.capture_packets, args=(stop_capture_flag,))
-                capture_thread.start()
-                capture_threads.append(capture_thread)
-                
-                
 
-            #TODO change name of the file per run. Add to one bigfile
-            #Start capturing threads
-          
-            time.sleep(1) #Every capturing process should be ready
-            
-            #Start sending packages
-            self.run_experiment(logger_list, subset_dns)
-            
-            #End capturing
-            
-            time.sleep(1)
-            for stop_capture_flag in stop_capture_flags:
-              
-                stop_capture_flag.set()
-            for capture_thread in capture_threads:
-                capture_thread.join()
-            for logger in logger_list:
-                logger.save_logfiles()
+        start_position=0
+        subset_length=self.experiment_configuration["target_subset_size"]
+        max_targets=self.experiment_configuration["max_targets"]
+        if max_targets>len(self.target_list): max_targets=len(self.target_list)
 
-            #End Capturing
+        subsets_tasks=[]
 
-            
-            #Save OutCome to experiment Folder csv.
-            
-            #End capture thread
-            start_position += self.experiment_configuration["target_subset_size"] 
-           
-            # Wait for the capture thread to finish
-             
-        stop_capture_flag_global.set()
-        capture_thread.join()
-        
 
-        exp_log.add_global_entry_to_experiment_list(self.experiment_configuration["experiment_no"])
-        exp_log.save_dns_fails(self.dns_fails)
+        with concurrent.futures.ThreadPoolExecutor(max_workers=self.experiment_configuration["max_workers"]) as subset_executor:
+            #Start Global Capturing Processs
+            global_stop_event=threading.Event()
+            global_capture_thread=subset_executor.submit(self.exp_log.capture_packets_dumpcap, global_stop_event)
+
+            try:
+            
+                'Iterate through target list'
+                while start_position < max_targets: 
+                    
+                    #Get target subset
+                    
+                    subset=self.get_target_subset(start_position, subset_length)
+                    
+                    subset_task=subset_executor.submit(self.fuzz_subset, subset)
+                    subsets_tasks.append(subset_task)
+                    start_position += len(subset)
+            except Exception as e:
+                print("An exception occurred:", e)    
+            finally:
+                concurrent.futures.wait(subsets_tasks)
+                # Wait for the global capture thread to finish
+                global_stop_event.set()    
+                concurrent.futures.wait([global_capture_thread])
+
+        #Save OutCome to experiment Folder csv.
+        self.exp_log.add_global_entry_to_experiment_list(self.experiment_configuration["experiment_no"])
+        self.exp_log.save_dns_fails(self.dns_fails)
         
             
         """capture_threads=[] 

@@ -1,0 +1,317 @@
+[
+    {
+        "number": 0,
+        "request": "GET /services# HTTP/1.1\r\nHost: ctldl.windowsupdate.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#",
+        "request_length": 332,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0491635799407959,
+            "Socket_Close_Time": 0.11427569389343262,
+            "Response_Time": 0.2523777484893799
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 18:03:01 GMT",
+            "content-type": "text/html",
+            "content-length": "1245",
+            "connection": "keep-alive",
+            "server": "Microsoft-IIS/10.0",
+            "x-powered-by": "ASP.NET",
+            "x-cid": "3",
+            "x-ccc": "DE",
+            "msregion": "EMEA",
+            "age": "0"
+        },
+        "response_length": 1245
+    },
+    {
+        "number": 1,
+        "request": "GET /index.php#USI HTTP/1.1\r\nHost: ctldl.windowsupdate.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#USI",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.04051327705383301,
+            "Socket_Close_Time": 0.11472010612487793,
+            "Response_Time": 0.8146049976348877
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 18:03:06 GMT",
+            "content-type": "text/html",
+            "content-length": "1245",
+            "connection": "keep-alive",
+            "server": "Microsoft-IIS/10.0",
+            "x-powered-by": "ASP.NET",
+            "x-cid": "3",
+            "x-ccc": "DE",
+            "msregion": "EMEA",
+            "age": "3"
+        },
+        "response_length": 1245
+    },
+    {
+        "number": 2,
+        "request": "GET /favicon.ico# HTTP/1.1\r\nHost: ctldl.windowsupdate.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#",
+        "request_length": 335,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.04765796661376953,
+            "Socket_Close_Time": 0.10663104057312012,
+            "Response_Time": 0.4267544746398926
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 18:03:16 GMT",
+            "content-type": "text/html",
+            "content-length": "1245",
+            "connection": "keep-alive",
+            "server": "Microsoft-IIS/10.0",
+            "x-powered-by": "ASP.NET",
+            "x-cid": "3",
+            "x-ccc": "DE",
+            "msregion": "EMEA",
+            "age": "0"
+        },
+        "response_length": 1245
+    },
+    {
+        "number": 3,
+        "request": "GET /# HTTP/1.1\r\nHost: ctldl.windowsupdate.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02375507354736328,
+            "Socket_Close_Time": 0.1185617446899414,
+            "Response_Time": 0.16505742073059082
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 12:57:09 GMT",
+            "content-type": "text/html",
+            "content-length": "402",
+            "connection": "keep-alive",
+            "cache-control": "public, max-age=172800",
+            "etag": "\"043c7cb7aac11:0\"",
+            "expires": "Mon, 28 Aug 2023 18:03:23 GMT",
+            "last-modified": "Fri, 01 Feb 2002 00:29:18 GMT",
+            "server": "Microsoft-IIS/10.0",
+            "x-powered-by": "ASP.NET",
+            "x-cid": "3",
+            "x-ccc": "DE",
+            "msregion": "EMEA",
+            "age": "18375",
+            "accept-ranges": "bytes"
+        },
+        "response_length": 402
+    },
+    {
+        "number": 4,
+        "request": "GET /favicon.ico#J HTTP/1.1\r\nHost: ctldl.windowsupdate.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#J",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02152872085571289,
+            "Socket_Close_Time": 0.11866402626037598,
+            "Response_Time": 0.2513244152069092
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 18:03:32 GMT",
+            "content-type": "text/html",
+            "content-length": "1245",
+            "connection": "keep-alive",
+            "server": "Microsoft-IIS/10.0",
+            "x-powered-by": "ASP.NET",
+            "x-cid": "3",
+            "x-ccc": "DE",
+            "msregion": "EMEA",
+            "age": "0"
+        },
+        "response_length": 1245
+    },
+    {
+        "number": 5,
+        "request": "GET /services#ksJh HTTP/1.1\r\nHost: ctldl.windowsupdate.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#ksJh",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05729031562805176,
+            "Socket_Close_Time": 0.12835288047790527,
+            "Response_Time": 0.2536506652832031
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 18:03:39 GMT",
+            "content-type": "text/html",
+            "content-length": "1245",
+            "connection": "keep-alive",
+            "server": "Microsoft-IIS/10.0",
+            "x-powered-by": "ASP.NET",
+            "x-cid": "3",
+            "x-ccc": "DE",
+            "msregion": "EMEA",
+            "age": "0"
+        },
+        "response_length": 1245
+    },
+    {
+        "number": 6,
+        "request": "GET /index.php#RWkO HTTP/1.1\r\nHost: ctldl.windowsupdate.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#RWkO",
+        "request_length": 337,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.025307655334472656,
+            "Socket_Close_Time": 0.1059567928314209,
+            "Response_Time": 0.15124154090881348
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 18:03:46 GMT",
+            "content-type": "text/html",
+            "content-length": "1245",
+            "connection": "keep-alive",
+            "server": "Microsoft-IIS/10.0",
+            "x-powered-by": "ASP.NET",
+            "x-cid": "3",
+            "x-ccc": "DE",
+            "msregion": "EMEA",
+            "age": "0"
+        },
+        "response_length": 1245
+    },
+    {
+        "number": 7,
+        "request": "GET /favicon.ico# HTTP/1.1\r\nHost: ctldl.windowsupdate.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#",
+        "request_length": 335,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02048182487487793,
+            "Socket_Close_Time": 0.12101507186889648,
+            "Response_Time": 0.21792912483215332
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 18:03:55 GMT",
+            "content-type": "text/html",
+            "content-length": "1245",
+            "connection": "keep-alive",
+            "server": "Microsoft-IIS/10.0",
+            "x-powered-by": "ASP.NET",
+            "x-cid": "3",
+            "x-ccc": "DE",
+            "msregion": "EMEA",
+            "age": "0"
+        },
+        "response_length": 1245
+    },
+    {
+        "number": 8,
+        "request": "GET /support#T HTTP/1.1\r\nHost: ctldl.windowsupdate.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#T",
+        "request_length": 332,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10340142250061035,
+            "Socket_Close_Time": 0.1188056468963623,
+            "Response_Time": 0.6091587543487549
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 18:04:04 GMT",
+            "content-type": "text/html",
+            "content-length": "1245",
+            "connection": "keep-alive",
+            "server": "Microsoft-IIS/10.0",
+            "x-powered-by": "ASP.NET",
+            "x-cid": "3",
+            "x-ccc": "DE",
+            "msregion": "EMEA",
+            "age": "0"
+        },
+        "response_length": 1245
+    },
+    {
+        "number": 9,
+        "request": "GET /index.php#Tm4Yqn63 HTTP/1.1\r\nHost: ctldl.windowsupdate.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#Tm4Yqn63",
+        "request_length": 341,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.026216506958007812,
+            "Socket_Close_Time": 0.13058972358703613,
+            "Response_Time": 0.05571579933166504
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Sat, 26 Aug 2023 18:03:46 GMT",
+            "content-type": "text/html",
+            "content-length": "1245",
+            "connection": "keep-alive",
+            "server": "Microsoft-IIS/10.0",
+            "x-powered-by": "ASP.NET",
+            "x-cid": "3",
+            "x-ccc": "DE",
+            "msregion": "EMEA",
+            "age": "27"
+        },
+        "response_length": 1245
+    }
+]

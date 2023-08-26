@@ -1,0 +1,305 @@
+[
+    {
+        "number": 0,
+        "request": "GET /index.php#PF1Mj9ObaeRRhCktya3ZI HTTP/1.1\r\nHost: doubleclick.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#PF1Mj9ObaeRRhCktya3ZI",
+        "request_length": 346,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.04151439666748047,
+            "Socket_Close_Time": 0.11038470268249512,
+            "Response_Time": 0.05230402946472168
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Sat, 26 Aug 2023 17:48:46 GMT",
+            "server": "sffe",
+            "content-length": "1570",
+            "x-xss-protection": "0"
+        },
+        "response_length": 1566
+    },
+    {
+        "number": 1,
+        "request": "GET /contact#r HTTP/1.1\r\nHost: doubleclick.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#r",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02261519432067871,
+            "Socket_Close_Time": 0.11386799812316895,
+            "Response_Time": 0.028166770935058594
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://doubleclick.net/contact/",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Sat, 26 Aug 2023 17:48:50 GMT",
+            "expires": "Sat, 26 Aug 2023 18:18:50 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "228",
+            "x-xss-protection": "0"
+        },
+        "response_length": 228
+    },
+    {
+        "number": 2,
+        "request": "GET /blog#0nGx HTTP/1.1\r\nHost: doubleclick.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#0nGx",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.027997732162475586,
+            "Socket_Close_Time": 0.11374640464782715,
+            "Response_Time": 0.033304691314697266
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Sat, 26 Aug 2023 17:48:55 GMT",
+            "server": "sffe",
+            "content-length": "1565",
+            "x-xss-protection": "0"
+        },
+        "response_length": 1561
+    },
+    {
+        "number": 3,
+        "request": "GET /favicon.ico#W HTTP/1.1\r\nHost: doubleclick.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#W",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.015794992446899414,
+            "Socket_Close_Time": 0.11782193183898926,
+            "Response_Time": 0.05998110771179199
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "accept-ranges": "bytes",
+            "vary": "Accept-Encoding",
+            "content-encoding": "gzip",
+            "content-type": "image/x-icon",
+            "cross-origin-resource-policy": "cross-origin",
+            "cross-origin-opener-policy-report-only": "same-origin; report-to=\"static-on-bigtable\"",
+            "report-to": "{\"group\":\"static-on-bigtable\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/static-on-bigtable\"}]}",
+            "content-length": "1494",
+            "date": "Sat, 26 Aug 2023 17:49:01 GMT",
+            "expires": "Sun, 03 Sep 2023 17:49:01 GMT",
+            "cache-control": "public, max-age=691200",
+            "last-modified": "Tue, 22 Oct 2019 18:30:00 GMT",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "x-xss-protection": "0"
+        },
+        "response_length": 5328
+    },
+    {
+        "number": 4,
+        "request": "GET /support# HTTP/1.1\r\nHost: doubleclick.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.027042627334594727,
+            "Socket_Close_Time": 0.11072492599487305,
+            "Response_Time": 0.046930551528930664
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Sat, 26 Aug 2023 17:49:05 GMT",
+            "server": "sffe",
+            "content-length": "1568",
+            "x-xss-protection": "0"
+        },
+        "response_length": 1564
+    },
+    {
+        "number": 5,
+        "request": "GET /services#RQRcW HTTP/1.1\r\nHost: doubleclick.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#RQRcW",
+        "request_length": 329,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.025120258331298828,
+            "Socket_Close_Time": 0.1154623031616211,
+            "Response_Time": 0.25662708282470703
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://doubleclick.net/services/",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Sat, 26 Aug 2023 17:49:10 GMT",
+            "expires": "Sat, 26 Aug 2023 18:19:10 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "229",
+            "x-xss-protection": "0"
+        },
+        "response_length": 229
+    },
+    {
+        "number": 6,
+        "request": "GET /blog#3lJ3yGa6iQVJ HTTP/1.1\r\nHost: doubleclick.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#3lJ3yGa6iQVJ",
+        "request_length": 332,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0335993766784668,
+            "Socket_Close_Time": 0.11229252815246582,
+            "Response_Time": 0.25765347480773926
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Sat, 26 Aug 2023 17:49:13 GMT",
+            "server": "sffe",
+            "content-length": "1565",
+            "x-xss-protection": "0"
+        },
+        "response_length": 1561
+    },
+    {
+        "number": 7,
+        "request": "GET /#qQ HTTP/1.1\r\nHost: doubleclick.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#qQ",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02022838592529297,
+            "Socket_Close_Time": 0.11654281616210938,
+            "Response_Time": 0.03943514823913574
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://marketingplatform.google.com/about/enterprise/",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Sat, 26 Aug 2023 17:49:20 GMT",
+            "expires": "Sat, 26 Aug 2023 18:19:20 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "251",
+            "x-xss-protection": "0"
+        },
+        "response_length": 251
+    },
+    {
+        "number": 8,
+        "request": "GET /#88vWsF4g HTTP/1.1\r\nHost: doubleclick.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#88vWsF4g",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02609109878540039,
+            "Socket_Close_Time": 0.11765909194946289,
+            "Response_Time": 0.04027962684631348
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://marketingplatform.google.com/about/enterprise/",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Sat, 26 Aug 2023 17:49:25 GMT",
+            "expires": "Sat, 26 Aug 2023 18:19:25 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "251",
+            "x-xss-protection": "0"
+        },
+        "response_length": 251
+    },
+    {
+        "number": 9,
+        "request": "GET /services#JH1nJi0cSL HTTP/1.1\r\nHost: doubleclick.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#JH1nJi0cSL",
+        "request_length": 334,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.019947528839111328,
+            "Socket_Close_Time": 0.11822962760925293,
+            "Response_Time": 0.024374723434448242
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://doubleclick.net/services/",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Sat, 26 Aug 2023 17:49:29 GMT",
+            "expires": "Sat, 26 Aug 2023 18:19:29 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "229",
+            "x-xss-protection": "0"
+        },
+        "response_length": 229
+    }
+]

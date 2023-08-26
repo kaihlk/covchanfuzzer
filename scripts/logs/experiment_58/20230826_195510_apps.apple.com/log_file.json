@@ -1,0 +1,321 @@
+[
+    {
+        "number": 0,
+        "request": "GET /blog# HTTP/1.1\r\nHost: apps.apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06860733032226562,
+            "Socket_Close_Time": 0.1396622657775879,
+            "Response_Time": 0.33482909202575684
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "daiquiri/3.0.0",
+            "content-type": "text/html",
+            "content-length": "171",
+            "location": "https://apps.apple.com/blog",
+            "x-apple-jingle-correlation-key": "HV4RMJK62MVZ6ARKHKQPHUCIYM",
+            "x-daiquiri-instance": "daiquiri:14904001:mr85p00it-hyhk03124701:7987:23RELEASE132:daiquiri-amp-store-shared-ext-004-mr",
+            "date": "Sat, 26 Aug 2023 17:55:35 GMT",
+            "x-cache": "TCP_MISS from a2-16-29-147.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "x-cache-remote": "TCP_MISS from a23-72-253-7.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "set-cookie": "geo=DE; domain=.apple.com"
+        },
+        "response_length": 171
+    },
+    {
+        "number": 1,
+        "request": "GET /support#2EjwR HTTP/1.1\r\nHost: apps.apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#2EjwR",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.007596731185913086,
+            "Socket_Close_Time": 0.1082158088684082,
+            "Response_Time": 0.0346684455871582
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "daiquiri/3.0.0",
+            "content-type": "text/html",
+            "content-length": "171",
+            "location": "https://apps.apple.com/support",
+            "x-apple-jingle-correlation-key": "WC3UPIEG7VJMTOLL5VWF4JC534",
+            "x-daiquiri-instance": "daiquiri:14904001:mr85p00it-hyhk03124701:7987:23RELEASE132:daiquiri-amp-store-shared-ext-004-mr",
+            "date": "Sat, 26 Aug 2023 17:56:15 GMT",
+            "x-cache": "TCP_MISS from a2-16-29-133.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "x-cache-remote": "TCP_MEM_HIT from a2-16-29-156.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "set-cookie": "geo=DE; domain=.apple.com"
+        },
+        "response_length": 171
+    },
+    {
+        "number": 2,
+        "request": "GET /about#hdtS HTTP/1.1\r\nHost: apps.apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#hdtS",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.013190984725952148,
+            "Socket_Close_Time": 0.10586166381835938,
+            "Response_Time": 0.230025053024292
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "daiquiri/3.0.0",
+            "content-type": "text/html",
+            "content-length": "171",
+            "location": "https://apps.apple.com/about",
+            "x-apple-jingle-correlation-key": "U46N52L7FZKQMRDHJLCVN6CIX4",
+            "x-daiquiri-instance": "daiquiri:48215002:st44p00it-hyhk16084701:7987:23RELEASE132:daiquiri-amp-store-shared-ext-001-st",
+            "date": "Sat, 26 Aug 2023 17:56:44 GMT",
+            "x-cache": "TCP_MISS from a2-16-29-150.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "x-cache-remote": "TCP_MISS from a23-193-116-101.deploy.akamaitechnologies.com (AkamaiGHost/11.2.3-50495197) (-)",
+            "set-cookie": "geo=DE; domain=.apple.com"
+        },
+        "response_length": 171
+    },
+    {
+        "number": 3,
+        "request": "GET /favicon.ico#unU9Bmz HTTP/1.1\r\nHost: apps.apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#unU9Bmz",
+        "request_length": 333,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.010309934616088867,
+            "Socket_Close_Time": 0.11247587203979492,
+            "Response_Time": 0.29822492599487305
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "daiquiri/3.0.0",
+            "content-type": "text/html",
+            "content-length": "171",
+            "location": "https://apps.apple.com/favicon.ico",
+            "x-apple-jingle-correlation-key": "BVYSQOVGPWSJZ4Q7LVZP3ELYWM",
+            "x-daiquiri-instance": "daiquiri:14904001:mr85p00it-hyhk03124701:7987:23RELEASE132:daiquiri-amp-store-shared-ext-004-mr",
+            "date": "Sat, 26 Aug 2023 17:57:12 GMT",
+            "x-cache": "TCP_REFRESH_MISS from a2-16-29-134.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (S)",
+            "connection": "keep-alive",
+            "x-cache-remote": "TCP_REFRESH_MISS from a23-193-116-132.deploy.akamaitechnologies.com (AkamaiGHost/11.2.3-50495197) (S)",
+            "set-cookie": "geo=DE; domain=.apple.com"
+        },
+        "response_length": 171
+    },
+    {
+        "number": 4,
+        "request": "GET /#D HTTP/1.1\r\nHost: apps.apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#D",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.021408796310424805,
+            "Socket_Close_Time": 0.1038818359375,
+            "Response_Time": 0.03247475624084473
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "daiquiri/3.0.0",
+            "content-type": "text/html",
+            "content-length": "171",
+            "location": "https://apps.apple.com/",
+            "x-apple-jingle-correlation-key": "J7AAYLUNRPE4NOEX4QAM476TXU",
+            "x-daiquiri-instance": "daiquiri:44904001:st44p00it-hyhk15124101:7987:23RELEASE132:daiquiri-amp-store-shared-ext-004-st",
+            "date": "Sat, 26 Aug 2023 17:57:39 GMT",
+            "x-cache": "TCP_MISS from a2-16-29-152.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "x-cache-remote": "TCP_REFRESH_MISS from a2-16-29-153.deploy.akamaitechnologies.com (AkamaiGHost/11.2.3-50495197) (S)",
+            "set-cookie": "geo=DE; domain=.apple.com"
+        },
+        "response_length": 171
+    },
+    {
+        "number": 5,
+        "request": "GET /index.html#I HTTP/1.1\r\nHost: apps.apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#I",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.023810148239135742,
+            "Socket_Close_Time": 0.12331652641296387,
+            "Response_Time": 0.01575922966003418
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "daiquiri/3.0.0",
+            "content-type": "text/html",
+            "content-length": "171",
+            "location": "https://apps.apple.com/index.html",
+            "x-apple-jingle-correlation-key": "FUQYQVT3M7GFHIDKWPVHFGOLVI",
+            "x-daiquiri-instance": "daiquiri:12814002:mr85p00it-hyhk04104001:7987:23RELEASE132:daiquiri-amp-store-shared-ext-005-mr",
+            "date": "Sat, 26 Aug 2023 17:58:11 GMT",
+            "x-cache": "TCP_MISS from a2-16-29-158.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "x-cache-remote": "TCP_MEM_HIT from a2-16-29-134.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "set-cookie": "geo=DE; domain=.apple.com"
+        },
+        "response_length": 171
+    },
+    {
+        "number": 6,
+        "request": "GET /about#vOpt HTTP/1.1\r\nHost: apps.apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#vOpt",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.01654648780822754,
+            "Socket_Close_Time": 0.10681462287902832,
+            "Response_Time": 0.015284538269042969
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "daiquiri/3.0.0",
+            "content-type": "text/html",
+            "content-length": "171",
+            "location": "https://apps.apple.com/about",
+            "x-apple-jingle-correlation-key": "U46N52L7FZKQMRDHJLCVN6CIX4",
+            "x-daiquiri-instance": "daiquiri:48215002:st44p00it-hyhk16084701:7987:23RELEASE132:daiquiri-amp-store-shared-ext-001-st",
+            "date": "Sat, 26 Aug 2023 17:58:34 GMT",
+            "x-cache": "TCP_MISS from a2-16-29-138.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "x-cache-remote": "TCP_MEM_HIT from a23-193-116-101.deploy.akamaitechnologies.com (AkamaiGHost/11.2.3-50495197) (-)",
+            "set-cookie": "geo=DE; domain=.apple.com"
+        },
+        "response_length": 171
+    },
+    {
+        "number": 7,
+        "request": "GET /support#HzJLUsisv7 HTTP/1.1\r\nHost: apps.apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#HzJLUsisv7",
+        "request_length": 332,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02962660789489746,
+            "Socket_Close_Time": 0.14238500595092773,
+            "Response_Time": 0.0064945220947265625
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "daiquiri/3.0.0",
+            "content-type": "text/html",
+            "content-length": "171",
+            "location": "https://apps.apple.com/support",
+            "x-apple-jingle-correlation-key": "WC3UPIEG7VJMTOLL5VWF4JC534",
+            "x-daiquiri-instance": "daiquiri:14904001:mr85p00it-hyhk03124701:7987:23RELEASE132:daiquiri-amp-store-shared-ext-004-mr",
+            "date": "Sat, 26 Aug 2023 17:59:00 GMT",
+            "x-cache": "TCP_MEM_HIT from a2-16-29-133.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "set-cookie": "geo=DE; domain=.apple.com"
+        },
+        "response_length": 171
+    },
+    {
+        "number": 8,
+        "request": "GET /index.php#CTYca5 HTTP/1.1\r\nHost: apps.apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#CTYca5",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.016917943954467773,
+            "Socket_Close_Time": 0.11459565162658691,
+            "Response_Time": 0.35953640937805176
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "daiquiri/3.0.0",
+            "content-type": "text/html",
+            "content-length": "171",
+            "location": "https://apps.apple.com/index.php",
+            "x-apple-jingle-correlation-key": "AAIQMRNDKBGGU4I4IQKZXYK63I",
+            "x-daiquiri-instance": "daiquiri:17117001:mr85p00it-hyhk04124701:7987:23RELEASE132:daiquiri-amp-store-shared-ext-002-mr",
+            "date": "Sat, 26 Aug 2023 18:00:57 GMT",
+            "x-cache": "TCP_MISS from a2-16-29-160.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "x-cache-remote": "TCP_MEM_HIT from a2-16-29-150.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "set-cookie": "geo=DE; domain=.apple.com"
+        },
+        "response_length": 171
+    },
+    {
+        "number": 9,
+        "request": "GET /# HTTP/1.1\r\nHost: apps.apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#",
+        "request_length": 315,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.005615711212158203,
+            "Socket_Close_Time": 0.10595107078552246,
+            "Response_Time": 0.04104733467102051
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "daiquiri/3.0.0",
+            "content-type": "text/html",
+            "content-length": "171",
+            "location": "https://apps.apple.com/",
+            "x-apple-jingle-correlation-key": "J7AAYLUNRPE4NOEX4QAM476TXU",
+            "x-daiquiri-instance": "daiquiri:44904001:st44p00it-hyhk15124101:7987:23RELEASE132:daiquiri-amp-store-shared-ext-004-st",
+            "date": "Sat, 26 Aug 2023 18:01:36 GMT",
+            "x-cache": "TCP_REFRESH_MISS from a2-16-29-152.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (S)",
+            "connection": "keep-alive",
+            "x-cache-remote": "TCP_MEM_HIT from a2-16-29-154.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (A)",
+            "set-cookie": "geo=DE; domain=.apple.com"
+        },
+        "response_length": 171
+    }
+]
