@@ -382,7 +382,20 @@ class ExperimentLogger:
         print("DNS Lookup Fails Saved")
         return
 
-    
+    def save_prerequests(self, prerequests):
+        """Saves the prerequest list"""
+        
+        file_path = f"{self.experiment_folder}/prerequests.csv"
+        
+        with open(file_path, "w", newline="") as csvfile:
+            
+            csv_writer = csv.DictWriter(csvfile, fieldnames=prerequests[0].keys())
+            csv_writer.writeheader()
+
+            for prerequest in prerequests:
+                csv_writer.writerow(prerequest)
+        print("Prerquest saved")
+        return
 
     def capture_packets_dumpcap(
         self, stop_capture_flag

@@ -83,14 +83,55 @@ class ExperimentRunner:
         #Build HTTP Request after the selected covered channel
         selected_covered_channel = class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]()
         try:
-            prerequest, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration)
+            request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration)
         except Exception as e:
             print("Error CC Generate Request", e) 
         if self.experiment_configuration["verbose"]==True:
-            print(prerequest)
+            print(request)
+        prerequest= {
+            "Nr":0,
+            "request":request,
+            "deviation_count":deviation_count,
+            "uri":uri,
+            "1xx":0,
+            "2xx":0,
+            "3xx":0,
+            "4xx":0,
+            "5xx":0,
+            "9xx":0,
+        }
 
-        return prerequest, deviation_count, uri
+        return prerequest
 
+
+    def get_next_prerequest(self, attempt_number):
+        if attempt_number>=len(self.prerequest_list):
+            prerequest = self.pregenerate_request()
+            self.prerequest_list.append(prerequest)
+        else: 
+            prerequest=self.prerequest_list[attempt_number]
+            
+        return prerequest
+
+    def add_nr_and_status_code_to_request_list(self, attempt_no, response_line):
+        self.pregenerate_request[attempt_no]["Nr"]=attempt_no
+        response_status_code = response_line["status_code"]    
+        first_digit = str(response_status_code)[0]
+        if first_digit == "1":
+            self.prerequest_list[attempt_no]["1xx"]+=1
+        elif first_digit == "2":
+            self.prerequest_list[attempt_no]["2xx"]+=1
+        elif first_digit == "3":
+            self.prerequest_list[attempt_no]["3xx"]+=1
+        elif first_digit == "4":
+            self.prerequest_list[attempt_no]["4xx"]+=1
+        elif first_digit == "5":
+            self.prerequest_list[attempt_no]["5xx"]+=1
+        elif first_digit== "9":
+            self.prerequest_list[attempt_no]["9xx"]+=1
+        
+        return
+        
     def check_content(self, body):
         #TODO add hash function and standard body
         return True
@@ -106,13 +147,12 @@ class ExperimentRunner:
             verbose=self.experiment_configuration["verbose"],
             log_path=logger.get_logging_folder()
         )
-        
+        print("Response:",response_line)
+        self.add_nr_and_status_code_to_request_list(attempt_number,response_line)
         self.check_content(body)
         logger.add_request_response_data(attempt_number, request, deviation_count, uri, response_line, response_header_fields, body, measured_times, error_message)
-
       
-       
-        return request
+        return 
 
 
     def run_experiment_subset(self, logger_list, sub_set_dns):
@@ -122,11 +162,11 @@ class ExperimentRunner:
         for i in range(self.experiment_configuration["num_attempts"]):
             
             try:
-                prerequest, deviation_count, uri=self.pregenerate_request()
+                prerequest=self.get_next_prerequest(i)
             except Exception as e:
                 print("Error while pregenerating requests", e)  
-            self.prerequest_list.append(prerequest)
-
+            
+            
 
             for host_data,logger in zip(sub_set_dns, logger_list):
             #Round Robin one Host after each other
@@ -136,17 +176,20 @@ class ExperimentRunner:
                 else:     
                     # Send the HTTP request and get the response in the main threads
                     
-                    request=request_builder.HTTP1_Request_Builder().replace_host_and_domain(prerequest,host_data["host"], self.experiment_configuration["standard_subdomain"])
+                    request=request_builder.HTTP1_Request_Builder().replace_host_and_domain(prerequest["request"],host_data["host"], self.experiment_configuration["standard_subdomain"])
+                    deviation_count=prerequest["deviation_count"]
+                    uri=prerequest["uri"]
                     print("Request")
                     print(request)
-
-                    start_time=time.time()
-                    self.send_and_receive_request(i, request, deviation_count, uri, host_data, logger)
-                    self.message_count+=1
-                    end_time=time.time()
-                    response_time=end_time-start_time
-                    print("Message No: " + str(self.message_count)+" Host: "+str(host_data["host"])+"Complete Message Time: " + str(response_time))
-                   
+                    try:
+                        start_time=time.time()
+                        self.send_and_receive_request(i, request, deviation_count, uri, host_data, logger)
+                        self.message_count+=1
+                        end_time=time.time()
+                        response_time=end_time-start_time
+                        print("Message No: " + str(self.message_count)+" Host: "+str(host_data["host"])+"Complete Message Time: " + str(response_time))
+                    except Exception as e:
+                        print("Error sending/receiving request")
                     
                     """                 if self.experiment_configuration["verbose"]==True:
                     # Print the response status code and deviation count
@@ -197,6 +240,7 @@ class ExperimentRunner:
         # Save Log fileds
         for logger in logger_list:
             logger.save_logfiles()
+            print("Logger")
 
 
         end_time=time.time()
@@ -293,7 +337,7 @@ class ExperimentRunner:
         #Save OutCome to experiment Folder csv.
         self.exp_log.add_global_entry_to_experiment_list(self.experiment_configuration["experiment_no"])
         self.exp_log.save_dns_fails(self.dns_fails)
-        
+        self.exp_log.save_prerequests(self.prerequest_list)
             
         """capture_threads=[] 
 

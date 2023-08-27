@@ -109,7 +109,7 @@ def main():
         "include_subdomain": True,
         "headers": None,
         "standard_headers": "firefox_HTTP/1.1",  #curl_HTTP/1.1(TLS), firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
-        "conttestent": "random",  #"random", "some_text""fuzz_value": 0.9,
+        "content": "random",  #"random", "some_text""fuzz_value": 0.9,
             
 
 
