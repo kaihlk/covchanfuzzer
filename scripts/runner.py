@@ -82,11 +82,14 @@ class ExperimentRunner:
         '''Build a HTTP Request Package and sends it and processes the response'''
         #Build HTTP Request after the selected covered channel
         selected_covered_channel = class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]()
-        request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration)
+        try:
+            prerequest, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration)
+        except Exception as e:
+            print("Error CC Generate Request", e) 
         if self.experiment_configuration["verbose"]==True:
-            print(request)
+            print(prerequest)
 
-        return request, deviation_count, uri
+        return prerequest, deviation_count, uri
 
     def check_content(self, body):
         #TODO add hash function and standard body
@@ -118,10 +121,12 @@ class ExperimentRunner:
      
         for i in range(self.experiment_configuration["num_attempts"]):
             
-            prerequest, deviation_count, uri=self.pregenerate_request()
+            try:
+                prerequest, deviation_count, uri=self.pregenerate_request()
+            except Exception as e:
+                print("Error while pregenerating requests", e)  
             self.prerequest_list.append(prerequest)
-            print("Prerequest:")
-            print(prerequest)
+
 
             for host_data,logger in zip(sub_set_dns, logger_list):
             #Round Robin one Host after each other
