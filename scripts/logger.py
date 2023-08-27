@@ -259,17 +259,6 @@ class TestRunLogger:
         self.create_wireshark_script()
         self.save_request_data(self.request_data_list)
         
-
-    def capture_packets(
-        self, stop_event
-    ):
-        '''Function to start a dumpcap network packet capturing process to record the traffic to and from a specified host'''
-        # PCAP Files
-        # dumpcap needs less privilige than tshark and is maybe faster.
-        # Prerequsites:
-        #  sudo usermod -a -G wireshark your_username
-        #  sudo setcap cap_net_raw=eip $(which dumpcap)
-        # Consider if destination port is need or if it is a problem when the connection is updated to TLS
         """ PYSHARK ALTERNATIV IS NOT WORKING
         # Set the output file for captured packets
         pcap_path = f"{self.log_folder}/captured_packets.pcapng"
@@ -284,7 +273,17 @@ class TestRunLogger:
             print("capture close")
             self.capture.close()
         return """
-    
+    def capture_packets(
+        self, stop_event
+    ):
+        '''Function to start a dumpcap network packet capturing process to record the traffic to and from a specified host'''
+        # PCAP Files
+        # dumpcap needs less privilige than tshark and is maybe faster.
+        # Prerequsites:
+        #  sudo usermod -a -G wireshark your_username
+        #  sudo setcap cap_net_raw=eip $(which dumpcap)
+        # Consider if destination port is need or if it is a problem when the connection is updated to TLS
+
         # Filter for packets related to the specific connection, host filter both directions
         filter_expression = f"host {self.target_ip}"
         pcap_path = f"{self.log_folder}/captured_packets.pcapng"
@@ -322,7 +321,8 @@ class TestRunLogger:
         
         except subprocess.CalledProcessError as ex:
             print("Error occurred during packet capture:", ex)
-        return
+        
+        return True
 
         """  def capture_thread():
             try:
@@ -432,6 +432,6 @@ class ExperimentLogger:
         
         except subprocess.CalledProcessError as ex:
             print("Error occurred during packet capture:", ex)
-    
+        return True
     def extract_packets_per_host(host_list):
         return 0
