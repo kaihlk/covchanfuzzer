@@ -147,7 +147,8 @@ class ExperimentRunner:
             verbose=self.experiment_configuration["verbose"],
             log_path=logger.get_logging_folder()
         )
-        print("Response:",response_line)
+        if self.experiment_configuration["verbose"]==True:
+            print("Response:",response_line)
         try:
             self.add_nr_and_status_code_to_request_list(attempt_number,response_line)
         except Exception as e:
@@ -184,8 +185,6 @@ class ExperimentRunner:
                         uri=prerequest["uri"]
                     except Exception as e:
                         print("Error building the request",e)
-                    print("Request")
-                    print(request)
                     try:
                         start_time=time.time()
                         self.send_and_receive_request(i, request, deviation_count, uri, host_data, logger)

@@ -369,7 +369,7 @@ class CustomHTTP(HTTP):
             end_time = time.time()
             socket_connect_time=end_time-start_time
             error_messages.append(error_message)
-            if verbose:
+            if verbose==True:
                 print("Stream Socket Connection Time")
                 print(socket_connect_time)
         except Exception as ex0:
@@ -419,8 +419,9 @@ class CustomHTTP(HTTP):
                         stream_socket.close()
                     end_time = time.time()
                     socket_close_time=end_time-start_time
-                    print("Socket close time")
-                    print(socket_close_time)
+                    if verbose==True:
+                        print("Socket close time")
+                        print(socket_close_time)
                 except socket.error as ex3:
                     error_messages.append(str(ex3))
                     print(ex3)

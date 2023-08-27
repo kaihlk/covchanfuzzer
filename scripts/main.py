@@ -83,9 +83,9 @@ def main():
         "covertchannel_timing_number": 1,
         "fuzz_value":0.8,
         #Target Selection Options  
-        "num_attempts": 2,
-        "max_targets": 6, #len(self.target_list):
-        "max_workers": 3,  # Parallel Processing of subsets,
+        "num_attempts": 10,
+        "max_targets": 20, #len(self.target_list):
+        "max_workers": 10,  # Parallel Processing of subsets,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
         "target_list": "target_list_subdomain.csv",

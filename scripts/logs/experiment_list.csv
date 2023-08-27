@@ -1,0 +1,2 @@
+experiment_no,comment,verbose,timestamp,covertchannel_request_number,covertchannel_connection_number,covertchannel_timing_number,fuzz_value,num_attempts,max_targets,max_workers,wait_between_request,base_line_check_frequency,target_list,target_subset_size,target_port,conn_timeout,nw_interface,use_ipv4,use_TLS,use_HTTP2,method,url,path,standard_subdomain,relative_uri,include_subdomain,headers,standard_headers,content
+1,ada,False,20230828_002324,11,1,1,0.8,10,20,10,0,0,target_list_subdomain.csv,3,,2,enp0s3,True,False,False,GET,,,www,True,True,,firefox_HTTP/1.1,random
