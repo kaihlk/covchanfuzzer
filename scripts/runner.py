@@ -114,7 +114,7 @@ class ExperimentRunner:
         return prerequest
 
     def add_nr_and_status_code_to_request_list(self, attempt_no, response_line):
-        self.pregenerate_request[attempt_no]["Nr"]=attempt_no
+        self.prerequest_list[attempt_no]["Nr"]=attempt_no
         response_status_code = response_line["status_code"]    
         first_digit = str(response_status_code)[0]
         if first_digit == "1":
@@ -148,7 +148,10 @@ class ExperimentRunner:
             log_path=logger.get_logging_folder()
         )
         print("Response:",response_line)
-        self.add_nr_and_status_code_to_request_list(attempt_number,response_line)
+        try:
+            self.add_nr_and_status_code_to_request_list(attempt_number,response_line)
+        except Exception as e:
+            print("Exception during updating request_list",e)
         self.check_content(body)
         logger.add_request_response_data(attempt_number, request, deviation_count, uri, response_line, response_header_fields, body, measured_times, error_message)
       
@@ -175,10 +178,12 @@ class ExperimentRunner:
                     print("Baseline Check Failure, Connection maybe blocked")
                 else:     
                     # Send the HTTP request and get the response in the main threads
-                    
-                    request=request_builder.HTTP1_Request_Builder().replace_host_and_domain(prerequest["request"],host_data["host"], self.experiment_configuration["standard_subdomain"])
-                    deviation_count=prerequest["deviation_count"]
-                    uri=prerequest["uri"]
+                    try:
+                        request=request_builder.HTTP1_Request_Builder().replace_host_and_domain(prerequest["request"],host_data["host"], self.experiment_configuration["standard_subdomain"])
+                        deviation_count=prerequest["deviation_count"]
+                        uri=prerequest["uri"]
+                    except Exception as e:
+                        print("Error building the request",e)
                     print("Request")
                     print(request)
                     try:
@@ -189,7 +194,7 @@ class ExperimentRunner:
                         response_time=end_time-start_time
                         print("Message No: " + str(self.message_count)+" Host: "+str(host_data["host"])+"Complete Message Time: " + str(response_time))
                     except Exception as e:
-                        print("Error sending/receiving request")
+                        print("Error sending/receiving request",e)
                     
                     """                 if self.experiment_configuration["verbose"]==True:
                     # Print the response status code and deviation count
@@ -221,6 +226,7 @@ class ExperimentRunner:
                 stop_event=threading.Event()
                 stop_events.append(stop_event)
                 capture_thread = threading.Thread(target=logger.capture_packets, args=(stop_event,))
+                capture_thread.start()
                 capture_threads.append(capture_thread)
             except Exception as e:
                 print("Error while creating logger objects:", e)    
@@ -230,6 +236,11 @@ class ExperimentRunner:
             self.run_experiment_subset(logger_list, subset_dns)
         except Exception as e:
             print("Exception during run_experiment_subset: ", e)
+        time.sleep(1)
+        # Save Log fileds
+        for logger in logger_list:
+            logger.save_logfiles()
+          
         #End capturing
         for stop_event in stop_events:
                 stop_event.set()       
@@ -237,10 +248,7 @@ class ExperimentRunner:
         for capture_thread in capture_threads:
             capture_thread.join()
         
-        # Save Log fileds
-        for logger in logger_list:
-            logger.save_logfiles()
-            print("Logger")
+
 
 
         end_time=time.time()

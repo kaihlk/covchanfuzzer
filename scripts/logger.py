@@ -394,7 +394,7 @@ class ExperimentLogger:
 
             for prerequest in prerequests:
                 csv_writer.writerow(prerequest)
-        print("Prerquest saved")
+        print("Prerequest saved")
         return
 
     def capture_packets_dumpcap(
