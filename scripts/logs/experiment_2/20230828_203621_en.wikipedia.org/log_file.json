@@ -1,0 +1,267 @@
+[
+    {
+        "number": 0,
+        "request": "GET /index.html# HTTP/1.1\r\nHost: en.wikipedia.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02061939239501953,
+            "Socket_Close_Time": 0.10728001594543457,
+            "Response_Time": 0.022882461547851562
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://en.wikipedia.org/index.html#",
+            "server": "HAProxy",
+            "x-cache": "cp3071 int",
+            "x-cache-status": "int-tls",
+            "connection": "close"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET /support#VNt HTTP/1.1\r\nHost: en.wikipedia.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#VNt",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.01934361457824707,
+            "Socket_Close_Time": 0.10340237617492676,
+            "Response_Time": 0.2384953498840332
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://en.wikipedia.org/support#VNt",
+            "server": "HAProxy",
+            "x-cache": "cp3071 int",
+            "x-cache-status": "int-tls",
+            "connection": "close"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET /services#e HTTP/1.1\r\nHost: en.wikipedia.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#e",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.020867109298706055,
+            "Socket_Close_Time": 0.11565947532653809,
+            "Response_Time": 0.02161717414855957
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://en.wikipedia.org/services#e",
+            "server": "HAProxy",
+            "x-cache": "cp3071 int",
+            "x-cache-status": "int-tls",
+            "connection": "close"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET /index.html#2rgX HTTP/1.1\r\nHost: en.wikipedia.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#2rgX",
+        "request_length": 331,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.016603708267211914,
+            "Socket_Close_Time": 0.11133646965026855,
+            "Response_Time": 0.020933866500854492
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://en.wikipedia.org/index.html#2rgX",
+            "server": "HAProxy",
+            "x-cache": "cp3071 int",
+            "x-cache-status": "int-tls",
+            "connection": "close"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET /favicon.ico#oc7 HTTP/1.1\r\nHost: en.wikipedia.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#oc7",
+        "request_length": 331,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.01890873908996582,
+            "Socket_Close_Time": 0.1262531280517578,
+            "Response_Time": 0.035163164138793945
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://en.wikipedia.org/favicon.ico#oc7",
+            "server": "HAProxy",
+            "x-cache": "cp3071 int",
+            "x-cache-status": "int-tls",
+            "connection": "close"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 5,
+        "request": "GET /services#f81L HTTP/1.1\r\nHost: en.wikipedia.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#f81L",
+        "request_length": 329,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.03010106086730957,
+            "Socket_Close_Time": 0.11287856101989746,
+            "Response_Time": 0.013442754745483398
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://en.wikipedia.org/services#f81L",
+            "server": "HAProxy",
+            "x-cache": "cp3071 int",
+            "x-cache-status": "int-tls",
+            "connection": "close"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET /support#W HTTP/1.1\r\nHost: en.wikipedia.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#W",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.03940606117248535,
+            "Socket_Close_Time": 0.13572287559509277,
+            "Response_Time": 0.017325162887573242
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://en.wikipedia.org/support#W",
+            "server": "HAProxy",
+            "x-cache": "cp3071 int",
+            "x-cache-status": "int-tls",
+            "connection": "close"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET /about#j HTTP/1.1\r\nHost: en.wikipedia.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#j",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.022480487823486328,
+            "Socket_Close_Time": 0.1133418083190918,
+            "Response_Time": 0.018483638763427734
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://en.wikipedia.org/about#j",
+            "server": "HAProxy",
+            "x-cache": "cp3071 int",
+            "x-cache-status": "int-tls",
+            "connection": "close"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET /index.php#eG2b HTTP/1.1\r\nHost: en.wikipedia.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#eG2b",
+        "request_length": 330,
+        "http_version": "",
+        "status_code": 999,
+        "reason_phrase": [
+            "timed out"
+        ],
+        "measured_times": {
+            "Socket_Connect_Time": 2.0071218013763428,
+            "Socket_Close_Time": 0,
+            "Response_Time": 0
+        },
+        "error_message": [
+            "timed out"
+        ],
+        "response_header_fields": null,
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET /favicon.ico#LN HTTP/1.1\r\nHost: en.wikipedia.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#LN",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.016648530960083008,
+            "Socket_Close_Time": 0.10710477828979492,
+            "Response_Time": 0.018984079360961914
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://en.wikipedia.org/favicon.ico#LN",
+            "server": "HAProxy",
+            "x-cache": "cp3071 int",
+            "x-cache-status": "int-tls",
+            "connection": "close"
+        },
+        "response_length": 0
+    }
+]

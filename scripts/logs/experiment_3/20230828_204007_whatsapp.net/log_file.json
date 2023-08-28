@@ -1,0 +1,298 @@
+[
+    {
+        "number": 0,
+        "request": "GET /blog#71RDBeG HTTP/1.1\r\nHost: whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#71RDBeG",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.14240074157714844,
+            "Socket_Close_Time": 0.12308502197265625,
+            "Response_Time": 0.014432668685913086
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.whatsapp.com/blog#71RDBeG",
+            "strict-transport-security": "max-age=31536000; preload; includeSubDomains",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Mon, 28 Aug 2023 18:40:10 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET /contact#G HTTP/1.1\r\nHost: whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#G",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.32389187812805176,
+            "Socket_Close_Time": 0.1331179141998291,
+            "Response_Time": 0.05084347724914551
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.whatsapp.com/contact#G",
+            "strict-transport-security": "max-age=31536000; preload; includeSubDomains",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Mon, 28 Aug 2023 18:40:13 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET /services#Ykfev HTTP/1.1\r\nHost: whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#Ykfev",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.047045230865478516,
+            "Socket_Close_Time": 0.10445904731750488,
+            "Response_Time": 0.020253896713256836
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.whatsapp.com/services#Ykfev",
+            "strict-transport-security": "max-age=31536000; preload; includeSubDomains",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Mon, 28 Aug 2023 18:40:19 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET /favicon.ico#I00HQj HTTP/1.1\r\nHost: whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#I00HQj",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06268477439880371,
+            "Socket_Close_Time": 0.10549116134643555,
+            "Response_Time": 0.1053922176361084
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-encoding": "gzip",
+            "cross-origin-opener-policy": "same-origin-allow-popups",
+            "vary": "Accept-Encoding",
+            "strict-transport-security": "max-age=31536000; preload; includeSubDomains",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "ZPkAz/SuWn162lNImreO7Q+HVuX0bg6MyZDpRHCLsoJXfXig42YDciSwkcogv46fSi8YID/7H+3Ha8q6aBkxZA==",
+            "date": "Mon, 28 Aug 2023 18:40:24 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "2621"
+        },
+        "response_length": 933
+    },
+    {
+        "number": 4,
+        "request": "GET /index.html#hHuXaAvqsErtEaTdRt HTTP/1.1\r\nHost: whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#hHuXaAvqsErtEaTdRt",
+        "request_length": 341,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.20577430725097656,
+            "Socket_Close_Time": 0.10226845741271973,
+            "Response_Time": 0.020134687423706055
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.whatsapp.com/index.html#hHuXaAvqsErtEaTdRt",
+            "strict-transport-security": "max-age=31536000; preload; includeSubDomains",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Mon, 28 Aug 2023 18:40:29 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 5,
+        "request": "GET /favicon.ico# HTTP/1.1\r\nHost: whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08062005043029785,
+            "Socket_Close_Time": 0.12531566619873047,
+            "Response_Time": 0.08601784706115723
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-encoding": "gzip",
+            "cross-origin-opener-policy": "same-origin-allow-popups",
+            "vary": "Accept-Encoding",
+            "strict-transport-security": "max-age=31536000; preload; includeSubDomains",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "06hRfxiQYawTCYcfRvXX81GMSn3ZZfm0VlGOSifriseoL+3oYLjfZZ2EEDjiuJY6U0rG9dezJ3IeNB/OkbBu8Q==",
+            "date": "Mon, 28 Aug 2023 18:40:35 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "2621"
+        },
+        "response_length": 933
+    },
+    {
+        "number": 6,
+        "request": "GET /about#V HTTP/1.1\r\nHost: whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#V",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10254740715026855,
+            "Socket_Close_Time": 0.11286759376525879,
+            "Response_Time": 0.025339841842651367
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.whatsapp.com/about#V",
+            "strict-transport-security": "max-age=31536000; preload; includeSubDomains",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Mon, 28 Aug 2023 18:40:40 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET /contact#C HTTP/1.1\r\nHost: whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#C",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07944202423095703,
+            "Socket_Close_Time": 0.11273646354675293,
+            "Response_Time": 0.0066831111907958984
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.whatsapp.com/contact#C",
+            "strict-transport-security": "max-age=31536000; preload; includeSubDomains",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Mon, 28 Aug 2023 18:40:45 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET /#lAF HTTP/1.1\r\nHost: whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#lAF",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10854554176330566,
+            "Socket_Close_Time": 0.10663318634033203,
+            "Response_Time": 0.21785378456115723
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.whatsapp.com/#lAF",
+            "strict-transport-security": "max-age=31536000; preload; includeSubDomains",
+            "content-type": "text/plain",
+            "server": "proxygen-bolt",
+            "date": "Mon, 28 Aug 2023 18:40:52 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET /favicon.ico#2bhq6Hyzv HTTP/1.1\r\nHost: whatsapp.net\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#2bhq6Hyzv",
+        "request_length": 333,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05330634117126465,
+            "Socket_Close_Time": 0.11335158348083496,
+            "Response_Time": 0.04655575752258301
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-encoding": "gzip",
+            "cross-origin-opener-policy": "same-origin-allow-popups",
+            "vary": "Accept-Encoding",
+            "strict-transport-security": "max-age=31536000; preload; includeSubDomains",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "+d5CsQGKnX91rSOCqFfHihSoQ03qyr7bKv+wDfwx8nS5rghTvIlvLbcb7UZBdONQ+v9X2UxPL+QfmfZogMdCMQ==",
+            "date": "Mon, 28 Aug 2023 18:40:56 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "2621"
+        },
+        "response_length": 933
+    }
+]

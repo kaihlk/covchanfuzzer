@@ -1,0 +1,399 @@
+[
+    {
+        "number": 0,
+        "request": "GET /blog#71RDBeG HTTP/1.1\r\nHost: ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#71RDBeG",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.04869866371154785,
+            "Socket_Close_Time": 0.105804443359375,
+            "Response_Time": 0.28310656547546387
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "7479",
+            "connection": "keep-alive",
+            "date": "Mon, 28 Aug 2023 18:40:19 GMT",
+            "server": "nginx",
+            "content-language": "en",
+            "content-encoding": "gzip",
+            "x-frame-options": "SAMEORIGIN",
+            "set-cookie": "csrftoken=mJQ3UuZNBQZ9MsZ2yIVVzMQkrEMoiJPxRnCCzOkUYy38lq3OsBR7Pb8rnwDKeC1L; expires=Mon, 26-Aug-2024 18:40:19 GMT; Max-Age=31449600; Path=/; secure",
+            "vary": "Origin",
+            "x-cache": "Error from cloudfront",
+            "via": "1.1 81ecaa6db2d0fa9d47412a499ce429f2.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "glgW1r3J6nGvHt_yVX7vBYn82V3hc3uyMKyKccyIW2oxG8aDy7XOsw==",
+            "x-xss-protection": "1; mode=block",
+            "referrer-policy": "same-origin",
+            "x-content-type-options": "nosniff",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload"
+        },
+        "response_length": 41104
+    },
+    {
+        "number": 1,
+        "request": "GET /contact#G HTTP/1.1\r\nHost: ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#G",
+        "request_length": 315,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06455683708190918,
+            "Socket_Close_Time": 0.13988947868347168,
+            "Response_Time": 0.4253113269805908
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "0",
+            "connection": "keep-alive",
+            "date": "Mon, 28 Aug 2023 18:40:25 GMT",
+            "server": "nginx",
+            "content-language": "en",
+            "vary": "Origin",
+            "location": "/contact/",
+            "x-frame-options": "SAMEORIGIN",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "x-cache": "Miss from cloudfront",
+            "via": "1.1 c4c673bb688f3b033f2c0ef943ea98e2.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "5D6gY-V7wdfTJTa7M8Lt-flqwYcVo5vmv8MyBSHJHz8166ikqoudbw==",
+            "x-xss-protection": "1; mode=block",
+            "referrer-policy": "same-origin",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET /services#Ykfev HTTP/1.1\r\nHost: ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#Ykfev",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07440447807312012,
+            "Socket_Close_Time": 0.13028645515441895,
+            "Response_Time": 0.2385861873626709
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "7479",
+            "connection": "keep-alive",
+            "date": "Mon, 28 Aug 2023 18:40:31 GMT",
+            "server": "nginx",
+            "content-language": "en",
+            "content-encoding": "gzip",
+            "x-frame-options": "SAMEORIGIN",
+            "set-cookie": "csrftoken=RaBWgbQZeEInbv28jrbY4kSS5uoSasRVOTa6PLQ9CAJVkPd4a8IQ00Z7D8lwJQb6; expires=Mon, 26-Aug-2024 18:40:31 GMT; Max-Age=31449600; Path=/; secure",
+            "vary": "Origin",
+            "x-cache": "Error from cloudfront",
+            "via": "1.1 0623bbe185c513c688ceb8ce94bd2710.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "ePqL5mLFm6t412f1L8qE8Gan3B2lX_A4qv47gS3iLY3Nq2s-657d9g==",
+            "x-xss-protection": "1; mode=block",
+            "referrer-policy": "same-origin",
+            "x-content-type-options": "nosniff",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload"
+        },
+        "response_length": 41112
+    },
+    {
+        "number": 3,
+        "request": "GET /favicon.ico#I00HQj HTTP/1.1\r\nHost: ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#I00HQj",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11847448348999023,
+            "Socket_Close_Time": 0.11327958106994629,
+            "Response_Time": 0.02128887176513672
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "0",
+            "connection": "keep-alive",
+            "date": "Mon, 28 Aug 2023 18:32:21 GMT",
+            "server": "nginx",
+            "content-language": "en",
+            "location": "//prd-www-cdn.ubnt.com/static/favicon.ico",
+            "x-frame-options": "SAMEORIGIN",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "vary": "Origin",
+            "x-cache": "Hit from cloudfront",
+            "via": "1.1 0623bbe185c513c688ceb8ce94bd2710.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "3wxnhID3XM3oZz-qdtf-7NdSkgR7hb-9F-97ojXzcEo_NInNqWzlOg==",
+            "age": "493",
+            "x-xss-protection": "1; mode=block",
+            "referrer-policy": "same-origin",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET /index.html#hHuXaAvqsErtEaTdRt HTTP/1.1\r\nHost: ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#hHuXaAvqsErtEaTdRt",
+        "request_length": 335,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.041306495666503906,
+            "Socket_Close_Time": 0.10710740089416504,
+            "Response_Time": 0.8102371692657471
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "7488",
+            "connection": "keep-alive",
+            "date": "Mon, 28 Aug 2023 18:40:42 GMT",
+            "server": "nginx",
+            "content-language": "en",
+            "content-encoding": "gzip",
+            "x-frame-options": "SAMEORIGIN",
+            "set-cookie": "csrftoken=coLXN1FpcT5vKHDMzbjuvzm5lNPgYOpj3OEdN48XeNFg3wEhvXUDlMTgrLDv3YZ9; expires=Mon, 26-Aug-2024 18:40:42 GMT; Max-Age=31449600; Path=/; secure",
+            "vary": "Origin",
+            "x-cache": "Error from cloudfront",
+            "via": "1.1 fd7984f542db60e1fdef1a18277aff76.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "IhZTCQIvZDzMETFZGS4XE7-GPcaDCWF1No-sS4qER4D7pv1xY51n8w==",
+            "x-xss-protection": "1; mode=block",
+            "referrer-policy": "same-origin",
+            "x-content-type-options": "nosniff",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload"
+        },
+        "response_length": 41116
+    },
+    {
+        "number": 5,
+        "request": "GET /favicon.ico# HTTP/1.1\r\nHost: ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11165881156921387,
+            "Socket_Close_Time": 0.11715579032897949,
+            "Response_Time": 0.026191234588623047
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "0",
+            "connection": "keep-alive",
+            "date": "Mon, 28 Aug 2023 18:32:21 GMT",
+            "server": "nginx",
+            "content-language": "en",
+            "location": "//prd-www-cdn.ubnt.com/static/favicon.ico",
+            "x-frame-options": "SAMEORIGIN",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "vary": "Origin",
+            "x-cache": "Hit from cloudfront",
+            "via": "1.1 9fdc880f0fc2d6c20289524817854d36.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "1Xo2n8BdQ-kxThnuk_Nth9vNBe_d51Xz3theQDCE3vo7-KquwYFg7Q==",
+            "age": "507",
+            "x-xss-protection": "1; mode=block",
+            "referrer-policy": "same-origin",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET /about#V HTTP/1.1\r\nHost: ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#V",
+        "request_length": 313,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09684634208679199,
+            "Socket_Close_Time": 0.11103129386901855,
+            "Response_Time": 0.237501859664917
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "7480",
+            "connection": "keep-alive",
+            "date": "Mon, 28 Aug 2023 18:40:55 GMT",
+            "server": "nginx",
+            "content-language": "en",
+            "content-encoding": "gzip",
+            "x-frame-options": "SAMEORIGIN",
+            "set-cookie": "csrftoken=mXVZ4CuH7k4AmSIAHCWDttyVGq8rpY3KuYKRWE4KWnFZtNL5AqxHOwD8m2IQXczS; expires=Mon, 26-Aug-2024 18:40:55 GMT; Max-Age=31449600; Path=/; secure",
+            "vary": "Origin",
+            "x-cache": "Error from cloudfront",
+            "via": "1.1 6666f57b09bbb5ce206afb05563f731e.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "qNAmn9HI2FUBMi88mrEdkXsAw8bLmXq0OPR4sVKQrfau92l5IPD5wA==",
+            "x-xss-protection": "1; mode=block",
+            "referrer-policy": "same-origin",
+            "x-content-type-options": "nosniff",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload"
+        },
+        "response_length": 41106
+    },
+    {
+        "number": 7,
+        "request": "GET /contact#C HTTP/1.1\r\nHost: ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#C",
+        "request_length": 315,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05775785446166992,
+            "Socket_Close_Time": 0.11268019676208496,
+            "Response_Time": 0.4326045513153076
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "0",
+            "connection": "keep-alive",
+            "date": "Mon, 28 Aug 2023 18:41:01 GMT",
+            "server": "nginx",
+            "content-language": "en",
+            "vary": "Origin",
+            "location": "/contact/",
+            "x-frame-options": "SAMEORIGIN",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "x-cache": "Miss from cloudfront",
+            "via": "1.1 0e11402be5d2f88aebf400ebe3216a3a.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "VqL8nE5lDqPNY_hqTuJ_xrnKAHRqHNsmG44mqJkNPV7Qga4g9WYuhg==",
+            "x-xss-protection": "1; mode=block",
+            "referrer-policy": "same-origin",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET /#lAF HTTP/1.1\r\nHost: ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#lAF",
+        "request_length": 310,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.025908231735229492,
+            "Socket_Close_Time": 0.10651826858520508,
+            "Response_Time": 0.011786699295043945
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "date": "Mon, 28 Aug 2023 18:33:39 GMT",
+            "server": "nginx",
+            "x-frame-options": "SAMEORIGIN",
+            "x-xss-protection": "1; mode=block",
+            "x-content-type-options": "nosniff",
+            "content-encoding": "gzip",
+            "x-cache": "Hit from cloudfront",
+            "via": "1.1 1aee04c92e0fa96227db8abc078ee82e.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "mTvm3RfUNJrJaDXR2wfvmGBvYT2_b4ObsQx-zzMmKcRLPkzbx9DXLg==",
+            "age": "446",
+            "referrer-policy": "same-origin",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "vary": "Origin"
+        },
+        "response_length": 9951
+    },
+    {
+        "number": 9,
+        "request": "GET /favicon.ico#2bhq6Hyzv HTTP/1.1\r\nHost: ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#2bhq6Hyzv",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.044936180114746094,
+            "Socket_Close_Time": 0.10654234886169434,
+            "Response_Time": 0.015454769134521484
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "content-length": "0",
+            "connection": "keep-alive",
+            "date": "Mon, 28 Aug 2023 18:32:21 GMT",
+            "server": "nginx",
+            "content-language": "en",
+            "location": "//prd-www-cdn.ubnt.com/static/favicon.ico",
+            "x-frame-options": "SAMEORIGIN",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "vary": "Origin",
+            "x-cache": "Hit from cloudfront",
+            "via": "1.1 bad288edf909d1013ad5510a9515feb0.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "pYPYvdWV4bmU9XOnBfLudRxNa0HtNwXm3ebtpq_zpza3WDwOYLyepw==",
+            "age": "528",
+            "x-xss-protection": "1; mode=block",
+            "referrer-policy": "same-origin",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 0
+    }
+]

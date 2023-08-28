@@ -1,0 +1,310 @@
+[
+    {
+        "number": 0,
+        "request": "GET /blog#71RDBeG HTTP/1.1\r\nHost: maps.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#71RDBeG",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09901666641235352,
+            "Socket_Close_Time": 0.10587692260742188,
+            "Response_Time": 0.11621403694152832
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1565",
+            "date": "Mon, 28 Aug 2023 18:40:13 GMT",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 1178
+    },
+    {
+        "number": 1,
+        "request": "GET /contact#G HTTP/1.1\r\nHost: maps.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#G",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.19205904006958008,
+            "Socket_Close_Time": 0.10897397994995117,
+            "Response_Time": 0.12068057060241699
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1568",
+            "date": "Mon, 28 Aug 2023 18:40:17 GMT",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 1178
+    },
+    {
+        "number": 2,
+        "request": "GET /services#Ykfev HTTP/1.1\r\nHost: maps.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#Ykfev",
+        "request_length": 329,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09613156318664551,
+            "Socket_Close_Time": 0.10544466972351074,
+            "Response_Time": 0.14629697799682617
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1569",
+            "date": "Mon, 28 Aug 2023 18:40:21 GMT",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 1178
+    },
+    {
+        "number": 3,
+        "request": "GET /favicon.ico#I00HQj HTTP/1.1\r\nHost: maps.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#I00HQj",
+        "request_length": 333,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.04819059371948242,
+            "Socket_Close_Time": 0.1204378604888916,
+            "Response_Time": 0.025559186935424805
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "accept-ranges": "bytes",
+            "vary": "Accept-Encoding",
+            "content-encoding": "gzip",
+            "content-type": "image/x-icon",
+            "cross-origin-resource-policy": "cross-origin",
+            "cross-origin-opener-policy-report-only": "same-origin; report-to=\"static-on-bigtable\"",
+            "report-to": "{\"group\":\"static-on-bigtable\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/static-on-bigtable\"}]}",
+            "content-length": "1494",
+            "date": "Mon, 28 Aug 2023 18:40:25 GMT",
+            "expires": "Tue, 05 Sep 2023 18:40:25 GMT",
+            "cache-control": "public, max-age=691200",
+            "last-modified": "Tue, 22 Oct 2019 18:30:00 GMT",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "x-xss-protection": "0",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 654
+    },
+    {
+        "number": 4,
+        "request": "GET /index.html#hHuXaAvqsErtEaTdRt HTTP/1.1\r\nHost: maps.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#hHuXaAvqsErtEaTdRt",
+        "request_length": 344,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.12038064002990723,
+            "Socket_Close_Time": 0.10641360282897949,
+            "Response_Time": 0.11424064636230469
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1571",
+            "date": "Mon, 28 Aug 2023 18:40:28 GMT",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 1178
+    },
+    {
+        "number": 5,
+        "request": "GET /favicon.ico# HTTP/1.1\r\nHost: maps.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06397056579589844,
+            "Socket_Close_Time": 0.10620236396789551,
+            "Response_Time": 0.021973371505737305
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "accept-ranges": "bytes",
+            "vary": "Accept-Encoding",
+            "content-encoding": "gzip",
+            "content-type": "image/x-icon",
+            "cross-origin-resource-policy": "cross-origin",
+            "cross-origin-opener-policy-report-only": "same-origin; report-to=\"static-on-bigtable\"",
+            "report-to": "{\"group\":\"static-on-bigtable\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/static-on-bigtable\"}]}",
+            "content-length": "1494",
+            "date": "Mon, 28 Aug 2023 18:40:31 GMT",
+            "expires": "Tue, 05 Sep 2023 18:40:31 GMT",
+            "cache-control": "public, max-age=691200",
+            "last-modified": "Tue, 22 Oct 2019 18:30:00 GMT",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "x-xss-protection": "0",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 654
+    },
+    {
+        "number": 6,
+        "request": "GET /about#V HTTP/1.1\r\nHost: maps.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#V",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.056382179260253906,
+            "Socket_Close_Time": 0.12236499786376953,
+            "Response_Time": 0.023448467254638672
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.google.com/maps/about/",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Mon, 28 Aug 2023 18:40:35 GMT",
+            "expires": "Mon, 28 Aug 2023 19:10:35 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "231",
+            "x-xss-protection": "0",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 231
+    },
+    {
+        "number": 7,
+        "request": "GET /contact#C HTTP/1.1\r\nHost: maps.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#C",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11351275444030762,
+            "Socket_Close_Time": 0.11850428581237793,
+            "Response_Time": 0.11387133598327637
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=UTF-8",
+            "referrer-policy": "no-referrer",
+            "content-length": "1568",
+            "date": "Mon, 28 Aug 2023 18:40:38 GMT",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 1178
+    },
+    {
+        "number": 8,
+        "request": "GET /#lAF HTTP/1.1\r\nHost: maps.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#lAF",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.04062628746032715,
+            "Socket_Close_Time": 0.1070563793182373,
+            "Response_Time": 0.04946589469909668
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://maps.google.com/maps",
+            "cache-control": "private",
+            "content-type": "text/html; charset=UTF-8",
+            "content-security-policy-report-only": "object-src 'none';base-uri 'self';script-src 'nonce-44IdqagZSjKtAE3Mrq7DmQ' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"gws\"",
+            "report-to": "{\"group\":\"gws\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gws/other\"}]}",
+            "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+            "date": "Mon, 28 Aug 2023 18:40:41 GMT",
+            "server": "gws",
+            "content-length": "225",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "set-cookie": "CONSENT=PENDING+372; expires=Wed, 27-Aug-2025 18:40:41 GMT; path=/; domain=.google.com; Secure",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET /favicon.ico#2bhq6Hyzv HTTP/1.1\r\nHost: maps.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#2bhq6Hyzv",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06923985481262207,
+            "Socket_Close_Time": 0.1007535457611084,
+            "Response_Time": 0.04188346862792969
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "accept-ranges": "bytes",
+            "vary": "Accept-Encoding",
+            "content-encoding": "gzip",
+            "content-type": "image/x-icon",
+            "cross-origin-resource-policy": "cross-origin",
+            "cross-origin-opener-policy-report-only": "same-origin; report-to=\"static-on-bigtable\"",
+            "report-to": "{\"group\":\"static-on-bigtable\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/static-on-bigtable\"}]}",
+            "content-length": "1494",
+            "date": "Mon, 28 Aug 2023 18:40:44 GMT",
+            "expires": "Tue, 05 Sep 2023 18:40:44 GMT",
+            "cache-control": "public, max-age=691200",
+            "last-modified": "Tue, 22 Oct 2019 18:30:00 GMT",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "x-xss-protection": "0",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 654
+    }
+]

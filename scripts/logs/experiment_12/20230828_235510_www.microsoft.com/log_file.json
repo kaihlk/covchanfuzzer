@@ -1,0 +1,333 @@
+[
+    {
+        "number": 0,
+        "request": "GET /about HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.12841343879699707,
+            "Socket_Close_Time": 0.1310579776763916,
+            "Response_Time": 0.048981666564941406
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://www.microsoft.com/en-us/about",
+            "strict-transport-security": "max-age=31536000",
+            "expires": "Mon, 28 Aug 2023 21:55:09 GMT",
+            "cache-control": "max-age=0, no-cache, no-store",
+            "pragma": "no-cache",
+            "date": "Mon, 28 Aug 2023 21:55:09 GMT",
+            "connection": "keep-alive",
+            "tls_version": "tls1.3",
+            "ms-cv": "CASMicrosoftCV71415198.0",
+            "ms-cv-esi": "CASMicrosoftCV71415198.0",
+            "x-rtag": "RT"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET /index.php HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 403,
+        "reason_phrase": "Forbidden",
+        "measured_times": {
+            "Socket_Connect_Time": 0.290189266204834,
+            "Socket_Close_Time": 0.10160040855407715,
+            "Response_Time": 0.32260894775390625
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiNetStorage",
+            "content-type": "text/html",
+            "etag": "\"5a1433b54a15900bb60038b631008a95:1657302755.405814\"",
+            "vary": "Accept-Encoding",
+            "content-encoding": "gzip",
+            "cache-control": "max-age=276",
+            "date": "Mon, 28 Aug 2023 21:55:12 GMT",
+            "connection": "close"
+        },
+        "response_length": 4262
+    },
+    {
+        "number": 2,
+        "request": "GET /contact HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09266161918640137,
+            "Socket_Close_Time": 0.1146693229675293,
+            "Response_Time": 0.15817570686340332
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "80843",
+            "content-type": "text/html",
+            "access-control-allow-credentials": "true",
+            "access-control-allow-headers": "Origin, X-Requested-With, Content-Type, Accept",
+            "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
+            "cache-control": "private",
+            "p3p": "CP=\"ALL IND DSP COR ADM CONo CUR CUSo IVAo IVDo PSA PSD TAI TELo OUR SAMo CNT COM INT NAV ONL PHY PRE PUR UNI\"",
+            "correlationvector": "B3gPIW5Um0aK4ZYc.1.0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-sitemuse-origin": "Azure",
+            "x-azure-ref": "20230828T215513Z-a3gtsbzswt09116zmp0h90mvmw00000003n000000001hdrs",
+            "date": "Mon, 28 Aug 2023 21:55:13 GMT",
+            "connection": "keep-alive",
+            "set-cookie": "MS-CV=B3gPIW5Um0aK4ZYc.1; domain=.microsoft.com; expires=Tue, 29-Aug-2023 21:55:13 GMT; path=/;samesite=None; secure",
+            "tls_version": "tls1.3",
+            "strict-transport-security": "max-age=31536000",
+            "ms-cv": "CASMicrosoftCV71416be4.0",
+            "ms-cv-esi": "CASMicrosoftCV71416be4.0",
+            "x-rtag": "RT"
+        },
+        "response_length": 1189
+    },
+    {
+        "number": 3,
+        "request": "GET /about HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05604052543640137,
+            "Socket_Close_Time": 0.11349344253540039,
+            "Response_Time": 0.053813934326171875
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://www.microsoft.com/en-us/about",
+            "strict-transport-security": "max-age=31536000",
+            "expires": "Mon, 28 Aug 2023 21:55:14 GMT",
+            "cache-control": "max-age=0, no-cache, no-store",
+            "pragma": "no-cache",
+            "date": "Mon, 28 Aug 2023 21:55:14 GMT",
+            "connection": "keep-alive",
+            "tls_version": "tls1.3",
+            "ms-cv": "CASMicrosoftCV71417627.0",
+            "ms-cv-esi": "CASMicrosoftCV71417627.0",
+            "x-rtag": "RT"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET /index.php HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 403,
+        "reason_phrase": "Forbidden",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08863615989685059,
+            "Socket_Close_Time": 0.10694479942321777,
+            "Response_Time": 0.1151278018951416
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiNetStorage",
+            "content-type": "text/html",
+            "etag": "\"5a1433b54a15900bb60038b631008a95:1657302755.405814\"",
+            "vary": "Accept-Encoding",
+            "content-encoding": "gzip",
+            "cache-control": "max-age=271",
+            "date": "Mon, 28 Aug 2023 21:55:16 GMT",
+            "connection": "close"
+        },
+        "response_length": 4262
+    },
+    {
+        "number": 5,
+        "request": "GET / HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06845951080322266,
+            "Socket_Close_Time": 0.12157011032104492,
+            "Response_Time": 0.23338532447814941
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://www.microsoft.com/de-de/",
+            "date": "Mon, 28 Aug 2023 21:55:18 GMT",
+            "connection": "keep-alive",
+            "tls_version": "tls1.3",
+            "strict-transport-security": "max-age=31536000",
+            "ms-cv": "CASMicrosoftCV71418e14.0",
+            "ms-cv-esi": "CASMicrosoftCV71418e14.0",
+            "x-rtag": "ARRPrd"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET /services HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 1.085096836090088,
+            "Socket_Close_Time": 0.11297845840454102,
+            "Response_Time": 0.06020069122314453
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://enterprise.microsoft.com/en-us/services",
+            "strict-transport-security": "max-age=31536000",
+            "expires": "Mon, 28 Aug 2023 21:55:21 GMT",
+            "cache-control": "max-age=0, no-cache, no-store",
+            "pragma": "no-cache",
+            "date": "Mon, 28 Aug 2023 21:55:21 GMT",
+            "connection": "keep-alive",
+            "tls_version": "tls1.3",
+            "ms-cv": "CASMicrosoftCV7141a3e8.0",
+            "ms-cv-esi": "CASMicrosoftCV7141a3e8.0",
+            "x-rtag": "RT"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET /favicon.ico HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico",
+        "request_length": 328,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.04442191123962402,
+            "Socket_Close_Time": 0.1069180965423584,
+            "Response_Time": 0.2473466396331787
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "access-control-allow-credentials": "true",
+            "access-control-allow-headers": "Origin, X-Requested-With, Content-Type, Accept",
+            "access-control-allow-methods": "GET, POST, PUT, DELETE, OPTIONS",
+            "etag": "\"1D99FD2219C9A00\"",
+            "last-modified": "Thu, 15 Jun 2023 21:41:24 GMT",
+            "p3p": "CP=\"ALL IND DSP COR ADM CONo CUR CUSo IVAo IVDo PSA PSD TAI TELo OUR SAMo CNT COM INT NAV ONL PHY PRE PUR UNI\"",
+            "x-frame-options": "SAMEORIGIN",
+            "x-sitemuse-origin": "Azure",
+            "x-azure-ref": "0QlHsZAAAAACgAzEtxZG7TZp+D4oTeyW/QlJVMzBFREdFMTAyMgAxYjJiMjJjMS1jYjBjLTQ5NTAtODg3OS1kMjEyZjJhYzVhNGI=",
+            "content-length": "17174",
+            "content-type": "image/x-icon",
+            "accept-ranges": "bytes",
+            "cache-control": "public, max-age=35067",
+            "expires": "Tue, 29 Aug 2023 07:39:49 GMT",
+            "date": "Mon, 28 Aug 2023 21:55:22 GMT",
+            "connection": "keep-alive",
+            "tls_version": "tls1.3",
+            "strict-transport-security": "max-age=31536000",
+            "ms-cv": "CASMicrosoftCV7141ae16.0",
+            "ms-cv-esi": "CASMicrosoftCV7141ae16.0",
+            "x-rtag": "RT"
+        },
+        "response_length": 15462
+    },
+    {
+        "number": 8,
+        "request": "GET /index.html HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 403,
+        "reason_phrase": "Forbidden",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06950020790100098,
+            "Socket_Close_Time": 0.11368584632873535,
+            "Response_Time": 0.03876137733459473
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiNetStorage",
+            "content-type": "text/html",
+            "etag": "\"5a1433b54a15900bb60038b631008a95:1657302755.405814\"",
+            "vary": "Accept-Encoding",
+            "content-encoding": "gzip",
+            "cache-control": "max-age=263",
+            "date": "Mon, 28 Aug 2023 21:55:24 GMT",
+            "connection": "close"
+        },
+        "response_length": 4262
+    },
+    {
+        "number": 9,
+        "request": "GET /services HTTP/1.1\r\nHost: www.microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07269430160522461,
+            "Socket_Close_Time": 0.11818718910217285,
+            "Response_Time": 0.04513406753540039
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "location": "https://enterprise.microsoft.com/en-us/services",
+            "strict-transport-security": "max-age=31536000",
+            "expires": "Mon, 28 Aug 2023 21:55:27 GMT",
+            "cache-control": "max-age=0, no-cache, no-store",
+            "pragma": "no-cache",
+            "date": "Mon, 28 Aug 2023 21:55:27 GMT",
+            "connection": "keep-alive",
+            "tls_version": "tls1.3",
+            "ms-cv": "CASMicrosoftCV7141c910.0",
+            "ms-cv-esi": "CASMicrosoftCV7141c910.0",
+            "x-rtag": "RT"
+        },
+        "response_length": 0
+    }
+]

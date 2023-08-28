@@ -1,0 +1,332 @@
+[
+    {
+        "number": 0,
+        "request": "GET /index.html# HTTP/1.1\r\nHost: tiktokv.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08937430381774902,
+            "Socket_Close_Time": 0.10950469970703125,
+            "Response_Time": 0.2284681797027588
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "content-length": "0",
+            "location": "https://tiktokv.com/index.html",
+            "expires": "Mon, 28 Aug 2023 18:36:23 GMT",
+            "cache-control": "max-age=0, no-cache, no-store",
+            "pragma": "no-cache",
+            "date": "Mon, 28 Aug 2023 18:36:23 GMT",
+            "x-cache": "TCP_MISS from a2-16-187-150.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "x-tt-trace-tag": "id=16;cdn-cache=miss;type=dyn",
+            "server-timing": "cdn-cache; desc=MISS, edge; dur=0, origin; dur=0",
+            "x-akamai-request-id": "f595cc1"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET /support#VNt HTTP/1.1\r\nHost: tiktokv.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#VNt",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02037811279296875,
+            "Socket_Close_Time": 0.11128592491149902,
+            "Response_Time": 0.018931865692138672
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "content-length": "0",
+            "location": "https://tiktokv.com/support",
+            "expires": "Mon, 28 Aug 2023 18:36:27 GMT",
+            "cache-control": "max-age=0, no-cache, no-store",
+            "pragma": "no-cache",
+            "date": "Mon, 28 Aug 2023 18:36:27 GMT",
+            "x-cache": "TCP_MISS from a2-16-187-150.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "x-tt-trace-tag": "id=16;cdn-cache=miss;type=dyn",
+            "server-timing": "cdn-cache; desc=MISS, edge; dur=0, origin; dur=0",
+            "x-akamai-request-id": "f5976fc"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET /services#e HTTP/1.1\r\nHost: tiktokv.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#e",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 1.0353739261627197,
+            "Socket_Close_Time": 0.10616922378540039,
+            "Response_Time": 0.022524118423461914
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "content-length": "0",
+            "location": "https://tiktokv.com/services",
+            "expires": "Mon, 28 Aug 2023 18:36:33 GMT",
+            "cache-control": "max-age=0, no-cache, no-store",
+            "pragma": "no-cache",
+            "date": "Mon, 28 Aug 2023 18:36:33 GMT",
+            "x-cache": "TCP_MISS from a2-16-187-150.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "x-tt-trace-tag": "id=16;cdn-cache=miss;type=dyn",
+            "server-timing": "cdn-cache; desc=MISS, edge; dur=0, origin; dur=0",
+            "x-akamai-request-id": "f599e7f"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET /index.html#2rgX HTTP/1.1\r\nHost: tiktokv.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#2rgX",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.03624987602233887,
+            "Socket_Close_Time": 0.11534905433654785,
+            "Response_Time": 0.02332282066345215
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "content-length": "0",
+            "location": "https://tiktokv.com/index.html",
+            "expires": "Mon, 28 Aug 2023 18:36:37 GMT",
+            "cache-control": "max-age=0, no-cache, no-store",
+            "pragma": "no-cache",
+            "date": "Mon, 28 Aug 2023 18:36:37 GMT",
+            "x-cache": "TCP_MISS from a2-16-187-150.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "x-tt-trace-tag": "id=16;cdn-cache=miss;type=dyn",
+            "server-timing": "cdn-cache; desc=MISS, edge; dur=0, origin; dur=0",
+            "x-akamai-request-id": "f59b5a0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET /favicon.ico#oc7 HTTP/1.1\r\nHost: tiktokv.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#oc7",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02068948745727539,
+            "Socket_Close_Time": 0.11497902870178223,
+            "Response_Time": 0.25560808181762695
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "content-length": "0",
+            "location": "https://tiktokv.com/favicon.ico",
+            "expires": "Mon, 28 Aug 2023 18:36:42 GMT",
+            "cache-control": "max-age=0, no-cache, no-store",
+            "pragma": "no-cache",
+            "date": "Mon, 28 Aug 2023 18:36:42 GMT",
+            "x-cache": "TCP_MISS from a2-16-187-150.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "x-tt-trace-tag": "id=16;cdn-cache=miss;type=dyn",
+            "server-timing": "cdn-cache; desc=MISS, edge; dur=1, origin; dur=0",
+            "x-akamai-request-id": "f59c86c"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 5,
+        "request": "GET /services#f81L HTTP/1.1\r\nHost: tiktokv.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#f81L",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0204010009765625,
+            "Socket_Close_Time": 0.10822796821594238,
+            "Response_Time": 0.04834127426147461
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "content-length": "0",
+            "location": "https://tiktokv.com/services",
+            "expires": "Mon, 28 Aug 2023 18:36:46 GMT",
+            "cache-control": "max-age=0, no-cache, no-store",
+            "pragma": "no-cache",
+            "date": "Mon, 28 Aug 2023 18:36:46 GMT",
+            "x-cache": "TCP_MISS from a2-16-187-150.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "x-tt-trace-tag": "id=16;cdn-cache=miss;type=dyn",
+            "server-timing": "cdn-cache; desc=MISS, edge; dur=0, origin; dur=0",
+            "x-akamai-request-id": "f59d984"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET /support#W HTTP/1.1\r\nHost: tiktokv.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#W",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.016994953155517578,
+            "Socket_Close_Time": 0.11296367645263672,
+            "Response_Time": 0.029461383819580078
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "content-length": "0",
+            "location": "https://tiktokv.com/support",
+            "expires": "Mon, 28 Aug 2023 18:36:50 GMT",
+            "cache-control": "max-age=0, no-cache, no-store",
+            "pragma": "no-cache",
+            "date": "Mon, 28 Aug 2023 18:36:50 GMT",
+            "x-cache": "TCP_MISS from a2-16-187-150.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "x-tt-trace-tag": "id=16;cdn-cache=miss;type=dyn",
+            "server-timing": "cdn-cache; desc=MISS, edge; dur=0, origin; dur=0",
+            "x-akamai-request-id": "f59e91b"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET /about#j HTTP/1.1\r\nHost: tiktokv.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#j",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02043890953063965,
+            "Socket_Close_Time": 0.12310361862182617,
+            "Response_Time": 0.020120620727539062
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "content-length": "0",
+            "location": "https://tiktokv.com/about",
+            "expires": "Mon, 28 Aug 2023 18:36:55 GMT",
+            "cache-control": "max-age=0, no-cache, no-store",
+            "pragma": "no-cache",
+            "date": "Mon, 28 Aug 2023 18:36:55 GMT",
+            "x-cache": "TCP_MISS from a2-16-187-150.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "x-tt-trace-tag": "id=16;cdn-cache=miss;type=dyn",
+            "server-timing": "cdn-cache; desc=MISS, edge; dur=0, origin; dur=0",
+            "x-akamai-request-id": "f59fa8c"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET /index.php#eG2b HTTP/1.1\r\nHost: tiktokv.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#eG2b",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02573227882385254,
+            "Socket_Close_Time": 0.11281561851501465,
+            "Response_Time": 0.02063608169555664
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "content-length": "0",
+            "location": "https://tiktokv.com/index.php",
+            "expires": "Mon, 28 Aug 2023 18:37:00 GMT",
+            "cache-control": "max-age=0, no-cache, no-store",
+            "pragma": "no-cache",
+            "date": "Mon, 28 Aug 2023 18:37:00 GMT",
+            "x-cache": "TCP_MISS from a2-16-187-150.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "x-tt-trace-tag": "id=16;cdn-cache=miss;type=dyn",
+            "server-timing": "cdn-cache; desc=MISS, edge; dur=0, origin; dur=0",
+            "x-akamai-request-id": "f5a0a9c"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET /favicon.ico#LN HTTP/1.1\r\nHost: tiktokv.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#LN",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.020457744598388672,
+            "Socket_Close_Time": 0.10650324821472168,
+            "Response_Time": 0.024196624755859375
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "content-length": "0",
+            "location": "https://tiktokv.com/favicon.ico",
+            "expires": "Mon, 28 Aug 2023 18:37:05 GMT",
+            "cache-control": "max-age=0, no-cache, no-store",
+            "pragma": "no-cache",
+            "date": "Mon, 28 Aug 2023 18:37:05 GMT",
+            "x-cache": "TCP_MISS from a2-16-187-150.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "x-tt-trace-tag": "id=16;cdn-cache=miss;type=dyn",
+            "server-timing": "cdn-cache; desc=MISS, edge; dur=0, origin; dur=0",
+            "x-akamai-request-id": "f5a1a0c"
+        },
+        "response_length": 0
+    }
+]

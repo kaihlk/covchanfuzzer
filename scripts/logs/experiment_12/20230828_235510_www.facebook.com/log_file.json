@@ -1,0 +1,390 @@
+[
+    {
+        "number": 0,
+        "request": "GET /about HTTP/1.1\r\nHost: www.facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09860515594482422,
+            "Socket_Close_Time": 0.11429953575134277,
+            "Response_Time": 0.14492034912109375
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-encoding": "gzip",
+            "pragma": "no-cache",
+            "cache-control": "private, no-cache, no-store, must-revalidate",
+            "expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "content-security-policy": "default-src data: blob: 'self' https://*.fbsbx.com 'unsafe-inline' *.facebook.com *.fbcdn.net 'unsafe-eval';script-src *.facebook.com *.fbcdn.net 'unsafe-inline' blob: data: 'self' 'unsafe-eval';style-src *.fbcdn.net data: *.facebook.com 'unsafe-inline';connect-src *.facebook.com facebook.com *.fbcdn.net wss://*.facebook.com:* wss://*.fbcdn.net attachment.fbsbx.com blob: *.cdninstagram.com 'self' http://localhost:3103 wss://gateway.facebook.com wss://edge-chat.facebook.com wss://snaptu-d.facebook.com wss://kaios-d.facebook.com/ *.fbsbx.com;font-src data: *.facebook.com *.fbcdn.net *.fbsbx.com;img-src *.fbcdn.net *.facebook.com data: https://*.fbsbx.com facebook.com *.cdninstagram.com fbsbx.com fbcdn.net blob: android-webview-video-poster: *.oculuscdn.com;media-src *.cdninstagram.com blob: *.fbcdn.net *.fbsbx.com www.facebook.com *.facebook.com data:;frame-src *.facebook.com *.fbsbx.com fbsbx.com data: *.fbcdn.net;worker-src blob: *.facebook.com data:;block-all-mixed-content;upgrade-insecure-requests;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;",
+            "report-to": "{\"max_age\":259200,\"endpoints\":[{\"url\":\"https:\\/\\/www.facebook.com\\/ajax\\/browser_error_reports\\/?device_level=unknown\"}]}",
+            "x-frame-options": "DENY",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "0",
+            "cross-origin-opener-policy": "same-origin-allow-popups",
+            "vary": "Accept-Encoding",
+            "strict-transport-security": "max-age=15552000; preload",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "WjnTFQnKLrgDmRDYc5yqIqfLU//g5NiH3MLPMngsBo+4MjUGPFcWf8CYNqrzK/P2PcZ9J8Q9eVvAkU7Ck22pjw==",
+            "date": "Mon, 28 Aug 2023 21:55:09 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive"
+        },
+        "response_length": 5
+    },
+    {
+        "number": 1,
+        "request": "GET /index.php HTTP/1.1\r\nHost: www.facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08146119117736816,
+            "Socket_Close_Time": 0.11906051635742188,
+            "Response_Time": 0.13978791236877441
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-encoding": "gzip",
+            "pragma": "no-cache",
+            "cache-control": "private, no-cache, no-store, must-revalidate",
+            "expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "content-security-policy": "default-src data: blob: 'self' https://*.fbsbx.com 'unsafe-inline' *.facebook.com *.fbcdn.net 'unsafe-eval';script-src *.facebook.com *.fbcdn.net 'unsafe-inline' blob: data: 'self' 'unsafe-eval';style-src *.fbcdn.net data: *.facebook.com 'unsafe-inline';connect-src *.facebook.com facebook.com *.fbcdn.net wss://*.facebook.com:* wss://*.fbcdn.net attachment.fbsbx.com blob: *.cdninstagram.com 'self' http://localhost:3103 wss://gateway.facebook.com wss://edge-chat.facebook.com wss://snaptu-d.facebook.com wss://kaios-d.facebook.com/ *.fbsbx.com;font-src data: *.facebook.com *.fbcdn.net *.fbsbx.com;img-src *.fbcdn.net *.facebook.com data: https://*.fbsbx.com facebook.com *.cdninstagram.com fbsbx.com fbcdn.net blob: android-webview-video-poster: *.oculuscdn.com;media-src *.cdninstagram.com blob: *.fbcdn.net *.fbsbx.com www.facebook.com *.facebook.com data:;frame-src *.facebook.com *.fbsbx.com fbsbx.com data: *.fbcdn.net;worker-src blob: *.facebook.com data:;block-all-mixed-content;upgrade-insecure-requests;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;",
+            "report-to": "{\"max_age\":259200,\"endpoints\":[{\"url\":\"https:\\/\\/www.facebook.com\\/ajax\\/browser_error_reports\\/?device_level=unknown\"}]}",
+            "x-frame-options": "DENY",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "0",
+            "cross-origin-opener-policy": "same-origin-allow-popups",
+            "vary": "Accept-Encoding",
+            "strict-transport-security": "max-age=15552000; preload",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "I6C/4ZsGHRbiICLvXttzE8F9RtUdIi8L5totH/AwUoHd1s96pGuM5Ywho+XYyVA8NbWNCQkdf3t1jICLmm3uYA==",
+            "date": "Mon, 28 Aug 2023 21:55:11 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive"
+        },
+        "response_length": 6
+    },
+    {
+        "number": 2,
+        "request": "GET /contact HTTP/1.1\r\nHost: www.facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0614016056060791,
+            "Socket_Close_Time": 0.11098432540893555,
+            "Response_Time": 0.08633589744567871
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-encoding": "gzip",
+            "pragma": "no-cache",
+            "cache-control": "private, no-cache, no-store, must-revalidate",
+            "expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "content-security-policy": "default-src data: blob: 'self' https://*.fbsbx.com 'unsafe-inline' *.facebook.com *.fbcdn.net 'unsafe-eval';script-src *.facebook.com *.fbcdn.net 'unsafe-inline' blob: data: 'self' 'unsafe-eval';style-src *.fbcdn.net data: *.facebook.com 'unsafe-inline';connect-src *.facebook.com facebook.com *.fbcdn.net wss://*.facebook.com:* wss://*.fbcdn.net attachment.fbsbx.com blob: *.cdninstagram.com 'self' http://localhost:3103 wss://gateway.facebook.com wss://edge-chat.facebook.com wss://snaptu-d.facebook.com wss://kaios-d.facebook.com/ *.fbsbx.com;font-src data: *.facebook.com *.fbcdn.net *.fbsbx.com;img-src *.fbcdn.net *.facebook.com data: https://*.fbsbx.com facebook.com *.cdninstagram.com fbsbx.com fbcdn.net blob: android-webview-video-poster: *.oculuscdn.com;media-src *.cdninstagram.com blob: *.fbcdn.net *.fbsbx.com www.facebook.com *.facebook.com data:;frame-src *.facebook.com *.fbsbx.com fbsbx.com data: *.fbcdn.net;worker-src blob: *.facebook.com data:;block-all-mixed-content;upgrade-insecure-requests;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;",
+            "report-to": "{\"max_age\":259200,\"endpoints\":[{\"url\":\"https:\\/\\/www.facebook.com\\/ajax\\/browser_error_reports\\/?device_level=unknown\"}]}",
+            "x-frame-options": "DENY",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "0",
+            "cross-origin-opener-policy": "same-origin-allow-popups",
+            "vary": "Accept-Encoding",
+            "strict-transport-security": "max-age=15552000; preload",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "gutKFsAWpFGjbyXIzVC5jozQLW1aPEsxqrb1z7EI6Jf0i3+ObkqlhvSgM8WkUa/DbiO/cTt4vtCVOSOWXrR7Pw==",
+            "date": "Mon, 28 Aug 2023 21:55:13 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive"
+        },
+        "response_length": 6
+    },
+    {
+        "number": 3,
+        "request": "GET /about HTTP/1.1\r\nHost: www.facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.054515838623046875,
+            "Socket_Close_Time": 0.1098785400390625,
+            "Response_Time": 0.10972380638122559
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-encoding": "gzip",
+            "pragma": "no-cache",
+            "cache-control": "private, no-cache, no-store, must-revalidate",
+            "expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "content-security-policy": "default-src data: blob: 'self' https://*.fbsbx.com 'unsafe-inline' *.facebook.com *.fbcdn.net 'unsafe-eval';script-src *.facebook.com *.fbcdn.net 'unsafe-inline' blob: data: 'self' 'unsafe-eval';style-src *.fbcdn.net data: *.facebook.com 'unsafe-inline';connect-src *.facebook.com facebook.com *.fbcdn.net wss://*.facebook.com:* wss://*.fbcdn.net attachment.fbsbx.com blob: *.cdninstagram.com 'self' http://localhost:3103 wss://gateway.facebook.com wss://edge-chat.facebook.com wss://snaptu-d.facebook.com wss://kaios-d.facebook.com/ *.fbsbx.com;font-src data: *.facebook.com *.fbcdn.net *.fbsbx.com;img-src *.fbcdn.net *.facebook.com data: https://*.fbsbx.com facebook.com *.cdninstagram.com fbsbx.com fbcdn.net blob: android-webview-video-poster: *.oculuscdn.com;media-src *.cdninstagram.com blob: *.fbcdn.net *.fbsbx.com www.facebook.com *.facebook.com data:;frame-src *.facebook.com *.fbsbx.com fbsbx.com data: *.fbcdn.net;worker-src blob: *.facebook.com data:;block-all-mixed-content;upgrade-insecure-requests;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;",
+            "report-to": "{\"max_age\":259200,\"endpoints\":[{\"url\":\"https:\\/\\/www.facebook.com\\/ajax\\/browser_error_reports\\/?device_level=unknown\"}]}",
+            "x-frame-options": "DENY",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "0",
+            "cross-origin-opener-policy": "same-origin-allow-popups",
+            "vary": "Accept-Encoding",
+            "strict-transport-security": "max-age=15552000; preload",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "6I7ufw+sBhKladu7975qc/lB8hzjWWP6fti5ifKDCH6i5jnTy6A+HtfTaqLxJZa31CeMUN+1XW5jYPy2q8WuFw==",
+            "date": "Mon, 28 Aug 2023 21:55:14 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive"
+        },
+        "response_length": 5
+    },
+    {
+        "number": 4,
+        "request": "GET /index.php HTTP/1.1\r\nHost: www.facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.30035924911499023,
+            "Socket_Close_Time": 0.10834598541259766,
+            "Response_Time": 0.16108298301696777
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-encoding": "gzip",
+            "pragma": "no-cache",
+            "cache-control": "private, no-cache, no-store, must-revalidate",
+            "expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "content-security-policy": "default-src data: blob: 'self' https://*.fbsbx.com 'unsafe-inline' *.facebook.com *.fbcdn.net 'unsafe-eval';script-src *.facebook.com *.fbcdn.net 'unsafe-inline' blob: data: 'self' 'unsafe-eval';style-src *.fbcdn.net data: *.facebook.com 'unsafe-inline';connect-src *.facebook.com facebook.com *.fbcdn.net wss://*.facebook.com:* wss://*.fbcdn.net attachment.fbsbx.com blob: *.cdninstagram.com 'self' http://localhost:3103 wss://gateway.facebook.com wss://edge-chat.facebook.com wss://snaptu-d.facebook.com wss://kaios-d.facebook.com/ *.fbsbx.com;font-src data: *.facebook.com *.fbcdn.net *.fbsbx.com;img-src *.fbcdn.net *.facebook.com data: https://*.fbsbx.com facebook.com *.cdninstagram.com fbsbx.com fbcdn.net blob: android-webview-video-poster: *.oculuscdn.com;media-src *.cdninstagram.com blob: *.fbcdn.net *.fbsbx.com www.facebook.com *.facebook.com data:;frame-src *.facebook.com *.fbsbx.com fbsbx.com data: *.fbcdn.net;worker-src blob: *.facebook.com data:;block-all-mixed-content;upgrade-insecure-requests;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;",
+            "report-to": "{\"max_age\":259200,\"endpoints\":[{\"url\":\"https:\\/\\/www.facebook.com\\/ajax\\/browser_error_reports\\/?device_level=unknown\"}]}",
+            "x-frame-options": "DENY",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "0",
+            "cross-origin-opener-policy": "same-origin-allow-popups",
+            "vary": "Accept-Encoding",
+            "strict-transport-security": "max-age=15552000; preload",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "lJcKPivcy6XrAX2syrCaom551S1jSxXfyUoWXQczLMbqNFS93NjTHkg90VS0D2FxXW/R6xVtUurvZv9VUFRUJQ==",
+            "date": "Mon, 28 Aug 2023 21:55:16 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive"
+        },
+        "response_length": 5
+    },
+    {
+        "number": 5,
+        "request": "GET / HTTP/1.1\r\nHost: www.facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0566105842590332,
+            "Socket_Close_Time": 0.12524080276489258,
+            "Response_Time": 0.13786768913269043
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-encoding": "gzip",
+            "pragma": "no-cache",
+            "cache-control": "private, no-cache, no-store, must-revalidate",
+            "expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "content-security-policy": "default-src data: blob: 'self' https://*.fbsbx.com 'unsafe-inline' *.facebook.com *.fbcdn.net 'unsafe-eval';script-src *.facebook.com *.fbcdn.net 'unsafe-inline' blob: data: 'self' 'unsafe-eval';style-src *.fbcdn.net data: *.facebook.com 'unsafe-inline';connect-src *.facebook.com facebook.com *.fbcdn.net wss://*.facebook.com:* wss://*.fbcdn.net attachment.fbsbx.com blob: *.cdninstagram.com 'self' http://localhost:3103 wss://gateway.facebook.com wss://edge-chat.facebook.com wss://snaptu-d.facebook.com wss://kaios-d.facebook.com/ *.fbsbx.com;font-src data: *.facebook.com *.fbcdn.net *.fbsbx.com;img-src *.fbcdn.net *.facebook.com data: https://*.fbsbx.com facebook.com *.cdninstagram.com fbsbx.com fbcdn.net blob: android-webview-video-poster: *.oculuscdn.com;media-src *.cdninstagram.com blob: *.fbcdn.net *.fbsbx.com www.facebook.com *.facebook.com data:;frame-src *.facebook.com *.fbsbx.com fbsbx.com data: *.fbcdn.net;worker-src blob: *.facebook.com data:;block-all-mixed-content;upgrade-insecure-requests;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;",
+            "report-to": "{\"max_age\":259200,\"endpoints\":[{\"url\":\"https:\\/\\/www.facebook.com\\/ajax\\/browser_error_reports\\/?device_level=unknown\"}]}",
+            "x-frame-options": "DENY",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "0",
+            "cross-origin-opener-policy": "same-origin-allow-popups",
+            "vary": "Accept-Encoding",
+            "strict-transport-security": "max-age=15552000; preload",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "bBiI44p689yRJbYoBM0SuUtzZ7FVj7eiKLAIKve7WLUEDalT9X/WF0ig7uxgnCH/PgTH4bxAu0wWMeN/fOJ8nA==",
+            "date": "Mon, 28 Aug 2023 21:55:18 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive"
+        },
+        "response_length": 5
+    },
+    {
+        "number": 6,
+        "request": "GET /services HTTP/1.1\r\nHost: www.facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07398796081542969,
+            "Socket_Close_Time": 0.10584425926208496,
+            "Response_Time": 0.12027978897094727
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-encoding": "gzip",
+            "pragma": "no-cache",
+            "cache-control": "private, no-cache, no-store, must-revalidate",
+            "expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "content-security-policy": "default-src data: blob: 'self' https://*.fbsbx.com 'unsafe-inline' *.facebook.com *.fbcdn.net 'unsafe-eval';script-src *.facebook.com *.fbcdn.net 'unsafe-inline' blob: data: 'self' 'unsafe-eval';style-src *.fbcdn.net data: *.facebook.com 'unsafe-inline';connect-src *.facebook.com facebook.com *.fbcdn.net wss://*.facebook.com:* wss://*.fbcdn.net attachment.fbsbx.com blob: *.cdninstagram.com 'self' http://localhost:3103 wss://gateway.facebook.com wss://edge-chat.facebook.com wss://snaptu-d.facebook.com wss://kaios-d.facebook.com/ *.fbsbx.com;font-src data: *.facebook.com *.fbcdn.net *.fbsbx.com;img-src *.fbcdn.net *.facebook.com data: https://*.fbsbx.com facebook.com *.cdninstagram.com fbsbx.com fbcdn.net blob: android-webview-video-poster: *.oculuscdn.com;media-src *.cdninstagram.com blob: *.fbcdn.net *.fbsbx.com www.facebook.com *.facebook.com data:;frame-src *.facebook.com *.fbsbx.com fbsbx.com data: *.fbcdn.net;worker-src blob: *.facebook.com data:;block-all-mixed-content;upgrade-insecure-requests;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;",
+            "report-to": "{\"max_age\":259200,\"endpoints\":[{\"url\":\"https:\\/\\/www.facebook.com\\/ajax\\/browser_error_reports\\/?device_level=unknown\"}]}",
+            "x-frame-options": "DENY",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "0",
+            "cross-origin-opener-policy": "same-origin-allow-popups",
+            "vary": "Accept-Encoding",
+            "strict-transport-security": "max-age=15552000; preload",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "MAACAB1sc9zZtWQJ65eXSes+1fZAQwms0Uuo+huvLex0ZxgDjWqBCjsIaaEi95tv3wlW9ehqktYyStdmLLpP+g==",
+            "date": "Mon, 28 Aug 2023 21:55:19 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive"
+        },
+        "response_length": 6
+    },
+    {
+        "number": 7,
+        "request": "GET /favicon.ico HTTP/1.1\r\nHost: www.facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.26986122131347656,
+            "Socket_Close_Time": 0.10262489318847656,
+            "Response_Time": 0.047434091567993164
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "vary": "Accept-Encoding",
+            "content-encoding": "gzip",
+            "content-type": "image/png",
+            "report-to": "{\"max_age\":259200,\"endpoints\":[{\"url\":\"https:\\/\\/www.facebook.com\\/ajax\\/browser_error_reports\\/?device_level=unknown\"}]}",
+            "content-security-policy": "default-src data: blob: 'self' https://*.fbsbx.com 'unsafe-inline' *.facebook.com *.fbcdn.net 'unsafe-eval';script-src *.facebook.com *.fbcdn.net 'unsafe-inline' blob: data: 'self' 'unsafe-eval';style-src *.fbcdn.net data: *.facebook.com 'unsafe-inline';connect-src *.facebook.com facebook.com *.fbcdn.net wss://*.facebook.com:* wss://*.fbcdn.net attachment.fbsbx.com blob: *.cdninstagram.com 'self' http://localhost:3103 wss://gateway.facebook.com wss://edge-chat.facebook.com wss://snaptu-d.facebook.com wss://kaios-d.facebook.com/ *.fbsbx.com;font-src data: *.facebook.com *.fbcdn.net *.fbsbx.com;img-src *.fbcdn.net *.facebook.com data: https://*.fbsbx.com facebook.com *.cdninstagram.com fbsbx.com fbcdn.net blob: android-webview-video-poster: *.oculuscdn.com;media-src *.cdninstagram.com blob: *.fbcdn.net *.fbsbx.com www.facebook.com *.facebook.com data:;frame-src *.facebook.com *.fbsbx.com fbsbx.com data: *.fbcdn.net;worker-src blob: *.facebook.com data:;block-all-mixed-content;upgrade-insecure-requests;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;",
+            "document-policy": "force-load-at-top",
+            "permissions-policy": "accelerometer=(), ambient-light-sensor=(), bluetooth=(), camera=(self), gyroscope=(), hid=(), idle-detection=(), magnetometer=(), microphone=(self), midi=(), payment=(), screen-wake-lock=(), serial=(), usb=()",
+            "cross-origin-resource-policy": "cross-origin",
+            "cross-origin-opener-policy": "same-origin-allow-popups",
+            "pragma": "no-cache",
+            "cache-control": "private, no-cache, no-store, must-revalidate",
+            "expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "0",
+            "x-frame-options": "DENY",
+            "strict-transport-security": "max-age=15552000; preload"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET /index.html HTTP/1.1\r\nHost: www.facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05671834945678711,
+            "Socket_Close_Time": 0.11685800552368164,
+            "Response_Time": 0.2867445945739746
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-encoding": "gzip",
+            "accept-ch-lifetime": "4838400",
+            "accept-ch": "viewport-width,dpr,Sec-CH-Prefers-Color-Scheme,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Platform-Version,Sec-CH-UA-Model",
+            "pragma": "no-cache",
+            "cache-control": "private, no-cache, no-store, must-revalidate",
+            "expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "content-security-policy": "default-src data: blob: 'self' https://*.fbsbx.com 'unsafe-inline' *.facebook.com *.fbcdn.net 'unsafe-eval';script-src *.facebook.com *.fbcdn.net 'unsafe-inline' blob: data: 'self' 'unsafe-eval';style-src *.fbcdn.net data: *.facebook.com 'unsafe-inline';connect-src *.facebook.com facebook.com *.fbcdn.net wss://*.facebook.com:* wss://*.fbcdn.net attachment.fbsbx.com blob: *.cdninstagram.com 'self' http://localhost:3103 wss://gateway.facebook.com wss://edge-chat.facebook.com wss://snaptu-d.facebook.com wss://kaios-d.facebook.com/ *.fbsbx.com;font-src data: *.facebook.com *.fbcdn.net *.fbsbx.com;img-src *.fbcdn.net *.facebook.com data: https://*.fbsbx.com facebook.com *.cdninstagram.com fbsbx.com fbcdn.net blob: android-webview-video-poster: *.oculuscdn.com;media-src *.cdninstagram.com blob: *.fbcdn.net *.fbsbx.com www.facebook.com *.facebook.com data:;frame-src *.facebook.com *.fbsbx.com fbsbx.com data: *.fbcdn.net;worker-src blob: *.facebook.com data:;block-all-mixed-content;upgrade-insecure-requests;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;",
+            "report-to": "{\"max_age\":259200,\"endpoints\":[{\"url\":\"https:\\/\\/www.facebook.com\\/ajax\\/comet_error_reports\\/?device_level=unknown\"}]}",
+            "x-frame-options": "DENY",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "0",
+            "cross-origin-opener-policy": "same-origin-allow-popups",
+            "vary": "Accept-Encoding",
+            "strict-transport-security": "max-age=15552000; preload",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "jLGR0P8Rg3klp9avgLIjrLtcWaND4j519DKfFWNAFIMl9nhvJhGLlJMZvYtQihD+dWUG2J0ARnZ4iLcI0j7H8A==",
+            "date": "Mon, 28 Aug 2023 21:55:24 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET /services HTTP/1.1\r\nHost: www.facebook.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08788800239562988,
+            "Socket_Close_Time": 0.11150717735290527,
+            "Response_Time": 0.09219050407409668
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-encoding": "gzip",
+            "pragma": "no-cache",
+            "cache-control": "private, no-cache, no-store, must-revalidate",
+            "expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "content-security-policy": "default-src data: blob: 'self' https://*.fbsbx.com 'unsafe-inline' *.facebook.com *.fbcdn.net 'unsafe-eval';script-src *.facebook.com *.fbcdn.net 'unsafe-inline' blob: data: 'self' 'unsafe-eval';style-src *.fbcdn.net data: *.facebook.com 'unsafe-inline';connect-src *.facebook.com facebook.com *.fbcdn.net wss://*.facebook.com:* wss://*.fbcdn.net attachment.fbsbx.com blob: *.cdninstagram.com 'self' http://localhost:3103 wss://gateway.facebook.com wss://edge-chat.facebook.com wss://snaptu-d.facebook.com wss://kaios-d.facebook.com/ *.fbsbx.com;font-src data: *.facebook.com *.fbcdn.net *.fbsbx.com;img-src *.fbcdn.net *.facebook.com data: https://*.fbsbx.com facebook.com *.cdninstagram.com fbsbx.com fbcdn.net blob: android-webview-video-poster: *.oculuscdn.com;media-src *.cdninstagram.com blob: *.fbcdn.net *.fbsbx.com www.facebook.com *.facebook.com data:;frame-src *.facebook.com *.fbsbx.com fbsbx.com data: *.fbcdn.net;worker-src blob: *.facebook.com data:;block-all-mixed-content;upgrade-insecure-requests;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;",
+            "report-to": "{\"max_age\":259200,\"endpoints\":[{\"url\":\"https:\\/\\/www.facebook.com\\/ajax\\/browser_error_reports\\/?device_level=unknown\"}]}",
+            "x-frame-options": "DENY",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "0",
+            "cross-origin-opener-policy": "same-origin-allow-popups",
+            "vary": "Accept-Encoding",
+            "strict-transport-security": "max-age=15552000; preload",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "eN5ijNfYbLkSyj8ZbUfqXrGO7a7LCCFyWuabK6gk3fUk2QtpqiWYcLSvozKpZ9qWvqt4jg+reatDHEMRVZjqAQ==",
+            "date": "Mon, 28 Aug 2023 21:55:26 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive"
+        },
+        "response_length": 5
+    }
+]

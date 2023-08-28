@@ -154,54 +154,54 @@ class HTTP1_Request_Builder:
      
         return scheme, subdomain, hostname, domain, port, path """
 
-    def build_uri(self, host, port, path, relative_uri, port_uri):
-                #Check if subdomain
-        
-        if relative_uri:
-            uri=path
-        else:
+    def build_request_line(self, port, method, path, headers, content, fuzzvalue, relative_uri=True, include_subdomain=False, include_port=False, protocol="HTTP/1.1"):
+                # Build the request_line from the provided arguments
+        if relative_uri==False:        
+            #Scheme:
             if port==443:
                 scheme="https://"
             else:
                 scheme="http://"
-            subdomain, hostname, domain = parse_host(host)
-            if subdomain=="":
-                sudomain=self.experiment_configuration["standard_subdomain"]#TODO PORT?S
-            new_port=""
-            if port_uri!="":
+            #subdomains                      
+            if include_subdomain:
+               subdomain=self.subdomain_placeholder+"."
+            else:
+               subdomain="" 
+            #Port
+            if include_port==True:
                 new_port=":"+str(port)
-            uri=scheme+subdomain+"."+hostname+"."+domain+new_port+path
-        return uri    
+            else:
+                new_port=""
+            #absolute uri
+            new_uri =scheme + subdomain + self.domain_placeholder + new_port + path
+        else:
+            new_uri=path
+
+        request_line = f"{method} {new_uri} {protocol}\r\n"
+
+        return request_line, new_uri   
 
     
     
-    def generate_cc_request(self, port, method="GET", path="/", relative_uri=True, headers=None, content=None, fuzzvalue=None):
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
         '''Generation of request package, CCs mut implement this '''
-       
 
         # Insert the Host header at the beginning of the list
         headers.insert(0, ("Host", self.host_placeholder))
-
-        
-        # Build the request_line from the provided arguments
-        request_line = f"{method} {domain_placeholder} HTTP/1.1\r\n"
-
-        # Build the request from request line and headers
+        # Build the request from request line and headersport
+        request_line, new_uri = self.build_request_line(port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
         request_string = request_line
         for header in headers:
             request_string += f"{header[0]}: {header[1]}\r\n"
 
-        # Add the ending of the request
         request_string += "\r\n"
+        deviation_count=0     
+        return request_string, deviation_count, new_uri
 
-        # No deviation
-        deviation_count = 0
-        return request_string, deviation_count, path
-
-    def generate_request(self, experiment_configuration):
+    def generate_request(self, experiment_configuration, selected_port):
         
         #host=host_data["host"]
-        port=experiment_configuration["target_port"]
+        port=selected_port
         path=experiment_configuration["path"]
         method=experiment_configuration["method"]
         headers=experiment_configuration["headers"]
@@ -211,6 +211,8 @@ class HTTP1_Request_Builder:
         
         relative_uri=experiment_configuration["relative_uri"]
         include_subdomain=experiment_configuration["include_subdomain"]
+        include_port=experiment_configuration["include_port"]
+        protocol=experiment_configuration["HTTP_version"]
   
          # Check if headers are provided elsewise take default headers
         if headers is None: 
@@ -221,7 +223,7 @@ class HTTP1_Request_Builder:
             # Create a copy to avoid modifying the original list
 
 
-        return self.generate_cc_request(port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain)
+        return self.generate_cc_request(port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
 
     def replace_host_and_domain(self, prerequest, host, standard_subdomain, domain=None):
             subdomains, hostname, tldomain =self.parse_host(host)

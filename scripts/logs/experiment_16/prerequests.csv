@@ -1,0 +1,101 @@
+Nr,request,deviation_count,uri,1xx,2xx,3xx,4xx,5xx,9xx
+0,"GET /index.html HTTP/1.1
+Host: >>HOST_PLACEHOLDER<<
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+
+",1,/index.html,0,3,3,2,0,0
+1,"GET /favicon.ico HTTP/1.1
+Host: >>HOST_PLACEHOLDER<<
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+
+",1,/favicon.ico,0,6,1,1,0,0
+2,"GET /support HTTP/1.1
+Host: >>HOST_PLACEHOLDER<<
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+
+",1,/support,0,1,6,1,0,0
+3,"GET /blog HTTP/1.1
+Host: >>HOST_PLACEHOLDER<<
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+
+",1,/blog,0,1,4,3,0,0
+4,"GET /index.html HTTP/1.1
+Host: >>HOST_PLACEHOLDER<<
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+
+",1,/index.html,0,3,3,2,0,0
+5,"GET /contact HTTP/1.1
+Host: >>HOST_PLACEHOLDER<<
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+
+",1,/contact,0,1,5,2,0,0
+6,"GET /blog HTTP/1.1
+Host: >>HOST_PLACEHOLDER<<
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+
+",1,/blog,0,1,4,3,0,0
+7,"GET /favicon.ico HTTP/1.1
+Host: >>HOST_PLACEHOLDER<<
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+
+",1,/favicon.ico,0,6,1,1,0,0
+8,"GET /support HTTP/1.1
+Host: >>HOST_PLACEHOLDER<<
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+
+",1,/support,0,1,6,1,0,0
+9,"GET /favicon.ico HTTP/1.1
+Host: >>HOST_PLACEHOLDER<<
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+
+",1,/favicon.ico,0,6,1,1,0,0

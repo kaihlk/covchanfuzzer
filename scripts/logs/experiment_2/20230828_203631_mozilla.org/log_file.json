@@ -1,0 +1,282 @@
+[
+    {
+        "number": 0,
+        "request": "GET /index.html# HTTP/1.1\r\nHost: mozilla.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.169996976852417,
+            "Socket_Close_Time": 0.10953378677368164,
+            "Response_Time": 0.17159056663513184
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 28 Aug 2023 18:36:39 GMT",
+            "content-type": "text/html",
+            "content-length": "162",
+            "connection": "keep-alive",
+            "location": "https://mozilla.org/index.html#",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'none'"
+        },
+        "response_length": 162
+    },
+    {
+        "number": 1,
+        "request": "GET /support#VNt HTTP/1.1\r\nHost: mozilla.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#VNt",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.17709589004516602,
+            "Socket_Close_Time": 0.10560345649719238,
+            "Response_Time": 0.1773216724395752
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 28 Aug 2023 18:36:46 GMT",
+            "content-type": "text/html",
+            "content-length": "162",
+            "connection": "keep-alive",
+            "location": "https://mozilla.org/support#VNt",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'none'"
+        },
+        "response_length": 162
+    },
+    {
+        "number": 2,
+        "request": "GET /services#e HTTP/1.1\r\nHost: mozilla.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#e",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.17738604545593262,
+            "Socket_Close_Time": 0.1133737564086914,
+            "Response_Time": 0.17715048789978027
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 28 Aug 2023 18:36:52 GMT",
+            "content-type": "text/html",
+            "content-length": "162",
+            "connection": "keep-alive",
+            "location": "https://mozilla.org/services#e",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'none'"
+        },
+        "response_length": 162
+    },
+    {
+        "number": 3,
+        "request": "GET /index.html#2rgX HTTP/1.1\r\nHost: mozilla.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#2rgX",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.17583560943603516,
+            "Socket_Close_Time": 0.10825371742248535,
+            "Response_Time": 0.6296331882476807
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 28 Aug 2023 18:36:59 GMT",
+            "content-type": "text/html",
+            "content-length": "162",
+            "connection": "keep-alive",
+            "location": "https://mozilla.org/index.html#2rgX",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'none'"
+        },
+        "response_length": 162
+    },
+    {
+        "number": 4,
+        "request": "GET /favicon.ico#oc7 HTTP/1.1\r\nHost: mozilla.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#oc7",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1777362823486328,
+            "Socket_Close_Time": 0.1054832935333252,
+            "Response_Time": 0.17284131050109863
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 28 Aug 2023 18:37:05 GMT",
+            "content-type": "text/html",
+            "content-length": "162",
+            "connection": "keep-alive",
+            "location": "https://mozilla.org/favicon.ico#oc7",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'none'"
+        },
+        "response_length": 162
+    },
+    {
+        "number": 5,
+        "request": "GET /services#f81L HTTP/1.1\r\nHost: mozilla.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#f81L",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.17789244651794434,
+            "Socket_Close_Time": 0.11379837989807129,
+            "Response_Time": 0.17644596099853516
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 28 Aug 2023 18:37:21 GMT",
+            "content-type": "text/html",
+            "content-length": "162",
+            "connection": "keep-alive",
+            "location": "https://mozilla.org/services#f81L",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'none'"
+        },
+        "response_length": 162
+    },
+    {
+        "number": 6,
+        "request": "GET /support#W HTTP/1.1\r\nHost: mozilla.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#W",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.18260669708251953,
+            "Socket_Close_Time": 0.12340664863586426,
+            "Response_Time": 0.1704874038696289
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 28 Aug 2023 18:37:26 GMT",
+            "content-type": "text/html",
+            "content-length": "162",
+            "connection": "keep-alive",
+            "location": "https://mozilla.org/support#W",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'none'"
+        },
+        "response_length": 162
+    },
+    {
+        "number": 7,
+        "request": "GET /about#j HTTP/1.1\r\nHost: mozilla.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#j",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.19347548484802246,
+            "Socket_Close_Time": 0.11178302764892578,
+            "Response_Time": 0.17471790313720703
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 28 Aug 2023 18:37:33 GMT",
+            "content-type": "text/html",
+            "content-length": "162",
+            "connection": "keep-alive",
+            "location": "https://mozilla.org/about#j",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'none'"
+        },
+        "response_length": 162
+    },
+    {
+        "number": 8,
+        "request": "GET /index.php#eG2b HTTP/1.1\r\nHost: mozilla.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#eG2b",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1751868724822998,
+            "Socket_Close_Time": 0.10877823829650879,
+            "Response_Time": 0.17126798629760742
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 28 Aug 2023 18:37:39 GMT",
+            "content-type": "text/html",
+            "content-length": "162",
+            "connection": "keep-alive",
+            "location": "https://mozilla.org/index.php#eG2b",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'none'"
+        },
+        "response_length": 162
+    },
+    {
+        "number": 9,
+        "request": "GET /favicon.ico#LN HTTP/1.1\r\nHost: mozilla.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#LN",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.17939376831054688,
+            "Socket_Close_Time": 0.10732722282409668,
+            "Response_Time": 0.17676758766174316
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 28 Aug 2023 18:37:44 GMT",
+            "content-type": "text/html",
+            "content-length": "162",
+            "connection": "keep-alive",
+            "location": "https://mozilla.org/favicon.ico#LN",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'none'"
+        },
+        "response_length": 162
+    }
+]

@@ -1,0 +1,295 @@
+[
+    {
+        "number": 0,
+        "request": "GET http://www.instagram.com/contact HTTP/1.1\r\nHost: instagram.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 344,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.12996411323547363,
+            "Socket_Close_Time": 0.14090752601623535,
+            "Response_Time": 0.08966708183288574
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.instagram.com/contact/?absolute_url_processed=1",
+            "strict-transport-security": "max-age=15552000",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "ndAWWXIok0Ix2pdrmU+otqRryGP8WI4oPKvNS+SnUZkk1dhvXYDmiAUZTkl/W9BZpmkVyfNL5A1qt++HvRTOeQ==",
+            "date": "Mon, 28 Aug 2023 20:44:51 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET http://www.instagram.com/index.php HTTP/1.1\r\nHost: instagram.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</index.php",
+        "request_length": 346,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11506366729736328,
+            "Socket_Close_Time": 0.1323103904724121,
+            "Response_Time": 0.16281723976135254
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.instagram.com/index.php/?absolute_url_processed=1",
+            "strict-transport-security": "max-age=15552000",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "VG+pZrBjYwLqcy9EqGnm5vkojgDGffYV+LSzeOjRl4OtgF7RNluJkCnBgbD6UwyXeWWIEI+BelGYU79+S30EFA==",
+            "date": "Mon, 28 Aug 2023 20:44:53 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET http://www.instagram.com/ HTTP/1.1\r\nHost: instagram.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 337,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.6211018562316895,
+            "Socket_Close_Time": 0.11210942268371582,
+            "Response_Time": 0.21337890625
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-encoding": "gzip",
+            "accept-ch-lifetime": "4838400",
+            "accept-ch": "viewport-width,dpr,Sec-CH-Prefers-Color-Scheme,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Platform-Version",
+            "pragma": "no-cache",
+            "cache-control": "private, no-cache, no-store, must-revalidate",
+            "expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "content-security-policy-report-only": "default-src *.facebook.com *.fbcdn.net *.instagram.com data: blob:;script-src *.facebook.com *.fbcdn.net *.facebook.net 'unsafe-inline' 'unsafe-eval' blob: data: 'self' *.instagram.com static.cdninstagram.com;style-src data: blob: 'unsafe-inline' *.fbcdn.net *.facebook.com *.instagram.com static.cdninstagram.com;connect-src *.facebook.com facebook.com *.fbcdn.net *.facebook.net wss://*.facebook.com:* blob: *.instagram.com *.cdninstagram.com wss://*.instagram.com:* 'self' wss://edge-chat.instagram.com connect.facebook.net;font-src *.facebook.com data: *.fbcdn.net *.instagram.com static.cdninstagram.com *.intern.facebook.com;img-src *.instagram.com *.facebook.com *.fbcdn.net data: blob: *.cdninstagram.com *.fbsbx.com android-webview-video-poster:;media-src *.facebook.com *.fbcdn.net *.instagram.com *.cdninstagram.com cdn.fbsbx.com data: blob:;frame-src *.instagram.com *.facebook.com *.fbsbx.com fbsbx.com data:;worker-src *.facebook.com *.fbcdn.net *.facebook.net 'unsafe-inline' 'unsafe-eval' blob: data: 'self' *.instagram.com/static_resources/webworker_v1/init_script/ *.instagram.com/static_resources/webworker/init_script/ *.instagram.com/static_resources/sharedworker/init_script/ *.instagram.com/www-service-worker.js;block-all-mixed-content;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET http://www.instagram.com/about HTTP/1.1\r\nHost: instagram.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 342,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.048601627349853516,
+            "Socket_Close_Time": 0.11206579208374023,
+            "Response_Time": 0.0875396728515625
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.instagram.com/about/?absolute_url_processed=1",
+            "strict-transport-security": "max-age=15552000",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "f03Zg8G/pARqC36BsOmcouSH/ix2fy8F77ZmPtCGt6etyyqzVDvhdZOiTWUgb/Qk4gH9F1svSc7VvQKNq8aYuQ==",
+            "date": "Mon, 28 Aug 2023 20:44:56 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET http://www.instagram.com/favicon.ico HTTP/1.1\r\nHost: instagram.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</favicon.ico",
+        "request_length": 348,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07183504104614258,
+            "Socket_Close_Time": 0.10687899589538574,
+            "Response_Time": 0.0713663101196289
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "image/vnd.microsoft.icon",
+            "last-modified": "Mon, 28 Aug 2023 14:40:09 GMT",
+            "date": "Mon, 28 Aug 2023 20:44:57 GMT",
+            "vary": "Accept-Language, Cookie, Accept-Encoding",
+            "content-language": "en",
+            "strict-transport-security": "max-age=31536000",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "report-uri https://www.instagram.com/security/csp_report/; default-src 'self' https://www.instagram.com; img-src data: blob: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com https://*.facebook.com https://*.fbsbx.com https://*.threads.net; font-src data: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com; media-src 'self' blob: https://www.instagram.com https://*.cdninstagram.com https://*.fbcdn.net; manifest-src 'self' https://www.instagram.com; script-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://*.cdninstagram.com wss://www.instagram.com https://*.facebook.com https://*.fbcdn.net https://*.facebook.net 'unsafe-inline' 'unsafe-eval' blob:; style-src 'self' https://*.www.instagram.com https://www.instagram.com 'unsafe-inline'; connect-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://graph.instagram.com https://*.graph.instagram.com https://i.instagram.com/graphql_www https://graphql.instagram.com https://*.cdninstagram.com https://api.instagram.com https://i.instagram.com https://*.i.instagram.com https://*.od.instagram.com https://i.thr"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 5,
+        "request": "GET http://www.instagram.com/support HTTP/1.1\r\nHost: instagram.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</support",
+        "request_length": 344,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.027531862258911133,
+            "Socket_Close_Time": 0.11566901206970215,
+            "Response_Time": 0.09592771530151367
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "location": "https://www.instagram.com/support/?absolute_url_processed=1",
+            "date": "Mon, 28 Aug 2023 20:44:58 GMT",
+            "vary": "Accept-Language",
+            "strict-transport-security": "max-age=31536000",
+            "cache-control": "private, no-cache, no-store, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "report-uri https://www.instagram.com/security/csp_report/; default-src 'self' https://www.instagram.com; img-src data: blob: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com https://*.facebook.com https://*.fbsbx.com https://*.threads.net; font-src data: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com; media-src 'self' blob: https://www.instagram.com https://*.cdninstagram.com https://*.fbcdn.net; manifest-src 'self' https://www.instagram.com; script-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://*.cdninstagram.com wss://www.instagram.com https://*.facebook.com https://*.fbcdn.net https://*.facebook.net 'unsafe-inline' 'unsafe-eval' blob:; style-src 'self' https://*.www.instagram.com https://www.instagram.com 'unsafe-inline'; connect-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://graph.instagram.com https://*.graph.instagram.com https://i.instagram.com/graphql_www https://graphql.instagram.com https://*.cdninstagram.com http"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET http://www.instagram.com/contact HTTP/1.1\r\nHost: instagram.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</contact",
+        "request_length": 344,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06872034072875977,
+            "Socket_Close_Time": 0.10758352279663086,
+            "Response_Time": 0.08199787139892578
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.instagram.com/contact/?absolute_url_processed=1",
+            "strict-transport-security": "max-age=15552000",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "DFFvS5Vp5TmJ2c/PJNXU7Pb8VLTvBQNej2DiZv0xWMronYlGfT063FZWvhIvnqt+5hbsoC5eqxDrADQ3u8VWBQ==",
+            "date": "Mon, 28 Aug 2023 20:45:00 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET http://www.instagram.com/support HTTP/1.1\r\nHost: instagram.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</support",
+        "request_length": 344,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08881688117980957,
+            "Socket_Close_Time": 0.11278438568115234,
+            "Response_Time": 0.044974327087402344
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "location": "https://www.instagram.com/support/?absolute_url_processed=1",
+            "date": "Mon, 28 Aug 2023 20:45:01 GMT",
+            "vary": "Accept-Language",
+            "strict-transport-security": "max-age=31536000",
+            "cache-control": "private, no-cache, no-store, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "report-uri https://www.instagram.com/security/csp_report/; default-src 'self' https://www.instagram.com; img-src data: blob: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com https://*.facebook.com https://*.fbsbx.com https://*.threads.net; font-src data: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com; media-src 'self' blob: https://www.instagram.com https://*.cdninstagram.com https://*.fbcdn.net; manifest-src 'self' https://www.instagram.com; script-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://*.cdninstagram.com wss://www.instagram.com https://*.facebook.com https://*.fbcdn.net https://*.facebook.net 'unsafe-inline' 'unsafe-eval' blob:; style-src 'self' https://*.www.instagram.com https://www.instagram.com 'unsafe-inline'; connect-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://graph.instagram.com https://*.graph.instagram.com https://i.instagram.com/graphql_www https://graphql.instagram.com https://*.cdninstagram.com http"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET http://www.instagram.com/about HTTP/1.1\r\nHost: instagram.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</about",
+        "request_length": 342,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10774469375610352,
+            "Socket_Close_Time": 0.1179811954498291,
+            "Response_Time": 0.18039727210998535
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.instagram.com/about/?absolute_url_processed=1",
+            "strict-transport-security": "max-age=15552000",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "gxyRDhd6P+POfwZV4eSeQoVykumrC0QD02JhkmOpRC9ySq4XMWhLl/43ak7bywfBihveszOFc+laHSHneD05mA==",
+            "date": "Mon, 28 Aug 2023 20:45:02 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET http://www.instagram.com/index.html HTTP/1.1\r\nHost: instagram.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "http://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</index.html",
+        "request_length": 347,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 1.0301270484924316,
+            "Socket_Close_Time": 0.10590910911560059,
+            "Response_Time": 0.05862784385681152
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://www.instagram.com/index.html/?absolute_url_processed=1",
+            "strict-transport-security": "max-age=15552000",
+            "content-type": "text/html; charset=\"utf-8\"",
+            "x-fb-debug": "fXsKbwfHwpKu6EdJhPe8BIAtmzjPF9KG571OEqZZnoOdwRjlDFFlGhUgJD/Rk0qZZWFOzqk1s6QJuSQZkauRzQ==",
+            "date": "Mon, 28 Aug 2023 20:45:04 GMT",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "connection": "keep-alive",
+            "content-length": "0"
+        },
+        "response_length": 0
+    }
+]

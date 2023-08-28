@@ -1,0 +1,272 @@
+[
+    {
+        "number": 0,
+        "request": "GET /blog#71RDBeG HTTP/1.1\r\nHost: spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#71RDBeG",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.3685457706451416,
+            "Socket_Close_Time": 0.1332237720489502,
+            "Response_Time": 0.027375221252441406
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "vary": "Accept-Encoding",
+            "date": "Mon, 28 Aug 2023 18:40:18 GMT",
+            "server": "envoy",
+            "content-length": "0",
+            "via": "HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET /contact#G HTTP/1.1\r\nHost: spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#G",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10866379737854004,
+            "Socket_Close_Time": 0.11286759376525879,
+            "Response_Time": 0.032468557357788086
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "vary": "Accept-Encoding",
+            "date": "Mon, 28 Aug 2023 18:40:23 GMT",
+            "server": "envoy",
+            "content-length": "0",
+            "via": "HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET /services#Ykfev HTTP/1.1\r\nHost: spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#Ykfev",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2472219467163086,
+            "Socket_Close_Time": 0.10189986228942871,
+            "Response_Time": 0.04827237129211426
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "vary": "Accept-Encoding",
+            "date": "Mon, 28 Aug 2023 18:40:28 GMT",
+            "server": "envoy",
+            "content-length": "0",
+            "via": "HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET /favicon.ico#I00HQj HTTP/1.1\r\nHost: spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#I00HQj",
+        "request_length": 329,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.31029248237609863,
+            "Socket_Close_Time": 0.10361862182617188,
+            "Response_Time": 0.014131307601928711
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "vary": "Accept-Encoding",
+            "date": "Mon, 28 Aug 2023 18:40:34 GMT",
+            "server": "envoy",
+            "content-length": "0",
+            "via": "HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET /index.html#hHuXaAvqsErtEaTdRt HTTP/1.1\r\nHost: spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#hHuXaAvqsErtEaTdRt",
+        "request_length": 340,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06798362731933594,
+            "Socket_Close_Time": 0.10547661781311035,
+            "Response_Time": 0.018201351165771484
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "vary": "Accept-Encoding",
+            "date": "Mon, 28 Aug 2023 18:40:39 GMT",
+            "server": "envoy",
+            "content-length": "0",
+            "via": "HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 5,
+        "request": "GET /favicon.ico# HTTP/1.1\r\nHost: spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2631795406341553,
+            "Socket_Close_Time": 0.2458662986755371,
+            "Response_Time": 0.034972429275512695
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "vary": "Accept-Encoding",
+            "date": "Mon, 28 Aug 2023 18:40:46 GMT",
+            "server": "envoy",
+            "content-length": "0",
+            "via": "HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET /about#V HTTP/1.1\r\nHost: spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#V",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08861207962036133,
+            "Socket_Close_Time": 0.10689377784729004,
+            "Response_Time": 0.023651123046875
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "vary": "Accept-Encoding",
+            "date": "Mon, 28 Aug 2023 18:40:53 GMT",
+            "server": "envoy",
+            "content-length": "0",
+            "via": "HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET /contact#C HTTP/1.1\r\nHost: spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#C",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09226393699645996,
+            "Socket_Close_Time": 0.11247611045837402,
+            "Response_Time": 0.023342609405517578
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "vary": "Accept-Encoding",
+            "date": "Mon, 28 Aug 2023 18:41:00 GMT",
+            "server": "envoy",
+            "content-length": "0",
+            "via": "HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET /#lAF HTTP/1.1\r\nHost: spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#lAF",
+        "request_length": 315,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05359363555908203,
+            "Socket_Close_Time": 0.11218738555908203,
+            "Response_Time": 0.0284421443939209
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "vary": "Accept-Encoding",
+            "date": "Mon, 28 Aug 2023 18:41:05 GMT",
+            "server": "envoy",
+            "content-length": "0",
+            "via": "HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET /favicon.ico#2bhq6Hyzv HTTP/1.1\r\nHost: spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#2bhq6Hyzv",
+        "request_length": 332,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.031415462493896484,
+            "Socket_Close_Time": 0.10608220100402832,
+            "Response_Time": 0.0186917781829834
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "vary": "Accept-Encoding",
+            "date": "Mon, 28 Aug 2023 18:41:08 GMT",
+            "server": "envoy",
+            "content-length": "0",
+            "via": "HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 0
+    }
+]

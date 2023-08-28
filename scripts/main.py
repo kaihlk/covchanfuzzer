@@ -78,18 +78,19 @@ def main():
         "verbose": False,
         "timestamp": time.strftime("%Y%m%d_%H%M%S"),
         #Covert Channel Option
-        "covertchannel_request_number": 11,
+        "covertchannel_request_number": 10,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
         "fuzz_value":0.8,
         #Target Selection Options  
         "num_attempts": 10,
-        "max_targets": 20, #len(self.target_list):
+        "max_targets": 10, #len(self.target_list):
         "max_workers": 10,  # Parallel Processing of subsets,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
         "target_list": "target_list_subdomain.csv",
-        "target_subset_size": 3,
+        "target_subset_size": 5,
+        "target_add_www": True,
         #"target_host": "www.example.com",  #Just for special useipvstt
         "target_port": None, #443, 8080 Apache
 
@@ -97,16 +98,19 @@ def main():
         "conn_timeout": 2, #seconds 
         "nw_interface": "enp0s3",  #lo, docker, enp0s3     
         "use_ipv4": True,
-        "use_TLS": False,
+        "use_TLS": True,
         "use_HTTP2": False,
 
         #HTTP Message Options
+        "HTTP_version": "HTTP/1.1",
         "method" : "GET",
         "url": "",   #Complete URl
         "path": "", #Dynamic, List, ?
         "standard_subdomain": "www", #use www if not provided
         "relative_uri": True, # build a relative uri without the host in the requestline: /index.html
         "include_subdomain": True,
+        "include_port":False,
+
         "headers": None,
         "standard_headers": "firefox_HTTP/1.1",  #curl_HTTP/1.1(TLS), firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
         "content": "random",  #"random", "some_text""fuzz_value": 0.9,

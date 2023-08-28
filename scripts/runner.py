@@ -61,6 +61,11 @@ class ExperimentRunner:
         #Lookup DNS for each entry
         #TODO Catch the case that IPv4 or IPv6 is not provided, some sites sends more than one IP/Port set per protocoll version,  example macromedia.com and criteo.com
         for entry in sub_set:
+            if self.experiment_configuration["target_add_www"]:
+                subdomain, hostname, tldomain= request_builder.HTTP1_Request_Builder().parse_host(entry)
+                if subdomain=="":
+                    subdomain="www"
+            entry=subdomain+"."+hostname+"."+tldomain
             print("DNS Lookup for:"+entry)
             socket_info = CustomHTTP().lookup_dns(entry, self.target_port, self.experiment_configuration["use_ipv4"])
             if socket_info:
@@ -83,7 +88,7 @@ class ExperimentRunner:
         #Build HTTP Request after the selected covered channel
         selected_covered_channel = class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]()
         try:
-            request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration)
+            request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration, self.target_port)
         except Exception as e:
             print("Error CC Generate Request", e) 
         if self.experiment_configuration["verbose"]==True:
@@ -224,9 +229,9 @@ class ExperimentRunner:
                 #Start capturing threads
                 stop_event=threading.Event()
                 stop_events.append(stop_event)
-                capture_thread = threading.Thread(target=logger.capture_packets, args=(stop_event,))
-                capture_thread.start()
-                capture_threads.append(capture_thread)
+                #capture_thread = threading.Thread(target=logger.capture_packets, args=(stop_event,))
+                #capture_thread.start()
+                #capture_threads.append(capture_thread)
             except Exception as e:
                 print("Error while creating logger objects:", e)    
         #Start sending packages after ensuring each capturing process is ready
@@ -295,57 +300,58 @@ class ExperimentRunner:
     def setup_and_start_experiment(self):
         '''Setups the Experiment, creates an experiment logger, and starts the experiment run'''
         
+        try:
+            #Create Folder for the experiment and save the path
+            self.exp_log=ExperimentLogger(self.experiment_configuration)
 
-        #Create Folder for the experiment and save the path
-        self.exp_log=ExperimentLogger(self.experiment_configuration)
+            #Start Global Capturing Process
 
-        #Start Global Capturing Process
+            global_stop_event = threading.Event()
+            global_capture_thread = threading.Thread(target=self.exp_log.capture_packets_dumpcap, args=(global_stop_event,))
+            global_capture_thread.start()
+            time.sleep(1)
+            #Loop over List
 
-        global_stop_event = threading.Event()
-        global_capture_thread = threading.Thread(target=self.exp_log.capture_packets_dumpcap, args=(global_stop_event,))
-        global_capture_thread.start()
-        time.sleep(1)
-        #Loop over List
+            start_position=0
+            subset_length=self.experiment_configuration["target_subset_size"]
+            max_targets=self.experiment_configuration["max_targets"]
+            if max_targets>len(self.target_list): max_targets=len(self.target_list)
 
-        start_position=0
-        subset_length=self.experiment_configuration["target_subset_size"]
-        max_targets=self.experiment_configuration["max_targets"]
-        if max_targets>len(self.target_list): max_targets=len(self.target_list)
-
-        subsets_tasks=[]
+            subsets_tasks=[]
 
 
-        with concurrent.futures.ThreadPoolExecutor(max_workers=self.experiment_configuration["max_workers"]) as subset_executor:
-            
-            try:
-            
-                'Iterate through target list'
-                while start_position < max_targets: 
-                    
-                    #Get target subset
-                    
-                    subset=self.get_target_subset(start_position, subset_length)
-                    
-                    subset_task=subset_executor.submit(self.fuzz_subset, subset)
-                    subsets_tasks.append(subset_task)
-                    start_position += len(subset)
-            except Exception as e:
-                print("An exception occurred:", e)
-            
-                   
+            with concurrent.futures.ThreadPoolExecutor(max_workers=self.experiment_configuration["max_workers"]) as subset_executor:
+                
+                try:
+                
+                    'Iterate through target list'
+                    while start_position < max_targets: 
+                        
+                        #Get target subset
+                        
+                        subset=self.get_target_subset(start_position, subset_length)
+                        
+                        subset_task=subset_executor.submit(self.fuzz_subset, subset)
+                        subsets_tasks.append(subset_task)
+                        start_position += len(subset)
+                except Exception as e:
+                    print("An exception occurred:", e)
+                
 
+           
+        except Exceptions as e:
+            print("During the experiment an error occured")
+        finally:
+             # Wait for the global capture thread to finish
+            global_stop_event.set() 
         
-        # Wait for the global capture thread to finish
-        global_stop_event.set() 
-     
-        global_capture_thread.join()   
-        
-
-        #Save OutCome to experiment Folder csv.
-        self.exp_log.add_global_entry_to_experiment_list(self.experiment_configuration["experiment_no"])
-        self.exp_log.save_dns_fails(self.dns_fails)
-        self.exp_log.save_prerequests(self.prerequest_list)
+            global_capture_thread.join()   
             
+
+            #Save OutCome to experiment Folder csv.
+            self.exp_log.add_global_entry_to_experiment_list(self.experiment_configuration["experiment_no"])
+            self.exp_log.save_dns_fails(self.dns_fails)
+            self.exp_log.save_prerequests(self.prerequest_list)   
         """capture_threads=[] 
 
                        for entry in sub_set_dns:

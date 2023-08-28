@@ -1,0 +1,352 @@
+[
+    {
+        "number": 0,
+        "request": "GET /favicon.ico HTTP/1.1\r\nHost: twitter.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0772860050201416,
+            "Socket_Close_Time": 0.11114692687988281,
+            "Response_Time": 0.1234736442565918
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 28 Aug 2023 21:15:43 UTC",
+            "perf": "7626143928",
+            "server": "tsa_o",
+            "set-cookie": "guest_id=v1%3A169325734376629403; Max-Age=34214400; Expires=Fri, 27 Sep 2024 21:15:43 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None",
+            "content-type": "image/x-icon",
+            "cache-control": "no-cache, no-store, max-age=0",
+            "content-length": "1150",
+            "x-transaction-id": "462b0d9879358b1b",
+            "strict-transport-security": "max-age=631138519",
+            "x-response-time": "99",
+            "x-connection-hash": "18a95fd34c98d3a5334c0426c41015c67a079276e375a72b98f19d01bd0f7f6b"
+        },
+        "response_length": 1068
+    },
+    {
+        "number": 1,
+        "request": "GET /support HTTP/1.1\r\nHost: twitter.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11242175102233887,
+            "Socket_Close_Time": 0.35613203048706055,
+            "Response_Time": 0.13082361221313477
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 28 Aug 2023 21:15:44 GMT",
+            "perf": "7626143928",
+            "vary": "Accept",
+            "server": "tsa_o",
+            "location": "/support",
+            "set-cookie": "guest_id=v1%3A169325734477539090; Max-Age=34214400; Expires=Fri, 27 Sep 2024 21:15:44 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None",
+            "content-type": "text/html; charset=utf-8",
+            "x-powered-by": "Express",
+            "cache-control": "no-cache, no-store, max-age=0",
+            "x-transaction-id": "f3749b7a8a8063ce",
+            "x-xss-protection": "0",
+            "strict-transport-security": "max-age=631138519",
+            "content-encoding": "gzip",
+            "content-length": "80",
+            "x-response-time": "117",
+            "x-connection-hash": "9fa97e8c8d38422113dfc03e83cd2a94d878891ab74883f22e7b5bba786d5878"
+        },
+        "response_length": 60
+    },
+    {
+        "number": 2,
+        "request": "GET /index.html HTTP/1.1\r\nHost: twitter.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11608195304870605,
+            "Socket_Close_Time": 0.12169504165649414,
+            "Response_Time": 0.14778995513916016
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 28 Aug 2023 21:15:46 GMT",
+            "perf": "7626143928",
+            "vary": "Accept",
+            "server": "tsa_o",
+            "location": "/index.html",
+            "set-cookie": "guest_id=v1%3A169325734632168751; Max-Age=34214400; Expires=Fri, 27 Sep 2024 21:15:46 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None",
+            "content-type": "text/html; charset=utf-8",
+            "x-powered-by": "Express",
+            "cache-control": "no-cache, no-store, max-age=0",
+            "x-transaction-id": "dc0cb1ce9bca5976",
+            "x-xss-protection": "0",
+            "strict-transport-security": "max-age=631138519",
+            "content-encoding": "gzip",
+            "content-length": "83",
+            "x-response-time": "119",
+            "x-connection-hash": "8d8b07cab7ebb885ab3206c9363dde5b3ab1c63df323fc264c9edcb0fd9d7b93"
+        },
+        "response_length": 66
+    },
+    {
+        "number": 3,
+        "request": "GET /support HTTP/1.1\r\nHost: twitter.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10599255561828613,
+            "Socket_Close_Time": 0.11108899116516113,
+            "Response_Time": 0.14246654510498047
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 28 Aug 2023 21:15:47 GMT",
+            "perf": "7626143928",
+            "vary": "Accept",
+            "server": "tsa_o",
+            "location": "/support",
+            "set-cookie": "guest_id=v1%3A169325734746585524; Max-Age=34214400; Expires=Fri, 27 Sep 2024 21:15:47 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None",
+            "content-type": "text/html; charset=utf-8",
+            "x-powered-by": "Express",
+            "cache-control": "no-cache, no-store, max-age=0",
+            "x-transaction-id": "3acb5df3af1cc67d",
+            "x-xss-protection": "0",
+            "strict-transport-security": "max-age=631138519",
+            "content-encoding": "gzip",
+            "content-length": "80",
+            "x-response-time": "116",
+            "x-connection-hash": "67bb138b2fc681ecaf426fa5c0b8e0f710825c23c6decba1eac2aa79207a9d82"
+        },
+        "response_length": 60
+    },
+    {
+        "number": 4,
+        "request": "GET /index.html HTTP/1.1\r\nHost: twitter.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1410980224609375,
+            "Socket_Close_Time": 0.11545896530151367,
+            "Response_Time": 0.13174843788146973
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 28 Aug 2023 21:15:49 GMT",
+            "perf": "7626143928",
+            "vary": "Accept",
+            "server": "tsa_o",
+            "location": "/index.html",
+            "set-cookie": "guest_id=v1%3A169325734902944751; Max-Age=34214400; Expires=Fri, 27 Sep 2024 21:15:49 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None",
+            "content-type": "text/html; charset=utf-8",
+            "x-powered-by": "Express",
+            "cache-control": "no-cache, no-store, max-age=0",
+            "x-transaction-id": "c3c9846d511b3418",
+            "x-xss-protection": "0",
+            "strict-transport-security": "max-age=631138519",
+            "content-encoding": "gzip",
+            "content-length": "83",
+            "x-response-time": "110",
+            "x-connection-hash": "92bb666c1f0f057c8288cb8c16ed31d4f6e6737619a5143d6f847aafc8502485"
+        },
+        "response_length": 66
+    },
+    {
+        "number": 5,
+        "request": "GET /contact HTTP/1.1\r\nHost: twitter.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05763387680053711,
+            "Socket_Close_Time": 0.11441731452941895,
+            "Response_Time": 0.13178348541259766
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 28 Aug 2023 21:15:50 GMT",
+            "perf": "7626143928",
+            "vary": "Accept",
+            "server": "tsa_o",
+            "location": "/contact",
+            "set-cookie": "guest_id=v1%3A169325735010834179; Max-Age=34214400; Expires=Fri, 27 Sep 2024 21:15:50 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None",
+            "content-type": "text/html; charset=utf-8",
+            "x-powered-by": "Express",
+            "cache-control": "no-cache, no-store, max-age=0",
+            "x-transaction-id": "f8b7085886469789",
+            "x-xss-protection": "0",
+            "strict-transport-security": "max-age=631138519",
+            "content-encoding": "gzip",
+            "content-length": "80",
+            "x-response-time": "110",
+            "x-connection-hash": "0430388c3f8abeb22aa4535077796e28a814caa111344a300a1b9897a8e717ce"
+        },
+        "response_length": 60
+    },
+    {
+        "number": 6,
+        "request": "GET /favicon.ico HTTP/1.1\r\nHost: twitter.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08359980583190918,
+            "Socket_Close_Time": 0.10600781440734863,
+            "Response_Time": 0.12932109832763672
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 28 Aug 2023 21:15:51 UTC",
+            "perf": "7626143928",
+            "server": "tsa_o",
+            "set-cookie": "guest_id=v1%3A169325735133351389; Max-Age=34214400; Expires=Fri, 27 Sep 2024 21:15:51 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None",
+            "content-type": "image/x-icon",
+            "cache-control": "no-cache, no-store, max-age=0",
+            "content-length": "1150",
+            "x-transaction-id": "971315f4c156ab0e",
+            "strict-transport-security": "max-age=631138519",
+            "x-response-time": "107",
+            "x-connection-hash": "c14621e0f6d8114c7d60b72358fa5d66eb01a3dfc16c50651bed8409626355a3"
+        },
+        "response_length": 1068
+    },
+    {
+        "number": 7,
+        "request": "GET /favicon.ico HTTP/1.1\r\nHost: twitter.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10814714431762695,
+            "Socket_Close_Time": 0.10705041885375977,
+            "Response_Time": 0.13222432136535645
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 28 Aug 2023 21:15:53 UTC",
+            "perf": "7626143928",
+            "server": "tsa_o",
+            "set-cookie": "guest_id=v1%3A169325735365148148; Max-Age=34214400; Expires=Fri, 27 Sep 2024 21:15:53 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None",
+            "content-type": "image/x-icon",
+            "cache-control": "no-cache, no-store, max-age=0",
+            "content-length": "1150",
+            "x-transaction-id": "0dbb6c522782d306",
+            "strict-transport-security": "max-age=631138519",
+            "x-response-time": "112",
+            "x-connection-hash": "01b40dcc94e7d0a01ff5d11c82ce0d10dd82002069ae21defbd59c0a533e50a8"
+        },
+        "response_length": 1068
+    },
+    {
+        "number": 8,
+        "request": "GET /favicon.ico HTTP/1.1\r\nHost: twitter.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.040184736251831055,
+            "Socket_Close_Time": 0.10988879203796387,
+            "Response_Time": 0.3330562114715576
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 28 Aug 2023 21:15:54 UTC",
+            "perf": "7626143928",
+            "server": "tsa_o",
+            "set-cookie": "guest_id=v1%3A169325735465270701; Max-Age=34214400; Expires=Fri, 27 Sep 2024 21:15:54 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None",
+            "content-type": "image/x-icon",
+            "cache-control": "no-cache, no-store, max-age=0",
+            "content-length": "1150",
+            "x-transaction-id": "99d59e7cc621d63f",
+            "strict-transport-security": "max-age=631138519",
+            "x-response-time": "100",
+            "x-connection-hash": "c3dfbb86e760f29915896d87e614bdb1183d1fe2427f51ff7896ade6eb2ecb43"
+        },
+        "response_length": 1068
+    },
+    {
+        "number": 9,
+        "request": "GET /support HTTP/1.1\r\nHost: twitter.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0393221378326416,
+            "Socket_Close_Time": 0.11095881462097168,
+            "Response_Time": 0.14292073249816895
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 28 Aug 2023 21:15:55 GMT",
+            "perf": "7626143928",
+            "vary": "Accept",
+            "server": "tsa_o",
+            "location": "/support",
+            "set-cookie": "guest_id=v1%3A169325735556305291; Max-Age=34214400; Expires=Fri, 27 Sep 2024 21:15:55 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None",
+            "content-type": "text/html; charset=utf-8",
+            "x-powered-by": "Express",
+            "cache-control": "no-cache, no-store, max-age=0",
+            "x-transaction-id": "25b672d0b4a3c226",
+            "x-xss-protection": "0",
+            "strict-transport-security": "max-age=631138519",
+            "content-encoding": "gzip",
+            "content-length": "80",
+            "x-response-time": "125",
+            "x-connection-hash": "afcb047e6b37a702fc6c6ede35be3be7c50efe48dafb00028bae889040e68f10"
+        },
+        "response_length": 60
+    }
+]

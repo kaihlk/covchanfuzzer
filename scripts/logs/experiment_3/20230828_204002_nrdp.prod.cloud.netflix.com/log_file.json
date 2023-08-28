@@ -1,0 +1,312 @@
+[
+    {
+        "number": 0,
+        "request": "GET /blog#71RDBeG HTTP/1.1\r\nHost: nrdp.prod.cloud.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#71RDBeG",
+        "request_length": 339,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10196900367736816,
+            "Socket_Close_Time": 0.11594080924987793,
+            "Response_Time": 0.05126452445983887
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html;charset=utf-8",
+            "content-language": "en",
+            "content-length": "435",
+            "date": "Mon, 28 Aug 2023 18:40:03 GMT",
+            "via": "1.1 i-022b2c28dd17b838e (eu-west-1)",
+            "server": "api-prod i-0fae9f64a06270c00",
+            "x-originating-url": "https://nrdp.prod.cloud.netflix.com/blog#71RDBeG",
+            "set-cookie": "nfvdid=BQFmAAEBEJwAeAcWCTtPjOwbph3AeQVAFKHFPWopUS2Lfef2Vk8CTlX3MijxMtGiDNxoQy6QuKf526jOWI_j-uRNPnbWovJXO5Gk6GwmDwBLuoeJgB1EUw%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "64"
+        },
+        "response_length": 431
+    },
+    {
+        "number": 1,
+        "request": "GET /contact#G HTTP/1.1\r\nHost: nrdp.prod.cloud.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#G",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09359979629516602,
+            "Socket_Close_Time": 0.10773706436157227,
+            "Response_Time": 0.045768022537231445
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html;charset=utf-8",
+            "content-language": "en",
+            "content-length": "435",
+            "date": "Mon, 28 Aug 2023 18:40:06 GMT",
+            "via": "1.1 i-00476a37c991bf1b1 (eu-west-1)",
+            "server": "api-prod i-071092b53275fca72",
+            "x-originating-url": "https://nrdp.prod.cloud.netflix.com/contact#G",
+            "set-cookie": "nfvdid=BQFmAAEBEKUFrcPd-uiLza6aW79cTx5ADWjzqa4acAkgEeWSn-kuu0XqDhtEdetXWUPLSYl-iUmc1XmAXmQWxMUwB7mFlgvVlHonIf6OZKWwfz0Dt6QC_g%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "61"
+        },
+        "response_length": 431
+    },
+    {
+        "number": 2,
+        "request": "GET /services#Ykfev HTTP/1.1\r\nHost: nrdp.prod.cloud.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#Ykfev",
+        "request_length": 341,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.14440369606018066,
+            "Socket_Close_Time": 0.1084449291229248,
+            "Response_Time": 0.07448482513427734
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html;charset=utf-8",
+            "content-language": "en",
+            "content-length": "435",
+            "date": "Mon, 28 Aug 2023 18:40:12 GMT",
+            "via": "1.1 i-0a8ab9cd00e1e2521 (eu-west-1)",
+            "server": "api-prod i-0d14d20e07256e2a7",
+            "x-originating-url": "https://nrdp.prod.cloud.netflix.com/services#Ykfev",
+            "set-cookie": "nfvdid=BQFmAAEBENwOnpJbOoECN8k13bVlCgxAbSjuEW79CjTx4SY4qugclhfbEy4tgBebN4OQZE-T5UwxfGUogIMW6QQy4xzsVxhwBKD0vATExufkSgGoK3nSlg%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "32"
+        },
+        "response_length": 431
+    },
+    {
+        "number": 3,
+        "request": "GET /favicon.ico#I00HQj HTTP/1.1\r\nHost: nrdp.prod.cloud.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#I00HQj",
+        "request_length": 345,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.43081164360046387,
+            "Socket_Close_Time": 0.162750244140625,
+            "Response_Time": 0.04560995101928711
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html;charset=utf-8",
+            "content-language": "en",
+            "content-length": "435",
+            "date": "Mon, 28 Aug 2023 18:40:17 GMT",
+            "via": "1.1 i-0f65257ba8882f696 (eu-west-1)",
+            "server": "api-prod i-0fae9f64a06270c00",
+            "x-originating-url": "https://nrdp.prod.cloud.netflix.com/favicon.ico#I00HQj",
+            "set-cookie": "nfvdid=BQFmAAEBEKQIqz9Ay6uBAV2O7uZhFH9Au8PtQXD2I3uAi9CursYhMAH6h_x3hkqiLec5xKk8KFqIpufyJUcLBekVB8vT0WSbDzYCzdCRy3ILJ8f7qDlELQ%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "323"
+        },
+        "response_length": 431
+    },
+    {
+        "number": 4,
+        "request": "GET /index.html#hHuXaAvqsErtEaTdRt HTTP/1.1\r\nHost: nrdp.prod.cloud.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#hHuXaAvqsErtEaTdRt",
+        "request_length": 356,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07931900024414062,
+            "Socket_Close_Time": 0.13055729866027832,
+            "Response_Time": 0.03835129737854004
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html;charset=utf-8",
+            "content-language": "en",
+            "content-length": "435",
+            "date": "Mon, 28 Aug 2023 18:40:20 GMT",
+            "via": "1.1 i-0c3b8291d50eb284f (eu-west-1)",
+            "server": "api-prod i-064d4a5b8ee6da967",
+            "x-originating-url": "https://nrdp.prod.cloud.netflix.com/index.html#hHuXaAvqsErtEaTdRt",
+            "set-cookie": "nfvdid=BQFmAAEBENhLObM2nZVCl29XVNG1bV5A6GpKahw9iCIHn6K18qM86g36nB14v-7TruPAev9iohjzzXSYRH3hUSRl_4SYt8smkA1olkZTiRARF3fqxJyv4w%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "33"
+        },
+        "response_length": 431
+    },
+    {
+        "number": 5,
+        "request": "GET /favicon.ico# HTTP/1.1\r\nHost: nrdp.prod.cloud.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#",
+        "request_length": 339,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.15983104705810547,
+            "Socket_Close_Time": 0.10200738906860352,
+            "Response_Time": 0.055867671966552734
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html;charset=utf-8",
+            "content-language": "en",
+            "content-length": "435",
+            "date": "Mon, 28 Aug 2023 18:40:24 GMT",
+            "via": "1.1 i-00991ee4b519e35a9 (eu-west-1)",
+            "server": "api-prod i-0fae9f64a06270c00",
+            "x-originating-url": "https://nrdp.prod.cloud.netflix.com/favicon.ico#",
+            "set-cookie": "nfvdid=BQFmAAEBEPNVqDknhaBuS6_y56-XTJZA_d-_7VHVorQ4deg1tsrvej_6lhiW3udo_jmAVoPKwywHZdVeQS_8WWPONymr0YxvvwjGy2WUci6ob6aiz20nVw%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "100"
+        },
+        "response_length": 431
+    },
+    {
+        "number": 6,
+        "request": "GET /about#V HTTP/1.1\r\nHost: nrdp.prod.cloud.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#V",
+        "request_length": 334,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.15937089920043945,
+            "Socket_Close_Time": 0.10398054122924805,
+            "Response_Time": 0.03287935256958008
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html;charset=utf-8",
+            "content-language": "en",
+            "content-length": "435",
+            "date": "Mon, 28 Aug 2023 18:40:27 GMT",
+            "via": "1.1 i-00bcd5fea605cc8ea (eu-west-1)",
+            "server": "api-prod i-0ca258c376022912a",
+            "x-originating-url": "https://nrdp.prod.cloud.netflix.com/about#V",
+            "set-cookie": "nfvdid=BQFmAAEBELE-U3sbGplZ-MYVoyHwAeBAgkFCHO1XCofhbVPSq0iINDMSiMuref7lGVSxMVqW8G7ro8FVvz0DHKusPehW-jOyxhsyIHxZ1jG-_OnIDCC_zw%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "113"
+        },
+        "response_length": 431
+    },
+    {
+        "number": 7,
+        "request": "GET /contact#C HTTP/1.1\r\nHost: nrdp.prod.cloud.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#C",
+        "request_length": 336,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07086181640625,
+            "Socket_Close_Time": 0.10747861862182617,
+            "Response_Time": 0.06760573387145996
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html;charset=utf-8",
+            "content-language": "en",
+            "content-length": "435",
+            "date": "Mon, 28 Aug 2023 18:40:31 GMT",
+            "via": "1.1 i-05bce7fcbe6ccecb2 (eu-west-1)",
+            "server": "api-prod i-0d12371e831f8e806",
+            "x-originating-url": "https://nrdp.prod.cloud.netflix.com/contact#C",
+            "set-cookie": "nfvdid=BQFmAAEBEJFs1moXuh7rXdezaidbL-dAOgkgrb_tqR7llmhg_JOD2fU4d-dI527KmhcG7Mko777-UbrY9eEMoTICeJ-kmIHchjTI_EnJhipK3xz18wSbRw%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "78"
+        },
+        "response_length": 431
+    },
+    {
+        "number": 8,
+        "request": "GET /#lAF HTTP/1.1\r\nHost: nrdp.prod.cloud.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#lAF",
+        "request_length": 331,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1635892391204834,
+            "Socket_Close_Time": 0.12517666816711426,
+            "Response_Time": 0.05746579170227051
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html;charset=utf-8",
+            "content-language": "en",
+            "content-length": "435",
+            "date": "Mon, 28 Aug 2023 18:40:35 GMT",
+            "via": "1.1 i-0433d36716748050e (eu-west-1)",
+            "server": "api-prod i-064d4a5b8ee6da967",
+            "x-originating-url": "https://nrdp.prod.cloud.netflix.com/#lAF",
+            "set-cookie": "nfvdid=BQFmAAEBEFs8LtFJk831zo3ifkKlnrxAuEVIihQsj__D8IwnyrEAFM84erYMvKbSJCzqz1gdEoZ73BpaOSLjC52sIfcWy90jfYQ-cI8Nl1-OgOVbZb0IVw%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "131"
+        },
+        "response_length": 431
+    },
+    {
+        "number": 9,
+        "request": "GET /favicon.ico#2bhq6Hyzv HTTP/1.1\r\nHost: nrdp.prod.cloud.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#2bhq6Hyzv",
+        "request_length": 348,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.14185810089111328,
+            "Socket_Close_Time": 0.10358071327209473,
+            "Response_Time": 0.046447038650512695
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html;charset=utf-8",
+            "content-language": "en",
+            "content-length": "435",
+            "date": "Mon, 28 Aug 2023 18:40:38 GMT",
+            "via": "1.1 i-0c3b8291d50eb284f (eu-west-1)",
+            "server": "api-prod i-071092b53275fca72",
+            "x-originating-url": "https://nrdp.prod.cloud.netflix.com/favicon.ico#2bhq6Hyzv",
+            "set-cookie": "nfvdid=BQFmAAEBENDndR4V2x6COT9ykMWyUHBAi0Acfy5MSS5ESmCTrGl5W7pdS5bC9MWtUNRUz1B9UEuaIi2xJey5DCSWd3XAeNYSdo6NAPHwsW5wZyoPzM8Xig%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "95"
+        },
+        "response_length": 431
+    }
+]

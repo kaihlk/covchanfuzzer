@@ -1,2 +1,18 @@
 experiment_no,comment,verbose,timestamp,covertchannel_request_number,covertchannel_connection_number,covertchannel_timing_number,fuzz_value,num_attempts,max_targets,max_workers,wait_between_request,base_line_check_frequency,target_list,target_subset_size,target_port,conn_timeout,nw_interface,use_ipv4,use_TLS,use_HTTP2,method,url,path,standard_subdomain,relative_uri,include_subdomain,headers,standard_headers,content
 1,ada,False,20230828_002324,11,1,1,0.8,10,20,10,0,0,target_list_subdomain.csv,3,,2,enp0s3,True,False,False,GET,,,www,True,True,,firefox_HTTP/1.1,random
+2,stop pcap per host,False,20230828_203620,11,1,1,0.8,10,100,10,0,0,target_list_subdomain.csv,10,,2,enp0s3,True,False,False,GET,,,www,True,True,,firefox_HTTP/1.1,random
+3,Test with TLS,False,20230828_204000,11,1,1,0.8,10,100,10,0,0,target_list_subdomain.csv,10,,2,enp0s3,True,True,False,GET,,,www,True,True,,firefox_HTTP/1.1,random
+4,adad,False,20230828_214819,11,1,1,0.8,10,10,10,0,0,target_list_subdomain.csv,5,,2,enp0s3,True,True,False,GET,,,www,True,True,,firefox_HTTP/1.1,random
+5,test,False,20230828_220608,11,1,1,0.8,10,10,10,0,0,target_list_subdomain.csv,5,,2,enp0s3,True,True,False,HTTP/1.1,GET,,,www,True,True,False,,firefox_HTTP/1.1,random
+6,afaf,False,20230828_221406,11,1,1,0.8,10,10,10,0,0,target_list_subdomain.csv,5,,2,enp0s3,True,True,False,HTTP/1.1,GET,,,www,True,True,False,,firefox_HTTP/1.1,random
+7,new path,False,20230828_222104,11,1,1,0.8,10,10,10,0,0,target_list_subdomain.csv,5,,2,enp0s3,True,True,False,HTTP/1.1,GET,,,www,True,True,False,,firefox_HTTP/1.1,random
+8,10,False,20230828_223723,10,1,1,0.8,10,10,10,0,0,target_list_subdomain.csv,5,,2,enp0s3,True,True,False,HTTP/1.1,GET,,,www,True,True,False,,firefox_HTTP/1.1,random
+9,adad,False,20230828_224447,10,1,1,0.8,10,10,10,0,0,target_list_subdomain.csv,5,,2,enp0s3,True,True,False,HTTP/1.1,GET,,,www,False,True,False,,firefox_HTTP/1.1,random
+10,TLS Redirect Test,False,20230828_230153,10,1,1,0.8,10,10,10,0,0,target_list_subdomain.csv,5,,2,enp0s3,True,True,False,HTTP/1.1,GET,,,www,False,True,False,,firefox_HTTP/1.1,random
+11,"relative url , tls",False,20230828_231540,10,1,1,0.8,10,10,10,0,0,target_list_subdomain.csv,5,,2,enp0s3,True,True,False,HTTP/1.1,GET,,,www,True,True,False,,firefox_HTTP/1.1,random
+12,add www. to host if empty,False,20230828_235508,10,1,1,0.8,10,10,10,0,0,target_list_subdomain.csv,5,True,,2,enp0s3,True,True,False,HTTP/1.1,GET,,,www,True,True,False,,firefox_HTTP/1.1,random
+13,Test www replacement,False,20230829_000325,10,1,1,0.8,10,10,10,0,0,target_list_subdomain.csv,5,True,,2,enp0s3,True,True,False,HTTP/1.1,GET,,,www,True,True,False,,firefox_HTTP/1.1,random
+14,Test subdomains,False,20230829_000408,10,1,1,0.8,10,10,10,0,0,target_list_subdomain.csv,5,True,,2,enp0s3,True,True,False,HTTP/1.1,GET,,,www,True,True,False,,firefox_HTTP/1.1,random
+15,test,False,20230829_000922,10,1,1,0.8,10,10,10,0,0,target_list_subdomain.csv,5,True,,2,enp0s3,True,True,False,HTTP/1.1,GET,,,www,True,True,False,,firefox_HTTP/1.1,random
+16,test,False,20230829_001538,10,1,1,0.8,10,10,10,0,0,target_list_subdomain.csv,5,True,,2,enp0s3,True,True,False,HTTP/1.1,GET,,,www,True,True,False,,firefox_HTTP/1.1,random
+17,subdomain test,False,20230829_002158,10,1,1,0.8,10,10,10,0,0,target_list_subdomain.csv,5,True,,2,enp0s3,True,True,False,HTTP/1.1,GET,,,www,True,True,False,,firefox_HTTP/1.1,random

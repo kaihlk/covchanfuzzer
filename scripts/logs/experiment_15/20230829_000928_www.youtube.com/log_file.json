@@ -1,0 +1,389 @@
+[
+    {
+        "number": 0,
+        "request": "GET /contact HTTP/1.1\r\nHost: www.youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.14531254768371582,
+            "Socket_Close_Time": 0.11181497573852539,
+            "Response_Time": 0.09307003021240234
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Mon, 28 Aug 2023 22:09:28 GMT",
+            "location": "https://consent.youtube.com/m?continue=https%3A%2F%2Fwww.youtube.com%2Fcontact%3Fcbrd%3D1&gl=DE&m=0&pc=yt&cm=2&hl=en&src=1",
+            "strict-transport-security": "max-age=31536000",
+            "x-frame-options": "SAMEORIGIN",
+            "permissions-policy": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*",
+            "origin-trial": "AvC9UlR6RDk2crliDsFl66RWLnTbHrDbp+DiY6AYz/PNQ4G4tdUTjrHYr2sghbkhGQAVxb7jaPTHpEVBz0uzQwkAAAB4eyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWaWV3WFJlcXVlc3RlZFdpdGhEZXByZWNhdGlvbiIsImV4cGlyeSI6MTcxOTUzMjc5OSwiaXNTdWJkb21haW4iOnRydWV9",
+            "report-to": "{\"group\":\"youtube_main\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/youtube_main\"}]}",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"youtube_main\"",
+            "p3p": "CP=\"This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en for more info.\"",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "set-cookie": "CONSENT=PENDING+633; expires=Wed, 27-Aug-2025 22:09:28 GMT; path=/; domain=.youtube.com; Secure",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET /blog HTTP/1.1\r\nHost: www.youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10050463676452637,
+            "Socket_Close_Time": 0.1042325496673584,
+            "Response_Time": 0.04479169845581055
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Mon, 28 Aug 2023 22:09:30 GMT",
+            "location": "https://blog.youtube/",
+            "x-frame-options": "SAMEORIGIN",
+            "strict-transport-security": "max-age=31536000",
+            "report-to": "{\"group\":\"youtube_main\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/youtube_main\"}]}",
+            "origin-trial": "AvC9UlR6RDk2crliDsFl66RWLnTbHrDbp+DiY6AYz/PNQ4G4tdUTjrHYr2sghbkhGQAVxb7jaPTHpEVBz0uzQwkAAAB4eyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWaWV3WFJlcXVlc3RlZFdpdGhEZXByZWNhdGlvbiIsImV4cGlyeSI6MTcxOTUzMjc5OSwiaXNTdWJkb21haW4iOnRydWV9",
+            "cross-origin-opener-policy-report-only": "same-origin; report-to=\"youtube_main\"",
+            "permissions-policy": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*",
+            "p3p": "CP=\"This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en for more info.\"",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "set-cookie": "CONSENT=PENDING+816; expires=Wed, 27-Aug-2025 22:09:30 GMT; path=/; domain=.youtube.com; Secure",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET /contact HTTP/1.1\r\nHost: www.youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.056250810623168945,
+            "Socket_Close_Time": 0.11128449440002441,
+            "Response_Time": 0.03912520408630371
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Mon, 28 Aug 2023 22:09:32 GMT",
+            "location": "https://consent.youtube.com/m?continue=https%3A%2F%2Fwww.youtube.com%2Fcontact%3Fcbrd%3D1&gl=DE&m=0&pc=yt&cm=2&hl=en&src=1",
+            "x-frame-options": "SAMEORIGIN",
+            "strict-transport-security": "max-age=31536000",
+            "permissions-policy": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*",
+            "origin-trial": "AvC9UlR6RDk2crliDsFl66RWLnTbHrDbp+DiY6AYz/PNQ4G4tdUTjrHYr2sghbkhGQAVxb7jaPTHpEVBz0uzQwkAAAB4eyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWaWV3WFJlcXVlc3RlZFdpdGhEZXByZWNhdGlvbiIsImV4cGlyeSI6MTcxOTUzMjc5OSwiaXNTdWJkb21haW4iOnRydWV9",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"youtube_main\"",
+            "report-to": "{\"group\":\"youtube_main\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/youtube_main\"}]}",
+            "p3p": "CP=\"This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en for more info.\"",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "set-cookie": "CONSENT=PENDING+007; expires=Wed, 27-Aug-2025 22:09:32 GMT; path=/; domain=.youtube.com; Secure",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET /contact HTTP/1.1\r\nHost: www.youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.19999241828918457,
+            "Socket_Close_Time": 0.14952754974365234,
+            "Response_Time": 0.03672170639038086
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Mon, 28 Aug 2023 22:09:34 GMT",
+            "location": "https://consent.youtube.com/m?continue=https%3A%2F%2Fwww.youtube.com%2Fcontact%3Fcbrd%3D1&gl=DE&m=0&pc=yt&cm=2&hl=en&src=1",
+            "x-frame-options": "SAMEORIGIN",
+            "strict-transport-security": "max-age=31536000",
+            "origin-trial": "AvC9UlR6RDk2crliDsFl66RWLnTbHrDbp+DiY6AYz/PNQ4G4tdUTjrHYr2sghbkhGQAVxb7jaPTHpEVBz0uzQwkAAAB4eyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWaWV3WFJlcXVlc3RlZFdpdGhEZXByZWNhdGlvbiIsImV4cGlyeSI6MTcxOTUzMjc5OSwiaXNTdWJkb21haW4iOnRydWV9",
+            "report-to": "{\"group\":\"youtube_main\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/youtube_main\"}]}",
+            "permissions-policy": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*",
+            "cross-origin-opener-policy-report-only": "same-origin-allow-popups; report-to=\"youtube_main\"",
+            "p3p": "CP=\"This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en for more info.\"",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "set-cookie": "CONSENT=PENDING+685; expires=Wed, 27-Aug-2025 22:09:34 GMT; path=/; domain=.youtube.com; Secure",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET /services HTTP/1.1\r\nHost: www.youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.32904648780822754,
+            "Socket_Close_Time": 0.11233162879943848,
+            "Response_Time": 0.042235374450683594
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Mon, 28 Aug 2023 22:09:37 GMT",
+            "location": "https://consent.youtube.com/m?continue=https%3A%2F%2Fwww.youtube.com%2Fservices%3Fcbrd%3D1&gl=DE&m=0&pc=yt&cm=2&hl=en&src=1",
+            "strict-transport-security": "max-age=31536000",
+            "x-frame-options": "SAMEORIGIN",
+            "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"youtube_main\"",
+            "origin-trial": "AvC9UlR6RDk2crliDsFl66RWLnTbHrDbp+DiY6AYz/PNQ4G4tdUTjrHYr2sghbkhGQAVxb7jaPTHpEVBz0uzQwkAAAB4eyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWaWV3WFJlcXVlc3RlZFdpdGhEZXByZWNhdGlvbiIsImV4cGlyeSI6MTcxOTUzMjc5OSwiaXNTdWJkb21haW4iOnRydWV9",
+            "permissions-policy": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*",
+            "report-to": "{\"group\":\"youtube_main\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/youtube_main\"}]}",
+            "p3p": "CP=\"This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en for more info.\"",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "set-cookie": "CONSENT=PENDING+008; expires=Wed, 27-Aug-2025 22:09:37 GMT; path=/; domain=.youtube.com; Secure",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 5,
+        "request": "GET /favicon.ico HTTP/1.1\r\nHost: www.youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07987570762634277,
+            "Socket_Close_Time": 0.11303186416625977,
+            "Response_Time": 0.011896133422851562
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "accept-ranges": "bytes",
+            "content-encoding": "gzip",
+            "cross-origin-resource-policy": "cross-origin",
+            "cross-origin-opener-policy-report-only": "same-origin; report-to=\"youtube-marketing\"",
+            "report-to": "{\"group\":\"youtube-marketing\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/youtube-marketing\"}]}",
+            "content-length": "180",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "x-xss-protection": "0",
+            "date": "Thu, 24 Aug 2023 18:41:21 GMT",
+            "expires": "Fri, 23 Aug 2024 18:41:21 GMT",
+            "cache-control": "public, max-age=31536000",
+            "age": "358098",
+            "last-modified": "Sun, 25 Jun 2023 02:58:00 GMT",
+            "content-type": "image/x-icon",
+            "vary": "Accept-Encoding",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 1150
+    },
+    {
+        "number": 6,
+        "request": "GET /about HTTP/1.1\r\nHost: www.youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06525731086730957,
+            "Socket_Close_Time": 0.1125936508178711,
+            "Response_Time": 0.04703807830810547
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://about.youtube/",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Mon, 28 Aug 2023 22:09:40 GMT",
+            "expires": "Mon, 28 Aug 2023 22:39:40 GMT",
+            "cache-control": "public, max-age=1800",
+            "server": "sffe",
+            "content-length": "219",
+            "x-xss-protection": "0",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 219
+    },
+    {
+        "number": 7,
+        "request": "GET /favicon.ico HTTP/1.1\r\nHost: www.youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.061987876892089844,
+            "Socket_Close_Time": 0.11262130737304688,
+            "Response_Time": 0.006943464279174805
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "accept-ranges": "bytes",
+            "content-encoding": "gzip",
+            "cross-origin-resource-policy": "cross-origin",
+            "cross-origin-opener-policy-report-only": "same-origin; report-to=\"youtube-marketing\"",
+            "report-to": "{\"group\":\"youtube-marketing\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/youtube-marketing\"}]}",
+            "content-length": "180",
+            "x-content-type-options": "nosniff",
+            "server": "sffe",
+            "x-xss-protection": "0",
+            "date": "Thu, 24 Aug 2023 18:41:21 GMT",
+            "expires": "Fri, 23 Aug 2024 18:41:21 GMT",
+            "cache-control": "public, max-age=31536000",
+            "age": "358101",
+            "last-modified": "Sun, 25 Jun 2023 02:58:00 GMT",
+            "content-type": "image/x-icon",
+            "vary": "Accept-Encoding",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 1150
+    },
+    {
+        "number": 8,
+        "request": "GET /contact HTTP/1.1\r\nHost: www.youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.3002164363861084,
+            "Socket_Close_Time": 0.11258912086486816,
+            "Response_Time": 0.040313720703125
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Mon, 28 Aug 2023 22:09:44 GMT",
+            "location": "https://consent.youtube.com/m?continue=https%3A%2F%2Fwww.youtube.com%2Fcontact%3Fcbrd%3D1&gl=DE&m=0&pc=yt&cm=2&hl=en&src=1",
+            "x-frame-options": "SAMEORIGIN",
+            "strict-transport-security": "max-age=31536000",
+            "report-to": "{\"group\":\"youtube_main\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/youtube_main\"}]}",
+            "cross-origin-opener-policy-report-only": "same-origin-allow-popups; report-to=\"youtube_main\"",
+            "origin-trial": "AvC9UlR6RDk2crliDsFl66RWLnTbHrDbp+DiY6AYz/PNQ4G4tdUTjrHYr2sghbkhGQAVxb7jaPTHpEVBz0uzQwkAAAB4eyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWaWV3WFJlcXVlc3RlZFdpdGhEZXByZWNhdGlvbiIsImV4cGlyeSI6MTcxOTUzMjc5OSwiaXNTdWJkb21haW4iOnRydWV9",
+            "permissions-policy": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*",
+            "p3p": "CP=\"This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en for more info.\"",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "set-cookie": "CONSENT=PENDING+264; expires=Wed, 27-Aug-2025 22:09:44 GMT; path=/; domain=.youtube.com; Secure",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET /blog HTTP/1.1\r\nHost: www.youtube.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08122682571411133,
+            "Socket_Close_Time": 0.11855554580688477,
+            "Response_Time": 0.02417755126953125
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "x-content-type-options": "nosniff",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Mon, 28 Aug 2023 22:09:45 GMT",
+            "location": "https://blog.youtube/",
+            "strict-transport-security": "max-age=31536000",
+            "x-frame-options": "SAMEORIGIN",
+            "report-to": "{\"group\":\"youtube_main\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/youtube_main\"}]}",
+            "origin-trial": "AvC9UlR6RDk2crliDsFl66RWLnTbHrDbp+DiY6AYz/PNQ4G4tdUTjrHYr2sghbkhGQAVxb7jaPTHpEVBz0uzQwkAAAB4eyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWaWV3WFJlcXVlc3RlZFdpdGhEZXByZWNhdGlvbiIsImV4cGlyeSI6MTcxOTUzMjc5OSwiaXNTdWJkb21haW4iOnRydWV9",
+            "cross-origin-opener-policy-report-only": "same-origin; report-to=\"youtube_main\"",
+            "permissions-policy": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*",
+            "p3p": "CP=\"This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en for more info.\"",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "set-cookie": "CONSENT=PENDING+081; expires=Wed, 27-Aug-2025 22:09:45 GMT; path=/; domain=.youtube.com; Secure",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+        },
+        "response_length": 0
+    }
+]

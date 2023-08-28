@@ -1,0 +1,68 @@
+{
+    "configuration_variables": {
+        "experiment_no": 4,
+        "comment": "TlS, Standard Request",
+        "verbose": false,
+        "timestamp": "20230828_204253",
+        "covertchannel_request_number": 1,
+        "covertchannel_connection_number": 1,
+        "covertchannel_timing_number": 1,
+        "fuzz_value": 0.8,
+        "num_attempts": 10,
+        "max_targets": 100,
+        "max_workers": 10,
+        "wait_between_request": 0,
+        "base_line_check_frequency": 0,
+        "target_list": "target_list_subdomain.csv",
+        "target_subset_size": 10,
+        "target_port": null,
+        "conn_timeout": 2,
+        "nw_interface": "enp0s3",
+        "use_ipv4": true,
+        "use_TLS": true,
+        "use_HTTP2": false,
+        "method": "GET",
+        "url": "",
+        "path": "",
+        "standard_subdomain": "www",
+        "relative_uri": true,
+        "include_subdomain": true,
+        "headers": null,
+        "standard_headers": "firefox_HTTP/1.1",
+        "content": "random"
+    },
+    "result_variables": {
+        "host_ip_info": {
+            "host": "youtube.com",
+            "socket_info": [
+                [
+                    2,
+                    1,
+                    6,
+                    "",
+                    [
+                        "142.251.209.142",
+                        443
+                    ]
+                ]
+            ],
+            "ip_address": "142.251.209.142",
+            "port": 443
+        },
+        "covertchannel_request_name": "<class 'http1_request_builder.HTTP1_Request_Builder'>",
+        "covertchannel_timing_name": "<class 'http1_request_builder.HTTP1_Request_Builder'>",
+        "Received_Status_Codes": {},
+        "Logged_Messages": 0,
+        "Logged_Messages_of_scheduled_attempts": 0.0,
+        "Response Properties": {
+            "Messages": 0,
+            "1xx": 0,
+            "2xx": 0,
+            "3xx": 0,
+            "4xx": 0,
+            "5xx": 0,
+            "9xx": 0
+        }
+    },
+    "statistics": {}
+}

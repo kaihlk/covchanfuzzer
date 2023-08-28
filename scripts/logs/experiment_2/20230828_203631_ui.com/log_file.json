@@ -1,0 +1,372 @@
+[
+    {
+        "number": 0,
+        "request": "GET /index.html# HTTP/1.1\r\nHost: ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0093231201171875,
+            "Socket_Close_Time": 0.1125795841217041,
+            "Response_Time": 0.22952795028686523
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "CloudFront",
+            "date": "Mon, 28 Aug 2023 18:36:34 GMT",
+            "content-type": "text/html",
+            "content-length": "167",
+            "connection": "keep-alive",
+            "location": "https://ui.com/index.html#",
+            "x-cache": "Redirect from cloudfront",
+            "via": "1.1 7ef2f2ef10b33b89c251a780db8113ec.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "JiC3xSLqM92h2hf-hrG8Qi-04H4RkEAUl8OywW6_ZVOsWqaGwfYW3Q==",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "referrer-policy": "same-origin",
+            "x-content-type-options": "nosniff",
+            "vary": "Origin"
+        },
+        "response_length": 167
+    },
+    {
+        "number": 1,
+        "request": "GET /support#VNt HTTP/1.1\r\nHost: ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#VNt",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.011762142181396484,
+            "Socket_Close_Time": 0.11262845993041992,
+            "Response_Time": 0.012663125991821289
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "CloudFront",
+            "date": "Mon, 28 Aug 2023 18:36:42 GMT",
+            "content-type": "text/html",
+            "content-length": "167",
+            "connection": "keep-alive",
+            "location": "https://ui.com/support#VNt",
+            "x-cache": "Redirect from cloudfront",
+            "via": "1.1 55e88467535621ef2872d6bda4cd68d4.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "RpNOSrTpooiTu8k-5kdRQGaCQIWSihMBpmJyhaBcSSgoVApTarJ7Lw==",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "referrer-policy": "same-origin",
+            "x-content-type-options": "nosniff",
+            "vary": "Origin"
+        },
+        "response_length": 167
+    },
+    {
+        "number": 2,
+        "request": "GET /services#e HTTP/1.1\r\nHost: ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#e",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0058367252349853516,
+            "Socket_Close_Time": 0.10562705993652344,
+            "Response_Time": 0.006838560104370117
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "CloudFront",
+            "date": "Mon, 28 Aug 2023 18:36:48 GMT",
+            "content-type": "text/html",
+            "content-length": "167",
+            "connection": "keep-alive",
+            "location": "https://ui.com/services#e",
+            "x-cache": "Redirect from cloudfront",
+            "via": "1.1 3e1ef4d97b631ed88692350a143ae478.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "WOuTa-LHLdqlFrQCB9Rc5OIFj4v1TOazfY3csbwH3zMjBGSxNSMnqw==",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "referrer-policy": "same-origin",
+            "x-content-type-options": "nosniff",
+            "vary": "Origin"
+        },
+        "response_length": 167
+    },
+    {
+        "number": 3,
+        "request": "GET /index.html#2rgX HTTP/1.1\r\nHost: ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#2rgX",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.006934642791748047,
+            "Socket_Close_Time": 0.11228585243225098,
+            "Response_Time": 0.009661674499511719
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "CloudFront",
+            "date": "Mon, 28 Aug 2023 18:36:54 GMT",
+            "content-type": "text/html",
+            "content-length": "167",
+            "connection": "keep-alive",
+            "location": "https://ui.com/index.html#2rgX",
+            "x-cache": "Redirect from cloudfront",
+            "via": "1.1 1aee04c92e0fa96227db8abc078ee82e.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "GXwBgbjGHnE3xy3aiXiSQkkZFF0eYDwZpI6APwQjGk_EB24vbq1X8g==",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "referrer-policy": "same-origin",
+            "x-content-type-options": "nosniff",
+            "vary": "Origin"
+        },
+        "response_length": 167
+    },
+    {
+        "number": 4,
+        "request": "GET /favicon.ico#oc7 HTTP/1.1\r\nHost: ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#oc7",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.008571863174438477,
+            "Socket_Close_Time": 0.11492323875427246,
+            "Response_Time": 0.00690007209777832
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "CloudFront",
+            "date": "Mon, 28 Aug 2023 18:37:00 GMT",
+            "content-type": "text/html",
+            "content-length": "167",
+            "connection": "keep-alive",
+            "location": "https://ui.com/favicon.ico#oc7",
+            "x-cache": "Redirect from cloudfront",
+            "via": "1.1 d7eb6f923d229dec800e4e07bc6525ea.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "AudqpW-dVUy_KjFVz-HIT9PChJFakxxL09G9Ph_Rxs3XsAwC-LVl1A==",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "referrer-policy": "same-origin",
+            "x-content-type-options": "nosniff",
+            "vary": "Origin"
+        },
+        "response_length": 167
+    },
+    {
+        "number": 5,
+        "request": "GET /services#f81L HTTP/1.1\r\nHost: ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#f81L",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.030421733856201172,
+            "Socket_Close_Time": 0.12386107444763184,
+            "Response_Time": 0.07962775230407715
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "CloudFront",
+            "date": "Mon, 28 Aug 2023 18:37:16 GMT",
+            "content-type": "text/html",
+            "content-length": "167",
+            "connection": "keep-alive",
+            "location": "https://ui.com/services#f81L",
+            "x-cache": "Redirect from cloudfront",
+            "via": "1.1 99ca88e83be89103b0ba651c261db4c4.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "zOqximCh87H8Ifnqj7K9A-e5_5ppJQr009aWfbiw6M7A8dV3wYcBeg==",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "referrer-policy": "same-origin",
+            "x-content-type-options": "nosniff",
+            "vary": "Origin"
+        },
+        "response_length": 167
+    },
+    {
+        "number": 6,
+        "request": "GET /support#W HTTP/1.1\r\nHost: ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#W",
+        "request_length": 315,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.017853260040283203,
+            "Socket_Close_Time": 0.10650062561035156,
+            "Response_Time": 0.00686955451965332
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "CloudFront",
+            "date": "Mon, 28 Aug 2023 18:37:22 GMT",
+            "content-type": "text/html",
+            "content-length": "167",
+            "connection": "keep-alive",
+            "location": "https://ui.com/support#W",
+            "x-cache": "Redirect from cloudfront",
+            "via": "1.1 c4c673bb688f3b033f2c0ef943ea98e2.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "SgNNrKRCwxwTPY0OcY2C8Vmv_XqnkFYMrQltuFhF6K0E34U6HgURwg==",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "referrer-policy": "same-origin",
+            "x-content-type-options": "nosniff",
+            "vary": "Origin"
+        },
+        "response_length": 167
+    },
+    {
+        "number": 7,
+        "request": "GET /about#j HTTP/1.1\r\nHost: ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#j",
+        "request_length": 313,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.015841007232666016,
+            "Socket_Close_Time": 0.10586190223693848,
+            "Response_Time": 0.012279510498046875
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "CloudFront",
+            "date": "Mon, 28 Aug 2023 18:37:28 GMT",
+            "content-type": "text/html",
+            "content-length": "167",
+            "connection": "keep-alive",
+            "location": "https://ui.com/about#j",
+            "x-cache": "Redirect from cloudfront",
+            "via": "1.1 81ecaa6db2d0fa9d47412a499ce429f2.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "k_BD699ug7vhQEnWY4MYAZJgJa5KHczbgnXuDof6g9R_XUGajuKm7w==",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "referrer-policy": "same-origin",
+            "x-content-type-options": "nosniff",
+            "vary": "Origin"
+        },
+        "response_length": 167
+    },
+    {
+        "number": 8,
+        "request": "GET /index.php#eG2b HTTP/1.1\r\nHost: ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#eG2b",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.006045341491699219,
+            "Socket_Close_Time": 0.11179137229919434,
+            "Response_Time": 0.005933523178100586
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "CloudFront",
+            "date": "Mon, 28 Aug 2023 18:37:34 GMT",
+            "content-type": "text/html",
+            "content-length": "167",
+            "connection": "keep-alive",
+            "location": "https://ui.com/index.php#eG2b",
+            "x-cache": "Redirect from cloudfront",
+            "via": "1.1 84c210424bc648cf84cb9425addd241e.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "-MA21WoPwBwNjJrLwqCvw6XG5NjDINpRZcSxnb9I3wMgQ4utDk1OIw==",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "referrer-policy": "same-origin",
+            "x-content-type-options": "nosniff",
+            "vary": "Origin"
+        },
+        "response_length": 167
+    },
+    {
+        "number": 9,
+        "request": "GET /favicon.ico#LN HTTP/1.1\r\nHost: ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#LN",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.012089729309082031,
+            "Socket_Close_Time": 0.11328649520874023,
+            "Response_Time": 0.005821943283081055
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "CloudFront",
+            "date": "Mon, 28 Aug 2023 18:37:40 GMT",
+            "content-type": "text/html",
+            "content-length": "167",
+            "connection": "keep-alive",
+            "location": "https://ui.com/favicon.ico#LN",
+            "x-cache": "Redirect from cloudfront",
+            "via": "1.1 6c6df67b2ed9c5a782b5d18f968a4a76.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "r88fE1aXMMD4OYk52rQnMjqGpI8PHZWQP00YFAK7Ll1fytjuD_DbiQ==",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "referrer-policy": "same-origin",
+            "x-content-type-options": "nosniff",
+            "vary": "Origin"
+        },
+        "response_length": 167
+    }
+]

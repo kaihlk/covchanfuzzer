@@ -1,0 +1,380 @@
+[
+    {
+        "number": 0,
+        "request": "GET /favicon.ico HTTP/1.1\r\nHost: www.apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11187434196472168,
+            "Socket_Close_Time": 0.5170433521270752,
+            "Response_Time": 0.06687307357788086
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "last-modified": "Tue, 04 Apr 2023 20:18:04 GMT",
+            "server": "Apple",
+            "accept-ranges": "bytes",
+            "x-content-type-options": "nosniff",
+            "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+            "x-frame-options": "SAMEORIGIN",
+            "x-xss-protection": "1; mode=block",
+            "referrer-policy": "no-referrer-when-downgrade",
+            "content-security-policy": "default-src 'self' blob: data: *.akamaized.net *.apple.com *.apple-mapkit.com *.cdn-apple.com *.organicfruitapps.com; child-src blob: embed.music.apple.com embed.podcasts.apple.com https://recyclingprogram.apple.com swdlp.apple.com www.apple.com www.instagram.com platform.twitter.com www.youtube-nocookie.com; img-src 'unsafe-inline' blob: data: *.apple.com *.apple-mapkit.com *.cdn-apple.com *.mzstatic.com; script-src 'unsafe-inline' 'unsafe-eval' blob: *.apple.com *.apple-mapkit.com www.instagram.com platform.twitter.com; style-src 'unsafe-inline' *.apple.com",
+            "content-type": "image/x-icon",
+            "content-length": "22382",
+            "cache-control": "max-age=265",
+            "expires": "Mon, 28 Aug 2023 22:26:25 GMT",
+            "date": "Mon, 28 Aug 2023 22:22:00 GMT",
+            "x-cache": "TCP_MEM_HIT from a2-17-34-234.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "set-cookie": "geo=DE; path=/; domain=.apple.com"
+        },
+        "response_length": 15097
+    },
+    {
+        "number": 1,
+        "request": "GET /index.php HTTP/1.1\r\nHost: www.apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.06411957740783691,
+            "Socket_Close_Time": 0.11403799057006836,
+            "Response_Time": 0.5190129280090332
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "Apple",
+            "content-type": "text/html; charset=utf-8",
+            "x-frame-options": "SAMEORIGIN",
+            "x-xss-protection": "1; mode=block",
+            "x-content-type-options": "nosniff",
+            "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+            "content-encoding": "gzip",
+            "referrer-policy": "no-referrer-when-downgrade",
+            "content-security-policy": "default-src 'self' blob: data: *.akamaized.net *.apple.com *.apple-mapkit.com *.cdn-apple.com *.organicfruitapps.com; child-src blob: embed.music.apple.com embed.podcasts.apple.com https://recyclingprogram.apple.com swdlp.apple.com www.apple.com www.instagram.com platform.twitter.com www.youtube-nocookie.com; img-src 'unsafe-inline' blob: data: *.apple.com *.apple-mapkit.com *.cdn-apple.com *.mzstatic.com; script-src 'unsafe-inline' 'unsafe-eval' blob: *.apple.com *.apple-mapkit.com www.instagram.com platform.twitter.com; style-src 'unsafe-inline' *.apple.com",
+            "content-length": "29238",
+            "cache-control": "max-age=180",
+            "expires": "Mon, 28 Aug 2023 22:25:04 GMT",
+            "date": "Mon, 28 Aug 2023 22:22:04 GMT",
+            "x-cache": "TCP_MISS from a2-17-34-234.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "vary": "Accept-Encoding",
+            "x-cache-remote": "TCP_MISS from a23-72-253-24.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "set-cookie": "geo=DE; path=/; domain=.apple.com"
+        },
+        "response_length": 661
+    },
+    {
+        "number": 2,
+        "request": "GET /support HTTP/1.1\r\nHost: www.apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09307050704956055,
+            "Socket_Close_Time": 0.11529922485351562,
+            "Response_Time": 0.0073850154876708984
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "Apple",
+            "content-type": "text/html; charset=iso-8859-1",
+            "content-length": "233",
+            "location": "https://support.apple.com",
+            "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block",
+            "referrer-policy": "no-referrer-when-downgrade",
+            "content-security-policy": "default-src 'self' blob: data: *.akamaized.net *.apple.com *.apple-mapkit.com *.cdn-apple.com *.organicfruitapps.com; child-src blob: embed.music.apple.com embed.podcasts.apple.com https://recyclingprogram.apple.com swdlp.apple.com www.apple.com www.instagram.com platform.twitter.com www.youtube-nocookie.com; img-src 'unsafe-inline' blob: data: *.apple.com *.apple-mapkit.com *.cdn-apple.com *.mzstatic.com; script-src 'unsafe-inline' 'unsafe-eval' blob: *.apple.com *.apple-mapkit.com www.instagram.com platform.twitter.com; style-src 'unsafe-inline' *.apple.com",
+            "cache-control": "max-age=220",
+            "expires": "Mon, 28 Aug 2023 22:25:45 GMT",
+            "date": "Mon, 28 Aug 2023 22:22:05 GMT",
+            "x-cache": "TCP_MEM_HIT from a2-17-34-234.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "set-cookie": "geo=DE; path=/; domain=.apple.com"
+        },
+        "response_length": 233
+    },
+    {
+        "number": 3,
+        "request": "GET /favicon.ico HTTP/1.1\r\nHost: www.apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico",
+        "request_length": 324,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.054840803146362305,
+            "Socket_Close_Time": 0.1123495101928711,
+            "Response_Time": 0.02608180046081543
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "last-modified": "Tue, 04 Apr 2023 20:18:04 GMT",
+            "server": "Apple",
+            "accept-ranges": "bytes",
+            "x-content-type-options": "nosniff",
+            "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+            "x-frame-options": "SAMEORIGIN",
+            "x-xss-protection": "1; mode=block",
+            "referrer-policy": "no-referrer-when-downgrade",
+            "content-security-policy": "default-src 'self' blob: data: *.akamaized.net *.apple.com *.apple-mapkit.com *.cdn-apple.com *.organicfruitapps.com; child-src blob: embed.music.apple.com embed.podcasts.apple.com https://recyclingprogram.apple.com swdlp.apple.com www.apple.com www.instagram.com platform.twitter.com www.youtube-nocookie.com; img-src 'unsafe-inline' blob: data: *.apple.com *.apple-mapkit.com *.cdn-apple.com *.mzstatic.com; script-src 'unsafe-inline' 'unsafe-eval' blob: *.apple.com *.apple-mapkit.com www.instagram.com platform.twitter.com; style-src 'unsafe-inline' *.apple.com",
+            "content-type": "image/x-icon",
+            "content-length": "22382",
+            "cache-control": "max-age=259",
+            "expires": "Mon, 28 Aug 2023 22:26:25 GMT",
+            "date": "Mon, 28 Aug 2023 22:22:06 GMT",
+            "x-cache": "TCP_MEM_HIT from a2-17-34-234.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "set-cookie": "geo=DE; path=/; domain=.apple.com"
+        },
+        "response_length": 15097
+    },
+    {
+        "number": 4,
+        "request": "GET /support HTTP/1.1\r\nHost: www.apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05480146408081055,
+            "Socket_Close_Time": 0.10817456245422363,
+            "Response_Time": 0.2269127368927002
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "Apple",
+            "content-type": "text/html; charset=iso-8859-1",
+            "content-length": "233",
+            "location": "https://support.apple.com",
+            "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block",
+            "referrer-policy": "no-referrer-when-downgrade",
+            "content-security-policy": "default-src 'self' blob: data: *.akamaized.net *.apple.com *.apple-mapkit.com *.cdn-apple.com *.organicfruitapps.com; child-src blob: embed.music.apple.com embed.podcasts.apple.com https://recyclingprogram.apple.com swdlp.apple.com www.apple.com www.instagram.com platform.twitter.com www.youtube-nocookie.com; img-src 'unsafe-inline' blob: data: *.apple.com *.apple-mapkit.com *.cdn-apple.com *.mzstatic.com; script-src 'unsafe-inline' 'unsafe-eval' blob: *.apple.com *.apple-mapkit.com www.instagram.com platform.twitter.com; style-src 'unsafe-inline' *.apple.com",
+            "cache-control": "max-age=215",
+            "expires": "Mon, 28 Aug 2023 22:25:45 GMT",
+            "date": "Mon, 28 Aug 2023 22:22:10 GMT",
+            "x-cache": "TCP_MEM_HIT from a2-17-34-234.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "set-cookie": "geo=DE; path=/; domain=.apple.com"
+        },
+        "response_length": 233
+    },
+    {
+        "number": 5,
+        "request": "GET /support HTTP/1.1\r\nHost: www.apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09656620025634766,
+            "Socket_Close_Time": 0.11204338073730469,
+            "Response_Time": 0.013040781021118164
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "Apple",
+            "content-type": "text/html; charset=iso-8859-1",
+            "content-length": "233",
+            "location": "https://support.apple.com",
+            "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block",
+            "referrer-policy": "no-referrer-when-downgrade",
+            "content-security-policy": "default-src 'self' blob: data: *.akamaized.net *.apple.com *.apple-mapkit.com *.cdn-apple.com *.organicfruitapps.com; child-src blob: embed.music.apple.com embed.podcasts.apple.com https://recyclingprogram.apple.com swdlp.apple.com www.apple.com www.instagram.com platform.twitter.com www.youtube-nocookie.com; img-src 'unsafe-inline' blob: data: *.apple.com *.apple-mapkit.com *.cdn-apple.com *.mzstatic.com; script-src 'unsafe-inline' 'unsafe-eval' blob: *.apple.com *.apple-mapkit.com www.instagram.com platform.twitter.com; style-src 'unsafe-inline' *.apple.com",
+            "cache-control": "max-age=212",
+            "expires": "Mon, 28 Aug 2023 22:25:43 GMT",
+            "date": "Mon, 28 Aug 2023 22:22:11 GMT",
+            "x-cache": "TCP_MEM_HIT from a2-17-34-242.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "set-cookie": "geo=DE; path=/; domain=.apple.com"
+        },
+        "response_length": 233
+    },
+    {
+        "number": 6,
+        "request": "GET /index.html HTTP/1.1\r\nHost: www.apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09267759323120117,
+            "Socket_Close_Time": 0.11185574531555176,
+            "Response_Time": 0.04852461814880371
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "Apple",
+            "content-type": "text/html; charset=utf-8",
+            "set-cookie": "geo=DE; path=/; domain=.apple.com",
+            "x-frame-options": "SAMEORIGIN",
+            "vary": "Accept-Encoding",
+            "content-security-policy": "default-src 'self' blob: data: *.akamaized.net *.apple.com *.apple-mapkit.com *.cdn-apple.com *.organicfruitapps.com; child-src blob: embed.music.apple.com embed.podcasts.apple.com https://recyclingprogram.apple.com swdlp.apple.com www.apple.com www.instagram.com platform.twitter.com www.youtube-nocookie.com; img-src 'unsafe-inline' blob: data: *.apple.com *.apple-mapkit.com *.cdn-apple.com *.mzstatic.com; script-src 'unsafe-inline' 'unsafe-eval' blob: *.apple.com *.apple-mapkit.com www.instagram.com platform.twitter.com; style-src 'unsafe-inline' *.apple.com",
+            "referrer-policy": "no-referrer-when-downgrade",
+            "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block",
+            "content-encoding": "gzip",
+            "cache-control": "max-age=0",
+            "expires": "Mon, 28 Aug 2023 22:22:13 GMT",
+            "date": "Mon, 28 Aug 2023 22:22:13 GMT",
+            "transfer-encoding": "chunked",
+            "x-cache": "TCP_MEM_HIT from a2-17-34-242.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "Transfer-Encoding"
+        },
+        "response_length": 14271
+    },
+    {
+        "number": 7,
+        "request": "GET /services HTTP/1.1\r\nHost: www.apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07930970191955566,
+            "Socket_Close_Time": 0.11313319206237793,
+            "Response_Time": 0.14373087882995605
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "Apple",
+            "content-type": "text/html; charset=iso-8859-1",
+            "content-length": "238",
+            "location": "https://www.apple.com/services/",
+            "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block",
+            "referrer-policy": "no-referrer-when-downgrade",
+            "content-security-policy": "default-src 'self' blob: data: *.akamaized.net *.apple.com *.apple-mapkit.com *.cdn-apple.com *.organicfruitapps.com; child-src blob: embed.music.apple.com embed.podcasts.apple.com https://recyclingprogram.apple.com swdlp.apple.com www.apple.com www.instagram.com platform.twitter.com www.youtube-nocookie.com; img-src 'unsafe-inline' blob: data: *.apple.com *.apple-mapkit.com *.cdn-apple.com *.mzstatic.com; script-src 'unsafe-inline' 'unsafe-eval' blob: *.apple.com *.apple-mapkit.com www.instagram.com platform.twitter.com; style-src 'unsafe-inline' *.apple.com",
+            "cache-control": "max-age=600",
+            "expires": "Mon, 28 Aug 2023 22:32:15 GMT",
+            "date": "Mon, 28 Aug 2023 22:22:15 GMT",
+            "x-cache": "TCP_REFRESH_MISS from a2-17-34-242.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (S)",
+            "connection": "keep-alive",
+            "x-cache-remote": "TCP_REFRESH_MISS from a23-72-253-24.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (S)",
+            "set-cookie": "geo=DE; path=/; domain=.apple.com"
+        },
+        "response_length": 238
+    },
+    {
+        "number": 8,
+        "request": "GET /support HTTP/1.1\r\nHost: www.apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08272171020507812,
+            "Socket_Close_Time": 0.11158084869384766,
+            "Response_Time": 0.018414735794067383
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "Apple",
+            "content-type": "text/html; charset=iso-8859-1",
+            "content-length": "233",
+            "location": "https://support.apple.com",
+            "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "x-xss-protection": "1; mode=block",
+            "referrer-policy": "no-referrer-when-downgrade",
+            "content-security-policy": "default-src 'self' blob: data: *.akamaized.net *.apple.com *.apple-mapkit.com *.cdn-apple.com *.organicfruitapps.com; child-src blob: embed.music.apple.com embed.podcasts.apple.com https://recyclingprogram.apple.com swdlp.apple.com www.apple.com www.instagram.com platform.twitter.com www.youtube-nocookie.com; img-src 'unsafe-inline' blob: data: *.apple.com *.apple-mapkit.com *.cdn-apple.com *.mzstatic.com; script-src 'unsafe-inline' 'unsafe-eval' blob: *.apple.com *.apple-mapkit.com www.instagram.com platform.twitter.com; style-src 'unsafe-inline' *.apple.com",
+            "cache-control": "max-age=207",
+            "expires": "Mon, 28 Aug 2023 22:25:43 GMT",
+            "date": "Mon, 28 Aug 2023 22:22:16 GMT",
+            "x-cache": "TCP_MEM_HIT from a2-17-34-242.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "set-cookie": "geo=DE; path=/; domain=.apple.com"
+        },
+        "response_length": 233
+    },
+    {
+        "number": 9,
+        "request": "GET /blog HTTP/1.1\r\nHost: www.apple.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 404,
+        "reason_phrase": "Not Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07593798637390137,
+            "Socket_Close_Time": 0.11249256134033203,
+            "Response_Time": 0.8473496437072754
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "Apple",
+            "content-type": "text/html; charset=utf-8",
+            "x-frame-options": "SAMEORIGIN",
+            "x-xss-protection": "1; mode=block",
+            "x-content-type-options": "nosniff",
+            "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+            "content-encoding": "gzip",
+            "referrer-policy": "no-referrer-when-downgrade",
+            "content-security-policy": "default-src 'self' blob: data: *.akamaized.net *.apple.com *.apple-mapkit.com *.cdn-apple.com *.organicfruitapps.com; child-src blob: embed.music.apple.com embed.podcasts.apple.com https://recyclingprogram.apple.com swdlp.apple.com www.apple.com www.instagram.com platform.twitter.com www.youtube-nocookie.com; img-src 'unsafe-inline' blob: data: *.apple.com *.apple-mapkit.com *.cdn-apple.com *.mzstatic.com; script-src 'unsafe-inline' 'unsafe-eval' blob: *.apple.com *.apple-mapkit.com www.instagram.com platform.twitter.com; style-src 'unsafe-inline' *.apple.com",
+            "content-length": "29238",
+            "cache-control": "max-age=180",
+            "expires": "Mon, 28 Aug 2023 22:25:19 GMT",
+            "date": "Mon, 28 Aug 2023 22:22:19 GMT",
+            "x-cache": "TCP_MISS from a2-17-34-234.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "connection": "keep-alive",
+            "vary": "Accept-Encoding",
+            "x-cache-remote": "TCP_MISS from a2-19-195-20.deploy.akamaitechnologies.com (AkamaiGHost/11.2.2-50274567) (-)",
+            "set-cookie": "geo=DE; path=/; domain=.apple.com"
+        },
+        "response_length": 662
+    }
+]

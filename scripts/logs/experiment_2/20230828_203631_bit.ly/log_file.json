@@ -1,0 +1,279 @@
+[
+    {
+        "number": 0,
+        "request": "GET /index.html# HTTP/1.1\r\nHost: bit.ly\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.025069475173950195,
+            "Socket_Close_Time": 0.11363863945007324,
+            "Response_Time": 0.11046099662780762
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 28 Aug 2023 18:36:34 GMT",
+            "content-type": "text/html; charset=UTF-8",
+            "content-length": "0",
+            "location": "https://bitly.com/index.html#",
+            "pragma": "no-cache",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "x-frame-options": "DENY",
+            "via": "1.1 google"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET /support#VNt HTTP/1.1\r\nHost: bit.ly\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#VNt",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0213773250579834,
+            "Socket_Close_Time": 0.10583066940307617,
+            "Response_Time": 0.10485053062438965
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 28 Aug 2023 18:36:42 GMT",
+            "content-length": "0",
+            "via": "1.1 google"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET /services#e HTTP/1.1\r\nHost: bit.ly\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#e",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.019682884216308594,
+            "Socket_Close_Time": 0.11558723449707031,
+            "Response_Time": 0.11431884765625
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 28 Aug 2023 18:36:47 GMT",
+            "content-length": "0",
+            "via": "1.1 google"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET /index.html#2rgX HTTP/1.1\r\nHost: bit.ly\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#2rgX",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.020468473434448242,
+            "Socket_Close_Time": 0.1179044246673584,
+            "Response_Time": 0.12214183807373047
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 28 Aug 2023 18:36:53 GMT",
+            "content-type": "text/html; charset=UTF-8",
+            "content-length": "0",
+            "location": "https://bitly.com/index.html#2rgX",
+            "pragma": "no-cache",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "x-frame-options": "DENY",
+            "via": "1.1 google"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET /favicon.ico#oc7 HTTP/1.1\r\nHost: bit.ly\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#oc7",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.013610363006591797,
+            "Socket_Close_Time": 0.11006784439086914,
+            "Response_Time": 0.1127781867980957
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 28 Aug 2023 18:37:00 GMT",
+            "content-type": "image/x-icon",
+            "content-length": "5430",
+            "last-modified": "Fri, 24 Jun 2022 13:24:58 GMT",
+            "etag": "\"62b5bb2a-1536\"",
+            "expires": "Mon, 04 Sep 2023 18:37:00 GMT",
+            "cache-control": "max-age=604800",
+            "accept-ranges": "bytes",
+            "via": "1.1 google"
+        },
+        "response_length": 5366
+    },
+    {
+        "number": 5,
+        "request": "GET /services#f81L HTTP/1.1\r\nHost: bit.ly\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#f81L",
+        "request_length": 319,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 1.020815372467041,
+            "Socket_Close_Time": 0.10845065116882324,
+            "Response_Time": 0.10460424423217773
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 28 Aug 2023 18:37:10 GMT",
+            "content-length": "0",
+            "via": "1.1 google"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET /support#W HTTP/1.1\r\nHost: bit.ly\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#W",
+        "request_length": 315,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.019765138626098633,
+            "Socket_Close_Time": 0.11172866821289062,
+            "Response_Time": 0.1052556037902832
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 28 Aug 2023 18:37:21 GMT",
+            "content-length": "0",
+            "via": "1.1 google"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET /about#j HTTP/1.1\r\nHost: bit.ly\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#j",
+        "request_length": 313,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02316451072692871,
+            "Socket_Close_Time": 0.1262216567993164,
+            "Response_Time": 0.12247014045715332
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 28 Aug 2023 18:37:28 GMT",
+            "content-length": "0",
+            "via": "1.1 google"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET /index.php#eG2b HTTP/1.1\r\nHost: bit.ly\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#eG2b",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.01960277557373047,
+            "Socket_Close_Time": 0.12493062019348145,
+            "Response_Time": 0.3287317752838135
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 28 Aug 2023 18:37:34 GMT",
+            "content-type": "text/html; charset=UTF-8",
+            "content-length": "0",
+            "location": "https://bitly.com/index.php#eG2b",
+            "pragma": "no-cache",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "x-frame-options": "DENY",
+            "via": "1.1 google"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET /favicon.ico#LN HTTP/1.1\r\nHost: bit.ly\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#LN",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.020886898040771484,
+            "Socket_Close_Time": 0.1237940788269043,
+            "Response_Time": 0.11070060729980469
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 28 Aug 2023 18:37:40 GMT",
+            "content-type": "image/x-icon",
+            "content-length": "5430",
+            "last-modified": "Fri, 24 Jun 2022 12:44:44 GMT",
+            "etag": "\"62b5b1bc-1536\"",
+            "expires": "Mon, 04 Sep 2023 18:37:40 GMT",
+            "cache-control": "max-age=604800",
+            "accept-ranges": "bytes",
+            "via": "1.1 google"
+        },
+        "response_length": 5366
+    }
+]

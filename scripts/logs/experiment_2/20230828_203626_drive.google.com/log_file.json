@@ -1,0 +1,320 @@
+[
+    {
+        "number": 0,
+        "request": "GET /index.html# HTTP/1.1\r\nHost: drive.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.020627260208129883,
+            "Socket_Close_Time": 0.11249566078186035,
+            "Response_Time": 0.11725878715515137
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Mon, 28 Aug 2023 18:36:28 GMT",
+            "location": "https://drive.google.com/index.html",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET /support#VNt HTTP/1.1\r\nHost: drive.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#VNt",
+        "request_length": 327,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.020009994506835938,
+            "Socket_Close_Time": 0.11185145378112793,
+            "Response_Time": 0.09920430183410645
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://support.google.com/drive/",
+            "date": "Mon, 28 Aug 2023 18:36:30 GMT",
+            "expires": "Mon, 28 Aug 2023 18:36:30 GMT",
+            "cache-control": "private, max-age=0",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "server": "support-content-ui",
+            "content-length": "230",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 230
+    },
+    {
+        "number": 2,
+        "request": "GET /services#e HTTP/1.1\r\nHost: drive.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#e",
+        "request_length": 326,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.020150184631347656,
+            "Socket_Close_Time": 0.10426831245422363,
+            "Response_Time": 0.12897729873657227
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://drive.google.com/services",
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "date": "Mon, 28 Aug 2023 18:36:31 GMT",
+            "expires": "Mon, 28 Aug 2023 18:36:31 GMT",
+            "cache-control": "private, max-age=0",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'self'",
+            "x-xss-protection": "1; mode=block",
+            "content-length": "178",
+            "server": "GSE"
+        },
+        "response_length": 215
+    },
+    {
+        "number": 3,
+        "request": "GET /index.html#2rgX HTTP/1.1\r\nHost: drive.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#2rgX",
+        "request_length": 331,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.019949913024902344,
+            "Socket_Close_Time": 0.12529802322387695,
+            "Response_Time": 0.11762309074401855
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "application/binary",
+            "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+            "pragma": "no-cache",
+            "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+            "date": "Mon, 28 Aug 2023 18:36:32 GMT",
+            "location": "https://drive.google.com/index.html",
+            "server": "ESF",
+            "content-length": "0",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET /favicon.ico#oc7 HTTP/1.1\r\nHost: drive.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#oc7",
+        "request_length": 331,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.025091171264648438,
+            "Socket_Close_Time": 0.10318374633789062,
+            "Response_Time": 0.02021622657775879
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png",
+            "cache-control": "private",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Mon, 28 Aug 2023 18:36:33 GMT",
+            "server": "sffe",
+            "content-length": "268",
+            "x-xss-protection": "0"
+        },
+        "response_length": 268
+    },
+    {
+        "number": 5,
+        "request": "GET /services#f81L HTTP/1.1\r\nHost: drive.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#f81L",
+        "request_length": 329,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02054882049560547,
+            "Socket_Close_Time": 0.11139178276062012,
+            "Response_Time": 0.12085175514221191
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://drive.google.com/services",
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "date": "Mon, 28 Aug 2023 18:36:34 GMT",
+            "expires": "Mon, 28 Aug 2023 18:36:34 GMT",
+            "cache-control": "private, max-age=0",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'self'",
+            "x-xss-protection": "1; mode=block",
+            "content-length": "178",
+            "server": "GSE"
+        },
+        "response_length": 215
+    },
+    {
+        "number": 6,
+        "request": "GET /support#W HTTP/1.1\r\nHost: drive.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support#W",
+        "request_length": 325,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.02052450180053711,
+            "Socket_Close_Time": 0.1149141788482666,
+            "Response_Time": 0.09552168846130371
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://support.google.com/drive/",
+            "date": "Mon, 28 Aug 2023 18:36:35 GMT",
+            "expires": "Mon, 28 Aug 2023 18:36:35 GMT",
+            "cache-control": "private, max-age=0",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "server": "support-content-ui",
+            "content-length": "230",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN"
+        },
+        "response_length": 230
+    },
+    {
+        "number": 7,
+        "request": "GET /about#j HTTP/1.1\r\nHost: drive.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#j",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.04243588447570801,
+            "Socket_Close_Time": 0.10285377502441406,
+            "Response_Time": 0.12748122215270996
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://drive.google.com/about",
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "date": "Mon, 28 Aug 2023 18:36:36 GMT",
+            "expires": "Mon, 28 Aug 2023 18:36:36 GMT",
+            "cache-control": "private, max-age=0",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'self'",
+            "x-xss-protection": "1; mode=block",
+            "content-length": "177",
+            "server": "GSE"
+        },
+        "response_length": 212
+    },
+    {
+        "number": 8,
+        "request": "GET /index.php#eG2b HTTP/1.1\r\nHost: drive.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php#eG2b",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Moved Temporarily",
+        "measured_times": {
+            "Socket_Connect_Time": 0.016748905181884766,
+            "Socket_Close_Time": 0.1078348159790039,
+            "Response_Time": 0.1260528564453125
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "https://drive.google.com/index.php",
+            "content-type": "text/html; charset=UTF-8",
+            "content-encoding": "gzip",
+            "date": "Mon, 28 Aug 2023 18:36:38 GMT",
+            "expires": "Mon, 28 Aug 2023 18:36:38 GMT",
+            "cache-control": "private, max-age=0",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "content-security-policy": "frame-ancestors 'self'",
+            "x-xss-protection": "1; mode=block",
+            "content-length": "180",
+            "server": "GSE"
+        },
+        "response_length": 216
+    },
+    {
+        "number": 9,
+        "request": "GET /favicon.ico#LN HTTP/1.1\r\nHost: drive.google.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#LN",
+        "request_length": 330,
+        "http_version": "HTTP/1.1",
+        "status_code": 302,
+        "reason_phrase": "Found",
+        "measured_times": {
+            "Socket_Connect_Time": 0.05517220497131348,
+            "Socket_Close_Time": 0.10045433044433594,
+            "Response_Time": 0.04879283905029297
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "location": "http://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png",
+            "cache-control": "private",
+            "cross-origin-resource-policy": "cross-origin",
+            "content-type": "text/html; charset=UTF-8",
+            "x-content-type-options": "nosniff",
+            "date": "Mon, 28 Aug 2023 18:36:39 GMT",
+            "server": "sffe",
+            "content-length": "268",
+            "x-xss-protection": "0"
+        },
+        "response_length": 268
+    }
+]

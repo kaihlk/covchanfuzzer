@@ -1,0 +1,260 @@
+[
+    {
+        "number": 0,
+        "request": "GET /contact HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1381380558013916,
+            "Socket_Close_Time": 0.10599708557128906,
+            "Response_Time": 0.037496089935302734
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Mon, 28 Aug 2023 20:37:25 GMT",
+            "server": "Kestrel",
+            "location": "https://www.microsoft.com/contact",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET /contact HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.18780994415283203,
+            "Socket_Close_Time": 0.11331748962402344,
+            "Response_Time": 0.1421952247619629
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Mon, 28 Aug 2023 20:37:28 GMT",
+            "server": "Kestrel",
+            "location": "https://www.microsoft.com/contact",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET /support HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/support",
+        "request_length": 320,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.14225006103515625,
+            "Socket_Close_Time": 0.10147666931152344,
+            "Response_Time": 0.257784366607666
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Mon, 28 Aug 2023 20:37:29 GMT",
+            "server": "Kestrel",
+            "location": "https://www.microsoft.com/support",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET /services HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services",
+        "request_length": 321,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.14540886878967285,
+            "Socket_Close_Time": 0.11537790298461914,
+            "Response_Time": 0.029162168502807617
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Mon, 28 Aug 2023 20:37:31 GMT",
+            "server": "Kestrel",
+            "location": "https://www.microsoft.com/services",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET /blog HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog",
+        "request_length": 317,
+        "http_version": "",
+        "status_code": 999,
+        "reason_phrase": [
+            "",
+            "The read operation timed out"
+        ],
+        "measured_times": {
+            "Socket_Connect_Time": 1.2544395923614502,
+            "Socket_Close_Time": 0.10788178443908691,
+            "Response_Time": 0
+        },
+        "error_message": [
+            "",
+            "The read operation timed out"
+        ],
+        "response_header_fields": null,
+        "response_length": 0
+    },
+    {
+        "number": 5,
+        "request": "GET /index.php HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.php",
+        "request_length": 322,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.4542405605316162,
+            "Socket_Close_Time": 0.11716175079345703,
+            "Response_Time": 0.29763197898864746
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Mon, 28 Aug 2023 20:37:39 GMT",
+            "server": "Kestrel",
+            "location": "https://www.microsoft.com/index.php",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET /blog HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog",
+        "request_length": 317,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.299633264541626,
+            "Socket_Close_Time": 0.11832761764526367,
+            "Response_Time": 0.31621289253234863
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Mon, 28 Aug 2023 20:37:41 GMT",
+            "server": "Kestrel",
+            "location": "https://www.microsoft.com/blog",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET /about HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11219978332519531,
+            "Socket_Close_Time": 0.11541557312011719,
+            "Response_Time": 0.023975133895874023
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Mon, 28 Aug 2023 20:37:43 GMT",
+            "server": "Kestrel",
+            "location": "https://www.microsoft.com/about",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET /index.html HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html",
+        "request_length": 323,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07270216941833496,
+            "Socket_Close_Time": 0.11412501335144043,
+            "Response_Time": 0.02414560317993164
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Mon, 28 Aug 2023 20:37:45 GMT",
+            "server": "Kestrel",
+            "location": "https://www.microsoft.com/index.html",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET /about HTTP/1.1\r\nHost: microsoft.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about",
+        "request_length": 318,
+        "http_version": "HTTP/1.1",
+        "status_code": 301,
+        "reason_phrase": "Moved Permanently",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0942850112915039,
+            "Socket_Close_Time": 0.11172604560852051,
+            "Response_Time": 0.02330303192138672
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-length": "0",
+            "date": "Mon, 28 Aug 2023 20:37:47 GMT",
+            "server": "Kestrel",
+            "location": "https://www.microsoft.com/about",
+            "strict-transport-security": "max-age=31536000"
+        },
+        "response_length": 0
+    }
+]

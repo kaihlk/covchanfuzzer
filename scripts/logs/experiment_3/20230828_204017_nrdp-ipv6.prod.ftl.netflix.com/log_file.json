@@ -1,0 +1,342 @@
+[
+    {
+        "number": 0,
+        "request": "GET /blog#71RDBeG HTTP/1.1\r\nHost: nrdp-ipv6.prod.ftl.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/blog#71RDBeG",
+        "request_length": 342,
+        "http_version": "HTTP/1.1",
+        "status_code": 421,
+        "reason_phrase": "Misdirected Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.043828725814819336,
+            "Socket_Close_Time": 0.10641336441040039,
+            "Response_Time": 0.06438612937927246
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "keep-alive",
+            "content-length": "0",
+            "date": "Mon, 28 Aug 2023 18:40:19 GMT",
+            "server": "api-prod i-0d12371e831f8e806",
+            "set-cookie": "nfvdid=BQFmAAEBEFda6uDwraanSCfXFnvVX95Awt97WOzMakt8zXuJ41VT_JRpGI4Ardfc02UwbYNlPagS9qKrmpOlGD-qdMzsgJRY50HPrLbEnqTFfCOQJClvaQ%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "via": "2 i-0461ee1d3f69dcff3 (eu-west-1), 1.1 c000.fra002.ix.nflxvideo.net (FTL-LZmX)",
+            "x-netflix.execution-time": "1",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "4",
+            "x-netflix.request.toplevel.uuid": "cjmek4unmpr720f50m8g",
+            "x-netflix.zuul.utilization": "55.9/50.0",
+            "x-originating-url": "https://nrdp-ipv6.prod.ftl.netflix.com:52334/blog%2371RDBeG",
+            "x-robots-tag": "noindex, nofollow"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 1,
+        "request": "GET /contact#G HTTP/1.1\r\nHost: nrdp-ipv6.prod.ftl.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#G",
+        "request_length": 339,
+        "http_version": "HTTP/1.1",
+        "status_code": 421,
+        "reason_phrase": "Misdirected Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0566561222076416,
+            "Socket_Close_Time": 0.11466097831726074,
+            "Response_Time": 0.0884087085723877
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "keep-alive",
+            "content-length": "0",
+            "date": "Mon, 28 Aug 2023 18:40:24 GMT",
+            "server": "api-prod i-0fae9f64a06270c00",
+            "set-cookie": "nfvdid=BQFmAAEBEEVhZgClURfy8Nr6D5l0zKVAjsXUIAhIBrLPDu-AMvD6XRKedRaSTVOY6PfpuqOvKqlcpQJ3Xrso2yowrA0uD-XNO0lH2Yi2sfVJEenqVm_JQA%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "via": "2 i-0b89220666d7de330 (eu-west-1), 1.1 c000.fra002.ix.nflxvideo.net (FTL-Zf/7)",
+            "x-netflix.execution-time": "0",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "16",
+            "x-netflix.request.toplevel.uuid": "cjmek66qud7049l4tsng",
+            "x-netflix.zuul.utilization": "61.8/50.0",
+            "x-originating-url": "https://nrdp-ipv6.prod.ftl.netflix.com:52420/contact%23G",
+            "x-robots-tag": "noindex, nofollow"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET /services#Ykfev HTTP/1.1\r\nHost: nrdp-ipv6.prod.ftl.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/services#Ykfev",
+        "request_length": 344,
+        "http_version": "HTTP/1.1",
+        "status_code": 421,
+        "reason_phrase": "Misdirected Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07881641387939453,
+            "Socket_Close_Time": 0.10157012939453125,
+            "Response_Time": 0.08609318733215332
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "keep-alive",
+            "content-length": "0",
+            "date": "Mon, 28 Aug 2023 18:40:30 GMT",
+            "server": "api-prod i-0d14d20e07256e2a7",
+            "set-cookie": "nfvdid=BQFmAAEBEMMFKNu2dpKgGgBMal7_yNNAa5YGK2oWpkARDxqmcNa4zRbihflkHhLglAVctvWkRRmpJT5jUWkHvExqVKCSzPuH4rcYSLhwjnyKvcIGRKeYoQ%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "via": "2 i-0fe6366e3333394b1 (eu-west-1), 1.1 c000.fra002.ix.nflxvideo.net (FTL-Q93E)",
+            "x-netflix.execution-time": "1",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "7",
+            "x-netflix.request.toplevel.uuid": "cjmek7piidp6lvhu7cm0",
+            "x-netflix.zuul.utilization": "22.8/50.0",
+            "x-originating-url": "https://nrdp-ipv6.prod.ftl.netflix.com:52543/services%23Ykfev",
+            "x-robots-tag": "noindex, nofollow"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET /favicon.ico#I00HQj HTTP/1.1\r\nHost: nrdp-ipv6.prod.ftl.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#I00HQj",
+        "request_length": 348,
+        "http_version": "HTTP/1.1",
+        "status_code": 421,
+        "reason_phrase": "Misdirected Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.07489800453186035,
+            "Socket_Close_Time": 0.10960173606872559,
+            "Response_Time": 0.0434725284576416
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "keep-alive",
+            "content-length": "0",
+            "date": "Mon, 28 Aug 2023 18:40:34 GMT",
+            "server": "api-prod i-064d4a5b8ee6da967",
+            "set-cookie": "nfvdid=BQFmAAEBEL92LEHFFkfuFe0Noatu8btAGUpEugPdWiHZuofsmGN97Gf7jdsDCse7vgLvGE9PfFkzmg91Oxcn1tKz3MvSi0DCFfpG-754DTydBmLdtTtkLg%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "via": "2 i-02ba66210ab51416a (eu-west-1), 1.1 c000.fra002.ix.nflxvideo.net (FTL-Cpmz)",
+            "x-netflix.execution-time": "0",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "10",
+            "x-netflix.request.toplevel.uuid": "cjmek8op8vmsjqgkqfcg",
+            "x-netflix.zuul.utilization": "44.9/50.0",
+            "x-originating-url": "https://nrdp-ipv6.prod.ftl.netflix.com:52641/favicon.ico%23I00HQj",
+            "x-robots-tag": "noindex, nofollow"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET /index.html#hHuXaAvqsErtEaTdRt HTTP/1.1\r\nHost: nrdp-ipv6.prod.ftl.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/index.html#hHuXaAvqsErtEaTdRt",
+        "request_length": 359,
+        "http_version": "HTTP/1.1",
+        "status_code": 421,
+        "reason_phrase": "Misdirected Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.12640690803527832,
+            "Socket_Close_Time": 0.11384034156799316,
+            "Response_Time": 0.045456886291503906
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "keep-alive",
+            "content-length": "0",
+            "date": "Mon, 28 Aug 2023 18:40:40 GMT",
+            "server": "api-prod i-0fae9f64a06270c00",
+            "set-cookie": "nfvdid=BQFmAAEBENgu4HgzTCyan6fe5IemkP5A2ZgF4dmZ1KqVcV1lTeUl6XRIiozYMQptoYlXRspiNjuUejU8yfaCMHQON15-ra_iK2gj_jczBrH14XOqltMvmw%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "via": "2 i-08af9d4fcca393bc9 (eu-west-1), 1.1 c000.fra002.ix.nflxvideo.net (FTL-SrvR)",
+            "x-netflix.execution-time": "1",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "5",
+            "x-netflix.request.toplevel.uuid": "cjmeka9tof17hkof9pjg",
+            "x-netflix.zuul.utilization": "41.0/50.0",
+            "x-originating-url": "https://nrdp-ipv6.prod.ftl.netflix.com:52747/index.html%23hHuXaAvqsErtEaTdRt",
+            "x-robots-tag": "noindex, nofollow"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 5,
+        "request": "GET /favicon.ico# HTTP/1.1\r\nHost: nrdp-ipv6.prod.ftl.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#",
+        "request_length": 342,
+        "http_version": "HTTP/1.1",
+        "status_code": 421,
+        "reason_phrase": "Misdirected Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.04038572311401367,
+            "Socket_Close_Time": 0.10555624961853027,
+            "Response_Time": 0.3210275173187256
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "keep-alive",
+            "content-length": "0",
+            "date": "Mon, 28 Aug 2023 18:40:48 GMT",
+            "server": "api-prod i-0d20e6cdd171eca08",
+            "set-cookie": "nfvdid=BQFmAAEBEAckVvkmGybEzI7UundQhQ9Au0HKbi-6L6PXrqzsyAujvysbfU4hBsqAD4EcjAVwSwAQ0jezt0769rha9_zdhaREXDkAnp1rHIdoeztyahkqNA%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "via": "2 i-09c8cbf8f160da96e (eu-west-1), 1.1 c000.fra002.ix.nflxvideo.net (FTL-hd0C)",
+            "x-netflix.execution-time": "0",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "10",
+            "x-netflix.request.toplevel.uuid": "cjmekc1iidp6lvhvcc3g",
+            "x-netflix.zuul.utilization": "35.4/50.0",
+            "x-originating-url": "https://nrdp-ipv6.prod.ftl.netflix.com:52838/favicon.ico%23",
+            "x-robots-tag": "noindex, nofollow"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET /about#V HTTP/1.1\r\nHost: nrdp-ipv6.prod.ftl.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/about#V",
+        "request_length": 337,
+        "http_version": "HTTP/1.1",
+        "status_code": 421,
+        "reason_phrase": "Misdirected Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09509420394897461,
+            "Socket_Close_Time": 0.11133456230163574,
+            "Response_Time": 0.05576181411743164
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "keep-alive",
+            "content-length": "0",
+            "date": "Mon, 28 Aug 2023 18:40:54 GMT",
+            "server": "api-prod i-0d12371e831f8e806",
+            "set-cookie": "nfvdid=BQFmAAEBEJuhqbZrPlMH-q3C4uyRiXZA5a19jY6ATK8jBaMCv0oXzcIscm97IJHH0G-ttal3Sk3_IvG3eRqdJKXUrD3_W4fIst5TcRzxgeDI4chKlPIMbw%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "via": "2 i-0cb24145a05421ef2 (eu-west-1), 1.1 c000.fra002.ix.nflxvideo.net (FTL-0kRr)",
+            "x-netflix.execution-time": "0",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "4",
+            "x-netflix.request.toplevel.uuid": "cjmekdop8vmsjqgm6tf0",
+            "x-netflix.zuul.utilization": "45.5/50.0",
+            "x-originating-url": "https://nrdp-ipv6.prod.ftl.netflix.com:52889/about%23V",
+            "x-robots-tag": "noindex, nofollow"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 7,
+        "request": "GET /contact#C HTTP/1.1\r\nHost: nrdp-ipv6.prod.ftl.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/contact#C",
+        "request_length": 339,
+        "http_version": "HTTP/1.1",
+        "status_code": 421,
+        "reason_phrase": "Misdirected Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10648870468139648,
+            "Socket_Close_Time": 0.1155252456665039,
+            "Response_Time": 0.04300332069396973
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "keep-alive",
+            "content-length": "0",
+            "date": "Mon, 28 Aug 2023 18:41:00 GMT",
+            "server": "api-prod i-0d14d20e07256e2a7",
+            "set-cookie": "nfvdid=BQFmAAEBEKWAgDtPL0c4ydHl8rzGMPhAIfIyuU5YJmiS2FgI0EDER4zgaQApx7Rup2mYGYv3Hw-JYwGrldAW1oAb70nyaO5_qGSAdxnDAoLeIiZnyFSiuA%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "via": "2 i-04ca1860e16a8c5e0 (eu-west-1), 1.1 c000.fra002.ix.nflxvideo.net (FTL-5ERj)",
+            "x-netflix.execution-time": "0",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "6",
+            "x-netflix.request.toplevel.uuid": "cjmekf9iidp6lvi06agg",
+            "x-netflix.zuul.utilization": "39.1/50.0",
+            "x-originating-url": "https://nrdp-ipv6.prod.ftl.netflix.com:52926/contact%23C",
+            "x-robots-tag": "noindex, nofollow"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET /#lAF HTTP/1.1\r\nHost: nrdp-ipv6.prod.ftl.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/#lAF",
+        "request_length": 334,
+        "http_version": "HTTP/1.1",
+        "status_code": 421,
+        "reason_phrase": "Misdirected Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0405426025390625,
+            "Socket_Close_Time": 0.10599899291992188,
+            "Response_Time": 0.06433558464050293
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "keep-alive",
+            "content-length": "0",
+            "date": "Mon, 28 Aug 2023 18:41:05 GMT",
+            "server": "api-prod i-064d4a5b8ee6da967",
+            "set-cookie": "nfvdid=BQFmAAEBEAAAxym8RodYSLBMTs06snBApSkNbtT3RPRVTj_ZY3Ik46cfE0xX0x2JFcRTvMBtNdj5m5t39M-_rtB3U4icu2rD2pWWlzftBLOkwRiizqmh8A%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "via": "2 i-00991ee4b519e35a9 (eu-west-1), 1.1 c000.fra002.ix.nflxvideo.net (FTL-cjPL)",
+            "x-netflix.execution-time": "0",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "6",
+            "x-netflix.request.toplevel.uuid": "cjmekg8p8vmsjqgmtq30",
+            "x-netflix.zuul.utilization": "30.5/50.0",
+            "x-originating-url": "https://nrdp-ipv6.prod.ftl.netflix.com:52935/%23lAF",
+            "x-robots-tag": "noindex, nofollow"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET /favicon.ico#2bhq6Hyzv HTTP/1.1\r\nHost: nrdp-ipv6.prod.ftl.netflix.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 1,
+        "uri": "/favicon.ico#2bhq6Hyzv",
+        "request_length": 351,
+        "http_version": "HTTP/1.1",
+        "status_code": 421,
+        "reason_phrase": "Misdirected Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09909534454345703,
+            "Socket_Close_Time": 0.10649323463439941,
+            "Response_Time": 0.0495152473449707
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "connection": "keep-alive",
+            "content-length": "0",
+            "date": "Mon, 28 Aug 2023 18:41:09 GMT",
+            "server": "api-prod i-0d12371e831f8e806",
+            "set-cookie": "nfvdid=BQFmAAEBEKcxpeyZfxmntSvR0JJxmxNAlEBdayaHzxLEROf0AhbT4ha_O3ovnHF77WDARsGQJA-fyJDbIaddxqRXxMUQ2QWpgGg8Bn7ZhIp_zG5Ho9_1lQ%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000",
+            "via": "2 i-08b082d866dcc9d14 (eu-west-1), 1.1 c000.fra002.ix.nflxvideo.net (FTL-C5mV)",
+            "x-netflix.execution-time": "1",
+            "x-netflix.nfstatus": "1_1",
+            "x-netflix.proxy.execution-time": "2",
+            "x-netflix.request.toplevel.uuid": "cjmekhequd7049l7t7q0",
+            "x-netflix.zuul.utilization": "21.5/50.0",
+            "x-originating-url": "https://nrdp-ipv6.prod.ftl.netflix.com:52943/favicon.ico%232bhq6Hyzv",
+            "x-robots-tag": "noindex, nofollow"
+        },
+        "response_length": 0
+    }
+]

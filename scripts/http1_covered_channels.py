@@ -30,37 +30,24 @@ def random_switch_case_of_char_in_string(original_string, fuzzvalue):
     return modified_string, deviation_count
 
 
-def generate_standard_request(
-     port, url="/", method="GET", headers=None, fuzzvalue=None
-):
+def generate_standard_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
     '''Generation of request package without insertion of a covert channel'''
-    # Check if headers are provided elsewise take default headers
-    if headers is None:
-        headers = default_headers.copy()
-    else:
-        # Create a copy to avoid modifying the original list
-        headers = headers.copy()
+     
 
     # Insert the Host header at the beginning of the list
     headers.insert(0, ("Host", self.host_placeholder))
-
-    # Build the request_line from the provided arguments
-    request_line = f"{method} {url} HTTP/1.1\r\n"
-
-    # Build the request from request line and headers
+    # Build the request from request line and headersport
+    request_line, new_uri = self.build_request_line(port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
     request_string = request_line
     for header in headers:
         request_string += f"{header[0]}: {header[1]}\r\n"
 
-    # Add the ending of the request
     request_string += "\r\n"
-
-    # No deviation
-    deviation_count = 0
-    return request_string, deviation_count, url
+    deviation_count=0     
+    return request_string, deviation_count, new_uri
 
 class HTTP1_Request_CC_Case_Insensitivity(HTTP1_Request_Builder):
-    def generate_cc_request(self,  port, url="/", method="GET", headers=None, content=None, fuzzvalue=None):
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
 
         '''Covertchannel suggested by Kwecka et al: Case-insensitivity of header key names, fuzzvalue defines the probability that a character of a header field is changed'''
 
@@ -104,7 +91,7 @@ class HTTP1_Request_CC_Random_Whitespace(HTTP1_Request_Builder):
 # Covertchannel suggested by Kwecka et al: Linear whitespacing
 # fuzzvalue defines the propability whether a value is changed and how many whitespaces/tabs/newlines are added
 # Possible endless Loop, here is CC to learn something about the maximum size of the Request size
-    def generate_cc_request(self, port, url="/", method="GET", headers=None, content=None, fuzzvalue=None):
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
         # Check if headers are provided elsewise take default headers
         if headers is None:
             headers = default_headers.copy()
@@ -145,9 +132,7 @@ class HTTP1_Request_CC_Random_Whitespace(HTTP1_Request_Builder):
 # Fuzz Parameter no effect, due to Implementation of Shuffle
 
 class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
-    def generate_cc_request(self,
-         port, url="/", method="GET", headers=None, content=None, fuzzvalue=0.5
-        ):
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
         # Check if headers are provided elsewise take default headers
         if headers is None:
             headers = self.default_headers.copy()
@@ -182,9 +167,7 @@ class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
         return request_string, deviation_count, url
 
 class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
-    def generate_cc_request(self,
-         port, url="/", method="GET", headers=None, content=None, fuzzvalue=0.5
-    ):
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
         '''URI in the request line
         Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers
         Divide in 3 cover channels due to difference of technique
@@ -257,9 +240,7 @@ class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
         return request_string, deviation_count, new_url
 
 class HTTP1_Request_CC_URI_Represenation_Apache_Localhost(HTTP1_Request_Builder):
-    def generate_cc_request(self,
-         port, url="/", method="GET", headers=None, content=None, fuzzvalue=0.5
-    ):
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
         '''URI in the request line
         Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers
         Divide in 3 cover channels due to difference of technique
@@ -334,9 +315,7 @@ class HTTP1_Request_CC_URI_Represenation_Apache_Localhost(HTTP1_Request_Builder)
 
 
 class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
-    def generate_cc_request(self,
-        host, port, url="/", method="GET", headers=None, fuzzvalue=0.5
-    ):
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
         '''CC URI  with addional changes in Case insensitvity'''
         # Check if headers are provided elsewise take default headers
         if headers is None:
@@ -383,9 +362,7 @@ class HTTP1_Request_CC_URI_Hex_Hex(HTTP1_Request_Builder):
     
     
     
-    def generate_cc_request(self,
-         port, url="/", method="GET", headers=None, fuzzvalue=0.5
-    ):
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
         # Check if headers are provided elsewise take default headers
         if headers is None:
             headers = default_headers.copy()
@@ -469,9 +446,7 @@ class HTTP1_Request_CC_Random_Content(HTTP1_Request_Builder):
  
     
     
-    def generate_cc_request(self,
-         port, url="/", method="GET", headers=None, content=None, fuzzvalue=0.5
-    ):
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
         '''Generation of request package '''
 
 
@@ -518,9 +493,7 @@ class HTTP1_Request_CC_Random_Content(HTTP1_Request_Builder):
 class HTTP1_Request_CC_Random_Content_No_Lenght_Field(HTTP1_Request_Builder):
     # CC which adds header fields from the common and uncommon header list
   
-    def generate_cc_request(self,
-         port, url="/", method="GET", headers=None, content=None, fuzzvalue=0.5
-    ):
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
         '''Generation of request package '''
 
 
@@ -557,8 +530,7 @@ class HTTP1_Request_CC_Random_Content_No_Lenght_Field(HTTP1_Request_Builder):
 
 class HTTP1_Request_CC_URI_Common_Addresses(HTTP1_Request_Builder):
     
-    def generate_cc_request(self,
-         port, method="GET", path="/", headers=None, content=None, fuzzvalue=0.5, relative_uri=True, include_subdomain=True):
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
         '''URI in the request line
         Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers
         Divide in 3 cover channels due to difference of technique
@@ -602,23 +574,9 @@ class HTTP1_Request_CC_URI_Common_Addresses(HTTP1_Request_Builder):
         if new_path != path:
             deviation_count += 1
         
-        if relative_uri==False:        
-            #Scheme:
-            if port==443:
-                scheme="https://"
-            else:
-                scheme="http://"
-            #subdomains                      
-            if include_subdomain:
-               subdomain=self.subdomain_placeholder+"."
-            else:
-               subdomain="" 
-            #absolute uri
-            new_url =scheme + subdomain + self.domain_placeholder + new_path
-        else:
-            new_url=new_path
+        
 
-        request_line = f"{method} {new_url} HTTP/1.1\r\n"
+        request_line, new_uri = self.build_request_line(port, method, new_path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
 
         request_string = request_line
         for header in headers:
@@ -626,13 +584,12 @@ class HTTP1_Request_CC_URI_Common_Addresses(HTTP1_Request_Builder):
 
         request_string += "\r\n"
           
-        return request_string, deviation_count, new_url
+        return request_string, deviation_count, new_uri
 
 
 class HTTP1_Request_CC_URI_Common_Addresses_And_Anchors(HTTP1_Request_Builder):
     
-    def generate_cc_request(self,
-         port, method="GET", path="/", headers=None, content=None, fuzzvalue=0.5, relative_uri=True, include_subdomain=True):
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
         '''URI in the request line
         Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers
         Divide in 3 cover channels due to difference of technique
@@ -684,31 +641,15 @@ class HTTP1_Request_CC_URI_Common_Addresses_And_Anchors(HTTP1_Request_Builder):
         if new_path != path:
             deviation_count += 1
         
-        if relative_uri==False:        
-            #Scheme:
-            if port==443:
-                scheme="https://"
-            else:
-                scheme="http://"
-            #subdomains                      
-            if include_subdomain:
-               subdomain=self.subdomain_placeholder+"."
-            else:
-               subdomain="" 
-            #absolute uri
-            new_url =scheme + subdomain + self.domain_placeholder + new_path
-        else:
-            new_url=new_path
-
-        request_line = f"{method} {new_url} HTTP/1.1\r\n"
-
+        request_line, new_uri = self.build_request_line(port, method, new_path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
+       
         request_string = request_line
         for header in headers:
             request_string += f"{header[0]}: {header[1]}\r\n"
 
         request_string += "\r\n"
           
-        return request_string, deviation_count, new_url
+        return request_string, deviation_count, new_uri
 
 
 
