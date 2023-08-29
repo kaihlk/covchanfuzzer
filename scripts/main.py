@@ -1,11 +1,13 @@
 #main
 
+from upgrade_target_list import Target_List_Upgrader
 from runner import ExperimentRunner
 from logger import ExperimentLogger, TestRunLogger
 import class_mapping
 import csv
 import time
 import os
+
 ##For Infoe
 """ class_mapping_requests ={
     1: HTTP1_Request_Builder,
@@ -50,10 +52,7 @@ def load_target_list(target_list_csv):
     loaded_list = []
     with open(target_list_csv, 'r') as csvfile:
         csv_reader = csv.reader(csvfile)
-        next(csv_reader)  # Skip header row
-        for row in csv_reader:
-            rank, domain = row
-            loaded_list.append(domain)
+        next(csv_reader)  # Skip header rowtandard
 
     print("List loaded from: " + target_list_csv)            
     return loaded_list     
@@ -88,7 +87,7 @@ def main():
         "max_workers": 1,  # Parallel Processing of subsets,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
-        "target_list": "target_list_subdomain.csv",
+        "target_list": "target_list_subdomain_10.csv",
         "target_subset_size": 5,
         "target_add_www": True,
         #"target_host": "www.example.com",  #Just for special useipvstt
@@ -120,10 +119,10 @@ def main():
     }
 
     
+    new_path="upgraded_"+experiment_configuration["target_list"]
+    upgrader=Target_List_Upgrader(experiment_configuration,new_path).upgrade_list()
 
-
-
-    experiment=ExperimentRunner(experiment_configuration, load_target_list(experiment_configuration["target_list"])).setup_and_start_experiment()
+    #experiment=ExperimentRunner(experiment_configuration, load_target_list(experiment_configuration["target_list"])).setup_and_start_experiment()
   
     
     

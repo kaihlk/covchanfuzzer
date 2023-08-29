@@ -7,9 +7,9 @@ custom_list = t.list(list_id="X53QN")
 
 #Extract Top 1xxx
 # 
-target_list = custom_list.top(100)
+target_list = custom_list.top(10000)
 
-path=f"target_list_subdomain.csv"
+path=f"target_list_subdomain_10000.csv"
 
 # Save the list to a CSV file
 with open(path, 'w', newline='') as csvfile:
@@ -19,4 +19,4 @@ with open(path, 'w', newline='') as csvfile:
     for rank, domain in enumerate(target_list, start=1):
         csv_writer.writerow([rank, domain])
 
-print("List saved as"+path)
+print("List saved as: "+path)

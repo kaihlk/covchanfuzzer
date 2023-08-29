@@ -86,10 +86,10 @@ class ExperimentRunner:
         return sub_set_dns
 
 
-    def pregenerate_request(self):
+    def pregenerate_request(self, covert_channel):
         '''Build a HTTP Request Package and sends it and processes the response'''
         #Build HTTP Request after the selected covered channel
-        selected_covered_channel = class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]()
+        selected_covered_channel = class_mapping.requests_builders[covert_channel]()
         try:
             request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration, self.target_port)
         except Exception as e:
@@ -114,7 +114,7 @@ class ExperimentRunner:
 
     def get_next_prerequest(self, attempt_number):
         if attempt_number>=len(self.prerequest_list):
-            prerequest = self.pregenerate_request()
+            prerequest = self.pregenerate_request(self.experiment_configuration["covertchannel_request_number"])
             self.prerequest_list.append(prerequest)
         else: 
             prerequest=self.prerequest_list[attempt_number]
@@ -144,7 +144,7 @@ class ExperimentRunner:
         #TODO add hash function and standard body
         return True
     
-    def send_and_receive_request(self, attempt_number, request, deviation_count, uri, host_data, logger):    
+    def send_and_receive_request(self, attempt_number, request, deviation_count, uri, host_data, log_path):    
         response_line, response_header_fields, body, measured_times, error_message  = CustomHTTP().http_request(
             host=host_data["host"],
             use_ipv4=self.experiment_configuration["use_ipv4"],
@@ -153,18 +153,12 @@ class ExperimentRunner:
             custom_request=request,
             timeout=self.experiment_configuration["conn_timeout"],
             verbose=self.experiment_configuration["verbose"],
-            log_path=logger.get_logging_folder()
+            log_path=log_path,    #Transfer to save TLS Keys
         )
         if self.experiment_configuration["verbose"]==True:
             print("Response:",response_line)
-        try:
-            self.add_nr_and_status_code_to_request_list(attempt_number,response_line)
-        except Exception as e:
-            print("Exception during updating request_list",e)
-        self.check_content(body)
-        logger.add_request_response_data(attempt_number, request, deviation_count, uri, response_line, response_header_fields, body, measured_times, error_message)
       
-        return 
+        return response_line, response_header_fields, body, measured_times, error_message
 
 
     def run_experiment_subset(self, logger_list, sub_set_dns):
@@ -178,8 +172,6 @@ class ExperimentRunner:
             except Exception as e:
                 print("Error while pregenerating requests", e)  
             
-            
-
             for host_data,logger in zip(sub_set_dns, logger_list):
             #Round Robin one Host after each other
                 if self.baseline_check() is False:
@@ -195,7 +187,13 @@ class ExperimentRunner:
                         print("Error building the request",e)
                     try:
                         start_time=time.time()
-                        self.send_and_receive_request(i, request, deviation_count, uri, host_data, logger)
+                        self.send_and_receive_request(i, request, deviation_count, uri, host_data, logger.get_logging_folder())
+                        logger.add_request_response_data(attempt_number, request, deviation_count, uri, response_line, response_header_fields, body, measured_times, error_message)
+                        try:
+                            self.add_nr_and_status_code_to_request_list(attempt_number,response_line)
+                        except Exception as e:
+                            print("Exception during updating request_list",e)
+                        self.check_content(body)
                         self.message_count+=1
                         end_time=time.time()
                         response_time=end_time-start_time

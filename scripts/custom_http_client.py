@@ -147,6 +147,7 @@ class CustomHTTP(HTTP):
 
     def lookup_dns(self, hostname, portnumber, use_ipv4):
         '''Function to make a DNS Lookup for a specified host or localhost using sockets and return the received data as a dictionary of tuples ''' 
+        address=None
         if hostname.lower() == "localhost":
             hostname = "127.0.0.1"
         try:
@@ -164,9 +165,8 @@ class CustomHTTP(HTTP):
                 )
         except socket.gaierror as ex:
             print(f"DNS Lookup failed: {str(ex)}")
-           # sys.exit(1)
-            address=None
-        return address
+            return address, str(ex)
+        return address, None
 
     def create_tcp_socket(self, ip_info, timeout):
         '''Create and Connect a TCP socket'''
