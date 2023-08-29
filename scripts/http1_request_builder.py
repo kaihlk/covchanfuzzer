@@ -104,7 +104,7 @@ class HTTP1_Request_Builder:
         if len(parts) >= 2:
             tldomain = parts[-1]
             hostname = parts[-2]
-            subdomain=".".join(parts[:-2])  #Multiple Subodmains possible
+            subdomains=".".join(parts[:-2])  #Multiple Subodmains possible
 
         else: raise ValueError()
   

@@ -78,14 +78,14 @@ def main():
         "verbose": False,
         "timestamp": time.strftime("%Y%m%d_%H%M%S"),
         #Covert Channel Option
-        "covertchannel_request_number": 10,
+        "covertchannel_request_number": 1,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
         "fuzz_value":0.8,
         #Target Selection Options  
-        "num_attempts": 10,
+        "num_attempts": 1,
         "max_targets": 10, #len(self.target_list):
-        "max_workers": 10,  # Parallel Processing of subsets,
+        "max_workers": 1,  # Parallel Processing of subsets,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
         "target_list": "target_list_subdomain.csv",
@@ -108,7 +108,7 @@ def main():
         "path": "", #Dynamic, List, ?
         "standard_subdomain": "www", #use www if not provided
         "relative_uri": True, # build a relative uri without the host in the requestline: /index.html
-        "include_subdomain": True,
+        "include_subdomain": False,
         "include_port":False,
 
         "headers": None,

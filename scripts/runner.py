@@ -57,17 +57,20 @@ class ExperimentRunner:
                 self.target_port=443
             else: 
                 self.target_port=80
-       
+        print(sub_set)
         #Lookup DNS for each entry
         #TODO Catch the case that IPv4 or IPv6 is not provided, some sites sends more than one IP/Port set per protocoll version,  example macromedia.com and criteo.com
         for entry in sub_set:
-            if self.experiment_configuration["target_add_www"]:
-                subdomain, hostname, tldomain= request_builder.HTTP1_Request_Builder().parse_host(entry)
-                if subdomain=="":
-                    subdomain="www"
-            entry=subdomain+"."+hostname+"."+tldomain
-            print("DNS Lookup for:"+entry)
-            socket_info = CustomHTTP().lookup_dns(entry, self.target_port, self.experiment_configuration["use_ipv4"])
+            
+            subdomains, hostname, tldomain= request_builder.HTTP1_Request_Builder().parse_host(entry)
+            if self.experiment_configuration["target_add_www"]==True:
+                if subdomains=="":
+                    subdomains="www"
+            if subdomains!="":
+                subdomains=subdomains+"."        
+            uri=subdomains+hostname+"."+tldomain
+            print("DNS Lookup for: "+uri)
+            socket_info = CustomHTTP().lookup_dns(uri, self.target_port, self.experiment_configuration["use_ipv4"])
             if socket_info:
                 
                 if self.experiment_configuration["use_ipv4"]:
@@ -77,9 +80,9 @@ class ExperimentRunner:
                     port = socket_info[0][4][1]
                 if port!=self.target_port:
                     print("Warning: Retrieved port doesn't match configured port (r. Port/c.Port"+str(port)+"/"+str(self.target_port))
-                sub_set_dns.append({"host":entry, "socket_info":socket_info, "ip_address":ip_address, "port":port })
+                sub_set_dns.append({"host":uri, "socket_info":socket_info, "ip_address":ip_address, "port":port })
             else:
-                self.dns_fails.append(entry)
+                self.dns_fails.append(uri)
         return sub_set_dns
 
 
@@ -339,8 +342,8 @@ class ExperimentRunner:
                 
 
            
-        except Exceptions as e:
-            print("During the experiment an error occured")
+        except Exception as e:
+            print("During the experiment an error occured", e)
         finally:
              # Wait for the global capture thread to finish
             global_stop_event.set() 

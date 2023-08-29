@@ -1,0 +1,52 @@
+[
+    {
+        "number": 0,
+        "request": "GET  HTTP/1.1\r\nHost: www.instagram.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.0753030776977539,
+            "Socket_Close_Time": 0.11607480049133301,
+            "Response_Time": 0.011429309844970703
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Tue, 29 Aug 2023 05:58:58 GMT",
+            "connection": "close",
+            "content-length": "105"
+        },
+        "response_length": 1
+    },
+    {
+        "number": 1,
+        "request": "GET  HTTP/1.1\r\nHost: www.instagram.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "",
+        "request_length": 316,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.045705318450927734,
+            "Socket_Close_Time": 1.5337090492248535,
+            "Response_Time": 0.004372835159301758
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html; charset=utf-8",
+            "date": "Tue, 29 Aug 2023 05:59:00 GMT",
+            "connection": "close",
+            "content-length": "105"
+        },
+        "response_length": 1
+    }
+]
