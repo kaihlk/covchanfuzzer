@@ -107,9 +107,9 @@ def main():
         "path": "", #Dynamic, List, ?
         "standard_subdomain": "www", #use www if not provided
         "relative_uri": True, # build a relative uri without the host in the requestline: /index.html
-        "include_subdomain": False,
+        "include_subdomain": False, #include the subdomain, when building requestline, if none given use <standard_subdomain>
         "include_port":False,
-
+        "include_subdomain_host_header": False,
         "headers": None,
         "standard_headers": "firefox_HTTP/1.1",  #curl_HTTP/1.1(TLS), firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
         "content": "random",  #"random", "some_text""fuzz_value": 0.9,
@@ -121,7 +121,7 @@ def main():
     
     new_path="upgraded_"+experiment_configuration["target_list"]
     upgrader=Target_List_Upgrader(experiment_configuration,new_path).upgrade_list()
-
+    print("Done")
     #experiment=ExperimentRunner(experiment_configuration, load_target_list(experiment_configuration["target_list"])).setup_and_start_experiment()
   
     

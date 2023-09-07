@@ -225,14 +225,19 @@ class HTTP1_Request_Builder:
 
         return self.generate_cc_request(port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
 
-    def replace_host_and_domain(self, prerequest, domain, standard_subdomain, host=None):
+    def replace_host_and_domain(self, prerequest, domain, standard_subdomain="", host=None, include_subdomain_host_header=False):
             subdomains, hostname, tldomain =self.parse_host(domain)
-            if host==None:
-                host=hostname+"."+tldomain
             if subdomains=="":
-                subdomains=standard_subdomain
+                subdomains=standard_subdomain            
+            #if host==None:
+            new_domain=hostname+"."+tldomain
+            if include_subdomain_host_header==True:
+                host=subdomains+"."+new_domain
+            else: 
+                host=domain
             request=prerequest.replace(self.subdomain_placeholder,subdomains)
-            request=request.replace(self.domain_placeholder, domain)
+            request=request.replace(self.domain_placeholder, new_domain)
+            #Host header field!!!
             request=request.replace(self.host_placeholder, host)
 
             return request
