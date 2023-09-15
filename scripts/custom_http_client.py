@@ -281,7 +281,11 @@ class CustomHTTP(HTTP):
             else:
                 headers = headers_body
                 body=""
-        
+        else:
+            response_line=""
+            headers=""
+            body=response_str
+            raise ValueError("Invalid Response Line")
         return response_line, headers, body
 
 
@@ -432,12 +436,16 @@ class CustomHTTP(HTTP):
         response_headers=None
         body=None
         if response is not None:
-            response_line_str, headers_str, body_str=self.parse_response(response)
+            try:
+                response_line_str, headers_str, body_str=self.parse_response(response)
 
-            response_line= self.parse_response_line(response_line_str)
-            response_headers =self.parse_headers(headers_str)
-            body=body_str
-         
+                response_line= self.parse_response_line(response_line_str)
+                response_headers =self.parse_headers(headers_str)
+                body=body_str
+            except Exception as ex5:
+                print(ex5)
+                error_messages.append(ex5)
+                pass
         measured_times= {
             "Socket_Connect_Time": socket_connect_time,
             "Socket_Close_Time": socket_close_time,

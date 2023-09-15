@@ -106,13 +106,13 @@ class HTTP1_Request_Builder:
             hostname = parts[-2]
             subdomains=".".join(parts[:-2])  #Multiple Subodmains possible
 
-        else: raise ValueError()
+        else: raise ValueError("Unable to parse host")
   
 
         return subdomains, hostname, tldomain
 
         #host may be part of the uri
-    """ def parse_host(self, uri, host):
+    def parse_uri(self, uri, host):
         '''Parse host uris'''
         # Initialize variables
         scheme = ""
@@ -152,7 +152,7 @@ class HTTP1_Request_Builder:
             hostname = host
         # Return the extracted parts as a tuple
      
-        return scheme, subdomain, hostname, domain, port, path """
+        return scheme, subdomain, hostname, domain, port, path
 
     def build_request_line(self, port, method, path, headers, content, fuzzvalue, relative_uri=True, include_subdomain=False, include_port=False, protocol="HTTP/1.1"):
                 # Build the request_line from the provided arguments
@@ -225,22 +225,28 @@ class HTTP1_Request_Builder:
 
         return self.generate_cc_request(port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
 
-    def replace_host_and_domain(self, prerequest, domain, standard_subdomain="", host=None, include_subdomain_host_header=False):
-            subdomains, hostname, tldomain =self.parse_host(domain)
-            if subdomains=="":
-                subdomains=standard_subdomain            
-            #if host==None:
-            new_domain=hostname+"."+tldomain
-            if include_subdomain_host_header==True:
-                host=subdomains+"."+new_domain
-            else: 
-                host=domain
-            request=prerequest.replace(self.subdomain_placeholder,subdomains)
-            request=request.replace(self.domain_placeholder, new_domain)
-            #Host header field!!!
-            request=request.replace(self.host_placeholder, host)
-
-            return request
+    def replace_host_and_domain(self, prerequest, domain, standard_subdomain="", host=None, include_subdomain_host_header=False, override_uri=""):
+            try:
+                subdomains, hostname, tldomain =self.parse_host(domain)
+                if subdomains=="":
+                    subdomains=standard_subdomain            
+                
+                new_domain=hostname+"."+tldomain
+                if host==None:
+                    if include_subdomain_host_header==True:
+                        host=subdomains+"."+new_domain
+                    else: 
+                        host=domain
+                if override_uri!="":
+                    new_domain=override_uri
+                    prerequest=prerequest.replace('https://', '',1)
+                request=prerequest.replace(self.subdomain_placeholder,subdomains)
+                request=request.replace(self.domain_placeholder, new_domain)
+                #Host header field!!!
+                request=request.replace(self.host_placeholder, host)
+                return request
+            except Exception as ex:
+                print(ex)
 
 
 

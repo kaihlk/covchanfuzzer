@@ -1,6 +1,6 @@
 #main
 
-from upgrade_target_list import Target_List_Upgrader
+from upgrade_target_list import Target_List_Upgrader, Target_List_Analyzer
 from runner import ExperimentRunner
 from logger import ExperimentLogger, TestRunLogger
 import class_mapping
@@ -87,7 +87,7 @@ def main():
         "max_workers": 1,  # Parallel Processing of subsets,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
-        "target_list": "target_list_subdomain_10.csv",
+        "target_list": "target_list_subdomain_10000.csv",
         "target_subset_size": 5,
         "target_add_www": True,
         #"target_host": "www.example.com",  #Just for special useipvstt
@@ -111,19 +111,24 @@ def main():
         "include_port":False,
         "include_subdomain_host_header": False,
         "headers": None,
-        "standard_headers": "firefox_HTTP/1.1",  #curl_HTTP/1.1(TLS), firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
+        "standard_headers": "firefox_HTTP/1.1_TLS",  #curl_HTTP/1.1(TLS), firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
         "content": "random",  #"random", "some_text""fuzz_value": 0.9,
             
 
 
     }
 
-    
-    new_path="upgraded_"+experiment_configuration["target_list"]
-    upgrader=Target_List_Upgrader(experiment_configuration,new_path).upgrade_list()
+    upgrade_path="upgraded_"+experiment_configuration["target_list"]
+    upgrader=Target_List_Upgrader(experiment_configuration,upgrade_path).upgrade_list()
     print("Done")
     #experiment=ExperimentRunner(experiment_configuration, load_target_list(experiment_configuration["target_list"])).setup_and_start_experiment()
-  
+    #new_path2="upgraded_and_cleaned"+experiment_configuration["target_list"]
+    #upgrader=Target_List_Analyzer(new_path, new_path2, experiment_configuration)
+    #upgrader.analyze_data()
+    analyze_path="analysed_"+experiment_configuration["target_list"]
+    target_analizer=Target_List_Analyzer(upgrade_path, analyze_path, experiment_configuration)
+    target_analizer.analyze_data()
+    print("Data Check Complete")
     
     
 
