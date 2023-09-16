@@ -119,8 +119,8 @@ def main():
     }
 
     upgrade_path="upgraded_"+experiment_configuration["target_list"]
-    upgrader=Target_List_Upgrader(experiment_configuration,upgrade_path).upgrade_list()
-    print("Done")
+    #upgrader=Target_List_Upgrader(experiment_configuration,upgrade_path).upgrade_list()
+    #print("Done")
     #experiment=ExperimentRunner(experiment_configuration, load_target_list(experiment_configuration["target_list"])).setup_and_start_experiment()
     #new_path2="upgraded_and_cleaned"+experiment_configuration["target_list"]
     #upgrader=Target_List_Analyzer(new_path, new_path2, experiment_configuration)

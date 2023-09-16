@@ -530,23 +530,105 @@ class Target_List_Analyzer():
  
         return error_counts
 
+    def analyze_column_statuscode_counts(self, data_frame, column_name):
+        if column_name not in data_frame.columns:
+            return None
+        value_counts = data_frame[column_name].value_counts().to_dict()
+        
+        return value_counts
+ 
+
+
+        """     def analyze_column_statuscode_by_indexes(self, data_frame, column_indexes):
+        results = pandas.DataFrame()  
+        
+        for index in column_indexes:
+            if index < len(data_frame.columns):
+                column_name = data_frame.columns[index]
+                column_counts = self.analyze_column_statuscode_counts(data_frame, column_name)
+                print(column_counts)
+                if column_counts is not None:
+                    results[column_name] = pandas.Series(column_counts)
+        results.rename(columns={results.columns[0]: 'Status Codes'}, inplace=True)
+        results.sort_values(by='Status Codes')
+        return results """
+    def analyze_column_statuscode_by_indexes(self, data_frame, column_indexes):
+        results = pandas.DataFrame()
+        
+        for index in column_indexes:
+            if index < len(data_frame.columns):
+                column_name = data_frame.columns[index]
+                column_counts = self.analyze_column_statuscode_counts(data_frame, column_name)
+                if column_counts is not None:
+                    # Create a DataFrame with the counts and use the original column name as the header
+                    counts_df = pandas.DataFrame({column_name: column_counts})
+                    
+                    # Concatenate the counts DataFrame with the results DataFrame
+                    results = pandas.concat([results, counts_df], axis=1)
+                    
+        
+        #results.index.name="Status Code"
+        
+        results.reset_index(inplace=True)
+        results = results.rename(columns = {'index':'Status Code'})
+        results.sort_values(by='Status Code', ascending=True, inplace=True) 
+        return results
 
     def filter_dataframe_remove_4_errors(self, data_frame):
-        # Count errors per row
+        
         error_counts_per_row = data_frame.apply(lambda row: sum(1 for column in row[1:] if isinstance(column, str) and 'Errno' in column), axis=1)
         
-        # Filter the DataFrame to keep rows with less than 4 errors
+        
         filtered_df = data_frame[error_counts_per_row < 4]
         
         return filtered_df
+
+    def clean_up_column(self, data_frame, column_indices):
+   
+        
+        def convert_to_int(value):
+            try:
+                # If the value is already an integer, return it as is
+                if isinstance(value, int):
+                    return value
+                
+                # If the value is a float or a string representation of a float, convert it to an integer
+                if isinstance(value, float) or (isinstance(value, str) and value.replace('.', '', 1).isdigit()):
+                    return int(float(value))
+                
+                # If the value is a list, try to convert its first element to an integer
+                if isinstance(value, list) and len(value) > 0:
+                    return convert_to_int(value[0])
+
+                 # If the value is a string that represents an integer, convert it to an integer
+                if isinstance(value, str): #and value.isdigit():
+                    return int(value)
+                
+                # If none of the above conditions match, return None
+                print("Other Type", type(value))
+                return None
+            
+            except (ValueError, TypeError):
+
+                return None
+    
+        for index in column_indices:
+            if index < len(data_frame.columns):
+                column_name = data_frame.columns[index]
+                data_frame[column_name] = data_frame[column_name].apply(lambda x: convert_to_int(x))
+        
+        return data_frame
+    
+    
     def add_use_www_column(self,data_frame):
         
+        data_frame=data_frame.copy()
         no_sub_error = data_frame.apply(lambda row: all(isinstance(col, str) and 'Errno' in col for col in [row.iloc[2], row.iloc[3]]), axis=1)
 
         
         www_error= data_frame.apply(lambda row: all(isinstance(col, str) and 'Errno' in col for col in [row.iloc[4], row.iloc[5]]), axis=1)
 
-        data_frame['use_www'] = ""
+        data_frame.loc[:, 'use_www'] = ""
 
         # Update "use_www" column based on the conditions
         data_frame.loc[no_sub_error, 'use_www'] = True
@@ -599,9 +681,20 @@ class Target_List_Analyzer():
         socket_errors_per_host=self.count_errors_per_row(filtered_data_frame)
         print(socket_errors_per_host)
         socket_error_combination=self.count_error_combination(filtered_data_frame)
+        ##Analyze the http probes
+        print("Status Code Statistcs")
+         #Try to reach redirect value
+        column_indexes=[6, 7, 8, 10 ,12,15,17]
+        cleaned_df=self.clean_up_column(filtered_data_frame, column_indexes)
+        status_code_df=self.analyze_column_statuscode_by_indexes(cleaned_df,column_indexes)
+        
+        print(status_code_df)
         print(socket_error_combination)
         df_responses=self.add_use_www_column(filtered_data_frame)
+      
 
+
+        self.save_data_frame_to_upgraded_list("status_codes.csv", status_code_df)
         self.save_data_frame_to_upgraded_list(self.new_path, df_responses)
         return 
 
@@ -611,8 +704,7 @@ class Target_List_Analyzer():
         print("Entries with succesful DNS Lookup: ", len(df_filtered_errors))
         df_responses=self.analyze_http_response(df_filtered_errors.copy(), 'HTTPS relative URI, www or standard subdomain, host incl subdomain')
         self.experiment_configuration["verbose"]=True   
-        #Try to reach redirect value
-      
+       
         df_responses['Try new Location'] = df_responses.apply(
         lambda row: self.add_https_relative_uri_www_subdomain_incl_host(row['Location'], row['Socket Info WWW 443']) if pandas.notna(row['Location']) else '',
         axis=1)  
