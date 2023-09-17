@@ -537,21 +537,6 @@ class Target_List_Analyzer():
         
         return value_counts
  
-
-
-        """     def analyze_column_statuscode_by_indexes(self, data_frame, column_indexes):
-        results = pandas.DataFrame()  
-        
-        for index in column_indexes:
-            if index < len(data_frame.columns):
-                column_name = data_frame.columns[index]
-                column_counts = self.analyze_column_statuscode_counts(data_frame, column_name)
-                print(column_counts)
-                if column_counts is not None:
-                    results[column_name] = pandas.Series(column_counts)
-        results.rename(columns={results.columns[0]: 'Status Codes'}, inplace=True)
-        results.sort_values(by='Status Codes')
-        return results """
     def analyze_column_statuscode_by_indexes(self, data_frame, column_indexes):
         results = pandas.DataFrame()
         
@@ -567,13 +552,22 @@ class Target_List_Analyzer():
                     results = pandas.concat([results, counts_df], axis=1)
                     
         
-        #results.index.name="Status Code"
-        
         results.reset_index(inplace=True)
         results = results.rename(columns = {'index':'Status Code'})
         results.sort_values(by='Status Code', ascending=True, inplace=True) 
+        results.reset_index()
         return results
 
+    def group_statuscodes(self, data_frame):
+        data_frame.insert(1, 'Leading_Digit', data_frame['Status Code']//100)
+        grouped = data_frame.groupby('Leading_Digit')
+        result = grouped[data_frame.columns[2:]].agg('sum')
+        result.reset_index(inplace=True)
+        
+        
+        return result
+    
+    
     def filter_dataframe_remove_4_errors(self, data_frame):
         
         error_counts_per_row = data_frame.apply(lambda row: sum(1 for column in row[1:] if isinstance(column, str) and 'Errno' in column), axis=1)
@@ -582,6 +576,23 @@ class Target_List_Analyzer():
         filtered_df = data_frame[error_counts_per_row < 4]
         
         return filtered_df
+
+    def filter_dataframe_remove_all459(self, data_frame, columns_to_check):
+        # Function to check if a number has a leading digit of 4, 5, or 9
+        def has_leading_digit_4_5_9(number):
+            if isinstance(number, int):
+                first_digit = number//100
+                return first_digit in [4, 5, 9]
+            return False
+        print(data_frame.columns)
+        mask = data_frame.iloc[:, columns_to_check].apply(lambda x: x.map(has_leading_digit_4_5_9)).all(axis=1)
+
+        
+        filtered_df = data_frame[~mask]
+
+        return filtered_df
+    
+
 
     def clean_up_column(self, data_frame, column_indices):
    
@@ -596,12 +607,18 @@ class Target_List_Analyzer():
                 if isinstance(value, float) or (isinstance(value, str) and value.replace('.', '', 1).isdigit()):
                     return int(float(value))
                 
-                # If the value is a list, try to convert its first element to an integer
-                if isinstance(value, list) and len(value) > 0:
-                    return convert_to_int(value[0])
+                # If the value is a list represented as a string, parse it and convert its first element to an integer
+                if isinstance(value, str) and value.startswith("[") and value.endswith("]"):
+                    try:
 
-                 # If the value is a string that represents an integer, convert it to an integer
-                if isinstance(value, str): #and value.isdigit():
+                        value_list = eval(value)  # Safely evaluate the string as a Python expression
+                        if isinstance(value_list, list) and len(value_list) > 0:
+                            return convert_to_int(value_list[0])
+                    except (SyntaxError, ValueError):
+                        pass
+
+                # If the value is a string that represents an integer, convert it to an integer
+                if isinstance(value, str) and value.isdigit():
                     return int(value)
                 
                 # If none of the above conditions match, return None
@@ -609,8 +626,8 @@ class Target_List_Analyzer():
                 return None
             
             except (ValueError, TypeError):
-
                 return None
+
     
         for index in column_indices:
             if index < len(data_frame.columns):
@@ -628,7 +645,7 @@ class Target_List_Analyzer():
         
         www_error= data_frame.apply(lambda row: all(isinstance(col, str) and 'Errno' in col for col in [row.iloc[4], row.iloc[5]]), axis=1)
 
-        data_frame.loc[:, 'use_www'] = ""
+        data_frame.loc[:, 'use_www'] = "indifferent"
 
         # Update "use_www" column based on the conditions
         data_frame.loc[no_sub_error, 'use_www'] = True
@@ -660,10 +677,89 @@ class Target_List_Analyzer():
         # Remove the 'Status_Code' column
         data_frame.drop(columns=['Status_Code'], inplace=True)
         return data_frame """
+    def compare_columns_and_create_new(self, data_frame, true_column_index, false_column_index, new_column_name, insert_index, leading_digit):
+        # Function to compare values in the specified columns
+        def compare_values(row):
+            true_value = row.iloc[true_column_index]
+            false_value = row.iloc[false_column_index]
 
+            if true_value//100 == leading_digit and false_value//100 == leading_digit:
+                return 'indifferent'
+            elif true_value//100 == leading_digit:
+                return True
+            elif false_value//100 == leading_digit:
+                return False
+            else:
+                return 'unknown'
+
+        # Apply the comparison function to each row
+        data_frame[new_column_name] = data_frame.apply(compare_values, axis=1)
+
+       
+        # Return the DataFrame with the new column
+        return data_frame
+    
+    def check_columns_for_leading_digit(self, data_frame, column_indexes, new_column_name, leading_digit):
+     
+        def has_leading_digit(value):
+            if isinstance(value, int) and value // 100 == leading_digit:
+                return True
+            return False
+
+       
+        result = data_frame.iloc[:, column_indexes].apply(lambda column: column.apply(has_leading_digit).any(), axis=1)
+
+
+        data_frame[new_column_name] = result
+
+        return data_frame
+    
+    
+    def compare_columns_and_create_new_true_false(self, data_frame, true_column_index, false_column_index, new_column_name, insert_index):
+        # Function to compare values in the specified columns
+        def compare_values(row):
+            true_value = row.iloc[true_column_index]
+            false_value = row.iloc[false_column_index]
+
+            if true_value == True and false_value == True:
+                return 'indifferent'
+            elif true_value == True:
+                return 'relative'
+            elif false_value == True:
+                return 'absolute'
+            else:
+                return 'unknown'
+
+        # Apply the comparison function to each row
+        data_frame[new_column_name] = data_frame.apply(compare_values, axis=1)
+        #data_frame.insert(insert_index, new_column_name, data_frame.apply(compare_values, axis=1))
+
+        return data_frame
+    
+    
+    
+    
+    def count_occurrences_per_column(self, data_frame, column_indices):
+        # Create an empty DataFrame with rows for each result
+        result_df = pandas.DataFrame(columns=['Result'], data=['True', 'False', 'Indifferent', 'Unknown', 'Relative', 'Absolute'])
+
+        # Iterate through the specified columns
+        for index in column_indices:
+            column_name = data_frame.columns[index]
+            counts = data_frame[column_name].value_counts()
+
+            # Create a DataFrame with counts for each unique value
+            counts_df = pandas.DataFrame(columns=[column_name], data=[counts.get(True, 0), counts.get(False, 0), counts.get('indifferent', 0), counts.get('unknown', 0), counts.get('relative', 0), counts.get('absolute', 0)])
+
+            # Append the counts to the result DataFrame
+            result_df = pandas.concat([result_df, counts_df], axis=1)
+
+        return result_df
+    
 
 
     def analyze_data(self):
+        
         print("Total number of Entries: ", self.total_requests)       
         #Analyze DNS/Socket Data
         print("DNS/Socket Errors per Options")
@@ -674,6 +770,9 @@ class Target_List_Analyzer():
         print(socket_errors_per_host)
         print("Filtered all 4 errors:")
         filtered_data_frame=self.filter_dataframe_remove_4_errors(self.data_frame)
+        len_filtered_data_frame=len(filtered_data_frame)
+        print("Old Length", self.total_requests)
+        print("New Length", len_filtered_data_frame)
         print("DNS/Socket Errors per Options")
         socket_errors=self.count_socket_errors(filtered_data_frame)
         print(socket_errors)
@@ -681,20 +780,48 @@ class Target_List_Analyzer():
         socket_errors_per_host=self.count_errors_per_row(filtered_data_frame)
         print(socket_errors_per_host)
         socket_error_combination=self.count_error_combination(filtered_data_frame)
+        print(socket_error_combination)
+        
         ##Analyze the http probes
         print("Status Code Statistcs")
          #Try to reach redirect value
+        
         column_indexes=[6, 7, 8, 10 ,12,15,17]
         cleaned_df=self.clean_up_column(filtered_data_frame, column_indexes)
         status_code_df=self.analyze_column_statuscode_by_indexes(cleaned_df,column_indexes)
-        
         print(status_code_df)
-        print(socket_error_combination)
-        df_responses=self.add_use_www_column(filtered_data_frame)
-      
+        status_code_statitics=self.group_statuscodes(status_code_df)
+        print(status_code_statitics)
+        #Delete all entries which cause a 4,5 or 9 code on all columns
+        df459=self.filter_dataframe_remove_all459(cleaned_df, column_indexes)
+        len_df459=len(df459)
+        print("Old Length", len_filtered_data_frame)
+        print("New Length", len_df459)
 
+        status_code_df2=self.analyze_column_statuscode_by_indexes(df459,column_indexes)
+        print(status_code_df2)
+        status_code_statitics2=self.group_statuscodes(status_code_df2)
+        print(status_code_statitics2)
 
+        
+        df_responses=self.add_use_www_column(df459)
+        
+        df_rel_sub=self.compare_columns_and_create_new(df_responses,10,8,"Use_Sub_www(Rel)",3,2)
+        df_rel_host=self.compare_columns_and_create_new(df_rel_sub, 12, 10, "Use_Host_Sub(Rel)", 4, 2)
+        #df_abs_sub=self.compare_columns_and_create_new(df_rel_host, true_column_index, false_column_index, new_column_name, insert_index, leading_digit)
+        df_abs_host=self.compare_columns_and_create_new(df_rel_host, 17, 15, "Use_Host_Sub(Abs)", 5, 2)
+        df_rel=self.check_columns_for_leading_digit(df_abs_host, [8,10,12], "Relative URI", 2)
+        df_abs=self.check_columns_for_leading_digit(df_rel, [15,17], "Absolute URI", 2)
+        df_uri=self.compare_columns_and_create_new_true_false(df_abs, 24, 25, "URI_Option", 6)
+        column_indexes=[20, 21, 22, 23 , 24, 25, 26]
+        state_statistics=self.count_occurrences_per_column(df_uri, column_indexes)
+        self.save_data_frame_to_upgraded_list("State_Statistics.csv", state_statistics)
+        self.save_data_frame_to_upgraded_list("new.csv", df_uri)
+
+        self.save_data_frame_to_upgraded_list("status_code_statistics.csv", status_code_statitics)
         self.save_data_frame_to_upgraded_list("status_codes.csv", status_code_df)
+        self.save_data_frame_to_upgraded_list("status_code_statistics2.csv", status_code_statitics2)
+        self.save_data_frame_to_upgraded_list("status_codes2.csv", status_code_df2)
         self.save_data_frame_to_upgraded_list(self.new_path, df_responses)
         return 
 
