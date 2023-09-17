@@ -756,6 +756,21 @@ class Target_List_Analyzer():
 
         return result_df
     
+    def extract_sublist(self,data_frame, column_indices, condition_column, n):
+        # Filter rows where the specified condition_column matches the condition value
+        filtered_rows = data_frame[data_frame.iloc[:, condition_column].isin(['True', 'indifferent'])]
+
+        # Extract the first 'n' entries from the specified column indices in the filtered rows
+        extracted_data = {}
+        for column_index in column_indices:
+            column_name = data_frame.columns[column_index]
+            extracted_values = filtered_rows.iloc[:n, column_index].tolist()
+            extracted_data[column_name] = extracted_values
+
+        # Create a DataFrame from the extracted data
+        result_df = pandas.DataFrame(extracted_data)
+
+        return result_df
 
 
     def analyze_data(self):
@@ -823,6 +838,9 @@ class Target_List_Analyzer():
         self.save_data_frame_to_upgraded_list("status_code_statistics2.csv", status_code_statitics2)
         self.save_data_frame_to_upgraded_list("status_codes2.csv", status_code_df2)
         self.save_data_frame_to_upgraded_list(self.new_path, df_responses)
+        column_indexes=[0, 1, 21, 22, 23 , 24, 25, 26]
+        new_list=self.extract_sublist(df_uri, column_indexes, 26, 1000)
+        self.save_data_frame_to_upgraded_list("new_target_list.csv", new_list)
         return 
 
 
