@@ -1,0 +1,382 @@
+[
+    {
+        "number": 0,
+        "request": "GET https://www.ui.com/ HTTP/1.1\r\nHost: www.ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8  \r\n \r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n \r\n \r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\n \r\n  \t\t \t\r\n \t\r\n  \r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 17,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 475,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09257078170776367,
+            "Socket_Close_Time": 0.10790324211120605,
+            "Response_Time": 0.029859066009521484
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "date": "Mon, 18 Sep 2023 22:09:53 GMT",
+            "server": "nginx",
+            "x-frame-options": "SAMEORIGIN",
+            "x-xss-protection": "1; mode=block",
+            "x-content-type-options": "nosniff",
+            "x-cache": "Hit from cloudfront",
+            "via": "1.1 0623bbe185c513c688ceb8ce94bd2710.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "UAYbK443RHyD2mwtR-b1rUXXM1FsM2iMnLn58BOXiZTCOoUwFNeEUw==",
+            "age": "88",
+            "referrer-policy": "same-origin",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "vary": "Origin"
+        },
+        "response_length": 9951
+    },
+    {
+        "number": 1,
+        "request": "GET https://www.ui.com/ HTTP/1.1\r\nHost: www.ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \t \t  \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\t\t \r\n \t \r\n \t\r\n \r\nAccept-Language: en-US,en;q=0.5\t\t\r\nDNT: 1\r\nConnection: keep-alive\r\n \t\r\n  \r\n \t \r\n    \r\n \r\n \r\n  \t\r\n \t\r\nUpgrade-Insecure-Requests: 1\r\n \r\nSec-Fetch-Dest: document \r\nSec-Fetch-Mode: navigate \r\n \r\n \r\nSec-Fetch-Site: cross-site\t\t\r\n  \t\r\n\r\n",
+        "deviation_count": 45,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 519,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.16162347793579102,
+            "Socket_Close_Time": 0.10870218276977539,
+            "Response_Time": 0.03238511085510254
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "date": "Mon, 18 Sep 2023 22:09:53 GMT",
+            "server": "nginx",
+            "x-frame-options": "SAMEORIGIN",
+            "x-xss-protection": "1; mode=block",
+            "x-content-type-options": "nosniff",
+            "x-cache": "Hit from cloudfront",
+            "via": "1.1 1bfb8b463785209819c50309ae9d6c22.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "vZH3leRE7Q7_44GmwbZofpNFlx5W8pRNwE1kHyEeLBJ1IGClApLXCg==",
+            "age": "91",
+            "referrer-policy": "same-origin",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "vary": "Origin"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 2,
+        "request": "GET https://www.ui.com/ HTTP/1.1\r\nHost: www.ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\t  \r\n \r\n \r\nAccept-Encoding: gzip, deflate, br \t\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\n \r\nConnection: keep-alive \r\nUpgrade-Insecure-Requests: 1\t\r\nSec-Fetch-Dest: document\r\n \t \t \t\r\n \t\t \t \r\n \t\r\n   \r\n \r\n \r\nSec-Fetch-Mode: navigate\r\n   \t\t\r\n  \r\nSec-Fetch-Site: cross-site \r\n \t \t \t\r\n  \r\n\r\n",
+        "deviation_count": 45,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 513,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1390988826751709,
+            "Socket_Close_Time": 0.11395812034606934,
+            "Response_Time": 0.0225675106048584
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "date": "Mon, 18 Sep 2023 22:09:53 GMT",
+            "server": "nginx",
+            "x-frame-options": "SAMEORIGIN",
+            "x-xss-protection": "1; mode=block",
+            "x-content-type-options": "nosniff",
+            "x-cache": "Hit from cloudfront",
+            "via": "1.1 fc5a4053810c85d26abbb37d924e59fe.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "SvQGAMRR_KBgt-83BhU_rnF84QKlsERGWtPSUfMSG5xw7EwOALdrpw==",
+            "age": "93",
+            "referrer-policy": "same-origin",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "vary": "Origin"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 3,
+        "request": "GET https://www.ui.com/ HTTP/1.1\r\nHost: www.ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8 \t\r\nAccept-Encoding: gzip, deflate, br\r\n \t\t\r\n \r\n  \r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive \r\n  \r\n \t \r\n \r\n \r\n  \r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate \r\n \r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 21,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 483,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.23940300941467285,
+            "Socket_Close_Time": 0.1064298152923584,
+            "Response_Time": 0.01919698715209961
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "date": "Mon, 18 Sep 2023 22:09:53 GMT",
+            "server": "nginx",
+            "x-frame-options": "SAMEORIGIN",
+            "x-xss-protection": "1; mode=block",
+            "x-content-type-options": "nosniff",
+            "x-cache": "Hit from cloudfront",
+            "via": "1.1 3023b7184ed14098cef2ae93e7950190.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "MxuBIJAAl8KWLLS9JKN3NbDjJhZ8dvIBeoPRJ3qoLjnohYls2nkxNw==",
+            "age": "95",
+            "referrer-policy": "same-origin",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "vary": "Origin"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 4,
+        "request": "GET https://www.ui.com/ HTTP/1.1\r\nHost: www.ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\n \t\t\r\n \t\t\t\r\n \r\n \r\n \t\t  \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\t\t\t \r\n  \r\nAccept-Encoding: gzip, deflate, br\r\n \r\n  \t \r\n  \t\t\r\n   \r\n \r\n  \t\t \r\n \r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive     \r\n  \r\n \r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\t\r\n  \r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site   \r\n\r\n",
+        "deviation_count": 54,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 530,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1781911849975586,
+            "Socket_Close_Time": 0.17797636985778809,
+            "Response_Time": 0.0726613998413086
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "date": "Mon, 18 Sep 2023 22:09:53 GMT",
+            "server": "nginx",
+            "x-frame-options": "SAMEORIGIN",
+            "x-xss-protection": "1; mode=block",
+            "x-content-type-options": "nosniff",
+            "x-cache": "Hit from cloudfront",
+            "via": "1.1 bad288edf909d1013ad5510a9515feb0.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "Yao2OM43MV_As5GaSP-ukW8Wsw6SgBesThL4fokVpTKhpoHkL51BPw==",
+            "age": "98",
+            "referrer-policy": "same-origin",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "vary": "Origin"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 5,
+        "request": "GET https://www.ui.com/ HTTP/1.1\r\nHost: www.ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\n \r\n  \t\r\n \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\t\r\n \r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1  \r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1 \t \t\t\r\n \r\nSec-Fetch-Dest: document\r\n \t \r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\t\r\n \r\n \t\t\r\n \r\n\r\n",
+        "deviation_count": 25,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 487,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1591506004333496,
+            "Socket_Close_Time": 0.10913658142089844,
+            "Response_Time": 0.031258583068847656
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "date": "Mon, 18 Sep 2023 22:09:53 GMT",
+            "server": "nginx",
+            "x-frame-options": "SAMEORIGIN",
+            "x-xss-protection": "1; mode=block",
+            "x-content-type-options": "nosniff",
+            "x-cache": "Hit from cloudfront",
+            "via": "1.1 c08e2480b7edc38ca37e62153bcb77fe.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "_L_kO1ItKKwGdhHmEtCojkorW8Fu3HcTKjLVR33RJ84oL6oD37CSrg==",
+            "age": "100",
+            "referrer-policy": "same-origin",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "vary": "Origin"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 6,
+        "request": "GET https://www.ui.com/ HTTP/1.1\r\nHost: www.ui.com \t\r\n \r\n \t\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\n \t\t \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br \t \t\r\n \r\n \r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\t \t\t \r\nConnection: keep-alive \t\t\r\n \r\nUpgrade-Insecure-Requests: 1\r\n \r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 26,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 484,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.12613511085510254,
+            "Socket_Close_Time": 0.1085824966430664,
+            "Response_Time": 0.018802404403686523
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "date": "Mon, 18 Sep 2023 22:09:53 GMT",
+            "server": "nginx",
+            "x-frame-options": "SAMEORIGIN",
+            "x-xss-protection": "1; mode=block",
+            "x-content-type-options": "nosniff",
+            "x-cache": "Hit from cloudfront",
+            "via": "1.1 81ecaa6db2d0fa9d47412a499ce429f2.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "wNbJk-l_7J3eJiX9E0ASRnz65Kv1EHSGkGFC2LovdPyAmpEJiDEZ5g==",
+            "age": "102",
+            "referrer-policy": "same-origin",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "vary": "Origin"
+        },
+        "response_length": 9951
+    },
+    {
+        "number": 7,
+        "request": "GET https://www.ui.com/ HTTP/1.1\r\nHost: www.ui.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0 \r\n \r\n \r\n \t\t\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\t\t \r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\t \r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\t\r\n \r\nSec-Fetch-Mode: navigate\t \r\n \r\n  \r\n \r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 19,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 475,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1877119541168213,
+            "Socket_Close_Time": 0.12045621871948242,
+            "Response_Time": 0.02994084358215332
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "date": "Mon, 18 Sep 2023 22:09:53 GMT",
+            "server": "nginx",
+            "x-frame-options": "SAMEORIGIN",
+            "x-xss-protection": "1; mode=block",
+            "x-content-type-options": "nosniff",
+            "x-cache": "Hit from cloudfront",
+            "via": "1.1 4cffbab5942a988899752478bef02394.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "SkyOe3iKrsCwXCpNu44VFs3hPubF7DNK1_hesv7yarOsjHOQMBFwRw==",
+            "age": "104",
+            "referrer-policy": "same-origin",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "vary": "Origin"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 8,
+        "request": "GET https://www.ui.com/ HTTP/1.1\r\nHost: www.ui.com\r\n \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0 \r\n \t \t \t\t\r\n \r\n  \r\n  \t\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\n \r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\n  \r\n \r\n \r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\n \r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\t\r\n\r\n",
+        "deviation_count": 22,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 484,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.15048456192016602,
+            "Socket_Close_Time": 0.14393162727355957,
+            "Response_Time": 0.02261638641357422
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "date": "Mon, 18 Sep 2023 22:09:53 GMT",
+            "server": "nginx",
+            "x-frame-options": "SAMEORIGIN",
+            "x-xss-protection": "1; mode=block",
+            "x-content-type-options": "nosniff",
+            "x-cache": "Hit from cloudfront",
+            "via": "1.1 c4c673bb688f3b033f2c0ef943ea98e2.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "gBhHtqm22Hs6h6uzJuevIzzmnPfEcRuh4yVkD9rmuDbfDM0-P4dk3Q==",
+            "age": "107",
+            "referrer-policy": "same-origin",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "vary": "Origin"
+        },
+        "response_length": 0
+    },
+    {
+        "number": 9,
+        "request": "GET https://www.ui.com/ HTTP/1.1\r\nHost: www.ui.com\t\t \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0   \r\n \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\n \t \r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\t\r\n \r\nDNT: 1 \r\n \t\r\nConnection: keep-alive\t\t\t\r\n \r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\n \r\nSec-Fetch-Site: cross-site \r\n \r\n\r\n",
+        "deviation_count": 22,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 478,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.12932252883911133,
+            "Socket_Close_Time": 0.12051892280578613,
+            "Response_Time": 0.016809701919555664
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "content-type": "text/html",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "date": "Mon, 18 Sep 2023 22:09:53 GMT",
+            "server": "nginx",
+            "x-frame-options": "SAMEORIGIN",
+            "x-xss-protection": "1; mode=block",
+            "x-content-type-options": "nosniff",
+            "x-cache": "Hit from cloudfront",
+            "via": "1.1 dbd64dbf2e06de1908b4c325512a96a6.cloudfront.net (CloudFront)",
+            "x-amz-cf-pop": "HAM50-P2",
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "x-amz-cf-id": "suS3ulVlId-1j-saRiQLtCBOgw8o6JNsR1RJhA7_M-FIRr9D4K2GTg==",
+            "age": "110",
+            "referrer-policy": "same-origin",
+            "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+            "vary": "Origin"
+        },
+        "response_length": 0
+    }
+]

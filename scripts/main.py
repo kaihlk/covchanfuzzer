@@ -48,14 +48,19 @@ def get_last_experiment_number():
     return int(last_row["experiment_no"])
 
 def load_target_list(target_list_csv):
-     # Load the list back from the CSV file
+    # Load the list back from the CSV file, considering only the first two columns
     loaded_list = []
     with open(target_list_csv, 'r') as csvfile:
         csv_reader = csv.reader(csvfile)
-        next(csv_reader)  # Skip header rowtandard
+        next(csv_reader) 
+        for row in csv_reader:
+            # Append the first two columns of each row to the loaded_list
+            loaded_list.append(row[1])
 
-    print("List loaded from: " + target_list_csv)            
-    return loaded_list     
+    print("List loaded from: " + target_list_csv)
+    return loaded_list
+
+
         
 def main():
     '''Function that runs the connection, selection of the CC and the fuzzer'''
@@ -74,24 +79,24 @@ def main():
     experiment_configuration = {
         "experiment_no": exp_no,
         "comment": description,
-        "verbose": False,
+        "verbose": True,
         "timestamp": time.strftime("%Y%m%d_%H%M%S"),
         #Covert Channel Option
-        "covertchannel_request_number": 1,
+        "covertchannel_request_number": 3,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
         "fuzz_value":0.8,
         #Target Selection Options  
-        "num_attempts": 1,
-        "max_targets": 10, #len(self.target_list):
-        "max_workers": 1,  # Parallel Processing of subsets,
+        "num_attempts": 10,
+        "max_targets": 20, #len(self.target_list):
+        "max_workers": 5,  # Parallel Processing of subsets,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
-        "target_list": "target_list_subdomain_10000.csv",
+        "target_list": "new_target_list.csv",
         "target_subset_size": 5,
         "target_add_www": True,
         #"target_host": "www.example.com",  #Just for special useipvstt
-        "target_port": None, #443, 8080 Apache
+        "target_port": 443, #443, 8080 Apache
 
         #Connection Options
         "conn_timeout": 2, #seconds 
@@ -104,12 +109,12 @@ def main():
         "HTTP_version": "HTTP/1.1",
         "method" : "GET",
         "url": "",   #Complete URl
-        "path": "", #Dynamic, List, ?
+        "path": "/", #Dynamic, List, ?
         "standard_subdomain": "www", #use www if not provided
-        "relative_uri": True, # build a relative uri without the host in the requestline: /index.html
-        "include_subdomain": False, #include the subdomain, when building requestline, if none given use <standard_subdomain>
+        "relative_uri": False, # build a relative uri without the host in the requestline: /index.html
+        "include_subdomain": True, #include the subdomain, when building requestline, if none given use <standard_subdomain>
         "include_port":False,
-        "include_subdomain_host_header": False,
+        "include_subdomain_host_header": True,
         "headers": None,
         "standard_headers": "firefox_HTTP/1.1_TLS",  #curl_HTTP/1.1(TLS), firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
         "content": "random",  #"random", "some_text""fuzz_value": 0.9,
@@ -118,17 +123,17 @@ def main():
 
     }
 
-    upgrade_path="upgraded_"+experiment_configuration["target_list"]
+    #upgrade_path="upgraded_"+experiment_configuration["target_list"]
     #upgrader=Target_List_Upgrader(experiment_configuration,upgrade_path).upgrade_list()
     #print("Done")
-    #experiment=ExperimentRunner(experiment_configuration, load_target_list(experiment_configuration["target_list"])).setup_and_start_experiment()
+    experiment=ExperimentRunner(experiment_configuration, load_target_list(experiment_configuration["target_list"])).setup_and_start_experiment()
     #new_path2="upgraded_and_cleaned"+experiment_configuration["target_list"]
     #upgrader=Target_List_Analyzer(new_path, new_path2, experiment_configuration)
     #upgrader.analyze_data()
-    analyze_path="analysed_"+experiment_configuration["target_list"]
-    target_analizer=Target_List_Analyzer(upgrade_path, analyze_path, experiment_configuration)
-    target_analizer.analyze_data()
-    print("Data Check Complete")
+   # analyze_path="analysed_"+experiment_configuration["target_list"]
+   # target_analizer=Target_List_Analyzer(upgrade_path, analyze_path, experiment_configuration)
+    #target_analizer.analyze_data()
+    #print("Data Check Complete")
     
     
 

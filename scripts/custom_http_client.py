@@ -173,7 +173,7 @@ class CustomHTTP(HTTP):
         timeout_ms = int(timeout * 1000)   
         try:
             # Build socket
-            s = socket.socket(ip_info[0][0], ip_info[0][1], ip_info[0][2])   
+            s = socket.socket(ip_info[0][0][0], ip_info[0][0][1], ip_info[0][0][2])   
             # Set socket options
             s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             s.settimeout(timeout)
@@ -221,7 +221,7 @@ class CustomHTTP(HTTP):
                 tls_socket.settimeout(timeout)
                 #print("Host IP Info")
                #print(host_ip_info[0][4])
-                tls_socket.connect(host_ip_info[0][4])
+                tls_socket.connect(host_ip_info[0][0][4])
                 tls_socket.settimeout(timeout)
                 #assert "http/1.1" == tls_socket.selected_alpn_protocol()  # Assert Error Problem with saving log to json
                 stream_socket = SuperSocket.SSLStreamSocket(tls_socket, basecls=HTTP)

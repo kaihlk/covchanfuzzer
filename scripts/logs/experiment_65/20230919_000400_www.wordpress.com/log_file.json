@@ -1,0 +1,292 @@
+[
+    {
+        "number": 0,
+        "request": "GET https://www.wordpress.com/ HTTP/1.1\r\nHost: www.wordpress.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8  \r\n \r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n \r\n \r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\n \r\n  \t\t \t\r\n \t\r\n  \r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 17,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 489,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.3241157531738281,
+            "Socket_Close_Time": 0.1113438606262207,
+            "Response_Time": 0.07868432998657227
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 18 Sep 2023 22:11:21 GMT",
+            "content-type": "text/html",
+            "content-length": "1234",
+            "connection": "close",
+            "etag": "\"631a7fe8-4d2\"",
+            "x-ac": "1.ams _dfw BYPASS",
+            "strict-transport-security": "max-age=31536000; preload"
+        },
+        "response_length": 1122
+    },
+    {
+        "number": 1,
+        "request": "GET https://www.wordpress.com/ HTTP/1.1\r\nHost: www.wordpress.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \t \t  \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\t\t \r\n \t \r\n \t\r\n \r\nAccept-Language: en-US,en;q=0.5\t\t\r\nDNT: 1\r\nConnection: keep-alive\r\n \t\r\n  \r\n \t \r\n    \r\n \r\n \r\n  \t\r\n \t\r\nUpgrade-Insecure-Requests: 1\r\n \r\nSec-Fetch-Dest: document \r\nSec-Fetch-Mode: navigate \r\n \r\n \r\nSec-Fetch-Site: cross-site\t\t\r\n  \t\r\n\r\n",
+        "deviation_count": 45,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 533,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09276533126831055,
+            "Socket_Close_Time": 0.13240551948547363,
+            "Response_Time": 0.0227205753326416
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 18 Sep 2023 22:11:24 GMT",
+            "content-type": "text/html",
+            "content-length": "1234",
+            "connection": "close",
+            "etag": "\"631a7fe8-4d2\"",
+            "x-ac": "5.ams _dfw BYPASS",
+            "strict-transport-security": "max-age=31536000; preload"
+        },
+        "response_length": 1122
+    },
+    {
+        "number": 2,
+        "request": "GET https://www.wordpress.com/ HTTP/1.1\r\nHost: www.wordpress.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\t  \r\n \r\n \r\nAccept-Encoding: gzip, deflate, br \t\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\n \r\nConnection: keep-alive \r\nUpgrade-Insecure-Requests: 1\t\r\nSec-Fetch-Dest: document\r\n \t \t \t\r\n \t\t \t \r\n \t\r\n   \r\n \r\n \r\nSec-Fetch-Mode: navigate\r\n   \t\t\r\n  \r\nSec-Fetch-Site: cross-site \r\n \t \t \t\r\n  \r\n\r\n",
+        "deviation_count": 45,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 527,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1007375717163086,
+            "Socket_Close_Time": 0.11712265014648438,
+            "Response_Time": 0.03617715835571289
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 18 Sep 2023 22:11:26 GMT",
+            "content-type": "text/html",
+            "content-length": "1234",
+            "connection": "close",
+            "etag": "\"631a7fe8-4d2\"",
+            "x-ac": "1.ams _dfw BYPASS",
+            "strict-transport-security": "max-age=31536000; preload"
+        },
+        "response_length": 1122
+    },
+    {
+        "number": 3,
+        "request": "GET https://www.wordpress.com/ HTTP/1.1\r\nHost: www.wordpress.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8 \t\r\nAccept-Encoding: gzip, deflate, br\r\n \t\t\r\n \r\n  \r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive \r\n  \r\n \t \r\n \r\n \r\n  \r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate \r\n \r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 21,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 497,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.17594671249389648,
+            "Socket_Close_Time": 0.10288453102111816,
+            "Response_Time": 0.0617063045501709
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 18 Sep 2023 22:11:29 GMT",
+            "content-type": "text/html",
+            "content-length": "1234",
+            "connection": "close",
+            "etag": "\"631a7fe8-4d2\"",
+            "x-ac": "5.ams _dfw BYPASS",
+            "strict-transport-security": "max-age=31536000; preload"
+        },
+        "response_length": 1122
+    },
+    {
+        "number": 4,
+        "request": "GET https://www.wordpress.com/ HTTP/1.1\r\nHost: www.wordpress.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\n \t\t\r\n \t\t\t\r\n \r\n \r\n \t\t  \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\t\t\t \r\n  \r\nAccept-Encoding: gzip, deflate, br\r\n \r\n  \t \r\n  \t\t\r\n   \r\n \r\n  \t\t \r\n \r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive     \r\n  \r\n \r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\t\r\n  \r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site   \r\n\r\n",
+        "deviation_count": 54,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 544,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.19777441024780273,
+            "Socket_Close_Time": 0.10065078735351562,
+            "Response_Time": 0.021773815155029297
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 18 Sep 2023 22:11:31 GMT",
+            "content-type": "text/html",
+            "content-length": "1234",
+            "connection": "close",
+            "etag": "\"631a7fe8-4d2\"",
+            "x-ac": "1.ams _dfw BYPASS",
+            "strict-transport-security": "max-age=31536000; preload"
+        },
+        "response_length": 1122
+    },
+    {
+        "number": 5,
+        "request": "GET https://www.wordpress.com/ HTTP/1.1\r\nHost: www.wordpress.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\n \r\n  \t\r\n \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\t\r\n \r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1  \r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1 \t \t\t\r\n \r\nSec-Fetch-Dest: document\r\n \t \r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\t\r\n \r\n \t\t\r\n \r\n\r\n",
+        "deviation_count": 25,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 501,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.12353992462158203,
+            "Socket_Close_Time": 0.10680556297302246,
+            "Response_Time": 0.028779268264770508
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 18 Sep 2023 22:11:33 GMT",
+            "content-type": "text/html",
+            "content-length": "1234",
+            "connection": "close",
+            "etag": "\"631a7fe8-4d2\"",
+            "x-ac": "5.ams _dfw BYPASS",
+            "strict-transport-security": "max-age=31536000; preload"
+        },
+        "response_length": 1122
+    },
+    {
+        "number": 6,
+        "request": "GET https://www.wordpress.com/ HTTP/1.1\r\nHost: www.wordpress.com \t\r\n \r\n \t\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\n \t\t \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br \t \t\r\n \r\n \r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\t \t\t \r\nConnection: keep-alive \t\t\r\n \r\nUpgrade-Insecure-Requests: 1\r\n \r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 26,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 498,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10069632530212402,
+            "Socket_Close_Time": 0.1101229190826416,
+            "Response_Time": 0.02528667449951172
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 18 Sep 2023 22:11:36 GMT",
+            "content-type": "text/html",
+            "content-length": "1234",
+            "connection": "close",
+            "etag": "\"631a7fe8-4d2\"",
+            "x-ac": "5.ams _dfw BYPASS",
+            "strict-transport-security": "max-age=31536000; preload"
+        },
+        "response_length": 1122
+    },
+    {
+        "number": 7,
+        "request": "GET https://www.wordpress.com/ HTTP/1.1\r\nHost: www.wordpress.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0 \r\n \r\n \r\n \t\t\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\t\t \r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\t \r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\t\r\n \r\nSec-Fetch-Mode: navigate\t \r\n \r\n  \r\n \r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 19,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 489,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1463007926940918,
+            "Socket_Close_Time": 0.19095063209533691,
+            "Response_Time": 0.037554025650024414
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 18 Sep 2023 22:11:38 GMT",
+            "content-type": "text/html",
+            "content-length": "1234",
+            "connection": "close",
+            "etag": "\"631a7fe8-4d2\"",
+            "x-ac": "5.ams _dfw BYPASS",
+            "strict-transport-security": "max-age=31536000; preload"
+        },
+        "response_length": 1122
+    },
+    {
+        "number": 8,
+        "request": "GET https://www.wordpress.com/ HTTP/1.1\r\nHost: www.wordpress.com\r\n \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0 \r\n \t \t \t\t\r\n \r\n  \r\n  \t\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\n \r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\n  \r\n \r\n \r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\n \r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\t\r\n\r\n",
+        "deviation_count": 22,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 498,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.26900553703308105,
+            "Socket_Close_Time": 0.11850261688232422,
+            "Response_Time": 0.02777719497680664
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 18 Sep 2023 22:11:41 GMT",
+            "content-type": "text/html",
+            "content-length": "1234",
+            "connection": "close",
+            "etag": "\"631a7fe8-4d2\"",
+            "x-ac": "5.ams _dfw BYPASS",
+            "strict-transport-security": "max-age=31536000; preload"
+        },
+        "response_length": 1122
+    },
+    {
+        "number": 9,
+        "request": "GET https://www.wordpress.com/ HTTP/1.1\r\nHost: www.wordpress.com\t\t \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0   \r\n \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\n \t \r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\t\r\n \r\nDNT: 1 \r\n \t\r\nConnection: keep-alive\t\t\t\r\n \r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\n \r\nSec-Fetch-Site: cross-site \r\n \r\n\r\n",
+        "deviation_count": 22,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 492,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.17485499382019043,
+            "Socket_Close_Time": 0.10915327072143555,
+            "Response_Time": 0.046401262283325195
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 18 Sep 2023 22:11:43 GMT",
+            "content-type": "text/html",
+            "content-length": "1234",
+            "connection": "close",
+            "etag": "\"631a7fe8-4d2\"",
+            "x-ac": "1.ams _dfw BYPASS",
+            "strict-transport-security": "max-age=31536000; preload"
+        },
+        "response_length": 1122
+    }
+]

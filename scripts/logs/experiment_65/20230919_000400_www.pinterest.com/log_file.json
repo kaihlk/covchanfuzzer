@@ -1,0 +1,309 @@
+[
+    {
+        "number": 0,
+        "request": "GET https://www.pinterest.com/ HTTP/1.1\r\nHost: www.pinterest.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8  \r\n \r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\n \r\n \r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\n \r\n  \t\t \t\r\n \t\r\n  \r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 17,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 489,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.20534920692443848,
+            "Socket_Close_Time": 0.11471819877624512,
+            "Response_Time": 0.06057143211364746
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "mime-version": "1.0",
+            "content-type": "text/html",
+            "content-length": "177",
+            "expires": "Mon, 18 Sep 2023 22:11:20 GMT",
+            "date": "Mon, 18 Sep 2023 22:11:20 GMT",
+            "alt-svc": "h3=\":443\"; ma=600",
+            "connection": "close",
+            "akamai-grn": "0.541d1002.1695075080.1e3ebc52",
+            "x-cdn": "akamai",
+            "strict-transport-security": "max-age=31536000 ; includeSubDomains ; preload"
+        },
+        "response_length": 177
+    },
+    {
+        "number": 1,
+        "request": "GET https://www.pinterest.com/ HTTP/1.1\r\nHost: www.pinterest.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \t \t  \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\t\t \r\n \t \r\n \t\r\n \r\nAccept-Language: en-US,en;q=0.5\t\t\r\nDNT: 1\r\nConnection: keep-alive\r\n \t\r\n  \r\n \t \r\n    \r\n \r\n \r\n  \t\r\n \t\r\nUpgrade-Insecure-Requests: 1\r\n \r\nSec-Fetch-Dest: document \r\nSec-Fetch-Mode: navigate \r\n \r\n \r\nSec-Fetch-Site: cross-site\t\t\r\n  \t\r\n\r\n",
+        "deviation_count": 45,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 533,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.3119051456451416,
+            "Socket_Close_Time": 0.11564278602600098,
+            "Response_Time": 0.042786598205566406
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "mime-version": "1.0",
+            "content-type": "text/html",
+            "content-length": "177",
+            "expires": "Mon, 18 Sep 2023 22:11:23 GMT",
+            "date": "Mon, 18 Sep 2023 22:11:23 GMT",
+            "alt-svc": "h3=\":443\"; ma=600",
+            "connection": "close",
+            "akamai-grn": "0.541d1002.1695075083.1e3ebe0a",
+            "x-cdn": "akamai",
+            "strict-transport-security": "max-age=31536000 ; includeSubDomains ; preload"
+        },
+        "response_length": 177
+    },
+    {
+        "number": 2,
+        "request": "GET https://www.pinterest.com/ HTTP/1.1\r\nHost: www.pinterest.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\t  \r\n \r\n \r\nAccept-Encoding: gzip, deflate, br \t\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\n \r\nConnection: keep-alive \r\nUpgrade-Insecure-Requests: 1\t\r\nSec-Fetch-Dest: document\r\n \t \t \t\r\n \t\t \t \r\n \t\r\n   \r\n \r\n \r\nSec-Fetch-Mode: navigate\r\n   \t\t\r\n  \r\nSec-Fetch-Site: cross-site \r\n \t \t \t\r\n  \r\n\r\n",
+        "deviation_count": 45,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 527,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1808485984802246,
+            "Socket_Close_Time": 0.13743185997009277,
+            "Response_Time": 0.01756906509399414
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "mime-version": "1.0",
+            "content-type": "text/html",
+            "content-length": "177",
+            "expires": "Mon, 18 Sep 2023 22:11:25 GMT",
+            "date": "Mon, 18 Sep 2023 22:11:25 GMT",
+            "alt-svc": "h3=\":443\"; ma=600",
+            "connection": "close",
+            "akamai-grn": "0.541d1002.1695075085.1e3ebf67",
+            "x-cdn": "akamai",
+            "strict-transport-security": "max-age=31536000 ; includeSubDomains ; preload"
+        },
+        "response_length": 177
+    },
+    {
+        "number": 3,
+        "request": "GET https://www.pinterest.com/ HTTP/1.1\r\nHost: www.pinterest.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8 \t\r\nAccept-Encoding: gzip, deflate, br\r\n \t\t\r\n \r\n  \r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive \r\n  \r\n \t \r\n \r\n \r\n  \r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate \r\n \r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 21,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 497,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.13701391220092773,
+            "Socket_Close_Time": 0.13463091850280762,
+            "Response_Time": 0.04638409614562988
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "mime-version": "1.0",
+            "content-type": "text/html",
+            "content-length": "177",
+            "expires": "Mon, 18 Sep 2023 22:11:28 GMT",
+            "date": "Mon, 18 Sep 2023 22:11:28 GMT",
+            "alt-svc": "h3=\":443\"; ma=600",
+            "connection": "close",
+            "akamai-grn": "0.541d1002.1695075088.1e3ec16a",
+            "x-cdn": "akamai",
+            "strict-transport-security": "max-age=31536000 ; includeSubDomains ; preload"
+        },
+        "response_length": 177
+    },
+    {
+        "number": 4,
+        "request": "GET https://www.pinterest.com/ HTTP/1.1\r\nHost: www.pinterest.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\n \t\t\r\n \t\t\t\r\n \r\n \r\n \t\t  \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\t\t\t \r\n  \r\nAccept-Encoding: gzip, deflate, br\r\n \r\n  \t \r\n  \t\t\r\n   \r\n \r\n  \t\t \r\n \r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive     \r\n  \r\n \r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\t\r\n  \r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site   \r\n\r\n",
+        "deviation_count": 54,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 544,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.17082476615905762,
+            "Socket_Close_Time": 0.11252593994140625,
+            "Response_Time": 0.034612417221069336
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "mime-version": "1.0",
+            "content-type": "text/html",
+            "content-length": "177",
+            "expires": "Mon, 18 Sep 2023 22:11:30 GMT",
+            "date": "Mon, 18 Sep 2023 22:11:30 GMT",
+            "alt-svc": "h3=\":443\"; ma=600",
+            "connection": "close",
+            "akamai-grn": "0.541d1002.1695075090.1e3ec2f2",
+            "x-cdn": "akamai",
+            "strict-transport-security": "max-age=31536000 ; includeSubDomains ; preload"
+        },
+        "response_length": 177
+    },
+    {
+        "number": 5,
+        "request": "GET https://www.pinterest.com/ HTTP/1.1\r\nHost: www.pinterest.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\n \r\n  \t\r\n \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\t\r\n \r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1  \r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1 \t \t\t\r\n \r\nSec-Fetch-Dest: document\r\n \t \r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\t\r\n \r\n \t\t\r\n \r\n\r\n",
+        "deviation_count": 25,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 501,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.13915133476257324,
+            "Socket_Close_Time": 0.1016244888305664,
+            "Response_Time": 0.01511693000793457
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "mime-version": "1.0",
+            "content-type": "text/html",
+            "content-length": "177",
+            "expires": "Mon, 18 Sep 2023 22:11:32 GMT",
+            "date": "Mon, 18 Sep 2023 22:11:32 GMT",
+            "alt-svc": "h3=\":443\"; ma=600",
+            "connection": "close",
+            "akamai-grn": "0.541d1002.1695075092.1e3ec4ef",
+            "x-cdn": "akamai",
+            "strict-transport-security": "max-age=31536000 ; includeSubDomains ; preload"
+        },
+        "response_length": 177
+    },
+    {
+        "number": 6,
+        "request": "GET https://www.pinterest.com/ HTTP/1.1\r\nHost: www.pinterest.com \t\r\n \r\n \t\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\n \t\t \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br \t \t\r\n \r\n \r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\t \t\t \r\nConnection: keep-alive \t\t\r\n \r\nUpgrade-Insecure-Requests: 1\r\n \r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 26,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 498,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.16790080070495605,
+            "Socket_Close_Time": 0.10139155387878418,
+            "Response_Time": 0.0205841064453125
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "mime-version": "1.0",
+            "content-type": "text/html",
+            "content-length": "177",
+            "expires": "Mon, 18 Sep 2023 22:11:34 GMT",
+            "date": "Mon, 18 Sep 2023 22:11:34 GMT",
+            "alt-svc": "h3=\":443\"; ma=600",
+            "connection": "close",
+            "akamai-grn": "0.541d1002.1695075094.1e3ec6b1",
+            "x-cdn": "akamai",
+            "strict-transport-security": "max-age=31536000 ; includeSubDomains ; preload"
+        },
+        "response_length": 177
+    },
+    {
+        "number": 7,
+        "request": "GET https://www.pinterest.com/ HTTP/1.1\r\nHost: www.pinterest.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0 \r\n \r\n \r\n \t\t\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\t\t \r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\t \r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\t\r\n \r\nSec-Fetch-Mode: navigate\t \r\n \r\n  \r\n \r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 19,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 489,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.24647021293640137,
+            "Socket_Close_Time": 0.10845518112182617,
+            "Response_Time": 0.05564236640930176
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "mime-version": "1.0",
+            "content-type": "text/html",
+            "content-length": "177",
+            "expires": "Mon, 18 Sep 2023 22:11:36 GMT",
+            "date": "Mon, 18 Sep 2023 22:11:36 GMT",
+            "alt-svc": "h3=\":443\"; ma=600",
+            "connection": "close",
+            "akamai-grn": "0.541d1002.1695075096.1e3ec8d4",
+            "x-cdn": "akamai",
+            "strict-transport-security": "max-age=31536000 ; includeSubDomains ; preload"
+        },
+        "response_length": 177
+    },
+    {
+        "number": 8,
+        "request": "GET https://www.pinterest.com/ HTTP/1.1\r\nHost: www.pinterest.com\r\n \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0 \r\n \t \t \t\t\r\n \r\n  \r\n  \t\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\n \r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\n  \r\n \r\n \r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\n \r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\t\r\n\r\n",
+        "deviation_count": 22,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 498,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.09522438049316406,
+            "Socket_Close_Time": 0.1046302318572998,
+            "Response_Time": 0.04578733444213867
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "mime-version": "1.0",
+            "content-type": "text/html",
+            "content-length": "177",
+            "expires": "Mon, 18 Sep 2023 22:11:39 GMT",
+            "date": "Mon, 18 Sep 2023 22:11:39 GMT",
+            "alt-svc": "h3=\":443\"; ma=600",
+            "connection": "close",
+            "akamai-grn": "0.541d1002.1695075099.1e3eca78",
+            "x-cdn": "akamai",
+            "strict-transport-security": "max-age=31536000 ; includeSubDomains ; preload"
+        },
+        "response_length": 177
+    },
+    {
+        "number": 9,
+        "request": "GET https://www.pinterest.com/ HTTP/1.1\r\nHost: www.pinterest.com\t\t \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0   \r\n \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\n \t \r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\t\r\n \r\nDNT: 1 \r\n \t\r\nConnection: keep-alive\t\t\t\r\n \r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\n \r\nSec-Fetch-Site: cross-site \r\n \r\n\r\n",
+        "deviation_count": 22,
+        "uri": "https://>>SUDBDOMAIN_PLACEHOLDER<<.>>DOMAIN_PLACEHOLDER<</",
+        "request_length": 492,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.08006668090820312,
+            "Socket_Close_Time": 0.1055307388305664,
+            "Response_Time": 0.012556076049804688
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "mime-version": "1.0",
+            "content-type": "text/html",
+            "content-length": "209",
+            "expires": "Mon, 18 Sep 2023 22:11:41 GMT",
+            "date": "Mon, 18 Sep 2023 22:11:41 GMT",
+            "connection": "close"
+        },
+        "response_length": 209
+    }
+]

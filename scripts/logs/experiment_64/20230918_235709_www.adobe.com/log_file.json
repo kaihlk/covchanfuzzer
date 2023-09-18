@@ -1,0 +1,306 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.adobe.com \r\n \t\r\n \r\n  \r\n \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8 \t\r\nAccept-Encoding: gzip, deflate, br\t\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\n \r\n \r\nConnection: keep-alive \r\n \r\nUpgrade-Insecure-Requests: 1\t\r\n \r\n \r\n \t\t\t \t\t\t\r\n \r\n \r\n \t\r\n  \r\n \r\nSec-Fetch-Dest: document\r\n  \r\n \t\r\n \t\t\t\r\nSec-Fetch-Mode: navigate\t \r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 42,
+        "uri": "/",
+        "request_length": 505,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.24306535720825195,
+            "Socket_Close_Time": 0.10403275489807129,
+            "Response_Time": 0.028023481369018555
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "mime-version": "1.0",
+            "content-type": "text/html",
+            "content-length": "176",
+            "expires": "Mon, 18 Sep 2023 22:04:29 GMT",
+            "date": "Mon, 18 Sep 2023 22:04:29 GMT",
+            "connection": "close",
+            "server-timing": "ak_p; desc=\"1695074669090_399897988_57092308_9_0_44_71_-\";dur=1",
+            "strict-transport-security": "max-age=86400",
+            "set-cookie": "ak_bmsc=48F3179FBB075F088204355E834CD6B9~000000000000000000000000000000~YAAQhPXVF3kVFIaKAQAAc9JSqhUj/JBi9VHZS68gN/32b3EZGBPfozEYR4ktjWJiSOwUD9KjcHwK7R+G1l96tTOXxJWOuYpTK/buwn6faWiV7Bsfj9b8qsXJJmkTp/W5UoRPQuK3KYpBUbFxbG0LMXlP9S8+qQxecuw6dgX4uyKTFkJrTgZc8xhbH6FCsrniZRFGXfpTTqFQuWdvNsVS91tcGi/h2+MZ/yorhdnrHopsKa2Cxu743N1GEuu+y//tGqI3Jr31y45BcRGbY3BZLBurGbbtceoY8pcmOflZDWhAYrjg5d8ulB/TbR9wmmAyxLDp7Nqh/l03+voZyh80Sg2yjivakgUaER0E9n4gI9KV+pFl6NSTDPYCmtk=; Domain=.adobe.com; Path=/; Expires=Tue, 19 Sep 2023 00:04:29 GMT; Max-Age=7200; HttpOnly"
+        },
+        "response_length": 176
+    },
+    {
+        "number": 1,
+        "request": "GET / HTTP/1.1\r\nHost: www.adobe.com\r\n \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\t\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive  \t\t \r\n \r\n \r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document  \r\n \r\n \r\n \t\t  \r\n \r\n \t\t\t\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\t\t\t  \r\n\r\n",
+        "deviation_count": 28,
+        "uri": "/",
+        "request_length": 471,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.26086854934692383,
+            "Socket_Close_Time": 0.11015844345092773,
+            "Response_Time": 0.03845334053039551
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "mime-version": "1.0",
+            "content-type": "text/html",
+            "content-length": "176",
+            "expires": "Mon, 18 Sep 2023 22:04:31 GMT",
+            "date": "Mon, 18 Sep 2023 22:04:31 GMT",
+            "connection": "close",
+            "server-timing": "ak_p; desc=\"1695074671628_399897988_57092486_9_0_34_137_-\";dur=1",
+            "strict-transport-security": "max-age=86400",
+            "set-cookie": "ak_bmsc=0E2C746ED6F9D14B41B48B989392A0F5~000000000000000000000000000000~YAAQhPXVF3oVFIaKAQAAxdxSqhX0zM1rNNSuEaL3HWkuHNc14KJ1IRM4uvlsIFcXbrn5QZl3clKJNj60E2QqnK843dS1K+HVPrfA1IZnk2N1iRsEPSlH/gTZutzm4ZI7iQseDL6hWT6Zvq1fYORlXZnemSNVtebT7ASStKHvymVXiAjZhyFrLwJXKSvSd8whaQrZgzrp2ofu2I3KsLPfUuEdL7Acm/g/ly4MmvaiQfhxQ29YANWzP9a+YxboI5vRBpnUHZUReCe9cSeaNEZaPMUBH7pgOZctT4k8nJ4H7D2MF9mTYxECmJtMmnbNZKn0OyH1e2+KILg3vBJa6WnZ1n3ArJa/wxfxkgUadjP2Oot4RAHXqhWnFkaleps=; Domain=.adobe.com; Path=/; Expires=Tue, 19 Sep 2023 00:04:31 GMT; Max-Age=7200; HttpOnly"
+        },
+        "response_length": 176
+    },
+    {
+        "number": 2,
+        "request": "GET / HTTP/1.1\r\nHost: www.adobe.com\r\n \r\n \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\t \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5 \r\n \t \t\t \t\r\n  \t\r\nDNT: 1\r\n \t\t\t\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1 \r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate  \r\n \r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 23,
+        "uri": "/",
+        "request_length": 462,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.12514376640319824,
+            "Socket_Close_Time": 0.10033273696899414,
+            "Response_Time": 0.0291140079498291
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "mime-version": "1.0",
+            "content-type": "text/html",
+            "content-length": "176",
+            "expires": "Mon, 18 Sep 2023 22:04:34 GMT",
+            "date": "Mon, 18 Sep 2023 22:04:34 GMT",
+            "connection": "close",
+            "server-timing": "ak_p; desc=\"1695074674455_399897988_57092675_10_0_41_46_-\";dur=1",
+            "strict-transport-security": "max-age=86400",
+            "set-cookie": "ak_bmsc=51691E69663AB391E4C19676CCF0ED0F~000000000000000000000000000000~YAAQhPXVF3sVFIaKAQAAT+dSqhX7tremBhoJcpQpZYnY5e33DY9AEClEADyKf2EqwdEe1fuq75SeP9kiaBLXq2zP2zLx1DC2QVB1Hmyd8nPKZHj2+KjS87qlhVkgunHwLxaJzt4BxomXgUcbdttopzFWyKvnmw26DOYNJ8bM6J43QQ0oXMMh29Cw1p93QO76xSv33JNkuP8ttZYVz2KPy2dPNsrwKfrhEdyq2X4uZf4g/ouA1ySlkK6Kv3n1XX+1j6Uz+zXml7wvD1pJa5RtFEI3tgIe403pCtgo7/ajvpPlLTliqmQJH+vJam+Maj4UN7zM3WJ6nR7A2l4G5cM8xlBeW5xm/1E2vkW3bVIv6gxk+POmWrDx82bb9/Y=; Domain=.adobe.com; Path=/; Expires=Tue, 19 Sep 2023 00:04:34 GMT; Max-Age=7200; HttpOnly"
+        },
+        "response_length": 176
+    },
+    {
+        "number": 3,
+        "request": "GET / HTTP/1.1\r\nHost: www.adobe.com  \r\n  \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\t\t\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\n  \t \t\r\n \t\r\n \r\n \r\nDNT: 1\r\nConnection: keep-alive\t  \r\n \r\nUpgrade-Insecure-Requests: 1\t\r\n    \r\nSec-Fetch-Dest: document \r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site  \r\n \t\t\t\t\r\n\r\n",
+        "deviation_count": 32,
+        "uri": "/",
+        "request_length": 475,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.12502002716064453,
+            "Socket_Close_Time": 0.11089086532592773,
+            "Response_Time": 0.025858640670776367
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "mime-version": "1.0",
+            "content-type": "text/html",
+            "content-length": "176",
+            "expires": "Mon, 18 Sep 2023 22:04:36 GMT",
+            "date": "Mon, 18 Sep 2023 22:04:36 GMT",
+            "connection": "close",
+            "server-timing": "ak_p; desc=\"1695074676852_399897988_57092855_32_0_13_33_-\";dur=1",
+            "strict-transport-security": "max-age=86400",
+            "set-cookie": "ak_bmsc=3E9D3800D92BE1EF4570A674167C4A9C~000000000000000000000000000000~YAAQhPXVF3wVFIaKAQAAqfBSqhUQanMgGxbuXLhn8y+GutcCQO7PCgYjZSuKo+mY9GGkwmLegtvLG8+sKQL+UUPNXVQaqmRunP/R6uFnGLUHwE3Qt+HgCUwQXzd0Nzi3kQvC/XW0CNu0KsecM7+7YUephhZsqcLlvoDCt7jpjqctbhQ/wWf0UvwuLMoSJhI9/qpGGNhYhiwkc1UjPoB+CYMrGs24AEiopXc1CHCWZ6V8jtCgJR2ooAsEDPa1BTSy+ex6AMTF3BaL0p+MFo5mpTom7IgAWSM0ozXi3izsxhaT3Ym1Okh1yIXlUppnPhH0/E0OLGHThs+sqiPdoY4IonhM0m0mFJrz71OpGM/PjT3i/IOkEFpO9HGUnGQ=; Domain=.adobe.com; Path=/; Expires=Tue, 19 Sep 2023 00:04:36 GMT; Max-Age=7200; HttpOnly"
+        },
+        "response_length": 176
+    },
+    {
+        "number": 4,
+        "request": "GET / HTTP/1.1\r\nHost: www.adobe.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\n \r\nAccept-Encoding: gzip, deflate, br \r\n \t\r\n \r\nAccept-Language: en-US,en;q=0.5\t\r\nDNT: 1  \t \r\n \t\t \r\n \r\n   \t\r\n \r\n \t  \r\n \r\n  \r\nConnection: keep-alive\r\n \r\n \r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document  \r\n \t\t\t\t\t \r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\t   \r\n \t\r\n\r\n",
+        "deviation_count": 44,
+        "uri": "/",
+        "request_length": 499,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2468414306640625,
+            "Socket_Close_Time": 0.17833876609802246,
+            "Response_Time": 0.029710054397583008
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "mime-version": "1.0",
+            "content-type": "text/html",
+            "content-length": "176",
+            "expires": "Mon, 18 Sep 2023 22:04:38 GMT",
+            "date": "Mon, 18 Sep 2023 22:04:38 GMT",
+            "connection": "close",
+            "server-timing": "ak_p; desc=\"1695074678932_399897988_57092970_10_0_12_29_-\";dur=1",
+            "strict-transport-security": "max-age=86400",
+            "set-cookie": "ak_bmsc=253C67910514FFAEFB5643520F90BBBB~000000000000000000000000000000~YAAQhPXVF30VFIaKAQAAufhSqhVy5jOrIlSiFwOefj9yguDup43N8di1jq/DfoIH9x+YGCsJjcG4t103TQHZYGd8zJ7bfW1FIIHO1FHuDtnUy2Wvnq3InCau2PAw/pgVBZmTVMl6T8O3m9LRtHVnhCUkgy2Ku0JmwZLUkEN+hEwAwnNai9TthuYRGonOnu19Gzy72/llx9RW9u6gSlYYm4L8Wyp40YFrgHDdqRnPVNu/05KUff3NC+dRPYsX6A3H9sDSQB1hEfXT79I0sc1Jlx1+lQw4NA9JeeuWZrAS0qWrg5kmzycthEcQKRGl/c0ASKDH3wvTpFGi6M9pWwZCNleYo8pQ0kTbIyZNWzWNudMPAJrKiXCpdicPsFw=; Domain=.adobe.com; Path=/; Expires=Tue, 19 Sep 2023 00:04:38 GMT; Max-Age=7200; HttpOnly"
+        },
+        "response_length": 176
+    },
+    {
+        "number": 5,
+        "request": "GET / HTTP/1.1\r\nHost: www.adobe.com\t \r\n \t\t\r\n \t\t\r\n  \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\n  \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\t\t\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document \r\nSec-Fetch-Mode: navigate\t \r\nSec-Fetch-Site: cross-site\t\t\t  \r\n\r\n",
+        "deviation_count": 23,
+        "uri": "/",
+        "request_length": 460,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11278223991394043,
+            "Socket_Close_Time": 0.11096692085266113,
+            "Response_Time": 0.03239941596984863
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "mime-version": "1.0",
+            "content-type": "text/html",
+            "content-length": "208",
+            "expires": "Mon, 18 Sep 2023 22:04:41 GMT",
+            "date": "Mon, 18 Sep 2023 22:04:41 GMT",
+            "connection": "close"
+        },
+        "response_length": 208
+    },
+    {
+        "number": 6,
+        "request": "GET / HTTP/1.1\r\nHost: www.adobe.com  \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\n \r\nDNT: 1\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\n \t  \r\n \r\n \r\n \t    \r\nSec-Fetch-Dest: document\r\n \r\n \r\nSec-Fetch-Mode: navigate\t\t\r\n \r\n \r\nSec-Fetch-Site: cross-site \r\n\r\n",
+        "deviation_count": 22,
+        "uri": "/",
+        "request_length": 467,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.13262414932250977,
+            "Socket_Close_Time": 0.10755419731140137,
+            "Response_Time": 0.02398204803466797
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "mime-version": "1.0",
+            "content-type": "text/html",
+            "content-length": "176",
+            "expires": "Mon, 18 Sep 2023 22:04:45 GMT",
+            "date": "Mon, 18 Sep 2023 22:04:45 GMT",
+            "connection": "close",
+            "server-timing": "ak_p; desc=\"1695074685405_399897988_57093437_61_0_20_59_-\";dur=1",
+            "strict-transport-security": "max-age=86400",
+            "set-cookie": "ak_bmsc=A189D913BB63849B38BE81DDA50D8BFE~000000000000000000000000000000~YAAQhPXVF34VFIaKAQAANBJTqhUdItbo5pRk6woQGiwmgjOUppyh+y4iyhK60mZIOpi3ab22EMi2izfFFhFdvRFz0TR+S3Uinx74zCaAnHXZJ1gop6wh3KGbosuk4jEATHwsyhjvfcl4EKyE7rhsyCtWu4Y11kFx3szTwwvP0EanX3Ljpy474g20NnU3zxifF2oJfX3RMHfZFeS+WulelpENlUHkp55zZjYluYVicB8Eux/aEVvBybapR0JZW99nFkytxdMy/gUqyqut7jBuG38t+VOE9jl+Tdngd98IOD1GP8Ii4es+NODY2xST9yHv9RGhI6NlfjAdF4tSXnATkTpohththuK/f9/WshwyVR7c0REufCBJh8x+1TE=; Domain=.adobe.com; Path=/; Expires=Tue, 19 Sep 2023 00:04:45 GMT; Max-Age=7200; HttpOnly"
+        },
+        "response_length": 176
+    },
+    {
+        "number": 7,
+        "request": "GET / HTTP/1.1\r\nHost: www.adobe.com  \r\n \r\n \r\n  \r\n \t \t  \r\n   \t\r\n   \r\n \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\n \t\t  \t  \r\n  \r\n \r\n \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\n \t\t\r\n \r\n \r\nAccept-Encoding: gzip, deflate, br\r\n   \r\nAccept-Language: en-US,en;q=0.5\r\n \r\n \t\r\n \r\nDNT: 1 \t\t\t\r\nConnection: keep-alive\t\r\n \r\nUpgrade-Insecure-Requests: 1\r\n \t\t\r\n  \t\r\n \t\r\n \t\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 61,
+        "uri": "/",
+        "request_length": 536,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.13986945152282715,
+            "Socket_Close_Time": 0.10708427429199219,
+            "Response_Time": 0.026598215103149414
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "mime-version": "1.0",
+            "content-type": "text/html",
+            "content-length": "176",
+            "expires": "Mon, 18 Sep 2023 22:04:48 GMT",
+            "date": "Mon, 18 Sep 2023 22:04:48 GMT",
+            "connection": "close",
+            "server-timing": "ak_p; desc=\"1695074688278_399897988_57093588_9_0_15_66_-\";dur=1",
+            "strict-transport-security": "max-age=86400",
+            "set-cookie": "ak_bmsc=B73276C36FE163C84C62C6385E9F81EF~000000000000000000000000000000~YAAQhPXVF38VFIaKAQAAYB1TqhU/2JyrN9CWyvOFlawAQkBMsl3sWMxpwPMFlScUSWeSmDQMRdXtIQKAgwM0sprzO+S5fWDVkSNoZFY6xBK6f5IgCDQyD0goe391UV8Dd47vTUSBN8FS3gYX32YwaHVo/Cz3tu9E2Tt+NEWsXYPo18xwYhEt+Cd7sEVWKdfz3UZGUq1zblgV0TEnBF70JjSbG2dc8o5RqFKcithFJzO/La+tBYMLUjEVSMqwPR2R3s5r69yMQy0Z08y/ICyWw2MV3/ui49JctXPL23VjHDQGcN5U8F6zBnzi756W1IjlUoBReWge1AkeRCpaxZe68JsBUY2efXJZi/w7pC8cX/0oLddf+MoiSVWfdqs=; Domain=.adobe.com; Path=/; Expires=Tue, 19 Sep 2023 00:04:48 GMT; Max-Age=7200; HttpOnly"
+        },
+        "response_length": 176
+    },
+    {
+        "number": 8,
+        "request": "GET / HTTP/1.1\r\nHost: www.adobe.com\t\r\n \r\n  \r\n \t\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \t\r\n  \t\t\t\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8  \t\r\n \t\r\nAccept-Encoding: gzip, deflate, br\r\n \r\nAccept-Language: en-US,en;q=0.5\t\r\n \t\r\n  \r\nDNT: 1\r\n  \t\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\t\r\n \r\nSec-Fetch-Site: cross-site\r\n \r\n \r\n \t\r\n \t\r\n \r\n  \t\r\n       \t\t \r\n\r\n",
+        "deviation_count": 49,
+        "uri": "/",
+        "request_length": 512,
+        "http_version": "HTTP/1.0",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11180567741394043,
+            "Socket_Close_Time": 0.1510295867919922,
+            "Response_Time": 0.020837068557739258
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "mime-version": "1.0",
+            "content-type": "text/html",
+            "content-length": "208",
+            "expires": "Mon, 18 Sep 2023 22:04:50 GMT",
+            "date": "Mon, 18 Sep 2023 22:04:50 GMT",
+            "connection": "close"
+        },
+        "response_length": 208
+    },
+    {
+        "number": 9,
+        "request": "GET / HTTP/1.1\r\nHost: www.adobe.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br  \r\nAccept-Language: en-US,en;q=0.5\t\r\n \r\nDNT: 1\r\nConnection: keep-alive\r\n \r\n \r\n \r\nUpgrade-Insecure-Requests: 1  \r\n \r\nSec-Fetch-Dest: document \r\n  \r\n \t\t\r\nSec-Fetch-Mode: navigate \r\n  \t \r\nSec-Fetch-Site: cross-site\t \t\r\n\r\n",
+        "deviation_count": 24,
+        "uri": "/",
+        "request_length": 467,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.21519804000854492,
+            "Socket_Close_Time": 0.12280774116516113,
+            "Response_Time": 0.037719011306762695
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "AkamaiGHost",
+            "mime-version": "1.0",
+            "content-type": "text/html",
+            "content-length": "176",
+            "expires": "Mon, 18 Sep 2023 22:04:53 GMT",
+            "date": "Mon, 18 Sep 2023 22:04:53 GMT",
+            "connection": "close",
+            "server-timing": "ak_p; desc=\"1695074693285_399897988_57093917_11_0_19_79_-\";dur=1",
+            "strict-transport-security": "max-age=86400",
+            "set-cookie": "ak_bmsc=013784919AB6EF54F415A73815318A96~000000000000000000000000000000~YAAQhPXVF4AVFIaKAQAAGjFTqhUTE2UovQncFJWeYyAbG9Vxoi11ZiNBHPy7W0ScjLa9/ewFP6MW3CSNpf7FUGTtMe+mMlw2RfMJzi1pdarm9iBTpP65pM1pW31p6342tVmyrEZRGYiJkULtX/ocyiY9OtxidFJDX6Ru/mXqc2hFR2qaVZLb/bGRP+HjGFyePChaXTKtPAap+/sv/nTijUWhebBtNHKddRdR39IasLqPsFoPNgDKMFnKZpWsGCOqsreq8XsmvC9D4E0X2y+8V1w9gkeEjSlTSin5zzrTUem+EbOq2B9f/7jotqxKHByK+FB2zBc6GZVtCpR1XZazatynD0FGxXteHibkrnI30Yw209ptmL96Co8RS60=; Domain=.adobe.com; Path=/; Expires=Tue, 19 Sep 2023 00:04:53 GMT; Max-Age=7200; HttpOnly"
+        },
+        "response_length": 176
+    }
+]

@@ -1,0 +1,402 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.wikipedia.org \r\n \t\r\n \r\n  \r\n \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8 \t\r\nAccept-Encoding: gzip, deflate, br\t\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\n \r\n \r\nConnection: keep-alive \r\n \r\nUpgrade-Insecure-Requests: 1\t\r\n \r\n \r\n \t\t\t \t\t\t\r\n \r\n \r\n \t\r\n  \r\n \r\nSec-Fetch-Dest: document\r\n  \r\n \t\r\n \t\t\t\r\nSec-Fetch-Mode: navigate\t \r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 42,
+        "uri": "/",
+        "request_length": 509,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.16147422790527344,
+            "Socket_Close_Time": 0.10657763481140137,
+            "Response_Time": 0.03953409194946289
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 18 Sep 2023 15:53:02 GMT",
+            "server": "mw1434.eqiad.wmnet",
+            "last-modified": "Mon, 18 Sep 2023 15:35:20 GMT",
+            "cache-control": "s-maxage=86400, must-revalidate, max-age=3600",
+            "content-type": "text/html",
+            "etag": "W/\"1514f-605a3e3d54982\"",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding",
+            "age": "22286",
+            "x-cache": "cp3066 miss, cp3066 hit/394537",
+            "x-cache-status": "hit-front",
+            "server-timing": "cache;desc=\"hit-front\", host;desc=\"cp3066\"",
+            "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+            "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 604800, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+            "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 604800, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+            "set-cookie": "NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600",
+            "x-client-ip": "89.56.127.202",
+            "accept-ranges": "bytes",
+            "content-length": "20367"
+        },
+        "response_length": 13015
+    },
+    {
+        "number": 1,
+        "request": "GET / HTTP/1.1\r\nHost: www.wikipedia.org\r\n \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\t\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive  \t\t \r\n \r\n \r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document  \r\n \r\n \r\n \t\t  \r\n \r\n \t\t\t\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\t\t\t  \r\n\r\n",
+        "deviation_count": 28,
+        "uri": "/",
+        "request_length": 475,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10370802879333496,
+            "Socket_Close_Time": 0.10520100593566895,
+            "Response_Time": 0.1298050880432129
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 18 Sep 2023 15:53:02 GMT",
+            "server": "mw1434.eqiad.wmnet",
+            "last-modified": "Mon, 18 Sep 2023 15:35:20 GMT",
+            "cache-control": "s-maxage=86400, must-revalidate, max-age=3600",
+            "content-type": "text/html",
+            "etag": "W/\"1514f-605a3e3d54982\"",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding",
+            "age": "22288",
+            "x-cache": "cp3066 miss, cp3066 hit/394557",
+            "x-cache-status": "hit-front",
+            "server-timing": "cache;desc=\"hit-front\", host;desc=\"cp3066\"",
+            "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+            "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 604800, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+            "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 604800, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+            "set-cookie": "NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600",
+            "x-client-ip": "89.56.127.202",
+            "accept-ranges": "bytes",
+            "content-length": "20367"
+        },
+        "response_length": 13015
+    },
+    {
+        "number": 2,
+        "request": "GET / HTTP/1.1\r\nHost: www.wikipedia.org\r\n \r\n \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\t \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5 \r\n \t \t\t \t\r\n  \t\r\nDNT: 1\r\n \t\t\t\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1 \r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate  \r\n \r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 23,
+        "uri": "/",
+        "request_length": 466,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2627086639404297,
+            "Socket_Close_Time": 0.12513947486877441,
+            "Response_Time": 0.0618891716003418
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 18 Sep 2023 15:53:02 GMT",
+            "server": "mw1434.eqiad.wmnet",
+            "last-modified": "Mon, 18 Sep 2023 15:35:20 GMT",
+            "cache-control": "s-maxage=86400, must-revalidate, max-age=3600",
+            "content-type": "text/html",
+            "etag": "W/\"1514f-605a3e3d54982\"",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding",
+            "age": "22290",
+            "x-cache": "cp3066 miss, cp3066 hit/394585",
+            "x-cache-status": "hit-front",
+            "server-timing": "cache;desc=\"hit-front\", host;desc=\"cp3066\"",
+            "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+            "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 604800, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+            "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 604800, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+            "set-cookie": "NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600",
+            "x-client-ip": "89.56.127.202",
+            "accept-ranges": "bytes",
+            "content-length": "20367"
+        },
+        "response_length": 13015
+    },
+    {
+        "number": 3,
+        "request": "GET / HTTP/1.1\r\nHost: www.wikipedia.org  \r\n  \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\t\t\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\n  \t \t\r\n \t\r\n \r\n \r\nDNT: 1\r\nConnection: keep-alive\t  \r\n \r\nUpgrade-Insecure-Requests: 1\t\r\n    \r\nSec-Fetch-Dest: document \r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site  \r\n \t\t\t\t\r\n\r\n",
+        "deviation_count": 32,
+        "uri": "/",
+        "request_length": 479,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.23631834983825684,
+            "Socket_Close_Time": 0.2717249393463135,
+            "Response_Time": 0.03638625144958496
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 18 Sep 2023 15:53:02 GMT",
+            "server": "mw1434.eqiad.wmnet",
+            "last-modified": "Mon, 18 Sep 2023 15:35:20 GMT",
+            "cache-control": "s-maxage=86400, must-revalidate, max-age=3600",
+            "content-type": "text/html",
+            "etag": "W/\"1514f-605a3e3d54982\"",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding",
+            "age": "22292",
+            "x-cache": "cp3066 miss, cp3066 hit/394609",
+            "x-cache-status": "hit-front",
+            "server-timing": "cache;desc=\"hit-front\", host;desc=\"cp3066\"",
+            "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+            "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 604800, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+            "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 604800, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+            "set-cookie": "NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600",
+            "x-client-ip": "89.56.127.202",
+            "accept-ranges": "bytes",
+            "content-length": "20367"
+        },
+        "response_length": 13015
+    },
+    {
+        "number": 4,
+        "request": "GET / HTTP/1.1\r\nHost: www.wikipedia.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\n \r\nAccept-Encoding: gzip, deflate, br \r\n \t\r\n \r\nAccept-Language: en-US,en;q=0.5\t\r\nDNT: 1  \t \r\n \t\t \r\n \r\n   \t\r\n \r\n \t  \r\n \r\n  \r\nConnection: keep-alive\r\n \r\n \r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document  \r\n \t\t\t\t\t \r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\t   \r\n \t\r\n\r\n",
+        "deviation_count": 44,
+        "uri": "/",
+        "request_length": 503,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.18744206428527832,
+            "Socket_Close_Time": 0.2122499942779541,
+            "Response_Time": 0.12148571014404297
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 18 Sep 2023 15:53:02 GMT",
+            "server": "mw1434.eqiad.wmnet",
+            "last-modified": "Mon, 18 Sep 2023 15:35:20 GMT",
+            "cache-control": "s-maxage=86400, must-revalidate, max-age=3600",
+            "content-type": "text/html",
+            "etag": "W/\"1514f-605a3e3d54982\"",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding",
+            "age": "22295",
+            "x-cache": "cp3066 miss, cp3066 hit/394632",
+            "x-cache-status": "hit-front",
+            "server-timing": "cache;desc=\"hit-front\", host;desc=\"cp3066\"",
+            "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+            "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 604800, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+            "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 604800, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+            "set-cookie": "NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600",
+            "x-client-ip": "89.56.127.202",
+            "accept-ranges": "bytes",
+            "content-length": "20367"
+        },
+        "response_length": 13015
+    },
+    {
+        "number": 5,
+        "request": "GET / HTTP/1.1\r\nHost: www.wikipedia.org\t \r\n \t\t\r\n \t\t\r\n  \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\n  \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\t\t\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document \r\nSec-Fetch-Mode: navigate\t \r\nSec-Fetch-Site: cross-site\t\t\t  \r\n\r\n",
+        "deviation_count": 23,
+        "uri": "/",
+        "request_length": 464,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11592531204223633,
+            "Socket_Close_Time": 0.10511898994445801,
+            "Response_Time": 0.0818641185760498
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 18 Sep 2023 15:53:02 GMT",
+            "server": "mw1434.eqiad.wmnet",
+            "last-modified": "Mon, 18 Sep 2023 15:35:20 GMT",
+            "cache-control": "s-maxage=86400, must-revalidate, max-age=3600",
+            "content-type": "text/html",
+            "etag": "W/\"1514f-605a3e3d54982\"",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding",
+            "age": "22297",
+            "x-cache": "cp3066 miss, cp3066 hit/394668",
+            "x-cache-status": "hit-front",
+            "server-timing": "cache;desc=\"hit-front\", host;desc=\"cp3066\"",
+            "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+            "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 604800, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+            "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 604800, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+            "set-cookie": "NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600",
+            "x-client-ip": "89.56.127.202",
+            "accept-ranges": "bytes",
+            "content-length": "20367"
+        },
+        "response_length": 13015
+    },
+    {
+        "number": 6,
+        "request": "GET / HTTP/1.1\r\nHost: www.wikipedia.org  \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\n \r\nDNT: 1\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\n \t  \r\n \r\n \r\n \t    \r\nSec-Fetch-Dest: document\r\n \r\n \r\nSec-Fetch-Mode: navigate\t\t\r\n \r\n \r\nSec-Fetch-Site: cross-site \r\n\r\n",
+        "deviation_count": 22,
+        "uri": "/",
+        "request_length": 471,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2895958423614502,
+            "Socket_Close_Time": 0.10145878791809082,
+            "Response_Time": 0.3285667896270752
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 18 Sep 2023 15:53:02 GMT",
+            "server": "mw1434.eqiad.wmnet",
+            "last-modified": "Mon, 18 Sep 2023 15:35:20 GMT",
+            "cache-control": "s-maxage=86400, must-revalidate, max-age=3600",
+            "content-type": "text/html",
+            "etag": "W/\"1514f-605a3e3d54982\"",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding",
+            "age": "22299",
+            "x-cache": "cp3066 miss, cp3066 hit/394688",
+            "x-cache-status": "hit-front",
+            "server-timing": "cache;desc=\"hit-front\", host;desc=\"cp3066\"",
+            "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+            "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 604800, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+            "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 604800, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+            "set-cookie": "NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600",
+            "x-client-ip": "89.56.127.202",
+            "accept-ranges": "bytes",
+            "content-length": "20367"
+        },
+        "response_length": 13015
+    },
+    {
+        "number": 7,
+        "request": "GET / HTTP/1.1\r\nHost: www.wikipedia.org  \r\n \r\n \r\n  \r\n \t \t  \r\n   \t\r\n   \r\n \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\n \t\t  \t  \r\n  \r\n \r\n \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\n \t\t\r\n \r\n \r\nAccept-Encoding: gzip, deflate, br\r\n   \r\nAccept-Language: en-US,en;q=0.5\r\n \r\n \t\r\n \r\nDNT: 1 \t\t\t\r\nConnection: keep-alive\t\r\n \r\nUpgrade-Insecure-Requests: 1\r\n \t\t\r\n  \t\r\n \t\r\n \t\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 61,
+        "uri": "/",
+        "request_length": 540,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2626938819885254,
+            "Socket_Close_Time": 0.11086797714233398,
+            "Response_Time": 0.08119320869445801
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 18 Sep 2023 15:53:02 GMT",
+            "server": "mw1434.eqiad.wmnet",
+            "last-modified": "Mon, 18 Sep 2023 15:35:20 GMT",
+            "cache-control": "s-maxage=86400, must-revalidate, max-age=3600",
+            "content-type": "text/html",
+            "etag": "W/\"1514f-605a3e3d54982\"",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding",
+            "age": "22302",
+            "x-cache": "cp3066 miss, cp3066 hit/394719",
+            "x-cache-status": "hit-front",
+            "server-timing": "cache;desc=\"hit-front\", host;desc=\"cp3066\"",
+            "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+            "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 604800, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+            "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 604800, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+            "set-cookie": "NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600",
+            "x-client-ip": "89.56.127.202",
+            "accept-ranges": "bytes",
+            "content-length": "20367"
+        },
+        "response_length": 13015
+    },
+    {
+        "number": 8,
+        "request": "GET / HTTP/1.1\r\nHost: www.wikipedia.org\t\r\n \r\n  \r\n \t\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \t\r\n  \t\t\t\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8  \t\r\n \t\r\nAccept-Encoding: gzip, deflate, br\r\n \r\nAccept-Language: en-US,en;q=0.5\t\r\n \t\r\n  \r\nDNT: 1\r\n  \t\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\t\r\n \r\nSec-Fetch-Site: cross-site\r\n \r\n \r\n \t\r\n \t\r\n \r\n  \t\r\n       \t\t \r\n\r\n",
+        "deviation_count": 49,
+        "uri": "/",
+        "request_length": 516,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.22574973106384277,
+            "Socket_Close_Time": 0.11842513084411621,
+            "Response_Time": 0.11803269386291504
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 18 Sep 2023 15:53:02 GMT",
+            "server": "mw1434.eqiad.wmnet",
+            "last-modified": "Mon, 18 Sep 2023 15:35:20 GMT",
+            "cache-control": "s-maxage=86400, must-revalidate, max-age=3600",
+            "content-type": "text/html",
+            "etag": "W/\"1514f-605a3e3d54982\"",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding",
+            "age": "22304",
+            "x-cache": "cp3066 miss, cp3066 hit/394749",
+            "x-cache-status": "hit-front",
+            "server-timing": "cache;desc=\"hit-front\", host;desc=\"cp3066\"",
+            "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+            "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 604800, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+            "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 604800, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+            "set-cookie": "NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600",
+            "x-client-ip": "89.56.127.202",
+            "accept-ranges": "bytes",
+            "content-length": "20367"
+        },
+        "response_length": 13015
+    },
+    {
+        "number": 9,
+        "request": "GET / HTTP/1.1\r\nHost: www.wikipedia.org\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br  \r\nAccept-Language: en-US,en;q=0.5\t\r\n \r\nDNT: 1\r\nConnection: keep-alive\r\n \r\n \r\n \r\nUpgrade-Insecure-Requests: 1  \r\n \r\nSec-Fetch-Dest: document \r\n  \r\n \t\t\r\nSec-Fetch-Mode: navigate \r\n  \t \r\nSec-Fetch-Site: cross-site\t \t\r\n\r\n",
+        "deviation_count": 24,
+        "uri": "/",
+        "request_length": 471,
+        "http_version": "HTTP/1.1",
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "measured_times": {
+            "Socket_Connect_Time": 0.18419098854064941,
+            "Socket_Close_Time": 0.1633908748626709,
+            "Response_Time": 0.18038296699523926
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "date": "Mon, 18 Sep 2023 15:53:02 GMT",
+            "server": "mw1434.eqiad.wmnet",
+            "last-modified": "Mon, 18 Sep 2023 15:35:20 GMT",
+            "cache-control": "s-maxage=86400, must-revalidate, max-age=3600",
+            "content-type": "text/html",
+            "etag": "W/\"1514f-605a3e3d54982\"",
+            "content-encoding": "gzip",
+            "vary": "Accept-Encoding",
+            "age": "22307",
+            "x-cache": "cp3066 miss, cp3066 hit/394789",
+            "x-cache-status": "hit-front",
+            "server-timing": "cache;desc=\"hit-front\", host;desc=\"cp3066\"",
+            "strict-transport-security": "max-age=106384710; includeSubDomains; preload",
+            "report-to": "{ \"group\": \"wm_nel\", \"max_age\": 604800, \"endpoints\": [{ \"url\": \"https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\" }] }",
+            "nel": "{ \"report_to\": \"wm_nel\", \"max_age\": 604800, \"failure_fraction\": 0.05, \"success_fraction\": 0.0}",
+            "set-cookie": "NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600",
+            "x-client-ip": "89.56.127.202",
+            "accept-ranges": "bytes",
+            "content-length": "20367"
+        },
+        "response_length": 13015
+    }
+]

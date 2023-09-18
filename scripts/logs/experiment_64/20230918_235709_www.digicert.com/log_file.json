@@ -1,0 +1,335 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: www.digicert.com \r\n \t\r\n \r\n  \r\n \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8 \t\r\nAccept-Encoding: gzip, deflate, br\t\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\n \r\n \r\nConnection: keep-alive \r\n \r\nUpgrade-Insecure-Requests: 1\t\r\n \r\n \r\n \t\t\t \t\t\t\r\n \r\n \r\n \t\r\n  \r\n \r\nSec-Fetch-Dest: document\r\n  \r\n \t\r\n \t\t\t\r\nSec-Fetch-Mode: navigate\t \r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 42,
+        "uri": "/",
+        "request_length": 508,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.38678717613220215,
+            "Socket_Close_Time": 0.11822104454040527,
+            "Response_Time": 0.20275187492370605
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 18 Sep 2023 22:04:28 GMT",
+            "content-type": "text/html",
+            "connection": "close",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "set-cookie": "incap_ses_770_1323850=E7S6PMIpumMZ9x8U55evCmzJCGUAAAAAT6VmYkEbt1Z0lqH+5TS3kQ==; path=/; Domain=.digicert.com; Secure; SameSite=None",
+            "x-incap-sess-cookie-hdr": "XKeuHgeMwA7zWhUU55evCmzJCGUAAAAATmQTop41wdHGAPnMgR5RFA==",
+            "strict-transport-security": "max-age=31536000",
+            "x-cdn": "Imperva",
+            "transfer-encoding": "chunked",
+            "x-iinfo": "8-6356515-6355613 PNNN RT(1695074667909 293) q(0 0 0 -1) r(1 1) U12"
+        },
+        "response_length": 364
+    },
+    {
+        "number": 1,
+        "request": "GET / HTTP/1.1\r\nHost: www.digicert.com\r\n \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\t\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive  \t\t \r\n \r\n \r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document  \r\n \r\n \r\n \t\t  \r\n \r\n \t\t\t\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\t\t\t  \r\n\r\n",
+        "deviation_count": 28,
+        "uri": "/",
+        "request_length": 474,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.12550902366638184,
+            "Socket_Close_Time": 0.1102135181427002,
+            "Response_Time": 0.5885417461395264
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 18 Sep 2023 22:04:31 GMT",
+            "content-type": "text/html",
+            "connection": "close",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "set-cookie": "incap_ses_770_1323850=BrC4bIivvTRp/B8U55evCm/JCGUAAAAAzNX2xfaWybrQsEL1WSCTzw==; path=/; Domain=.digicert.com; Secure; SameSite=None",
+            "strict-transport-security": "max-age=31536000",
+            "x-cdn": "Imperva",
+            "transfer-encoding": "chunked",
+            "x-iinfo": "13-15701694-15701734 NNNN CT(130 270 0) RT(1695074670421 74) q(0 1 4 -1) r(6 6) U12"
+        },
+        "response_length": 229
+    },
+    {
+        "number": 2,
+        "request": "GET / HTTP/1.1\r\nHost: www.digicert.com\r\n \r\n \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\t \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5 \r\n \t \t\t \t\r\n  \t\r\nDNT: 1\r\n \t\t\t\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1 \r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate  \r\n \r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 23,
+        "uri": "/",
+        "request_length": 465,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.27031683921813965,
+            "Socket_Close_Time": 0.10078668594360352,
+            "Response_Time": 0.6400911808013916
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 18 Sep 2023 22:04:34 GMT",
+            "content-type": "text/html",
+            "connection": "close",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "set-cookie": "incap_ses_770_1323850=wI43FkOVkjjcASAU55evCnHJCGUAAAAAlR+jhmJISK6JU9oKT+z7bQ==; path=/; Domain=.digicert.com; Secure; SameSite=None",
+            "x-incap-sess-cookie-hdr": "p7/wW4TNDg3zWhUU55evCnHJCGUAAAAAUzf1/P/M8P4OR4+iJstlRA==",
+            "strict-transport-security": "max-age=31536000",
+            "x-cdn": "Imperva",
+            "transfer-encoding": "chunked",
+            "x-iinfo": "8-6356982-6357003 NNNN CT(151 306 0) RT(1695074673022 186) q(0 0 4 -1) r(6 6) U12"
+        },
+        "response_length": 229
+    },
+    {
+        "number": 3,
+        "request": "GET / HTTP/1.1\r\nHost: www.digicert.com  \r\n  \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\t\t\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\n  \t \t\r\n \t\r\n \r\n \r\nDNT: 1\r\nConnection: keep-alive\t  \r\n \r\nUpgrade-Insecure-Requests: 1\t\r\n    \r\nSec-Fetch-Dest: document \r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site  \r\n \t\t\t\t\r\n\r\n",
+        "deviation_count": 32,
+        "uri": "/",
+        "request_length": 478,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.24193716049194336,
+            "Socket_Close_Time": 0.11134648323059082,
+            "Response_Time": 0.637258768081665
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 18 Sep 2023 22:04:36 GMT",
+            "content-type": "text/html",
+            "connection": "close",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "set-cookie": "incap_ses_770_1323850=JYf2GtPc4X7fBiAU55evCnTJCGUAAAAA7UFhHrTCOO0Xwg+YgZ7qiA==; path=/; Domain=.digicert.com; Secure; SameSite=None",
+            "strict-transport-security": "max-age=31536000",
+            "x-cdn": "Imperva",
+            "transfer-encoding": "chunked",
+            "x-iinfo": "13-15702406-15702424 NNNN CT(150 305 0) RT(1695074675571 70) q(0 0 4 -1) r(6 6) U12"
+        },
+        "response_length": 229
+    },
+    {
+        "number": 4,
+        "request": "GET / HTTP/1.1\r\nHost: www.digicert.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\n \r\nAccept-Encoding: gzip, deflate, br \r\n \t\r\n \r\nAccept-Language: en-US,en;q=0.5\t\r\nDNT: 1  \t \r\n \t\t \r\n \r\n   \t\r\n \r\n \t  \r\n \r\n  \r\nConnection: keep-alive\r\n \r\n \r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document  \r\n \t\t\t\t\t \r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\t   \r\n \t\r\n\r\n",
+        "deviation_count": 44,
+        "uri": "/",
+        "request_length": 502,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.11263656616210938,
+            "Socket_Close_Time": 0.11338162422180176,
+            "Response_Time": 0.4578869342803955
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 18 Sep 2023 22:04:38 GMT",
+            "content-type": "text/html",
+            "connection": "close",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "set-cookie": "incap_ses_770_1323850=hfCJattX+TPsCiAU55evCnbJCGUAAAAAyj43LQJyVCu4IsUElMgx1g==; path=/; Domain=.digicert.com; Secure; SameSite=None",
+            "strict-transport-security": "max-age=31536000",
+            "x-cdn": "Imperva",
+            "transfer-encoding": "chunked",
+            "x-iinfo": "11-12460320-12460335 NNNN CT(132 134 0) RT(1695074677718 70) q(0 1 3 -1) r(4 4) U12"
+        },
+        "response_length": 229
+    },
+    {
+        "number": 5,
+        "request": "GET / HTTP/1.1\r\nHost: www.digicert.com\t \r\n \t\t\r\n \t\t\r\n  \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\n  \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\t\t\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document \r\nSec-Fetch-Mode: navigate\t \r\nSec-Fetch-Site: cross-site\t\t\t  \r\n\r\n",
+        "deviation_count": 23,
+        "uri": "/",
+        "request_length": 463,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.2507293224334717,
+            "Socket_Close_Time": 0.10951852798461914,
+            "Response_Time": 0.5693566799163818
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 18 Sep 2023 22:04:41 GMT",
+            "content-type": "text/html",
+            "connection": "close",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "set-cookie": "incap_ses_770_1323850=VL+SYpHB6UnSDyAU55evCnjJCGUAAAAAShTisdhr3k8IItlGSks5pQ==; path=/; Domain=.digicert.com; Secure; SameSite=None",
+            "strict-transport-security": "max-age=31536000",
+            "x-cdn": "Imperva",
+            "transfer-encoding": "chunked",
+            "x-iinfo": "5-9561473-9561493 NNNN CT(132 269 0) RT(1695074680212 109) q(0 0 4 -1) r(5 5) U12"
+        },
+        "response_length": 229
+    },
+    {
+        "number": 6,
+        "request": "GET / HTTP/1.1\r\nHost: www.digicert.com  \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\n \r\nDNT: 1\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\n \t  \r\n \r\n \r\n \t    \r\nSec-Fetch-Dest: document\r\n \r\n \r\nSec-Fetch-Mode: navigate\t\t\r\n \r\n \r\nSec-Fetch-Site: cross-site \r\n\r\n",
+        "deviation_count": 22,
+        "uri": "/",
+        "request_length": 470,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.28386950492858887,
+            "Socket_Close_Time": 0.10936450958251953,
+            "Response_Time": 1.618713140487671
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 18 Sep 2023 22:04:44 GMT",
+            "content-type": "text/html",
+            "connection": "close",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "set-cookie": "incap_ses_770_1323850=t0S/ENmXSyYOGCAU55evCnzJCGUAAAAAMHjmLjD4D5/TjiVjNeRmjw==; path=/; Domain=.digicert.com; Secure; SameSite=None",
+            "strict-transport-security": "max-age=31536000",
+            "x-cdn": "Imperva",
+            "transfer-encoding": "chunked",
+            "x-iinfo": "10-10300603-10300624 NNNN CT(257 1121 0) RT(1695074683046 129) q(0 0 14 -1) r(16 16) U12"
+        },
+        "response_length": 229
+    },
+    {
+        "number": 7,
+        "request": "GET / HTTP/1.1\r\nHost: www.digicert.com  \r\n \r\n \r\n  \r\n \t \t  \r\n   \t\r\n   \r\n \r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \r\n \t\t  \t  \r\n  \r\n \r\n \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\n \t\t\r\n \r\n \r\nAccept-Encoding: gzip, deflate, br\r\n   \r\nAccept-Language: en-US,en;q=0.5\r\n \r\n \t\r\n \r\nDNT: 1 \t\t\t\r\nConnection: keep-alive\t\r\n \r\nUpgrade-Insecure-Requests: 1\r\n \t\t\r\n  \t\r\n \t\r\n \t\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 61,
+        "uri": "/",
+        "request_length": 539,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.10021114349365234,
+            "Socket_Close_Time": 0.11557435989379883,
+            "Response_Time": 0.5759749412536621
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 18 Sep 2023 22:04:47 GMT",
+            "content-type": "text/html",
+            "connection": "close",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "set-cookie": "incap_ses_770_1323850=kW3FVSO0GBkhHiAU55evCn/JCGUAAAAA83gBDtlieG2U2uM84s8nEQ==; path=/; Domain=.digicert.com; Secure; SameSite=None",
+            "x-incap-sess-cookie-hdr": "LWpNCMiUOmjzWhUU55evCn/JCGUAAAAAPwBekZLqIhcILGjNH1ojzA==",
+            "strict-transport-security": "max-age=31536000",
+            "x-cdn": "Imperva",
+            "transfer-encoding": "chunked",
+            "x-iinfo": "14-17587896-17587903 NNNN CT(245 147 0) RT(1695074687021 31) q(0 0 4 -1) r(5 5) U12"
+        },
+        "response_length": 229
+    },
+    {
+        "number": 8,
+        "request": "GET / HTTP/1.1\r\nHost: www.digicert.com\t\r\n \r\n  \r\n \t\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\n \t\r\n  \t\t\t\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8  \t\r\n \t\r\nAccept-Encoding: gzip, deflate, br\r\n \r\nAccept-Language: en-US,en;q=0.5\t\r\n \t\r\n  \r\nDNT: 1\r\n  \t\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\t\r\n \r\nSec-Fetch-Site: cross-site\r\n \r\n \r\n \t\r\n \t\r\n \r\n  \t\r\n       \t\t \r\n\r\n",
+        "deviation_count": 49,
+        "uri": "/",
+        "request_length": 515,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.1516721248626709,
+            "Socket_Close_Time": 0.11702895164489746,
+            "Response_Time": 0.6570110321044922
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 18 Sep 2023 22:04:50 GMT",
+            "content-type": "text/html",
+            "connection": "close",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "set-cookie": "incap_ses_770_1323850=ezUXDgy6ABQBJCAU55evCoLJCGUAAAAAd3eBaN9KU+Yo+bAjBQ3wEA==; path=/; Domain=.digicert.com; Secure; SameSite=None",
+            "strict-transport-security": "max-age=31536000",
+            "x-cdn": "Imperva",
+            "transfer-encoding": "chunked",
+            "x-iinfo": "5-9562577-9562586 NNNN CT(150 305 0) RT(1695074689476 74) q(0 0 5 -1) r(6 6) U12"
+        },
+        "response_length": 229
+    },
+    {
+        "number": 9,
+        "request": "GET / HTTP/1.1\r\nHost: www.digicert.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br  \r\nAccept-Language: en-US,en;q=0.5\t\r\n \r\nDNT: 1\r\nConnection: keep-alive\r\n \r\n \r\n \r\nUpgrade-Insecure-Requests: 1  \r\n \r\nSec-Fetch-Dest: document \r\n  \r\n \t\t\r\nSec-Fetch-Mode: navigate \r\n  \t \r\nSec-Fetch-Site: cross-site\t \t\r\n\r\n",
+        "deviation_count": 24,
+        "uri": "/",
+        "request_length": 470,
+        "http_version": "HTTP/1.1",
+        "status_code": 400,
+        "reason_phrase": "Bad Request",
+        "measured_times": {
+            "Socket_Connect_Time": 0.196502685546875,
+            "Socket_Close_Time": 0.10734009742736816,
+            "Response_Time": 0.427325963973999
+        },
+        "error_message": [
+            ""
+        ],
+        "response_header_fields": {
+            "server": "nginx",
+            "date": "Mon, 18 Sep 2023 22:04:52 GMT",
+            "content-type": "text/html",
+            "connection": "close",
+            "x-xss-protection": "1; mode=block",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "set-cookie": "incap_ses_770_1323850=XCnQMdqc4UW6KSAU55evCoTJCGUAAAAAOd7GvKwXiv8sijGsh5fRNQ==; path=/; Domain=.digicert.com; Secure; SameSite=None",
+            "strict-transport-security": "max-age=31536000",
+            "x-cdn": "Imperva",
+            "transfer-encoding": "chunked",
+            "x-iinfo": "10-10301813-10301833 NNNN CT(129 131 0) RT(1695074692193 81) q(0 0 3 -1) r(4 4) U12"
+        },
+        "response_length": 229
+    }
+]

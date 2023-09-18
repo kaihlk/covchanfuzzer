@@ -1,0 +1,85 @@
+{
+    "configuration_variables": {
+        "experiment_no": 63,
+        "comment": "CC 3 Testrun",
+        "verbose": true,
+        "timestamp": "20230918_234352",
+        "covertchannel_request_number": 3,
+        "covertchannel_connection_number": 1,
+        "covertchannel_timing_number": 1,
+        "fuzz_value": 0.8,
+        "num_attempts": 10,
+        "max_targets": 20,
+        "max_workers": 5,
+        "wait_between_request": 0,
+        "base_line_check_frequency": 0,
+        "target_list": "new_target_list.csv",
+        "target_subset_size": 5,
+        "target_add_www": true,
+        "target_port": 443,
+        "conn_timeout": 2,
+        "nw_interface": "enp0s3",
+        "use_ipv4": true,
+        "use_TLS": true,
+        "use_HTTP2": false,
+        "HTTP_version": "HTTP/1.1",
+        "method": "GET",
+        "url": "",
+        "path": "/",
+        "standard_subdomain": "www",
+        "relative_uri": true,
+        "include_subdomain": true,
+        "include_port": false,
+        "include_subdomain_host_header": true,
+        "headers": null,
+        "standard_headers": "firefox_HTTP/1.1_TLS",
+        "content": "random"
+    },
+    "result_variables": {
+        "host_ip_info": {
+            "host": "www.adobe.com",
+            "socket_info": [
+                [
+                    [
+                        2,
+                        1,
+                        6,
+                        "",
+                        [
+                            "2.23.176.4",
+                            443
+                        ]
+                    ],
+                    [
+                        2,
+                        1,
+                        6,
+                        "",
+                        [
+                            "2.23.176.40",
+                            443
+                        ]
+                    ]
+                ],
+                null
+            ],
+            "ip_address": "2.23.176.4",
+            "port": 443
+        },
+        "covertchannel_request_name": "<class 'http1_request_builder.HTTP1_Request_Builder'>",
+        "covertchannel_timing_name": "<class 'http1_request_builder.HTTP1_Request_Builder'>",
+        "Received_Status_Codes": {},
+        "Logged_Messages": 0,
+        "Logged_Messages_of_scheduled_attempts": 0.0,
+        "Response Properties": {
+            "Messages": 0,
+            "1xx": 0,
+            "2xx": 0,
+            "3xx": 0,
+            "4xx": 0,
+            "5xx": 0,
+            "9xx": 0
+        }
+    },
+    "statistics": {}
+}

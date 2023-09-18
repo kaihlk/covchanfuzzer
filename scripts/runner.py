@@ -60,6 +60,7 @@ class ExperimentRunner:
         print(sub_set)
         #Lookup DNS for each entry
         #TODO Catch the case that IPv4 or IPv6 is not provided, some sites sends more than one IP/Port set per protocoll version,  example macromedia.com and criteo.com
+              
         for entry in sub_set:
             
             subdomains, hostname, tldomain= request_builder.HTTP1_Request_Builder().parse_host(entry)
@@ -74,7 +75,19 @@ class ExperimentRunner:
             if socket_info:
                 
                 if self.experiment_configuration["use_ipv4"]:
-                    ip_address, port=  socket_info[0][4]
+                    print(socket_info)
+                    print(type(socket_info))
+                    try: 
+                        print(socket_info[0])
+                        print(type(socket_info[0]))
+                        print(socket_info[0][0][1])
+                        
+                        ip_address, port=  socket_info[0][0][4]
+
+                        print("IP Address:", ip_address)
+                        print("Port:", port)
+                    except Exception as e:
+                        print("An error occurred:", e)               
                 else:#IPv6
                     ip_address=  socket_info[0][4][0]
                     port = socket_info[0][4][1]
@@ -135,7 +148,7 @@ class ExperimentRunner:
             self.prerequest_list[attempt_no]["4xx"]+=1
         elif first_digit == "5":
             self.prerequest_list[attempt_no]["5xx"]+=1
-        elif first_digit== "9":
+        else:
             self.prerequest_list[attempt_no]["9xx"]+=1
         
         return
@@ -187,10 +200,10 @@ class ExperimentRunner:
                         print("Error building the request",e)
                     try:
                         start_time=time.time()
-                        self.send_and_receive_request(i, request, deviation_count, uri, host_data, logger.get_logging_folder())
-                        logger.add_request_response_data(attempt_number, request, deviation_count, uri, response_line, response_header_fields, body, measured_times, error_message)
+                        response_line, response_header_fields, body, measured_times, error_message = self.send_and_receive_request(i, request, deviation_count, uri, host_data, logger.get_logging_folder())
+                        logger.add_request_response_data(i, request, deviation_count, uri, response_line, response_header_fields, body, measured_times, error_message)
                         try:
-                            self.add_nr_and_status_code_to_request_list(attempt_number,response_line)
+                            self.add_nr_and_status_code_to_request_list(i,response_line)
                         except Exception as e:
                             print("Exception during updating request_list",e)
                         self.check_content(body)
@@ -319,25 +332,24 @@ class ExperimentRunner:
             if max_targets>len(self.target_list): max_targets=len(self.target_list)
 
             subsets_tasks=[]
-
-
+            'Iterate through target list'
             with concurrent.futures.ThreadPoolExecutor(max_workers=self.experiment_configuration["max_workers"]) as subset_executor:
-                
-                try:
-                
-                    'Iterate through target list'
-                    while start_position < max_targets: 
-                        
-                        #Get target subset
-                        
-                        subset=self.get_target_subset(start_position, subset_length)
-                        
-                        subset_task=subset_executor.submit(self.fuzz_subset, subset)
-                        subsets_tasks.append(subset_task)
-                        start_position += len(subset)
-                except Exception as e:
-                    print("An exception occurred:", e)
-                
+                while start_position < max_targets:
+                    # Get the next subset
+                    subset = self.get_target_subset(start_position, subset_length)
+                    start_position += subset_length
+
+                    # Submit the subset for processing
+                    subset_task = subset_executor.submit(self.fuzz_subset, subset)
+                    subsets_tasks.append(subset_task)
+                    
+                    # Wait for any completed tasks and remove them from the list
+                    completed_subset_tasks = [task for task in subsets_tasks if task.done()]
+                    for completed_task in completed_subset_tasks:
+                        subsets_tasks.remove(completed_task)
+            
+            
+     
 
            
         except Exception as e:
