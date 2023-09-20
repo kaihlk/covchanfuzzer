@@ -64,3 +64,20 @@ experiment_no,comment,verbose,timestamp,covertchannel_request_number,covertchann
 63,CC 3 Testrun,True,20230918_234352,3,1,1,0.8,10,20,5,0,0,new_target_list.csv,5,True,443,2,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
 64,11,True,20230918_235707,3,1,1,0.8,10,20,5,0,0,new_target_list.csv,5,True,443,2,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
 65,112,True,20230919_000359,3,1,1,0.8,10,20,5,0,0,new_target_list.csv,5,True,443,2,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,False,True,False,True,,firefox_HTTP/1.1_TLS,random
+66,Test Relative/Absolute,True,20230919_090505,1,1,1,0.8,5,20,5,0,0,new_target_list.csv,5,True,443,2,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,False,True,False,True,,firefox_HTTP/1.1_TLS,random
+67,12212,True,20230919_105848,1,1,1,0.8,5,20,5,0,0,target_list_tls_abs_sub_subhost.csv,5,True,443,2,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,False,True,False,True,,firefox_HTTP/1.1_TLS,random
+68,ff,True,20230919_110420,1,1,1,0.8,5,20,5,0,0,target_list_tls_abs_sub_subhost.csv,5,True,443,2,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+69,33,True,20230919_111505,1,1,1,0.8,5,200,10,0,0,target_list_tls_abs_sub_subhost.csv,5,True,443,2,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+70,Longer Timeout,True,20230919_112522,1,1,1,0.8,5,200,10,0,0,target_list_tls_abs_sub_subhost.csv,5,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+71,vyv,True,20230919_113225,3,1,1,0.8,5,200,10,0,0,target_list_tls_abs_sub_subhost.csv,5,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+72,cc,True,20230919_160918,3,1,1,0.8,100,200,10,0,0,target_list_tls_abs_sub_subhost.csv,25,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+73,CC11,True,20230919_163955,11,1,1,0.8,100,200,10,0,0,target_list_tls_abs_sub_subhost.csv,25,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+74,Test more Eception Handling,True,20230919_175043,11,1,1,0.8,100,50,10,0,0,target_list_tls_abs_sub_subhost.csv,5,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+75,Test_CC3,True,20230919_180724,3,1,1,0.8,100,50,10,0,0,target_list_tls_abs_sub_subhost.csv,5,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+76,Check Basic Request,True,20230919_204459,3,1,1,0.8,10,200,10,0,0,target_list_tls_abs_sub_subhost.csv,5,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+77,Test Unchanged,True,20230919_212019,1,1,1,0.8,5,200,10,0,0,target_list_tls_abs_sub_subhost.csv,5,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+78,111,True,20230919_222307,3,1,1,0.8,10,10,10,0,0,target_list_tls_abs_sub_subhost.csv,50,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+79,test global chi,True,20230919_223231,3,1,1,0.8,2,10,10,0,0,target_list_tls_abs_sub_subhost.csv,5,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+80,11,True,20230919_224644,3,1,1,0.8,3,10,10,0,0,target_list_tls_abs_sub_subhost.csv,5,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+81,ddddd,True,20230919_224828,3,1,1,0.8,3,10,10,0,0,target_list_tls_abs_sub_subhost.csv,5,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+82,Test again after crash,False,20230920_112127,3,1,1,0.85,1000,100,20,0,0,target_list_tls_rel_sub_subhost.csv,20,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random

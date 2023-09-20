@@ -136,7 +136,10 @@ class ExperimentRunner:
 
     def add_nr_and_status_code_to_request_list(self, attempt_no, response_line):
         self.prerequest_list[attempt_no]["Nr"]=attempt_no
-        response_status_code = response_line["status_code"]    
+        if response_line!=None:
+            response_status_code = response_line["status_code"] 
+        else:
+            response_status_code=999   
         first_digit = str(response_status_code)[0]
         if first_digit == "1":
             self.prerequest_list[attempt_no]["1xx"]+=1
@@ -364,7 +367,8 @@ class ExperimentRunner:
             #Save OutCome to experiment Folder csv.
             self.exp_log.add_global_entry_to_experiment_list(self.experiment_configuration["experiment_no"])
             self.exp_log.save_dns_fails(self.dns_fails)
-            self.exp_log.save_prerequests(self.prerequest_list)   
+            self.exp_log.save_prerequests(self.prerequest_list)
+            #self.exp_log.analyze_prerequest_outcome()  
         """capture_threads=[] 
 
                        for entry in sub_set_dns:

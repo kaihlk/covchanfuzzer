@@ -79,27 +79,27 @@ def main():
     experiment_configuration = {
         "experiment_no": exp_no,
         "comment": description,
-        "verbose": True,
+        "verbose": False,
         "timestamp": time.strftime("%Y%m%d_%H%M%S"),
         #Covert Channel Option
         "covertchannel_request_number": 3,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
-        "fuzz_value":0.8,
+        "fuzz_value":0.85,
         #Target Selection Options  
-        "num_attempts": 10,
-        "max_targets": 20, #len(self.target_list):
-        "max_workers": 5,  # Parallel Processing of subsets,
+        "num_attempts": 1000,
+        "max_targets": 100, #len(self.target_list):
+        "max_workers": 20,  # Parallel Processing of subsets,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
-        "target_list": "new_target_list.csv",
-        "target_subset_size": 5,
+        "target_list": "target_list_tls_rel_sub_subhost.csv",#"target_list_subdomain_10000.csv",#"new_target_list.csv",
+        "target_subset_size": 20,
         "target_add_www": True,
         #"target_host": "www.example.com",  #Just for special useipvstt
         "target_port": 443, #443, 8080 Apache
-
+ 
         #Connection Options
-        "conn_timeout": 2, #seconds 
+        "conn_timeout": 5, #seconds 
         "nw_interface": "enp0s3",  #lo, docker, enp0s3     
         "use_ipv4": True,
         "use_TLS": True,
@@ -111,7 +111,7 @@ def main():
         "url": "",   #Complete URl
         "path": "/", #Dynamic, List, ?
         "standard_subdomain": "www", #use www if not provided
-        "relative_uri": False, # build a relative uri without the host in the requestline: /index.html
+        "relative_uri": True, # build a relative uri without the host in the requestline: /index.html
         "include_subdomain": True, #include the subdomain, when building requestline, if none given use <standard_subdomain>
         "include_port":False,
         "include_subdomain_host_header": True,
@@ -123,19 +123,32 @@ def main():
 
     }
 
-    #upgrade_path="upgraded_"+experiment_configuration["target_list"]
-    #upgrader=Target_List_Upgrader(experiment_configuration,upgrade_path).upgrade_list()
-    #print("Done")
-    experiment=ExperimentRunner(experiment_configuration, load_target_list(experiment_configuration["target_list"])).setup_and_start_experiment()
-    #new_path2="upgraded_and_cleaned"+experiment_configuration["target_list"]
-    #upgrader=Target_List_Analyzer(new_path, new_path2, experiment_configuration)
-    #upgrader.analyze_data()
-   # analyze_path="analysed_"+experiment_configuration["target_list"]
-   # target_analizer=Target_List_Analyzer(upgrade_path, analyze_path, experiment_configuration)
-    #target_analizer.analyze_data()
-    #print("Data Check Complete")
+    analyze_list=False
+    upgrade_list=False
+    run_exp=True
+    if run_exp==True:
+        try:
+            start_time=time.time()
+            experiment=ExperimentRunner(experiment_configuration, load_target_list(experiment_configuration["target_list"])).setup_and_start_experiment()
+            end_time=time.time()
+            duration=end_time-start_time
+            print(duration)
+        except Exception as e:
+            print("Experiment run failed: ", e)
+    if upgrade_list==True:
+        upgrade_path="upgraded_"+experiment_configuration["target_list"]
+        #new_path2="upgraded_and_cleaned"+experiment_configuration["target_list"]
+        upgrader=Target_List_Analyzer(new_path, new_path2, experiment_configuration)
+        #upgrader=Target_List_Upgrader(experiment_configuration,upgrade_path).upgrade_list(
+        upgrader.analyze_data()
+
+    if analyze_list==True:
+        analyze_path="analysed_"+experiment_configuration["target_list"]
+        target_analizer=Target_List_Analyzer(upgrade_path, analyze_path, experiment_configuration)
+        target_analizer.analyze_data()
+        print("Data Check Complete")
     
-    
+    print("Done")
 
 if __name__ == "__main__":
     main()

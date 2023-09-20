@@ -756,9 +756,9 @@ class Target_List_Analyzer():
 
         return result_df
     
-    def extract_sublist(self,data_frame, column_indices, condition_column, n):
+    def extract_sublist(self,data_frame, column_indices, condition_column, condition, n):
         # Filter rows where the specified condition_column matches the condition value
-        filtered_rows = data_frame[data_frame.iloc[:, condition_column].isin(['True', 'indifferent'])]
+        filtered_rows = data_frame[data_frame.iloc[:, condition_column].isin([condition])]#, 'indifferent'
 
         # Extract the first 'n' entries from the specified column indices in the filtered rows
         extracted_data = {}
@@ -839,8 +839,8 @@ class Target_List_Analyzer():
         self.save_data_frame_to_upgraded_list("status_codes2.csv", status_code_df2)
         self.save_data_frame_to_upgraded_list(self.new_path, df_responses)
         column_indexes=[0, 1, 21, 22, 23 , 24, 25, 26]
-        new_list=self.extract_sublist(df_uri, column_indexes, 26, 1000)
-        self.save_data_frame_to_upgraded_list("new_target_list.csv", new_list)
+        new_list=self.extract_sublist(df_uri, column_indexes, 17, 200, 1000)
+        self.save_data_frame_to_upgraded_list("target_list_tls_rel_sub_subhost.csv", new_list)
         return 
 
 

@@ -66,7 +66,8 @@ class HTTP1_Request_CC_Case_Insensitivity(HTTP1_Request_Builder):
         headers.insert(0, ("Host", self.host_placeholder))
 
         # Build the request_line from the provided arguments
-        request_line = f"{method} {url} HTTP/1.1\r\n"
+        request_line, new_uri = self.build_request_line(port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
+       
 
         # Define Request first line
         request_string = request_line
@@ -83,7 +84,7 @@ class HTTP1_Request_CC_Case_Insensitivity(HTTP1_Request_Builder):
         # Add ending of request
         request_string += "\r\n"
 
-        return request_string, deviation_count, url
+        return request_string, deviation_count, new_uri
 
 
 

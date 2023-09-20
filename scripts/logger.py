@@ -8,6 +8,8 @@ import json
 import csv
 import class_mapping
 import math
+import pandas
+import scipy.stats as scistats
 # import pyshark # doesnt work so well, probably a sudo problem
 
 
@@ -45,6 +47,7 @@ class TestRunLogger:
         self.deviation_count_list=[]
         self.response_header_keys_list=[]
         self.response_body_list=[]
+        self.deviation_to_status_code=[]
 
     def create_logging_folder(self):
         '''Creates in not exists to store the logs'''
@@ -68,6 +71,8 @@ class TestRunLogger:
             json.dump(data, file, indent=4)
 
         return
+
+
 
     def add_request_response_data(self, attempt_number, request, deviation_count, uri, response_line, response_header_fields, body, measured_times, error_message):
         if response_line is not None:
@@ -122,6 +127,9 @@ class TestRunLogger:
         elif first_digit== "9":
             self.data_count["9xx"]+=1
 
+        dev_to_status= {"Attempt No.": attempt_number, "Deviation Count": deviation_count, "Status Code": response_status_code}
+  
+        self.deviation_to_status_code.append(dev_to_status) 
         
         self.reponse_time_list.append(measured_times["Response_Time"])
         self.deviation_count_list.append(deviation_count)
@@ -162,6 +170,13 @@ class TestRunLogger:
         log_file_path = f"{self.log_folder}/log_file.json"
         with open(log_file_path, "w", encoding="utf-8") as file:
             json.dump(request_data, file, indent=4)
+
+    def save_deviation_status_code(self, data):
+        log_file_path = f"{self.log_folder}/deviation-statuscode.csv"
+        data_frame=pandas.DataFrame(data)
+        data_frame.to_csv(log_file_path)
+        return data_frame
+
     
     def calcluate_avg(self,value_list):
         if len(value_list)==0:
@@ -184,11 +199,16 @@ class TestRunLogger:
             std_deviation=math.sqrt(variance)
         return std_deviation
     
-    def calculate_statistics(self):
+    def calculate_statistics(self, data_frame):
         statistics={}
         if self.data_count["Messages"]==0:  #Prevent division by zero
             return statistics
         else:
+            grouped = data_frame.groupby("Deviation Count")
+            #Build a crosstabele for every combination
+            crosstable = grouped["Status Code"].value_counts().unstack().fillna(0)
+            chi2, p, _, _ = scistats.chi2_contingency(crosstable)
+
             statistics= {
                 "Host": self.target_host,
                 "IP": self.target_ip,
@@ -214,6 +234,8 @@ class TestRunLogger:
                 "StdD Response Header Keys": self.calculate_standard_deviation(self.response_header_keys_list),
                 "Avg Response Body Length": self.calcluate_avg(self.response_body_list),
                 "StdD Response Body Length": self.calculate_standard_deviation(self.response_body_list),
+                "CHI2 Test Deviation-Statuscode": chi2,
+                "CHI2 Test p": p,
             }
         
         return statistics    
@@ -253,7 +275,8 @@ class TestRunLogger:
     def save_logfiles(self):#, request_data, result_variables):
         '''Save all files after the experiments'''
         self.create_result_variables()
-        statistics= self.calculate_statistics()
+        data_frame=self.save_deviation_status_code(self.deviation_to_status_code)
+        statistics= self.calculate_statistics(data_frame)
         self.save_run_metadata(self.result_variables, statistics)
         self.update_entry_to_experiment_list(statistics)
         self.create_wireshark_script()
@@ -395,6 +418,17 @@ class ExperimentLogger:
             for prerequest in prerequests:
                 csv_writer.writerow(prerequest)
         print("Prerequest saved")
+        return
+
+    def analyze_prerequest_outcome(self):
+        file_path = f"{self.experiment_folder}/prerequests.csv"
+        data_frame = pandas.read_csv(file_path)
+        grouped = data_frame.groupby('deviation_count')[['1xx', '2xx', '3xx', '4xx', '5xx', '9xx']].sum().reset_index()
+        chi2, p, _, _ = scistats.chi2_contingency(grouped)
+        log_file_path = f"{self.experiment_folder}/prerequest_stats.json"
+        data={"CHI2": chi,"p": p,}
+        with open(log_file_path, "w", encoding="utf-8") as file:
+            json.dump(request_data, file, indent=4)
         return
 
     def capture_packets_dumpcap(
