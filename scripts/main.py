@@ -85,16 +85,17 @@ def main():
         "covertchannel_request_number": 3,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
-        "fuzz_value":0.85,
+        "fuzz_value":0.7,
         #Target Selection Options  
         "num_attempts": 1000,
-        "max_targets": 100, #len(self.target_list):
+        "max_targets": 1000, #len(self.target_list):
         "max_workers": 20,  # Parallel Processing of subsets,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
-        "target_list": "target_list_tls_rel_sub_subhost.csv",#"target_list_subdomain_10000.csv",#"new_target_list.csv",
-        "target_subset_size": 20,
-        "target_add_www": True,
+        "check_basic_request": 3,
+        "target_list": "target_list_tls_abs_sub_subhost.csv",#"target_list_subdomain_10000.csv",#"new_target_list.csv",
+        "target_subset_size": 50,
+        "target_add_www": True,  #Add www if no other subdomain is known
         #"target_host": "www.example.com",  #Just for special useipvstt
         "target_port": 443, #443, 8080 Apache
  
@@ -111,7 +112,7 @@ def main():
         "url": "",   #Complete URl
         "path": "/", #Dynamic, List, ?
         "standard_subdomain": "www", #use www if not provided
-        "relative_uri": True, # build a relative uri without the host in the requestline: /index.html
+        "relative_uri": False, # build a relative uri without the host in the requestline: /index.html
         "include_subdomain": True, #include the subdomain, when building requestline, if none given use <standard_subdomain>
         "include_port":False,
         "include_subdomain_host_header": True,
@@ -128,11 +129,9 @@ def main():
     run_exp=True
     if run_exp==True:
         try:
-            start_time=time.time()
+            
             experiment=ExperimentRunner(experiment_configuration, load_target_list(experiment_configuration["target_list"])).setup_and_start_experiment()
-            end_time=time.time()
-            duration=end_time-start_time
-            print(duration)
+            
         except Exception as e:
             print("Experiment run failed: ", e)
     if upgrade_list==True:

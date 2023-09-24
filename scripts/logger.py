@@ -369,6 +369,7 @@ class ExperimentLogger:
     def __init__(self, experiment_configuration):
         self.experiment_configuration = experiment_configuration
         self.experiment_folder = self.create_experiment_folder(experiment_configuration["experiment_no"])
+        self.experiment_stats={}
     
     def get_experiment_folder(self):
         return self.experiment_folder
@@ -378,8 +379,16 @@ class ExperimentLogger:
        
         exp_folder = f"logs/experiment_{exp_number}"
         os.makedirs(exp_folder, exist_ok=True) #If it already exists, doesn't care
+        os.makedirs(exp_folder+"/base_request", exist_ok=True)
         return exp_folder
 
+    def get_directory_size_mb(self,path):
+        total_size = 0
+        for dirpath, dirnames, filenames in os.walk(path):
+            for filename in filenames:
+                file_path = os.path.join(dirpath, filename)
+                total_size += os.path.getsize(file_path)
+        return total_size/(1024*1024)
 
     def add_global_entry_to_experiment_list(self, exp_no):
         """Adds an entry describing the experiment and the outcome into a list"""
@@ -404,10 +413,43 @@ class ExperimentLogger:
                 csv_writer.writerow([entry])
         print("DNS Lookup Fails Saved")
         return
+    def save_pdmatrix(self, pd_matrix):
+        file_path = f"{self.experiment_folder}/pd_matrix.csv"            
+        pd_matrix.to_csv(file_path, index=False)
+        print("Prerequest - Domain Matrix saved")
+        return
+
+
+    def save_base_checks_fails(self, base_check_fails):
+        """Adds an entry describing the experiment and the outcome into a list"""
+        file_path = f"{self.experiment_folder}/base_check_fails.csv"            
+        with open(file_path, "a+", newline="") as csvfile:
+            csv_writer = csv.writer(csvfile)
+            for entry in base_check_fails:
+                csv_writer.writerow([entry])
+        print("Base Check Fails saved")
+        return
+
+    def prerequest_statisics(self, prerequest, message_count):
+        data_frame=pandas.DataFrame(prerequest)
+        result_stats={
+            "1xx(%)": data_frame["1xx"].sum()/message_count*100,
+            "2xx(%)": data_frame["2xx"].sum()/message_count*100,
+            "3xx(%)": data_frame["3xx"].sum()/message_count*100,
+            "4xx(%)": data_frame["4xx"].sum()/message_count*100,
+            "5xx(%)": data_frame["5xx"].sum()/message_count*100,
+            "9xx(%)": data_frame["9xx"].sum()/message_count*100,
+            
+        }
+        self.experiment_stats["Outcome"]=result_stats
+        return
+
+
 
     def save_prerequests(self, prerequests):
         """Saves the prerequest list"""
         
+
         file_path = f"{self.experiment_folder}/prerequests.csv"
         
         with open(file_path, "w", newline="") as csvfile:
@@ -419,6 +461,23 @@ class ExperimentLogger:
                 csv_writer.writerow(prerequest)
         print("Prerequest saved")
         return
+    
+    def save_exp_stats(self, run_time, messages):
+        self.experiment_stats["Experiment_Configuration"]=self.experiment_configuration
+        self.experiment_stats["Experiment_Duration(s)"]=run_time
+        self.experiment_stats["Experiment_Duration(h)"]=run_time/3600
+        self.experiment_stats["Packets_per_second"]=self.experiment_stats["captured_packages"]/run_time
+        self.experiment_stats["Messages"]=messages
+        self.experiment_stats["Messages_per_second"]=messages/run_time
+        active_workers=math.ceil(self.experiment_configuration["max_targets"]/self.experiment_configuration["target_subset_size"])
+        if active_workers>self.experiment_configuration["max_workers"]: active_workers=self.experiment_configuration["max_workers"]
+        self.experiment_stats["Active_Workers"]=active_workers
+        self.experiment_stats["Folder_Size"]=self.get_directory_size_mb(self.experiment_folder)
+        file_path = f"{self.experiment_folder}/experiment_outcome.json"
+        with open(file_path, "w", encoding="utf-8") as file:
+            json.dump(self.experiment_stats, file, indent=4)
+        return
+
 
     def analyze_prerequest_outcome(self):
         file_path = f"{self.experiment_folder}/prerequests.csv"
@@ -458,7 +517,10 @@ class ExperimentLogger:
         ]
 
         try:
-            subprocess.Popen(dumpcap_cmd)
+            
+            #dumpcap_process=subprocess.Popen(dumpcap_cmd)
+            dumpcap_process=subprocess.Popen(dumpcap_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
+
             # Wait for stop flag
             while not stop_capture_flag.is_set():
                 # Continue capturing packets until the response is received or timeout occurs
@@ -469,7 +531,19 @@ class ExperimentLogger:
             subprocess.run(["pkill", "dumpcap"], check=False)  # Terminate dumpcap process      
             print("Packets of all communication captured and saved to", pcap_path)       
             time.sleep(1)
-
+            try:
+                output = dumpcap_process.stderr.read()
+                print(output)
+                lines = output.split('\n')
+                packets_captured = None
+                for line in lines:
+                    if "Packets captured:" in line:
+                        packets_captured = int(line.split(":")[1].strip())
+                        break
+            except Exception as e:
+                print("Error reading output: ",e)
+                packets_captured = None
+            self.experiment_stats["captured_packages"]=packets_captured
         except subprocess.TimeoutExpired:
             # If a timeout occurs, terminate the dumpcap process
             print("Timeout limit reached. Capturing terminated.")

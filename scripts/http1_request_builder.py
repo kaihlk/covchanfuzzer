@@ -240,9 +240,10 @@ class HTTP1_Request_Builder:
                 if override_uri!="":
                     new_domain=override_uri
                     prerequest=prerequest.replace('https://', '',1)
+                #This inserts the sudomain in the uri    
                 request=prerequest.replace(self.subdomain_placeholder,subdomains)
                 request=request.replace(self.domain_placeholder, new_domain)
-                #Host header field!!!
+                #The Subdomain inclusion for the host header field takes places here, 
                 request=request.replace(self.host_placeholder, host)
                 return request
             except Exception as ex:

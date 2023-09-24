@@ -147,10 +147,11 @@ class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
             headers = headers.copy()
 
         # Build the request_line from the provided arguments
-        request_line = f"{method} {url} HTTP/1.1\r\n"
-
+        request_line, new_uri = self.build_request_line(port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
+       
         deviation_count = 0
-        headers.insert(0, ("Host", self.host_placeholder))
+        hostheader=self.host_placeholder
+        headers.insert(0, ("Host", hostheader))
 
         # Shuffle the header fields randomly
         # Reorder the header fields, Note: the RandomValue random.shuffle(List, RandomValue[0,1]) is deprecated (Python 3.9)
@@ -162,7 +163,7 @@ class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
         # Iterate over the shuffled headers and compare with the original order
         for shuffled_header, original_header in zip(shuffled_headers, headers):
             # Check if the header is not 'Host' and the order has deviated and increment the deviation count
-            if shuffled_header != original_header and original_header[0] != host:
+            if shuffled_header != original_header and original_header[0] != hostheader:
                 deviation_count += 1
             # Build the request_string with the shuffeled_header
             request_string += f"{shuffled_header[0]}: {shuffled_header[1]}\r\n"
@@ -170,7 +171,7 @@ class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
         request_string += "\r\n"
 
         # Return the request string and deviation count
-        return request_string, deviation_count, url
+        return request_string, deviation_count, new_uri
 
 class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
     def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
