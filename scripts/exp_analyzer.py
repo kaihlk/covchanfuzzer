@@ -11,9 +11,9 @@ class Domain_Response_Analyzator():
     def __init__(self, path):
         self.exp_path = path
         self.data_frame_exp_stats = pandas.read_csv(
-            path+"experiment_stats.csv")
+            path+"/experiment_stats.csv")
         self.data_frame_prerequest_stats = pandas.read_csv(
-            path+"prerequests.csv")    
+            path+"/prerequests.csv")    
 
     def start(self):
         self.plot_unsorted_data(self.data_frame_exp_stats)

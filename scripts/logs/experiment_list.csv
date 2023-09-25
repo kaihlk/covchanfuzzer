@@ -108,3 +108,22 @@ experiment_no,comment,verbose,timestamp,covertchannel_request_number,covertchann
 107,test,False,20230924_153219,1,1,1,0.7,1,2,20,0,0,3,target_list_tls_abs_sub_subhost.csv,20,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,False,True,False,True,,firefox_HTTP/1.1_TLS,random
 108,Test File Size,False,20230924_155627,1,1,1,0.7,1,2,20,0,0,3,target_list_tls_abs_sub_subhost.csv,20,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,False,True,False,True,,firefox_HTTP/1.1_TLS,random
 109,test matirx,False,20230924_170018,1,1,1,0.7,3,2,20,0,0,3,target_list_tls_abs_sub_subhost.csv,20,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,False,True,False,True,,firefox_HTTP/1.1_TLS,random
+110,CC3_1000_Targets,False,20230924_231400,3,1,1,0.7,1000,1000,25,0,0,3,target_list_tls_abs_sub_subhost.csv,40,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,False,True,False,True,,firefox_HTTP/1.1_TLS,random
+111,CC3_1000_1000,False,20230924_231618,1,1,1,0.7,1000,1000,25,0,0,3,target_list_subdomain_10000.csv,40,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,False,True,False,True,,firefox_HTTP/1.1_TLS,random
+112,"CC3_Rel_1000_1000_0,7",False,20230925_105920,1,1,1,0.7,1000,1000,25,0,0,3,target_list_subdomain_10000.csv,40,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+113,Check again+,False,20230925_164350,1,1,1,0.7,100,100,25,0,0,3,target_list_subdomain_10000.csv,10,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+114,test,False,20230925_171530,1,1,1,0.7,1,100,25,0,0,3,target_list_subdomain_10000.csv,10,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+115,test,False,20230925_174500,1,1,1,0.7,2,10,25,0,0,3,target_list_subdomain_10000.csv,2,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+116,test,False,20230925_180519,1,1,1,0.7,2,10,25,0,0,3,target_list_subdomain_10000.csv,2,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+117,test,False,20230925_183852,1,1,1,0.7,10,100,25,0,0,3,target_list_subdomain_10000.csv,2,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+118,test,False,20230925_184023,1,1,1,0.7,10,100,25,0,0,3,target_list_subdomain_10000.csv,2,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+119,Benchmark 1,False,20230925_195500,1,1,1,0.7,10,1000,25,0,0,3,target_list_subdomain_10000.csv,20,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+120,TRY AGAING,False,20230925_205431,1,1,1,0.7,10,1000,25,0,0,3,target_list_subdomain_10000.csv,20,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+121,test,False,20230925_210220,3,1,1,0.7,10,1000,25,0,0,3,target_list_subdomain_10000.csv,20,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+122,test,False,20230925_210521,1,1,1,0.7,10,1000,25,0,0,3,target_list_subdomain_10000.csv,20,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+123,locks,False,20230925_214752,1,1,1,0.7,10,1000,25,0,0,3,target_list_subdomain_10000.csv,20,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+124,threads,False,20230925_221511,1,1,1,0.7,10,1000,25,0,0,3,target_list_subdomain_10000.csv,20,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+125,TRest,False,20230925_223022,3,1,1,0.7,10,1000,25,0,0,3,target_list_subdomain_10000.csv,20,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+126,test,False,20230925_230519,1,1,1,0.7,5,100,5,0,0,3,target_list_subdomain_10000.csv,10,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+127,test,False,20230925_234130,1,1,1,0.7,5,100,5,0,0,3,target_list_subdomain_10000.csv,10,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random
+128,ettes,False,20230925_234301,1,1,1,0.7,5,100,5,0,0,3,target_list_subdomain_10000.csv,10,True,443,5,enp0s3,True,True,False,HTTP/1.1,GET,,/,www,True,True,False,True,,firefox_HTTP/1.1_TLS,random

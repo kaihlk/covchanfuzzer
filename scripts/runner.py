@@ -18,13 +18,25 @@ class ExperimentRunner:
     def __init__(self, experiment_configuration, target_list):
         self.experiment_configuration = experiment_configuration
         self.target_list=target_list
-        self.extend_list=0
+       
         self.base_check_fails=[]
+        self.lock_bcf = threading.Lock()
         self.dns_fails=[]
+        self.lock_df = threading.Lock()
         self.message_count=0
+        self.lock_mc = threading.Lock()
         self.prerequest_list=[]
+        self.lock_prl = threading.Lock()
         self.exp_log=None
-        self.pd_matrix=pandas.DataFrame(columns=["Domain"])
+
+        
+        
+        
+        """  self.pd_matrix=pandas.DataFrame(columns=["Attempt No.\Domain"])
+        expected_attempts=self.experiment_configuration["max_targets"]*self.experiment_configuration["num_attempts"]
+        for attempt in range(0, expected_attempts):
+            self.pd_matrix.loc[attempt] = [attempt]
+        self.pd_matrix.reset_index(drop=True, inplace=True)     """
 
     def get_target_subset(self, start_position=0, length=10)-> list:
         """Takes a subset from the target list to reduce the traffic to one target, in order to """
@@ -117,16 +129,16 @@ class ExperimentRunner:
             #rebuild uri            
             uri=subdomains+hostname+"."+tldomain
             print("DNS Lookup for: "+uri)
-            socket_info = CustomHTTP().lookup_dns(uri, self.target_port, self.experiment_configuration["use_ipv4"])
-            if not socket_info:
-                #Extend List when DNS Lookup Fails
-                self.dns_fails.append(uri)
-                self.extend_list+=1
+            socket_info, error = CustomHTTP().lookup_dns(uri, self.target_port, self.experiment_configuration["use_ipv4"])
+            if error!= None:
+                #Extend List when DNS Lookup Fails (Thread Safe)
+                with self.lock_df:
+                    self.dns_fails.append([uri,error])
             else:
                 #IPv4 Socket_Info
                 if self.experiment_configuration["use_ipv4"]:
                     try: 
-                        ip_address, port=  socket_info[0][0][4]
+                        ip_address, port=  socket_info[0][4]
 
                         print("IP Address:", ip_address)
                         print("Port:", port)
@@ -134,13 +146,14 @@ class ExperimentRunner:
                         print("An error occurred:", e)               
                 #IPv6 Socket_Info
                 else:
-                    ip_address=  socket_info[0][4][0]
-                    port = socket_info[0][4][1]
+                    ip_address=  socket_info[4][0]
+                    port = socket_info[4][1]
                 #Check Port (maybe not needed)
                 if port!=self.target_port:
                     print("Warning: Retrieved port doesn't match configured port (r. Port/c.Port"+str(port)+"/"+str(self.target_port))
                 #Perform n basic requests if option is set.
                 check=False
+                basic_request_status_code=0
                 if self.experiment_configuration["check_basic_request"]!=0:
                     for i in range(self.experiment_configuration["check_basic_request"]):
                         #Check if basic request is answered with a 2xx response
@@ -158,8 +171,9 @@ class ExperimentRunner:
                     sub_set_dns.append({"host":uri, "socket_info":socket_info, "ip_address":ip_address, "port":port })
                 else:
                     #Extend List when Basic Check Fails
-                    self.base_check_fails.append(uri)
-                    self.extend_list+=1      
+                    with self.lock_bcf:
+                        self.base_check_fails.append([uri, basic_request_status_code])
+                          
                 
         return sub_set_dns
 
@@ -191,44 +205,60 @@ class ExperimentRunner:
 
 
     def get_next_prerequest(self, attempt_number):
-        if attempt_number>=len(self.prerequest_list):
-            prerequest = self.pregenerate_request(self.experiment_configuration["covertchannel_request_number"])
-            self.prerequest_list.append(prerequest)
-        else: 
-            prerequest=self.prerequest_list[attempt_number]
+        with self.lock_prl:
+            if attempt_number>=len(self.prerequest_list):
+                prerequest = self.pregenerate_request(self.experiment_configuration["covertchannel_request_number"])
+                self.prerequest_list.append(prerequest)
+            else: 
+                prerequest=self.prerequest_list[attempt_number]
             
         return prerequest
-
-    def add_entry_to_domain_prerequest_matrix(self, domain, attempt_no, response_line):
+    #Doesnt'work, too slow, thread unsafe
+    """ def add_entry_to_domain_prerequest_matrix(self, domain, attempt_no, response_line):
         if response_line!=None:
             response_status_code = response_line["status_code"] 
         else:
             response_status_code=999
+        # Ensure the "Domain" column is present in the DataFrame
+        if "Domain" not in self.pd_matrix.columns:
+            self.pd_matrix["Domain"] = None
         if domain not in self.pd_matrix.index:
             self.pd_matrix.at[domain, "Domain"] = domain
+        
+        if (domain, attempt_no) in self.pd_matrix.index:
+            # Append a number to the domain to make it unique
+            new_domain = domain
+            count = 1
+            while (new_domain, attempt_no) in self.pd_matrix.index:
+                new_domain = f"{domain}_{count}"
+                count += 1
+            domain = new_domain
+
         self.pd_matrix.at[domain, attempt_no] = response_status_code
-        return
+        
+        return """
 
 
     def add_nr_and_status_code_to_request_list(self, attempt_no, response_line):
-        self.prerequest_list[attempt_no]["Nr"]=attempt_no
-        if response_line!=None:
-            response_status_code = response_line["status_code"] 
-        else:
-            response_status_code=999   
-        first_digit = str(response_status_code)[0]
-        if first_digit == "1":
-            self.prerequest_list[attempt_no]["1xx"]+=1
-        elif first_digit == "2":
-            self.prerequest_list[attempt_no]["2xx"]+=1
-        elif first_digit == "3":
-            self.prerequest_list[attempt_no]["3xx"]+=1
-        elif first_digit == "4":
-            self.prerequest_list[attempt_no]["4xx"]+=1
-        elif first_digit == "5":
-            self.prerequest_list[attempt_no]["5xx"]+=1
-        else:
-            self.prerequest_list[attempt_no]["9xx"]+=1
+        with self.lock_prl:
+            self.prerequest_list[attempt_no]["Nr"]=attempt_no
+            if response_line!=None:
+                response_status_code = response_line["status_code"] 
+            else:
+                response_status_code=999   
+            first_digit = str(response_status_code)[0]
+            if first_digit == "1":
+                self.prerequest_list[attempt_no]["1xx"]+=1
+            elif first_digit == "2":
+                self.prerequest_list[attempt_no]["2xx"]+=1
+            elif first_digit == "3":
+                self.prerequest_list[attempt_no]["3xx"]+=1
+            elif first_digit == "4":
+                self.prerequest_list[attempt_no]["4xx"]+=1
+            elif first_digit == "5":
+                self.prerequest_list[attempt_no]["5xx"]+=1
+            else:
+                self.prerequest_list[attempt_no]["9xx"]+=1
         
         return
         
@@ -284,11 +314,18 @@ class ExperimentRunner:
                         logger.add_request_response_data(i, request, deviation_count, prerequest["uri"], response_line, response_header_fields, body, measured_times, error_message)
                         try:
                             self.add_nr_and_status_code_to_request_list(i,response_line)
-                            self.add_entry_to_domain_prerequest_matrix(i, domain, response_line )
                         except Exception as e:
                             print("Exception during updating request_list",e)
+                        #try:
+                        #    self.add_entry_to_domain_prerequest_matrix(i, domain, response_line )
+                        #except Exception as e:
+                        #    print("Exception during updating request matrix",e)
+                        
+                        
+                        
                         self.check_content(body)
-                        self.message_count+=1
+                        with self.lock_mc:
+                            self.message_count+=1
                         end_time=time.time()
                         response_time=end_time-start_time
                         print("Message No: " + str(self.message_count)+" Host: "+str(host_data["host"])+" Complete Message Time: " + str(response_time))
@@ -307,9 +344,10 @@ class ExperimentRunner:
         return  
 
     def fuzz_subset(self, subset):
-        start_time=time.time()
+        
         #Get DNS Infomation 
         subset_dns=self.add_dns_info(subset)
+        target_count=len(subset_dns)
         #Prepare Threading
         capture_threads=[]
         logger_list=[]
@@ -350,9 +388,7 @@ class ExperimentRunner:
 
 
 
-        end_time=time.time()
-        excecution_time=end_time-start_time    
-        return excecution_time
+        return target_count
 
 
     """def fuzz_subset(self, subset):
@@ -412,24 +448,36 @@ class ExperimentRunner:
             subset_length=self.experiment_configuration["target_subset_size"]
             max_targets=self.experiment_configuration["max_targets"]
             if max_targets>len(self.target_list): max_targets=len(self.target_list)
-
+            extend_list=0
+            processed_targets=0
             subsets_tasks=[]
+            active_workers=0
             'Iterate through target list'
             with concurrent.futures.ThreadPoolExecutor(max_workers=self.experiment_configuration["max_workers"]) as subset_executor:
                 #Iterate though the list, if DNS Lookups or Basechecks fail, the entry from the list is droped and a new entry will be appended
-                while start_position < max_targets+self.extend_list and max_targets+self.extend_list<len(self.target_list):
+                while processed_targets<self.experiment_configuration["max_targets"]:
+                    if start_position > (max_targets+extend_list) and (max_targets+extend_list)>len(self.target_list):
+                        break
                     # Get the next subset
+                    print("Subset Start: ",start_position," Extend List Value:", extend_list)
                     subset = self.get_target_subset(start_position, subset_length)
                     start_position += subset_length
 
                     # Submit the subset for processing
                     subset_task = subset_executor.submit(self.fuzz_subset, subset)
+                    active_workers+=1
                     subsets_tasks.append(subset_task)
                     
+                    
                     # Wait for any completed tasks and remove them from the list
-                    completed_subset_tasks = [task for task in subsets_tasks if task.done()]
-                    for completed_task in completed_subset_tasks:
-                        subsets_tasks.remove(completed_task)
+                    while active_workers==self.experiment_configuration["max_workers"]:
+                        time.sleep(1)
+                        completed_subset_tasks = [task for task in subsets_tasks if task.done()]
+                        for completed_task in completed_subset_tasks:
+                            extend_list+= len(subset) - completed_task.result()
+                            processed_targets+=completed_task.result()
+                            subsets_tasks.remove(completed_task)
+                            active_workers-=1
 
            
         except Exception as e:
