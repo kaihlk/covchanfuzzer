@@ -455,28 +455,36 @@ class ExperimentRunner:
             'Iterate through target list'
             with concurrent.futures.ThreadPoolExecutor(max_workers=self.experiment_configuration["max_workers"]) as subset_executor:
                 #Iterate though the list, if DNS Lookups or Basechecks fail, the entry from the list is droped and a new entry will be appended
-                while processed_targets<self.experiment_configuration["max_targets"]:
-                    if start_position > (max_targets+extend_list) and (max_targets+extend_list)>len(self.target_list):
+                #Take subsets from target_list until the the processed targets are equal or less than  configured max_targets 
+                while processed_targets<=self.experiment_configuration["max_targets"]:
+                    #If new start position is bigger then max_targets+extend_list break 
+                    if start_position > (max_targets+extend_list)  :
                         break
-                    # Get the next subset
-                    print("Subset Start: ",start_position," Extend List Value:", extend_list)
-                    subset = self.get_target_subset(start_position, subset_length)
+                    # If target_list limit is reached, break
+                    if (max_targets+extend_list)+subset_length>len(self.target_list):
+                        break
+                    # Get the next subset from the target list
+                    target_subset = self.get_target_subset(start_position, subset_length)
+                    # Shift the start position for next iteration
                     start_position += subset_length
-
-                    # Submit the subset for processing
-                    subset_task = subset_executor.submit(self.fuzz_subset, subset)
-                    active_workers+=1
+                    # Submit the subset for processing to executor
+                    subset_task = subset_executor.submit(self.fuzz_subset, target_subset)
                     subsets_tasks.append(subset_task)
-                    
-                    
-                    # Wait for any completed tasks and remove them from the list
+                    #Count the number of active threads
+                    active_workers+=1
+                    # If max_workers are active start waiting for completed tasks and remove them from the list
                     while active_workers==self.experiment_configuration["max_workers"]:
-                        time.sleep(1)
-                        completed_subset_tasks = [task for task in subsets_tasks if task.done()]
-                        for completed_task in completed_subset_tasks:
+                        #Wait for a completed task
+                        completed_tasks, uncompleted_task=concurrent.futures.wait(subsets_tasks, return_when=FIRST_COMPLETED)
+                        # iterate through completed target list
+                        for completed_task in completed_tasks:
+                            #extend_list is the count of entries that failed processcing calculated by the length of a subset minus the count of normal processed entries returned by the function
                             extend_list+= len(subset) - completed_task.result()
+                            #Higher the value of the correctly processed entry count
                             processed_targets+=completed_task.result()
+                            #remove the task
                             subsets_tasks.remove(completed_task)
+                            #lower the number of active workers, which leads to end the inner while loop, and the outer loop will start the next worker
                             active_workers-=1
 
            
@@ -497,7 +505,7 @@ class ExperimentRunner:
             self.exp_log.save_base_checks_fails(self.base_check_fails)
             self.exp_log.save_prerequests(self.prerequest_list)
             self.exp_log.prerequest_statisics(self.prerequest_list, self.message_count)
-            self.exp_log.save_pdmatrix(self.pd_matrix)
+            #self.exp_log.save_pdmatrix(self.pd_matrix)
             self.exp_log.save_exp_stats(duration, self.message_count)
             exp_analyzer.Domain_Response_Analyzator(self.exp_log.get_experiment_folder()).start()
             #self.exp_log.analyze_prerequest_outcome()  

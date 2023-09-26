@@ -50,7 +50,7 @@ class Domain_Response_Analyzator():
         mpl.grid(True)
         mpl.tight_layout()
         mpl.xticks([])    
-        mpl.savefig(self.exp_path+'exp_stats_host_statuscode.png',
+        mpl.savefig(self.exp_path+'/exp_stats_host_statuscode.png',
                     dpi=300, bbox_inches='tight')
         #mpl.show()
 
@@ -82,7 +82,7 @@ class Domain_Response_Analyzator():
 
        
         mpl.bar_label(bars, labels = [f'{x.get_height():.0%}' for x in bars], fontsize=15, color='black')
-        mpl.savefig(self.exp_path+'exp_stats_2xx_histogramm.png',
+        mpl.savefig(self.exp_path+'/exp_stats_2xx_histogramm.png',
                     dpi=300, bbox_inches='tight')
         #mpl.show() 
         return
@@ -98,7 +98,7 @@ class Domain_Response_Analyzator():
         # Show the plot
         mpl.grid(True)
         mpl.tight_layout()
-        mpl.savefig(self.exp_path+'exp_stats_prerequest_statuscodes.png', dpi=300, bbox_inches='tight')
+        mpl.savefig(self.exp_path+'/exp_stats_prerequest_statuscodes.png', dpi=300, bbox_inches='tight')
        # mpl.show()
         
         return
