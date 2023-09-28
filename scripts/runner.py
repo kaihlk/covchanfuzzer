@@ -53,31 +53,47 @@ class ExperimentRunner:
         sub_set=sub_set[:length]
         return sub_set
          """
-    def get_target_subset(self, start_position=0, length=10)-> list:
-        """Takes a subset from the target list to reduce the traffic to one target, in order to"""
-        #Check Inputs
-        if start_position <0 or start_position > len(self.target_list):
+    def get_target_subset(self, target_list, start_position=0, length=10)-> list:
+        """Takes a subset from the target list to reduce the traffic to one target, in order to """
+        #Check inputs
+        if start_position <0 or start_position+length > len(target_list):
             raise ValueError("Invalid start_position")
-        list_rest=self.target_list[start_position:]
-        if length > len(list_rest):
-            length = len(list_rest)
+        subset=target_list[start_position:]
+        #Prevent length exeeding target_list
+        if length > len(subset):
+            length = len(subset)
+        subset=subset[:length]
+        return subset
+
+    def check_target_list_subset(self,target_list, start_position=0, length=10 ):
+        """Checks a subset from the target list, returns the validated entries"""
+        #Check Inputs
+        if start_position <0 or start_position+length > len(target_list):
+            raise ValueError("Invalid start_position")
+        #initalize counter for failed DNS LookUp http_options
+        invalid_entries_count=0
+        checked_subset=[]
+        subset=target_list[start_position:start_position+length]
         #Build sub_set List with valid targets
-        sub_set=[]
-        for entry in list_rest:
+        for entry in subset:
             dns_entry, error = self.add_dns_info(entry)
             #Check Socket Info 
             if dns_entry!=None:
                 #Check http options
-                if self.check_entry_http_options(entry)==True:
-                    sub_set.append(entry)
+                print(dns_entry)
+                if self.check_entry_http_options(dns_entry)==True:
+                    checked_subset.append(dns_entry)
+                else:
+                    invalid_entries_count+=1
+            else:
+                invalid_entries_count+=1
             # Repeat until sub_set has desired lenght
-            if len(sub_set)==length:
-                break    
-        
-        return sub_set
+        print(checked_subset)    
+        return checked_subset, invalid_entries_count
 
 
     def basic_request(self,domain, socket_info):
+        
         host=None
         response_line=None
         response_status_code=None
@@ -91,10 +107,7 @@ class ExperimentRunner:
                 subdomains="www"
         if subdomains!="":
                 subdomains=subdomains+"."
-            
         uri=subdomains+hostname+"."+tldomain
-        
-    
         request_string, deviation_count, new_uri=request_builder.HTTP1_Request_Builder().generate_request(local_configuration, 443)
         #host deprecated?
         request=request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, uri, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"]) #Carefull some hosts expect more
@@ -126,6 +139,7 @@ class ExperimentRunner:
     def add_dns_info(self, entry):
         """Adds DNS Information to each entry. Port and IP depending on Experiment_Configuration Options use_IPv4, use_TLS"""
         #sub_set_dns=[]
+        entry_dns=None
         #Configure Port
         if self.experiment_configuration["target_port"] is not None:
             try:
@@ -139,10 +153,7 @@ class ExperimentRunner:
                 self.target_port=443
             else: 
                 self.target_port=80
-        
-        #TODO Catch the case that IPv4 or IPv6 is not provided, some sites sends more than one IP/Port set per protocoll version,  example macromedia.com and criteo.com
-              
-            
+        #TODO Catch the case that IPv4 or IPv6 is not provided, some sites sends more than one IP/Port set per protocoll version,  example macromedia.com and criteo.com            
         subdomains, hostname, tldomain= request_builder.HTTP1_Request_Builder().parse_host(entry)
         #Add www or keep subdomain if present, if selected and no other subdomain is present
         if self.experiment_configuration["target_add_www"]==True:
@@ -154,12 +165,15 @@ class ExperimentRunner:
         #rebuild uri            
         uri=subdomains+hostname+"."+tldomain
         print("DNS Lookup for: "+uri)
-        socket_info, error = CustomHTTP().lookup_dns(uri, self.target_port, self.experiment_configuration["use_ipv4"])
+        try:
+            socket_info, error = CustomHTTP().lookup_dns(uri, self.target_port, self.experiment_configuration["use_ipv4"])
+        except Exception as e:
+            print(e)
         if error!= None:
             #Extend List when DNS Lookup Fails (Thread Safe)
             with self.lock_df:
                 self.dns_fails.append([uri,error])
-            return None, error
+            
         else:
             #IPv4 Socket_Info
             if self.experiment_configuration["use_ipv4"]:
@@ -179,14 +193,14 @@ class ExperimentRunner:
         return entry_dns, None
 
 
-    def check_entry_http_options(self, entry): 
+    def check_entry_http_options(self, entry_dns): 
         """Perform n basic requests if option is set."""
         check=False
         basic_request_status_code=0
         if self.experiment_configuration["check_basic_request"]!=0:
             for i in range(self.experiment_configuration["check_basic_request"]):
                 #Check if basic request is answered with a 2xx response
-                basic_request_status_code=self.basic_request(entry, socket_info)
+                basic_request_status_code=self.basic_request(entry_dns["host"], entry_dns["socket_info"])
                 first_digit = str(basic_request_status_code)[0]
                 if first_digit == "2":
                     check=True
@@ -197,9 +211,9 @@ class ExperimentRunner:
             #Add Entry without Basic Check if option is 0
             check=True
         if check==False:
-            #Extend List when Basic Check Fails
+            #Extend Lisst when Basic Check Fails
             with self.lock_bcf:
-                self.base_check_fails.append([uri, basic_request_status_code])           
+                self.base_check_fails.append([entry_dns["host"], basic_request_status_code])           
         return check
         
 
@@ -368,32 +382,32 @@ class ExperimentRunner:
                     
         return  
 
-    def fuzz_subset(self, subset_dns):
- 
+    def fuzz_subset(self, target_list, start_position, subset_length):
+        try: 
+            subset= self.get_target_subset(target_list, start_position, subset_length)
+        except Exception as e:#
+            logging.error("Error while getting subset objects: %s", e)
         #Initialise Logger List
         logger_list=[]            
         #Create logger object for each target in subset_dns
-        for entry in subset_dns: 
+        for entry in subset: 
             try:   
                 logger=TestRunLogger(self.experiment_configuration, self.exp_log.get_experiment_folder(), entry, entry["host"], entry["ip_address"], entry["port"])
                 logger_list.append(logger)           
             except Exception as e:
-                logging.error("Error while creating logger objects: %s", e)
-                #target_count-=1  
+                logging.error("Error while creating logger objects: %s", e)  
         #Start the processing of the subset_dns and its corresponding loggers
         try:
-            self.run_experiment_subset(logger_list, subset_dns)
+            self.run_experiment_subset(logger_list, subset)
         except Exception as e:
             logging.error("Exception during run_experiment_subset: %s", e)
-            #return 0
         # Save Log files in the logger files
         for logger in logger_list:
             try:
                 logger.save_logfiles()
             except Exception as e:
                 logging.error("Exception during saving log_files: %s", e)
-                #target_count-=1
-        return length_subset, valid_entries
+        return subset
 
         
          #Prepare Threading
@@ -451,6 +465,58 @@ class ExperimentRunner:
         return True
         """
 
+    def prepare_target_list(self, target_list, max_targets, max_workers):
+        """Builds a list from the provided target list, check DNS Looḱupg/Socket Info and http_options"""
+        
+        #Initialise Variables
+        start_position=0
+        invalid_entry_counts=0
+        end_of_list=False
+        subsets_tasks=[]
+        checked_target_list=[]
+        active_workers=0
+        subset_length=int(max_targets/max_workers)    
+        #Make sure if that the target list has enough entries --Maybe drop
+        if max_targets>len(target_list): max_targets=len(target_list)
+        
+        #Build futures to look up DNS until enough target are collected or end of target list is reached
+        with concurrent.futures.ThreadPoolExecutor(max_workers) as subset_executor:
+            while len(checked_target_list)<max_targets or end_of_list==True: 
+                while active_workers<max_workers:
+                    # If target_list limit is reached, break
+                    if  start_position>len(target_list):
+                        print("End of list reached")
+                        #    #Raise Error?
+                        end_of_list=True
+                        break    
+                    #Get DNS Infomation for the subset, if the lookup fails for an entry the subset will be shortened
+                    subset_task = subset_executor.submit(self.check_target_list_subset, target_list,start_position, subset_length)
+                    # Shift the start position for next iteration
+                    start_position += subset_length
+                    # Submit the subset for processing to executor
+                    subsets_tasks.append(subset_task)
+                    active_workers+=1
+                    #InnerLoop End
+                #Wait for a completed task
+                completed_tasks, _ = concurrent.futures.wait(subsets_tasks, return_when=concurrent.futures.FIRST_COMPLETED)
+                for completed_task in completed_tasks:
+                    try:
+                        # Save the results
+                        new_targets, invalid_entries = completed_task.result()
+                        checked_target_list.extend(new_targets)
+                        invalid_entry_counts+=invalid_entries
+                    except Exception as e:
+                        logging.error("Error while processing completed task: %s", e)
+                    finally:
+                        # Remove the task from the list
+                        subsets_tasks.remove(completed_task)
+                        active_workers -= 1
+        #Limit list if paralallel processing returned more targets than needed
+        if len(checked_target_list)>max_targets:
+            checked_target_list=checked_target_list[:max_targets]
+
+        return checked_target_list, invalid_entry_counts            
+
     def setup_and_start_experiment(self):
         '''Setups the Experiment, creates an experiment logger, and starts the experiment run'''
         
@@ -465,73 +531,71 @@ class ExperimentRunner:
             global_capture_thread = threading.Thread(target=self.exp_log.capture_packets_dumpcap, args=(global_stop_event,))
             global_capture_thread.start()
             time.sleep(1)
+
+            
+            #Prepare Target List
+            prepared_target_list, invalid_entries=self.prepare_target_list(self.target_list, self.experiment_configuration["max_targets"], self.experiment_configuration["max_workers"])
+            #TODO Save them?
+            print("invalid_entries", invalid_entries)
+            print("Valid Entires", len(prepared_target_list))
             #Loop over List
 
-            start_position=0
+
+
+            fuzz_tasks=[]
             subset_length=self.experiment_configuration["target_subset_size"]
-            max_targets=self.experiment_configuration["max_targets"]
-            if max_targets>len(self.target_list): max_targets=len(self.target_list)
-            extend_list=0
-            processed_targets=0
-            subsets_tasks=[]
-            max_active_workers=self.experiment_configuration["max_targets"]/self.experiment_configuration["target_subset_size"]
+            max_workers=self.experiment_configuration["max_workers"]
+            max_active_workers=self.experiment_configuration["max_targets"]/max_workers
             if max_active_workers>self.experiment_configuration["max_workers"]:
                 max_active_workers=self.experiment_configuration["max_workers"]
-            targets_in_processing=0
             active_workers=0
+            processed_targets=0
+            start_position=0
+            
             
             'Iterate through target list'
-            with concurrent.futures.ThreadPoolExecutor(max_workers=self.experiment_configuration["max_workers"]) as subset_executor:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=self.experiment_configuration["max_workers"]) as fuzz_executor:
                 #Iterate though the list, if DNS Lookups or Basechecks fail, the entry from the list is droped and a new entry will be appended
                 #Take subsets from target_list until the the processed targets are equal or less than  configured max_targets 
-                #while processed_targets<=self.experiment_configuration["max_targets"]:
+                while processed_targets<self.experiment_configuration["max_targets"]:
                     #Create futures until max__active workers
-                while active_workers<max_active_workers:
-                    #If new start position is bigger then max_targets+extend_list break 
-                    #if start_position > (max_targets+extend_list)  :
-                    #    break
-                    # If target_list limit is reached, break
-                    if (max_targets+extend_list)+subset_length>len(self.target_list):
-                        #Raise Error?
-                        break
-                            #Get DNS Infomation for the subset, if the lookup fails for an entry the subset will be shortened
-                    try:
-                        #Get a subset with valid entries    
-                        target_subset_dns = self.get_target_subset(start_position, dyn_subset_length)
-                        # Shift the start position for next iteration
-                        start_position += dyn_subset_length
-                        # Submit the subset for processing to executor
-                        subset_task = subset_executor.submit(self.fuzz_subset, target_subset)
-                        subsets_tasks.append(subset_task)
-                       
-                        
-                    except Exception as e:
-                        logging.error("Error during subset Fuzzing near index",start_position,"  Lookups for subset: %s", e)
-                        continue
                 
-                    active_workers+=1
-                       
-                
-                   
-                    # Wait for completed task If max_workers are active start waiting for completed tasks and remove them from the list
-                    #while active_workers==max_active_workers:
-                        #Wait for a completed task
-                    completed_tasks, uncompleted_task=concurrent.futures.wait(subsets_tasks, return_when=FIRST_COMPLETED)
-                   
-                    # iterate through completed target list
+                    while active_workers<max_active_workers:
+                        # If target_list limit is reached, break_
+                        if start_position+subset_length>len(prepared_target_list):
+                        #    #Raise Error?
+                            break
+                                #Get DNS Infomation for the subset, if the lookup fails for an entry the subset will be shortened
+                        try:
+                            fuzz_task = fuzz_executor.submit(self.fuzz_subset, prepared_target_list, start_position, subset_length)
+                            
+                            #Get a subset with valid entries    
+                            # Shift the start position for next iteration
+                            
+                            start_position += subset_length
+                            # Submit the subset for processing to executor
+                            fuzz_tasks.append(fuzz_task)
+                            active_workers+=1
+                        except Exception as e:
+                            logging.error("Error during subset Fuzzing DNS Lookups for subset: %s", e)
+                            active_workers -= 1
+                            continue
+                    #Wait for a completed task
+                    completed_tasks, _ = concurrent.futures.wait(fuzz_tasks, return_when=concurrent.futures.FIRST_COMPLETED)
                     for completed_task in completed_tasks:
-                        #extend_list is the count of entries that failed processcing calculated by the length of a subset minus the count of normal processed entries returned by the function
-                        length_processed_subset, valid_entries = completed_task.result()
-                        extend_list+=length_processed_subset-valid_entries 
-                        #Higher the value of the correctly processed entry count
-                        processed_targets+=valid_entries
-                        #remove the task
-                        subsets_tasks.remove(completed_task)
-                        targets_in_processing-=length_processed_subset
-                        #lower the number of active workers, which leads to end the inner while loop, and the outer loop will start the next worker
-                        active_workers-=1
+                        try:
+                            processed_targets += len(completed_task.result())
+                        except Exception as e:
+                            logging.error("Error while processing completed task: %s", e)
+                        finally:
+                            # Remove the task from the list
+                            fuzz_tasks.remove(completed_task)
+                            active_workers -= 1
 
-           
+
+                    
+
+            
         except Exception as e:
             print("During the experiment an error occured", e)
         finally:
@@ -542,7 +606,7 @@ class ExperimentRunner:
             end_time=time.time()
             duration=end_time-start_time
             print(duration)
-            print("Processed Tragets: ",processed_targets)
+            print("Processed Targets: ",processed_targets)
             #Save OutCome to experiment Folder csv.
             self.exp_log.add_global_entry_to_experiment_list(self.experiment_configuration["experiment_no"])
             self.exp_log.save_dns_fails(self.dns_fails)

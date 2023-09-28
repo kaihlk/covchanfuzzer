@@ -165,7 +165,7 @@ class CustomHTTP(HTTP):
                 )
         except socket.gaierror as ex:
             print(f"DNS Lookup failed: {str(ex)}")
-            return address, str(ex)
+            return None, str(ex)
         return address, None
 
     def create_tcp_socket(self, ip_info, timeout):
