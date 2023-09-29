@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.taboola.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.18960881233215332,0.11252737045288086,0.02819538116455078,200,OK,[''],22,22,0,"{""connection"": ""keep-alive"", ""content-length"": ""68771"", ""cache-control"": ""max-age=0"", ""content-type"": ""text/html; charset=UTF-8"", ""expires"": ""Fri, 29 Sep 2023 10:59:59 GMT"", ""last-modified"": ""Tue, 17 Jan 2023 13:44:46 GMT"", ""link"": ""<https://www.taboola.com/>; rel=shortlink"", ""x-debug-info"": ""eyJyZXRyaWVzIjowfQ=="", ""x-platform-cluster"": ""i5sxgl7kxd646-master-7rqtwti"", ""x-platform-processor"": ""4w57liyk5qmvb33ie62fm764wm"", ""x-platform-router"": ""qembyofs6mao6l33k7eoqiwdoa"", ""x-xss-protection"": ""1; mode=block"", ""traceresponse"": ""00-178956477f3fac4542516044160a41b3-6c07b08b9338ab91-00"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 23:01:00 GMT"", ""via"": ""1.1 varnish"", ""age"": ""46860"", ""x-served-by"": ""cache-ams12780-AMS"", ""x-cache"": ""HIT"", ""x-cache-hits"": ""4"", ""x-timer"": ""S1696028460.009774,VS0,VE0"", ""strict-transport-security"": ""max-age=31557600""}"
+1,"GET / HTTP/1.1
+Host: www.taboola.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.3354203701019287,0.11585879325866699,0.029015064239501953,200,OK,[''],22,22,0,"{""connection"": ""keep-alive"", ""content-length"": ""68771"", ""cache-control"": ""max-age=0"", ""content-type"": ""text/html; charset=UTF-8"", ""expires"": ""Fri, 29 Sep 2023 10:59:59 GMT"", ""last-modified"": ""Tue, 17 Jan 2023 13:44:46 GMT"", ""link"": ""<https://www.taboola.com/>; rel=shortlink"", ""x-debug-info"": ""eyJyZXRyaWVzIjowfQ=="", ""x-platform-cluster"": ""i5sxgl7kxd646-master-7rqtwti"", ""x-platform-processor"": ""4w57liyk5qmvb33ie62fm764wm"", ""x-platform-router"": ""qembyofs6mao6l33k7eoqiwdoa"", ""x-xss-protection"": ""1; mode=block"", ""traceresponse"": ""00-178956477f3fac4542516044160a41b3-6c07b08b9338ab91-00"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 23:01:02 GMT"", ""via"": ""1.1 varnish"", ""age"": ""46862"", ""x-served-by"": ""cache-ams12735-AMS"", ""x-cache"": ""HIT"", ""x-cache-hits"": ""4"", ""x-timer"": ""S1696028463.622889,VS0,VE0"", ""strict-transport-security"": ""max-age=31557600""}"
+2,"GET / HTTP/1.1
+Host: www.taboola.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.18664193153381348,0.11090278625488281,0.03139996528625488,200,OK,[''],22,22,0,"{""connection"": ""keep-alive"", ""content-length"": ""68771"", ""cache-control"": ""max-age=0"", ""content-type"": ""text/html; charset=UTF-8"", ""expires"": ""Fri, 29 Sep 2023 10:59:59 GMT"", ""last-modified"": ""Tue, 17 Jan 2023 13:44:46 GMT"", ""link"": ""<https://www.taboola.com/>; rel=shortlink"", ""x-debug-info"": ""eyJyZXRyaWVzIjowfQ=="", ""x-platform-cluster"": ""i5sxgl7kxd646-master-7rqtwti"", ""x-platform-processor"": ""4w57liyk5qmvb33ie62fm764wm"", ""x-platform-router"": ""qembyofs6mao6l33k7eoqiwdoa"", ""x-xss-protection"": ""1; mode=block"", ""traceresponse"": ""00-178956477f3fac4542516044160a41b3-6c07b08b9338ab91-00"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 23:01:04 GMT"", ""via"": ""1.1 varnish"", ""age"": ""46865"", ""x-served-by"": ""cache-ams12779-AMS"", ""x-cache"": ""HIT"", ""x-cache-hits"": ""3"", ""x-timer"": ""S1696028465.760622,VS0,VE0"", ""strict-transport-security"": ""max-age=31557600""}"
+3,"GET / HTTP/1.1
+Host: www.taboola.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.22410058975219727,0.12623119354248047,0.06662797927856445,200,OK,[''],22,22,0,"{""connection"": ""keep-alive"", ""content-length"": ""68771"", ""cache-control"": ""max-age=0"", ""content-type"": ""text/html; charset=UTF-8"", ""expires"": ""Fri, 29 Sep 2023 10:59:59 GMT"", ""last-modified"": ""Tue, 17 Jan 2023 13:44:46 GMT"", ""link"": ""<https://www.taboola.com/>; rel=shortlink"", ""x-debug-info"": ""eyJyZXRyaWVzIjowfQ=="", ""x-platform-cluster"": ""i5sxgl7kxd646-master-7rqtwti"", ""x-platform-processor"": ""4w57liyk5qmvb33ie62fm764wm"", ""x-platform-router"": ""qembyofs6mao6l33k7eoqiwdoa"", ""x-xss-protection"": ""1; mode=block"", ""traceresponse"": ""00-178956477f3fac4542516044160a41b3-6c07b08b9338ab91-00"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 23:01:06 GMT"", ""via"": ""1.1 varnish"", ""age"": ""46867"", ""x-served-by"": ""cache-ams12767-AMS"", ""x-cache"": ""HIT"", ""x-cache-hits"": ""1"", ""x-timer"": ""S1696028467.967354,VS0,VE1"", ""strict-transport-security"": ""max-age=31557600""}"
+4,"GET / HTTP/1.1
+Host: www.taboola.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.3525581359863281,0.12805414199829102,0.03375840187072754,200,OK,[''],22,22,0,"{""connection"": ""keep-alive"", ""content-length"": ""68771"", ""cache-control"": ""max-age=0"", ""content-type"": ""text/html; charset=UTF-8"", ""expires"": ""Fri, 29 Sep 2023 10:59:59 GMT"", ""last-modified"": ""Tue, 17 Jan 2023 13:44:46 GMT"", ""link"": ""<https://www.taboola.com/>; rel=shortlink"", ""x-debug-info"": ""eyJyZXRyaWVzIjowfQ=="", ""x-platform-cluster"": ""i5sxgl7kxd646-master-7rqtwti"", ""x-platform-processor"": ""4w57liyk5qmvb33ie62fm764wm"", ""x-platform-router"": ""qembyofs6mao6l33k7eoqiwdoa"", ""x-xss-protection"": ""1; mode=block"", ""traceresponse"": ""00-178956477f3fac4542516044160a41b3-6c07b08b9338ab91-00"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 23:01:09 GMT"", ""via"": ""1.1 varnish"", ""age"": ""46870"", ""x-served-by"": ""cache-ams12753-AMS"", ""x-cache"": ""HIT"", ""x-cache-hits"": ""1"", ""x-timer"": ""S1696028470.687832,VS0,VE1"", ""strict-transport-security"": ""max-age=31557600""}"
+5,"GET / HTTP/1.1
+Host: www.taboola.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.1126863956451416,0.12800168991088867,0.09817981719970703,200,OK,[''],22,22,0,"{""connection"": ""keep-alive"", ""content-length"": ""68771"", ""cache-control"": ""max-age=0"", ""content-type"": ""text/html; charset=UTF-8"", ""expires"": ""Fri, 29 Sep 2023 10:59:59 GMT"", ""last-modified"": ""Tue, 17 Jan 2023 13:44:46 GMT"", ""link"": ""<https://www.taboola.com/>; rel=shortlink"", ""x-debug-info"": ""eyJyZXRyaWVzIjowfQ=="", ""x-platform-cluster"": ""i5sxgl7kxd646-master-7rqtwti"", ""x-platform-processor"": ""4w57liyk5qmvb33ie62fm764wm"", ""x-platform-router"": ""qembyofs6mao6l33k7eoqiwdoa"", ""x-xss-protection"": ""1; mode=block"", ""traceresponse"": ""00-178956477f3fac4542516044160a41b3-6c07b08b9338ab91-00"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 23:01:11 GMT"", ""via"": ""1.1 varnish"", ""age"": ""46872"", ""x-served-by"": ""cache-ams12765-AMS"", ""x-cache"": ""HIT"", ""x-cache-hits"": ""1"", ""x-timer"": ""S1696028472.860468,VS0,VE3"", ""strict-transport-security"": ""max-age=31557600""}"
+6,"GET / HTTP/1.1
+Host: www.taboola.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.2056255340576172,0.11157345771789551,0.023814678192138672,200,OK,[''],22,22,0,"{""connection"": ""keep-alive"", ""content-length"": ""68771"", ""cache-control"": ""max-age=0"", ""content-type"": ""text/html; charset=UTF-8"", ""expires"": ""Fri, 29 Sep 2023 10:59:59 GMT"", ""last-modified"": ""Tue, 17 Jan 2023 13:44:46 GMT"", ""link"": ""<https://www.taboola.com/>; rel=shortlink"", ""x-debug-info"": ""eyJyZXRyaWVzIjowfQ=="", ""x-platform-cluster"": ""i5sxgl7kxd646-master-7rqtwti"", ""x-platform-processor"": ""4w57liyk5qmvb33ie62fm764wm"", ""x-platform-router"": ""qembyofs6mao6l33k7eoqiwdoa"", ""x-xss-protection"": ""1; mode=block"", ""traceresponse"": ""00-178956477f3fac4542516044160a41b3-6c07b08b9338ab91-00"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 23:01:14 GMT"", ""via"": ""1.1 varnish"", ""age"": ""46874"", ""x-served-by"": ""cache-ams12769-AMS"", ""x-cache"": ""HIT"", ""x-cache-hits"": ""2"", ""x-timer"": ""S1696028474.228348,VS0,VE0"", ""strict-transport-security"": ""max-age=31557600""}"
+7,"GET / HTTP/1.1
+Host: www.taboola.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.12591147422790527,0.11465239524841309,0.037908077239990234,200,OK,[''],22,22,0,"{""connection"": ""keep-alive"", ""content-length"": ""68771"", ""cache-control"": ""max-age=0"", ""content-type"": ""text/html; charset=UTF-8"", ""expires"": ""Fri, 29 Sep 2023 10:59:59 GMT"", ""last-modified"": ""Tue, 17 Jan 2023 13:44:46 GMT"", ""link"": ""<https://www.taboola.com/>; rel=shortlink"", ""x-debug-info"": ""eyJyZXRyaWVzIjowfQ=="", ""x-platform-cluster"": ""i5sxgl7kxd646-master-7rqtwti"", ""x-platform-processor"": ""4w57liyk5qmvb33ie62fm764wm"", ""x-platform-router"": ""qembyofs6mao6l33k7eoqiwdoa"", ""x-xss-protection"": ""1; mode=block"", ""traceresponse"": ""00-178956477f3fac4542516044160a41b3-6c07b08b9338ab91-00"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 23:01:16 GMT"", ""via"": ""1.1 varnish"", ""age"": ""46876"", ""x-served-by"": ""cache-ams12755-AMS"", ""x-cache"": ""HIT"", ""x-cache-hits"": ""2"", ""x-timer"": ""S1696028476.305689,VS0,VE0"", ""strict-transport-security"": ""max-age=31557600""}"
+8,"GET / HTTP/1.1
+Host: www.taboola.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.22860288619995117,0.1097249984741211,0.04709672927856445,200,OK,[''],22,22,0,"{""connection"": ""keep-alive"", ""content-length"": ""68771"", ""cache-control"": ""max-age=0"", ""content-type"": ""text/html; charset=UTF-8"", ""expires"": ""Fri, 29 Sep 2023 10:59:59 GMT"", ""last-modified"": ""Tue, 17 Jan 2023 13:44:46 GMT"", ""link"": ""<https://www.taboola.com/>; rel=shortlink"", ""x-debug-info"": ""eyJyZXRyaWVzIjowfQ=="", ""x-platform-cluster"": ""i5sxgl7kxd646-master-7rqtwti"", ""x-platform-processor"": ""4w57liyk5qmvb33ie62fm764wm"", ""x-platform-router"": ""qembyofs6mao6l33k7eoqiwdoa"", ""x-xss-protection"": ""1; mode=block"", ""traceresponse"": ""00-178956477f3fac4542516044160a41b3-6c07b08b9338ab91-00"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 23:01:18 GMT"", ""via"": ""1.1 varnish"", ""age"": ""46878"", ""x-served-by"": ""cache-ams12771-AMS"", ""x-cache"": ""HIT"", ""x-cache-hits"": ""2"", ""x-timer"": ""S1696028479.663497,VS0,VE0"", ""strict-transport-security"": ""max-age=31557600""}"
+9,"GET / HTTP/1.1
+Host: www.taboola.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.23314952850341797,0.11789870262145996,0.030138731002807617,200,OK,[''],22,22,0,"{""connection"": ""keep-alive"", ""content-length"": ""68771"", ""cache-control"": ""max-age=0"", ""content-type"": ""text/html; charset=UTF-8"", ""expires"": ""Fri, 29 Sep 2023 10:59:59 GMT"", ""last-modified"": ""Tue, 17 Jan 2023 13:44:46 GMT"", ""link"": ""<https://www.taboola.com/>; rel=shortlink"", ""x-debug-info"": ""eyJyZXRyaWVzIjowfQ=="", ""x-platform-cluster"": ""i5sxgl7kxd646-master-7rqtwti"", ""x-platform-processor"": ""4w57liyk5qmvb33ie62fm764wm"", ""x-platform-router"": ""qembyofs6mao6l33k7eoqiwdoa"", ""x-xss-protection"": ""1; mode=block"", ""traceresponse"": ""00-178956477f3fac4542516044160a41b3-6c07b08b9338ab91-00"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 23:01:21 GMT"", ""via"": ""1.1 varnish"", ""age"": ""46881"", ""x-served-by"": ""cache-ams12735-AMS"", ""x-cache"": ""HIT"", ""x-cache-hits"": ""5"", ""x-timer"": ""S1696028481.232089,VS0,VE0"", ""strict-transport-security"": ""max-age=31557600""}"

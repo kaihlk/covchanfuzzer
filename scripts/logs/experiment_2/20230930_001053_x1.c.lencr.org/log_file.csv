@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: x1.c.lencr.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.14166617393493652,0.16241836547851562,0.07023453712463379,200,OK,[''],17,17,695,"{""server"": ""nginx"", ""content-type"": ""application/pkix-crl"", ""last-modified"": ""Fri, 04 Aug 2023 20:57:55 GMT"", ""etag"": ""\""64cd6653-2cd\"""", ""strict-transport-security"": ""max-age=15768000"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-security-policy"": ""default-src 'self'; style-src 'unsafe-inline' 'self'; script-src 'unsafe-eval' 'unsafe-inline' 'self' data: https://www.google-analytics.com https://www.googleadservices.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://donorbox.org https://js.stripe.com/v3/ https://sdks.shopifycdn.com; img-src 'self' data: https://www.google-analytics.com https://www.paypal.com https://www.paypalobjects.com https://ak2s.abmr.net https://ak1s.abmr.net https://www.google.com https://cdn.shopify.com https://v.shopify.com; frame-src https://donorbox.org https://www.youtube.com https://www.youtube-nocookie.com https://bid.g.doubleclick.net https://js.stripe.com/v3/ https://js.stripe.com/v2/; font-src 'self';connect-src 'self' https://cyxp6wx4v9.execute-api.us-east-2.amazonaws.com/dev/create_order https://letsencrypt-merch.myshopify.com;"", ""x-frame-options"": ""DENY"", ""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""content-length"": ""738"", ""cache-control"": ""max-age=3600"", ""expires"": ""Fri, 29 Sep 2023 23:10:55 GMT"", ""date"": ""Fri, 29 Sep 2023 22:10:55 GMT"", ""connection"": ""keep-alive""}"
+1,"GET / HTTP/1.1
+Host: x1.c.lencr.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.18384194374084473,0.12219905853271484,0.04042410850524902,200,OK,[''],17,17,695,"{""server"": ""nginx"", ""content-type"": ""application/pkix-crl"", ""last-modified"": ""Fri, 04 Aug 2023 20:57:55 GMT"", ""etag"": ""\""64cd6653-2cd\"""", ""strict-transport-security"": ""max-age=15768000"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-security-policy"": ""default-src 'self'; style-src 'unsafe-inline' 'self'; script-src 'unsafe-eval' 'unsafe-inline' 'self' data: https://www.google-analytics.com https://www.googleadservices.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://donorbox.org https://js.stripe.com/v3/ https://sdks.shopifycdn.com; img-src 'self' data: https://www.google-analytics.com https://www.paypal.com https://www.paypalobjects.com https://ak2s.abmr.net https://ak1s.abmr.net https://www.google.com https://cdn.shopify.com https://v.shopify.com; frame-src https://donorbox.org https://www.youtube.com https://www.youtube-nocookie.com https://bid.g.doubleclick.net https://js.stripe.com/v3/ https://js.stripe.com/v2/; font-src 'self';connect-src 'self' https://cyxp6wx4v9.execute-api.us-east-2.amazonaws.com/dev/create_order https://letsencrypt-merch.myshopify.com;"", ""x-frame-options"": ""DENY"", ""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""content-length"": ""738"", ""cache-control"": ""max-age=3600"", ""expires"": ""Fri, 29 Sep 2023 23:10:58 GMT"", ""date"": ""Fri, 29 Sep 2023 22:10:58 GMT"", ""connection"": ""keep-alive""}"
+2,"GET / HTTP/1.1
+Host: x1.c.lencr.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.1553173065185547,0.12565946578979492,0.015515804290771484,200,OK,[''],17,17,695,"{""server"": ""nginx"", ""content-type"": ""application/pkix-crl"", ""last-modified"": ""Fri, 04 Aug 2023 20:57:55 GMT"", ""etag"": ""\""64cd6653-2cd\"""", ""strict-transport-security"": ""max-age=15768000"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-security-policy"": ""default-src 'self'; style-src 'unsafe-inline' 'self'; script-src 'unsafe-eval' 'unsafe-inline' 'self' data: https://www.google-analytics.com https://www.googleadservices.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://donorbox.org https://js.stripe.com/v3/ https://sdks.shopifycdn.com; img-src 'self' data: https://www.google-analytics.com https://www.paypal.com https://www.paypalobjects.com https://ak2s.abmr.net https://ak1s.abmr.net https://www.google.com https://cdn.shopify.com https://v.shopify.com; frame-src https://donorbox.org https://www.youtube.com https://www.youtube-nocookie.com https://bid.g.doubleclick.net https://js.stripe.com/v3/ https://js.stripe.com/v2/; font-src 'self';connect-src 'self' https://cyxp6wx4v9.execute-api.us-east-2.amazonaws.com/dev/create_order https://letsencrypt-merch.myshopify.com;"", ""x-frame-options"": ""DENY"", ""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""content-length"": ""738"", ""cache-control"": ""max-age=3600"", ""expires"": ""Fri, 29 Sep 2023 23:11:00 GMT"", ""date"": ""Fri, 29 Sep 2023 22:11:00 GMT"", ""connection"": ""keep-alive""}"
+3,"GET / HTTP/1.1
+Host: x1.c.lencr.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.1612691879272461,0.13304543495178223,0.13408541679382324,200,OK,[''],17,17,695,"{""server"": ""nginx"", ""content-type"": ""application/pkix-crl"", ""last-modified"": ""Fri, 04 Aug 2023 20:57:55 GMT"", ""etag"": ""\""64cd6653-2cd\"""", ""strict-transport-security"": ""max-age=15768000"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-security-policy"": ""default-src 'self'; style-src 'unsafe-inline' 'self'; script-src 'unsafe-eval' 'unsafe-inline' 'self' data: https://www.google-analytics.com https://www.googleadservices.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://donorbox.org https://js.stripe.com/v3/ https://sdks.shopifycdn.com; img-src 'self' data: https://www.google-analytics.com https://www.paypal.com https://www.paypalobjects.com https://ak2s.abmr.net https://ak1s.abmr.net https://www.google.com https://cdn.shopify.com https://v.shopify.com; frame-src https://donorbox.org https://www.youtube.com https://www.youtube-nocookie.com https://bid.g.doubleclick.net https://js.stripe.com/v3/ https://js.stripe.com/v2/; font-src 'self';connect-src 'self' https://cyxp6wx4v9.execute-api.us-east-2.amazonaws.com/dev/create_order https://letsencrypt-merch.myshopify.com;"", ""x-frame-options"": ""DENY"", ""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""content-length"": ""738"", ""cache-control"": ""max-age=3600"", ""expires"": ""Fri, 29 Sep 2023 23:11:03 GMT"", ""date"": ""Fri, 29 Sep 2023 22:11:03 GMT"", ""connection"": ""keep-alive""}"
+4,"GET / HTTP/1.1
+Host: x1.c.lencr.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.1811830997467041,0.10594296455383301,0.01427912712097168,200,OK,[''],17,17,695,"{""server"": ""nginx"", ""content-type"": ""application/pkix-crl"", ""last-modified"": ""Fri, 04 Aug 2023 20:57:55 GMT"", ""etag"": ""\""64cd6653-2cd\"""", ""strict-transport-security"": ""max-age=15768000"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-security-policy"": ""default-src 'self'; style-src 'unsafe-inline' 'self'; script-src 'unsafe-eval' 'unsafe-inline' 'self' data: https://www.google-analytics.com https://www.googleadservices.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://donorbox.org https://js.stripe.com/v3/ https://sdks.shopifycdn.com; img-src 'self' data: https://www.google-analytics.com https://www.paypal.com https://www.paypalobjects.com https://ak2s.abmr.net https://ak1s.abmr.net https://www.google.com https://cdn.shopify.com https://v.shopify.com; frame-src https://donorbox.org https://www.youtube.com https://www.youtube-nocookie.com https://bid.g.doubleclick.net https://js.stripe.com/v3/ https://js.stripe.com/v2/; font-src 'self';connect-src 'self' https://cyxp6wx4v9.execute-api.us-east-2.amazonaws.com/dev/create_order https://letsencrypt-merch.myshopify.com;"", ""x-frame-options"": ""DENY"", ""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""content-length"": ""738"", ""cache-control"": ""max-age=3600"", ""expires"": ""Fri, 29 Sep 2023 23:11:06 GMT"", ""date"": ""Fri, 29 Sep 2023 22:11:06 GMT"", ""connection"": ""keep-alive""}"
+5,"GET / HTTP/1.1
+Host: x1.c.lencr.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.16962003707885742,0.14974260330200195,0.039811134338378906,200,OK,[''],17,17,695,"{""server"": ""nginx"", ""content-type"": ""application/pkix-crl"", ""last-modified"": ""Fri, 04 Aug 2023 20:57:55 GMT"", ""etag"": ""\""64cd6653-2cd\"""", ""strict-transport-security"": ""max-age=15768000"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-security-policy"": ""default-src 'self'; style-src 'unsafe-inline' 'self'; script-src 'unsafe-eval' 'unsafe-inline' 'self' data: https://www.google-analytics.com https://www.googleadservices.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://donorbox.org https://js.stripe.com/v3/ https://sdks.shopifycdn.com; img-src 'self' data: https://www.google-analytics.com https://www.paypal.com https://www.paypalobjects.com https://ak2s.abmr.net https://ak1s.abmr.net https://www.google.com https://cdn.shopify.com https://v.shopify.com; frame-src https://donorbox.org https://www.youtube.com https://www.youtube-nocookie.com https://bid.g.doubleclick.net https://js.stripe.com/v3/ https://js.stripe.com/v2/; font-src 'self';connect-src 'self' https://cyxp6wx4v9.execute-api.us-east-2.amazonaws.com/dev/create_order https://letsencrypt-merch.myshopify.com;"", ""x-frame-options"": ""DENY"", ""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""content-length"": ""738"", ""cache-control"": ""max-age=3600"", ""expires"": ""Fri, 29 Sep 2023 23:11:09 GMT"", ""date"": ""Fri, 29 Sep 2023 22:11:09 GMT"", ""connection"": ""keep-alive""}"
+6,"GET / HTTP/1.1
+Host: x1.c.lencr.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.27335572242736816,0.10981106758117676,0.02284550666809082,200,OK,[''],17,17,695,"{""server"": ""nginx"", ""content-type"": ""application/pkix-crl"", ""last-modified"": ""Fri, 04 Aug 2023 20:57:55 GMT"", ""etag"": ""\""64cd6653-2cd\"""", ""strict-transport-security"": ""max-age=15768000"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-security-policy"": ""default-src 'self'; style-src 'unsafe-inline' 'self'; script-src 'unsafe-eval' 'unsafe-inline' 'self' data: https://www.google-analytics.com https://www.googleadservices.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://donorbox.org https://js.stripe.com/v3/ https://sdks.shopifycdn.com; img-src 'self' data: https://www.google-analytics.com https://www.paypal.com https://www.paypalobjects.com https://ak2s.abmr.net https://ak1s.abmr.net https://www.google.com https://cdn.shopify.com https://v.shopify.com; frame-src https://donorbox.org https://www.youtube.com https://www.youtube-nocookie.com https://bid.g.doubleclick.net https://js.stripe.com/v3/ https://js.stripe.com/v2/; font-src 'self';connect-src 'self' https://cyxp6wx4v9.execute-api.us-east-2.amazonaws.com/dev/create_order https://letsencrypt-merch.myshopify.com;"", ""x-frame-options"": ""DENY"", ""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""content-length"": ""738"", ""cache-control"": ""max-age=3600"", ""expires"": ""Fri, 29 Sep 2023 23:11:12 GMT"", ""date"": ""Fri, 29 Sep 2023 22:11:12 GMT"", ""connection"": ""keep-alive""}"
+7,"GET / HTTP/1.1
+Host: x1.c.lencr.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.2148733139038086,0.10217404365539551,0.025210142135620117,200,OK,[''],17,17,695,"{""server"": ""nginx"", ""content-type"": ""application/pkix-crl"", ""last-modified"": ""Fri, 04 Aug 2023 20:57:55 GMT"", ""etag"": ""\""64cd6653-2cd\"""", ""strict-transport-security"": ""max-age=15768000"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-security-policy"": ""default-src 'self'; style-src 'unsafe-inline' 'self'; script-src 'unsafe-eval' 'unsafe-inline' 'self' data: https://www.google-analytics.com https://www.googleadservices.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://donorbox.org https://js.stripe.com/v3/ https://sdks.shopifycdn.com; img-src 'self' data: https://www.google-analytics.com https://www.paypal.com https://www.paypalobjects.com https://ak2s.abmr.net https://ak1s.abmr.net https://www.google.com https://cdn.shopify.com https://v.shopify.com; frame-src https://donorbox.org https://www.youtube.com https://www.youtube-nocookie.com https://bid.g.doubleclick.net https://js.stripe.com/v3/ https://js.stripe.com/v2/; font-src 'self';connect-src 'self' https://cyxp6wx4v9.execute-api.us-east-2.amazonaws.com/dev/create_order https://letsencrypt-merch.myshopify.com;"", ""x-frame-options"": ""DENY"", ""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""content-length"": ""738"", ""cache-control"": ""max-age=3600"", ""expires"": ""Fri, 29 Sep 2023 23:11:15 GMT"", ""date"": ""Fri, 29 Sep 2023 22:11:15 GMT"", ""connection"": ""keep-alive""}"
+8,"GET / HTTP/1.1
+Host: x1.c.lencr.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.22907280921936035,0.10786557197570801,0.032087087631225586,200,OK,[''],17,17,695,"{""server"": ""nginx"", ""content-type"": ""application/pkix-crl"", ""last-modified"": ""Fri, 04 Aug 2023 20:57:55 GMT"", ""etag"": ""\""64cd6653-2cd\"""", ""strict-transport-security"": ""max-age=15768000"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-security-policy"": ""default-src 'self'; style-src 'unsafe-inline' 'self'; script-src 'unsafe-eval' 'unsafe-inline' 'self' data: https://www.google-analytics.com https://www.googleadservices.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://donorbox.org https://js.stripe.com/v3/ https://sdks.shopifycdn.com; img-src 'self' data: https://www.google-analytics.com https://www.paypal.com https://www.paypalobjects.com https://ak2s.abmr.net https://ak1s.abmr.net https://www.google.com https://cdn.shopify.com https://v.shopify.com; frame-src https://donorbox.org https://www.youtube.com https://www.youtube-nocookie.com https://bid.g.doubleclick.net https://js.stripe.com/v3/ https://js.stripe.com/v2/; font-src 'self';connect-src 'self' https://cyxp6wx4v9.execute-api.us-east-2.amazonaws.com/dev/create_order https://letsencrypt-merch.myshopify.com;"", ""x-frame-options"": ""DENY"", ""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""content-length"": ""738"", ""cache-control"": ""max-age=3600"", ""expires"": ""Fri, 29 Sep 2023 23:11:19 GMT"", ""date"": ""Fri, 29 Sep 2023 22:11:19 GMT"", ""connection"": ""keep-alive""}"
+9,"GET / HTTP/1.1
+Host: x1.c.lencr.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.3267526626586914,0.10888218879699707,0.05885672569274902,200,OK,[''],17,17,695,"{""server"": ""nginx"", ""content-type"": ""application/pkix-crl"", ""last-modified"": ""Fri, 04 Aug 2023 20:57:55 GMT"", ""etag"": ""\""64cd6653-2cd\"""", ""strict-transport-security"": ""max-age=15768000"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-security-policy"": ""default-src 'self'; style-src 'unsafe-inline' 'self'; script-src 'unsafe-eval' 'unsafe-inline' 'self' data: https://www.google-analytics.com https://www.googleadservices.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://donorbox.org https://js.stripe.com/v3/ https://sdks.shopifycdn.com; img-src 'self' data: https://www.google-analytics.com https://www.paypal.com https://www.paypalobjects.com https://ak2s.abmr.net https://ak1s.abmr.net https://www.google.com https://cdn.shopify.com https://v.shopify.com; frame-src https://donorbox.org https://www.youtube.com https://www.youtube-nocookie.com https://bid.g.doubleclick.net https://js.stripe.com/v3/ https://js.stripe.com/v2/; font-src 'self';connect-src 'self' https://cyxp6wx4v9.execute-api.us-east-2.amazonaws.com/dev/create_order https://letsencrypt-merch.myshopify.com;"", ""x-frame-options"": ""DENY"", ""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""content-length"": ""738"", ""cache-control"": ""max-age=3600"", ""expires"": ""Fri, 29 Sep 2023 23:11:23 GMT"", ""date"": ""Fri, 29 Sep 2023 22:11:23 GMT"", ""connection"": ""keep-alive""}"

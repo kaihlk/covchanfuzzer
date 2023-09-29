@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.cloudflare.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.15636658668518066,0.10720610618591309,0.10491394996643066,200,OK,[''],20,20,2,"{""date"": ""Fri, 29 Sep 2023 23:00:35 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""access-control-allow-origin"": ""*"", ""cache-control"": ""public, max-age=0, must-revalidate"", ""set-cookie"": ""__cf_bm=q3yuVSoapjm_v4aW5MU59Mq9MarTGtRe4GZeME5H2uw-1696028435-0-AXYfC+21rMSzEZfN6+JM8lRJIfWGwLhPzIPIrktc9NUi17/Fd8XLJJ/H9oWMVyIiRVMD3+q4q/WTEAj4DC/R+7KSkCaxygvgm+1S9MdFrm6C; path=/; expires=Fri, 29-Sep-23 23:30:35 GMT; domain=.www.cloudflare.com; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=31536000"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""report-to"": ""{\""endpoints\"":[{\""url\"":\""https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=o%2BhGxfGrLX9Xje2YiBzVri1w7%2FN2%2BDji1pD4cR2NKRzXMGqkmL%2F%2BCduT1pUAVxdPuekYjRGwFEbDGf5Xz11Oz9LiHla2Tb%2BFThQyXy2G0FOL2EeHc5FzYahH46HDzKkLbZ2C7B0%3D\""}],\""group\"":\""cf-nel\"",\""max_age\"":604800}"", ""nel"": ""{\""success_fraction\"":0,\""report_to\"":\""cf-nel\"",\""max_age\"":604800}"", ""vary"": ""Accept-Encoding"", ""cf-cache-status"": ""DYNAMIC"", ""server"": ""cloudflare"", ""cf-ray"": ""80e7d7db6fd60bba-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+1,"GET / HTTP/1.1
+Host: www.cloudflare.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.21763849258422852,0.1111612319946289,0.10200691223144531,200,OK,[''],20,20,2,"{""date"": ""Fri, 29 Sep 2023 23:00:38 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""access-control-allow-origin"": ""*"", ""cache-control"": ""public, max-age=0, must-revalidate"", ""set-cookie"": ""__cf_bm=.CX0Mxxi33KSCF.FHWaRgmdaoIn3q9jm2JKPFrm.kg8-1696028438-0-AQdtfR0t+tatk6IGBxWh7gnE/CX+QNel5S66GcEhC6FuuVsSyrBufhFKuiZ4Owo9qcqCJUbJVkWUaTKZ228csmXETzGsHm1c/9VioQlHL7bI; path=/; expires=Fri, 29-Sep-23 23:30:38 GMT; domain=.www.cloudflare.com; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=31536000"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""report-to"": ""{\""endpoints\"":[{\""url\"":\""https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=cdRNsml0F3EGhVPLmW4cPF7olvD%2FdDIOa1eqiUMMT54q2MWzFpTPmIswW2wxWJs9yChQgP5hevDcdK4QfLAf2vOIZ4JLmmK2peia0sp6fJKlQn80XN2iuYOnjmVccsEETPYjVOk%3D\""}],\""group\"":\""cf-nel\"",\""max_age\"":604800}"", ""nel"": ""{\""success_fraction\"":0,\""report_to\"":\""cf-nel\"",\""max_age\"":604800}"", ""vary"": ""Accept-Encoding"", ""cf-cache-status"": ""DYNAMIC"", ""server"": ""cloudflare"", ""cf-ray"": ""80e7d7ea6f7806bc-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+2,"GET / HTTP/1.1
+Host: www.cloudflare.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.2655155658721924,0.10051441192626953,0.08134818077087402,200,OK,[''],20,20,78,"{""date"": ""Fri, 29 Sep 2023 23:00:41 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""access-control-allow-origin"": ""*"", ""cache-control"": ""public, max-age=0, must-revalidate"", ""set-cookie"": ""__cf_bm=gFH.HTco9j7I2dc0pwF9PoUaY9vano0r_wp_z5.ufYs-1696028441-0-AWmPRThMXFKdvA18PgDIaPud84Lz07VRVwSGbcwYv5zwlFBUwXkJ+XbQGHs8TIEErmBkoX+AlLUkG+AxDohwzbJqoAANfxFQWfPX2kV6+i5X; path=/; expires=Fri, 29-Sep-23 23:30:41 GMT; domain=.www.cloudflare.com; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=31536000"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""report-to"": ""{\""endpoints\"":[{\""url\"":\""https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=XkOrrqJ3VHRby9wq9wKo79StrWneJF2zv%2FjRNuB%2Fh3puMxHp4pVn6fy2aIytD6jh2cse7j%2BT2pYhtsWUTWFDyOIezffg8oLc8HNTbAHa%2FaiUENCk6y4sorUBMIkEu7ZPH4ZxKrk%3D\""}],\""group\"":\""cf-nel\"",\""max_age\"":604800}"", ""nel"": ""{\""success_fraction\"":0,\""report_to\"":\""cf-nel\"",\""max_age\"":604800}"", ""vary"": ""Accept-Encoding"", ""cf-cache-status"": ""DYNAMIC"", ""server"": ""cloudflare"", ""cf-ray"": ""80e7d7ff6ef91ca6-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+3,"GET / HTTP/1.1
+Host: www.cloudflare.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.15639066696166992,0.11194372177124023,0.11880087852478027,200,OK,[''],20,20,77,"{""date"": ""Fri, 29 Sep 2023 23:00:44 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""access-control-allow-origin"": ""*"", ""cache-control"": ""public, max-age=0, must-revalidate"", ""set-cookie"": ""__cf_bm=70mGkMkrovmR41LtZ4WMxWvr5CLVFs_NHQ6PLL0QWNs-1696028444-0-AS34HjPltzqjFw46+/IXjLLyNk6q2eGmBWucJOiGgZFVZ+wtr/l//zLy2t9aAcNUXPoWmbUpNzSULlBwtFcJeChCIjKGBSepQsK2YnwOQdpV; path=/; expires=Fri, 29-Sep-23 23:30:44 GMT; domain=.www.cloudflare.com; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=31536000"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""report-to"": ""{\""endpoints\"":[{\""url\"":\""https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=QFhxfXrFfLDGFftE3nPJmY0s%2F7fmjZtPqw%2Fxi4zzuCNJJBrTL2tsMRfhunPpcucWtOCUmr3hKk%2FRI%2Bzn8j5j%2FMNO4GxUoEB%2BO7W6jwQtZX3T7TzrIVyyHrr7omuBHy6u4hgL6qQ%3D\""}],\""group\"":\""cf-nel\"",\""max_age\"":604800}"", ""nel"": ""{\""success_fraction\"":0,\""report_to\"":\""cf-nel\"",\""max_age\"":604800}"", ""vary"": ""Accept-Encoding"", ""cf-cache-status"": ""DYNAMIC"", ""server"": ""cloudflare"", ""cf-ray"": ""80e7d8122e800bc5-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+4,"GET / HTTP/1.1
+Host: www.cloudflare.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.12895750999450684,0.11552810668945312,0.07484245300292969,200,OK,[''],20,20,33,"{""date"": ""Fri, 29 Sep 2023 23:00:47 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""access-control-allow-origin"": ""*"", ""cache-control"": ""public, max-age=0, must-revalidate"", ""set-cookie"": ""__cf_bm=zrBaQEfxbzJvlt7JKiSQcbtk5ljAOoQLMRQbP1ug6Pk-1696028447-0-AV02yGyHz2gP8TQ1lkQR7ANdWQZoxq994Ln0PBUvcnt7ooyZdDNV9xKU7tbUeKcTBeVOqyt9wJ89UxpH83uyonG/sSD+OK2oSf/qmN17+xfY; path=/; expires=Fri, 29-Sep-23 23:30:47 GMT; domain=.www.cloudflare.com; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=31536000"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""report-to"": ""{\""endpoints\"":[{\""url\"":\""https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=JOxuHOhyVoDdrrIGUpqWvVIO2pFynOqhR8mLHVDR4AjncxYSK7EngZdtqx6ZFDZmAOx2DI4JYTBSM4IGC0reKiVS8D4zkPZx4fg%2F%2F%2BCaqeVfNIY3adHYbFeAZ9HL8FHhrQ4Gaz0%3D\""}],\""group\"":\""cf-nel\"",\""max_age\"":604800}"", ""nel"": ""{\""success_fraction\"":0,\""report_to\"":\""cf-nel\"",\""max_age\"":604800}"", ""vary"": ""Accept-Encoding"", ""cf-cache-status"": ""DYNAMIC"", ""server"": ""cloudflare"", ""cf-ray"": ""80e7d8275f730bb0-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+5,"GET / HTTP/1.1
+Host: www.cloudflare.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.2093038558959961,0.14040827751159668,0.15456867218017578,200,OK,[''],20,20,2,"{""date"": ""Fri, 29 Sep 2023 23:00:50 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""access-control-allow-origin"": ""*"", ""cache-control"": ""public, max-age=0, must-revalidate"", ""set-cookie"": ""__cf_bm=dEI6bcN4RF_.Avx7qrE7w.Ej0YYRuWbNYz5V98or7dU-1696028450-0-AW2tjgQLsTFDeAWwrk6FCZ8n6jvIDQ1DgR49lJZQ6dmmwbzx1wEmLi3wwe9ApGQ9sa5cD7ViS4wYrIfA3Iu8vGRteMV4IOMv17NE/92VRj0s; path=/; expires=Fri, 29-Sep-23 23:30:50 GMT; domain=.www.cloudflare.com; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=31536000"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""report-to"": ""{\""endpoints\"":[{\""url\"":\""https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=I%2ByQBxNyk4LXPLhzIXLNZuF4MjqYf6EYsy8%2BUjnqG2%2Fjukg4aJZsR9S68MxwUc5x1NQQDS2l%2Fft2fEVo4eaJP4YH67AEYcn2scWGakz6OyAvB3M15zzgNcGEsKcsrPK%2FUNhfTDM%3D\""}],\""group\"":\""cf-nel\"",\""max_age\"":604800}"", ""nel"": ""{\""success_fraction\"":0,\""report_to\"":\""cf-nel\"",\""max_age\"":604800}"", ""vary"": ""Accept-Encoding"", ""cf-cache-status"": ""DYNAMIC"", ""server"": ""cloudflare"", ""cf-ray"": ""80e7d837dbfab8f0-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+6,"GET / HTTP/1.1
+Host: www.cloudflare.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.1434314250946045,0.1423494815826416,0.1065514087677002,200,OK,[''],20,20,85,"{""date"": ""Fri, 29 Sep 2023 23:00:53 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""access-control-allow-origin"": ""*"", ""cache-control"": ""public, max-age=0, must-revalidate"", ""set-cookie"": ""__cf_bm=Lr8HVpXyr_Jjb3OnP3NBpNGDiFbauIF_nfx_tai1Kr4-1696028453-0-AYTvB0NogVvh0SIdvPADHjlXqsXNfLnwimZ6Qw4zaW85eIpIZw33y49ce9zpA18uhEJNJWyTri9qtdHAA8wRzOLN/rHXWk9VQEbzpRgn5vE6; path=/; expires=Fri, 29-Sep-23 23:30:53 GMT; domain=.www.cloudflare.com; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=31536000"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""report-to"": ""{\""endpoints\"":[{\""url\"":\""https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=fzc5v48LanSG1wy7JSjZpxYbty9WmRvXSgpfoh9yilD%2BNWjkXaUR7LrL2TywDjFstlu03y4NA2d%2FuKtC8JfVFnioBpAvMFmc5f4AzslZUb4nd6WcgUVdo1vKmEshO9HYPe97FDM%3D\""}],\""group\"":\""cf-nel\"",\""max_age\"":604800}"", ""nel"": ""{\""success_fraction\"":0,\""report_to\"":\""cf-nel\"",\""max_age\"":604800}"", ""vary"": ""Accept-Encoding"", ""cf-cache-status"": ""DYNAMIC"", ""server"": ""cloudflare"", ""cf-ray"": ""80e7d84a5d4d1c0c-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+7,"GET / HTTP/1.1
+Host: www.cloudflare.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.2245922088623047,0.10624361038208008,0.09805846214294434,200,OK,[''],20,20,33,"{""date"": ""Fri, 29 Sep 2023 23:00:56 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""access-control-allow-origin"": ""*"", ""cache-control"": ""public, max-age=0, must-revalidate"", ""set-cookie"": ""__cf_bm=8p5CIy6Oze6ctMgIA.YcZt8BIg0lvq2m0qwgLffvlC4-1696028456-0-AUoFLnbbizzv24sR5jz2vn19pbc1oIpLK/Ao1MQamOqp93GFS3YHImvz13nPY12QB7Ty00zqo+v6hRkCqWd0DnxhhN9Iayj39ekgYdAZ+X8B; path=/; expires=Fri, 29-Sep-23 23:30:56 GMT; domain=.www.cloudflare.com; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=31536000"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""report-to"": ""{\""endpoints\"":[{\""url\"":\""https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=g2aW9wq7PDML2DdL5XX%2FtOu6nrbr8hmXW5hahRYuvym961ByUcAM5FdEJp8zAULNU4%2B%2B7Lv6TpgxPrY8dHx4thoHisgHaKJ%2B64mP45qUUfwWEanMLGxFPFlJ4X0hVQ8o0fgCa5U%3D\""}],\""group\"":\""cf-nel\"",\""max_age\"":604800}"", ""nel"": ""{\""success_fraction\"":0,\""report_to\"":\""cf-nel\"",\""max_age\"":604800}"", ""vary"": ""Accept-Encoding"", ""cf-cache-status"": ""DYNAMIC"", ""server"": ""cloudflare"", ""cf-ray"": ""80e7d85a0930b930-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+8,"GET / HTTP/1.1
+Host: www.cloudflare.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.16008496284484863,0.13553619384765625,0.0699918270111084,200,OK,[''],20,20,2,"{""date"": ""Fri, 29 Sep 2023 23:00:58 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""access-control-allow-origin"": ""*"", ""cache-control"": ""public, max-age=0, must-revalidate"", ""set-cookie"": ""__cf_bm=K1ijBjZLQDwoM.ywVSeV.yPHNV1cuXu3SXsv8fRHCUA-1696028458-0-AWDsXo/tFm8OIzNsZqLNcQfSMfTBHF5ZTrbYhhjqy5SdISPbRF/ZNBuqWBLWdTSyGW4gwcI33l9VjOuJ2RDtUGikWXCFlcGdbntKhA1dtwhh; path=/; expires=Fri, 29-Sep-23 23:30:58 GMT; domain=.www.cloudflare.com; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=31536000"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""report-to"": ""{\""endpoints\"":[{\""url\"":\""https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=a876EFNUzLIvL4unC4sXSm5mRylZGgz7r%2BvmTPkrDqyIyu%2FusqY44r2KYDsBVT3aXAuKHu%2F4s%2BPL1NOhIe6UWFkrzFgmfmWW8EWR8pIwBiWhgHriHqAg9FgYPC1HAuaCSZyvu7g%3D\""}],\""group\"":\""cf-nel\"",\""max_age\"":604800}"", ""nel"": ""{\""success_fraction\"":0,\""report_to\"":\""cf-nel\"",\""max_age\"":604800}"", ""vary"": ""Accept-Encoding"", ""cf-cache-status"": ""DYNAMIC"", ""server"": ""cloudflare"", ""cf-ray"": ""80e7d86c3d050e3c-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+9,"GET / HTTP/1.1
+Host: www.cloudflare.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.2262587547302246,0.11595273017883301,0.09782958030700684,200,OK,[''],20,20,2,"{""date"": ""Fri, 29 Sep 2023 23:01:01 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""access-control-allow-origin"": ""*"", ""cache-control"": ""public, max-age=0, must-revalidate"", ""set-cookie"": ""__cf_bm=jJtQSPUuekU7XIJNlb_FIoWDihMLdTYkWEP_4V7ZG5I-1696028461-0-AZLurCzOc12Ksgr3Grdd+7qCf5YYXXODvT9xxOLA0C82s8anzJfqiIjcW+lXLV6umNS9+m8yhLn57gHi6CFi2ZdaVKkay5nl1rVdC/N0EZA1; path=/; expires=Fri, 29-Sep-23 23:31:01 GMT; domain=.www.cloudflare.com; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=31536000"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""report-to"": ""{\""endpoints\"":[{\""url\"":\""https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=C11Lknp%2B49xb3%2FVQ4vte3e0TQaLuH1r4PJ3BZ7vzPAR1mpst0ePah53yT7t%2BL1Q811wX5pRLHaZAIysAt9Y9pNo1%2B%2F1W%2F3P42yooZbLFXB7u%2BMUC4PMmRsKzKsTuk8%2Bmrgff3M0%3D\""}],\""group\"":\""cf-nel\"",\""max_age\"":604800}"", ""nel"": ""{\""success_fraction\"":0,\""report_to\"":\""cf-nel\"",\""max_age\"":604800}"", ""vary"": ""Accept-Encoding"", ""cf-cache-status"": ""DYNAMIC"", ""server"": ""cloudflare"", ""cf-ray"": ""80e7d87c28dd06dc-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"

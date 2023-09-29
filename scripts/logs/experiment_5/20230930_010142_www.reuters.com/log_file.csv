@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.reuters.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.3388662338256836,0.10965943336486816,0.08109927177429199,200,OK,[''],22,22,0,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""openresty"", ""etag"": ""W/\""141782-U/tkAhBiJOF14z+vGezssUdGXgQ\"""", ""x-arc-pb-request-id"": ""069ff98a-8859-4dde-a783-3ff677f4e606"", ""last-modified"": ""Fri, 29 Sep 2023 23:00:48 GMT"", ""x-amz-cf-pop"": ""FRA2-C1"", ""x-akamai-transformed"": ""9 - 0 pmb=mRUM,2"", ""content-encoding"": ""gzip"", ""cache-control"": ""private, max-age=60"", ""expires"": ""Fri, 29 Sep 2023 23:02:47 GMT"", ""date"": ""Fri, 29 Sep 2023 23:01:47 GMT"", ""set-cookie"": ""reuters-geo={\""country\"":\""-\"", \""region\"":\""-\""}; path=/; secure"", ""server-timing"": ""ak_p; desc=\""1696028507177_389360327_437763408_74_8482_1_0_-\"";dur=1"", ""strict-transport-security"": ""max-age=31536000"", ""x-arc-request-id"": ""0.c72a3517.1696028507.1a17bd50"", ""akamai-true-ttl"": ""130"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 3aed5a4f89d72775aaf2cc5a5f642386.cloudfront.net (CloudFront)"", ""x-amz-cf-id"": ""nOdgC0pFuDdInkbUVAaPuqjw3Rk_oaKw5JNMRrtMp0zw2giRoQYV6A==""}"
+1,"GET / HTTP/1.1
+Host: www.reuters.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.4762535095214844,0.12015318870544434,0.1399250030517578,200,OK,[''],22,22,0,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""openresty"", ""etag"": ""W/\""141782-U/tkAhBiJOF14z+vGezssUdGXgQ\"""", ""x-arc-pb-request-id"": ""069ff98a-8859-4dde-a783-3ff677f4e606"", ""last-modified"": ""Fri, 29 Sep 2023 23:00:48 GMT"", ""x-amz-cf-pop"": ""FRA2-C2"", ""x-akamai-transformed"": ""9 - 0 pmb=mRUM,2"", ""content-encoding"": ""gzip"", ""cache-control"": ""private, max-age=60"", ""expires"": ""Fri, 29 Sep 2023 23:02:50 GMT"", ""date"": ""Fri, 29 Sep 2023 23:01:50 GMT"", ""set-cookie"": ""reuters-geo={\""country\"":\""-\"", \""region\"":\""-\""}; path=/; secure"", ""server-timing"": ""ak_p; desc=\""1696028510223_389993745_167591918_24_9501_1_0_-\"";dur=1"", ""strict-transport-security"": ""max-age=31536000"", ""x-arc-request-id"": ""0.11d53e17.1696028510.9fd3fee"", ""akamai-true-ttl"": ""130"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 d9bf8acc1da383db4531789bbb03ac06.cloudfront.net (CloudFront)"", ""x-amz-cf-id"": ""Xn6G_Ry8tGrhuoTyidpxsbGzIDZgAch-DWFTHd_MughIPtTkaOBt4g==""}"
+2,"GET / HTTP/1.1
+Host: www.reuters.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.23979640007019043,0.14623022079467773,0.08004093170166016,200,OK,[''],22,22,0,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""openresty"", ""etag"": ""W/\""141782-U/tkAhBiJOF14z+vGezssUdGXgQ\"""", ""x-arc-pb-request-id"": ""069ff98a-8859-4dde-a783-3ff677f4e606"", ""last-modified"": ""Fri, 29 Sep 2023 23:00:48 GMT"", ""x-amz-cf-pop"": ""FRA2-C1"", ""x-akamai-transformed"": ""9 - 0 pmb=mRUM,2"", ""content-encoding"": ""gzip"", ""cache-control"": ""private, max-age=60"", ""expires"": ""Fri, 29 Sep 2023 23:02:53 GMT"", ""date"": ""Fri, 29 Sep 2023 23:01:53 GMT"", ""set-cookie"": ""reuters-geo={\""country\"":\""-\"", \""region\"":\""-\""}; path=/; secure"", ""server-timing"": ""ak_p; desc=\""1696028513591_389360277_643750382_21_7811_1_0_-\"";dur=1"", ""strict-transport-security"": ""max-age=31536000"", ""x-arc-request-id"": ""0.952a3517.1696028513.265ed9ee"", ""akamai-true-ttl"": ""130"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 9568a708c8ab21597698ebe7dce6c42e.cloudfront.net (CloudFront)"", ""x-amz-cf-id"": ""NrsQsEy7Tw-QwEx4RYTCG18ttO-naqp4_StJyNJcrZ8OgaxYRZT24g==""}"
+3,"GET / HTTP/1.1
+Host: www.reuters.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.15671658515930176,0.14998388290405273,0.06102180480957031,200,OK,[''],22,22,0,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""openresty"", ""etag"": ""W/\""141782-U/tkAhBiJOF14z+vGezssUdGXgQ\"""", ""x-arc-pb-request-id"": ""069ff98a-8859-4dde-a783-3ff677f4e606"", ""last-modified"": ""Fri, 29 Sep 2023 23:00:48 GMT"", ""x-amz-cf-pop"": ""FRA2-C1"", ""x-akamai-transformed"": ""9 - 0 pmb=mRUM,2"", ""content-encoding"": ""gzip"", ""cache-control"": ""private, max-age=60"", ""expires"": ""Fri, 29 Sep 2023 23:02:56 GMT"", ""date"": ""Fri, 29 Sep 2023 23:01:56 GMT"", ""set-cookie"": ""reuters-geo={\""country\"":\""-\"", \""region\"":\""-\""}; path=/; secure"", ""server-timing"": ""ak_p; desc=\""1696028516562_389360327_437772522_23_8216_1_0_-\"";dur=1"", ""strict-transport-security"": ""max-age=31536000"", ""x-arc-request-id"": ""0.c72a3517.1696028516.1a17e0ea"", ""akamai-true-ttl"": ""130"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 9568a708c8ab21597698ebe7dce6c42e.cloudfront.net (CloudFront)"", ""x-amz-cf-id"": ""VLEtSPZz53ua3R0GPl0FYCwnYFIaYJsfbfk011YZBuxwLKN7PGsESg==""}"
+4,"GET / HTTP/1.1
+Host: www.reuters.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.18086838722229004,0.13022279739379883,0.05309724807739258,200,OK,[''],22,22,0,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""openresty"", ""etag"": ""W/\""141782-U/tkAhBiJOF14z+vGezssUdGXgQ\"""", ""x-arc-pb-request-id"": ""069ff98a-8859-4dde-a783-3ff677f4e606"", ""last-modified"": ""Fri, 29 Sep 2023 23:00:48 GMT"", ""x-amz-cf-pop"": ""FRA2-C1"", ""x-akamai-transformed"": ""9 - 0 pmb=mRUM,2"", ""content-encoding"": ""gzip"", ""cache-control"": ""private, max-age=60"", ""expires"": ""Fri, 29 Sep 2023 23:02:59 GMT"", ""date"": ""Fri, 29 Sep 2023 23:01:59 GMT"", ""set-cookie"": ""reuters-geo={\""country\"":\""-\"", \""region\"":\""-\""}; path=/; secure"", ""server-timing"": ""ak_p; desc=\""1696028519525_389360277_643753853_23_8563_1_0_-\"";dur=1"", ""strict-transport-security"": ""max-age=31536000"", ""x-arc-request-id"": ""0.952a3517.1696028519.265ee77d"", ""akamai-true-ttl"": ""130"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 3bf3e75bcb9a86b3eb343a1d4392a6de.cloudfront.net (CloudFront)"", ""x-amz-cf-id"": ""fcHgp6rU3bPbEF1oVtqdo9jMkrfBTWHtF8osGEcbgUFvTg7CCDF2kg==""}"
+5,"GET / HTTP/1.1
+Host: www.reuters.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.11027717590332031,0.11074590682983398,0.10264921188354492,200,OK,[''],22,22,14543,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""openresty"", ""etag"": ""W/\""141782-U/tkAhBiJOF14z+vGezssUdGXgQ\"""", ""x-arc-pb-request-id"": ""069ff98a-8859-4dde-a783-3ff677f4e606"", ""last-modified"": ""Fri, 29 Sep 2023 23:00:48 GMT"", ""x-amz-cf-pop"": ""FRA2-C1"", ""x-akamai-transformed"": ""9 - 0 pmb=mRUM,2"", ""content-encoding"": ""gzip"", ""cache-control"": ""private, max-age=60"", ""expires"": ""Fri, 29 Sep 2023 23:03:02 GMT"", ""date"": ""Fri, 29 Sep 2023 23:02:02 GMT"", ""set-cookie"": ""reuters-geo={\""country\"":\""-\"", \""region\"":\""-\""}; path=/; secure"", ""server-timing"": ""ak_p; desc=\""1696028522521_389360277_643755605_2568_7402_1_0_-\"";dur=1"", ""strict-transport-security"": ""max-age=31536000"", ""x-arc-request-id"": ""0.952a3517.1696028522.265eee55"", ""akamai-true-ttl"": ""130"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 0e7eb16f335fe24acf3f13c5dee19c88.cloudfront.net (CloudFront)"", ""x-amz-cf-id"": ""klXAD98_sLOp-ggdfNZ9elH9hfeF2eh8O6jyesDmWWsltd5LC9onfw==""}"
+6,"GET / HTTP/1.1
+Host: www.reuters.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.2206571102142334,0.11785078048706055,0.055025339126586914,200,OK,[''],22,22,0,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""openresty"", ""etag"": ""W/\""141782-U/tkAhBiJOF14z+vGezssUdGXgQ\"""", ""x-arc-pb-request-id"": ""069ff98a-8859-4dde-a783-3ff677f4e606"", ""last-modified"": ""Fri, 29 Sep 2023 23:00:48 GMT"", ""x-amz-cf-pop"": ""FRA2-C2"", ""x-akamai-transformed"": ""9 - 0 pmb=mRUM,2"", ""content-encoding"": ""gzip"", ""cache-control"": ""private, max-age=60"", ""expires"": ""Fri, 29 Sep 2023 23:03:05 GMT"", ""date"": ""Fri, 29 Sep 2023 23:02:05 GMT"", ""set-cookie"": ""reuters-geo={\""country\"":\""-\"", \""region\"":\""-\""}; path=/; secure"", ""server-timing"": ""ak_p; desc=\""1696028525403_389993738_266452224_24_8373_1_0_-\"";dur=1"", ""strict-transport-security"": ""max-age=31536000"", ""x-arc-request-id"": ""0.0ad53e17.1696028525.fe1bd00"", ""akamai-true-ttl"": ""130"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 217b7bc19321a4945b685521fa4f11ac.cloudfront.net (CloudFront)"", ""x-amz-cf-id"": ""n5bOBM8jCiMCbBnpOeYYX-ru7NAJ7I-59uXOgRo-wfqH-OEn2vx7YQ==""}"
+7,"GET / HTTP/1.1
+Host: www.reuters.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.21251201629638672,0.1166694164276123,0.06401681900024414,200,OK,[''],22,22,14461,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""openresty"", ""etag"": ""W/\""141782-U/tkAhBiJOF14z+vGezssUdGXgQ\"""", ""x-arc-pb-request-id"": ""069ff98a-8859-4dde-a783-3ff677f4e606"", ""last-modified"": ""Fri, 29 Sep 2023 23:00:48 GMT"", ""x-amz-cf-pop"": ""FRA2-C2"", ""x-akamai-transformed"": ""9 - 0 pmb=mRUM,2"", ""content-encoding"": ""gzip"", ""cache-control"": ""private, max-age=60"", ""expires"": ""Fri, 29 Sep 2023 23:03:07 GMT"", ""date"": ""Fri, 29 Sep 2023 23:02:07 GMT"", ""set-cookie"": ""reuters-geo={\""country\"":\""-\"", \""region\"":\""-\""}; path=/; secure"", ""server-timing"": ""ak_p; desc=\""1696028527939_389993738_266454992_54_8850_1_0_-\"";dur=1"", ""strict-transport-security"": ""max-age=31536000"", ""x-arc-request-id"": ""0.0ad53e17.1696028527.fe1c7d0"", ""akamai-true-ttl"": ""130"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 999a435eb37a050d3de26fe63534c416.cloudfront.net (CloudFront)"", ""x-amz-cf-id"": ""smLkm8WXBEouQ0dUFOVAvsJEHxGJrOOQGjX94wacXQVIwl4cbPvCaQ==""}"
+8,"GET / HTTP/1.1
+Host: www.reuters.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.20550942420959473,0.12100648880004883,0.06020808219909668,200,OK,[''],22,22,0,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""openresty"", ""etag"": ""W/\""141782-U/tkAhBiJOF14z+vGezssUdGXgQ\"""", ""x-arc-pb-request-id"": ""069ff98a-8859-4dde-a783-3ff677f4e606"", ""last-modified"": ""Fri, 29 Sep 2023 23:00:48 GMT"", ""x-amz-cf-pop"": ""FRA2-C1"", ""x-akamai-transformed"": ""9 - 0 pmb=mRUM,2"", ""content-encoding"": ""gzip"", ""cache-control"": ""private, max-age=60"", ""expires"": ""Fri, 29 Sep 2023 23:03:10 GMT"", ""date"": ""Fri, 29 Sep 2023 23:02:10 GMT"", ""set-cookie"": ""reuters-geo={\""country\"":\""-\"", \""region\"":\""-\""}; path=/; secure"", ""server-timing"": ""ak_p; desc=\""1696028530676_389360277_643760685_25_7387_0_0_-\"";dur=1"", ""strict-transport-security"": ""max-age=31536000"", ""x-arc-request-id"": ""0.952a3517.1696028530.265f022d"", ""akamai-true-ttl"": ""130"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 0b9e85cfe8fe19b385db56d32b4ce802.cloudfront.net (CloudFront)"", ""x-amz-cf-id"": ""TRyEkgh36pJQv0REbG5Z5FAORCYxk0JtPTSVXMJma7N_bgxwu6XqHg==""}"
+9,"GET / HTTP/1.1
+Host: www.reuters.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.34821462631225586,0.1095733642578125,0.13906121253967285,200,OK,[''],22,22,0,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""openresty"", ""etag"": ""W/\""141782-U/tkAhBiJOF14z+vGezssUdGXgQ\"""", ""x-arc-pb-request-id"": ""069ff98a-8859-4dde-a783-3ff677f4e606"", ""last-modified"": ""Fri, 29 Sep 2023 23:00:48 GMT"", ""x-amz-cf-pop"": ""FRA2-C1"", ""x-akamai-transformed"": ""9 - 0 pmb=mRUM,2"", ""content-encoding"": ""gzip"", ""cache-control"": ""private, max-age=60"", ""expires"": ""Fri, 29 Sep 2023 23:03:13 GMT"", ""date"": ""Fri, 29 Sep 2023 23:02:13 GMT"", ""set-cookie"": ""reuters-geo={\""country\"":\""-\"", \""region\"":\""-\""}; path=/; secure"", ""server-timing"": ""ak_p; desc=\""1696028533549_389360277_643762330_29_9560_0_0_-\"";dur=1"", ""strict-transport-security"": ""max-age=31536000"", ""x-arc-request-id"": ""0.952a3517.1696028533.265f089a"", ""akamai-true-ttl"": ""130"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 cb33a7a4640adbb55df3e0d143601558.cloudfront.net (CloudFront)"", ""x-amz-cf-id"": ""iBx02I5VihVDBgX_w-HMMVFmOJLZL_AUrfrss3M_dDojOxkv3PLB4A==""}"

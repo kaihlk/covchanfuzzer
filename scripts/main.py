@@ -7,6 +7,7 @@ import class_mapping
 import csv
 import time
 import os
+import logging
 
 ##For Infoe
 """ class_mapping_requests ={
@@ -34,6 +35,30 @@ class_mapping_timing  = {
     2: Frequency_Modulation,
     3: Amplitude_Modulation,
 } """
+
+def configure_logger():
+
+
+    # Configure the logging settings
+    logging.basicConfig(
+        level=logging.DEBUG,  #Set the desired log level
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        filename='logs/debug.log',  
+        filemode='w'  #'w' for overwrite, 'a' for append
+    )
+
+    # Create a logger instance for your main script
+    main_logger = logging.getLogger('main')
+
+    # Optionally, configure a console handler to print log messages to the console
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.DEBUG)
+    console_formatter = logging.Formatter('%(levelname)s - %(message)s')
+    console_handler.setFormatter(console_formatter)
+    main_logger.addHandler(console_handler)
+
+    return
+
 def get_last_experiment_number():
     file_path = "logs/experiment_list.csv"
     
@@ -65,14 +90,13 @@ def load_target_list(target_list_csv):
         
 def main():
     '''Function that runs the connection, selection of the CC and the fuzzer'''
+    
+    configure_logger()
     # TODO
   
 
-    # Control the body of the response as well (?)
-    #Add Verbose mode
-
+   
     # Experiment Configuration Values
-   # try:
     description= input("Input Experiment Description:")
     exp_no=get_last_experiment_number()+1
 
@@ -83,7 +107,7 @@ def main():
         "verbose": False,
         "timestamp": time.strftime("%Y%m%d_%H%M%S"),
         #Covert Channel Option
-        "covertchannel_request_number": 2,
+        "covertchannel_request_number": 1,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
         "fuzz_value":0.7,
@@ -134,7 +158,7 @@ def main():
             experiment=ExperimentRunner(experiment_configuration, load_target_list(experiment_configuration["target_list"])).setup_and_start_experiment()
             
         except Exception as e:
-            print("Experiment run failed: ", e)
+            main_logger.error("Experiment run failed: %s", e)
     if upgrade_list==True:
         upgrade_path="upgraded_"+experiment_configuration["target_list"]
         #new_path2="upgraded_and_cleaned"+experiment_configuration["target_list"]

@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.addtoany.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.17729949951171875,0.11200761795043945,0.09235095977783203,200,OK,[''],16,16,795,"{""date"": ""Fri, 29 Sep 2023 21:22:17 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""link"": ""</css/main.17.min.css>; rel=preload; as=style"", ""vary"": ""Accept-Encoding"", ""via"": ""e7s"", ""last-modified"": ""Fri, 29 Sep 2023 17:39:32 GMT"", ""cf-cache-status"": ""HIT"", ""age"": ""7558"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""x-content-type-options"": ""nosniff"", ""server"": ""cloudflare"", ""cf-ray"": ""80e747d8ba29b90e-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+1,"GET / HTTP/1.1
+Host: www.addtoany.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.24866127967834473,0.1059107780456543,0.040189504623413086,200,OK,[''],16,16,795,"{""date"": ""Fri, 29 Sep 2023 21:22:20 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""link"": ""</css/main.17.min.css>; rel=preload; as=style"", ""vary"": ""Accept-Encoding"", ""via"": ""e7s"", ""last-modified"": ""Fri, 29 Sep 2023 17:39:32 GMT"", ""cf-cache-status"": ""HIT"", ""age"": ""7535"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""x-content-type-options"": ""nosniff"", ""server"": ""cloudflare"", ""cf-ray"": ""80e747ed7ad4b758-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+2,"GET / HTTP/1.1
+Host: www.addtoany.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.15489768981933594,0.10966706275939941,0.03953361511230469,200,OK,[''],16,16,795,"{""date"": ""Fri, 29 Sep 2023 21:22:23 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""link"": ""</css/main.17.min.css>; rel=preload; as=style"", ""vary"": ""Accept-Encoding"", ""via"": ""e7s"", ""last-modified"": ""Fri, 29 Sep 2023 17:39:32 GMT"", ""cf-cache-status"": ""HIT"", ""age"": ""6030"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""x-content-type-options"": ""nosniff"", ""server"": ""cloudflare"", ""cf-ray"": ""80e748003fa90e70-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+3,"GET / HTTP/1.1
+Host: www.addtoany.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.21161699295043945,0.1616194248199463,0.058089494705200195,200,OK,[''],16,16,795,"{""date"": ""Fri, 29 Sep 2023 21:22:26 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""link"": ""</css/main.17.min.css>; rel=preload; as=style"", ""vary"": ""Accept-Encoding"", ""via"": ""e7s"", ""last-modified"": ""Fri, 29 Sep 2023 17:39:32 GMT"", ""cf-cache-status"": ""HIT"", ""age"": ""7946"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""x-content-type-options"": ""nosniff"", ""server"": ""cloudflare"", ""cf-ray"": ""80e74814088e1b0b-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+4,"GET / HTTP/1.1
+Host: www.addtoany.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.22765207290649414,0.10920238494873047,0.060604095458984375,200,OK,[''],16,16,795,"{""date"": ""Fri, 29 Sep 2023 21:22:30 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""link"": ""</css/main.17.min.css>; rel=preload; as=style"", ""vary"": ""Accept-Encoding"", ""via"": ""e7s"", ""last-modified"": ""Fri, 29 Sep 2023 17:39:32 GMT"", ""cf-cache-status"": ""HIT"", ""age"": ""6037"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""x-content-type-options"": ""nosniff"", ""server"": ""cloudflare"", ""cf-ray"": ""80e7482a08ca1c95-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+5,"GET / HTTP/1.1
+Host: www.addtoany.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.1563737392425537,0.11047720909118652,0.06433868408203125,200,OK,[''],16,16,794,"{""date"": ""Fri, 29 Sep 2023 21:22:33 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""link"": ""</css/main.17.min.css>; rel=preload; as=style"", ""vary"": ""Accept-Encoding"", ""via"": ""e7s"", ""last-modified"": ""Fri, 29 Sep 2023 17:39:32 GMT"", ""cf-cache-status"": ""HIT"", ""age"": ""11598"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""x-content-type-options"": ""nosniff"", ""server"": ""cloudflare"", ""cf-ray"": ""80e7483dcc510a6f-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+6,"GET / HTTP/1.1
+Host: www.addtoany.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.12482523918151855,0.10052323341369629,0.04640316963195801,200,OK,[''],16,16,794,"{""date"": ""Fri, 29 Sep 2023 21:22:36 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""link"": ""</css/main.17.min.css>; rel=preload; as=style"", ""vary"": ""Accept-Encoding"", ""via"": ""e7s"", ""last-modified"": ""Fri, 29 Sep 2023 17:39:32 GMT"", ""cf-cache-status"": ""HIT"", ""age"": ""11601"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""x-content-type-options"": ""nosniff"", ""server"": ""cloudflare"", ""cf-ray"": ""80e74850c8a10a6b-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+7,"GET / HTTP/1.1
+Host: www.addtoany.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.17434263229370117,0.14629030227661133,0.05196881294250488,200,OK,[''],16,16,795,"{""date"": ""Fri, 29 Sep 2023 21:22:39 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""link"": ""</css/main.17.min.css>; rel=preload; as=style"", ""vary"": ""Accept-Encoding"", ""via"": ""e7s"", ""last-modified"": ""Fri, 29 Sep 2023 17:39:32 GMT"", ""cf-cache-status"": ""HIT"", ""age"": ""7959"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""x-content-type-options"": ""nosniff"", ""server"": ""cloudflare"", ""cf-ray"": ""80e74861fb8d28af-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+8,"GET / HTTP/1.1
+Host: www.addtoany.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.19702649116516113,0.12112045288085938,0.04383111000061035,200,OK,[''],16,16,795,"{""date"": ""Fri, 29 Sep 2023 21:22:42 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""link"": ""</css/main.17.min.css>; rel=preload; as=style"", ""vary"": ""Accept-Encoding"", ""via"": ""e7s"", ""last-modified"": ""Fri, 29 Sep 2023 17:39:32 GMT"", ""cf-cache-status"": ""HIT"", ""age"": ""7583"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""x-content-type-options"": ""nosniff"", ""server"": ""cloudflare"", ""cf-ray"": ""80e74877098eb8f7-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+9,"GET / HTTP/1.1
+Host: www.addtoany.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.29369688034057617,0.10887336730957031,0.04668831825256348,200,OK,[''],16,16,795,"{""date"": ""Fri, 29 Sep 2023 21:22:45 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""link"": ""</css/main.17.min.css>; rel=preload; as=style"", ""vary"": ""Accept-Encoding"", ""via"": ""e7s"", ""last-modified"": ""Fri, 29 Sep 2023 17:39:32 GMT"", ""cf-cache-status"": ""HIT"", ""age"": ""7965"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""x-content-type-options"": ""nosniff"", ""server"": ""cloudflare"", ""cf-ray"": ""80e7488ccc791b09-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"

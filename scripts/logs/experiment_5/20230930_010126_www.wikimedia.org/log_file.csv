@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.wikimedia.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.1764841079711914,0.10509061813354492,0.026640892028808594,200,OK,[''],19,19,18812,"{""date"": ""Fri, 29 Sep 2023 23:00:58 GMT"", ""cache-control"": ""s-maxage=3600, must-revalidate, max-age=0"", ""server"": ""ATS/9.1.4"", ""etag"": ""W/\""499c-6042aaddd1011\"""", ""last-modified"": ""Wed, 30 Aug 2023 21:33:32 GMT"", ""content-type"": ""text/html"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding"", ""age"": ""30"", ""x-cache"": ""cp3066 hit, cp3066 hit/4"", ""x-cache-status"": ""hit-front"", ""server-timing"": ""cache;desc=\""hit-front\"", host;desc=\""cp3066\"""", ""strict-transport-security"": ""max-age=106384710; includeSubDomains; preload"", ""report-to"": ""{ \""group\"": \""wm_nel\"", \""max_age\"": 604800, \""endpoints\"": [{ \""url\"": \""https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\"" }] }"", ""nel"": ""{ \""report_to\"": \""wm_nel\"", \""max_age\"": 604800, \""failure_fraction\"": 0.05, \""success_fraction\"": 0.0}"", ""set-cookie"": ""NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600"", ""x-client-ip"": ""89.56.127.202"", ""accept-ranges"": ""bytes"", ""content-length"": ""4658""}"
+1,"GET / HTTP/1.1
+Host: www.wikimedia.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.18809223175048828,0.12360477447509766,0.05060267448425293,200,OK,[''],19,19,18812,"{""date"": ""Fri, 29 Sep 2023 23:00:58 GMT"", ""cache-control"": ""s-maxage=3600, must-revalidate, max-age=0"", ""server"": ""ATS/9.1.4"", ""etag"": ""W/\""499c-6042aaddd1011\"""", ""last-modified"": ""Wed, 30 Aug 2023 21:33:32 GMT"", ""content-type"": ""text/html"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding"", ""age"": ""33"", ""x-cache"": ""cp3066 hit, cp3066 hit/5"", ""x-cache-status"": ""hit-front"", ""server-timing"": ""cache;desc=\""hit-front\"", host;desc=\""cp3066\"""", ""strict-transport-security"": ""max-age=106384710; includeSubDomains; preload"", ""report-to"": ""{ \""group\"": \""wm_nel\"", \""max_age\"": 604800, \""endpoints\"": [{ \""url\"": \""https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\"" }] }"", ""nel"": ""{ \""report_to\"": \""wm_nel\"", \""max_age\"": 604800, \""failure_fraction\"": 0.05, \""success_fraction\"": 0.0}"", ""set-cookie"": ""NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600"", ""x-client-ip"": ""89.56.127.202"", ""accept-ranges"": ""bytes"", ""content-length"": ""4658""}"
+2,"GET / HTTP/1.1
+Host: www.wikimedia.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.22712993621826172,0.1073446273803711,0.08529186248779297,200,OK,[''],19,19,18812,"{""date"": ""Fri, 29 Sep 2023 23:00:58 GMT"", ""cache-control"": ""s-maxage=3600, must-revalidate, max-age=0"", ""server"": ""ATS/9.1.4"", ""etag"": ""W/\""499c-6042aaddd1011\"""", ""last-modified"": ""Wed, 30 Aug 2023 21:33:32 GMT"", ""content-type"": ""text/html"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding"", ""age"": ""35"", ""x-cache"": ""cp3066 hit, cp3066 hit/6"", ""x-cache-status"": ""hit-front"", ""server-timing"": ""cache;desc=\""hit-front\"", host;desc=\""cp3066\"""", ""strict-transport-security"": ""max-age=106384710; includeSubDomains; preload"", ""report-to"": ""{ \""group\"": \""wm_nel\"", \""max_age\"": 604800, \""endpoints\"": [{ \""url\"": \""https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\"" }] }"", ""nel"": ""{ \""report_to\"": \""wm_nel\"", \""max_age\"": 604800, \""failure_fraction\"": 0.05, \""success_fraction\"": 0.0}"", ""set-cookie"": ""NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600"", ""x-client-ip"": ""89.56.127.202"", ""accept-ranges"": ""bytes"", ""content-length"": ""4658""}"
+3,"GET / HTTP/1.1
+Host: www.wikimedia.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.14431095123291016,0.11124825477600098,0.07515120506286621,200,OK,[''],19,19,18812,"{""date"": ""Fri, 29 Sep 2023 23:00:58 GMT"", ""cache-control"": ""s-maxage=3600, must-revalidate, max-age=0"", ""server"": ""ATS/9.1.4"", ""etag"": ""W/\""499c-6042aaddd1011\"""", ""last-modified"": ""Wed, 30 Aug 2023 21:33:32 GMT"", ""content-type"": ""text/html"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding"", ""age"": ""38"", ""x-cache"": ""cp3066 hit, cp3066 hit/7"", ""x-cache-status"": ""hit-front"", ""server-timing"": ""cache;desc=\""hit-front\"", host;desc=\""cp3066\"""", ""strict-transport-security"": ""max-age=106384710; includeSubDomains; preload"", ""report-to"": ""{ \""group\"": \""wm_nel\"", \""max_age\"": 604800, \""endpoints\"": [{ \""url\"": \""https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\"" }] }"", ""nel"": ""{ \""report_to\"": \""wm_nel\"", \""max_age\"": 604800, \""failure_fraction\"": 0.05, \""success_fraction\"": 0.0}"", ""set-cookie"": ""NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600"", ""x-client-ip"": ""89.56.127.202"", ""accept-ranges"": ""bytes"", ""content-length"": ""4658""}"
+4,"GET / HTTP/1.1
+Host: www.wikimedia.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.4101526737213135,0.1436624526977539,0.04563641548156738,200,OK,[''],19,19,18812,"{""date"": ""Fri, 29 Sep 2023 23:00:58 GMT"", ""cache-control"": ""s-maxage=3600, must-revalidate, max-age=0"", ""server"": ""ATS/9.1.4"", ""etag"": ""W/\""499c-6042aaddd1011\"""", ""last-modified"": ""Wed, 30 Aug 2023 21:33:32 GMT"", ""content-type"": ""text/html"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding"", ""age"": ""40"", ""x-cache"": ""cp3066 hit, cp3066 hit/8"", ""x-cache-status"": ""hit-front"", ""server-timing"": ""cache;desc=\""hit-front\"", host;desc=\""cp3066\"""", ""strict-transport-security"": ""max-age=106384710; includeSubDomains; preload"", ""report-to"": ""{ \""group\"": \""wm_nel\"", \""max_age\"": 604800, \""endpoints\"": [{ \""url\"": \""https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\"" }] }"", ""nel"": ""{ \""report_to\"": \""wm_nel\"", \""max_age\"": 604800, \""failure_fraction\"": 0.05, \""success_fraction\"": 0.0}"", ""set-cookie"": ""NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600"", ""x-client-ip"": ""89.56.127.202"", ""accept-ranges"": ""bytes"", ""content-length"": ""4658""}"
+5,"GET / HTTP/1.1
+Host: www.wikimedia.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.23352432250976562,0.10783576965332031,0.028560400009155273,200,OK,[''],19,19,18812,"{""date"": ""Fri, 29 Sep 2023 23:00:58 GMT"", ""cache-control"": ""s-maxage=3600, must-revalidate, max-age=0"", ""server"": ""ATS/9.1.4"", ""etag"": ""W/\""499c-6042aaddd1011\"""", ""last-modified"": ""Wed, 30 Aug 2023 21:33:32 GMT"", ""content-type"": ""text/html"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding"", ""age"": ""43"", ""x-cache"": ""cp3066 hit, cp3066 hit/9"", ""x-cache-status"": ""hit-front"", ""server-timing"": ""cache;desc=\""hit-front\"", host;desc=\""cp3066\"""", ""strict-transport-security"": ""max-age=106384710; includeSubDomains; preload"", ""report-to"": ""{ \""group\"": \""wm_nel\"", \""max_age\"": 604800, \""endpoints\"": [{ \""url\"": \""https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\"" }] }"", ""nel"": ""{ \""report_to\"": \""wm_nel\"", \""max_age\"": 604800, \""failure_fraction\"": 0.05, \""success_fraction\"": 0.0}"", ""set-cookie"": ""NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600"", ""x-client-ip"": ""89.56.127.202"", ""accept-ranges"": ""bytes"", ""content-length"": ""4658""}"
+6,"GET / HTTP/1.1
+Host: www.wikimedia.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.1690206527709961,0.11795616149902344,0.06578755378723145,200,OK,[''],19,19,18812,"{""date"": ""Fri, 29 Sep 2023 23:00:58 GMT"", ""cache-control"": ""s-maxage=3600, must-revalidate, max-age=0"", ""server"": ""ATS/9.1.4"", ""etag"": ""W/\""499c-6042aaddd1011\"""", ""last-modified"": ""Wed, 30 Aug 2023 21:33:32 GMT"", ""content-type"": ""text/html"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding"", ""age"": ""45"", ""x-cache"": ""cp3066 hit, cp3066 hit/10"", ""x-cache-status"": ""hit-front"", ""server-timing"": ""cache;desc=\""hit-front\"", host;desc=\""cp3066\"""", ""strict-transport-security"": ""max-age=106384710; includeSubDomains; preload"", ""report-to"": ""{ \""group\"": \""wm_nel\"", \""max_age\"": 604800, \""endpoints\"": [{ \""url\"": \""https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\"" }] }"", ""nel"": ""{ \""report_to\"": \""wm_nel\"", \""max_age\"": 604800, \""failure_fraction\"": 0.05, \""success_fraction\"": 0.0}"", ""set-cookie"": ""NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600"", ""x-client-ip"": ""89.56.127.202"", ""accept-ranges"": ""bytes"", ""content-length"": ""4658""}"
+7,"GET / HTTP/1.1
+Host: www.wikimedia.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.22265267372131348,0.16408371925354004,0.02314281463623047,200,OK,[''],19,19,18812,"{""date"": ""Fri, 29 Sep 2023 23:00:58 GMT"", ""cache-control"": ""s-maxage=3600, must-revalidate, max-age=0"", ""server"": ""ATS/9.1.4"", ""etag"": ""W/\""499c-6042aaddd1011\"""", ""last-modified"": ""Wed, 30 Aug 2023 21:33:32 GMT"", ""content-type"": ""text/html"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding"", ""age"": ""48"", ""x-cache"": ""cp3066 hit, cp3066 hit/11"", ""x-cache-status"": ""hit-front"", ""server-timing"": ""cache;desc=\""hit-front\"", host;desc=\""cp3066\"""", ""strict-transport-security"": ""max-age=106384710; includeSubDomains; preload"", ""report-to"": ""{ \""group\"": \""wm_nel\"", \""max_age\"": 604800, \""endpoints\"": [{ \""url\"": \""https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\"" }] }"", ""nel"": ""{ \""report_to\"": \""wm_nel\"", \""max_age\"": 604800, \""failure_fraction\"": 0.05, \""success_fraction\"": 0.0}"", ""set-cookie"": ""NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600"", ""x-client-ip"": ""89.56.127.202"", ""accept-ranges"": ""bytes"", ""content-length"": ""4658""}"
+8,"GET / HTTP/1.1
+Host: www.wikimedia.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.12480711936950684,0.11110520362854004,0.04422354698181152,200,OK,[''],19,19,18812,"{""date"": ""Fri, 29 Sep 2023 23:00:58 GMT"", ""cache-control"": ""s-maxage=3600, must-revalidate, max-age=0"", ""server"": ""ATS/9.1.4"", ""etag"": ""W/\""499c-6042aaddd1011\"""", ""last-modified"": ""Wed, 30 Aug 2023 21:33:32 GMT"", ""content-type"": ""text/html"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding"", ""age"": ""50"", ""x-cache"": ""cp3066 hit, cp3066 hit/12"", ""x-cache-status"": ""hit-front"", ""server-timing"": ""cache;desc=\""hit-front\"", host;desc=\""cp3066\"""", ""strict-transport-security"": ""max-age=106384710; includeSubDomains; preload"", ""report-to"": ""{ \""group\"": \""wm_nel\"", \""max_age\"": 604800, \""endpoints\"": [{ \""url\"": \""https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\"" }] }"", ""nel"": ""{ \""report_to\"": \""wm_nel\"", \""max_age\"": 604800, \""failure_fraction\"": 0.05, \""success_fraction\"": 0.0}"", ""set-cookie"": ""NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600"", ""x-client-ip"": ""89.56.127.202"", ""accept-ranges"": ""bytes"", ""content-length"": ""4658""}"
+9,"GET / HTTP/1.1
+Host: www.wikimedia.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.14260578155517578,0.11316466331481934,0.09761476516723633,200,OK,[''],19,19,18812,"{""date"": ""Fri, 29 Sep 2023 23:00:58 GMT"", ""cache-control"": ""s-maxage=3600, must-revalidate, max-age=0"", ""server"": ""ATS/9.1.4"", ""etag"": ""W/\""499c-6042aaddd1011\"""", ""last-modified"": ""Wed, 30 Aug 2023 21:33:32 GMT"", ""content-type"": ""text/html"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding"", ""age"": ""53"", ""x-cache"": ""cp3066 hit, cp3066 hit/13"", ""x-cache-status"": ""hit-front"", ""server-timing"": ""cache;desc=\""hit-front\"", host;desc=\""cp3066\"""", ""strict-transport-security"": ""max-age=106384710; includeSubDomains; preload"", ""report-to"": ""{ \""group\"": \""wm_nel\"", \""max_age\"": 604800, \""endpoints\"": [{ \""url\"": \""https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0\"" }] }"", ""nel"": ""{ \""report_to\"": \""wm_nel\"", \""max_age\"": 604800, \""failure_fraction\"": 0.05, \""success_fraction\"": 0.0}"", ""set-cookie"": ""NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600"", ""x-client-ip"": ""89.56.127.202"", ""accept-ranges"": ""bytes"", ""content-length"": ""4658""}"

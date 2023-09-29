@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.go.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.252030611038208,0.126967191696167,0.45231199264526367,200,OK,[''],17,17,13370,"{""content-type"": ""text/html; charset=utf-8"", ""content-length"": ""34546"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:50:21 GMT"", ""server"": ""nginx/1.18.0 (Ubuntu)"", ""expires"": ""Fri, 29 Sep 2023 22:52:01 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 22:52:01 GMT"", ""content-encoding"": ""gzip"", ""via"": ""1.1 varnish (Varnish/6.0), 1.1 2a29e84e317dcbf526e3d2cf9be30bf6.cloudfront.net (CloudFront)"", ""accept-ranges"": ""bytes"", ""cache-control"": ""max-age=0, must-revalidate"", ""set-cookie"": ""country=de; path=/;"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""HAM50-C3"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""BUIg9imCCrHcekhlEsz8VqlDy7UBI1y9b8l5cgOdtDyMEFVT5zCacg==""}"
+1,"GET / HTTP/1.1
+Host: www.go.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.19576311111450195,0.10690808296203613,0.19188809394836426,200,OK,[''],17,17,12002,"{""content-type"": ""text/html; charset=utf-8"", ""content-length"": ""34546"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:50:23 GMT"", ""server"": ""nginx/1.18.0 (Ubuntu)"", ""expires"": ""Fri, 29 Sep 2023 22:52:01 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 22:52:01 GMT"", ""content-encoding"": ""gzip"", ""via"": ""1.1 varnish (Varnish/6.0), 1.1 a432ddebfd10465526f121270421362a.cloudfront.net (CloudFront)"", ""accept-ranges"": ""bytes"", ""cache-control"": ""max-age=0, must-revalidate"", ""set-cookie"": ""country=de; path=/;"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""HAM50-C3"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""3GEoBh8gx0Fw1hugy_kc5g4-HoPMHF1dVhvlyEYeyddhR0215oFSzw==""}"
+2,"GET / HTTP/1.1
+Host: www.go.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.16222119331359863,0.11465287208557129,0.3896348476409912,200,OK,[''],17,17,12002,"{""content-type"": ""text/html; charset=utf-8"", ""content-length"": ""34546"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:50:26 GMT"", ""server"": ""nginx/1.18.0 (Ubuntu)"", ""expires"": ""Fri, 29 Sep 2023 22:52:01 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 22:52:01 GMT"", ""content-encoding"": ""gzip"", ""via"": ""1.1 varnish (Varnish/6.0), 1.1 64003b022bc3cc2e877f218eb451e376.cloudfront.net (CloudFront)"", ""accept-ranges"": ""bytes"", ""cache-control"": ""max-age=0, must-revalidate"", ""set-cookie"": ""country=de; path=/;"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""HAM50-C3"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""Dv2oC1GWaeeoYnlWL8y5ehpAUSnjIgEHnSe3rJN6ZZSb0i7wRoa9zg==""}"
+3,"GET / HTTP/1.1
+Host: www.go.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.19443368911743164,0.19059062004089355,0.14898681640625,200,OK,[''],17,17,14917,"{""content-type"": ""text/html; charset=utf-8"", ""content-length"": ""34546"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:50:28 GMT"", ""server"": ""nginx/1.18.0 (Ubuntu)"", ""expires"": ""Fri, 29 Sep 2023 22:52:01 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 22:52:01 GMT"", ""content-encoding"": ""gzip"", ""via"": ""1.1 varnish (Varnish/6.0), 1.1 72924c94ff0d4750acacefc815e7e14c.cloudfront.net (CloudFront)"", ""accept-ranges"": ""bytes"", ""cache-control"": ""max-age=0, must-revalidate"", ""set-cookie"": ""country=de; path=/;"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""HAM50-C3"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""WMnaT6wcUQH_plFX754PDf1q0Kq3m1Y5jPwy6h9UDVwEx3XhMx7rZQ==""}"
+4,"GET / HTTP/1.1
+Host: www.go.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.16076231002807617,0.10975933074951172,0.19965529441833496,200,OK,[''],17,17,14917,"{""content-type"": ""text/html; charset=utf-8"", ""content-length"": ""34546"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:50:30 GMT"", ""server"": ""nginx/1.18.0 (Ubuntu)"", ""expires"": ""Fri, 29 Sep 2023 22:52:01 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 22:52:01 GMT"", ""content-encoding"": ""gzip"", ""via"": ""1.1 varnish (Varnish/6.0), 1.1 ef32d25cab1f0dec4c6ff87f7986fe02.cloudfront.net (CloudFront)"", ""accept-ranges"": ""bytes"", ""cache-control"": ""max-age=0, must-revalidate"", ""set-cookie"": ""country=de; path=/;"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""HAM50-C3"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""L7aFxd0CT5H9FW46bVRZGU7puE8Oz8BuPH35hlFBHueBZfF79sKW1g==""}"
+5,"GET / HTTP/1.1
+Host: www.go.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.13598394393920898,0.12746500968933105,0.19181489944458008,200,OK,[''],17,17,13370,"{""content-type"": ""text/html; charset=utf-8"", ""content-length"": ""34546"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:50:33 GMT"", ""server"": ""nginx/1.18.0 (Ubuntu)"", ""expires"": ""Fri, 29 Sep 2023 22:52:01 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 22:52:01 GMT"", ""content-encoding"": ""gzip"", ""via"": ""1.1 varnish (Varnish/6.0), 1.1 8d3c7354f6dd468c356ac4e604ec81fc.cloudfront.net (CloudFront)"", ""accept-ranges"": ""bytes"", ""cache-control"": ""max-age=0, must-revalidate"", ""set-cookie"": ""country=de; path=/;"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""HAM50-C3"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""sbjAeEgix7pWIz8cInGyOtFNB8TAJhGAgnTr3RkATtCAkekZNdL3aQ==""}"
+6,"GET / HTTP/1.1
+Host: www.go.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.2510199546813965,0.11110496520996094,0.1305696964263916,200,OK,[''],17,17,5360,"{""content-type"": ""text/html; charset=utf-8"", ""content-length"": ""34546"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:50:35 GMT"", ""server"": ""nginx/1.18.0 (Ubuntu)"", ""expires"": ""Fri, 29 Sep 2023 22:52:01 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 22:52:01 GMT"", ""content-encoding"": ""gzip"", ""via"": ""1.1 varnish (Varnish/6.0), 1.1 9a017d15c75b3a14dee95340cd7042ca.cloudfront.net (CloudFront)"", ""accept-ranges"": ""bytes"", ""cache-control"": ""max-age=0, must-revalidate"", ""set-cookie"": ""country=de; path=/;"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""HAM50-C3"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""7f1sJUKvEc0Y18PF9z5jHt9Ga3uCZIrEuYagh6hl2FzrQVdwu02OZQ==""}"
+7,"GET / HTTP/1.1
+Host: www.go.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.2578544616699219,0.10817098617553711,0.18773102760314941,200,OK,[''],17,17,12002,"{""content-type"": ""text/html; charset=utf-8"", ""content-length"": ""34546"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:50:37 GMT"", ""server"": ""nginx/1.18.0 (Ubuntu)"", ""expires"": ""Fri, 29 Sep 2023 22:52:01 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 22:52:01 GMT"", ""content-encoding"": ""gzip"", ""via"": ""1.1 varnish (Varnish/6.0), 1.1 37a8538fed1be46ab7adb41198e40182.cloudfront.net (CloudFront)"", ""accept-ranges"": ""bytes"", ""cache-control"": ""max-age=0, must-revalidate"", ""set-cookie"": ""country=de; path=/;"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""HAM50-C3"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""knKIul9QKhXaNdmenc1AEhBR89p9iR4KSQDLGYYanVf_T_te5AIkZw==""}"
+8,"GET / HTTP/1.1
+Host: www.go.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.11861348152160645,0.10437130928039551,0.3344144821166992,200,OK,[''],17,17,12002,"{""content-type"": ""text/html; charset=utf-8"", ""content-length"": ""34546"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:50:40 GMT"", ""server"": ""nginx/1.18.0 (Ubuntu)"", ""expires"": ""Fri, 29 Sep 2023 22:52:01 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 22:52:01 GMT"", ""content-encoding"": ""gzip"", ""via"": ""1.1 varnish (Varnish/6.0), 1.1 67c53a3f025013bfb9704050f9d1933a.cloudfront.net (CloudFront)"", ""accept-ranges"": ""bytes"", ""cache-control"": ""max-age=0, must-revalidate"", ""set-cookie"": ""country=de; path=/;"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""HAM50-C3"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""iq3VXWjKwIp6oq8K1lJwb9svrG0IRelydI-mXC_YmaSA0MwGIby7Fw==""}"
+9,"GET / HTTP/1.1
+Host: www.go.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.19961118698120117,0.1108403205871582,0.19278216361999512,200,OK,[''],17,17,14917,"{""content-type"": ""text/html; charset=utf-8"", ""content-length"": ""34546"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:50:42 GMT"", ""server"": ""nginx/1.18.0 (Ubuntu)"", ""expires"": ""Fri, 29 Sep 2023 22:52:01 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 22:52:01 GMT"", ""content-encoding"": ""gzip"", ""via"": ""1.1 varnish (Varnish/6.0), 1.1 72924c94ff0d4750acacefc815e7e14c.cloudfront.net (CloudFront)"", ""accept-ranges"": ""bytes"", ""cache-control"": ""max-age=0, must-revalidate"", ""set-cookie"": ""country=de; path=/;"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""HAM50-C3"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""mfKEyfjwfsoFrkGlpKTkDu_39BPyAxhqWUHwUvU9eBrFaGdvO1jeoA==""}"

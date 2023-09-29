@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.amazontrust.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.19893574714660645,0.10428261756896973,0.020560503005981445,200,OK,[''],14,14,1988,"{""content-type"": ""text/html; charset=US-ASCII"", ""content-length"": ""1988"", ""connection"": ""keep-alive"", ""last-modified"": ""Fri, 04 Aug 2023 17:19:14 GMT"", ""x-amz-version-id"": ""EbEfJOweSaAnzPqKFwX0f.Rjaqf7e26F"", ""server"": ""AmazonS3"", ""date"": ""Fri, 29 Sep 2023 22:09:50 GMT"", ""cache-control"": ""max-age=3600, public"", ""etag"": ""\""42e063a67e97f6e9accce9bcd56f3298\"""", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 d0a9a72e5bf584d7f4cd7045997db51e.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C3"", ""x-amz-cf-id"": ""FdGh0KHCTx7RioIE5-lRG73pTbsgMMwlZxY2n6s-Km2TEb3s_VReVA=="", ""age"": ""2727""}"
+1,"GET / HTTP/1.1
+Host: www.amazontrust.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.20947861671447754,0.1170806884765625,0.01996636390686035,200,OK,[''],14,14,1988,"{""content-type"": ""text/html; charset=US-ASCII"", ""content-length"": ""1988"", ""connection"": ""keep-alive"", ""last-modified"": ""Fri, 04 Aug 2023 17:19:14 GMT"", ""x-amz-version-id"": ""EbEfJOweSaAnzPqKFwX0f.Rjaqf7e26F"", ""server"": ""AmazonS3"", ""date"": ""Fri, 29 Sep 2023 22:09:50 GMT"", ""cache-control"": ""max-age=3600, public"", ""etag"": ""\""42e063a67e97f6e9accce9bcd56f3298\"""", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 d0a9a72e5bf584d7f4cd7045997db51e.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C3"", ""x-amz-cf-id"": ""XP2T-iwcFrugXWiS9bt8CtBcqG3Z3bN9Z-oAjKwL93PJYIL4f7oKlA=="", ""age"": ""2730""}"
+2,"GET / HTTP/1.1
+Host: www.amazontrust.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.1720433235168457,0.11187362670898438,0.019016027450561523,200,OK,[''],14,14,1988,"{""content-type"": ""text/html; charset=US-ASCII"", ""content-length"": ""1988"", ""connection"": ""keep-alive"", ""last-modified"": ""Fri, 04 Aug 2023 17:19:14 GMT"", ""x-amz-version-id"": ""EbEfJOweSaAnzPqKFwX0f.Rjaqf7e26F"", ""server"": ""AmazonS3"", ""date"": ""Fri, 29 Sep 2023 22:09:50 GMT"", ""cache-control"": ""max-age=3600, public"", ""etag"": ""\""42e063a67e97f6e9accce9bcd56f3298\"""", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 7038a0e71a25504eb98df48695c04c7a.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C3"", ""x-amz-cf-id"": ""_YUo_6Ozb7rKkxCvajOv9By4gJKgZgeOORm_U1HBHXWMRYXhji2YSQ=="", ""age"": ""2734""}"
+3,"GET / HTTP/1.1
+Host: www.amazontrust.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.1565396785736084,0.10330319404602051,0.01623821258544922,200,OK,[''],14,14,0,"{""content-type"": ""text/html; charset=US-ASCII"", ""content-length"": ""1988"", ""connection"": ""keep-alive"", ""last-modified"": ""Fri, 04 Aug 2023 17:19:14 GMT"", ""x-amz-version-id"": ""EbEfJOweSaAnzPqKFwX0f.Rjaqf7e26F"", ""server"": ""AmazonS3"", ""date"": ""Fri, 29 Sep 2023 22:09:50 GMT"", ""cache-control"": ""max-age=3600, public"", ""etag"": ""\""42e063a67e97f6e9accce9bcd56f3298\"""", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 cf515c02569c487b713286bcf353f908.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C3"", ""x-amz-cf-id"": ""vc97tQQ3gU63UT912MHpEw4QQ7qqM72K7SYlKt05h8kRwqIeq0WF6A=="", ""age"": ""2737""}"
+4,"GET / HTTP/1.1
+Host: www.amazontrust.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.1427302360534668,0.12707281112670898,0.028508901596069336,200,OK,[''],14,14,1988,"{""content-type"": ""text/html; charset=US-ASCII"", ""content-length"": ""1988"", ""connection"": ""keep-alive"", ""last-modified"": ""Fri, 04 Aug 2023 17:19:14 GMT"", ""x-amz-version-id"": ""EbEfJOweSaAnzPqKFwX0f.Rjaqf7e26F"", ""server"": ""AmazonS3"", ""date"": ""Fri, 29 Sep 2023 22:09:50 GMT"", ""cache-control"": ""max-age=3600, public"", ""etag"": ""\""42e063a67e97f6e9accce9bcd56f3298\"""", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 6da6e07aeb89276b8f6fa46086b0c8c2.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C3"", ""x-amz-cf-id"": ""IPNxgSgWuYXZ8DamgaiuOytRaeHVbsFz9V1nRBD22Soi0vII5Aptjw=="", ""age"": ""2741""}"
+5,"GET / HTTP/1.1
+Host: www.amazontrust.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.13328933715820312,0.11825776100158691,0.025703907012939453,200,OK,[''],14,14,0,"{""content-type"": ""text/html; charset=US-ASCII"", ""content-length"": ""1988"", ""connection"": ""keep-alive"", ""last-modified"": ""Fri, 04 Aug 2023 17:19:14 GMT"", ""x-amz-version-id"": ""EbEfJOweSaAnzPqKFwX0f.Rjaqf7e26F"", ""server"": ""AmazonS3"", ""date"": ""Fri, 29 Sep 2023 22:09:50 GMT"", ""cache-control"": ""max-age=3600, public"", ""etag"": ""\""42e063a67e97f6e9accce9bcd56f3298\"""", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 17b6d0f022cb338e07d6581877453bb0.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C3"", ""x-amz-cf-id"": ""0E2rWltvgAF0jyLoThyyBNT7Q2TqOBQbJo08dGkX0pWRys-RD1vE6A=="", ""age"": ""2744""}"
+6,"GET / HTTP/1.1
+Host: www.amazontrust.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.1313018798828125,0.14961671829223633,0.07831501960754395,200,OK,[''],14,14,1988,"{""content-type"": ""text/html; charset=US-ASCII"", ""content-length"": ""1988"", ""connection"": ""keep-alive"", ""last-modified"": ""Fri, 04 Aug 2023 17:19:14 GMT"", ""x-amz-version-id"": ""EbEfJOweSaAnzPqKFwX0f.Rjaqf7e26F"", ""server"": ""AmazonS3"", ""date"": ""Fri, 29 Sep 2023 22:09:50 GMT"", ""cache-control"": ""max-age=3600, public"", ""etag"": ""\""42e063a67e97f6e9accce9bcd56f3298\"""", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 9561715783a77e8d6af0f70efd63d288.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C3"", ""x-amz-cf-id"": ""myc9jGkxseqOoiLyW_ow3PpMSjKWNwnU9SYOIdregdkiErLUbmYzPg=="", ""age"": ""2748""}"
+7,"GET / HTTP/1.1
+Host: www.amazontrust.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.16708636283874512,0.11103987693786621,0.036234378814697266,200,OK,[''],14,14,1988,"{""content-type"": ""text/html; charset=US-ASCII"", ""content-length"": ""1988"", ""connection"": ""keep-alive"", ""last-modified"": ""Fri, 04 Aug 2023 17:19:14 GMT"", ""x-amz-version-id"": ""EbEfJOweSaAnzPqKFwX0f.Rjaqf7e26F"", ""server"": ""AmazonS3"", ""date"": ""Fri, 29 Sep 2023 22:09:50 GMT"", ""cache-control"": ""max-age=3600, public"", ""etag"": ""\""42e063a67e97f6e9accce9bcd56f3298\"""", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 ccc3c8305c079db66ab9ac68a1ea9cd8.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C3"", ""x-amz-cf-id"": ""gxmpvoP9n_6PqnwemHbP4w4kmA2TQF7NDA6dj5EK3CBs37JWflU_ZA=="", ""age"": ""2752""}"
+8,"GET / HTTP/1.1
+Host: www.amazontrust.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.3796262741088867,0.15382862091064453,0.024885177612304688,200,OK,[''],14,14,1988,"{""content-type"": ""text/html; charset=US-ASCII"", ""content-length"": ""1988"", ""connection"": ""keep-alive"", ""last-modified"": ""Fri, 04 Aug 2023 17:19:14 GMT"", ""x-amz-version-id"": ""EbEfJOweSaAnzPqKFwX0f.Rjaqf7e26F"", ""server"": ""AmazonS3"", ""date"": ""Fri, 29 Sep 2023 22:09:50 GMT"", ""cache-control"": ""max-age=3600, public"", ""etag"": ""\""42e063a67e97f6e9accce9bcd56f3298\"""", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 259359d7ff61dd984af98fc0a1b513fa.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C3"", ""x-amz-cf-id"": ""h43i9ugKYs5n4OqnMoZHCOYoFf6TsrVlxUUl4h7rsqEB4dg4-4nacA=="", ""age"": ""2756""}"
+9,"GET / HTTP/1.1
+Host: www.amazontrust.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.20387721061706543,0.116790771484375,0.020338773727416992,200,OK,[''],14,14,1988,"{""content-type"": ""text/html; charset=US-ASCII"", ""content-length"": ""1988"", ""connection"": ""keep-alive"", ""last-modified"": ""Fri, 04 Aug 2023 17:19:14 GMT"", ""x-amz-version-id"": ""EbEfJOweSaAnzPqKFwX0f.Rjaqf7e26F"", ""server"": ""AmazonS3"", ""date"": ""Fri, 29 Sep 2023 22:09:50 GMT"", ""cache-control"": ""max-age=3600, public"", ""etag"": ""\""42e063a67e97f6e9accce9bcd56f3298\"""", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 40a470190ceea00b102d41459a4f2a54.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C3"", ""x-amz-cf-id"": ""-X1BDKerTukKPu6smgkSVlLKctBhFdfEaY1TLs1jVGhy5YMXQciTIA=="", ""age"": ""2760""}"

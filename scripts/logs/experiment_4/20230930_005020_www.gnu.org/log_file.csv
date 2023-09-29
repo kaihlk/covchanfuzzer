@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.gnu.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.37660956382751465,0.11526250839233398,0.12102389335632324,200,OK,[''],18,18,10,"{""date"": ""Fri, 29 Sep 2023 22:50:22 GMT"", ""server"": ""Apache/2.4.29"", ""content-location"": ""home.html"", ""vary"": ""negotiate,accept-language,Accept-Encoding"", ""tcn"": ""choice"", ""strict-transport-security"": ""max-age=63072000"", ""x-frame-options"": ""sameorigin"", ""x-content-type-options"": ""nosniff"", ""access-control-allow-origin"": ""(null)"", ""accept-ranges"": ""bytes"", ""cache-control"": ""max-age=0"", ""expires"": ""Fri, 29 Sep 2023 22:50:22 GMT"", ""content-encoding"": ""gzip"", ""content-length"": ""9971"", ""keep-alive"": ""timeout=5, max=100"", ""connection"": ""Keep-Alive"", ""content-type"": ""text/html"", ""content-language"": ""en""}"
+1,"GET / HTTP/1.1
+Host: www.gnu.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.41291117668151855,0.11196637153625488,0.11853647232055664,200,OK,[''],18,18,10,"{""date"": ""Fri, 29 Sep 2023 22:50:25 GMT"", ""server"": ""Apache/2.4.29"", ""content-location"": ""home.html"", ""vary"": ""negotiate,accept-language,Accept-Encoding"", ""tcn"": ""choice"", ""strict-transport-security"": ""max-age=63072000"", ""x-frame-options"": ""sameorigin"", ""x-content-type-options"": ""nosniff"", ""access-control-allow-origin"": ""(null)"", ""accept-ranges"": ""bytes"", ""cache-control"": ""max-age=0"", ""expires"": ""Fri, 29 Sep 2023 22:50:25 GMT"", ""content-encoding"": ""gzip"", ""content-length"": ""9971"", ""keep-alive"": ""timeout=5, max=100"", ""connection"": ""Keep-Alive"", ""content-type"": ""text/html"", ""content-language"": ""en""}"
+2,"GET / HTTP/1.1
+Host: www.gnu.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.29047417640686035,0.11115789413452148,0.16140294075012207,200,OK,[''],18,18,10,"{""date"": ""Fri, 29 Sep 2023 22:50:27 GMT"", ""server"": ""Apache/2.4.29"", ""content-location"": ""home.html"", ""vary"": ""negotiate,accept-language,Accept-Encoding"", ""tcn"": ""choice"", ""strict-transport-security"": ""max-age=63072000"", ""x-frame-options"": ""sameorigin"", ""x-content-type-options"": ""nosniff"", ""access-control-allow-origin"": ""(null)"", ""accept-ranges"": ""bytes"", ""cache-control"": ""max-age=0"", ""expires"": ""Fri, 29 Sep 2023 22:50:27 GMT"", ""content-encoding"": ""gzip"", ""content-length"": ""9971"", ""keep-alive"": ""timeout=5, max=100"", ""connection"": ""Keep-Alive"", ""content-type"": ""text/html"", ""content-language"": ""en""}"
+3,"GET / HTTP/1.1
+Host: www.gnu.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.3013317584991455,0.14223885536193848,0.12299537658691406,200,OK,[''],18,18,10,"{""date"": ""Fri, 29 Sep 2023 22:50:30 GMT"", ""server"": ""Apache/2.4.29"", ""content-location"": ""home.html"", ""vary"": ""negotiate,accept-language,Accept-Encoding"", ""tcn"": ""choice"", ""strict-transport-security"": ""max-age=63072000"", ""x-frame-options"": ""sameorigin"", ""x-content-type-options"": ""nosniff"", ""access-control-allow-origin"": ""(null)"", ""accept-ranges"": ""bytes"", ""cache-control"": ""max-age=0"", ""expires"": ""Fri, 29 Sep 2023 22:50:30 GMT"", ""content-encoding"": ""gzip"", ""content-length"": ""9971"", ""keep-alive"": ""timeout=5, max=100"", ""connection"": ""Keep-Alive"", ""content-type"": ""text/html"", ""content-language"": ""en""}"
+4,"GET / HTTP/1.1
+Host: www.gnu.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.4023463726043701,0.11262369155883789,0.136948823928833,200,OK,[''],18,18,10,"{""date"": ""Fri, 29 Sep 2023 22:50:33 GMT"", ""server"": ""Apache/2.4.29"", ""content-location"": ""home.html"", ""vary"": ""negotiate,accept-language,Accept-Encoding"", ""tcn"": ""choice"", ""strict-transport-security"": ""max-age=63072000"", ""x-frame-options"": ""sameorigin"", ""x-content-type-options"": ""nosniff"", ""access-control-allow-origin"": ""(null)"", ""accept-ranges"": ""bytes"", ""cache-control"": ""max-age=0"", ""expires"": ""Fri, 29 Sep 2023 22:50:33 GMT"", ""content-encoding"": ""gzip"", ""content-length"": ""9971"", ""keep-alive"": ""timeout=5, max=100"", ""connection"": ""Keep-Alive"", ""content-type"": ""text/html"", ""content-language"": ""en""}"
+5,"GET / HTTP/1.1
+Host: www.gnu.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.4226250648498535,0.11660146713256836,0.12153363227844238,200,OK,[''],18,18,10,"{""date"": ""Fri, 29 Sep 2023 22:50:35 GMT"", ""server"": ""Apache/2.4.29"", ""content-location"": ""home.html"", ""vary"": ""negotiate,accept-language,Accept-Encoding"", ""tcn"": ""choice"", ""strict-transport-security"": ""max-age=63072000"", ""x-frame-options"": ""sameorigin"", ""x-content-type-options"": ""nosniff"", ""access-control-allow-origin"": ""(null)"", ""accept-ranges"": ""bytes"", ""cache-control"": ""max-age=0"", ""expires"": ""Fri, 29 Sep 2023 22:50:35 GMT"", ""content-encoding"": ""gzip"", ""content-length"": ""9971"", ""keep-alive"": ""timeout=5, max=100"", ""connection"": ""Keep-Alive"", ""content-type"": ""text/html"", ""content-language"": ""en""}"
+6,"GET / HTTP/1.1
+Host: www.gnu.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.34754037857055664,0.10959625244140625,0.11269879341125488,200,OK,[''],18,18,10,"{""date"": ""Fri, 29 Sep 2023 22:50:38 GMT"", ""server"": ""Apache/2.4.29"", ""content-location"": ""home.html"", ""vary"": ""negotiate,accept-language,Accept-Encoding"", ""tcn"": ""choice"", ""strict-transport-security"": ""max-age=63072000"", ""x-frame-options"": ""sameorigin"", ""x-content-type-options"": ""nosniff"", ""access-control-allow-origin"": ""(null)"", ""accept-ranges"": ""bytes"", ""cache-control"": ""max-age=0"", ""expires"": ""Fri, 29 Sep 2023 22:50:38 GMT"", ""content-encoding"": ""gzip"", ""content-length"": ""9971"", ""keep-alive"": ""timeout=5, max=100"", ""connection"": ""Keep-Alive"", ""content-type"": ""text/html"", ""content-language"": ""en""}"
+7,"GET / HTTP/1.1
+Host: www.gnu.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.6621377468109131,0.1068272590637207,0.1345984935760498,200,OK,[''],18,18,10,"{""date"": ""Fri, 29 Sep 2023 22:50:41 GMT"", ""server"": ""Apache/2.4.29"", ""content-location"": ""home.html"", ""vary"": ""negotiate,accept-language,Accept-Encoding"", ""tcn"": ""choice"", ""strict-transport-security"": ""max-age=63072000"", ""x-frame-options"": ""sameorigin"", ""x-content-type-options"": ""nosniff"", ""access-control-allow-origin"": ""(null)"", ""accept-ranges"": ""bytes"", ""cache-control"": ""max-age=0"", ""expires"": ""Fri, 29 Sep 2023 22:50:41 GMT"", ""content-encoding"": ""gzip"", ""content-length"": ""9971"", ""keep-alive"": ""timeout=5, max=100"", ""connection"": ""Keep-Alive"", ""content-type"": ""text/html"", ""content-language"": ""en""}"
+8,"GET / HTTP/1.1
+Host: www.gnu.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.4382481575012207,0.11234807968139648,0.12015414237976074,200,OK,[''],18,18,10,"{""date"": ""Fri, 29 Sep 2023 22:50:44 GMT"", ""server"": ""Apache/2.4.29"", ""content-location"": ""home.html"", ""vary"": ""negotiate,accept-language,Accept-Encoding"", ""tcn"": ""choice"", ""strict-transport-security"": ""max-age=63072000"", ""x-frame-options"": ""sameorigin"", ""x-content-type-options"": ""nosniff"", ""access-control-allow-origin"": ""(null)"", ""accept-ranges"": ""bytes"", ""cache-control"": ""max-age=0"", ""expires"": ""Fri, 29 Sep 2023 22:50:44 GMT"", ""content-encoding"": ""gzip"", ""content-length"": ""9971"", ""keep-alive"": ""timeout=5, max=100"", ""connection"": ""Keep-Alive"", ""content-type"": ""text/html"", ""content-language"": ""en""}"
+9,"GET / HTTP/1.1
+Host: www.gnu.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.3822503089904785,0.18892216682434082,0.12484312057495117,200,OK,[''],18,18,10,"{""date"": ""Fri, 29 Sep 2023 22:50:48 GMT"", ""server"": ""Apache/2.4.29"", ""content-location"": ""home.html"", ""vary"": ""negotiate,accept-language,Accept-Encoding"", ""tcn"": ""choice"", ""strict-transport-security"": ""max-age=63072000"", ""x-frame-options"": ""sameorigin"", ""x-content-type-options"": ""nosniff"", ""access-control-allow-origin"": ""(null)"", ""accept-ranges"": ""bytes"", ""cache-control"": ""max-age=0"", ""expires"": ""Fri, 29 Sep 2023 22:50:48 GMT"", ""content-encoding"": ""gzip"", ""content-length"": ""9971"", ""keep-alive"": ""timeout=5, max=100"", ""connection"": ""Keep-Alive"", ""content-type"": ""text/html"", ""content-language"": ""en""}"

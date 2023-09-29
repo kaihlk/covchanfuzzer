@@ -1,0 +1,312 @@
+[
+    {
+        "number": 0,
+        "request": "GET / HTTP/1.1\r\nHost: open.spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 430,
+        "Response_Time": 0.06113934516906738,
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "error_message": [
+            ""
+        ],
+        "response_header_count": 13,
+        "response_header_length": 13,
+        "response_body_length": 0,
+        "response_header_fields": {
+            "server": "envoy",
+            "date": "Fri, 29 Sep 2023 22:33:24 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "vary": "Accept-Encoding,Accept-Encoding",
+            "set-cookie": "sp_landing=https%3A%2F%2Fopen.spotify.com%2F%3Fsp_cid%3Dbebae858996a80364eecca8abe458d30%26device%3Ddesktop; path=/; expires=Sat, 30 Sep 2023 22:33:24 GMT; domain=.spotify.com; samesite=none; secure; httponly",
+            "content-security-policy": "script-src 'self' 'unsafe-eval' blob: open.spotifycdn.com open-review.spotifycdn.com quicksilver.scdn.co www.google-analytics.com www.googletagmanager.com static.ads-twitter.com analytics.twitter.com s.pinimg.com sc-static.net https://www.google.com/recaptcha/ cdn.ravenjs.com connect.facebook.net www.gstatic.com sb.scorecardresearch.com pixel-static.spotify.com optimize.google.com cdn.cookielaw.org geolocation.onetrust.com www.googleoptimize.com www.fastly-insights.com static.hotjar.com script.hotjar.com https://www.googleadservices.com/pagead/conversion_async.js https://www.googleadservices.com/pagead/conversion/ https://analytics.tiktok.com/i18n/pixel/sdk.js https://analytics.tiktok.com/i18n/pixel/identify.js https://analytics.tiktok.com/i18n/pixel/config.js https://www.redditstatic.com/ads/pixel.js cdn.speedcurve.com 'sha256-WfsTi7oVogdF9vq5d14s2birjvCglqWF842fyHhzoNw=' 'sha256-KRzjHxCdT8icNaDOqPBdY0AlKiIh5F8r4bnbe1PQwss=' 'sha256-Z5wh7XXSBR1+mTxLSPFhywCZJt77+uP1GikAgPIsu2s='; frame-ancestors 'self';",
+            "content-encoding": "gzip",
+            "x-envoy-upstream-service-time": "27",
+            "strict-transport-security": "max-age=31536000",
+            "x-content-type-options": "nosniff",
+            "via": "HTTP/1.1 fringe, HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        }
+    },
+    {
+        "number": 1,
+        "request": "GET / HTTP/1.1\r\nHost: open.spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 430,
+        "Response_Time": 0.055501699447631836,
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "error_message": [
+            ""
+        ],
+        "response_header_count": 13,
+        "response_header_length": 13,
+        "response_body_length": 0,
+        "response_header_fields": {
+            "server": "envoy",
+            "date": "Fri, 29 Sep 2023 22:33:27 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "vary": "Accept-Encoding,Accept-Encoding",
+            "set-cookie": "sp_landing=https%3A%2F%2Fopen.spotify.com%2F%3Fsp_cid%3D75a0af9a543dc979650ed234ac9e9734%26device%3Ddesktop; path=/; expires=Sat, 30 Sep 2023 22:33:27 GMT; domain=.spotify.com; samesite=none; secure; httponly",
+            "content-security-policy": "script-src 'self' 'unsafe-eval' blob: open.spotifycdn.com open-review.spotifycdn.com quicksilver.scdn.co www.google-analytics.com www.googletagmanager.com static.ads-twitter.com analytics.twitter.com s.pinimg.com sc-static.net https://www.google.com/recaptcha/ cdn.ravenjs.com connect.facebook.net www.gstatic.com sb.scorecardresearch.com pixel-static.spotify.com optimize.google.com cdn.cookielaw.org geolocation.onetrust.com www.googleoptimize.com www.fastly-insights.com static.hotjar.com script.hotjar.com https://www.googleadservices.com/pagead/conversion_async.js https://www.googleadservices.com/pagead/conversion/ https://analytics.tiktok.com/i18n/pixel/sdk.js https://analytics.tiktok.com/i18n/pixel/identify.js https://analytics.tiktok.com/i18n/pixel/config.js https://www.redditstatic.com/ads/pixel.js cdn.speedcurve.com 'sha256-WfsTi7oVogdF9vq5d14s2birjvCglqWF842fyHhzoNw=' 'sha256-KRzjHxCdT8icNaDOqPBdY0AlKiIh5F8r4bnbe1PQwss=' 'sha256-Z5wh7XXSBR1+mTxLSPFhywCZJt77+uP1GikAgPIsu2s='; frame-ancestors 'self';",
+            "content-encoding": "gzip",
+            "x-envoy-upstream-service-time": "27",
+            "strict-transport-security": "max-age=31536000",
+            "x-content-type-options": "nosniff",
+            "via": "HTTP/1.1 fringe, HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        }
+    },
+    {
+        "number": 2,
+        "request": "GET / HTTP/1.1\r\nHost: open.spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 430,
+        "Response_Time": 0.05737781524658203,
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "error_message": [
+            ""
+        ],
+        "response_header_count": 13,
+        "response_header_length": 13,
+        "response_body_length": 0,
+        "response_header_fields": {
+            "server": "envoy",
+            "date": "Fri, 29 Sep 2023 22:33:30 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "vary": "Accept-Encoding,Accept-Encoding",
+            "set-cookie": "sp_landing=https%3A%2F%2Fopen.spotify.com%2F%3Fsp_cid%3Db1a689c77463d206eaaca00d7c85ff84%26device%3Ddesktop; path=/; expires=Sat, 30 Sep 2023 22:33:30 GMT; domain=.spotify.com; samesite=none; secure; httponly",
+            "content-security-policy": "script-src 'self' 'unsafe-eval' blob: open.spotifycdn.com open-review.spotifycdn.com quicksilver.scdn.co www.google-analytics.com www.googletagmanager.com static.ads-twitter.com analytics.twitter.com s.pinimg.com sc-static.net https://www.google.com/recaptcha/ cdn.ravenjs.com connect.facebook.net www.gstatic.com sb.scorecardresearch.com pixel-static.spotify.com optimize.google.com cdn.cookielaw.org geolocation.onetrust.com www.googleoptimize.com www.fastly-insights.com static.hotjar.com script.hotjar.com https://www.googleadservices.com/pagead/conversion_async.js https://www.googleadservices.com/pagead/conversion/ https://analytics.tiktok.com/i18n/pixel/sdk.js https://analytics.tiktok.com/i18n/pixel/identify.js https://analytics.tiktok.com/i18n/pixel/config.js https://www.redditstatic.com/ads/pixel.js cdn.speedcurve.com 'sha256-WfsTi7oVogdF9vq5d14s2birjvCglqWF842fyHhzoNw=' 'sha256-KRzjHxCdT8icNaDOqPBdY0AlKiIh5F8r4bnbe1PQwss=' 'sha256-Z5wh7XXSBR1+mTxLSPFhywCZJt77+uP1GikAgPIsu2s='; frame-ancestors 'self';",
+            "content-encoding": "gzip",
+            "x-envoy-upstream-service-time": "28",
+            "strict-transport-security": "max-age=31536000",
+            "x-content-type-options": "nosniff",
+            "via": "HTTP/1.1 fringe, HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        }
+    },
+    {
+        "number": 3,
+        "request": "GET / HTTP/1.1\r\nHost: open.spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 430,
+        "Response_Time": 0.054158926010131836,
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "error_message": [
+            ""
+        ],
+        "response_header_count": 13,
+        "response_header_length": 13,
+        "response_body_length": 0,
+        "response_header_fields": {
+            "server": "envoy",
+            "date": "Fri, 29 Sep 2023 22:33:33 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "vary": "Accept-Encoding,Accept-Encoding",
+            "set-cookie": "sp_landing=https%3A%2F%2Fopen.spotify.com%2F%3Fsp_cid%3D9ed64fb582410b964db67bb840eb1f6c%26device%3Ddesktop; path=/; expires=Sat, 30 Sep 2023 22:33:33 GMT; domain=.spotify.com; samesite=none; secure; httponly",
+            "content-security-policy": "script-src 'self' 'unsafe-eval' blob: open.spotifycdn.com open-review.spotifycdn.com quicksilver.scdn.co www.google-analytics.com www.googletagmanager.com static.ads-twitter.com analytics.twitter.com s.pinimg.com sc-static.net https://www.google.com/recaptcha/ cdn.ravenjs.com connect.facebook.net www.gstatic.com sb.scorecardresearch.com pixel-static.spotify.com optimize.google.com cdn.cookielaw.org geolocation.onetrust.com www.googleoptimize.com www.fastly-insights.com static.hotjar.com script.hotjar.com https://www.googleadservices.com/pagead/conversion_async.js https://www.googleadservices.com/pagead/conversion/ https://analytics.tiktok.com/i18n/pixel/sdk.js https://analytics.tiktok.com/i18n/pixel/identify.js https://analytics.tiktok.com/i18n/pixel/config.js https://www.redditstatic.com/ads/pixel.js cdn.speedcurve.com 'sha256-WfsTi7oVogdF9vq5d14s2birjvCglqWF842fyHhzoNw=' 'sha256-KRzjHxCdT8icNaDOqPBdY0AlKiIh5F8r4bnbe1PQwss=' 'sha256-Z5wh7XXSBR1+mTxLSPFhywCZJt77+uP1GikAgPIsu2s='; frame-ancestors 'self';",
+            "content-encoding": "gzip",
+            "x-envoy-upstream-service-time": "22",
+            "strict-transport-security": "max-age=31536000",
+            "x-content-type-options": "nosniff",
+            "via": "HTTP/1.1 fringe, HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        }
+    },
+    {
+        "number": 4,
+        "request": "GET / HTTP/1.1\r\nHost: open.spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 430,
+        "Response_Time": 0.05014634132385254,
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "error_message": [
+            ""
+        ],
+        "response_header_count": 13,
+        "response_header_length": 13,
+        "response_body_length": 0,
+        "response_header_fields": {
+            "server": "envoy",
+            "date": "Fri, 29 Sep 2023 22:33:35 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "vary": "Accept-Encoding,Accept-Encoding",
+            "set-cookie": "sp_landing=https%3A%2F%2Fopen.spotify.com%2F%3Fsp_cid%3D5612bcdd97f5d95b3073dc7401fb9f7d%26device%3Ddesktop; path=/; expires=Sat, 30 Sep 2023 22:33:35 GMT; domain=.spotify.com; samesite=none; secure; httponly",
+            "content-security-policy": "script-src 'self' 'unsafe-eval' blob: open.spotifycdn.com open-review.spotifycdn.com quicksilver.scdn.co www.google-analytics.com www.googletagmanager.com static.ads-twitter.com analytics.twitter.com s.pinimg.com sc-static.net https://www.google.com/recaptcha/ cdn.ravenjs.com connect.facebook.net www.gstatic.com sb.scorecardresearch.com pixel-static.spotify.com optimize.google.com cdn.cookielaw.org geolocation.onetrust.com www.googleoptimize.com www.fastly-insights.com static.hotjar.com script.hotjar.com https://www.googleadservices.com/pagead/conversion_async.js https://www.googleadservices.com/pagead/conversion/ https://analytics.tiktok.com/i18n/pixel/sdk.js https://analytics.tiktok.com/i18n/pixel/identify.js https://analytics.tiktok.com/i18n/pixel/config.js https://www.redditstatic.com/ads/pixel.js cdn.speedcurve.com 'sha256-WfsTi7oVogdF9vq5d14s2birjvCglqWF842fyHhzoNw=' 'sha256-KRzjHxCdT8icNaDOqPBdY0AlKiIh5F8r4bnbe1PQwss=' 'sha256-Z5wh7XXSBR1+mTxLSPFhywCZJt77+uP1GikAgPIsu2s='; frame-ancestors 'self';",
+            "content-encoding": "gzip",
+            "x-envoy-upstream-service-time": "16",
+            "strict-transport-security": "max-age=31536000",
+            "x-content-type-options": "nosniff",
+            "via": "HTTP/1.1 fringe, HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        }
+    },
+    {
+        "number": 5,
+        "request": "GET / HTTP/1.1\r\nHost: open.spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 430,
+        "Response_Time": 0.06668996810913086,
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "error_message": [
+            ""
+        ],
+        "response_header_count": 13,
+        "response_header_length": 13,
+        "response_body_length": 0,
+        "response_header_fields": {
+            "server": "envoy",
+            "date": "Fri, 29 Sep 2023 22:33:38 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "vary": "Accept-Encoding,Accept-Encoding",
+            "set-cookie": "sp_landing=https%3A%2F%2Fopen.spotify.com%2F%3Fsp_cid%3D841c0050d919ef32f6f0a0402aebe3e9%26device%3Ddesktop; path=/; expires=Sat, 30 Sep 2023 22:33:38 GMT; domain=.spotify.com; samesite=none; secure; httponly",
+            "content-security-policy": "script-src 'self' 'unsafe-eval' blob: open.spotifycdn.com open-review.spotifycdn.com quicksilver.scdn.co www.google-analytics.com www.googletagmanager.com static.ads-twitter.com analytics.twitter.com s.pinimg.com sc-static.net https://www.google.com/recaptcha/ cdn.ravenjs.com connect.facebook.net www.gstatic.com sb.scorecardresearch.com pixel-static.spotify.com optimize.google.com cdn.cookielaw.org geolocation.onetrust.com www.googleoptimize.com www.fastly-insights.com static.hotjar.com script.hotjar.com https://www.googleadservices.com/pagead/conversion_async.js https://www.googleadservices.com/pagead/conversion/ https://analytics.tiktok.com/i18n/pixel/sdk.js https://analytics.tiktok.com/i18n/pixel/identify.js https://analytics.tiktok.com/i18n/pixel/config.js https://www.redditstatic.com/ads/pixel.js cdn.speedcurve.com 'sha256-WfsTi7oVogdF9vq5d14s2birjvCglqWF842fyHhzoNw=' 'sha256-KRzjHxCdT8icNaDOqPBdY0AlKiIh5F8r4bnbe1PQwss=' 'sha256-Z5wh7XXSBR1+mTxLSPFhywCZJt77+uP1GikAgPIsu2s='; frame-ancestors 'self';",
+            "content-encoding": "gzip",
+            "x-envoy-upstream-service-time": "30",
+            "strict-transport-security": "max-age=31536000",
+            "x-content-type-options": "nosniff",
+            "via": "HTTP/1.1 fringe, HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        }
+    },
+    {
+        "number": 6,
+        "request": "GET / HTTP/1.1\r\nHost: open.spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 430,
+        "Response_Time": 0.05977821350097656,
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "error_message": [
+            ""
+        ],
+        "response_header_count": 13,
+        "response_header_length": 13,
+        "response_body_length": 0,
+        "response_header_fields": {
+            "server": "envoy",
+            "date": "Fri, 29 Sep 2023 22:33:41 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "vary": "Accept-Encoding,Accept-Encoding",
+            "set-cookie": "sp_landing=https%3A%2F%2Fopen.spotify.com%2F%3Fsp_cid%3D68bb75aaedb004398f081a7f73ba944c%26device%3Ddesktop; path=/; expires=Sat, 30 Sep 2023 22:33:41 GMT; domain=.spotify.com; samesite=none; secure; httponly",
+            "content-security-policy": "script-src 'self' 'unsafe-eval' blob: open.spotifycdn.com open-review.spotifycdn.com quicksilver.scdn.co www.google-analytics.com www.googletagmanager.com static.ads-twitter.com analytics.twitter.com s.pinimg.com sc-static.net https://www.google.com/recaptcha/ cdn.ravenjs.com connect.facebook.net www.gstatic.com sb.scorecardresearch.com pixel-static.spotify.com optimize.google.com cdn.cookielaw.org geolocation.onetrust.com www.googleoptimize.com www.fastly-insights.com static.hotjar.com script.hotjar.com https://www.googleadservices.com/pagead/conversion_async.js https://www.googleadservices.com/pagead/conversion/ https://analytics.tiktok.com/i18n/pixel/sdk.js https://analytics.tiktok.com/i18n/pixel/identify.js https://analytics.tiktok.com/i18n/pixel/config.js https://www.redditstatic.com/ads/pixel.js cdn.speedcurve.com 'sha256-WfsTi7oVogdF9vq5d14s2birjvCglqWF842fyHhzoNw=' 'sha256-KRzjHxCdT8icNaDOqPBdY0AlKiIh5F8r4bnbe1PQwss=' 'sha256-Z5wh7XXSBR1+mTxLSPFhywCZJt77+uP1GikAgPIsu2s='; frame-ancestors 'self';",
+            "content-encoding": "gzip",
+            "x-envoy-upstream-service-time": "27",
+            "strict-transport-security": "max-age=31536000",
+            "x-content-type-options": "nosniff",
+            "via": "HTTP/1.1 fringe, HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        }
+    },
+    {
+        "number": 7,
+        "request": "GET / HTTP/1.1\r\nHost: open.spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 430,
+        "Response_Time": 0.05522966384887695,
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "error_message": [
+            ""
+        ],
+        "response_header_count": 13,
+        "response_header_length": 13,
+        "response_body_length": 0,
+        "response_header_fields": {
+            "server": "envoy",
+            "date": "Fri, 29 Sep 2023 22:33:44 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "vary": "Accept-Encoding,Accept-Encoding",
+            "set-cookie": "sp_landing=https%3A%2F%2Fopen.spotify.com%2F%3Fsp_cid%3Dbc0ab0d04a20ba7e4940cd254e701116%26device%3Ddesktop; path=/; expires=Sat, 30 Sep 2023 22:33:44 GMT; domain=.spotify.com; samesite=none; secure; httponly",
+            "content-security-policy": "script-src 'self' 'unsafe-eval' blob: open.spotifycdn.com open-review.spotifycdn.com quicksilver.scdn.co www.google-analytics.com www.googletagmanager.com static.ads-twitter.com analytics.twitter.com s.pinimg.com sc-static.net https://www.google.com/recaptcha/ cdn.ravenjs.com connect.facebook.net www.gstatic.com sb.scorecardresearch.com pixel-static.spotify.com optimize.google.com cdn.cookielaw.org geolocation.onetrust.com www.googleoptimize.com www.fastly-insights.com static.hotjar.com script.hotjar.com https://www.googleadservices.com/pagead/conversion_async.js https://www.googleadservices.com/pagead/conversion/ https://analytics.tiktok.com/i18n/pixel/sdk.js https://analytics.tiktok.com/i18n/pixel/identify.js https://analytics.tiktok.com/i18n/pixel/config.js https://www.redditstatic.com/ads/pixel.js cdn.speedcurve.com 'sha256-WfsTi7oVogdF9vq5d14s2birjvCglqWF842fyHhzoNw=' 'sha256-KRzjHxCdT8icNaDOqPBdY0AlKiIh5F8r4bnbe1PQwss=' 'sha256-Z5wh7XXSBR1+mTxLSPFhywCZJt77+uP1GikAgPIsu2s='; frame-ancestors 'self';",
+            "content-encoding": "gzip",
+            "x-envoy-upstream-service-time": "26",
+            "strict-transport-security": "max-age=31536000",
+            "x-content-type-options": "nosniff",
+            "via": "HTTP/1.1 fringe, HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        }
+    },
+    {
+        "number": 8,
+        "request": "GET / HTTP/1.1\r\nHost: open.spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 430,
+        "Response_Time": 0.056688785552978516,
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "error_message": [
+            ""
+        ],
+        "response_header_count": 13,
+        "response_header_length": 13,
+        "response_body_length": 0,
+        "response_header_fields": {
+            "server": "envoy",
+            "date": "Fri, 29 Sep 2023 22:33:47 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "vary": "Accept-Encoding,Accept-Encoding",
+            "set-cookie": "sp_landing=https%3A%2F%2Fopen.spotify.com%2F%3Fsp_cid%3Debcca73c208178c3b22d4a69736c06cb%26device%3Ddesktop; path=/; expires=Sat, 30 Sep 2023 22:33:47 GMT; domain=.spotify.com; samesite=none; secure; httponly",
+            "content-security-policy": "script-src 'self' 'unsafe-eval' blob: open.spotifycdn.com open-review.spotifycdn.com quicksilver.scdn.co www.google-analytics.com www.googletagmanager.com static.ads-twitter.com analytics.twitter.com s.pinimg.com sc-static.net https://www.google.com/recaptcha/ cdn.ravenjs.com connect.facebook.net www.gstatic.com sb.scorecardresearch.com pixel-static.spotify.com optimize.google.com cdn.cookielaw.org geolocation.onetrust.com www.googleoptimize.com www.fastly-insights.com static.hotjar.com script.hotjar.com https://www.googleadservices.com/pagead/conversion_async.js https://www.googleadservices.com/pagead/conversion/ https://analytics.tiktok.com/i18n/pixel/sdk.js https://analytics.tiktok.com/i18n/pixel/identify.js https://analytics.tiktok.com/i18n/pixel/config.js https://www.redditstatic.com/ads/pixel.js cdn.speedcurve.com 'sha256-WfsTi7oVogdF9vq5d14s2birjvCglqWF842fyHhzoNw=' 'sha256-KRzjHxCdT8icNaDOqPBdY0AlKiIh5F8r4bnbe1PQwss=' 'sha256-Z5wh7XXSBR1+mTxLSPFhywCZJt77+uP1GikAgPIsu2s='; frame-ancestors 'self';",
+            "content-encoding": "gzip",
+            "x-envoy-upstream-service-time": "30",
+            "strict-transport-security": "max-age=31536000",
+            "x-content-type-options": "nosniff",
+            "via": "HTTP/1.1 fringe, HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        }
+    },
+    {
+        "number": 9,
+        "request": "GET / HTTP/1.1\r\nHost: open.spotify.com\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\r\nAccept-Encoding: gzip, deflate, br\r\nAccept-Language: en-US,en;q=0.5\r\nDNT: 1\r\nConnection: keep-alive\r\nUpgrade-Insecure-Requests: 1\r\nSec-Fetch-Dest: document\r\nSec-Fetch-Mode: navigate\r\nSec-Fetch-Site: cross-site\r\n\r\n",
+        "deviation_count": 0,
+        "uri": "/",
+        "request_length": 430,
+        "Response_Time": 0.07765007019042969,
+        "status_code": 200,
+        "reason_phrase": "OK",
+        "error_message": [
+            ""
+        ],
+        "response_header_count": 13,
+        "response_header_length": 13,
+        "response_body_length": 0,
+        "response_header_fields": {
+            "server": "envoy",
+            "date": "Fri, 29 Sep 2023 22:33:50 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "vary": "Accept-Encoding,Accept-Encoding",
+            "set-cookie": "sp_landing=https%3A%2F%2Fopen.spotify.com%2F%3Fsp_cid%3D25c29e6a6a03da7967f8750dc46b42cd%26device%3Ddesktop; path=/; expires=Sat, 30 Sep 2023 22:33:50 GMT; domain=.spotify.com; samesite=none; secure; httponly",
+            "content-security-policy": "script-src 'self' 'unsafe-eval' blob: open.spotifycdn.com open-review.spotifycdn.com quicksilver.scdn.co www.google-analytics.com www.googletagmanager.com static.ads-twitter.com analytics.twitter.com s.pinimg.com sc-static.net https://www.google.com/recaptcha/ cdn.ravenjs.com connect.facebook.net www.gstatic.com sb.scorecardresearch.com pixel-static.spotify.com optimize.google.com cdn.cookielaw.org geolocation.onetrust.com www.googleoptimize.com www.fastly-insights.com static.hotjar.com script.hotjar.com https://www.googleadservices.com/pagead/conversion_async.js https://www.googleadservices.com/pagead/conversion/ https://analytics.tiktok.com/i18n/pixel/sdk.js https://analytics.tiktok.com/i18n/pixel/identify.js https://analytics.tiktok.com/i18n/pixel/config.js https://www.redditstatic.com/ads/pixel.js cdn.speedcurve.com 'sha256-WfsTi7oVogdF9vq5d14s2birjvCglqWF842fyHhzoNw=' 'sha256-KRzjHxCdT8icNaDOqPBdY0AlKiIh5F8r4bnbe1PQwss=' 'sha256-Z5wh7XXSBR1+mTxLSPFhywCZJt77+uP1GikAgPIsu2s='; frame-ancestors 'self';",
+            "content-encoding": "gzip",
+            "x-envoy-upstream-service-time": "23",
+            "strict-transport-security": "max-age=31536000",
+            "x-content-type-options": "nosniff",
+            "via": "HTTP/1.1 fringe, HTTP/2 edgeproxy, 1.1 google",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        }
+    }
+]

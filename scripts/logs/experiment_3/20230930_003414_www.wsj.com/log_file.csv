@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.wsj.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.10163426399230957,0.10209870338439941,0.03570961952209473,200,OK,[''],23,23,0,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:34:01 GMT"", ""content-security-policy"": ""default-src 'self' cdn.privacy-mgmt.com;script-src 'self' *.wsj.net *.wsj.com 'unsafe-inline' 'unsafe-eval';script-src-elem * 'unsafe-inline';manifest-src 'self' *.wsj.com;media-src * data: blob: https:;worker-src * 'unsafe-inline' 'unsafe-eval' blob: data:;frame-src * 'unsafe-inline';connect-src * 'unsafe-inline' 'unsafe-eval';form-action * 'unsafe-inline';frame-ancestors *;script-src-attr 'unsafe-inline';object-src 'self' 'unsafe-inline';img-src * data: blob: https:;font-src 'self' * 'unsafe-inline';upgrade-insecure-requests;base-uri 'self';style-src 'self' https: 'unsafe-inline'"", ""cross-origin-resource-policy"": ""same-site"", ""x-dns-prefetch-control"": ""off"", ""x-frame-options"": ""SAMEORIGIN"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""x-download-options"": ""noopen"", ""x-content-type-options"": ""nosniff"", ""origin-agent-cluster"": ""?1"", ""x-permitted-cross-domain-policies"": ""none"", ""referrer-policy"": ""strict-origin-when-cross-origin,unsafe-url"", ""x-xss-protection"": ""1; mode=block"", ""set-cookie"": ""regulationApplies=gdpr%3Atrue%2Ccpra%3Afalse%2Cvcdpa%3Afalse; Domain=.wsj.com; Path=/"", ""cache-control"": ""public, s-maxage=30"", ""content-encoding"": ""gzip"", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 4c6cae2fc798878bd6b9da38fe5208f8.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P2"", ""x-amz-cf-id"": ""qKImYSZsJ0v3_fMfaox_4ywfhiMn52MdrZs33g6bnrd1BKQJk0nFcQ=="", ""age"": ""14""}"
+1,"GET / HTTP/1.1
+Host: www.wsj.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.12825989723205566,0.1266484260559082,0.04855704307556152,200,OK,[''],23,23,0,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:34:01 GMT"", ""content-security-policy"": ""default-src 'self' cdn.privacy-mgmt.com;script-src 'self' *.wsj.net *.wsj.com 'unsafe-inline' 'unsafe-eval';script-src-elem * 'unsafe-inline';manifest-src 'self' *.wsj.com;media-src * data: blob: https:;worker-src * 'unsafe-inline' 'unsafe-eval' blob: data:;frame-src * 'unsafe-inline';connect-src * 'unsafe-inline' 'unsafe-eval';form-action * 'unsafe-inline';frame-ancestors *;script-src-attr 'unsafe-inline';object-src 'self' 'unsafe-inline';img-src * data: blob: https:;font-src 'self' * 'unsafe-inline';upgrade-insecure-requests;base-uri 'self';style-src 'self' https: 'unsafe-inline'"", ""cross-origin-resource-policy"": ""same-site"", ""x-dns-prefetch-control"": ""off"", ""x-frame-options"": ""SAMEORIGIN"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""x-download-options"": ""noopen"", ""x-content-type-options"": ""nosniff"", ""origin-agent-cluster"": ""?1"", ""x-permitted-cross-domain-policies"": ""none"", ""referrer-policy"": ""strict-origin-when-cross-origin,unsafe-url"", ""x-xss-protection"": ""1; mode=block"", ""set-cookie"": ""regulationApplies=gdpr%3Atrue%2Ccpra%3Afalse%2Cvcdpa%3Afalse; Domain=.wsj.com; Path=/"", ""cache-control"": ""public, s-maxage=30"", ""content-encoding"": ""gzip"", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 dbd64dbf2e06de1908b4c325512a96a6.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P2"", ""x-amz-cf-id"": ""fkzOOrY5_kMrdzhUpCB93yXkd0PNsLko90uWD_Km-CiX8BSKZsv6PQ=="", ""age"": ""18""}"
+2,"GET / HTTP/1.1
+Host: www.wsj.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.1847364902496338,0.10347414016723633,0.02637624740600586,200,OK,[''],23,23,0,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:34:01 GMT"", ""content-security-policy"": ""default-src 'self' cdn.privacy-mgmt.com;script-src 'self' *.wsj.net *.wsj.com 'unsafe-inline' 'unsafe-eval';script-src-elem * 'unsafe-inline';manifest-src 'self' *.wsj.com;media-src * data: blob: https:;worker-src * 'unsafe-inline' 'unsafe-eval' blob: data:;frame-src * 'unsafe-inline';connect-src * 'unsafe-inline' 'unsafe-eval';form-action * 'unsafe-inline';frame-ancestors *;script-src-attr 'unsafe-inline';object-src 'self' 'unsafe-inline';img-src * data: blob: https:;font-src 'self' * 'unsafe-inline';upgrade-insecure-requests;base-uri 'self';style-src 'self' https: 'unsafe-inline'"", ""cross-origin-resource-policy"": ""same-site"", ""x-dns-prefetch-control"": ""off"", ""x-frame-options"": ""SAMEORIGIN"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""x-download-options"": ""noopen"", ""x-content-type-options"": ""nosniff"", ""origin-agent-cluster"": ""?1"", ""x-permitted-cross-domain-policies"": ""none"", ""referrer-policy"": ""strict-origin-when-cross-origin,unsafe-url"", ""x-xss-protection"": ""1; mode=block"", ""set-cookie"": ""regulationApplies=gdpr%3Atrue%2Ccpra%3Afalse%2Cvcdpa%3Afalse; Domain=.wsj.com; Path=/"", ""cache-control"": ""public, s-maxage=30"", ""content-encoding"": ""gzip"", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 4ca183c2610619d28671590d4fd6b380.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P2"", ""x-amz-cf-id"": ""uwD5c2ewjwliGO5xLtAB9PIVM9TyC6EjmRg0RFCej9Fht4IPZcrOPg=="", ""age"": ""23""}"
+3,"GET / HTTP/1.1
+Host: www.wsj.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.24309015274047852,0.11475205421447754,0.053887367248535156,200,OK,[''],23,23,0,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:34:01 GMT"", ""content-security-policy"": ""default-src 'self' cdn.privacy-mgmt.com;script-src 'self' *.wsj.net *.wsj.com 'unsafe-inline' 'unsafe-eval';script-src-elem * 'unsafe-inline';manifest-src 'self' *.wsj.com;media-src * data: blob: https:;worker-src * 'unsafe-inline' 'unsafe-eval' blob: data:;frame-src * 'unsafe-inline';connect-src * 'unsafe-inline' 'unsafe-eval';form-action * 'unsafe-inline';frame-ancestors *;script-src-attr 'unsafe-inline';object-src 'self' 'unsafe-inline';img-src * data: blob: https:;font-src 'self' * 'unsafe-inline';upgrade-insecure-requests;base-uri 'self';style-src 'self' https: 'unsafe-inline'"", ""cross-origin-resource-policy"": ""same-site"", ""x-dns-prefetch-control"": ""off"", ""x-frame-options"": ""SAMEORIGIN"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""x-download-options"": ""noopen"", ""x-content-type-options"": ""nosniff"", ""origin-agent-cluster"": ""?1"", ""x-permitted-cross-domain-policies"": ""none"", ""referrer-policy"": ""strict-origin-when-cross-origin,unsafe-url"", ""x-xss-protection"": ""1; mode=block"", ""set-cookie"": ""regulationApplies=gdpr%3Atrue%2Ccpra%3Afalse%2Cvcdpa%3Afalse; Domain=.wsj.com; Path=/"", ""cache-control"": ""public, s-maxage=30"", ""content-encoding"": ""gzip"", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 4ca183c2610619d28671590d4fd6b380.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P2"", ""x-amz-cf-id"": ""Ap3XSA1J7KZD88ZgEmS1v1VPq3c7ziICzTvfHRRXGG1C3ulhWmtnrQ=="", ""age"": ""27""}"
+4,"GET / HTTP/1.1
+Host: www.wsj.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.0764768123626709,0.10799098014831543,0.4987986087799072,200,OK,[''],22,22,0,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:34:33 GMT"", ""content-security-policy"": ""default-src 'self' cdn.privacy-mgmt.com;script-src 'self' *.wsj.net *.wsj.com 'unsafe-inline' 'unsafe-eval';script-src-elem * 'unsafe-inline';manifest-src 'self' *.wsj.com;media-src * data: blob: https:;worker-src * 'unsafe-inline' 'unsafe-eval' blob: data:;frame-src * 'unsafe-inline';connect-src * 'unsafe-inline' 'unsafe-eval';form-action * 'unsafe-inline';frame-ancestors *;script-src-attr 'unsafe-inline';object-src 'self' 'unsafe-inline';img-src * data: blob: https:;font-src 'self' * 'unsafe-inline';upgrade-insecure-requests;base-uri 'self';style-src 'self' https: 'unsafe-inline'"", ""cross-origin-resource-policy"": ""same-site"", ""x-dns-prefetch-control"": ""off"", ""x-frame-options"": ""SAMEORIGIN"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""x-download-options"": ""noopen"", ""x-content-type-options"": ""nosniff"", ""origin-agent-cluster"": ""?1"", ""x-permitted-cross-domain-policies"": ""none"", ""referrer-policy"": ""strict-origin-when-cross-origin,unsafe-url"", ""x-xss-protection"": ""1; mode=block"", ""set-cookie"": ""regulationApplies=gdpr%3Atrue%2Ccpra%3Afalse%2Cvcdpa%3Afalse; Domain=.wsj.com; Path=/"", ""cache-control"": ""public, s-maxage=30"", ""content-encoding"": ""gzip"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 fc5a4053810c85d26abbb37d924e59fe.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P2"", ""x-amz-cf-id"": ""2RLZKsvrDG6t1d5Au90VP8De3P1_NRlZ8Xc3O8MeogEq8EsvvUKsmw==""}"
+5,"GET / HTTP/1.1
+Host: www.wsj.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.14737725257873535,0.10530972480773926,0.10898280143737793,200,OK,[''],23,23,12792,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:34:34 GMT"", ""content-security-policy"": ""default-src 'self' cdn.privacy-mgmt.com;script-src 'self' *.wsj.net *.wsj.com 'unsafe-inline' 'unsafe-eval';script-src-elem * 'unsafe-inline';manifest-src 'self' *.wsj.com;media-src * data: blob: https:;worker-src * 'unsafe-inline' 'unsafe-eval' blob: data:;frame-src * 'unsafe-inline';connect-src * 'unsafe-inline' 'unsafe-eval';form-action * 'unsafe-inline';frame-ancestors *;script-src-attr 'unsafe-inline';object-src 'self' 'unsafe-inline';img-src * data: blob: https:;font-src 'self' * 'unsafe-inline';upgrade-insecure-requests;base-uri 'self';style-src 'self' https: 'unsafe-inline'"", ""cross-origin-resource-policy"": ""same-site"", ""x-dns-prefetch-control"": ""off"", ""x-frame-options"": ""SAMEORIGIN"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""x-download-options"": ""noopen"", ""x-content-type-options"": ""nosniff"", ""origin-agent-cluster"": ""?1"", ""x-permitted-cross-domain-policies"": ""none"", ""referrer-policy"": ""strict-origin-when-cross-origin,unsafe-url"", ""x-xss-protection"": ""1; mode=block"", ""set-cookie"": ""regulationApplies=gdpr%3Atrue%2Ccpra%3Afalse%2Cvcdpa%3Afalse; Domain=.wsj.com; Path=/"", ""cache-control"": ""public, s-maxage=30"", ""content-encoding"": ""gzip"", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 84c210424bc648cf84cb9425addd241e.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P2"", ""x-amz-cf-id"": ""ImmpaWlr7TYcfNfr36txnp-2cMGrBogs92WC_eb-r-1FMHnf3PB1Xg=="", ""age"": ""4""}"
+6,"GET / HTTP/1.1
+Host: www.wsj.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.1918501853942871,0.1130523681640625,0.034972190856933594,200,OK,[''],23,23,0,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:34:34 GMT"", ""content-security-policy"": ""default-src 'self' cdn.privacy-mgmt.com;script-src 'self' *.wsj.net *.wsj.com 'unsafe-inline' 'unsafe-eval';script-src-elem * 'unsafe-inline';manifest-src 'self' *.wsj.com;media-src * data: blob: https:;worker-src * 'unsafe-inline' 'unsafe-eval' blob: data:;frame-src * 'unsafe-inline';connect-src * 'unsafe-inline' 'unsafe-eval';form-action * 'unsafe-inline';frame-ancestors *;script-src-attr 'unsafe-inline';object-src 'self' 'unsafe-inline';img-src * data: blob: https:;font-src 'self' * 'unsafe-inline';upgrade-insecure-requests;base-uri 'self';style-src 'self' https: 'unsafe-inline'"", ""cross-origin-resource-policy"": ""same-site"", ""x-dns-prefetch-control"": ""off"", ""x-frame-options"": ""SAMEORIGIN"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""x-download-options"": ""noopen"", ""x-content-type-options"": ""nosniff"", ""origin-agent-cluster"": ""?1"", ""x-permitted-cross-domain-policies"": ""none"", ""referrer-policy"": ""strict-origin-when-cross-origin,unsafe-url"", ""x-xss-protection"": ""1; mode=block"", ""set-cookie"": ""regulationApplies=gdpr%3Atrue%2Ccpra%3Afalse%2Cvcdpa%3Afalse; Domain=.wsj.com; Path=/"", ""cache-control"": ""public, s-maxage=30"", ""content-encoding"": ""gzip"", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 45e3199947a7cf13526e49c4cabda3b8.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P2"", ""x-amz-cf-id"": ""aW1MP7qzXEnUZKDIuL35GRzOH2pPAAjxlQXQwD1cTkW7eJ1i8Tf5rw=="", ""age"": ""9""}"
+7,"GET / HTTP/1.1
+Host: www.wsj.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.18129205703735352,0.11188340187072754,0.03315138816833496,200,OK,[''],23,23,0,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:34:34 GMT"", ""content-security-policy"": ""default-src 'self' cdn.privacy-mgmt.com;script-src 'self' *.wsj.net *.wsj.com 'unsafe-inline' 'unsafe-eval';script-src-elem * 'unsafe-inline';manifest-src 'self' *.wsj.com;media-src * data: blob: https:;worker-src * 'unsafe-inline' 'unsafe-eval' blob: data:;frame-src * 'unsafe-inline';connect-src * 'unsafe-inline' 'unsafe-eval';form-action * 'unsafe-inline';frame-ancestors *;script-src-attr 'unsafe-inline';object-src 'self' 'unsafe-inline';img-src * data: blob: https:;font-src 'self' * 'unsafe-inline';upgrade-insecure-requests;base-uri 'self';style-src 'self' https: 'unsafe-inline'"", ""cross-origin-resource-policy"": ""same-site"", ""x-dns-prefetch-control"": ""off"", ""x-frame-options"": ""SAMEORIGIN"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""x-download-options"": ""noopen"", ""x-content-type-options"": ""nosniff"", ""origin-agent-cluster"": ""?1"", ""x-permitted-cross-domain-policies"": ""none"", ""referrer-policy"": ""strict-origin-when-cross-origin,unsafe-url"", ""x-xss-protection"": ""1; mode=block"", ""set-cookie"": ""regulationApplies=gdpr%3Atrue%2Ccpra%3Afalse%2Cvcdpa%3Afalse; Domain=.wsj.com; Path=/"", ""cache-control"": ""public, s-maxage=30"", ""content-encoding"": ""gzip"", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 4ca183c2610619d28671590d4fd6b380.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P2"", ""x-amz-cf-id"": ""NqcrusiZIQj-qN-voKkAY0iGPswuC2QtaOkAG4jv2T7xu7WBpwcyXQ=="", ""age"": ""14""}"
+8,"GET / HTTP/1.1
+Host: www.wsj.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.18818330764770508,0.11705827713012695,0.06635212898254395,200,OK,[''],23,23,0,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:34:34 GMT"", ""content-security-policy"": ""default-src 'self' cdn.privacy-mgmt.com;script-src 'self' *.wsj.net *.wsj.com 'unsafe-inline' 'unsafe-eval';script-src-elem * 'unsafe-inline';manifest-src 'self' *.wsj.com;media-src * data: blob: https:;worker-src * 'unsafe-inline' 'unsafe-eval' blob: data:;frame-src * 'unsafe-inline';connect-src * 'unsafe-inline' 'unsafe-eval';form-action * 'unsafe-inline';frame-ancestors *;script-src-attr 'unsafe-inline';object-src 'self' 'unsafe-inline';img-src * data: blob: https:;font-src 'self' * 'unsafe-inline';upgrade-insecure-requests;base-uri 'self';style-src 'self' https: 'unsafe-inline'"", ""cross-origin-resource-policy"": ""same-site"", ""x-dns-prefetch-control"": ""off"", ""x-frame-options"": ""SAMEORIGIN"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""x-download-options"": ""noopen"", ""x-content-type-options"": ""nosniff"", ""origin-agent-cluster"": ""?1"", ""x-permitted-cross-domain-policies"": ""none"", ""referrer-policy"": ""strict-origin-when-cross-origin,unsafe-url"", ""x-xss-protection"": ""1; mode=block"", ""set-cookie"": ""regulationApplies=gdpr%3Atrue%2Ccpra%3Afalse%2Cvcdpa%3Afalse; Domain=.wsj.com; Path=/"", ""cache-control"": ""public, s-maxage=30"", ""content-encoding"": ""gzip"", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 660c94f4f2991ce757c8a794a9814a00.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P2"", ""x-amz-cf-id"": ""iZa2Q8j-XkzebnDLdQqsx5KPQokzcDbtfZyoDpwGT8z1YGCl4tBJ2w=="", ""age"": ""19""}"
+9,"GET / HTTP/1.1
+Host: www.wsj.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.12328982353210449,0.12566733360290527,0.03535771369934082,200,OK,[''],23,23,0,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:34:34 GMT"", ""content-security-policy"": ""default-src 'self' cdn.privacy-mgmt.com;script-src 'self' *.wsj.net *.wsj.com 'unsafe-inline' 'unsafe-eval';script-src-elem * 'unsafe-inline';manifest-src 'self' *.wsj.com;media-src * data: blob: https:;worker-src * 'unsafe-inline' 'unsafe-eval' blob: data:;frame-src * 'unsafe-inline';connect-src * 'unsafe-inline' 'unsafe-eval';form-action * 'unsafe-inline';frame-ancestors *;script-src-attr 'unsafe-inline';object-src 'self' 'unsafe-inline';img-src * data: blob: https:;font-src 'self' * 'unsafe-inline';upgrade-insecure-requests;base-uri 'self';style-src 'self' https: 'unsafe-inline'"", ""cross-origin-resource-policy"": ""same-site"", ""x-dns-prefetch-control"": ""off"", ""x-frame-options"": ""SAMEORIGIN"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""x-download-options"": ""noopen"", ""x-content-type-options"": ""nosniff"", ""origin-agent-cluster"": ""?1"", ""x-permitted-cross-domain-policies"": ""none"", ""referrer-policy"": ""strict-origin-when-cross-origin,unsafe-url"", ""x-xss-protection"": ""1; mode=block"", ""set-cookie"": ""regulationApplies=gdpr%3Atrue%2Ccpra%3Afalse%2Cvcdpa%3Afalse; Domain=.wsj.com; Path=/"", ""cache-control"": ""public, s-maxage=30"", ""content-encoding"": ""gzip"", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 84c210424bc648cf84cb9425addd241e.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P2"", ""x-amz-cf-id"": ""AUtFikKA8uLdAKMdekUrxVGQS6K9yxuqDtNiQX29ljVqSJ31sUGk6A=="", ""age"": ""23""}"

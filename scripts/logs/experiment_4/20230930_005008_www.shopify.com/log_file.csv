@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.shopify.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.3319401741027832,0.1259000301361084,0.3633842468261719,200,OK,[''],16,16,2,"{""date"": ""Fri, 29 Sep 2023 22:50:12 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""cf-ray"": ""80e7c8a26fc30b66-AMS"", ""cf-cache-status"": ""HIT"", ""age"": ""2302"", ""cache-control"": ""max-age=900, stale-while-revalidate=86400"", ""last-modified"": ""Fri, 29 Sep 2023 22:11:50 GMT"", ""set-cookie"": ""__cf_bm=4kTQS2gk.t.LaDJMnNUis.Z6GFV9BWwKk9nu_XWH4p8-1696027812-0-AR6NqWlzpznJIB2XZ6hcFgbGtLqX/e8VaS/Nk2VFUeRLDJQiHLr6+u8Y074hi24OM/W2eh7ROHWvXuB/oNbGOuA=; path=/; expires=Fri, 29-Sep-23 23:20:12 GMT; domain=.www.shopify.com; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=15552000; includeSubDomains; preload"", ""x-content-type-options"": ""nosniff"", ""vary"": ""Accept-Encoding"", ""server"": ""cloudflare"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+1,"GET / HTTP/1.1
+Host: www.shopify.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.3253514766693115,0.11133956909179688,0.8898124694824219,200,OK,[''],14,14,0,"{""date"": ""Fri, 29 Sep 2023 22:50:16 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""cf-ray"": ""80e7c8ba79391cce-AMS"", ""cf-cache-status"": ""HIT"", ""age"": ""5750"", ""cache-control"": ""max-age=900, stale-while-revalidate=86400"", ""last-modified"": ""Fri, 29 Sep 2023 21:14:26 GMT"", ""set-cookie"": ""__cf_bm=NvPkbcIRE.6yR3LOyTThJFnhWQgTXoYRBGDr7K1OGaw-1696027816-0-AbtdkX1Eo/Zs7sQ181ONJcH7WNjdsaK2hXdks7NCsHPYXjbwy0JernAI8/Qsq5z0GOWUCXYnPH77YWqauwuSBPg=; path=/; expires=Fri, 29-Sep-23 23:20:16 GMT; domain=.www.shopify.com; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=15552000; includeSubDomains; preload"", ""x-content-type-options"": ""nosniff"", ""vary"": ""Accept-Encoding"", ""server"": ""cloudflare""}"
+2,"GET / HTTP/1.1
+Host: www.shopify.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.24211716651916504,0.14054012298583984,0.23290586471557617,200,OK,[''],14,14,0,"{""date"": ""Fri, 29 Sep 2023 22:50:19 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""cf-ray"": ""80e7c8d0dd550be3-AMS"", ""cf-cache-status"": ""HIT"", ""age"": ""357"", ""cache-control"": ""max-age=900, stale-while-revalidate=86400"", ""last-modified"": ""Fri, 29 Sep 2023 22:44:22 GMT"", ""set-cookie"": ""__cf_bm=fm.a9mXLa4tJFqIs6IkSXiFAoRfWHK7V_7jFXVcGFdg-1696027819-0-AR60LFkSlC/v9+0G83+e+AlLI0RtWIz+Wxboo4JU26s158TMxYFiyPbMJ1XQ5MhorCtczayF/RzVVmCgBRTuO6A=; path=/; expires=Fri, 29-Sep-23 23:20:19 GMT; domain=.www.shopify.com; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=15552000; includeSubDomains; preload"", ""x-content-type-options"": ""nosniff"", ""vary"": ""Accept-Encoding"", ""server"": ""cloudflar""}"
+3,"GET / HTTP/1.1
+Host: www.shopify.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.14373445510864258,0.11160516738891602,0.7247254848480225,200,OK,[''],16,16,2,"{""date"": ""Fri, 29 Sep 2023 22:50:23 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""cf-ray"": ""80e7c8e4bdc60b50-AMS"", ""cf-cache-status"": ""HIT"", ""age"": ""1055"", ""cache-control"": ""max-age=900, stale-while-revalidate=86400"", ""last-modified"": ""Fri, 29 Sep 2023 22:32:47 GMT"", ""set-cookie"": ""__cf_bm=190GPAFOvu8FYQ8w5Se7pDBZRvIOU5gW24iZCu6zyzo-1696027823-0-ARa6try4aYR7gjeLwm9D7JmHNpvruFTHEXYdXEFpkfaPR9DP+FOVn0msRMWPCkf1m7wlL4YO6W/Pr/dvsnrt/xs=; path=/; expires=Fri, 29-Sep-23 23:20:23 GMT; domain=.www.shopify.com; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=15552000; includeSubDomains; preload"", ""x-content-type-options"": ""nosniff"", ""vary"": ""Accept-Encoding"", ""server"": ""cloudflare"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+4,"GET / HTTP/1.1
+Host: www.shopify.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.2434101104736328,0.11345171928405762,0.28388428688049316,200,OK,[''],16,16,2,"{""date"": ""Fri, 29 Sep 2023 22:50:26 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""cf-ray"": ""80e7c8f9fa61b906-AMS"", ""cf-cache-status"": ""HIT"", ""age"": ""927"", ""cache-control"": ""max-age=900, stale-while-revalidate=86400"", ""last-modified"": ""Fri, 29 Sep 2023 22:34:59 GMT"", ""set-cookie"": ""__cf_bm=iKBz04cm9962kUt1hdtEDba5pbzsazMjBwpTaHRVGAE-1696027826-0-AYwLvbKRjkDvbiaV8Ycx/s+EEqIN3NP8VMFDUwds+Cte4Y5Ef6N0/el5gFQg/MBoOxDkUGyLdixpfNRiwCuH2Fo=; path=/; expires=Fri, 29-Sep-23 23:20:26 GMT; domain=.www.shopify.com; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=15552000; includeSubDomains; preload"", ""x-content-type-options"": ""nosniff"", ""vary"": ""Accept-Encoding"", ""server"": ""cloudflare"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+5,"GET / HTTP/1.1
+Host: www.shopify.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.18661785125732422,0.10866117477416992,0.9603374004364014,200,OK,[''],16,16,2,"{""date"": ""Fri, 29 Sep 2023 22:50:30 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""cf-ray"": ""80e7c90de9750a5d-AMS"", ""cf-cache-status"": ""HIT"", ""age"": ""2162"", ""cache-control"": ""max-age=900, stale-while-revalidate=86400"", ""last-modified"": ""Fri, 29 Sep 2023 22:14:27 GMT"", ""set-cookie"": ""__cf_bm=Ys5D2Tb1rNv3uTp_uzLK9Y38La6MnREEyjZ3m5GnbPQ-1696027830-0-ARS2v3yclWOiQXriFAAwwZugVB4sMFx69Sv7almgmkFVaO9MM3f02+1Lh8fvgF7EU4aFlIf5yFfjw4EsOJ+MwkA=; path=/; expires=Fri, 29-Sep-23 23:20:30 GMT; domain=.www.shopify.com; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=15552000; includeSubDomains; preload"", ""x-content-type-options"": ""nosniff"", ""vary"": ""Accept-Encoding"", ""server"": ""cloudflare"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+6,"GET / HTTP/1.1
+Host: www.shopify.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.11110091209411621,0.13640356063842773,0.9076635837554932,200,OK,[''],14,14,0,"{""date"": ""Fri, 29 Sep 2023 22:50:33 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""cf-ray"": ""80e7c9250b9bb75b-AMS"", ""cf-cache-status"": ""HIT"", ""age"": ""2327"", ""cache-control"": ""max-age=900, stale-while-revalidate=86400"", ""last-modified"": ""Fri, 29 Sep 2023 22:11:46 GMT"", ""set-cookie"": ""__cf_bm=c0VpEKObh3ZSwgw1JbJAPSV9x.skC0_gx2NPqIoM108-1696027833-0-AZv5ntgcBu/v3oBhVW30rtUroIRrw9BAL0fiSRhlcWZjxmbHYndtx5OG14IrOsaawzbjeNmsIbjkfq617StZXxs=; path=/; expires=Fri, 29-Sep-23 23:20:33 GMT; domain=.www.shopify.com; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=15552000; includeSubDomains; preload"", ""x-content-type-options"": ""nosniff"", ""vary"": ""Accept-Encoding"", ""server"": ""cloudflare""}"
+7,"GET / HTTP/1.1
+Host: www.shopify.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.19482421875,0.11617326736450195,0.2128770351409912,200,OK,[''],16,16,57,"{""date"": ""Fri, 29 Sep 2023 22:50:36 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""cf-ray"": ""80e7c93b39450b44-AMS"", ""cf-cache-status"": ""HIT"", ""age"": ""12"", ""cache-control"": ""max-age=900, stale-while-revalidate=86400"", ""last-modified"": ""Fri, 29 Sep 2023 22:50:24 GMT"", ""set-cookie"": ""__cf_bm=MvYjRLTX.nFna3WMqg02uFcWyzYEcRw.lAAwTCzKR28-1696027836-0-AUJfO7Tbj46jiNoTQ7s/CsyYNM6kgrjLP6b/l8LkvXQGxHt9asQO7+3ymAS9WFGLYavsKxe6O9Jmv1zPmfFdDzE=; path=/; expires=Fri, 29-Sep-23 23:20:36 GMT; domain=.www.shopify.com; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=15552000; includeSubDomains; preload"", ""x-content-type-options"": ""nosniff"", ""vary"": ""Accept-Encoding"", ""server"": ""cloudflare"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+8,"GET / HTTP/1.1
+Host: www.shopify.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.2500951290130615,0.10688042640686035,1.5385668277740479,200,OK,[''],16,16,2,"{""date"": ""Fri, 29 Sep 2023 22:50:41 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""cf-ray"": ""80e7c94e08861e95-AMS"", ""cf-cache-status"": ""HIT"", ""age"": ""923"", ""cache-control"": ""max-age=900, stale-while-revalidate=86400"", ""last-modified"": ""Fri, 29 Sep 2023 22:35:17 GMT"", ""set-cookie"": ""__cf_bm=5Ttisut6EdPOgpZzut_k6PTXJr560kLFxLibuKH.Ljo-1696027841-0-AbV+jMvCN8e5ScsRZABZY3b7hvN8DsiDNcW2FQukmIMGeJVJw1yAAHmI6tE0YVbdcdeqsRaXifHpqJuZYgLoF5g=; path=/; expires=Fri, 29-Sep-23 23:20:41 GMT; domain=.www.shopify.com; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=15552000; includeSubDomains; preload"", ""x-content-type-options"": ""nosniff"", ""vary"": ""Accept-Encoding"", ""server"": ""cloudflare"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+9,"GET / HTTP/1.1
+Host: www.shopify.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.15502142906188965,0.11253499984741211,0.2835981845855713,200,OK,[''],16,16,2,"{""date"": ""Fri, 29 Sep 2023 22:50:44 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""cf-ray"": ""80e7c9680a3d1c9e-AMS"", ""cf-cache-status"": ""HIT"", ""age"": ""954"", ""cache-control"": ""max-age=900, stale-while-revalidate=86400"", ""last-modified"": ""Fri, 29 Sep 2023 22:34:50 GMT"", ""set-cookie"": ""__cf_bm=75FR2IfSpvt4xfYq8WPCHdyd6YA5BBDVIBUbFlBZaD0-1696027844-0-AUUBoNpQvtEwO8nNoJUR7a0VdWB17CyVb6HJdewMBixGLGjsCOPjiQZ4u8xiBNY/hFDyZiPcPU0pBhGrxTij+Nc=; path=/; expires=Fri, 29-Sep-23 23:20:44 GMT; domain=.www.shopify.com; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=15552000; includeSubDomains; preload"", ""x-content-type-options"": ""nosniff"", ""vary"": ""Accept-Encoding"", ""server"": ""cloudflare"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"

@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.nginx.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.23249268531799316,0.11113214492797852,0.3923623561859131,200,OK,[''],16,16,14533,"{""date"": ""Fri, 29 Sep 2023 23:01:28 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""vary"": ""Accept-Encoding"", ""x-gateway-request-id"": ""4637b1eda81d804c6f60096a2825d0c1"", ""set-cookie"": ""TS01dc4fc6=01a636a08fe3cdf51fce52d15ede1ee4be8fb269199999228ca74d37154145cddd734c248b01c96dc8b325100abb0a8bec468483ec; Path=/; Secure; HttpOnly; SameSite=Strict;"", ""cache-control"": ""public, max-age=600"", ""link"": ""<https://www.nginx.com/>; rel=shortlink"", ""content-security-policy"": ""frame-ancestors 'self'"", ""x-gateway-cache-key"": ""1696021825.651|standard|https|www.nginx.com|||/|DE"", ""x-gateway-cache-status"": ""HIT"", ""x-gateway-skip-cache"": ""0"", ""content-encoding"": ""gzip"", ""x-envoy-upstream-service-time"": ""321"", ""strict-transport-security"": ""max-age=31536000"", ""server"": ""nginx"", ""transfer-encoding"": ""chunked""}"
+1,"GET / HTTP/1.1
+Host: www.nginx.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.18951988220214844,0.17572951316833496,0.4091064929962158,200,OK,[''],16,16,14533,"{""date"": ""Fri, 29 Sep 2023 23:01:30 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""vary"": ""Accept-Encoding"", ""x-gateway-request-id"": ""a9e1f3053dcad426234de829e2adb220"", ""set-cookie"": ""TS01dc4fc6=017a10f07052b83423fa90344698eae022e91378f8a3a6e01a5a203aec517768d6b800517fceffe3d5e506f3d9d6e2749380d5fb06; Path=/; Secure; HttpOnly; SameSite=Strict;"", ""cache-control"": ""public, max-age=600"", ""link"": ""<https://www.nginx.com/>; rel=shortlink"", ""content-security-policy"": ""frame-ancestors 'self'"", ""x-gateway-cache-key"": ""1696021825.656|standard|https|www.nginx.com|||/|DE"", ""x-gateway-cache-status"": ""HIT"", ""x-gateway-skip-cache"": ""0"", ""content-encoding"": ""gzip"", ""x-envoy-upstream-service-time"": ""323"", ""strict-transport-security"": ""max-age=31536000"", ""server"": ""nginx"", ""transfer-encoding"": ""chunked""}"
+2,"GET / HTTP/1.1
+Host: www.nginx.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.26537632942199707,0.10221624374389648,0.4012420177459717,200,OK,[''],16,16,14533,"{""date"": ""Fri, 29 Sep 2023 23:01:33 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""vary"": ""Accept-Encoding"", ""x-gateway-request-id"": ""2ed9ea45da55d6906a7c5f6fdfd44616"", ""set-cookie"": ""TS01dc4fc6=01a46b0559ed77765a29ef497e937ebda9f2df0ebc50950da600c6afa8baa3c478c3657185bb4bc96ff09c4ac0ef3f525393d46e27; Path=/; Secure; HttpOnly; SameSite=Strict;"", ""cache-control"": ""public, max-age=600"", ""link"": ""<https://www.nginx.com/>; rel=shortlink"", ""content-security-policy"": ""frame-ancestors 'self'"", ""x-gateway-cache-key"": ""1696021825.656|standard|https|www.nginx.com|||/|DE"", ""x-gateway-cache-status"": ""HIT"", ""x-gateway-skip-cache"": ""0"", ""content-encoding"": ""gzip"", ""x-envoy-upstream-service-time"": ""321"", ""strict-transport-security"": ""max-age=31536000"", ""server"": ""nginx"", ""transfer-encoding"": ""chunked""}"
+3,"GET / HTTP/1.1
+Host: www.nginx.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.17026329040527344,0.12746644020080566,0.3794536590576172,200,OK,[''],16,16,14533,"{""date"": ""Fri, 29 Sep 2023 23:01:35 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""vary"": ""Accept-Encoding"", ""x-gateway-request-id"": ""5ef758a2170b83e32b3f0fa273c7a65b"", ""set-cookie"": ""TS01dc4fc6=01a46b05590df0c1b5a0c65c09d25d419e42d1a3d3ebd500633ff3b91df9b608654e25c94cf8490c2ef32a32d8c73f277c3a488f9e; Path=/; Secure; HttpOnly; SameSite=Strict;"", ""cache-control"": ""public, max-age=600"", ""link"": ""<https://www.nginx.com/>; rel=shortlink"", ""content-security-policy"": ""frame-ancestors 'self'"", ""x-gateway-cache-key"": ""1696021825.656|standard|https|www.nginx.com|||/|DE"", ""x-gateway-cache-status"": ""HIT"", ""x-gateway-skip-cache"": ""0"", ""content-encoding"": ""gzip"", ""x-envoy-upstream-service-time"": ""320"", ""strict-transport-security"": ""max-age=31536000"", ""server"": ""nginx"", ""transfer-encoding"": ""chunked""}"
+4,"GET / HTTP/1.1
+Host: www.nginx.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.22696208953857422,0.10034060478210449,0.3872649669647217,200,OK,[''],16,16,14533,"{""date"": ""Fri, 29 Sep 2023 23:01:37 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""vary"": ""Accept-Encoding"", ""x-gateway-request-id"": ""dd437a47cdd055faee441abb444b3a24"", ""set-cookie"": ""TS01dc4fc6=01a1b13a8a3f7e1f576b24768bfe7adeba2f1ad2285192fad365504f7a6ebb68bb6ffc5ebce6b73c25b18845242efd2dbf9f06cc1e; Path=/; Secure; HttpOnly; SameSite=Strict;"", ""cache-control"": ""public, max-age=600"", ""link"": ""<https://www.nginx.com/>; rel=shortlink"", ""content-security-policy"": ""frame-ancestors 'self'"", ""x-gateway-cache-key"": ""1696021825.651|standard|https|www.nginx.com|||/|DE"", ""x-gateway-cache-status"": ""HIT"", ""x-gateway-skip-cache"": ""0"", ""content-encoding"": ""gzip"", ""x-envoy-upstream-service-time"": ""320"", ""strict-transport-security"": ""max-age=31536000"", ""server"": ""nginx"", ""transfer-encoding"": ""chunked""}"
+5,"GET / HTTP/1.1
+Host: www.nginx.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.16408014297485352,0.11930155754089355,0.3810465335845947,200,OK,[''],16,16,14533,"{""date"": ""Fri, 29 Sep 2023 23:01:40 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""vary"": ""Accept-Encoding"", ""x-gateway-request-id"": ""59e3992653d03f93215f35a2102b053f"", ""set-cookie"": ""TS01dc4fc6=01df706257e36e2c542839882740b82d5bcb30f09ece783418902ced081d1399c0035aa004405d0676b16329fc48535d4b2057a9a7; Path=/; Secure; HttpOnly; SameSite=Strict;"", ""cache-control"": ""public, max-age=600"", ""link"": ""<https://www.nginx.com/>; rel=shortlink"", ""content-security-policy"": ""frame-ancestors 'self'"", ""x-gateway-cache-key"": ""1696021825.656|standard|https|www.nginx.com|||/|DE"", ""x-gateway-cache-status"": ""HIT"", ""x-gateway-skip-cache"": ""0"", ""content-encoding"": ""gzip"", ""x-envoy-upstream-service-time"": ""319"", ""strict-transport-security"": ""max-age=31536000"", ""server"": ""nginx"", ""transfer-encoding"": ""chunked""}"
+6,"GET / HTTP/1.1
+Host: www.nginx.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.34337592124938965,0.13327813148498535,0.3815453052520752,200,OK,[''],16,16,14533,"{""date"": ""Fri, 29 Sep 2023 23:01:42 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""vary"": ""Accept-Encoding"", ""x-gateway-request-id"": ""fefafcb5a8dbacb6be6782f10484df57"", ""set-cookie"": ""TS01dc4fc6=014e1f31cef1ba9ce215f98fcfe35d33aafafc6e6e2453cf2e5f679323effb30450b28f62e081dc2effa49381645d4d8425e436cc0; Path=/; Secure; HttpOnly; SameSite=Strict;"", ""cache-control"": ""public, max-age=600"", ""link"": ""<https://www.nginx.com/>; rel=shortlink"", ""content-security-policy"": ""frame-ancestors 'self'"", ""x-gateway-cache-key"": ""1696021825.651|standard|https|www.nginx.com|||/|DE"", ""x-gateway-cache-status"": ""HIT"", ""x-gateway-skip-cache"": ""0"", ""content-encoding"": ""gzip"", ""x-envoy-upstream-service-time"": ""320"", ""strict-transport-security"": ""max-age=31536000"", ""server"": ""nginx"", ""transfer-encoding"": ""chunked""}"
+7,"GET / HTTP/1.1
+Host: www.nginx.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.20409870147705078,0.10668373107910156,0.38628268241882324,200,OK,[''],16,16,14533,"{""date"": ""Fri, 29 Sep 2023 23:01:45 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""vary"": ""Accept-Encoding"", ""x-gateway-request-id"": ""c03c64e15b8bd7d1eb595cf7dc1a2596"", ""set-cookie"": ""TS01dc4fc6=01a636a08fd20e12b405778ded140809cbf29acd26ca737b7f6960081482a6413fdfc03981834b1d54bcdeb44f4f188fec74cf2bcd; Path=/; Secure; HttpOnly; SameSite=Strict;"", ""cache-control"": ""public, max-age=600"", ""link"": ""<https://www.nginx.com/>; rel=shortlink"", ""content-security-policy"": ""frame-ancestors 'self'"", ""x-gateway-cache-key"": ""1696021825.651|standard|https|www.nginx.com|||/|DE"", ""x-gateway-cache-status"": ""HIT"", ""x-gateway-skip-cache"": ""0"", ""content-encoding"": ""gzip"", ""x-envoy-upstream-service-time"": ""321"", ""strict-transport-security"": ""max-age=31536000"", ""server"": ""nginx"", ""transfer-encoding"": ""chunked""}"
+8,"GET / HTTP/1.1
+Host: www.nginx.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.18223881721496582,0.1321580410003662,0.3795509338378906,200,OK,[''],16,16,14533,"{""date"": ""Fri, 29 Sep 2023 23:01:47 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""vary"": ""Accept-Encoding"", ""x-gateway-request-id"": ""210d263810a8b9c7d19b7c3cf9927ee2"", ""set-cookie"": ""TS01dc4fc6=012b2acd66d4a791411c7f8674a512c015d56e6133a3588ce692479836bd9063f70a1808907778d41dd9e72541363bcd9a47c6eb48; Path=/; Secure; HttpOnly; SameSite=Strict;"", ""cache-control"": ""public, max-age=600"", ""link"": ""<https://www.nginx.com/>; rel=shortlink"", ""content-security-policy"": ""frame-ancestors 'self'"", ""x-gateway-cache-key"": ""1696021825.656|standard|https|www.nginx.com|||/|DE"", ""x-gateway-cache-status"": ""HIT"", ""x-gateway-skip-cache"": ""0"", ""content-encoding"": ""gzip"", ""x-envoy-upstream-service-time"": ""318"", ""strict-transport-security"": ""max-age=31536000"", ""server"": ""nginx"", ""transfer-encoding"": ""chunked""}"
+9,"GET / HTTP/1.1
+Host: www.nginx.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.5344464778900146,0.11066412925720215,0.4025709629058838,200,OK,[''],16,16,14533,"{""date"": ""Fri, 29 Sep 2023 23:01:50 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""vary"": ""Accept-Encoding"", ""x-gateway-request-id"": ""08984570b993189b6a9b2eb55653f707"", ""set-cookie"": ""TS01dc4fc6=0159dbfd4c12a27760854a496c906f0055f3af02bc7560da7605e100e1ef4803bd6a3073b21f5cf5030cfe8570a2313c3ba77dde82; Path=/; Secure; HttpOnly; SameSite=Strict;"", ""cache-control"": ""public, max-age=600"", ""link"": ""<https://www.nginx.com/>; rel=shortlink"", ""content-security-policy"": ""frame-ancestors 'self'"", ""x-gateway-cache-key"": ""1696021825.651|standard|https|www.nginx.com|||/|DE"", ""x-gateway-cache-status"": ""HIT"", ""x-gateway-skip-cache"": ""0"", ""content-encoding"": ""gzip"", ""x-envoy-upstream-service-time"": ""319"", ""strict-transport-security"": ""max-age=31536000"", ""server"": ""nginx"", ""transfer-encoding"": ""chunked""}"

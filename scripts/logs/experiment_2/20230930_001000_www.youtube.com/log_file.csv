@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.youtube.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.15747785568237305,0.10666394233703613,0.09108400344848633,200,OK,[''],19,19,0,"{""content-type"": ""text/html; charset=utf-8"", ""x-content-type-options"": ""nosniff"", ""cache-control"": ""no-cache, no-store, max-age=0, must-revalidate"", ""pragma"": ""no-cache"", ""expires"": ""Mon, 01 Jan 1990 00:00:00 GMT"", ""date"": ""Fri, 29 Sep 2023 22:10:03 GMT"", ""strict-transport-security"": ""max-age=31536000"", ""x-frame-options"": ""SAMEORIGIN"", ""cross-origin-opener-policy-report-only"": ""same-origin-allow-popups; report-to=\""youtube_main\"""", ""permissions-policy"": ""ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*"", ""report-to"": ""{\""group\"":\""youtube_main\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/youtube_main\""}]}"", ""origin-trial"": ""AvC9UlR6RDk2crliDsFl66RWLnTbHrDbp+DiY6AYz/PNQ4G4tdUTjrHYr2sghbkhGQAVxb7jaPTHpEVBz0uzQwkAAAB4eyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWaWV3WFJlcXVlc3RlZFdpdGhEZXByZWNhdGlvbiIsImV4cGlyeSI6MTcxOTUzMjc5OSwiaXNTdWJkb21haW4iOnRydWV9"", ""p3p"": ""CP=\""This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en for more info.\"""", ""content-encoding"": ""br"", ""transfer-encoding"": ""chunked"", ""server"": ""ESF"", ""x-xss-protection"": ""0"", ""set-cookie"": ""CONSENT=PENDING+657; expires=Sun, 28-Sep-2025 22:10:03 GMT; path=/; domain=.youtube.com; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+1,"GET / HTTP/1.1
+Host: www.youtube.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.09037113189697266,0.10660719871520996,0.10091638565063477,200,OK,[''],19,19,0,"{""content-type"": ""text/html; charset=utf-8"", ""x-content-type-options"": ""nosniff"", ""cache-control"": ""no-cache, no-store, max-age=0, must-revalidate"", ""pragma"": ""no-cache"", ""expires"": ""Mon, 01 Jan 1990 00:00:00 GMT"", ""date"": ""Fri, 29 Sep 2023 22:10:05 GMT"", ""strict-transport-security"": ""max-age=31536000"", ""x-frame-options"": ""SAMEORIGIN"", ""origin-trial"": ""AvC9UlR6RDk2crliDsFl66RWLnTbHrDbp+DiY6AYz/PNQ4G4tdUTjrHYr2sghbkhGQAVxb7jaPTHpEVBz0uzQwkAAAB4eyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWaWV3WFJlcXVlc3RlZFdpdGhEZXByZWNhdGlvbiIsImV4cGlyeSI6MTcxOTUzMjc5OSwiaXNTdWJkb21haW4iOnRydWV9"", ""cross-origin-opener-policy"": ""same-origin-allow-popups; report-to=\""youtube_main\"""", ""report-to"": ""{\""group\"":\""youtube_main\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/youtube_main\""}]}"", ""permissions-policy"": ""ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*"", ""p3p"": ""CP=\""This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en for more info.\"""", ""content-encoding"": ""br"", ""transfer-encoding"": ""chunked"", ""server"": ""ESF"", ""x-xss-protection"": ""0"", ""set-cookie"": ""CONSENT=PENDING+096; expires=Sun, 28-Sep-2025 22:10:05 GMT; path=/; domain=.youtube.com; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+2,"GET / HTTP/1.1
+Host: www.youtube.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.23549652099609375,0.1103048324584961,0.06147193908691406,200,OK,[''],19,19,0,"{""content-type"": ""text/html; charset=utf-8"", ""x-content-type-options"": ""nosniff"", ""cache-control"": ""no-cache, no-store, max-age=0, must-revalidate"", ""pragma"": ""no-cache"", ""expires"": ""Mon, 01 Jan 1990 00:00:00 GMT"", ""date"": ""Fri, 29 Sep 2023 22:10:07 GMT"", ""x-frame-options"": ""SAMEORIGIN"", ""strict-transport-security"": ""max-age=31536000"", ""permissions-policy"": ""ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*"", ""cross-origin-opener-policy"": ""same-origin-allow-popups; report-to=\""youtube_main\"""", ""origin-trial"": ""AvC9UlR6RDk2crliDsFl66RWLnTbHrDbp+DiY6AYz/PNQ4G4tdUTjrHYr2sghbkhGQAVxb7jaPTHpEVBz0uzQwkAAAB4eyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWaWV3WFJlcXVlc3RlZFdpdGhEZXByZWNhdGlvbiIsImV4cGlyeSI6MTcxOTUzMjc5OSwiaXNTdWJkb21haW4iOnRydWV9"", ""report-to"": ""{\""group\"":\""youtube_main\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/youtube_main\""}]}"", ""p3p"": ""CP=\""This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en for more info.\"""", ""content-encoding"": ""br"", ""transfer-encoding"": ""chunked"", ""server"": ""ESF"", ""x-xss-protection"": ""0"", ""set-cookie"": ""CONSENT=PENDING+148; expires=Sun, 28-Sep-2025 22:10:07 GMT; path=/; domain=.youtube.com; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+3,"GET / HTTP/1.1
+Host: www.youtube.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.2089393138885498,0.10137295722961426,0.11011195182800293,200,OK,[''],19,19,0,"{""content-type"": ""text/html; charset=utf-8"", ""x-content-type-options"": ""nosniff"", ""cache-control"": ""no-cache, no-store, max-age=0, must-revalidate"", ""pragma"": ""no-cache"", ""expires"": ""Mon, 01 Jan 1990 00:00:00 GMT"", ""date"": ""Fri, 29 Sep 2023 22:10:09 GMT"", ""strict-transport-security"": ""max-age=31536000"", ""x-frame-options"": ""SAMEORIGIN"", ""origin-trial"": ""AvC9UlR6RDk2crliDsFl66RWLnTbHrDbp+DiY6AYz/PNQ4G4tdUTjrHYr2sghbkhGQAVxb7jaPTHpEVBz0uzQwkAAAB4eyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWaWV3WFJlcXVlc3RlZFdpdGhEZXByZWNhdGlvbiIsImV4cGlyeSI6MTcxOTUzMjc5OSwiaXNTdWJkb21haW4iOnRydWV9"", ""permissions-policy"": ""ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*"", ""cross-origin-opener-policy-report-only"": ""same-origin-allow-popups; report-to=\""youtube_main\"""", ""report-to"": ""{\""group\"":\""youtube_main\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/youtube_main\""}]}"", ""p3p"": ""CP=\""This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en for more info.\"""", ""content-encoding"": ""br"", ""transfer-encoding"": ""chunked"", ""server"": ""ESF"", ""x-xss-protection"": ""0"", ""set-cookie"": ""CONSENT=PENDING+047; expires=Sun, 28-Sep-2025 22:10:09 GMT; path=/; domain=.youtube.com; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+4,"GET / HTTP/1.1
+Host: www.youtube.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.15752458572387695,0.11389327049255371,0.08385896682739258,200,OK,[''],19,19,0,"{""content-type"": ""text/html; charset=utf-8"", ""x-content-type-options"": ""nosniff"", ""cache-control"": ""no-cache, no-store, max-age=0, must-revalidate"", ""pragma"": ""no-cache"", ""expires"": ""Mon, 01 Jan 1990 00:00:00 GMT"", ""date"": ""Fri, 29 Sep 2023 22:10:12 GMT"", ""x-frame-options"": ""SAMEORIGIN"", ""strict-transport-security"": ""max-age=31536000"", ""permissions-policy"": ""ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*"", ""cross-origin-opener-policy"": ""same-origin-allow-popups; report-to=\""youtube_main\"""", ""report-to"": ""{\""group\"":\""youtube_main\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/youtube_main\""}]}"", ""origin-trial"": ""AvC9UlR6RDk2crliDsFl66RWLnTbHrDbp+DiY6AYz/PNQ4G4tdUTjrHYr2sghbkhGQAVxb7jaPTHpEVBz0uzQwkAAAB4eyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWaWV3WFJlcXVlc3RlZFdpdGhEZXByZWNhdGlvbiIsImV4cGlyeSI6MTcxOTUzMjc5OSwiaXNTdWJkb21haW4iOnRydWV9"", ""p3p"": ""CP=\""This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en for more info.\"""", ""content-encoding"": ""br"", ""transfer-encoding"": ""chunked"", ""server"": ""ESF"", ""x-xss-protection"": ""0"", ""set-cookie"": ""CONSENT=PENDING+771; expires=Sun, 28-Sep-2025 22:10:12 GMT; path=/; domain=.youtube.com; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+5,"GET / HTTP/1.1
+Host: www.youtube.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.18230319023132324,0.16559529304504395,0.060565948486328125,200,OK,[''],19,19,0,"{""content-type"": ""text/html; charset=utf-8"", ""x-content-type-options"": ""nosniff"", ""cache-control"": ""no-cache, no-store, max-age=0, must-revalidate"", ""pragma"": ""no-cache"", ""expires"": ""Mon, 01 Jan 1990 00:00:00 GMT"", ""date"": ""Fri, 29 Sep 2023 22:10:14 GMT"", ""x-frame-options"": ""SAMEORIGIN"", ""strict-transport-security"": ""max-age=31536000"", ""origin-trial"": ""AvC9UlR6RDk2crliDsFl66RWLnTbHrDbp+DiY6AYz/PNQ4G4tdUTjrHYr2sghbkhGQAVxb7jaPTHpEVBz0uzQwkAAAB4eyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWaWV3WFJlcXVlc3RlZFdpdGhEZXByZWNhdGlvbiIsImV4cGlyeSI6MTcxOTUzMjc5OSwiaXNTdWJkb21haW4iOnRydWV9"", ""cross-origin-opener-policy-report-only"": ""same-origin-allow-popups; report-to=\""youtube_main\"""", ""permissions-policy"": ""ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*"", ""report-to"": ""{\""group\"":\""youtube_main\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/youtube_main\""}]}"", ""p3p"": ""CP=\""This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en for more info.\"""", ""content-encoding"": ""br"", ""transfer-encoding"": ""chunked"", ""server"": ""ESF"", ""x-xss-protection"": ""0"", ""set-cookie"": ""CONSENT=PENDING+364; expires=Sun, 28-Sep-2025 22:10:14 GMT; path=/; domain=.youtube.com; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+6,"GET / HTTP/1.1
+Host: www.youtube.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.1243288516998291,0.11043143272399902,0.05865168571472168,200,OK,[''],19,19,0,"{""content-type"": ""text/html; charset=utf-8"", ""x-content-type-options"": ""nosniff"", ""cache-control"": ""no-cache, no-store, max-age=0, must-revalidate"", ""pragma"": ""no-cache"", ""expires"": ""Mon, 01 Jan 1990 00:00:00 GMT"", ""date"": ""Fri, 29 Sep 2023 22:10:16 GMT"", ""x-frame-options"": ""SAMEORIGIN"", ""strict-transport-security"": ""max-age=31536000"", ""origin-trial"": ""AvC9UlR6RDk2crliDsFl66RWLnTbHrDbp+DiY6AYz/PNQ4G4tdUTjrHYr2sghbkhGQAVxb7jaPTHpEVBz0uzQwkAAAB4eyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWaWV3WFJlcXVlc3RlZFdpdGhEZXByZWNhdGlvbiIsImV4cGlyeSI6MTcxOTUzMjc5OSwiaXNTdWJkb21haW4iOnRydWV9"", ""report-to"": ""{\""group\"":\""youtube_main\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/youtube_main\""}]}"", ""cross-origin-opener-policy-report-only"": ""same-origin-allow-popups; report-to=\""youtube_main\"""", ""permissions-policy"": ""ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*"", ""p3p"": ""CP=\""This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en for more info.\"""", ""content-encoding"": ""br"", ""transfer-encoding"": ""chunked"", ""server"": ""ESF"", ""x-xss-protection"": ""0"", ""set-cookie"": ""CONSENT=PENDING+025; expires=Sun, 28-Sep-2025 22:10:16 GMT; path=/; domain=.youtube.com; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+7,"GET / HTTP/1.1
+Host: www.youtube.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.19127678871154785,0.11513710021972656,0.06289792060852051,200,OK,[''],19,19,0,"{""content-type"": ""text/html; charset=utf-8"", ""x-content-type-options"": ""nosniff"", ""cache-control"": ""no-cache, no-store, max-age=0, must-revalidate"", ""pragma"": ""no-cache"", ""expires"": ""Mon, 01 Jan 1990 00:00:00 GMT"", ""date"": ""Fri, 29 Sep 2023 22:10:19 GMT"", ""strict-transport-security"": ""max-age=31536000"", ""x-frame-options"": ""SAMEORIGIN"", ""cross-origin-opener-policy"": ""same-origin-allow-popups; report-to=\""youtube_main\"""", ""permissions-policy"": ""ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*"", ""origin-trial"": ""AvC9UlR6RDk2crliDsFl66RWLnTbHrDbp+DiY6AYz/PNQ4G4tdUTjrHYr2sghbkhGQAVxb7jaPTHpEVBz0uzQwkAAAB4eyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWaWV3WFJlcXVlc3RlZFdpdGhEZXByZWNhdGlvbiIsImV4cGlyeSI6MTcxOTUzMjc5OSwiaXNTdWJkb21haW4iOnRydWV9"", ""report-to"": ""{\""group\"":\""youtube_main\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/youtube_main\""}]}"", ""p3p"": ""CP=\""This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en for more info.\"""", ""content-encoding"": ""br"", ""transfer-encoding"": ""chunked"", ""server"": ""ESF"", ""x-xss-protection"": ""0"", ""set-cookie"": ""CONSENT=PENDING+082; expires=Sun, 28-Sep-2025 22:10:19 GMT; path=/; domain=.youtube.com; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+8,"GET / HTTP/1.1
+Host: www.youtube.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.1544947624206543,0.10590720176696777,0.07059097290039062,200,OK,[''],19,19,0,"{""content-type"": ""text/html; charset=utf-8"", ""x-content-type-options"": ""nosniff"", ""cache-control"": ""no-cache, no-store, max-age=0, must-revalidate"", ""pragma"": ""no-cache"", ""expires"": ""Mon, 01 Jan 1990 00:00:00 GMT"", ""date"": ""Fri, 29 Sep 2023 22:10:21 GMT"", ""x-frame-options"": ""SAMEORIGIN"", ""strict-transport-security"": ""max-age=31536000"", ""permissions-policy"": ""ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*"", ""origin-trial"": ""AvC9UlR6RDk2crliDsFl66RWLnTbHrDbp+DiY6AYz/PNQ4G4tdUTjrHYr2sghbkhGQAVxb7jaPTHpEVBz0uzQwkAAAB4eyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWaWV3WFJlcXVlc3RlZFdpdGhEZXByZWNhdGlvbiIsImV4cGlyeSI6MTcxOTUzMjc5OSwiaXNTdWJkb21haW4iOnRydWV9"", ""cross-origin-opener-policy-report-only"": ""same-origin-allow-popups; report-to=\""youtube_main\"""", ""report-to"": ""{\""group\"":\""youtube_main\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/youtube_main\""}]}"", ""p3p"": ""CP=\""This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en for more info.\"""", ""content-encoding"": ""br"", ""transfer-encoding"": ""chunked"", ""server"": ""ESF"", ""x-xss-protection"": ""0"", ""set-cookie"": ""CONSENT=PENDING+241; expires=Sun, 28-Sep-2025 22:10:21 GMT; path=/; domain=.youtube.com; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+9,"GET / HTTP/1.1
+Host: www.youtube.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.1797199249267578,0.11281108856201172,0.08987212181091309,200,OK,[''],19,19,0,"{""content-type"": ""text/html; charset=utf-8"", ""x-content-type-options"": ""nosniff"", ""cache-control"": ""no-cache, no-store, max-age=0, must-revalidate"", ""pragma"": ""no-cache"", ""expires"": ""Mon, 01 Jan 1990 00:00:00 GMT"", ""date"": ""Fri, 29 Sep 2023 22:10:24 GMT"", ""x-frame-options"": ""SAMEORIGIN"", ""strict-transport-security"": ""max-age=31536000"", ""permissions-policy"": ""ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*"", ""cross-origin-opener-policy"": ""same-origin-allow-popups; report-to=\""youtube_main\"""", ""report-to"": ""{\""group\"":\""youtube_main\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/youtube_main\""}]}"", ""origin-trial"": ""AvC9UlR6RDk2crliDsFl66RWLnTbHrDbp+DiY6AYz/PNQ4G4tdUTjrHYr2sghbkhGQAVxb7jaPTHpEVBz0uzQwkAAAB4eyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWaWV3WFJlcXVlc3RlZFdpdGhEZXByZWNhdGlvbiIsImV4cGlyeSI6MTcxOTUzMjc5OSwiaXNTdWJkb21haW4iOnRydWV9"", ""p3p"": ""CP=\""This is not a P3P policy! See http://support.google.com/accounts/answer/151657?hl=en for more info.\"""", ""content-encoding"": ""br"", ""transfer-encoding"": ""chunked"", ""server"": ""ESF"", ""x-xss-protection"": ""0"", ""set-cookie"": ""CONSENT=PENDING+675; expires=Sun, 28-Sep-2025 22:10:24 GMT; path=/; domain=.youtube.com; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"

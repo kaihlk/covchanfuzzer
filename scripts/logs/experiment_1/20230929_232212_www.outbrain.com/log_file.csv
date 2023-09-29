@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.outbrain.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.13605785369873047,0.12603139877319336,0.24176549911499023,200,OK,[''],13,13,1297,"{""content-type"": ""text/html; charset=utf-8"", ""content-encoding"": ""gzip"", ""etag"": ""W/\""df7c-xgZGIj80BDn4lmcWqwWF9qtiRxk\"""", ""strict-transport-security"": ""max-age=86400"", ""vary"": ""Accept-Encoding"", ""x-frame-options"": ""SAMEORIGIN"", ""x-traceid"": ""9af7e0ff072eebc1e80fc7cd25a98590"", ""content-length"": ""12143"", ""expires"": ""Fri, 29 Sep 2023 21:22:16 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 21:22:16 GMT"", ""connection"": ""keep-alive""}"
+1,"GET / HTTP/1.1
+Host: www.outbrain.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.21636581420898438,0.1127786636352539,0.26129698753356934,200,OK,[''],13,13,1297,"{""content-type"": ""text/html; charset=utf-8"", ""content-encoding"": ""gzip"", ""etag"": ""W/\""df7c-xgZGIj80BDn4lmcWqwWF9qtiRxk\"""", ""strict-transport-security"": ""max-age=86400"", ""vary"": ""Accept-Encoding"", ""x-frame-options"": ""SAMEORIGIN"", ""x-traceid"": ""fa38a255cb66fcb59a6a4690291e820a"", ""content-length"": ""12143"", ""expires"": ""Fri, 29 Sep 2023 21:22:19 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 21:22:19 GMT"", ""connection"": ""keep-alive""}"
+2,"GET / HTTP/1.1
+Host: www.outbrain.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.2408139705657959,0.10078573226928711,0.25056004524230957,200,OK,[''],13,13,1297,"{""content-type"": ""text/html; charset=utf-8"", ""content-encoding"": ""gzip"", ""etag"": ""W/\""df7c-xgZGIj80BDn4lmcWqwWF9qtiRxk\"""", ""strict-transport-security"": ""max-age=86400"", ""vary"": ""Accept-Encoding"", ""x-frame-options"": ""SAMEORIGIN"", ""x-traceid"": ""7603000806b1ef96dc8c1a1bda9c1d65"", ""content-length"": ""12143"", ""expires"": ""Fri, 29 Sep 2023 21:22:22 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 21:22:22 GMT"", ""connection"": ""keep-alive""}"
+3,"GET / HTTP/1.1
+Host: www.outbrain.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.22978496551513672,0.11034035682678223,0.2386491298675537,200,OK,[''],13,13,1297,"{""content-type"": ""text/html; charset=utf-8"", ""content-encoding"": ""gzip"", ""etag"": ""W/\""df7c-xgZGIj80BDn4lmcWqwWF9qtiRxk\"""", ""strict-transport-security"": ""max-age=86400"", ""vary"": ""Accept-Encoding"", ""x-frame-options"": ""SAMEORIGIN"", ""x-traceid"": ""bfe553a8dd9d18b76b2242527e743353"", ""content-length"": ""12143"", ""expires"": ""Fri, 29 Sep 2023 21:22:25 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 21:22:25 GMT"", ""connection"": ""keep-alive""}"
+4,"GET / HTTP/1.1
+Host: www.outbrain.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.17485642433166504,0.11339020729064941,0.2397761344909668,200,OK,[''],13,13,1297,"{""content-type"": ""text/html; charset=utf-8"", ""content-encoding"": ""gzip"", ""etag"": ""W/\""df7c-xgZGIj80BDn4lmcWqwWF9qtiRxk\"""", ""strict-transport-security"": ""max-age=86400"", ""vary"": ""Accept-Encoding"", ""x-frame-options"": ""SAMEORIGIN"", ""x-traceid"": ""d0c1898462630856fdbe7d55ce863e01"", ""content-length"": ""12143"", ""expires"": ""Fri, 29 Sep 2023 21:22:28 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 21:22:28 GMT"", ""connection"": ""keep-alive""}"
+5,"GET / HTTP/1.1
+Host: www.outbrain.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.14893698692321777,0.12699151039123535,0.22933077812194824,200,OK,[''],13,13,1298,"{""content-type"": ""text/html; charset=utf-8"", ""content-encoding"": ""gzip"", ""etag"": ""W/\""df7c-xgZGIj80BDn4lmcWqwWF9qtiRxk\"""", ""strict-transport-security"": ""max-age=86400"", ""vary"": ""Accept-Encoding"", ""x-frame-options"": ""SAMEORIGIN"", ""x-traceid"": ""e3b1fafa8b8e03f31b9cd43f401258d"", ""content-length"": ""12143"", ""expires"": ""Fri, 29 Sep 2023 21:22:31 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 21:22:31 GMT"", ""connection"": ""keep-alive""}"
+6,"GET / HTTP/1.1
+Host: www.outbrain.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.1843249797821045,0.16518950462341309,0.24582314491271973,200,OK,[''],13,13,1297,"{""content-type"": ""text/html; charset=utf-8"", ""content-encoding"": ""gzip"", ""etag"": ""W/\""df7c-xgZGIj80BDn4lmcWqwWF9qtiRxk\"""", ""strict-transport-security"": ""max-age=86400"", ""vary"": ""Accept-Encoding"", ""x-frame-options"": ""SAMEORIGIN"", ""x-traceid"": ""3b647ecc759558ecfb67870b1f81dc6f"", ""content-length"": ""12143"", ""expires"": ""Fri, 29 Sep 2023 21:22:33 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 21:22:33 GMT"", ""connection"": ""keep-alive""}"
+7,"GET / HTTP/1.1
+Host: www.outbrain.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.08380460739135742,0.1471083164215088,0.23854827880859375,200,OK,[''],13,13,1298,"{""content-type"": ""text/html; charset=utf-8"", ""content-encoding"": ""gzip"", ""etag"": ""W/\""df7c-xgZGIj80BDn4lmcWqwWF9qtiRxk\"""", ""strict-transport-security"": ""max-age=86400"", ""vary"": ""Accept-Encoding"", ""x-frame-options"": ""SAMEORIGIN"", ""x-traceid"": ""e0d964895d1ea264fe6cc9b32081878"", ""content-length"": ""12143"", ""expires"": ""Fri, 29 Sep 2023 21:22:36 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 21:22:36 GMT"", ""connection"": ""keep-alive""}"
+8,"GET / HTTP/1.1
+Host: www.outbrain.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.1265246868133545,0.11699104309082031,0.25963926315307617,200,OK,[''],13,13,1297,"{""content-type"": ""text/html; charset=utf-8"", ""content-encoding"": ""gzip"", ""etag"": ""W/\""df7c-xgZGIj80BDn4lmcWqwWF9qtiRxk\"""", ""strict-transport-security"": ""max-age=86400"", ""vary"": ""Accept-Encoding"", ""x-frame-options"": ""SAMEORIGIN"", ""x-traceid"": ""67645b60b32a950e7ee028db4d5a6cf4"", ""content-length"": ""12143"", ""expires"": ""Fri, 29 Sep 2023 21:22:38 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 21:22:38 GMT"", ""connection"": ""keep-alive""}"
+9,"GET / HTTP/1.1
+Host: www.outbrain.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.12514710426330566,0.10599946975708008,0.22945523262023926,200,OK,[''],13,13,1297,"{""content-type"": ""text/html; charset=utf-8"", ""content-encoding"": ""gzip"", ""etag"": ""W/\""df7c-xgZGIj80BDn4lmcWqwWF9qtiRxk\"""", ""strict-transport-security"": ""max-age=86400"", ""vary"": ""Accept-Encoding"", ""x-frame-options"": ""SAMEORIGIN"", ""x-traceid"": ""829442c054e0f72bf468ad94c1206a51"", ""content-length"": ""12143"", ""expires"": ""Fri, 29 Sep 2023 21:22:41 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 21:22:41 GMT"", ""connection"": ""keep-alive""}"

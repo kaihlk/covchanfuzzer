@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.branch.io
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.29508185386657715,0.10512089729309082,0.16447663307189941,200,OK,[''],22,22,317,"{""date"": ""Fri, 29 Sep 2023 22:12:01 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""vary"": ""Accept-Encoding,Cookie"", ""last-modified"": ""Thu, 28 Sep 2023 06:23:54 GMT"", ""link"": ""<https://www.branch.io/>; rel=shortlink"", ""x-cacheable"": ""SHORT"", ""cache-control"": ""max-age=600, must-revalidate"", ""x-cache"": ""HIT: 19"", ""x-cache-group"": ""normal"", ""permissions-policy"": ""geolocation=(), midi=(), sync-xhr=(), microphone=*, camera=*, magnetometer=(), gyroscope=(), fullscreen=*, payment=()"", ""referrer-policy"": ""origin-when-cross-origin"", ""strict-transport-security"": ""max-age=63072000;"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""deny"", ""x-xss-protection"": ""1;"", ""cf-cache-status"": ""DYNAMIC"", ""server"": ""cloudflare"", ""cf-ray"": ""80e790b31b26b890-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+1,"GET / HTTP/1.1
+Host: www.branch.io
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.15123653411865234,0.10046887397766113,0.20259308815002441,200,OK,[''],22,22,317,"{""date"": ""Fri, 29 Sep 2023 22:12:05 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""vary"": ""Accept-Encoding,Cookie"", ""last-modified"": ""Thu, 28 Sep 2023 06:23:54 GMT"", ""link"": ""<https://www.branch.io/>; rel=shortlink"", ""x-cacheable"": ""SHORT"", ""cache-control"": ""max-age=600, must-revalidate"", ""x-cache"": ""HIT: 20"", ""x-cache-group"": ""normal"", ""permissions-policy"": ""geolocation=(), midi=(), sync-xhr=(), microphone=*, camera=*, magnetometer=(), gyroscope=(), fullscreen=*, payment=()"", ""referrer-policy"": ""origin-when-cross-origin"", ""strict-transport-security"": ""max-age=63072000;"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""deny"", ""x-xss-protection"": ""1;"", ""cf-cache-status"": ""DYNAMIC"", ""server"": ""cloudflare"", ""cf-ray"": ""80e790cfed3b0bbc-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+2,"GET / HTTP/1.1
+Host: www.branch.io
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.2642068862915039,0.10752677917480469,0.24059200286865234,200,OK,[''],22,22,252,"{""date"": ""Fri, 29 Sep 2023 22:12:09 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""vary"": ""Accept-Encoding,Cookie"", ""last-modified"": ""Thu, 28 Sep 2023 06:23:54 GMT"", ""link"": ""<https://www.branch.io/>; rel=shortlink"", ""x-cacheable"": ""SHORT"", ""cache-control"": ""max-age=600, must-revalidate"", ""x-cache"": ""HIT: 22"", ""x-cache-group"": ""normal"", ""permissions-policy"": ""geolocation=(), midi=(), sync-xhr=(), microphone=*, camera=*, magnetometer=(), gyroscope=(), fullscreen=*, payment=()"", ""referrer-policy"": ""origin-when-cross-origin"", ""strict-transport-security"": ""max-age=63072000;"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""deny"", ""x-xss-protection"": ""1;"", ""cf-cache-status"": ""DYNAMIC"", ""server"": ""cloudflare"", ""cf-ray"": ""80e790e92d650a55-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+3,"GET / HTTP/1.1
+Host: www.branch.io
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.1312100887298584,0.1038827896118164,0.21418046951293945,200,OK,[''],22,22,311,"{""date"": ""Fri, 29 Sep 2023 22:12:14 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""vary"": ""Accept-Encoding,Cookie"", ""last-modified"": ""Thu, 28 Sep 2023 06:23:54 GMT"", ""link"": ""<https://www.branch.io/>; rel=shortlink"", ""x-cacheable"": ""SHORT"", ""cache-control"": ""max-age=600, must-revalidate"", ""x-cache"": ""HIT: 26"", ""x-cache-group"": ""normal"", ""permissions-policy"": ""geolocation=(), midi=(), sync-xhr=(), microphone=*, camera=*, magnetometer=(), gyroscope=(), fullscreen=*, payment=()"", ""referrer-policy"": ""origin-when-cross-origin"", ""strict-transport-security"": ""max-age=63072000;"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""deny"", ""x-xss-protection"": ""1;"", ""cf-cache-status"": ""DYNAMIC"", ""server"": ""cloudflare"", ""cf-ray"": ""80e7910519490a7b-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+4,"GET / HTTP/1.1
+Host: www.branch.io
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.2091383934020996,0.1201469898223877,0.17560744285583496,200,OK,[''],22,22,317,"{""date"": ""Fri, 29 Sep 2023 22:12:18 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""vary"": ""Accept-Encoding,Cookie"", ""last-modified"": ""Thu, 28 Sep 2023 06:23:54 GMT"", ""link"": ""<https://www.branch.io/>; rel=shortlink"", ""x-cacheable"": ""SHORT"", ""cache-control"": ""max-age=600, must-revalidate"", ""x-cache"": ""HIT: 28"", ""x-cache-group"": ""normal"", ""permissions-policy"": ""geolocation=(), midi=(), sync-xhr=(), microphone=*, camera=*, magnetometer=(), gyroscope=(), fullscreen=*, payment=()"", ""referrer-policy"": ""origin-when-cross-origin"", ""strict-transport-security"": ""max-age=63072000;"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""deny"", ""x-xss-protection"": ""1;"", ""cf-cache-status"": ""DYNAMIC"", ""server"": ""cloudflare"", ""cf-ray"": ""80e7911decd31c94-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+5,"GET / HTTP/1.1
+Host: www.branch.io
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.2000870704650879,0.11058664321899414,0.24108242988586426,200,OK,[''],22,22,313,"{""date"": ""Fri, 29 Sep 2023 22:12:22 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""vary"": ""Accept-Encoding,Cookie"", ""last-modified"": ""Thu, 28 Sep 2023 06:23:54 GMT"", ""link"": ""<https://www.branch.io/>; rel=shortlink"", ""x-cacheable"": ""SHORT"", ""cache-control"": ""max-age=600, must-revalidate"", ""x-cache"": ""HIT: 29"", ""x-cache-group"": ""normal"", ""permissions-policy"": ""geolocation=(), midi=(), sync-xhr=(), microphone=*, camera=*, magnetometer=(), gyroscope=(), fullscreen=*, payment=()"", ""referrer-policy"": ""origin-when-cross-origin"", ""strict-transport-security"": ""max-age=63072000;"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""deny"", ""x-xss-protection"": ""1;"", ""cf-cache-status"": ""DYNAMIC"", ""server"": ""cloudflare"", ""cf-ray"": ""80e7913aaa270bc8-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+6,"GET / HTTP/1.1
+Host: www.branch.io
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.23581433296203613,0.1018824577331543,0.19498586654663086,200,OK,[''],22,22,311,"{""date"": ""Fri, 29 Sep 2023 22:12:26 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""vary"": ""Accept-Encoding,Cookie"", ""last-modified"": ""Thu, 28 Sep 2023 06:23:54 GMT"", ""link"": ""<https://www.branch.io/>; rel=shortlink"", ""x-cacheable"": ""SHORT"", ""cache-control"": ""max-age=600, must-revalidate"", ""x-cache"": ""HIT: 31"", ""x-cache-group"": ""normal"", ""permissions-policy"": ""geolocation=(), midi=(), sync-xhr=(), microphone=*, camera=*, magnetometer=(), gyroscope=(), fullscreen=*, payment=()"", ""referrer-policy"": ""origin-when-cross-origin"", ""strict-transport-security"": ""max-age=63072000;"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""deny"", ""x-xss-protection"": ""1;"", ""cf-cache-status"": ""DYNAMIC"", ""server"": ""cloudflare"", ""cf-ray"": ""80e791530b10b77f-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+7,"GET / HTTP/1.1
+Host: www.branch.io
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.22784662246704102,0.10656929016113281,0.19246196746826172,200,OK,[''],22,22,311,"{""date"": ""Fri, 29 Sep 2023 22:12:31 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""vary"": ""Accept-Encoding,Cookie"", ""last-modified"": ""Thu, 28 Sep 2023 06:23:54 GMT"", ""link"": ""<https://www.branch.io/>; rel=shortlink"", ""x-cacheable"": ""SHORT"", ""cache-control"": ""max-age=600, must-revalidate"", ""x-cache"": ""HIT: 33"", ""x-cache-group"": ""normal"", ""permissions-policy"": ""geolocation=(), midi=(), sync-xhr=(), microphone=*, camera=*, magnetometer=(), gyroscope=(), fullscreen=*, payment=()"", ""referrer-policy"": ""origin-when-cross-origin"", ""strict-transport-security"": ""max-age=63072000;"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""deny"", ""x-xss-protection"": ""1;"", ""cf-cache-status"": ""DYNAMIC"", ""server"": ""cloudflare"", ""cf-ray"": ""80e7916d09800b53-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+8,"GET / HTTP/1.1
+Host: www.branch.io
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.2737271785736084,0.1117713451385498,0.1912686824798584,200,OK,[''],22,22,313,"{""date"": ""Fri, 29 Sep 2023 22:12:35 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""vary"": ""Accept-Encoding,Cookie"", ""last-modified"": ""Thu, 28 Sep 2023 06:23:54 GMT"", ""link"": ""<https://www.branch.io/>; rel=shortlink"", ""x-cacheable"": ""SHORT"", ""cache-control"": ""max-age=600, must-revalidate"", ""x-cache"": ""HIT: 35"", ""x-cache-group"": ""normal"", ""permissions-policy"": ""geolocation=(), midi=(), sync-xhr=(), microphone=*, camera=*, magnetometer=(), gyroscope=(), fullscreen=*, payment=()"", ""referrer-policy"": ""origin-when-cross-origin"", ""strict-transport-security"": ""max-age=63072000;"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""deny"", ""x-xss-protection"": ""1;"", ""cf-cache-status"": ""DYNAMIC"", ""server"": ""cloudflare"", ""cf-ray"": ""80e79188ff171ece-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+9,"GET / HTTP/1.1
+Host: www.branch.io
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.19689440727233887,0.11308860778808594,0.23345685005187988,200,OK,[''],22,22,317,"{""date"": ""Fri, 29 Sep 2023 22:12:39 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""vary"": ""Accept-Encoding,Cookie"", ""last-modified"": ""Thu, 28 Sep 2023 06:23:54 GMT"", ""link"": ""<https://www.branch.io/>; rel=shortlink"", ""x-cacheable"": ""SHORT"", ""cache-control"": ""max-age=600, must-revalidate"", ""x-cache"": ""HIT: 37"", ""x-cache-group"": ""normal"", ""permissions-policy"": ""geolocation=(), midi=(), sync-xhr=(), microphone=*, camera=*, magnetometer=(), gyroscope=(), fullscreen=*, payment=()"", ""referrer-policy"": ""origin-when-cross-origin"", ""strict-transport-security"": ""max-age=63072000;"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""deny"", ""x-xss-protection"": ""1;"", ""cf-cache-status"": ""DYNAMIC"", ""server"": ""cloudflare"", ""cf-ray"": ""80e791a15e361cce-AMS"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"

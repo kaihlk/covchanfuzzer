@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.booking.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.15787172317504883,0.11742329597473145,0.4516267776489258,200,OK,[''],21,21,3996,"{""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:50:23 GMT"", ""cache-control"": ""private"", ""vary"": ""Accept-Encoding, User-Agent"", ""content-encoding"": ""br"", ""link"": ""<https://cf.bstatic.com/static/css/xp-index-sb_cloudfront_sd.iq_ltr/7d56b924a6c248d579afe82a520d9a6abc96b9c7.css>; rel=preload; as=style"", ""nel"": ""{\""max_age\"":604800,\""report_to\"":\""default\""}"", ""report-to"": ""{\""max_age\"":604800,\""endpoints\"":[{\""url\"":\""https://nellie.booking.com/report\""}],\""group\"":\""default\""}"", ""set-cookie"": ""bkng_sso_auth=CAIQsOnuTRpyfX8gVi/vWV898Wc2TyYfSBFldcQbn1d7ddOv+/OosGtKIDrzgjnQwiQHVvsdngNyDwuEz3bPe2WtR1PsEteKAwutFR8P13jaMSob41HVrdcaZGZJm18d4LUXp+pJ4kQLqDskf6up6wqtnpmnHMowE07s; Domain=.booking.com; Path=/; Expires=Fri, 06 Oct 2023 22:50:23 GMT; HttpOnly; Secure"", ""strict-transport-security"": ""max-age=300; includeSubDomains"", ""x-content-type-options"": ""nosniff"", ""x-recruiting"": ""Like HTTP headers? Come write ours: https://careers.booking.com"", ""x-terms-of-service"": ""https://www.booking.com/content/terms.html"", ""x-xss-protection"": ""1; mode=block"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 a69bfd4d39a9b992855d914318a2c366.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C1"", ""x-amz-cf-id"": ""Ay60iouPxjAil90jV0py76c7Z8rWrrLNpbZhJrtSHUgtD2w-QwLCjg==""}"
+1,"GET / HTTP/1.1
+Host: www.booking.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.11659812927246094,0.11703014373779297,0.4140479564666748,200,OK,[''],21,21,4052,"{""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:50:26 GMT"", ""cache-control"": ""private"", ""vary"": ""User-Agent, Accept-Encoding"", ""content-encoding"": ""br"", ""link"": ""<https://cf.bstatic.com/static/css/xp-index-sb_cloudfront_sd.iq_ltr/7d56b924a6c248d579afe82a520d9a6abc96b9c7.css>; rel=preload; as=style"", ""nel"": ""{\""report_to\"":\""default\"",\""max_age\"":604800}"", ""report-to"": ""{\""group\"":\""default\"",\""endpoints\"":[{\""url\"":\""https://nellie.booking.com/report\""}],\""max_age\"":604800}"", ""set-cookie"": ""bkng_sso_auth=CAIQsOnuTRpyNEXBQpG6QZR6+w3Ke29MWKobRDPOYlqM/8nMk59Lcp5K+PXPv+2N21e464L1DAD/5FkKopGCGlfOMoPUv3qE9wvd2rCI7jzRzR2D8PR2a+HzWLD0ADQqWvNfKVkg3+E6laCq6iedMEB7TqBgZuTBV86I; Domain=.booking.com; Path=/; Expires=Fri, 06 Oct 2023 22:50:26 GMT; HttpOnly; Secure"", ""strict-transport-security"": ""max-age=300; includeSubDomains"", ""x-content-type-options"": ""nosniff"", ""x-recruiting"": ""Like HTTP headers? Come write ours: https://careers.booking.com"", ""x-terms-of-service"": ""https://www.booking.com/content/terms.html"", ""x-xss-protection"": ""1; mode=block"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 19c54bffe8b0bb7f9e7501fa2c823262.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C1"", ""x-amz-cf-id"": ""KxoC-2rG7-fGWQHc0s6YQZR8PK5at4oHRPuGfTdJsk-dnxteunp9uA==""}"
+2,"GET / HTTP/1.1
+Host: www.booking.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.1789262294769287,0.10780858993530273,0.44742465019226074,200,OK,[''],21,21,4059,"{""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:50:29 GMT"", ""cache-control"": ""private"", ""vary"": ""User-Agent, Accept-Encoding"", ""content-encoding"": ""br"", ""link"": ""<https://cf.bstatic.com/static/css/xp-index-sb_cloudfront_sd.iq_ltr/7d56b924a6c248d579afe82a520d9a6abc96b9c7.css>; rel=preload; as=style"", ""nel"": ""{\""report_to\"":\""default\"",\""max_age\"":604800}"", ""report-to"": ""{\""group\"":\""default\"",\""endpoints\"":[{\""url\"":\""https://nellie.booking.com/report\""}],\""max_age\"":604800}"", ""set-cookie"": ""bkng_sso_auth=CAIQsOnuTRpyFwRFnMNVVDVGUqhlGMRwyA4HhCldPWFmf6ofMLXOng5VHP097mW9jGTKUNw8Ijiyh8wk7uuZREn5ITH/bLTTCfS1oPvtSmE/w0WW7DjaDhvQBL3FEfn2LQEaWMd4vi2pEDN1z3JQAHc+BMHQGJvtg6Yc; Domain=.booking.com; Path=/; Expires=Fri, 06 Oct 2023 22:50:28 GMT; HttpOnly; Secure"", ""strict-transport-security"": ""max-age=300; includeSubDomains"", ""x-content-type-options"": ""nosniff"", ""x-recruiting"": ""Like HTTP headers? Come write ours: https://careers.booking.com"", ""x-terms-of-service"": ""https://www.booking.com/content/terms.html"", ""x-xss-protection"": ""1; mode=block"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 64c57433dbc269a88f86e72ae54bfe36.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C1"", ""x-amz-cf-id"": ""oEdscissrg1Jl1hu15fmyL0SkXMvgoin91xQ55K6tBesPMk1lDmdkg==""}"
+3,"GET / HTTP/1.1
+Host: www.booking.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.30261993408203125,0.1492471694946289,0.4112727642059326,200,OK,[''],22,22,4019,"{""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:50:31 GMT"", ""cache-control"": ""private"", ""vary"": ""Accept-Encoding, User-Agent"", ""content-encoding"": ""br"", ""link"": ""<https://cf.bstatic.com/static/css/xp-index-sb_cloudfront_sd.iq_ltr/7d56b924a6c248d579afe82a520d9a6abc96b9c7.css>; rel=preload; as=style"", ""nel"": ""{\""max_age\"":604800,\""report_to\"":\""default\""}"", ""report-to"": ""{\""group\"":\""default\"",\""endpoints\"":[{\""url\"":\""https://nellie.booking.com/report\""}],\""max_age\"":604800}"", ""set-cookie"": ""bkng_sso_auth=CAIQsOnuTRpyYpfPCHOsE0uyMv6KS3RdknR01hHINGnS9ZzJ9B1QENbRcn2C2dFrde4UmAoZAJ4yUe+EtAeIqB7x+RbfdP4vot0D/pndrBD2NpRleVlLQm4WpEWDTRaQ+Km0POy39U3O3kXBkEjmRv99vQT4QJRoXJVN; Domain=.booking.com; Path=/; Expires=Fri, 06 Oct 2023 22:50:31 GMT; HttpOnly; Secure"", ""strict-transport-security"": ""max-age=300; includeSubDomains"", ""x-content-type-options"": ""nosniff"", ""x-recruiting"": ""Like HTTP headers? Come write ours: https://careers.booking.com"", ""content-security-policy-report-only"": ""base-uri 'none'; object-src 'none'; report-uri https://nellie.booking.com/csp-report-uri?type=report&tag=146&pid=d57ba09b2ab90040&e=UmFuZG9tSVYkc2RlIyh9YYYdGuViorKP9Pwk16DMK-gFI7ToL7tdfjOeGef8cVzs; script-src 'self' 'nonce-hD5N3pSgZ0riCLG' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: 'sha256-47mKTaMaEn1L3m5DAz9muidMqw636xxw7EFAK/YnPdg=' 'sha256-iry7oJKoKJ+9HSjmU3E1TlRlpSesJWZ1vapuUz2MP38='"", ""x-terms-of-service"": ""https://www.booking.com/content/terms.html"", ""x-xss-protection"": ""1; mode=block"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 b601b11612dbb318dc18b8b7062715de.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C1"", ""x-amz-cf-id"": ""WYBsT1DKXDTzvO26MxcosMQsEvNqHZYGFXMamuYCS3bv8zezdRLzVg==""}"
+4,"GET / HTTP/1.1
+Host: www.booking.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.18093037605285645,0.10287046432495117,0.37343788146972656,200,OK,[''],21,21,4026,"{""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:50:34 GMT"", ""cache-control"": ""private"", ""vary"": ""User-Agent, Accept-Encoding"", ""content-encoding"": ""br"", ""link"": ""<https://cf.bstatic.com/static/css/xp-index-sb_cloudfront_sd.iq_ltr/7d56b924a6c248d579afe82a520d9a6abc96b9c7.css>; rel=preload; as=style"", ""nel"": ""{\""report_to\"":\""default\"",\""max_age\"":604800}"", ""report-to"": ""{\""group\"":\""default\"",\""max_age\"":604800,\""endpoints\"":[{\""url\"":\""https://nellie.booking.com/report\""}]}"", ""set-cookie"": ""bkng_sso_auth=CAIQsOnuTRpydhSH+JvNzdcPGzG/vbx1XwY9wGeEpGKhZyhyjsXYrTXYbGBmsj1oP+emp8KCo6xop9uk8ykot8mSZmo7vJDbsMUmk8A9JT8jVW6opdvHfYdhunyM6q2x1iG5jz2EalYhDWdd8DeMk5MFmJxHy5zQPXEu; Domain=.booking.com; Path=/; Expires=Fri, 06 Oct 2023 22:50:34 GMT; HttpOnly; Secure"", ""strict-transport-security"": ""max-age=300; includeSubDomains"", ""x-content-type-options"": ""nosniff"", ""x-recruiting"": ""Like HTTP headers? Come write ours: https://careers.booking.com"", ""x-terms-of-service"": ""https://www.booking.com/content/terms.html"", ""x-xss-protection"": ""1; mode=block"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 afb36b97df2ff6c76fed5bd6ee23619a.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C1"", ""x-amz-cf-id"": ""7DQyj_5N6yWa8jzdVf_YVfuVq1jS4AiLkwQJSnAtZlq92HItQL2CKA==""}"
+5,"GET / HTTP/1.1
+Host: www.booking.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.16200828552246094,0.11280441284179688,0.47412800788879395,200,OK,[''],21,21,4053,"{""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:50:37 GMT"", ""cache-control"": ""private"", ""vary"": ""User-Agent, Accept-Encoding"", ""content-encoding"": ""br"", ""link"": ""<https://cf.bstatic.com/static/css/xp-index-sb_cloudfront_sd.iq_ltr/7d56b924a6c248d579afe82a520d9a6abc96b9c7.css>; rel=preload; as=style"", ""nel"": ""{\""report_to\"":\""default\"",\""max_age\"":604800}"", ""report-to"": ""{\""max_age\"":604800,\""endpoints\"":[{\""url\"":\""https://nellie.booking.com/report\""}],\""group\"":\""default\""}"", ""set-cookie"": ""bkng_sso_auth=CAIQsOnuTRpyxUFSRXo5e4qXOGepy1bPuNi/NrS4+101PwxkzLKfvBHfxee/CtOaYQSu7VfJjKxclIwSu2OLoxY7hH9Z2KMP0ojjwehmC0cjzAZ7yd8Qz82XBBXNAqh4MUdXAw+vgjm1W7WU3ZtWBurQrLqPUHJ44pwR; Domain=.booking.com; Path=/; Expires=Fri, 06 Oct 2023 22:50:36 GMT; HttpOnly; Secure"", ""strict-transport-security"": ""max-age=300; includeSubDomains"", ""x-content-type-options"": ""nosniff"", ""x-recruiting"": ""Like HTTP headers? Come write ours: https://careers.booking.com"", ""x-terms-of-service"": ""https://www.booking.com/content/terms.html"", ""x-xss-protection"": ""1; mode=block"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 cfd67353680316557643ad146b46d046.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C1"", ""x-amz-cf-id"": ""c5pY0q8yYNTwdRzqjgOsIvH8N0NazWJXpGNmLpL7rjFK5L9IbLwA6g==""}"
+6,"GET / HTTP/1.1
+Host: www.booking.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.13895130157470703,0.11090946197509766,0.40911197662353516,200,OK,[''],21,21,4008,"{""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:50:40 GMT"", ""cache-control"": ""private"", ""vary"": ""Accept-Encoding, User-Agent"", ""content-encoding"": ""br"", ""link"": ""<https://cf.bstatic.com/static/css/xp-index-sb_cloudfront_sd.iq_ltr/7d56b924a6c248d579afe82a520d9a6abc96b9c7.css>; rel=preload; as=style"", ""nel"": ""{\""max_age\"":604800,\""report_to\"":\""default\""}"", ""report-to"": ""{\""group\"":\""default\"",\""max_age\"":604800,\""endpoints\"":[{\""url\"":\""https://nellie.booking.com/report\""}]}"", ""set-cookie"": ""bkng_sso_auth=CAIQsOnuTRpy2pT+jSSxuWcQF4TXYQ3oa+fT5eUZorLjb0UXqNoFLimy1jBnjZwzO1Z0KZKjQeiehd+NhmV7ZkOsL0pMhW2W/EmPMeS+jpuDVNM6/lcxS30TBNcmnosSr6NyRxPUf+bA0O1GUeOpmEx/7DeLNXLQd8m+; Domain=.booking.com; Path=/; Expires=Fri, 06 Oct 2023 22:50:39 GMT; HttpOnly; Secure"", ""strict-transport-security"": ""max-age=300; includeSubDomains"", ""x-content-type-options"": ""nosniff"", ""x-recruiting"": ""Like HTTP headers? Come write ours: https://careers.booking.com"", ""x-terms-of-service"": ""https://www.booking.com/content/terms.html"", ""x-xss-protection"": ""1; mode=block"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 faa1fa519e63088cce8cafe3ca727e9c.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C1"", ""x-amz-cf-id"": ""FLD8ccT1bNE0O_m65uTh8m4hECJyIiwulw5m6a81T9qgjPi7sxtOUw==""}"
+7,"GET / HTTP/1.1
+Host: www.booking.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.12845301628112793,0.10795378684997559,0.4356720447540283,200,OK,[''],22,22,4069,"{""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:50:43 GMT"", ""cache-control"": ""private"", ""vary"": ""Accept-Encoding, User-Agent"", ""content-encoding"": ""br"", ""link"": ""<https://cf.bstatic.com/static/css/xp-index-sb_cloudfront_sd.iq_ltr/7d56b924a6c248d579afe82a520d9a6abc96b9c7.css>; rel=preload; as=style"", ""nel"": ""{\""max_age\"":604800,\""report_to\"":\""default\""}"", ""report-to"": ""{\""endpoints\"":[{\""url\"":\""https://nellie.booking.com/report\""}],\""max_age\"":604800,\""group\"":\""default\""}"", ""set-cookie"": ""bkng_sso_auth=CAIQsOnuTRpy7M7DorDy+9bOFsocMdxD8XMYeq4tO5HdpTuqEhmxMMP7Rgxe/v8ODJrwRdt9FWVMX5wVop12jm3nkAeQLwL+e5DX3QWPIafbSFuF3Z3bngzeImXelhLZiP+jKDL2zrODY6oo5NntPtOasD+zTjfu3F+w; Domain=.booking.com; Path=/; Expires=Fri, 06 Oct 2023 22:50:42 GMT; HttpOnly; Secure"", ""strict-transport-security"": ""max-age=300; includeSubDomains"", ""x-content-type-options"": ""nosniff"", ""x-recruiting"": ""Like HTTP headers? Come write ours: https://careers.booking.com"", ""content-security-policy-report-only"": ""base-uri 'none'; object-src 'none'; report-uri https://nellie.booking.com/csp-report-uri?type=report&tag=146&pid=6771a0a16ccb0018&e=UmFuZG9tSVYkc2RlIyh9YYYdGuViorKPrjZBWWotgnk-2uO7d1UTp3xXehpT_0c1; script-src 'self' 'nonce-2xtpxm0yYoDr8uO' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: 'sha256-47mKTaMaEn1L3m5DAz9muidMqw636xxw7EFAK/YnPdg=' 'sha256-iry7oJKoKJ+9HSjmU3E1TlRlpSesJWZ1vapuUz2MP38='"", ""x-terms-of-service"": ""https://www.booking.com/content/terms.html"", ""x-xss-protection"": ""1; mode=block"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 34b26b9570d823536072a91c564a4d8c.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C1"", ""x-amz-cf-id"": ""R38rFoB99iOEyDtNfH9M8s2aCDEnad3gFxOuoqIgGMnbdUc2ylIvJw==""}"
+8,"GET / HTTP/1.1
+Host: www.booking.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.16234302520751953,0.1271040439605713,0.4284391403198242,200,OK,[''],21,21,4060,"{""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:50:45 GMT"", ""cache-control"": ""private"", ""vary"": ""Accept-Encoding, User-Agent"", ""content-encoding"": ""br"", ""link"": ""<https://cf.bstatic.com/static/css/xp-index-sb_cloudfront_sd.iq_ltr/7d56b924a6c248d579afe82a520d9a6abc96b9c7.css>; rel=preload; as=style"", ""nel"": ""{\""max_age\"":604800,\""report_to\"":\""default\""}"", ""report-to"": ""{\""endpoints\"":[{\""url\"":\""https://nellie.booking.com/report\""}],\""max_age\"":604800,\""group\"":\""default\""}"", ""set-cookie"": ""bkng_sso_auth=CAIQsOnuTRpySvLmVDTGxXRbJiwM+y7nAvKeOe4bXXk+Gt3wjqmBizB8puVR8nzzV8pZAShiT5FFuz2p+uvw/GbxkhjT6kUvrl0dth8RcOae0wmeaIi9YBbgb4Cb6LfWKWJX6hQeSuC5wdYw15BTyoQ1ttEJILd7mfpP; Domain=.booking.com; Path=/; Expires=Fri, 06 Oct 2023 22:50:45 GMT; HttpOnly; Secure"", ""strict-transport-security"": ""max-age=300; includeSubDomains"", ""x-content-type-options"": ""nosniff"", ""x-recruiting"": ""Like HTTP headers? Come write ours: https://careers.booking.com"", ""x-terms-of-service"": ""https://www.booking.com/content/terms.html"", ""x-xss-protection"": ""1; mode=block"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 376388af58845ad0897ba599cce4d92e.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C1"", ""x-amz-cf-id"": ""3c8-sGOKHflm0wsQlZJc967L2QOigs3uwelKKDnuop71MlnC1D3Fzw==""}"
+9,"GET / HTTP/1.1
+Host: www.booking.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.20746254920959473,0.11739826202392578,0.38279080390930176,200,OK,[''],21,21,4025,"{""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:50:50 GMT"", ""cache-control"": ""private"", ""vary"": ""Accept-Encoding, User-Agent"", ""content-encoding"": ""br"", ""link"": ""<https://cf.bstatic.com/static/css/xp-index-sb_cloudfront_sd.iq_ltr/7d56b924a6c248d579afe82a520d9a6abc96b9c7.css>; rel=preload; as=style"", ""nel"": ""{\""report_to\"":\""default\"",\""max_age\"":604800}"", ""report-to"": ""{\""endpoints\"":[{\""url\"":\""https://nellie.booking.com/report\""}],\""group\"":\""default\"",\""max_age\"":604800}"", ""set-cookie"": ""bkng_sso_auth=CAIQsOnuTRpy6r5NvXg6kN2MZ9f8rDTEvphVB2TMC+zI89cwbGa+pWnXrwmuIkfn3tPvuz3LtzYKOmbWmwsJsrBxerCBODgCmqaztX/8xpJrIkTnAB+GMWXLcFyZ9vgoKlxZsC08/dXjU4UDhAGCGU3QO0I2A/bsQUyl; Domain=.booking.com; Path=/; Expires=Fri, 06 Oct 2023 22:50:50 GMT; HttpOnly; Secure"", ""strict-transport-security"": ""max-age=300; includeSubDomains"", ""x-content-type-options"": ""nosniff"", ""x-recruiting"": ""Like HTTP headers? Come write ours: https://careers.booking.com"", ""x-terms-of-service"": ""https://www.booking.com/content/terms.html"", ""x-xss-protection"": ""1; mode=block"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 e37f79ad8aac2f2f2e74a09fc473b7be.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C1"", ""x-amz-cf-id"": ""H4mQaKf_vzVc-g0KdvAGtReXFaNK5F7__9xJcqJ0JfhPV9YwTq6i8g==""}"

@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.gov.uk
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.2501668930053711,0.1015939712524414,0.026987791061401367,200,OK,[''],8,8,0,"{""connection"": ""keep-alive"", ""content-length"": ""14657"", ""content-type"": ""text/html; charset=utf-8"", ""server"": ""nginx"", ""cache-control"": ""max-age=300, public"", ""content-security-policy"": ""default-src 'self'; base-uri 'none'; img-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com lux.speedcurve.com assets.digital.cabinet-office.gov.uk https://img.youtube.com; script-src 'self' www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com www.gstatic.com *.ytimg.com www.youtube.com www.youtube-nocookie.com 'nonce-YlRTpjRttiGNGO80MVA6LQ=='; style-src 'self' www.gstatic.com; font-src 'self'; connect-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com lux.speedcurve.com; object-src 'none'; frame-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.youtube.com www.youtube-nocookie.com; report-uri https://csp-reporter.publishing.service.gov.uk/report"", ""etag"": ""W/\""717e6540a740df4a494043ae5e2d2293\"""", ""link"": ""</assets/frontend/app""}"
+1,"GET / HTTP/1.1
+Host: www.gov.uk
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.09657073020935059,0.11027050018310547,0.029848098754882812,200,OK,[''],8,8,0,"{""connection"": ""keep-alive"", ""content-length"": ""14657"", ""content-type"": ""text/html; charset=utf-8"", ""server"": ""nginx"", ""cache-control"": ""max-age=300, public"", ""content-security-policy"": ""default-src 'self'; base-uri 'none'; img-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com lux.speedcurve.com assets.digital.cabinet-office.gov.uk https://img.youtube.com; script-src 'self' www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com www.gstatic.com *.ytimg.com www.youtube.com www.youtube-nocookie.com 'nonce-YlRTpjRttiGNGO80MVA6LQ=='; style-src 'self' www.gstatic.com; font-src 'self'; connect-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com lux.speedcurve.com; object-src 'none'; frame-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.youtube.com www.youtube-nocookie.com; report-uri https://csp-reporter.publishing.service.gov.uk/report"", ""etag"": ""W/\""717e6540a740df4a494043ae5e2d2293\"""", ""link"": ""</assets/frontend/app""}"
+2,"GET / HTTP/1.1
+Host: www.gov.uk
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.2786998748779297,0.11166620254516602,0.022915363311767578,200,OK,[''],8,8,0,"{""connection"": ""keep-alive"", ""content-length"": ""14657"", ""content-type"": ""text/html; charset=utf-8"", ""server"": ""nginx"", ""cache-control"": ""max-age=300, public"", ""content-security-policy"": ""default-src 'self'; base-uri 'none'; img-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com lux.speedcurve.com assets.digital.cabinet-office.gov.uk https://img.youtube.com; script-src 'self' www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com www.gstatic.com *.ytimg.com www.youtube.com www.youtube-nocookie.com 'nonce-YlRTpjRttiGNGO80MVA6LQ=='; style-src 'self' www.gstatic.com; font-src 'self'; connect-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com lux.speedcurve.com; object-src 'none'; frame-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.youtube.com www.youtube-nocookie.com; report-uri https://csp-reporter.publishing.service.gov.uk/report"", ""etag"": ""W/\""717e6540a740df4a494043ae5e2d2293\"""", ""link"": ""</assets/frontend/app""}"
+3,"GET / HTTP/1.1
+Host: www.gov.uk
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.20538926124572754,0.10589170455932617,0.02927875518798828,200,OK,[''],8,8,0,"{""connection"": ""keep-alive"", ""content-length"": ""14657"", ""content-type"": ""text/html; charset=utf-8"", ""server"": ""nginx"", ""cache-control"": ""max-age=300, public"", ""content-security-policy"": ""default-src 'self'; base-uri 'none'; img-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com lux.speedcurve.com assets.digital.cabinet-office.gov.uk https://img.youtube.com; script-src 'self' www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com www.gstatic.com *.ytimg.com www.youtube.com www.youtube-nocookie.com 'nonce-YlRTpjRttiGNGO80MVA6LQ=='; style-src 'self' www.gstatic.com; font-src 'self'; connect-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com lux.speedcurve.com; object-src 'none'; frame-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.youtube.com www.youtube-nocookie.com; report-uri https://csp-reporter.publishing.service.gov.uk/report"", ""etag"": ""W/\""717e6540a740df4a494043ae5e2d2293\"""", ""link"": ""</assets/frontend/app""}"
+4,"GET / HTTP/1.1
+Host: www.gov.uk
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.17949461936950684,0.12972640991210938,0.04458951950073242,200,OK,[''],8,8,0,"{""connection"": ""keep-alive"", ""content-length"": ""14657"", ""content-type"": ""text/html; charset=utf-8"", ""server"": ""nginx"", ""cache-control"": ""max-age=300, public"", ""content-security-policy"": ""default-src 'self'; base-uri 'none'; img-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com lux.speedcurve.com assets.digital.cabinet-office.gov.uk https://img.youtube.com; script-src 'self' www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com www.gstatic.com *.ytimg.com www.youtube.com www.youtube-nocookie.com 'nonce-YlRTpjRttiGNGO80MVA6LQ=='; style-src 'self' www.gstatic.com; font-src 'self'; connect-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com lux.speedcurve.com; object-src 'none'; frame-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.youtube.com www.youtube-nocookie.com; report-uri https://csp-reporter.publishing.service.gov.uk/report"", ""etag"": ""W/\""717e6540a740df4a494043ae5e2d2293\"""", ""link"": ""</assets/frontend/app""}"
+5,"GET / HTTP/1.1
+Host: www.gov.uk
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.19408488273620605,0.1134183406829834,0.03511500358581543,200,OK,[''],8,8,0,"{""connection"": ""keep-alive"", ""content-length"": ""14657"", ""content-type"": ""text/html; charset=utf-8"", ""server"": ""nginx"", ""cache-control"": ""max-age=300, public"", ""content-security-policy"": ""default-src 'self'; base-uri 'none'; img-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com lux.speedcurve.com assets.digital.cabinet-office.gov.uk https://img.youtube.com; script-src 'self' www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com www.gstatic.com *.ytimg.com www.youtube.com www.youtube-nocookie.com 'nonce-YlRTpjRttiGNGO80MVA6LQ=='; style-src 'self' www.gstatic.com; font-src 'self'; connect-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com lux.speedcurve.com; object-src 'none'; frame-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.youtube.com www.youtube-nocookie.com; report-uri https://csp-reporter.publishing.service.gov.uk/report"", ""etag"": ""W/\""717e6540a740df4a494043ae5e2d2293\"""", ""link"": ""</assets/frontend/app""}"
+6,"GET / HTTP/1.1
+Host: www.gov.uk
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.2182168960571289,0.14026904106140137,0.057822465896606445,200,OK,[''],8,8,0,"{""connection"": ""keep-alive"", ""content-length"": ""14657"", ""content-type"": ""text/html; charset=utf-8"", ""server"": ""nginx"", ""cache-control"": ""max-age=300, public"", ""content-security-policy"": ""default-src 'self'; base-uri 'none'; img-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com lux.speedcurve.com assets.digital.cabinet-office.gov.uk https://img.youtube.com; script-src 'self' www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com www.gstatic.com *.ytimg.com www.youtube.com www.youtube-nocookie.com 'nonce-YlRTpjRttiGNGO80MVA6LQ=='; style-src 'self' www.gstatic.com; font-src 'self'; connect-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com lux.speedcurve.com; object-src 'none'; frame-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.youtube.com www.youtube-nocookie.com; report-uri https://csp-reporter.publishing.service.gov.uk/report"", ""etag"": ""W/\""717e6540a740df4a494043ae5e2d2293\"""", ""link"": ""</assets/frontend/app""}"
+7,"GET / HTTP/1.1
+Host: www.gov.uk
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.2743515968322754,0.11083030700683594,0.10608267784118652,200,OK,[''],8,8,0,"{""connection"": ""keep-alive"", ""content-length"": ""14657"", ""content-type"": ""text/html; charset=utf-8"", ""server"": ""nginx"", ""cache-control"": ""max-age=300, public"", ""content-security-policy"": ""default-src 'self'; base-uri 'none'; img-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com lux.speedcurve.com assets.digital.cabinet-office.gov.uk https://img.youtube.com; script-src 'self' www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com www.gstatic.com *.ytimg.com www.youtube.com www.youtube-nocookie.com 'nonce-YlRTpjRttiGNGO80MVA6LQ=='; style-src 'self' www.gstatic.com; font-src 'self'; connect-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com lux.speedcurve.com; object-src 'none'; frame-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.youtube.com www.youtube-nocookie.com; report-uri https://csp-reporter.publishing.service.gov.uk/report"", ""etag"": ""W/\""717e6540a740df4a494043ae5e2d2293\"""", ""link"": ""</assets/frontend/app""}"
+8,"GET / HTTP/1.1
+Host: www.gov.uk
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.24074578285217285,0.11306023597717285,0.04143118858337402,200,OK,[''],8,8,0,"{""connection"": ""keep-alive"", ""content-length"": ""14657"", ""content-type"": ""text/html; charset=utf-8"", ""server"": ""nginx"", ""cache-control"": ""max-age=300, public"", ""content-security-policy"": ""default-src 'self'; base-uri 'none'; img-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com lux.speedcurve.com assets.digital.cabinet-office.gov.uk https://img.youtube.com; script-src 'self' www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com www.gstatic.com *.ytimg.com www.youtube.com www.youtube-nocookie.com 'nonce-YlRTpjRttiGNGO80MVA6LQ=='; style-src 'self' www.gstatic.com; font-src 'self'; connect-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com lux.speedcurve.com; object-src 'none'; frame-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.youtube.com www.youtube-nocookie.com; report-uri https://csp-reporter.publishing.service.gov.uk/report"", ""etag"": ""W/\""717e6540a740df4a494043ae5e2d2293\"""", ""link"": ""</assets/frontend/app""}"
+9,"GET / HTTP/1.1
+Host: www.gov.uk
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.25174975395202637,0.10984420776367188,0.03169846534729004,200,OK,[''],8,8,0,"{""connection"": ""keep-alive"", ""content-length"": ""14657"", ""content-type"": ""text/html; charset=utf-8"", ""server"": ""nginx"", ""cache-control"": ""max-age=300, public"", ""content-security-policy"": ""default-src 'self'; base-uri 'none'; img-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com lux.speedcurve.com assets.digital.cabinet-office.gov.uk https://img.youtube.com; script-src 'self' www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com www.gstatic.com *.ytimg.com www.youtube.com www.youtube-nocookie.com 'nonce-YlRTpjRttiGNGO80MVA6LQ=='; style-src 'self' www.gstatic.com; font-src 'self'; connect-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.google-analytics.com ssl.google-analytics.com stats.g.doubleclick.net www.googletagmanager.com www.region1.google-analytics.com region1.google-analytics.com lux.speedcurve.com; object-src 'none'; frame-src 'self' *.publishing.service.gov.uk www.gov.uk *.dev.gov.uk www.youtube.com www.youtube-nocookie.com; report-uri https://csp-reporter.publishing.service.gov.uk/report"", ""etag"": ""W/\""717e6540a740df4a494043ae5e2d2293\"""", ""link"": ""</assets/frontend/app""}"

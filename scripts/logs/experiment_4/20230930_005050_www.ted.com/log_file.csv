@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.ted.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.30905771255493164,0.1125178337097168,0.4164144992828369,200,OK,[''],24,24,0,"{""connection"": ""keep-alive"", ""content-length"": ""63358"", ""content-type"": ""text/html; charset=utf-8"", ""x-powered-by"": ""Zenith"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""x-download-options"": ""noopen"", ""x-permitted-cross-domain-policies"": ""none"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains"", ""x-nextjs-cache"": ""HIT"", ""etag"": ""\""3sroui9dtb6fll\"""", ""cache-control"": ""s-maxage=30, stale-while-revalidate"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:50:53 GMT"", ""via"": ""1.1 varnish"", ""age"": ""72"", ""x-served-by"": ""td_500af45dedf2, cache-iad-kiad7000021-IAD, cache-ams21051-AMS"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""448, 1"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""_abby_hero_form=b; Expires=Fri, 13 Oct 2023 22:50:53 GMT; Path=/""}"
+1,"GET / HTTP/1.1
+Host: www.ted.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.24043488502502441,0.12749028205871582,0.033499717712402344,200,OK,[''],24,24,0,"{""connection"": ""keep-alive"", ""content-length"": ""63358"", ""content-type"": ""text/html; charset=utf-8"", ""x-powered-by"": ""Zenith"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""x-download-options"": ""noopen"", ""x-permitted-cross-domain-policies"": ""none"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains"", ""x-nextjs-cache"": ""STALE"", ""etag"": ""\""3sroui9dtb6fll\"""", ""cache-control"": ""s-maxage=30, stale-while-revalidate"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:50:55 GMT"", ""via"": ""1.1 varnish"", ""age"": ""55"", ""x-served-by"": ""td_17306093dbda, cache-iad-kcgs7200177-IAD, cache-ams21037-AMS"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""21, 1"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""_abby_hero_form=a; Expires=Fri, 13 Oct 2023 22:50:55 GMT; Path=/""}"
+2,"GET / HTTP/1.1
+Host: www.ted.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.222092866897583,0.11950182914733887,0.15539312362670898,200,OK,[''],24,24,0,"{""connection"": ""keep-alive"", ""content-length"": ""63358"", ""content-type"": ""text/html; charset=utf-8"", ""x-powered-by"": ""Zenith"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""x-download-options"": ""noopen"", ""x-permitted-cross-domain-policies"": ""none"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains"", ""x-nextjs-cache"": ""HIT"", ""etag"": ""\""3sroui9dtb6fll\"""", ""cache-control"": ""s-maxage=30, stale-while-revalidate"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:50:57 GMT"", ""via"": ""1.1 varnish"", ""age"": ""47"", ""x-served-by"": ""td_829f5470f662, cache-iad-kjyo7100113-IAD, cache-ams21037-AMS"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""220, 1"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""_abby_hero_form=c; Expires=Fri, 13 Oct 2023 22:50:57 GMT; Path=/""}"
+3,"GET / HTTP/1.1
+Host: www.ted.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.18392229080200195,0.11133980751037598,0.05257773399353027,200,OK,[''],24,24,0,"{""connection"": ""keep-alive"", ""content-length"": ""63358"", ""content-type"": ""text/html; charset=utf-8"", ""x-powered-by"": ""Zenith"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""x-download-options"": ""noopen"", ""x-permitted-cross-domain-policies"": ""none"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains"", ""x-nextjs-cache"": ""HIT"", ""etag"": ""\""3sroui9dtb6fll\"""", ""cache-control"": ""s-maxage=30, stale-while-revalidate"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:51:00 GMT"", ""via"": ""1.1 varnish"", ""age"": ""20"", ""x-served-by"": ""td_829f5470f662, cache-iad-kjyo7100113-IAD, cache-ams21023-AMS"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""220, 1"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""_abby_hero_form=c; Expires=Fri, 13 Oct 2023 22:51:00 GMT; Path=/""}"
+4,"GET / HTTP/1.1
+Host: www.ted.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.191925048828125,0.12924909591674805,0.027217626571655273,200,OK,[''],24,24,0,"{""connection"": ""keep-alive"", ""content-length"": ""63358"", ""content-type"": ""text/html; charset=utf-8"", ""x-powered-by"": ""Zenith"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""x-download-options"": ""noopen"", ""x-permitted-cross-domain-policies"": ""none"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains"", ""x-nextjs-cache"": ""STALE"", ""etag"": ""\""3sroui9dtb6fll\"""", ""cache-control"": ""s-maxage=30, stale-while-revalidate"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:51:02 GMT"", ""via"": ""1.1 varnish"", ""age"": ""30"", ""x-served-by"": ""td_17306093dbda, cache-iad-kcgs7200177-IAD, cache-ams21069-AMS"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""21, 1"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""_abby_hero_form=a; Expires=Fri, 13 Oct 2023 22:51:02 GMT; Path=/""}"
+5,"GET / HTTP/1.1
+Host: www.ted.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.19409704208374023,0.11285734176635742,0.11253070831298828,200,OK,[''],24,24,0,"{""connection"": ""keep-alive"", ""content-length"": ""63358"", ""content-type"": ""text/html; charset=utf-8"", ""x-powered-by"": ""Zenith"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""x-download-options"": ""noopen"", ""x-permitted-cross-domain-policies"": ""none"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains"", ""x-nextjs-cache"": ""HIT"", ""etag"": ""\""3sroui9dtb6fll\"""", ""cache-control"": ""s-maxage=30, stale-while-revalidate"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:51:04 GMT"", ""via"": ""1.1 varnish"", ""age"": ""24"", ""x-served-by"": ""td_829f5470f662, cache-iad-kjyo7100113-IAD, cache-ams21042-AMS"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""220, 1"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""_abby_hero_form=c; Expires=Fri, 13 Oct 2023 22:51:04 GMT; Path=/""}"
+6,"GET / HTTP/1.1
+Host: www.ted.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.1627199649810791,0.10229969024658203,0.04144787788391113,200,OK,[''],24,24,0,"{""connection"": ""keep-alive"", ""content-length"": ""63358"", ""content-type"": ""text/html; charset=utf-8"", ""x-powered-by"": ""Zenith"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""x-download-options"": ""noopen"", ""x-permitted-cross-domain-policies"": ""none"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains"", ""x-nextjs-cache"": ""STALE"", ""etag"": ""\""3sroui9dtb6fll\"""", ""cache-control"": ""s-maxage=30, stale-while-revalidate"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:51:07 GMT"", ""via"": ""1.1 varnish"", ""age"": ""35"", ""x-served-by"": ""td_17306093dbda, cache-iad-kcgs7200177-IAD, cache-ams21024-AMS"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""21, 1"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""_abby_hero_form=a; Expires=Fri, 13 Oct 2023 22:51:07 GMT; Path=/""}"
+7,"GET / HTTP/1.1
+Host: www.ted.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.17837238311767578,0.11684179306030273,0.034293413162231445,200,OK,[''],24,24,0,"{""connection"": ""keep-alive"", ""content-length"": ""63358"", ""content-type"": ""text/html; charset=utf-8"", ""x-powered-by"": ""Zenith"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""x-download-options"": ""noopen"", ""x-permitted-cross-domain-policies"": ""none"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains"", ""x-nextjs-cache"": ""STALE"", ""etag"": ""\""3sroui9dtb6fll\"""", ""cache-control"": ""s-maxage=30, stale-while-revalidate"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:51:09 GMT"", ""via"": ""1.1 varnish"", ""age"": ""5"", ""x-served-by"": ""td_17306093dbda, cache-iad-kcgs7200177-IAD, cache-ams21066-AMS"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""21, 1"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""_abby_hero_form=a; Expires=Fri, 13 Oct 2023 22:51:09 GMT; Path=/""}"
+8,"GET / HTTP/1.1
+Host: www.ted.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.23194336891174316,0.14787721633911133,0.04420828819274902,200,OK,[''],24,24,0,"{""connection"": ""keep-alive"", ""content-length"": ""63358"", ""content-type"": ""text/html; charset=utf-8"", ""x-powered-by"": ""Zenith"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""x-download-options"": ""noopen"", ""x-permitted-cross-domain-policies"": ""none"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains"", ""x-nextjs-cache"": ""HIT"", ""etag"": ""\""3sroui9dtb6fll\"""", ""cache-control"": ""s-maxage=30, stale-while-revalidate"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:51:11 GMT"", ""via"": ""1.1 varnish"", ""age"": ""32"", ""x-served-by"": ""td_829f5470f662, cache-iad-kjyo7100113-IAD, cache-ams21022-AMS"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""220, 1"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""_abby_hero_form=c; Expires=Fri, 13 Oct 2023 22:51:11 GMT; Path=/""}"
+9,"GET / HTTP/1.1
+Host: www.ted.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.12767291069030762,0.11733555793762207,0.03471255302429199,200,OK,[''],24,24,0,"{""connection"": ""keep-alive"", ""content-length"": ""63358"", ""content-type"": ""text/html; charset=utf-8"", ""x-powered-by"": ""Zenith"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""x-download-options"": ""noopen"", ""x-permitted-cross-domain-policies"": ""none"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains"", ""x-nextjs-cache"": ""HIT"", ""etag"": ""\""3sroui9dtb6fll\"""", ""cache-control"": ""s-maxage=30, stale-while-revalidate"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:51:13 GMT"", ""via"": ""1.1 varnish"", ""age"": ""31"", ""x-served-by"": ""td_500af45dedf2, cache-iad-kiad7000021-IAD, cache-ams21036-AMS"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""448, 1"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""_abby_hero_form=b; Expires=Fri, 13 Oct 2023 22:51:13 GMT; Path=/""}"

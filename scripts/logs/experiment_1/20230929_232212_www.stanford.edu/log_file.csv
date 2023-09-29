@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.stanford.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.17848658561706543,0.10839605331420898,0.12637901306152344,200,OK,[''],20,20,0,"{""connection"": ""keep-alive"", ""content-length"": ""28939"", ""cache-control"": ""public, max-age=600"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=UTF-8"", ""link"": ""<https://www.stanford.edu/>; rel=shortlink"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=300"", ""x-frame-options"": ""SAMEORIGIN"", ""x-pantheon-styx-hostname"": ""styx-fe1-b-68df99c475-8xrjs"", ""x-styx-req-id"": ""7049c1a1-5f0d-11ee-a16b-a63c7ecabce0"", ""age"": ""354"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish"", ""date"": ""Fri, 29 Sep 2023 21:22:16 GMT"", ""x-served-by"": ""cache-chi-kigq8000178-CHI, cache-chi-kigq8000178-CHI, cache-ams21069-AMS"", ""x-cache"": ""HIT, MISS, MISS"", ""x-cache-hits"": ""1, 0, 0"", ""x-timer"": ""S1696022536.297572,VS0,VE98"", ""vary"": ""Accept-Encoding, Cookie""}"
+1,"GET / HTTP/1.1
+Host: www.stanford.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.24033522605895996,0.11156988143920898,0.3146517276763916,200,OK,[''],20,20,0,"{""connection"": ""keep-alive"", ""content-length"": ""28939"", ""cache-control"": ""public, max-age=600"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=UTF-8"", ""link"": ""<https://www.stanford.edu/>; rel=shortlink"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=300"", ""x-frame-options"": ""SAMEORIGIN"", ""x-pantheon-styx-hostname"": ""styx-fe1-b-68df99c475-8xrjs"", ""x-styx-req-id"": ""7049c1a1-5f0d-11ee-a16b-a63c7ecabce0"", ""age"": ""357"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish"", ""date"": ""Fri, 29 Sep 2023 21:22:19 GMT"", ""x-served-by"": ""cache-chi-kigq8000027-CHI, cache-chi-klot8100070-CHI, cache-ams21069-AMS"", ""x-cache"": ""HIT, MISS, MISS"", ""x-cache-hits"": ""299, 0, 0"", ""x-timer"": ""S1696022539.867041,VS0,VE287"", ""vary"": ""Accept-Encoding, Cookie""}"
+2,"GET / HTTP/1.1
+Host: www.stanford.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.18648481369018555,0.19211888313293457,0.31420421600341797,200,OK,[''],20,20,0,"{""connection"": ""keep-alive"", ""content-length"": ""28939"", ""cache-control"": ""public, max-age=600"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=UTF-8"", ""link"": ""<https://www.stanford.edu/>; rel=shortlink"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=300"", ""x-frame-options"": ""SAMEORIGIN"", ""x-pantheon-styx-hostname"": ""styx-fe1-b-68df99c475-8xrjs"", ""x-styx-req-id"": ""7049c1a1-5f0d-11ee-a16b-a63c7ecabce0"", ""age"": ""360"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish"", ""date"": ""Fri, 29 Sep 2023 21:22:21 GMT"", ""x-served-by"": ""cache-chi-kigq8000027-CHI, cache-chi-kigq8000048-CHI, cache-ams21030-AMS"", ""x-cache"": ""HIT, MISS, MISS"", ""x-cache-hits"": ""301, 0, 0"", ""x-timer"": ""S1696022542.701370,VS0,VE286"", ""vary"": ""Accept-Encoding, Cookie""}"
+3,"GET / HTTP/1.1
+Host: www.stanford.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.24973487854003906,0.12369871139526367,0.14584064483642578,200,OK,[''],20,20,0,"{""connection"": ""keep-alive"", ""content-length"": ""28939"", ""cache-control"": ""public, max-age=600"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=UTF-8"", ""link"": ""<https://www.stanford.edu/>; rel=shortlink"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=300"", ""x-frame-options"": ""SAMEORIGIN"", ""x-pantheon-styx-hostname"": ""styx-fe1-b-68df99c475-8xrjs"", ""x-styx-req-id"": ""7049c1a1-5f0d-11ee-a16b-a63c7ecabce0"", ""age"": ""363"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish"", ""date"": ""Fri, 29 Sep 2023 21:22:24 GMT"", ""x-served-by"": ""cache-chi-kigq8000027-CHI, cache-chi-klot8100166-CHI, cache-ams21026-AMS"", ""x-cache"": ""HIT, MISS, MISS"", ""x-cache-hits"": ""302, 0, 0"", ""x-timer"": ""S1696022545.876135,VS0,VE107"", ""vary"": ""Accept-Encoding, Cookie""}"
+4,"GET / HTTP/1.1
+Host: www.stanford.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.24351787567138672,0.1073141098022461,0.12522649765014648,200,OK,[''],20,20,0,"{""connection"": ""keep-alive"", ""content-length"": ""28939"", ""cache-control"": ""public, max-age=600"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=UTF-8"", ""link"": ""<https://www.stanford.edu/>; rel=shortlink"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=300"", ""x-frame-options"": ""SAMEORIGIN"", ""x-pantheon-styx-hostname"": ""styx-fe1-b-68df99c475-8xrjs"", ""x-styx-req-id"": ""7049c1a1-5f0d-11ee-a16b-a63c7ecabce0"", ""age"": ""366"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish"", ""date"": ""Fri, 29 Sep 2023 21:22:27 GMT"", ""x-served-by"": ""cache-chi-klot8100118-CHI, cache-chi-klot8100118-CHI, cache-ams21081-AMS"", ""x-cache"": ""HIT, MISS, MISS"", ""x-cache-hits"": ""1, 0, 0"", ""x-timer"": ""S1696022548.703792,VS0,VE96"", ""vary"": ""Accept-Encoding, Cookie""}"
+5,"GET / HTTP/1.1
+Host: www.stanford.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.18642210960388184,0.11021900177001953,0.12737131118774414,200,OK,[''],20,20,0,"{""connection"": ""keep-alive"", ""content-length"": ""28939"", ""cache-control"": ""public, max-age=600"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=UTF-8"", ""link"": ""<https://www.stanford.edu/>; rel=shortlink"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=300"", ""x-frame-options"": ""SAMEORIGIN"", ""x-pantheon-styx-hostname"": ""styx-fe1-b-68df99c475-8xrjs"", ""x-styx-req-id"": ""7049c1a1-5f0d-11ee-a16b-a63c7ecabce0"", ""age"": ""368"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish"", ""date"": ""Fri, 29 Sep 2023 21:22:30 GMT"", ""x-served-by"": ""cache-chi-kigq8000027-CHI, cache-chi-klot8100063-CHI, cache-ams21030-AMS"", ""x-cache"": ""HIT, MISS, MISS"", ""x-cache-hits"": ""304, 0, 0"", ""x-timer"": ""S1696022550.454131,VS0,VE100"", ""vary"": ""Accept-Encoding, Cookie""}"
+6,"GET / HTTP/1.1
+Host: www.stanford.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.17199182510375977,0.11453485488891602,0.14800119400024414,200,OK,[''],20,20,0,"{""connection"": ""keep-alive"", ""content-length"": ""28939"", ""cache-control"": ""public, max-age=600"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=UTF-8"", ""link"": ""<https://www.stanford.edu/>; rel=shortlink"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=300"", ""x-frame-options"": ""SAMEORIGIN"", ""x-pantheon-styx-hostname"": ""styx-fe1-b-68df99c475-8xrjs"", ""x-styx-req-id"": ""7049c1a1-5f0d-11ee-a16b-a63c7ecabce0"", ""age"": ""371"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish"", ""date"": ""Fri, 29 Sep 2023 21:22:33 GMT"", ""x-served-by"": ""cache-chi-kigq8000131-CHI, cache-chi-kigq8000131-CHI, cache-ams21034-AMS"", ""x-cache"": ""HIT, MISS, MISS"", ""x-cache-hits"": ""1, 0, 0"", ""x-timer"": ""S1696022553.072891,VS0,VE118"", ""vary"": ""Accept-Encoding, Cookie""}"
+7,"GET / HTTP/1.1
+Host: www.stanford.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.17875981330871582,0.10817337036132812,0.1286153793334961,200,OK,[''],20,20,0,"{""connection"": ""keep-alive"", ""content-length"": ""28939"", ""cache-control"": ""public, max-age=600"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=UTF-8"", ""link"": ""<https://www.stanford.edu/>; rel=shortlink"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=300"", ""x-frame-options"": ""SAMEORIGIN"", ""x-pantheon-styx-hostname"": ""styx-fe1-b-68df99c475-8xrjs"", ""x-styx-req-id"": ""7049c1a1-5f0d-11ee-a16b-a63c7ecabce0"", ""age"": ""374"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish"", ""date"": ""Fri, 29 Sep 2023 21:22:35 GMT"", ""x-served-by"": ""cache-chi-kigq8000027-CHI, cache-chi-kigq8000075-CHI, cache-ams21046-AMS"", ""x-cache"": ""HIT, MISS, MISS"", ""x-cache-hits"": ""307, 0, 0"", ""x-timer"": ""S1696022556.810131,VS0,VE97"", ""vary"": ""Accept-Encoding, Cookie""}"
+8,"GET / HTTP/1.1
+Host: www.stanford.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.15844178199768066,0.11215972900390625,0.16345500946044922,200,OK,[''],20,20,0,"{""connection"": ""keep-alive"", ""content-length"": ""28939"", ""cache-control"": ""public, max-age=600"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=UTF-8"", ""link"": ""<https://www.stanford.edu/>; rel=shortlink"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=300"", ""x-frame-options"": ""SAMEORIGIN"", ""x-pantheon-styx-hostname"": ""styx-fe1-b-68df99c475-8xrjs"", ""x-styx-req-id"": ""7049c1a1-5f0d-11ee-a16b-a63c7ecabce0"", ""age"": ""376"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish"", ""date"": ""Fri, 29 Sep 2023 21:22:38 GMT"", ""x-served-by"": ""cache-chi-kigq8000027-CHI, cache-chi-klot8100079-CHI, cache-ams21042-AMS"", ""x-cache"": ""HIT, MISS, MISS"", ""x-cache-hits"": ""309, 0, 0"", ""x-timer"": ""S1696022558.318456,VS0,VE115"", ""vary"": ""Accept-Encoding, Cookie""}"
+9,"GET / HTTP/1.1
+Host: www.stanford.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.16574764251708984,0.11073112487792969,0.13150238990783691,200,OK,[''],20,20,0,"{""connection"": ""keep-alive"", ""content-length"": ""28939"", ""cache-control"": ""public, max-age=600"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=UTF-8"", ""link"": ""<https://www.stanford.edu/>; rel=shortlink"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=300"", ""x-frame-options"": ""SAMEORIGIN"", ""x-pantheon-styx-hostname"": ""styx-fe1-b-68df99c475-8xrjs"", ""x-styx-req-id"": ""7049c1a1-5f0d-11ee-a16b-a63c7ecabce0"", ""age"": ""379"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish"", ""date"": ""Fri, 29 Sep 2023 21:22:41 GMT"", ""x-served-by"": ""cache-chi-kigq8000027-CHI, cache-chi-kigq8000170-CHI, cache-ams21057-AMS"", ""x-cache"": ""HIT, MISS, MISS"", ""x-cache-hits"": ""310, 0, 0"", ""x-timer"": ""S1696022561.102842,VS0,VE98"", ""vary"": ""Accept-Encoding, Cookie""}"

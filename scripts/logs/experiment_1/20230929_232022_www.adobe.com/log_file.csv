@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.adobe.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.15026545524597168,0.11173796653747559,0.14465069770812988,200,OK,[''],22,22,13252,"{""content-type"": ""text/html; charset=UTF-8"", ""server"": ""Apache"", ""x-adobe-content"": ""AEM-Offers"", ""x-frame-options"": ""SAMEORIGIN"", ""link"": ""<https://s7d1.scene7.com/is/image/TitanProd/homepage-CC-lg-pod-tablet?$pjpeg$&jpegSize=100&wid=599>;rel=preload;as=image,<https://use.typekit.net/pps7abe.css>;rel=preload;as=style,<https://adobeid-na1.services.adobe.com>;rel=preconnect,<https://auth.services.adobe.com/imslib/imslib.min.js>;rel=preload;as=script,<https://ims-na1.adobelogin.com/>;rel=preconnect,<https://sstats.adobe.com>;rel=preconnect,<https://assets.adobedtm.com>;rel=preconnect"", ""x-adobe-info"": ""2fbeb497-4970-4c22-9bc3-2b122581f42b"", ""x-adobe-loc"": ""ew1"", ""x-adobe-source"": ""128.107"", ""x-content-type-options"": ""nosniff"", ""x-adobe-cache"": ""MISS"", ""x-akamai-transformed"": ""9 - 0 pmb=mTOE,2mRUM,2"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 21:20:25 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 21:20:25 GMT"", ""content-length"": ""17863"", ""connection"": ""keep-alive"", ""set-cookie"": ""bm_mi=EF11DFA7395274F9B13A32F166D932C5~YAAQqPXVFzS99tqKAQAAum3Q4hUQLvbkn+3HS9ftCOGLnT8w5EBKKsGhZztlcJvmK4tk1Juu4IbeaEaZ1IjVQKi6J+kgWxi3fCoJxRhSWKfeg0McK+jipChw05SiZAiRkq7daP08+NUmJgzLjLWNBxeKCzBB698QX/nEokDnWw58ujc3kl0Dj0wyKk03hXOnPI+j3bJZhqkTocuAZE9vknQZPfBl3pNQbnHxt1npZ3XAxkMUjUYJIRrhtJrvj0zA7BnQmi1nb32xPa894Pf1RGJ7iKhwaxDWjCnzuzY3nexmKP7LT5IskzD/jFD5~1; Domain=.adobe.com; Path=/; Expires=Fri, 29 Sep 2023 21:20:25 GMT; Max-Age=0; Secure"", ""server-timing"": ""ak_p; desc=\""1696022424954_399898024_8478288_142_7214_30_45_-\"";dur=1"", ""strict-transport-security"": ""max-age=86400""}"
+1,"GET / HTTP/1.1
+Host: www.adobe.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.14177608489990234,0.14328837394714355,0.0725102424621582,200,OK,[''],22,22,13240,"{""content-type"": ""text/html; charset=UTF-8"", ""server"": ""Apache"", ""x-adobe-content"": ""AEM-Offers"", ""x-frame-options"": ""SAMEORIGIN"", ""link"": ""<https://s7d1.scene7.com/is/image/TitanProd/homepage-CC-lg-pod-tablet?$pjpeg$&jpegSize=100&wid=599>;rel=preload;as=image,<https://use.typekit.net/pps7abe.css>;rel=preload;as=style,<https://adobeid-na1.services.adobe.com>;rel=preconnect,<https://auth.services.adobe.com/imslib/imslib.min.js>;rel=preload;as=script,<https://ims-na1.adobelogin.com/>;rel=preconnect,<https://sstats.adobe.com>;rel=preconnect,<https://assets.adobedtm.com>;rel=preconnect"", ""x-adobe-info"": ""2fbeb497-4970-4c22-9bc3-2b122581f42b"", ""x-adobe-loc"": ""ew1"", ""x-adobe-source"": ""128.107"", ""x-content-type-options"": ""nosniff"", ""x-adobe-cache"": ""MISS"", ""x-akamai-transformed"": ""9 - 0 pmb=mTOE,2mRUM,2"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 21:20:26 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 21:20:26 GMT"", ""content-length"": ""17861"", ""connection"": ""keep-alive"", ""set-cookie"": ""bm_mi=08B5857C4158E5B00765582F67F0BEF3~YAAQqPXVFza99tqKAQAAIXXQ4hXygNktOO7kjDWNmASarJrMw5wWh2tUpwuNgzCvvxLtkW0nVDOYVPVNiVD7qSKtPCZsq7A+xMln87QROHvbdQ0ayByk+2E+1Lz4zP3qkjagHsgIReDjibHO8A+6KXjpoKh8UhDv5ocYpqL56kf5t50agoo6JRQ7aanWiaXbTvwJ6p1uHqQgsFI/yUQDKUQlj9NtwjExZQptyoHeBIFQrHfoUfoqudwcJw1FnUT2d/1M/NwW2ltHnJ5hwMfATLhiLRzIbZkXaVo5lrbcMI5qruLuoTEWvrs6gTXb~1; Domain=.adobe.com; Path=/; Expires=Fri, 29 Sep 2023 21:20:26 GMT; Max-Age=0; Secure"", ""server-timing"": ""ak_p; desc=\""1696022426835_399898024_8478410_40_7179_15_66_-\"";dur=1"", ""strict-transport-security"": ""max-age=86400""}"
+2,"GET / HTTP/1.1
+Host: www.adobe.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.12032628059387207,0.10041499137878418,0.12654542922973633,200,OK,[''],22,22,13253,"{""content-type"": ""text/html; charset=UTF-8"", ""server"": ""Apache"", ""x-adobe-content"": ""AEM-Offers"", ""x-frame-options"": ""SAMEORIGIN"", ""link"": ""<https://s7d1.scene7.com/is/image/TitanProd/homepage-CC-lg-pod-tablet?$pjpeg$&jpegSize=100&wid=599>;rel=preload;as=image,<https://use.typekit.net/pps7abe.css>;rel=preload;as=style,<https://adobeid-na1.services.adobe.com>;rel=preconnect,<https://auth.services.adobe.com/imslib/imslib.min.js>;rel=preload;as=script,<https://ims-na1.adobelogin.com/>;rel=preconnect,<https://sstats.adobe.com>;rel=preconnect,<https://assets.adobedtm.com>;rel=preconnect"", ""x-adobe-info"": ""2fbeb497-4970-4c22-9bc3-2b122581f42b"", ""x-adobe-loc"": ""ew1"", ""x-adobe-source"": ""128.107"", ""x-content-type-options"": ""nosniff"", ""x-adobe-cache"": ""MISS"", ""x-akamai-transformed"": ""9 - 0 pmb=mTOE,2mRUM,2"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 21:20:29 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 21:20:29 GMT"", ""content-length"": ""17861"", ""connection"": ""keep-alive"", ""set-cookie"": ""bm_mi=55AEFC669515B53AF0C9BF6B3D4848A5~YAAQqPXVFzi99tqKAQAAbX3Q4hWuHQWhhgdkYq2mBWuGqMpzjonJiy2/75Scqi+zl17YFw6EkTun6gXGuq/lcOnmBICS/73JNrZ9duhAzJyX3XxB1E/A0d0cafBK0h0aziVuHffRkxvkiLcJnU3A4w13KQ3NokCXXHqsX9+kdlfdHRSq/ficXA4Lpb012JUMW7e+8TYVhzj8MbZ90eFsA/wSC5UCRpwQJGKVIRk9p+vnyqMgQq0Tb7raR6QY4XOVlsJZ9yTSeVtHGMyEIZX+CUxd7B9E7c7hO1XxwsJvXUqN8XOCIKxjpnuu9Rs3~1; Domain=.adobe.com; Path=/; Expires=Fri, 29 Sep 2023 21:20:29 GMT; Max-Age=0; Secure"", ""server-timing"": ""ak_p; desc=\""1696022428946_399898024_8478567_96_6823_19_65_-\"";dur=1"", ""strict-transport-security"": ""max-age=86400""}"
+3,"GET / HTTP/1.1
+Host: www.adobe.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.15183043479919434,0.14484333992004395,0.03818964958190918,200,OK,[''],22,22,13291,"{""content-type"": ""text/html; charset=UTF-8"", ""server"": ""Apache"", ""x-adobe-content"": ""AEM-Offers"", ""x-frame-options"": ""SAMEORIGIN"", ""link"": ""<https://s7d1.scene7.com/is/image/TitanProd/homepage-CC-lg-pod-tablet?$pjpeg$&jpegSize=100&wid=599>;rel=preload;as=image,<https://use.typekit.net/pps7abe.css>;rel=preload;as=style,<https://adobeid-na1.services.adobe.com>;rel=preconnect,<https://auth.services.adobe.com/imslib/imslib.min.js>;rel=preload;as=script,<https://ims-na1.adobelogin.com/>;rel=preconnect,<https://sstats.adobe.com>;rel=preconnect,<https://assets.adobedtm.com>;rel=preconnect"", ""x-adobe-info"": ""2fbeb497-4970-4c22-9bc3-2b122581f42b"", ""x-adobe-loc"": ""ew1"", ""x-adobe-source"": ""128.107"", ""x-content-type-options"": ""nosniff"", ""x-adobe-cache"": ""MISS"", ""x-akamai-transformed"": ""9 - 0 pmb=mTOE,2mRUM,2"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 21:20:31 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 21:20:31 GMT"", ""content-length"": ""17864"", ""connection"": ""keep-alive"", ""set-cookie"": ""bm_mi=7F2DEBCB4C7BBFC12B0712E5F33EB92C~YAAQqPXVFzq99tqKAQAALYXQ4hWbg7ifU1Rvg1UYXAhu1xhRNg+ZJRatL+GuoJ/k4E1jt4cSaL4NRfHa316OrJkNNPiIkUAoCpVWtcEEJOO2NSjWlwAhwvKyCCaq/cPPVTu3WRKxr9MiOoUMU2+Bqx1ICHlcOCQyURLlWqVB2le1hTmyAkTHJVad50JRfys74JxyXakTG1sgapfogOnraX24B5gySxfCMEeJODChLysOCDuWOF8c7zyCuFetz6wmw+VbfZwPcs8kKQeWHqpF4vKsjv7asv51gl58rMf07cOi8sURSkNFxWFvA8df~1; Domain=.adobe.com; Path=/; Expires=Fri, 29 Sep 2023 21:20:31 GMT; Max-Age=0; Secure"", ""server-timing"": ""ak_p; desc=\""1696022430948_399898024_8478745_44_6994_37_61_-\"";dur=1"", ""strict-transport-security"": ""max-age=86400""}"
+4,"GET / HTTP/1.1
+Host: www.adobe.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.22369980812072754,0.1306777000427246,0.052747249603271484,200,OK,[''],22,22,13244,"{""content-type"": ""text/html; charset=UTF-8"", ""server"": ""Apache"", ""x-adobe-content"": ""AEM-Offers"", ""x-frame-options"": ""SAMEORIGIN"", ""link"": ""<https://s7d1.scene7.com/is/image/TitanProd/homepage-CC-lg-pod-tablet?$pjpeg$&jpegSize=100&wid=599>;rel=preload;as=image,<https://use.typekit.net/pps7abe.css>;rel=preload;as=style,<https://adobeid-na1.services.adobe.com>;rel=preconnect,<https://auth.services.adobe.com/imslib/imslib.min.js>;rel=preload;as=script,<https://ims-na1.adobelogin.com/>;rel=preconnect,<https://sstats.adobe.com>;rel=preconnect,<https://assets.adobedtm.com>;rel=preconnect"", ""x-adobe-info"": ""2fbeb497-4970-4c22-9bc3-2b122581f42b"", ""x-adobe-loc"": ""ew1"", ""x-adobe-source"": ""128.107"", ""x-content-type-options"": ""nosniff"", ""x-adobe-cache"": ""MISS"", ""x-akamai-transformed"": ""9 - 0 pmb=mTOE,2mRUM,2"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 21:20:33 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 21:20:33 GMT"", ""content-length"": ""17860"", ""connection"": ""keep-alive"", ""set-cookie"": ""bm_mi=F0B9BB5B83A30A80178C240E9F555256~YAAQqPXVFzy99tqKAQAAK43Q4hWvhU5V2jiRDupQcttY43oLDx13IgCw66mdPhuPK64r1vpVcIXeu8mjXv5ZURDZME24n2JZV+7+xyf6DFNjcHMxsjcHjlJcXwTz9J7fEicbyQY8wK/zc7uxpHvftyYXBCa33WHyqD+WIXgCfQfOta8eZlMD3nSqqYYUeYK8rWI9g5XGZxV206CmiYwevMjC0IxqShw9UJQcHpc54BewdxnYNR1SDLDlBhatlsnfGRMhKmdlf8M2wvR8AEP6OzkXcYgUtn92F97lKG+pW8YQMJU9Mnvqs2KUinPN~1; Domain=.adobe.com; Path=/; Expires=Fri, 29 Sep 2023 21:20:33 GMT; Max-Age=0; Secure"", ""server-timing"": ""ak_p; desc=\""1696022432946_399898024_8478851_45_7044_30_110_-\"";dur=1"", ""strict-transport-security"": ""max-age=86400""}"
+5,"GET / HTTP/1.1
+Host: www.adobe.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.17296862602233887,0.11411094665527344,0.13031291961669922,200,OK,[''],22,22,13242,"{""content-type"": ""text/html; charset=UTF-8"", ""server"": ""Apache"", ""x-adobe-content"": ""AEM-Offers"", ""x-frame-options"": ""SAMEORIGIN"", ""link"": ""<https://s7d1.scene7.com/is/image/TitanProd/homepage-CC-lg-pod-tablet?$pjpeg$&jpegSize=100&wid=599>;rel=preload;as=image,<https://use.typekit.net/pps7abe.css>;rel=preload;as=style,<https://adobeid-na1.services.adobe.com>;rel=preconnect,<https://auth.services.adobe.com/imslib/imslib.min.js>;rel=preload;as=script,<https://ims-na1.adobelogin.com/>;rel=preconnect,<https://sstats.adobe.com>;rel=preconnect,<https://assets.adobedtm.com>;rel=preconnect"", ""x-adobe-info"": ""2fbeb497-4970-4c22-9bc3-2b122581f42b"", ""x-adobe-loc"": ""ew1"", ""x-adobe-source"": ""128.107"", ""x-content-type-options"": ""nosniff"", ""x-adobe-cache"": ""MISS"", ""x-akamai-transformed"": ""9 - 0 pmb=mTOE,2mRUM,2"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 21:20:35 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 21:20:35 GMT"", ""content-length"": ""17862"", ""connection"": ""keep-alive"", ""set-cookie"": ""bm_mi=2FAAF2ADE610B398CF6C5C5084717E00~YAAQqPXVFz699tqKAQAA7ZTQ4hWn+/fyODoqnF8/hkpg2X9koaHl7dP8wDSZnbmIJaLmG+DScqUhKWqlnEUezKEMXV2Q8UDIgEZdqzaCzC4TyUOaTRgZD1DAiI62pLElZEL6QFWsIGJ4VaTczoO70xNnpsJPsVV5sZVWjkhwho+zZSRQdYmq9dtXi0GVejXYPM+yL86h3bP8JxbZRoDGvXbW5FUbYpzlFytdA5YjU/TPk64RWXw6AjuWV3Kgg6oVP6iWrc8X8l0b18ypfIki68m7Ui1Sp0zT5Xb48U3UmZTAUCq3QiXXWK+uKuxi~1; Domain=.adobe.com; Path=/; Expires=Fri, 29 Sep 2023 21:20:35 GMT; Max-Age=0; Secure"", ""server-timing"": ""ak_p; desc=\""1696022434947_399898024_8478966_110_7080_36_82_-\"";dur=1"", ""strict-transport-security"": ""max-age=86400""}"
+6,"GET / HTTP/1.1
+Host: www.adobe.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.18671917915344238,0.16655874252319336,0.18039441108703613,200,OK,[''],22,22,13240,"{""content-type"": ""text/html; charset=UTF-8"", ""server"": ""Apache"", ""x-adobe-content"": ""AEM-Offers"", ""x-frame-options"": ""SAMEORIGIN"", ""link"": ""<https://s7d1.scene7.com/is/image/TitanProd/homepage-CC-lg-pod-tablet?$pjpeg$&jpegSize=100&wid=599>;rel=preload;as=image,<https://use.typekit.net/pps7abe.css>;rel=preload;as=style,<https://adobeid-na1.services.adobe.com>;rel=preconnect,<https://auth.services.adobe.com/imslib/imslib.min.js>;rel=preload;as=script,<https://ims-na1.adobelogin.com/>;rel=preconnect,<https://sstats.adobe.com>;rel=preconnect,<https://assets.adobedtm.com>;rel=preconnect"", ""x-adobe-info"": ""2fbeb497-4970-4c22-9bc3-2b122581f42b"", ""x-adobe-loc"": ""ew1"", ""x-adobe-source"": ""128.107"", ""x-content-type-options"": ""nosniff"", ""x-adobe-cache"": ""MISS"", ""x-akamai-transformed"": ""9 - 0 pmb=mTOE,2mRUM,2"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 21:20:37 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 21:20:37 GMT"", ""content-length"": ""17857"", ""connection"": ""keep-alive"", ""set-cookie"": ""bm_mi=FEE12B25BFDA382A6B285F383F9BA457~YAAQqPXVF0C99tqKAQAAD53Q4hVjMjmAolujAvB2bjzkFwJLag+RrzSPzoOLrsMVgpP4i3eJfjxoXhvg4cKsIIh58ibMNNyy/MTD1C4RDR4eX7Zjl4n63ehyAuNvMsixnL+udkPFr0yb6I65QCsGrGe6iUaggcUUxvjQNPKnFXw3Dy9omSbjrJbOZ+/lPSfxFGQPUePKgU51wW3L8KnzmfLM1yJkSeBJalh5xEKVVLi1UT3pKIshiye6K73R7feJVcjzeQiSfbCmtU+iDiNNjRmaJzWOEZLVrIitxPUp0FonyxdkApbUWdXRsPBX~1; Domain=.adobe.com; Path=/; Expires=Fri, 29 Sep 2023 21:20:37 GMT; Max-Age=0; Secure"", ""server-timing"": ""ak_p; desc=\""1696022437017_399898024_8479087_39_6926_35_94_-\"";dur=1"", ""strict-transport-security"": ""max-age=86400""}"
+7,"GET / HTTP/1.1
+Host: www.adobe.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.18163394927978516,0.11435079574584961,0.13826680183410645,200,OK,[''],22,22,13273,"{""content-type"": ""text/html; charset=UTF-8"", ""server"": ""Apache"", ""x-adobe-content"": ""AEM-Offers"", ""x-frame-options"": ""SAMEORIGIN"", ""link"": ""<https://s7d1.scene7.com/is/image/TitanProd/homepage-CC-lg-pod-tablet?$pjpeg$&jpegSize=100&wid=599>;rel=preload;as=image,<https://use.typekit.net/pps7abe.css>;rel=preload;as=style,<https://adobeid-na1.services.adobe.com>;rel=preconnect,<https://auth.services.adobe.com/imslib/imslib.min.js>;rel=preload;as=script,<https://ims-na1.adobelogin.com/>;rel=preconnect,<https://sstats.adobe.com>;rel=preconnect,<https://assets.adobedtm.com>;rel=preconnect"", ""x-adobe-info"": ""2fbeb497-4970-4c22-9bc3-2b122581f42b"", ""x-adobe-loc"": ""ew1"", ""x-adobe-source"": ""128.107"", ""x-content-type-options"": ""nosniff"", ""x-adobe-cache"": ""MISS"", ""x-akamai-transformed"": ""9 - 0 pmb=mTOE,2mRUM,2"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 21:20:39 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 21:20:39 GMT"", ""content-length"": ""17859"", ""connection"": ""keep-alive"", ""set-cookie"": ""bm_mi=5C6498CC7057A06D97A7F7870B819A06~YAAQqPXVF0K99tqKAQAAQabQ4hUrRQNrLpiBaWaLoR3FSd6E7YSWtK21wKlc5gWfGU4U1SLbgVdw2beRNPtT5nsVk58kYWa3X8XJe2mNXWMHpMOylnhEPj+6KtHUUdDswB5JQSDEY+2390UYIziC6yQl0uVxRLeYRu5V2H+eiPs9SoohCf+kKjjC63zv6YDZLvrUHK3zw8j+1FkvRn5iDwmCQ/3iO4yMnVUDVuqCtOhrBfYRr2yvMZJT/5ZNooRPXCHtL03K1KibiBm9Md1cR8wU6ClGeZqs/SdGOGfM4Q6iPChEdVB19Woc5pPO~1; Domain=.adobe.com; Path=/; Expires=Fri, 29 Sep 2023 21:20:39 GMT; Max-Age=0; Secure"", ""server-timing"": ""ak_p; desc=\""1696022439376_399898024_8479256_42_7085_40_73_-\"";dur=1"", ""strict-transport-security"": ""max-age=86400""}"
+8,"GET / HTTP/1.1
+Host: www.adobe.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.11990714073181152,0.10860466957092285,0.20782804489135742,200,OK,[''],22,22,13244,"{""content-type"": ""text/html; charset=UTF-8"", ""server"": ""Apache"", ""x-adobe-content"": ""AEM-Offers"", ""x-frame-options"": ""SAMEORIGIN"", ""link"": ""<https://s7d1.scene7.com/is/image/TitanProd/homepage-CC-lg-pod-tablet?$pjpeg$&jpegSize=100&wid=599>;rel=preload;as=image,<https://use.typekit.net/pps7abe.css>;rel=preload;as=style,<https://adobeid-na1.services.adobe.com>;rel=preconnect,<https://auth.services.adobe.com/imslib/imslib.min.js>;rel=preload;as=script,<https://ims-na1.adobelogin.com/>;rel=preconnect,<https://sstats.adobe.com>;rel=preconnect,<https://assets.adobedtm.com>;rel=preconnect"", ""x-adobe-info"": ""2fbeb497-4970-4c22-9bc3-2b122581f42b"", ""x-adobe-loc"": ""ew1"", ""x-adobe-source"": ""128.107"", ""x-content-type-options"": ""nosniff"", ""x-adobe-cache"": ""MISS"", ""x-akamai-transformed"": ""9 - 0 pmb=mTOE,2mRUM,2"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 21:20:42 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 21:20:42 GMT"", ""content-length"": ""17860"", ""connection"": ""keep-alive"", ""set-cookie"": ""bm_mi=2A085EEB27EC2FFD5D40185D7DF72D06~YAAQqPXVF0S99tqKAQAAErDQ4hUwu3eTmJHUwVEQ0Ju87BE5lj7+BgJGQLYtlK2TDRXT9yM1EDhIQyIjv2ju/NpVo0O5pxIAgenvK1OqLq+OA02AHVLg3XgOpd6NhHi3okdERmapuMwOKpEX6XyG0eKmDh2NXih0eWSXx7meGkGHszTjdFSQxgmKOt6imlMoVw0vhecmsyO5NW41vDc5CqayjBWR46BD20xEj05rNADx/3enYRXMYQ9J19DVwsZlQKKm0YwxbPemevxkRnOsmr3SKcJA7yKERLWGvIZBmnbH9RwPjz4SmSnAGqYy~1; Domain=.adobe.com; Path=/; Expires=Fri, 29 Sep 2023 21:20:42 GMT; Max-Age=0; Secure"", ""server-timing"": ""ak_p; desc=\""1696022441971_399898024_8479384_40_6809_50_19_-\"";dur=1"", ""strict-transport-security"": ""max-age=86400""}"
+9,"GET / HTTP/1.1
+Host: www.adobe.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.16152071952819824,0.10812115669250488,0.11344122886657715,200,OK,[''],22,22,13289,"{""content-type"": ""text/html; charset=UTF-8"", ""server"": ""Apache"", ""x-adobe-content"": ""AEM-Offers"", ""x-frame-options"": ""SAMEORIGIN"", ""link"": ""<https://s7d1.scene7.com/is/image/TitanProd/homepage-CC-lg-pod-tablet?$pjpeg$&jpegSize=100&wid=599>;rel=preload;as=image,<https://use.typekit.net/pps7abe.css>;rel=preload;as=style,<https://adobeid-na1.services.adobe.com>;rel=preconnect,<https://auth.services.adobe.com/imslib/imslib.min.js>;rel=preload;as=script,<https://ims-na1.adobelogin.com/>;rel=preconnect,<https://sstats.adobe.com>;rel=preconnect,<https://assets.adobedtm.com>;rel=preconnect"", ""x-adobe-info"": ""2fbeb497-4970-4c22-9bc3-2b122581f42b"", ""x-adobe-loc"": ""ew1"", ""x-adobe-source"": ""128.107"", ""x-content-type-options"": ""nosniff"", ""x-adobe-cache"": ""MISS"", ""x-akamai-transformed"": ""9 - 0 pmb=mTOE,2mRUM,2"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 21:20:44 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 21:20:44 GMT"", ""content-length"": ""17865"", ""connection"": ""keep-alive"", ""set-cookie"": ""bm_mi=1AA7F9EFD2EA0D9CB4E93BEDFB4AE28E~YAAQqPXVF0a99tqKAQAAcLnQ4hWTP2dYyqW58A6Gnu6moEHHUswo6Iq+0pDAM4Pf3Pn3vIGkha1mecZUlX0WkiNGRvGlGOMCglXNJlWa2Xr1doAbMUOyfsonhA9EHdGrHdbmfhZ7lEYc7pIUHQei3uBNQdrG/MosM07VsrVuhkYPgpAb2ofc8vl6sVuB2iGrRlieCs7KSot87HX6605ZenjEayocf98c2Q848DxOiZRY0pPTLgch1Tgg8L/M8kBikUYyXKABGj9Gcp4Aeylf7qVMU/DNiecqZb4Uqpnx9JoCKoepcqv3Nt5J1C0a~1; Domain=.adobe.com; Path=/; Expires=Fri, 29 Sep 2023 21:20:44 GMT; Max-Age=0; Secure"", ""server-timing"": ""ak_p; desc=\""1696022444294_399898024_8479542_47_6761_23_78_-\"";dur=1"", ""strict-transport-security"": ""max-age=86400""}"

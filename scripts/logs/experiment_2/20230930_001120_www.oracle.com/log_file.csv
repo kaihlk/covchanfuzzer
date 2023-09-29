@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.oracle.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.1861424446105957,0.12507367134094238,0.06986689567565918,200,OK,[''],22,22,13117,"{""content-type"": ""text/html; charset=utf-8"", ""etag"": ""\""a40v7vina180l3\"""", ""x-akamai-transformed"": ""9 - 0 pmb=mTOE,2mRUM,3"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 22:11:25 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 22:11:25 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""bm_mi=0D766B7C83E0EFABA2B01C682ECCB589~YAAQFh0QAv8fcdWKAQAAuyH/4hW6nM8kmIOVqWHhtD1/ZtElPhHmN0C+i9ifT664vwxUGolnOcAcXPhcmJiOyiJmSPcAIvul1UURjIU7EOonBwc7EConJGRdnojxGln7uOT6Isz1n/uir5TyRvZ93lj4eJyVYDxAyup9msvu2+uCwRgkf8DFU12Zph4OiHXq9qa4NGOdE7ykZgwALdDl/XxzLNXtqeQA65ZEMk4QNCIa3OkSZOmpaaTJTUv3D5/mAw/6NQ1RnI+BUFUL66q7DGlginTwE8hcTiW0863+jicj2gHjISQfuV7qL0FZ~1; Domain=.oracle.com; Path=/; Expires=Fri, 29 Sep 2023 22:11:25 GMT; Max-Age=0; Secure"", ""server-timing"": ""ak_p; desc=\""1696025485619_34610454_300275850_257_12711_35_57_-\"";dur=1"", ""link"": ""<https://tms.oracle.com>;rel=\""preconnect\"",<https://d.oracleinfinity.io>;rel=\""preconnect\"",<https://dc.oracleinfinity.io>;rel=\""preconnect\"""", ""akamai-grn"": ""0.161d1002.1696025485.11e5d88a"", ""x-frame-options"": ""sameorigin"", ""content-security-policy"": ""frame-ancestors 'self' https://my.oracle.com https://eeho.fa.us2.oraclecloud.com https://blogs.oracle.com"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1"", ""origin-cache-control"": ""max-age=1800"", ""origin-edge-control"": ""NO_HEADER_PRESENTED"", ""actual-object-ttl"": ""31536000""}"
+1,"GET / HTTP/1.1
+Host: www.oracle.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.13338088989257812,0.1084587574005127,0.06526517868041992,200,OK,[''],22,22,13147,"{""content-type"": ""text/html; charset=utf-8"", ""etag"": ""\""a40v7vina180l3\"""", ""x-akamai-transformed"": ""9 - 0 pmb=mTOE,2mRUM,3"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 22:11:29 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 22:11:29 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""bm_mi=9671C36EB776B35CC3085455C7ED8390~YAAQFh0QAhogcdWKAQAAwy//4hWvQzESoJYEfPRERnHM0AHG4PIdwJKUqF0T+zwiPXQd/4XHkVs5qJTbLx0VSSYj7bQVbRQBukB3VQxvybj3A53dqsGT9lhcMgT0t66vB5mEDqHZcLP2GGGtXujUOJlnFu9cb3aOGk9J/Seu7PFh4qBXj7tb4JSuOSiaY8w1LmLg2JAczzWzdGQvEQ9ZNPbZBXspWv6+qOOyRU80nvG5zrDCVimVVTCNEXAzntOf2aymsTDjNc0TtI7DxPAzSxH6xD3BsGuqCTWIgnvRq4gBSv6t40Wa/97q2Ggy~1; Domain=.oracle.com; Path=/; Expires=Fri, 29 Sep 2023 22:11:29 GMT; Max-Age=0; Secure"", ""server-timing"": ""ak_p; desc=\""1696025489254_34610454_300278982_24_12473_27_61_-\"";dur=1"", ""link"": ""<https://tms.oracle.com>;rel=\""preconnect\"",<https://d.oracleinfinity.io>;rel=\""preconnect\"",<https://dc.oracleinfinity.io>;rel=\""preconnect\"""", ""akamai-grn"": ""0.161d1002.1696025489.11e5e4c6"", ""x-frame-options"": ""sameorigin"", ""content-security-policy"": ""frame-ancestors 'self' https://my.oracle.com https://eeho.fa.us2.oraclecloud.com https://blogs.oracle.com"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1"", ""origin-cache-control"": ""max-age=1800"", ""origin-edge-control"": ""NO_HEADER_PRESENTED"", ""actual-object-ttl"": ""31536000""}"
+2,"GET / HTTP/1.1
+Host: www.oracle.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.17187190055847168,0.1390085220336914,0.054868459701538086,200,OK,[''],22,22,13059,"{""content-type"": ""text/html; charset=utf-8"", ""etag"": ""\""a40v7vina180l3\"""", ""x-akamai-transformed"": ""9 - 0 pmb=mTOE,2mRUM,3"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 22:11:32 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 22:11:32 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""bm_mi=F13F7ECF0EDA6C9A4F7C7348631772B7~YAAQFh0QAkkgcdWKAQAA8jz/4hUaQ3+2QFp2BGtYZB3NiHc7LEGKmuIkkjMSvmZWGakgRAayUYDNvsJ3MJOwO/ztwCInwxydRQGijY1xNYLbfFOPOcF9h8ggx+Vp7vA1D4r9iFxuizxZfvcIvRbZaAhhuvASDLBzP3ae/xhPj5PZqIoZFrJp5UKbcgp85feLhSPRwv8e5IJhrrQt9tAMBgZ7ZWPSwrtJ5bKxN0UyTTjNqfmupNvRiJz6F7IwR4kP6/bSLO9IAg0r5qPTjXsiKT4SYIg1uuXykazlB9nXItBTUvGZVV3L+p9APojI~1; Domain=.oracle.com; Path=/; Expires=Fri, 29 Sep 2023 22:11:32 GMT; Max-Age=0; Secure"", ""server-timing"": ""ak_p; desc=\""1696025492602_34610454_300281909_47_12473_34_89_-\"";dur=1"", ""link"": ""<https://tms.oracle.com>;rel=\""preconnect\"",<https://d.oracleinfinity.io>;rel=\""preconnect\"",<https://dc.oracleinfinity.io>;rel=\""preconnect\"""", ""akamai-grn"": ""0.161d1002.1696025492.11e5f035"", ""x-frame-options"": ""sameorigin"", ""content-security-policy"": ""frame-ancestors 'self' https://my.oracle.com https://eeho.fa.us2.oraclecloud.com https://blogs.oracle.com"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1"", ""origin-cache-control"": ""max-age=1800"", ""origin-edge-control"": ""NO_HEADER_PRESENTED"", ""actual-object-ttl"": ""31536000""}"
+3,"GET / HTTP/1.1
+Host: www.oracle.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.14010047912597656,0.11142897605895996,0.07541084289550781,200,OK,[''],22,22,13138,"{""content-type"": ""text/html; charset=utf-8"", ""etag"": ""\""a40v7vina180l3\"""", ""x-akamai-transformed"": ""9 - 0 pmb=mTOE,2mRUM,3"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 22:11:36 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 22:11:36 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""bm_mi=9FD2AA1FDC53E03DF132134FF9B2D480~YAAQFh0QAmkgcdWKAQAALUr/4hVrcRO5V0GNhYXwaN3f3NTh5gVDO6ITw5YuWg0v0NZxBXhEl05yyQip9WA8EPn4NFuq3rolhjKrL5ij701O4DWshlwEF38jTBllmU7pLLTe5qfZbN/sF9evmohM2ajFIz5GgZ7BvI+lberuRr7+Djbdjmir/3vDeE4fTpdNayPqQ65qsrBBAQ8q2rTK0wt8Au0+um6Zyb/7PfEB0u9FENDNEHoSfiB5pesrD/T7q2M6vZFqOASVHZHXJspLiTE1AmZUHMlARcH+YX/Z94BBhTG7aYAnPYOqrcst~1; Domain=.oracle.com; Path=/; Expires=Fri, 29 Sep 2023 22:11:36 GMT; Max-Age=0; Secure"", ""server-timing"": ""ak_p; desc=\""1696025496036_34610454_300284730_26_12702_36_37_-\"";dur=1"", ""link"": ""<https://tms.oracle.com>;rel=\""preconnect\"",<https://d.oracleinfinity.io>;rel=\""preconnect\"",<https://dc.oracleinfinity.io>;rel=\""preconnect\"""", ""akamai-grn"": ""0.161d1002.1696025496.11e5fb3a"", ""x-frame-options"": ""sameorigin"", ""content-security-policy"": ""frame-ancestors 'self' https://my.oracle.com https://eeho.fa.us2.oraclecloud.com https://blogs.oracle.com"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1"", ""origin-cache-control"": ""max-age=1800"", ""origin-edge-control"": ""NO_HEADER_PRESENTED"", ""actual-object-ttl"": ""31536000""}"
+4,"GET / HTTP/1.1
+Host: www.oracle.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.14780569076538086,0.10127663612365723,0.0630350112915039,200,OK,[''],22,22,13028,"{""content-type"": ""text/html; charset=utf-8"", ""etag"": ""\""a40v7vina180l3\"""", ""x-akamai-transformed"": ""9 - 0 pmb=mTOE,2mRUM,3"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 22:11:39 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 22:11:39 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""bm_mi=81BF84E2443096E601928C0C8EB0FC0D~YAAQFh0QAoIgcdWKAQAAhlf/4hWTy6eC9mxNsshp8h0HtLWd3qa0L0Nm7+eDx8kCq7dOjzBfnAc6Y3shRizebN6ApeYR+aVBGyYWYUY1xdbNGPB6isit0lfyGSSZZUH88lTpw3fO+KJFrsy0WQPZu37JX/f09jxY0fJYVpoGsIju7in/7IK5ZSKe4KwvPe5ipvitPdf60hgh1970zRS46BYE0T0nVHzHwB6d38VTD2rhJH1w4Fi0sPSFnflgd6UDMHDlKTtxSMbDVeUlkanICpJzByuial3hxxYUbgAnAiRb6htYcUzBY+meLnx8~1; Domain=.oracle.com; Path=/; Expires=Fri, 29 Sep 2023 22:11:39 GMT; Max-Age=0; Secure"", ""server-timing"": ""ak_p; desc=\""1696025499443_34610454_300287704_22_12463_40_61_-\"";dur=1"", ""link"": ""<https://tms.oracle.com>;rel=\""preconnect\"",<https://d.oracleinfinity.io>;rel=\""preconnect\"",<https://dc.oracleinfinity.io>;rel=\""preconnect\"""", ""akamai-grn"": ""0.161d1002.1696025499.11e606d8"", ""x-frame-options"": ""sameorigin"", ""content-security-policy"": ""frame-ancestors 'self' https://my.oracle.com https://eeho.fa.us2.oraclecloud.com https://blogs.oracle.com"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1"", ""origin-cache-control"": ""max-age=1800"", ""origin-edge-control"": ""NO_HEADER_PRESENTED"", ""actual-object-ttl"": ""31536000""}"
+5,"GET / HTTP/1.1
+Host: www.oracle.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.1437211036682129,0.11611294746398926,0.04693174362182617,200,OK,[''],22,22,13139,"{""content-type"": ""text/html; charset=utf-8"", ""etag"": ""\""a40v7vina180l3\"""", ""x-akamai-transformed"": ""9 - 0 pmb=mTOE,2mRUM,3"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 22:11:42 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 22:11:42 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""bm_mi=FC1AB2F9535A1F830E7E955FEB8C6161~YAAQFh0QApogcdWKAQAAfmP/4hVCWB0epVeyg5AYeHg6pQSBArNXr+SfDS0ae7Y9662MA90LpMNmxSFmsMh4i72VbIAiSBcJQ4r+ekYwN1mGT+hjjwdnJXSXbM76gdzQov41HBsxrbwkWMPlMjkdD/KzJMtf+SbyJ/XkAQd8iCIL/staERM1HSkwMvEuigCbcXCmHRN8yEI2Sb0m7hfR5EkJmP/P8pt+9+n/7SKKmeRoSWRL6WWMuzm5R79HWhUbhuD19qv4crRdk5TXH1u3O7K0UZ9XHNjkWmawklfLxl+rLYnVF9f9CNUm0H4N~1; Domain=.oracle.com; Path=/; Expires=Fri, 29 Sep 2023 22:11:42 GMT; Max-Age=0; Secure"", ""server-timing"": ""ak_p; desc=\""1696025502480_34610454_300290167_24_13406_28_87_-\"";dur=1"", ""link"": ""<https://tms.oracle.com>;rel=\""preconnect\"",<https://d.oracleinfinity.io>;rel=\""preconnect\"",<https://dc.oracleinfinity.io>;rel=\""preconnect\"""", ""akamai-grn"": ""0.161d1002.1696025502.11e61077"", ""x-frame-options"": ""sameorigin"", ""content-security-policy"": ""frame-ancestors 'self' https://my.oracle.com https://eeho.fa.us2.oraclecloud.com https://blogs.oracle.com"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1"", ""origin-cache-control"": ""max-age=1800"", ""origin-edge-control"": ""NO_HEADER_PRESENTED"", ""actual-object-ttl"": ""31536000""}"
+6,"GET / HTTP/1.1
+Host: www.oracle.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.08648324012756348,0.11142325401306152,0.055191993713378906,200,OK,[''],22,22,13108,"{""content-type"": ""text/html; charset=utf-8"", ""etag"": ""\""a40v7vina180l3\"""", ""x-akamai-transformed"": ""9 - 0 pmb=mTOE,2mRUM,3"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 22:11:46 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 22:11:46 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""bm_mi=74EA91FBCCBCC660AD03870F4A89839A~YAAQFh0QArQgcdWKAQAAanH/4hWYk9QNOnzwG8VuZ5ZrE2BIu4ckBmTQDT6RAsbcvHycl9NU+PJbjpdfEiH7k+BU7uMvVRe9+hcWTIoBaLChHakv1X32czdZQGr5UCeTNEUkrwuy6Obf0AobHsXG0pSteWn/UaAZcmJMVs+khjX9UQs+EaNOB0bIJMDo6XynVGrzmVzPlMbpJiPVve7C/34cxvHuxvFHZ1ieAgjiPdBv99RzXrRUBQa1swtwQ3N2DqMNbgjLf4xSBFn7QffvW3STI3d2AJEVSoIi08vCrEa6XDwiYaBs++Mnfl+Z~1; Domain=.oracle.com; Path=/; Expires=Fri, 29 Sep 2023 22:11:46 GMT; Max-Age=0; Secure"", ""server-timing"": ""ak_p; desc=\""1696025506109_34610454_300293121_26_11819_26_21_-\"";dur=1"", ""link"": ""<https://tms.oracle.com>;rel=\""preconnect\"",<https://d.oracleinfinity.io>;rel=\""preconnect\"",<https://dc.oracleinfinity.io>;rel=\""preconnect\"""", ""akamai-grn"": ""0.161d1002.1696025506.11e61c01"", ""x-frame-options"": ""sameorigin"", ""content-security-policy"": ""frame-ancestors 'self' https://my.oracle.com https://eeho.fa.us2.oraclecloud.com https://blogs.oracle.com"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1"", ""origin-cache-control"": ""max-age=1800"", ""origin-edge-control"": ""NO_HEADER_PRESENTED"", ""actual-object-ttl"": ""31536000""}"
+7,"GET / HTTP/1.1
+Host: www.oracle.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.30403733253479004,0.11591768264770508,0.04038810729980469,200,OK,[''],22,22,13060,"{""content-type"": ""text/html; charset=utf-8"", ""etag"": ""\""a40v7vina180l3\"""", ""x-akamai-transformed"": ""9 - 0 pmb=mTOE,2mRUM,3"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 22:11:49 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 22:11:49 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""bm_mi=7F899A3E9CF2B22D18A6E40F0F4B9EA4~YAAQFh0QAtQgcdWKAQAAN4D/4hXhqnwiL0lXdN3jTUbCt6b/QEd/EJSPjI9hAc+Szz3FgLD56qYTsyM2lRRgcazOapcOl8n5PtckTjBYgqh/UzDx0iuu+vFPnT8uxjtp6Nuqfro/tm5LTGGIMpmJbP2Ep3UN0ot/lhI5yuwr0MXUDFQwisJQLA836Yoj8sfCGqAiPnTH6JKkjD+upd1gzzpw/5zfymSifAl0TQIdPF4ZpGHYKeuE9ONnNFqEHGvDn+rKm6PXso8Sodhm3nvazkNqAV2cUImRBXNdXlQ/p8cxC4tm3WbiRYBtK/pR~1; Domain=.oracle.com; Path=/; Expires=Fri, 29 Sep 2023 22:11:49 GMT; Max-Age=0; Secure"", ""server-timing"": ""ak_p; desc=\""1696025509821_34610454_300296387_87_12143_41_71_-\"";dur=1"", ""link"": ""<https://tms.oracle.com>;rel=\""preconnect\"",<https://d.oracleinfinity.io>;rel=\""preconnect\"",<https://dc.oracleinfinity.io>;rel=\""preconnect\"""", ""akamai-grn"": ""0.161d1002.1696025509.11e628c3"", ""x-frame-options"": ""sameorigin"", ""content-security-policy"": ""frame-ancestors 'self' https://my.oracle.com https://eeho.fa.us2.oraclecloud.com https://blogs.oracle.com"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1"", ""origin-cache-control"": ""max-age=1800"", ""origin-edge-control"": ""NO_HEADER_PRESENTED"", ""actual-object-ttl"": ""31536000""}"
+8,"GET / HTTP/1.1
+Host: www.oracle.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.2503993511199951,0.11293220520019531,0.06097078323364258,200,OK,[''],22,22,13080,"{""content-type"": ""text/html; charset=utf-8"", ""etag"": ""\""a40v7vina180l3\"""", ""x-akamai-transformed"": ""9 - 0 pmb=mTOE,2mRUM,3"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 22:11:53 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 22:11:53 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""bm_mi=28A01EB87128328912B6A545AF70E354~YAAQFh0QAvAgcdWKAQAAlI3/4hVWFiy5dFaSDAHHbMtTQji0o9MFEsB7VeXckfNovQBZXpgSPqD/NH4VMJidKDfqlokvXYwbkizSiQ+jzG57ESw0x6fjG8qIPZX5QMNmo3o1RuiG4wmf6JTxt/QBtNHTW8YSIZnyod58xRr/6rZwGHL6EYv8dNMnN4pzxo9YqMEfT+pnzquLhRUr7c+ikG4RTZZqwtqltsjIc/NoSyrG5h3UPx9B3a3tnbn01pGliIdwvjucEUCz827FjflBr7hTAngcXO1JcAayIpJKXLsTyY+MJPV4xk0u0XVy~1; Domain=.oracle.com; Path=/; Expires=Fri, 29 Sep 2023 22:11:53 GMT; Max-Age=0; Secure"", ""server-timing"": ""ak_p; desc=\""1696025513300_34610454_300299373_23_11107_28_43_-\"";dur=1"", ""link"": ""<https://tms.oracle.com>;rel=\""preconnect\"",<https://d.oracleinfinity.io>;rel=\""preconnect\"",<https://dc.oracleinfinity.io>;rel=\""preconnect\"""", ""akamai-grn"": ""0.161d1002.1696025513.11e6346d"", ""x-frame-options"": ""sameorigin"", ""content-security-policy"": ""frame-ancestors 'self' https://my.oracle.com https://eeho.fa.us2.oraclecloud.com https://blogs.oracle.com"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1"", ""origin-cache-control"": ""max-age=1800"", ""origin-edge-control"": ""NO_HEADER_PRESENTED"", ""actual-object-ttl"": ""31536000""}"
+9,"GET / HTTP/1.1
+Host: www.oracle.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.07266521453857422,0.10719132423400879,0.0793466567993164,200,OK,[''],22,22,13064,"{""content-type"": ""text/html; charset=utf-8"", ""etag"": ""\""a40v7vina180l3\"""", ""x-akamai-transformed"": ""9 - 0 pmb=mTOE,2mRUM,3"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 22:11:56 GMT"", ""cache-control"": ""max-age=0, no-cache, no-store"", ""pragma"": ""no-cache"", ""date"": ""Fri, 29 Sep 2023 22:11:56 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""bm_mi=C904AF1883F0314B4BC27F2A07420B08~YAAQFh0QAhYhcdWKAQAAVZr/4hWHj/kWA+a3D/J/fmy4pdPonmWjTO7tMHTvGRYS5D3OyoqE4HWp50K0t1aGI0VAPCGolTQHKdrnXyuTWcbzq92M5KpsWzhjWz8GxfFnhdtzeC4vnKh//p2XBZ+4P3k1AhwqYfizzX7NguBapNXHloL4tev9s0280RPp6P3quFixoqY7PAZw6oaeQLPiygeOPy8E+qw8ubWQUB/QMGSDWpj2dwO+xDJ1BOxS5ewgsfDXNJNr2BANBj25zymITcvnwVYGdtvkQhodYJ8wcx/CWWXdMnb5o73Jqv0r~1; Domain=.oracle.com; Path=/; Expires=Fri, 29 Sep 2023 22:11:56 GMT; Max-Age=0; Secure"", ""server-timing"": ""ak_p; desc=\""1696025516580_34610454_300302088_25_13655_16_22_-\"";dur=1"", ""link"": ""<https://tms.oracle.com>;rel=\""preconnect\"",<https://d.oracleinfinity.io>;rel=\""preconnect\"",<https://dc.oracleinfinity.io>;rel=\""preconnect\"""", ""akamai-grn"": ""0.161d1002.1696025516.11e63f08"", ""x-frame-options"": ""sameorigin"", ""content-security-policy"": ""frame-ancestors 'self' https://my.oracle.com https://eeho.fa.us2.oraclecloud.com https://blogs.oracle.com"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1"", ""origin-cache-control"": ""max-age=1800"", ""origin-edge-control"": ""NO_HEADER_PRESENTED"", ""actual-object-ttl"": ""31536000""}"

@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: api.whatsapp.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.11031532287597656,0.11525964736938477,0.23846125602722168,200,OK,[''],20,20,5,"{""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""content-security-policy"": ""default-src 'self' data: blob:;script-src 'self' data: blob: 'unsafe-eval' 'unsafe-inline' *.fbcdn.net *.whatsapp.com *.whatsapp.net;style-src 'self' data: blob: 'unsafe-inline' whatsapp.com *.whatsapp.com fbcdn.net *.fbcdn.net fbsbx.com *.fbsbx.com whatsapp.net *.whatsapp.net;connect-src 'self' data: blob: https://*.whatsapp.com;font-src data: https://*.fbcdn.net https://static.whatsapp.net;img-src 'self' data: blob: whatsapp.com *.whatsapp.com fbcdn.net *.fbcdn.net fbsbx.com *.fbsbx.com whatsapp.net *.whatsapp.net;frame-src 'self' data: blob: whatsapp:;block-all-mixed-content;upgrade-insecure-requests;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;"", ""document-policy"": ""force-load-at-top"", ""permissions-policy"": ""accelerometer=(), ambient-light-sensor=(), bluetooth=(), camera=(), gyroscope=(), hid=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), screen-wake-lock=(), serial=(), usb=()"", ""cross-origin-resource-policy"": ""rollout"", ""cross-origin-opener-policy"": ""unsafe-none"", ""pragma"": ""no-cache"", ""cache-control"": ""private, no-cache, no-store, must-revalidate"", ""expires"": ""Sat, 01 Jan 2000 00:00:00 GMT"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""0"", ""x-frame-options"": ""DENY"", ""strict-transport-security"": ""max-age=31536000; preload; includeSubDomains"", ""content-type"": ""text/html; charset=\""utf-8\"""", ""x-fb-debug"": ""j8nayb5LLgzAgWWs4b62JVf0uxWDjHXt4Sr0PoUnoukeT3PFVrj5QGhgG+qu9ZDhjAPb95iWk50ImKYFu+tguQ=="", ""date"": ""Fri, 29 Sep 2023 21:20:25 GMT"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive""}"
+1,"GET / HTTP/1.1
+Host: api.whatsapp.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.16181182861328125,0.11104249954223633,0.2679126262664795,200,OK,[''],20,20,5,"{""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""content-security-policy"": ""default-src 'self' data: blob:;script-src 'self' data: blob: 'unsafe-eval' 'unsafe-inline' *.fbcdn.net *.whatsapp.com *.whatsapp.net;style-src 'self' data: blob: 'unsafe-inline' whatsapp.com *.whatsapp.com fbcdn.net *.fbcdn.net fbsbx.com *.fbsbx.com whatsapp.net *.whatsapp.net;connect-src 'self' data: blob: https://*.whatsapp.com;font-src data: https://*.fbcdn.net https://static.whatsapp.net;img-src 'self' data: blob: whatsapp.com *.whatsapp.com fbcdn.net *.fbcdn.net fbsbx.com *.fbsbx.com whatsapp.net *.whatsapp.net;frame-src 'self' data: blob: whatsapp:;block-all-mixed-content;upgrade-insecure-requests;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;"", ""document-policy"": ""force-load-at-top"", ""permissions-policy"": ""accelerometer=(), ambient-light-sensor=(), bluetooth=(), camera=(), gyroscope=(), hid=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), screen-wake-lock=(), serial=(), usb=()"", ""cross-origin-resource-policy"": ""rollout"", ""cross-origin-opener-policy"": ""unsafe-none"", ""pragma"": ""no-cache"", ""cache-control"": ""private, no-cache, no-store, must-revalidate"", ""expires"": ""Sat, 01 Jan 2000 00:00:00 GMT"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""0"", ""x-frame-options"": ""DENY"", ""strict-transport-security"": ""max-age=31536000; preload; includeSubDomains"", ""content-type"": ""text/html; charset=\""utf-8\"""", ""x-fb-debug"": ""gn8zX3fMeQlW4lGs8Sjaup7+QtOQt1b0SWteO02+6mL4ZGSAFESPxIq2p4NxqRJivuRTowM26eiSzL7gxxT/XA=="", ""date"": ""Fri, 29 Sep 2023 21:20:27 GMT"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive""}"
+2,"GET / HTTP/1.1
+Host: api.whatsapp.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.2720930576324463,0.11668539047241211,0.25556492805480957,200,OK,[''],20,20,6,"{""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""content-security-policy"": ""default-src 'self' data: blob:;script-src 'self' data: blob: 'unsafe-eval' 'unsafe-inline' *.fbcdn.net *.whatsapp.com *.whatsapp.net;style-src 'self' data: blob: 'unsafe-inline' whatsapp.com *.whatsapp.com fbcdn.net *.fbcdn.net fbsbx.com *.fbsbx.com whatsapp.net *.whatsapp.net;connect-src 'self' data: blob: https://*.whatsapp.com;font-src data: https://*.fbcdn.net https://static.whatsapp.net;img-src 'self' data: blob: whatsapp.com *.whatsapp.com fbcdn.net *.fbcdn.net fbsbx.com *.fbsbx.com whatsapp.net *.whatsapp.net;frame-src 'self' data: blob: whatsapp:;block-all-mixed-content;upgrade-insecure-requests;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;"", ""document-policy"": ""force-load-at-top"", ""permissions-policy"": ""accelerometer=(), ambient-light-sensor=(), bluetooth=(), camera=(), gyroscope=(), hid=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), screen-wake-lock=(), serial=(), usb=()"", ""cross-origin-resource-policy"": ""rollout"", ""cross-origin-opener-policy"": ""unsafe-none"", ""pragma"": ""no-cache"", ""cache-control"": ""private, no-cache, no-store, must-revalidate"", ""expires"": ""Sat, 01 Jan 2000 00:00:00 GMT"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""0"", ""x-frame-options"": ""DENY"", ""strict-transport-security"": ""max-age=31536000; preload; includeSubDomains"", ""content-type"": ""text/html; charset=\""utf-8\"""", ""x-fb-debug"": ""tuAwMmFCzd+YtO0SAA05YDYEBtonb4EYEtdeKcZ3BTYlj7icz/tpSDIWb8XhMr6WxlyOy05zROyH7ocELhBxvg=="", ""date"": ""Fri, 29 Sep 2023 21:20:29 GMT"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive""}"
+3,"GET / HTTP/1.1
+Host: api.whatsapp.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.14001703262329102,0.1107935905456543,0.22240900993347168,200,OK,[''],20,20,6,"{""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""content-security-policy"": ""default-src 'self' data: blob:;script-src 'self' data: blob: 'unsafe-eval' 'unsafe-inline' *.fbcdn.net *.whatsapp.com *.whatsapp.net;style-src 'self' data: blob: 'unsafe-inline' whatsapp.com *.whatsapp.com fbcdn.net *.fbcdn.net fbsbx.com *.fbsbx.com whatsapp.net *.whatsapp.net;connect-src 'self' data: blob: https://*.whatsapp.com;font-src data: https://*.fbcdn.net https://static.whatsapp.net;img-src 'self' data: blob: whatsapp.com *.whatsapp.com fbcdn.net *.fbcdn.net fbsbx.com *.fbsbx.com whatsapp.net *.whatsapp.net;frame-src 'self' data: blob: whatsapp:;block-all-mixed-content;upgrade-insecure-requests;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;"", ""document-policy"": ""force-load-at-top"", ""permissions-policy"": ""accelerometer=(), ambient-light-sensor=(), bluetooth=(), camera=(), gyroscope=(), hid=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), screen-wake-lock=(), serial=(), usb=()"", ""cross-origin-resource-policy"": ""rollout"", ""cross-origin-opener-policy"": ""unsafe-none"", ""pragma"": ""no-cache"", ""cache-control"": ""private, no-cache, no-store, must-revalidate"", ""expires"": ""Sat, 01 Jan 2000 00:00:00 GMT"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""0"", ""x-frame-options"": ""DENY"", ""strict-transport-security"": ""max-age=31536000; preload; includeSubDomains"", ""content-type"": ""text/html; charset=\""utf-8\"""", ""x-fb-debug"": ""aR/Z7zw2Qlb9NzHlVRHYF7WVP1W7EmraQvAC0wEhrIR8Q8+pg9TuPO+EFGfffsQvl0sZqChFMIChSXMFwMXYQg=="", ""date"": ""Fri, 29 Sep 2023 21:20:31 GMT"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive""}"
+4,"GET / HTTP/1.1
+Host: api.whatsapp.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.21611618995666504,0.1211082935333252,0.23784351348876953,200,OK,[''],20,20,6,"{""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""content-security-policy"": ""default-src 'self' data: blob:;script-src 'self' data: blob: 'unsafe-eval' 'unsafe-inline' *.fbcdn.net *.whatsapp.com *.whatsapp.net;style-src 'self' data: blob: 'unsafe-inline' whatsapp.com *.whatsapp.com fbcdn.net *.fbcdn.net fbsbx.com *.fbsbx.com whatsapp.net *.whatsapp.net;connect-src 'self' data: blob: https://*.whatsapp.com;font-src data: https://*.fbcdn.net https://static.whatsapp.net;img-src 'self' data: blob: whatsapp.com *.whatsapp.com fbcdn.net *.fbcdn.net fbsbx.com *.fbsbx.com whatsapp.net *.whatsapp.net;frame-src 'self' data: blob: whatsapp:;block-all-mixed-content;upgrade-insecure-requests;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;"", ""document-policy"": ""force-load-at-top"", ""permissions-policy"": ""accelerometer=(), ambient-light-sensor=(), bluetooth=(), camera=(), gyroscope=(), hid=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), screen-wake-lock=(), serial=(), usb=()"", ""cross-origin-resource-policy"": ""rollout"", ""cross-origin-opener-policy"": ""unsafe-none"", ""pragma"": ""no-cache"", ""cache-control"": ""private, no-cache, no-store, must-revalidate"", ""expires"": ""Sat, 01 Jan 2000 00:00:00 GMT"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""0"", ""x-frame-options"": ""DENY"", ""strict-transport-security"": ""max-age=31536000; preload; includeSubDomains"", ""content-type"": ""text/html; charset=\""utf-8\"""", ""x-fb-debug"": ""Gpu20X6ohEU7sON3Nrw6iCVsXdVxFW16PT05tcFJnzvbIEtx2Ru71VRzzq6BKPllYaXtklLAN0bMByflxk3N+w=="", ""date"": ""Fri, 29 Sep 2023 21:20:33 GMT"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive""}"
+5,"GET / HTTP/1.1
+Host: api.whatsapp.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.12171053886413574,0.11631941795349121,0.2960062026977539,200,OK,[''],20,20,6,"{""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""content-security-policy"": ""default-src 'self' data: blob:;script-src 'self' data: blob: 'unsafe-eval' 'unsafe-inline' *.fbcdn.net *.whatsapp.com *.whatsapp.net;style-src 'self' data: blob: 'unsafe-inline' whatsapp.com *.whatsapp.com fbcdn.net *.fbcdn.net fbsbx.com *.fbsbx.com whatsapp.net *.whatsapp.net;connect-src 'self' data: blob: https://*.whatsapp.com;font-src data: https://*.fbcdn.net https://static.whatsapp.net;img-src 'self' data: blob: whatsapp.com *.whatsapp.com fbcdn.net *.fbcdn.net fbsbx.com *.fbsbx.com whatsapp.net *.whatsapp.net;frame-src 'self' data: blob: whatsapp:;block-all-mixed-content;upgrade-insecure-requests;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;"", ""document-policy"": ""force-load-at-top"", ""permissions-policy"": ""accelerometer=(), ambient-light-sensor=(), bluetooth=(), camera=(), gyroscope=(), hid=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), screen-wake-lock=(), serial=(), usb=()"", ""cross-origin-resource-policy"": ""rollout"", ""cross-origin-opener-policy"": ""unsafe-none"", ""pragma"": ""no-cache"", ""cache-control"": ""private, no-cache, no-store, must-revalidate"", ""expires"": ""Sat, 01 Jan 2000 00:00:00 GMT"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""0"", ""x-frame-options"": ""DENY"", ""strict-transport-security"": ""max-age=31536000; preload; includeSubDomains"", ""content-type"": ""text/html; charset=\""utf-8\"""", ""x-fb-debug"": ""diYVQ8CZ47QIR9tx7Pb/2KZGt8QJqbXH2AbVejiPhnBVdNLftVHofjENNwiUp9+6Zj2vy2M7V0VdiXiGUNXHeg=="", ""date"": ""Fri, 29 Sep 2023 21:20:35 GMT"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive""}"
+6,"GET / HTTP/1.1
+Host: api.whatsapp.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.1748511791229248,0.1115121841430664,0.25335240364074707,200,OK,[''],20,20,6,"{""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""content-security-policy"": ""default-src 'self' data: blob:;script-src 'self' data: blob: 'unsafe-eval' 'unsafe-inline' *.fbcdn.net *.whatsapp.com *.whatsapp.net;style-src 'self' data: blob: 'unsafe-inline' whatsapp.com *.whatsapp.com fbcdn.net *.fbcdn.net fbsbx.com *.fbsbx.com whatsapp.net *.whatsapp.net;connect-src 'self' data: blob: https://*.whatsapp.com;font-src data: https://*.fbcdn.net https://static.whatsapp.net;img-src 'self' data: blob: whatsapp.com *.whatsapp.com fbcdn.net *.fbcdn.net fbsbx.com *.fbsbx.com whatsapp.net *.whatsapp.net;frame-src 'self' data: blob: whatsapp:;block-all-mixed-content;upgrade-insecure-requests;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;"", ""document-policy"": ""force-load-at-top"", ""permissions-policy"": ""accelerometer=(), ambient-light-sensor=(), bluetooth=(), camera=(), gyroscope=(), hid=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), screen-wake-lock=(), serial=(), usb=()"", ""cross-origin-resource-policy"": ""rollout"", ""cross-origin-opener-policy"": ""unsafe-none"", ""pragma"": ""no-cache"", ""cache-control"": ""private, no-cache, no-store, must-revalidate"", ""expires"": ""Sat, 01 Jan 2000 00:00:00 GMT"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""0"", ""x-frame-options"": ""DENY"", ""strict-transport-security"": ""max-age=31536000; preload; includeSubDomains"", ""content-type"": ""text/html; charset=\""utf-8\"""", ""x-fb-debug"": ""dIDN3G0z7OlnmlnpK34WAPdb93Tee1WVYuG/Iwz0ixpsrA9A9X0RUOVd2MwAqkGZJJlPVGHImrC2YKyVgQBUBg=="", ""date"": ""Fri, 29 Sep 2023 21:20:37 GMT"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive""}"
+7,"GET / HTTP/1.1
+Host: api.whatsapp.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.25551867485046387,0.11091470718383789,0.26774001121520996,200,OK,[''],20,20,6,"{""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""content-security-policy"": ""default-src 'self' data: blob:;script-src 'self' data: blob: 'unsafe-eval' 'unsafe-inline' *.fbcdn.net *.whatsapp.com *.whatsapp.net;style-src 'self' data: blob: 'unsafe-inline' whatsapp.com *.whatsapp.com fbcdn.net *.fbcdn.net fbsbx.com *.fbsbx.com whatsapp.net *.whatsapp.net;connect-src 'self' data: blob: https://*.whatsapp.com;font-src data: https://*.fbcdn.net https://static.whatsapp.net;img-src 'self' data: blob: whatsapp.com *.whatsapp.com fbcdn.net *.fbcdn.net fbsbx.com *.fbsbx.com whatsapp.net *.whatsapp.net;frame-src 'self' data: blob: whatsapp:;block-all-mixed-content;upgrade-insecure-requests;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;"", ""document-policy"": ""force-load-at-top"", ""permissions-policy"": ""accelerometer=(), ambient-light-sensor=(), bluetooth=(), camera=(), gyroscope=(), hid=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), screen-wake-lock=(), serial=(), usb=()"", ""cross-origin-resource-policy"": ""rollout"", ""cross-origin-opener-policy"": ""unsafe-none"", ""pragma"": ""no-cache"", ""cache-control"": ""private, no-cache, no-store, must-revalidate"", ""expires"": ""Sat, 01 Jan 2000 00:00:00 GMT"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""0"", ""x-frame-options"": ""DENY"", ""strict-transport-security"": ""max-age=31536000; preload; includeSubDomains"", ""content-type"": ""text/html; charset=\""utf-8\"""", ""x-fb-debug"": ""vjYNtwFv6nTYSiiRQBFJGiECdkXO8WAx9o11k3oxtjslriVS5MfzyogWtDzpQVbwM2QIGVixyEcHf2CE66ANog=="", ""date"": ""Fri, 29 Sep 2023 21:20:40 GMT"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive""}"
+8,"GET / HTTP/1.1
+Host: api.whatsapp.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.20113468170166016,0.1096653938293457,0.25424742698669434,200,OK,[''],20,20,6,"{""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""content-security-policy"": ""default-src 'self' data: blob:;script-src 'self' data: blob: 'unsafe-eval' 'unsafe-inline' *.fbcdn.net *.whatsapp.com *.whatsapp.net;style-src 'self' data: blob: 'unsafe-inline' whatsapp.com *.whatsapp.com fbcdn.net *.fbcdn.net fbsbx.com *.fbsbx.com whatsapp.net *.whatsapp.net;connect-src 'self' data: blob: https://*.whatsapp.com;font-src data: https://*.fbcdn.net https://static.whatsapp.net;img-src 'self' data: blob: whatsapp.com *.whatsapp.com fbcdn.net *.fbcdn.net fbsbx.com *.fbsbx.com whatsapp.net *.whatsapp.net;frame-src 'self' data: blob: whatsapp:;block-all-mixed-content;upgrade-insecure-requests;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;"", ""document-policy"": ""force-load-at-top"", ""permissions-policy"": ""accelerometer=(), ambient-light-sensor=(), bluetooth=(), camera=(), gyroscope=(), hid=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), screen-wake-lock=(), serial=(), usb=()"", ""cross-origin-resource-policy"": ""rollout"", ""cross-origin-opener-policy"": ""unsafe-none"", ""pragma"": ""no-cache"", ""cache-control"": ""private, no-cache, no-store, must-revalidate"", ""expires"": ""Sat, 01 Jan 2000 00:00:00 GMT"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""0"", ""x-frame-options"": ""DENY"", ""strict-transport-security"": ""max-age=31536000; preload; includeSubDomains"", ""content-type"": ""text/html; charset=\""utf-8\"""", ""x-fb-debug"": ""Tm9hUcOPCJGgQDYKKkDoDJUyDa4eqoXsDnAx1CBdNxruRwRyovyEs1OOROgfF6fVRuyHMypkKMZZE0twaHmvJA=="", ""date"": ""Fri, 29 Sep 2023 21:20:42 GMT"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive""}"
+9,"GET / HTTP/1.1
+Host: api.whatsapp.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.2615211009979248,0.10597109794616699,0.20986008644104004,200,OK,[''],20,20,6,"{""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""content-security-policy"": ""default-src 'self' data: blob:;script-src 'self' data: blob: 'unsafe-eval' 'unsafe-inline' *.fbcdn.net *.whatsapp.com *.whatsapp.net;style-src 'self' data: blob: 'unsafe-inline' whatsapp.com *.whatsapp.com fbcdn.net *.fbcdn.net fbsbx.com *.fbsbx.com whatsapp.net *.whatsapp.net;connect-src 'self' data: blob: https://*.whatsapp.com;font-src data: https://*.fbcdn.net https://static.whatsapp.net;img-src 'self' data: blob: whatsapp.com *.whatsapp.com fbcdn.net *.fbcdn.net fbsbx.com *.fbsbx.com whatsapp.net *.whatsapp.net;frame-src 'self' data: blob: whatsapp:;block-all-mixed-content;upgrade-insecure-requests;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;"", ""document-policy"": ""force-load-at-top"", ""permissions-policy"": ""accelerometer=(), ambient-light-sensor=(), bluetooth=(), camera=(), gyroscope=(), hid=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), screen-wake-lock=(), serial=(), usb=()"", ""cross-origin-resource-policy"": ""rollout"", ""cross-origin-opener-policy"": ""unsafe-none"", ""pragma"": ""no-cache"", ""cache-control"": ""private, no-cache, no-store, must-revalidate"", ""expires"": ""Sat, 01 Jan 2000 00:00:00 GMT"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""0"", ""x-frame-options"": ""DENY"", ""strict-transport-security"": ""max-age=31536000; preload; includeSubDomains"", ""content-type"": ""text/html; charset=\""utf-8\"""", ""x-fb-debug"": ""l9PQaGouPxSE2HTuCm1E3E6Sj8vDEDldbk6jOpe7Az4NRe2jmJaJXWP+P0XWjblzuAyVEcKzMiJcIJAf+sWyvw=="", ""date"": ""Fri, 29 Sep 2023 21:20:45 GMT"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive""}"

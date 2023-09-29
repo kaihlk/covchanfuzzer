@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.eventbrite.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.2198631763458252,0.10899543762207031,0.1644434928894043,200,OK,[''],24,24,2187,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:12:02 GMT"", ""server"": ""nginx"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=31536000 ; includeSubDomains"", ""vary"": ""X-EB-Website-Context, X-EB-App-Context, Accept-Encoding"", ""x-permitted-cross-domain-policies"": ""none"", ""x-varnish-ttl"": ""60"", ""p3p"": ""CP=\""NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM\"""", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-frame-options"": ""SAMEORIGIN"", ""x-ua-compatible"": ""IE=edge"", ""set-cookie"": ""csrftoken=3746e34e5f1511eea1a76b19839202cb; Domain=.eventbrite.com; Max-Age=31449600; Path=/; secure; SameSite=None"", ""content-encoding"": ""gzip"", ""x-varnish"": ""475727363 553235675"", ""via"": ""1.1 varnish (Varnish/5.1), 1.1 750d61457617565702159ec33a988964.cloudfront.net (CloudFront)"", ""accept-ranges"": ""bytes"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""HAM50-C3"", ""x-amz-cf-id"": ""ALdkZ9NACaRuROKMy0ce5NQqiV0-zRn799qsMeDyF9c5THFWgoIlUw=="", ""age"": ""30""}"
+1,"GET / HTTP/1.1
+Host: www.eventbrite.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.22253656387329102,0.10251641273498535,0.15677523612976074,200,OK,[''],24,24,14610,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:12:06 GMT"", ""server"": ""nginx"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=31536000 ; includeSubDomains"", ""vary"": ""X-EB-Website-Context, X-EB-App-Context, Accept-Encoding"", ""x-permitted-cross-domain-policies"": ""none"", ""x-varnish-ttl"": ""60"", ""p3p"": ""CP=\""NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM\"""", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-frame-options"": ""SAMEORIGIN"", ""x-ua-compatible"": ""IE=edge"", ""content-encoding"": ""gzip"", ""x-varnish"": ""205424099 267865255"", ""via"": ""1.1 varnish (Varnish/5.1), 1.1 64003b022bc3cc2e877f218eb451e376.cloudfront.net (CloudFront)"", ""set-cookie"": ""csrftoken=39fd8d4a5f1511ee865093b583f6331c; Domain=.eventbrite.com; Max-Age=31449600; Path=/; secure; SameSite=None"", ""accept-ranges"": ""bytes"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""HAM50-C3"", ""x-amz-cf-id"": ""74eKHKrcDaE1VTDbvGyzFwe3v7nHRC4zTk3FCNSJFNJcU2vurjagKw=="", ""age"": ""12""}"
+2,"GET / HTTP/1.1
+Host: www.eventbrite.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.18219304084777832,0.10642862319946289,0.163649320602417,200,OK,[''],24,24,1905,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:12:10 GMT"", ""server"": ""nginx"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=31536000 ; includeSubDomains"", ""vary"": ""X-EB-Website-Context, X-EB-App-Context, Accept-Encoding"", ""x-permitted-cross-domain-policies"": ""none"", ""x-varnish-ttl"": ""60"", ""p3p"": ""CP=\""NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM\"""", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-frame-options"": ""SAMEORIGIN"", ""x-ua-compatible"": ""IE=edge"", ""set-cookie"": ""csrftoken=3c66ab985f1511eea09f13c57d791306; Domain=.eventbrite.com; Max-Age=31449600; Path=/; secure; SameSite=None"", ""content-encoding"": ""gzip"", ""x-varnish"": ""517334953 520417045"", ""via"": ""1.1 varnish (Varnish/5.1), 1.1 d0a9a72e5bf584d7f4cd7045997db51e.cloudfront.net (CloudFront)"", ""accept-ranges"": ""bytes"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""HAM50-C3"", ""x-amz-cf-id"": ""zLXLvIKgDIKWQF4pomN1qkzkc0jNHC1v7L7sDfMr1XAQqFE0YG15gg=="", ""age"": ""62""}"
+3,"GET / HTTP/1.1
+Host: www.eventbrite.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.17500686645507812,0.11123442649841309,0.15623092651367188,200,OK,[''],24,24,1905,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:12:15 GMT"", ""server"": ""nginx"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=31536000 ; includeSubDomains"", ""vary"": ""X-EB-Website-Context, X-EB-App-Context, Accept-Encoding"", ""x-permitted-cross-domain-policies"": ""none"", ""x-varnish-ttl"": ""60"", ""p3p"": ""CP=\""NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM\"""", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-frame-options"": ""SAMEORIGIN"", ""x-ua-compatible"": ""IE=edge"", ""set-cookie"": ""csrftoken=3f114bb45f1511ee9a67cb79d446c830; Domain=.eventbrite.com; Max-Age=31449600; Path=/; secure; SameSite=None"", ""content-encoding"": ""gzip"", ""x-varnish"": ""470947816 471733315"", ""via"": ""1.1 varnish (Varnish/5.1), 1.1 a432ddebfd10465526f121270421362a.cloudfront.net (CloudFront)"", ""accept-ranges"": ""bytes"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""HAM50-C3"", ""x-amz-cf-id"": ""hD29EfTgZFps0wcnt1JZzLAiA_f4H2fPc_FbS2bUrs6w1g2riYWEoQ=="", ""age"": ""3""}"
+4,"GET / HTTP/1.1
+Host: www.eventbrite.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.12671780586242676,0.11551547050476074,0.16573405265808105,200,OK,[''],24,24,14616,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:12:19 GMT"", ""server"": ""nginx"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=31536000 ; includeSubDomains"", ""vary"": ""X-EB-Website-Context, X-EB-App-Context, Accept-Encoding"", ""x-permitted-cross-domain-policies"": ""none"", ""x-varnish-ttl"": ""60"", ""p3p"": ""CP=\""NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM\"""", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-frame-options"": ""SAMEORIGIN"", ""x-ua-compatible"": ""IE=edge"", ""content-encoding"": ""gzip"", ""x-varnish"": ""628987877 614465257"", ""via"": ""1.1 varnish (Varnish/5.1), 1.1 0a6bbd9174811c69f7dfb09b939e5b08.cloudfront.net (CloudFront)"", ""set-cookie"": ""csrftoken=415b84485f1511eea75dd340968d19c6; Domain=.eventbrite.com; Max-Age=31449600; Path=/; secure; SameSite=None"", ""accept-ranges"": ""bytes"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""HAM50-C3"", ""x-amz-cf-id"": ""3DyJ2AaUpPVP8Or6UJtZQnZFYT0hu29uHleQ4zvL6cUeu7287xFszA=="", ""age"": ""40""}"
+5,"GET / HTTP/1.1
+Host: www.eventbrite.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.18760442733764648,0.11103272438049316,0.16669702529907227,200,OK,[''],24,24,1905,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:12:23 GMT"", ""server"": ""nginx"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=31536000 ; includeSubDomains"", ""vary"": ""X-EB-Website-Context, X-EB-App-Context, Accept-Encoding"", ""x-permitted-cross-domain-policies"": ""none"", ""x-varnish-ttl"": ""60"", ""p3p"": ""CP=\""NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM\"""", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-frame-options"": ""SAMEORIGIN"", ""x-ua-compatible"": ""IE=edge"", ""content-encoding"": ""gzip"", ""x-varnish"": ""651672038 652524149"", ""via"": ""1.1 varnish (Varnish/5.1), 1.1 5b2b264287e9650401ad0bc63aa348e6.cloudfront.net (CloudFront)"", ""set-cookie"": ""csrftoken=4426d5385f1511eeac148f18582e8f75; Domain=.eventbrite.com; Max-Age=31449600; Path=/; secure; SameSite=None"", ""accept-ranges"": ""bytes"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""HAM50-C3"", ""x-amz-cf-id"": ""LgEMXacnRMk8hYeefAZjwcDBwSQAAPYdLGqtYaEKRNBs41aE8usFuA=="", ""age"": ""14""}"
+6,"GET / HTTP/1.1
+Host: www.eventbrite.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.13313746452331543,0.11461591720581055,0.1567065715789795,200,OK,[''],24,24,2187,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:12:27 GMT"", ""server"": ""nginx"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=31536000 ; includeSubDomains"", ""vary"": ""X-EB-Website-Context, X-EB-App-Context, Accept-Encoding"", ""x-permitted-cross-domain-policies"": ""none"", ""x-varnish-ttl"": ""60"", ""p3p"": ""CP=\""NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM\"""", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-frame-options"": ""SAMEORIGIN"", ""x-ua-compatible"": ""IE=edge"", ""set-cookie"": ""csrftoken=468ad6305f1511ee86cf57b73e7f9c8b; Domain=.eventbrite.com; Max-Age=31449600; Path=/; secure; SameSite=None"", ""content-encoding"": ""gzip"", ""x-varnish"": ""527294916 471733315"", ""via"": ""1.1 varnish (Varnish/5.1), 1.1 c1fa4f08ddf9c5144bf29ba0fe671430.cloudfront.net (CloudFront)"", ""accept-ranges"": ""bytes"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""HAM50-C3"", ""x-amz-cf-id"": ""AaKsHp9T5cNVUUYJTTabLNIx4jjE33iXxAGJBJxHJiCmZWv24n2_Vw=="", ""age"": ""16""}"
+7,"GET / HTTP/1.1
+Host: www.eventbrite.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.0981454849243164,0.10909342765808105,0.15378189086914062,200,OK,[''],24,24,14473,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:12:31 GMT"", ""server"": ""nginx"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=31536000 ; includeSubDomains"", ""vary"": ""X-EB-Website-Context, X-EB-App-Context, Accept-Encoding"", ""x-permitted-cross-domain-policies"": ""none"", ""x-varnish-ttl"": ""60"", ""p3p"": ""CP=\""NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM\"""", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-frame-options"": ""SAMEORIGIN"", ""x-ua-compatible"": ""IE=edge"", ""set-cookie"": ""csrftoken=48ea34205f1511eea83533e9418312a3; Domain=.eventbrite.com; Max-Age=31449600; Path=/; secure; SameSite=None"", ""content-encoding"": ""gzip"", ""x-varnish"": ""550417426 553235675"", ""via"": ""1.1 varnish (Varnish/5.1), 1.1 c46d7c5a8bf0a3035249184c40b6aea4.cloudfront.net (CloudFront)"", ""accept-ranges"": ""bytes"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""HAM50-C3"", ""x-amz-cf-id"": ""zNpvnXh1GAp56nHB1PhQN_rqC9_4BN3_LpAxZ8IaFGlU0a1PCKzIlQ=="", ""age"": ""60""}"
+8,"GET / HTTP/1.1
+Host: www.eventbrite.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.15907859802246094,0.11175847053527832,0.16887283325195312,200,OK,[''],24,24,2187,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:12:36 GMT"", ""server"": ""nginx"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=31536000 ; includeSubDomains"", ""vary"": ""X-EB-Website-Context, X-EB-App-Context, Accept-Encoding"", ""x-permitted-cross-domain-policies"": ""none"", ""x-varnish-ttl"": ""60"", ""p3p"": ""CP=\""NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM\"""", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-frame-options"": ""SAMEORIGIN"", ""x-ua-compatible"": ""IE=edge"", ""content-encoding"": ""gzip"", ""x-varnish"": ""623388171 614465257"", ""via"": ""1.1 varnish (Varnish/5.1), 1.1 0a6bbd9174811c69f7dfb09b939e5b08.cloudfront.net (CloudFront)"", ""set-cookie"": ""csrftoken=4b9ad8645f1511ee95ec7744a8111df4; Domain=.eventbrite.com; Max-Age=31449600; Path=/; secure; SameSite=None"", ""accept-ranges"": ""bytes"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""HAM50-C3"", ""x-amz-cf-id"": ""qUytfxk3AxPcm7dkyuxhkUQEuW00tRdjDee316t8c8CkIqlqsUTIgg=="", ""age"": ""57""}"
+9,"GET / HTTP/1.1
+Host: www.eventbrite.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.18128466606140137,0.11072921752929688,0.15367865562438965,200,OK,[''],24,24,2187,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:12:40 GMT"", ""server"": ""nginx"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=31536000 ; includeSubDomains"", ""vary"": ""X-EB-Website-Context, X-EB-App-Context, Accept-Encoding"", ""x-permitted-cross-domain-policies"": ""none"", ""x-varnish-ttl"": ""60"", ""p3p"": ""CP=\""NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM\"""", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-frame-options"": ""SAMEORIGIN"", ""x-ua-compatible"": ""IE=edge"", ""content-encoding"": ""gzip"", ""x-varnish"": ""190074861 267865255"", ""via"": ""1.1 varnish (Varnish/5.1), 1.1 c00313a056e59f376cf028f05a0244e4.cloudfront.net (CloudFront)"", ""set-cookie"": ""csrftoken=4dfb42105f1511ee9ec177d57949acce; Domain=.eventbrite.com; Max-Age=31449600; Path=/; secure; SameSite=None"", ""accept-ranges"": ""bytes"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""HAM50-C3"", ""x-amz-cf-id"": ""PQ0WheiFDuhxUeOR47iyFxaN3oA0mdFQimz2d2sEMK7jbmymj5Ia6g=="", ""age"": ""46""}"

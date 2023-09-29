@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.goodreads.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.4535939693450928,0.12231206893920898,0.3096272945404053,200,OK,[''],17,17,14663,"{""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 22:50:47 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-amz-rid"": ""TV7MM2NFT8J03TR6QS66"", ""set-cookie"": ""_session_id2=bd52148c596b5482ae9f6f60d22bb913; path=/; expires=Sat, 30 Sep 2023 04:50:47 -0000; HttpOnly"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""etag"": ""W/\""6b5aae192d7b16e2ac63c172bba7ba2c\"""", ""cache-control"": ""max-age=0, private, must-revalidate"", ""x-request-id"": ""TV7MM2NFT8J03TR6QS66"", ""x-runtime"": ""0.064198"", ""content-encoding"": ""gzip"", ""vary"": ""User-Agent,Content-Type,Accept-Encoding,User-Agent""}"
+1,"GET / HTTP/1.1
+Host: www.goodreads.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.4964711666107178,0.10478448867797852,0.35492539405822754,200,OK,[''],17,17,14641,"{""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 22:50:51 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-amz-rid"": ""XAR5PQANYXY6YG1VJ8H7"", ""set-cookie"": ""_session_id2=4b992ba4630705ef41f5c72dcbbc04a7; path=/; expires=Sat, 30 Sep 2023 04:50:51 -0000; HttpOnly"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""etag"": ""W/\""daa231c5cedf16c55e934781826d69eb\"""", ""cache-control"": ""max-age=0, private, must-revalidate"", ""x-request-id"": ""XAR5PQANYXY6YG1VJ8H7"", ""x-runtime"": ""0.102398"", ""content-encoding"": ""gzip"", ""vary"": ""User-Agent,Content-Type,Accept-Encoding,User-Agent""}"
+2,"GET / HTTP/1.1
+Host: www.goodreads.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.398165225982666,0.11192488670349121,0.322279691696167,200,OK,[''],17,17,14645,"{""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 22:50:54 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-amz-rid"": ""K8ZW0AC8C60WJN88ZZKK"", ""set-cookie"": ""_session_id2=43756e33c8b59bb0539b3e3821530765; path=/; expires=Sat, 30 Sep 2023 04:50:54 -0000; HttpOnly"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""etag"": ""W/\""fee2e488d578506821e07d039e96de34\"""", ""cache-control"": ""max-age=0, private, must-revalidate"", ""x-request-id"": ""K8ZW0AC8C60WJN88ZZKK"", ""x-runtime"": ""0.069378"", ""content-encoding"": ""gzip"", ""vary"": ""User-Agent,Content-Type,Accept-Encoding,User-Agent""}"
+3,"GET / HTTP/1.1
+Host: www.goodreads.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.4224512577056885,0.11078763008117676,0.3365464210510254,200,OK,[''],17,17,14699,"{""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 22:50:57 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-amz-rid"": ""YQA6ZH56DK4F7GQY2YSB"", ""set-cookie"": ""_session_id2=006a704ae2dc3f5d06f7fba233286e46; path=/; expires=Sat, 30 Sep 2023 04:50:57 -0000; HttpOnly"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""etag"": ""W/\""f0530028c84386ca5aec3f45ce408779\"""", ""cache-control"": ""max-age=0, private, must-revalidate"", ""x-request-id"": ""YQA6ZH56DK4F7GQY2YSB"", ""x-runtime"": ""0.081639"", ""content-encoding"": ""gzip"", ""vary"": ""User-Agent,Content-Type,Accept-Encoding,User-Agent""}"
+4,"GET / HTTP/1.1
+Host: www.goodreads.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.43610644340515137,0.11166548728942871,0.3171722888946533,200,OK,[''],17,17,14642,"{""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 22:51:00 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-amz-rid"": ""EZC63E8KB812WM2HDWYV"", ""set-cookie"": ""_session_id2=f7b35c1894b5d17cb17f59bf7fb143fc; path=/; expires=Sat, 30 Sep 2023 04:51:00 -0000; HttpOnly"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""etag"": ""W/\""89ed6f252974e421a50dd58c8f74f583\"""", ""cache-control"": ""max-age=0, private, must-revalidate"", ""x-request-id"": ""EZC63E8KB812WM2HDWYV"", ""x-runtime"": ""0.084965"", ""content-encoding"": ""gzip"", ""vary"": ""User-Agent,Content-Type,Accept-Encoding,User-Agent""}"
+5,"GET / HTTP/1.1
+Host: www.goodreads.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.4427456855773926,0.12166380882263184,0.3279740810394287,200,OK,[''],17,17,14647,"{""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 22:51:03 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-amz-rid"": ""RKHBNW7N2JPGV3JXCF46"", ""set-cookie"": ""_session_id2=d6a92a0c7ccdb1b1a6397afae622a7eb; path=/; expires=Sat, 30 Sep 2023 04:51:03 -0000; HttpOnly"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""etag"": ""W/\""4904530d813e7786f5626dd3c14b1da4\"""", ""cache-control"": ""max-age=0, private, must-revalidate"", ""x-request-id"": ""RKHBNW7N2JPGV3JXCF46"", ""x-runtime"": ""0.090039"", ""content-encoding"": ""gzip"", ""vary"": ""User-Agent,Content-Type,Accept-Encoding,User-Agent""}"
+6,"GET / HTTP/1.1
+Host: www.goodreads.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.4321722984313965,0.12187337875366211,0.3409297466278076,200,OK,[''],17,17,14642,"{""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 22:51:06 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-amz-rid"": ""J9HHZC3QZ5NCV17N77XY"", ""set-cookie"": ""_session_id2=b1fb3fcca53dd99f863243be4a3bf51b; path=/; expires=Sat, 30 Sep 2023 04:51:06 -0000; HttpOnly"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""etag"": ""W/\""3dd352cf13d2c4b3acfb5b35aea2fa5e\"""", ""cache-control"": ""max-age=0, private, must-revalidate"", ""x-request-id"": ""J9HHZC3QZ5NCV17N77XY"", ""x-runtime"": ""0.071961"", ""content-encoding"": ""gzip"", ""vary"": ""User-Agent,Content-Type,Accept-Encoding,User-Agent""}"
+7,"GET / HTTP/1.1
+Host: www.goodreads.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.46187543869018555,0.11132955551147461,0.30953025817871094,200,OK,[''],17,17,14626,"{""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 22:51:09 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-amz-rid"": ""Q6V0AV9CQ7N3E7QD26ZE"", ""set-cookie"": ""_session_id2=e7e3d740b56c9771e4bb1fd6a291e87c; path=/; expires=Sat, 30 Sep 2023 04:51:09 -0000; HttpOnly"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""etag"": ""W/\""e0d1b0385b25367e0ade0e6d4b01c343\"""", ""cache-control"": ""max-age=0, private, must-revalidate"", ""x-request-id"": ""Q6V0AV9CQ7N3E7QD26ZE"", ""x-runtime"": ""0.069380"", ""content-encoding"": ""gzip"", ""vary"": ""User-Agent,Content-Type,Accept-Encoding,User-Agent""}"
+8,"GET / HTTP/1.1
+Host: www.goodreads.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.4445052146911621,0.1120760440826416,0.42608165740966797,200,OK,[''],17,17,55177,"{""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 22:51:13 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-amz-rid"": ""X4J7XD1DD8Y1Z1RQSNQN"", ""set-cookie"": ""_session_id2=de9efd85245116d68a3e2c651595bee2; path=/; expires=Sat, 30 Sep 2023 04:51:13 -0000; HttpOnly"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""etag"": ""W/\""0938ca544e2ecfaf41e43b9339e92e77\"""", ""cache-control"": ""max-age=0, private, must-revalidate"", ""x-request-id"": ""X4J7XD1DD8Y1Z1RQSNQN"", ""x-runtime"": ""0.071837"", ""content-encoding"": ""gzip"", ""vary"": ""User-Agent,Content-Type,Accept-Encoding,User-Agent""}"
+9,"GET / HTTP/1.1
+Host: www.goodreads.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.5506820678710938,0.11310338973999023,0.31839942932128906,200,OK,[''],17,17,14631,"{""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 22:51:16 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-amz-rid"": ""00855RYX0QCTK4X0F4E8"", ""set-cookie"": ""_session_id2=b1c8eacad522343d33e6aceed2533a7a; path=/; expires=Sat, 30 Sep 2023 04:51:16 -0000; HttpOnly"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""etag"": ""W/\""a9c44c3d7fb908bd28b3040c73f16b93\"""", ""cache-control"": ""max-age=0, private, must-revalidate"", ""x-request-id"": ""00855RYX0QCTK4X0F4E8"", ""x-runtime"": ""0.069738"", ""content-encoding"": ""gzip"", ""vary"": ""User-Agent,Content-Type,Accept-Encoding,User-Agent""}"

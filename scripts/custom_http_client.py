@@ -15,6 +15,7 @@ import scapy.supersocket as SuperSocket
 import ssl
 import time
 import re
+import logging
 
 
 GENERAL_HEADERS = [
@@ -143,7 +144,12 @@ COMMON_UNSTANDARD_RESPONSE_HEADERS = [
 
 class CustomHTTP(HTTP):
     '''Class to build up a http/1 connection to host via a socket'''
-    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        
+        # Initialize a logger for this class
+        self.httplogger = logging.getLogger("main.runner.CustomHTTP")
+
 
     def lookup_dns(self, hostname, portnumber, use_ipv4):
         '''Function to make a DNS Lookup for a specified host or localhost using sockets and return the received data as a dictionary of tuples ''' 
@@ -163,9 +169,9 @@ class CustomHTTP(HTTP):
                     socket.SOCK_STREAM,
                     socket.IPPROTO_TCP,
                 )
-        except socket.gaierror as ex:
-            print(f"DNS Lookup failed: {str(ex)}")
-            return None, str(ex)
+        except socket.gaierror as e:
+            self.httplogger.error("DNS Lookup failed: %s", e)
+            return None, str(e)
         return address, None
 
     def create_tcp_socket(self, ip_info, timeout):
@@ -182,37 +188,39 @@ class CustomHTTP(HTTP):
             if hasattr(socket, "SO_REUSEPORT"):
                 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
             return s        
-        except socket.error as ex:
-            error_message = str(ex)
-            print(error_message)
+        except socket.error as e:
+            error_message = str(e)
+            self.httplogger.error("Error Creating TCP Socket: %s", e)
             return None
         
 
     def upgrade_to_tls(self, s, hostname, log_path):
         '''Upgrade a tcp socket connection to TLS'''          
-        # Testing support for ALPN
-        assert ssl.HAS_ALPN
-        # Building the SSL context
-        ssl_ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
-        ssl_ctx.load_verify_locations("/etc/ssl/certs/ca-certificates.crt")
-        # Export Sessionkeys, to be able to analyze encrypted Traffic with Wireshark etc.
-        ssl_ctx.keylog_filename = f"{log_path}/sessionkeys.txt"
-        ssl_ctx.set_alpn_protocols(["http/1.1"])  # h2 is a RFC7540-hardcoded value
-        ssl_sock = ssl_ctx.wrap_socket(s, server_hostname=hostname)
+        try:
+            # Testing support for ALPN
+            assert ssl.HAS_ALPN
+            # Building the SSL context
+            ssl_ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+            ssl_ctx.load_verify_locations("/etc/ssl/certs/ca-certificates.crt")
+            # Export Sessionkeys, to be able to analyze encrypted Traffic with Wireshark etc.
+            ssl_ctx.keylog_filename = f"{log_path}/sessionkeys.txt"
+            ssl_ctx.set_alpn_protocols(["http/1.1"])  # h2 is a RFC7540-hardcoded value
+            ssl_sock = ssl_ctx.wrap_socket(s, server_hostname=hostname)
+        except Exception as e:
+            self.httplogger.error("Error wrapping the TLS Context: %s", e)
         return ssl_sock
 
     def connect_tcp_socket(self, sock, host_ip_info, timeout):
             try: 
-                error_message="" 
-                #print("Host IP Info")
-                #print(host_ip_info[0][4])
+                error_message=""
                 sock.settimeout(timeout)   #Can be reset by some functions of the socket libary, just to make sure          
                 sock.connect(host_ip_info[0][4])
                 stream_socket = SuperSocket.StreamSocket(sock, basecls=HTTP)
 
                 return stream_socket, error_message
-            except socket.error as ex:
-                error_message = str(ex)
+            except socket.error as e:
+                self.httplogger.error("Exception during connecting the TCP Socket: ",e)
+                error_message = str(e)
                 return None, error_message
 
     def connect_tls_socket(self, tls_socket, host_ip_info, timeout):
@@ -226,9 +234,9 @@ class CustomHTTP(HTTP):
                 #assert "http/1.1" == tls_socket.selected_alpn_protocol()  # Assert Error Problem with saving log to json
                 stream_socket = SuperSocket.SSLStreamSocket(tls_socket, basecls=HTTP)
                 return stream_socket, error_message
-            except socket.error as ex:
-                error_message = str(ex)
-                print(error_message)
+            except socket.error as e:
+                error_message = str(e)
+                self.httplogger.error("Exception connecting TLS Socket: %s", e)
                 return None, error_message
 
     def build_http_headers(self, host, path, headers, custom_request):
@@ -261,7 +269,8 @@ class CustomHTTP(HTTP):
                     key, value = header_line.split(':', 1)
                     header_key = key.strip().lower()
                     response_headers[header_key] = value.strip()
-            except ValueError:
+            except ValueError as e:
+                self.httplogger.error("Error parsing header strings: %s",e)
                 continue
             
         return response_headers
@@ -286,6 +295,7 @@ class CustomHTTP(HTTP):
             headers=""
             body=response_str
             raise ValueError("Invalid Response Line")
+
         return response_line, headers, body
 
 
@@ -376,14 +386,12 @@ class CustomHTTP(HTTP):
             if verbose==True:
                 print("Stream Socket Connection Time")
                 print(socket_connect_time)
-        except Exception as ex0:
-            print("An error occurred:", ex0)
-            error_messages.append(ex0)            
+        except Exception as e:
+            self.httplogger.error("Error during socket connection",e)
+            error_messages.append(e)            
             if 'tls_socket' in locals():
-                #tls_socket.shutdown(1)
                 tls_socket.close()
             if 'sock' in locals():
-                #sock.shutdown(1)
                 sock.close()
             if 'stream_socket' in locals() and stream_socket is not None:
                 stream_socket.close()
@@ -400,25 +408,21 @@ class CustomHTTP(HTTP):
                 response_time=end_time-start_time
                 print("Response Time")
                 print(response_time)
-            except socket.timeout as ex1:
-                #error_message="Timeout Limit reached"
-                error_messages.append(str(ex1))
-                print(ex1)
-                response = None
-            except socket.error as ex2:
-                error_messages.append(str(ex2))
-                print(ex2)
+            except socket.timeout as e:
+                error_messages.append(str(e))
+                self.httplogger.error("Timeout sending/receiving: %s",e)
+            except socket.error as e:
+                error_messages.append(str(e))
+                self.httplogger.error("Socket Error Sending/Receiving: %s",e)
                 response=None
             finally:
                 
                 start_time=time.time()
                 try:
                     if 443 == port:
-                      #  tls_socket.shutdown(1)
                         time.sleep(0.1)
                         stream_socket.close()
                     else:
-                       # sock.shutdown(1)
                         time.sleep(0.1) #Preventing RST Packets           
                         stream_socket.close()
                     end_time = time.time()
@@ -426,9 +430,9 @@ class CustomHTTP(HTTP):
                     if verbose==True:
                         print("Socket close time")
                         print(socket_close_time)
-                except socket.error as ex3:
-                    error_messages.append(str(ex3))
-                    print(ex3)
+                except socket.error as e:
+                    error_messages.append(str(e))
+                    self.httplogger.error("Exception closing socket: %s",e)
                     pass
 
         
@@ -442,9 +446,9 @@ class CustomHTTP(HTTP):
                 response_line= self.parse_response_line(response_line_str)
                 response_headers =self.parse_headers(headers_str)
                 body=body_str
-            except Exception as ex5:
-                print(ex5)
-                error_messages.append(ex5)
+            except Exception as e:
+                self.httplogger.error("Exception processing response: %s",e)
+                error_messages.append(e)
                 pass
         measured_times= {
             "Socket_Connect_Time": socket_connect_time,

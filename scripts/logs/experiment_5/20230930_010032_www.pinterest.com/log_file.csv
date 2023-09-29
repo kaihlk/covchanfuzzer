@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.pinterest.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.21869182586669922,0.10686707496643066,0.2366187572479248,200,OK,[''],11,11,0,"{""connection"": ""keep-alive"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""x-ua-compatible"": ""IE=edge"", ""reporting-endpoints"": ""coop-endpoint=\""https://www.pinterest.com/_/_/coop_report/\"", coep-endpoint=\""https://www.pinterest.com/_/_/coep_report/\"""", ""cross-origin-opener-policy-report-only"": ""same-origin; report-to=\""coop-endpoint\"""", ""cross-origin-embedder-policy-report-only"": ""require-corp; report-to=\""coep-endpoint\"""", ""set-cookie"": ""_auth=0; path=/; expires=Mon, 23 Sep 2024 23:00:33 GMT; domain=.pinterest.com; secure; httponly"", ""p3p"": ""CP=\""This is not a P3P policy. See https://www.pinterest.com/_/_/help/articles/pinterest-and-p3p for more info.\"""", ""content-security-policy"": ""default-src 'self' blob: s.pinimg.com; font-src 'self' s.pinimg.com data: fonts.googleapis.com fonts.gstatic.com use.typekit.net; style-src 'self' blob: 'unsafe-inlin""}"
+1,"GET / HTTP/1.1
+Host: www.pinterest.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.14772629737854004,0.1049041748046875,0.23515057563781738,200,OK,[''],11,11,0,"{""connection"": ""keep-alive"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""x-ua-compatible"": ""IE=edge"", ""reporting-endpoints"": ""coop-endpoint=\""https://www.pinterest.com/_/_/coop_report/\"", coep-endpoint=\""https://www.pinterest.com/_/_/coep_report/\"""", ""cross-origin-opener-policy-report-only"": ""same-origin; report-to=\""coop-endpoint\"""", ""cross-origin-embedder-policy-report-only"": ""require-corp; report-to=\""coep-endpoint\"""", ""set-cookie"": ""_auth=0; path=/; expires=Mon, 23 Sep 2024 23:00:36 GMT; domain=.pinterest.com; secure; httponly"", ""p3p"": ""CP=\""This is not a P3P policy. See https://www.pinterest.com/_/_/help/articles/pinterest-and-p3p for more info.\"""", ""content-security-policy"": ""default-src 'self' blob: s.pinimg.com; font-src 'self' s.pinimg.com data: fonts.googleapis.com fonts.gstatic.com use.typekit.net; style-src 'self' blob: 'unsafe-inlin""}"
+2,"GET / HTTP/1.1
+Host: www.pinterest.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.1628422737121582,0.1061406135559082,0.240966796875,200,OK,[''],11,11,0,"{""connection"": ""keep-alive"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""x-ua-compatible"": ""IE=edge"", ""reporting-endpoints"": ""coop-endpoint=\""https://www.pinterest.com/_/_/coop_report/\"", coep-endpoint=\""https://www.pinterest.com/_/_/coep_report/\"""", ""cross-origin-opener-policy-report-only"": ""same-origin; report-to=\""coop-endpoint\"""", ""cross-origin-embedder-policy-report-only"": ""require-corp; report-to=\""coep-endpoint\"""", ""set-cookie"": ""_auth=0; path=/; expires=Mon, 23 Sep 2024 23:00:39 GMT; domain=.pinterest.com; secure; httponly"", ""p3p"": ""CP=\""This is not a P3P policy. See https://www.pinterest.com/_/_/help/articles/pinterest-and-p3p for more info.\"""", ""content-security-policy"": ""default-src 'self' blob: s.pinimg.com; font-src 'self' s.pinimg.com data: fonts.googleapis.com fonts.gstatic.com use.typekit.net; style-src 'self' blob: 'unsafe-inlin""}"
+3,"GET / HTTP/1.1
+Host: www.pinterest.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.311448335647583,0.13724303245544434,0.2261488437652588,200,OK,[''],11,11,0,"{""connection"": ""keep-alive"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""x-ua-compatible"": ""IE=edge"", ""reporting-endpoints"": ""coop-endpoint=\""https://www.pinterest.com/_/_/coop_report/\"", coep-endpoint=\""https://www.pinterest.com/_/_/coep_report/\"""", ""cross-origin-opener-policy-report-only"": ""same-origin; report-to=\""coop-endpoint\"""", ""cross-origin-embedder-policy-report-only"": ""require-corp; report-to=\""coep-endpoint\"""", ""set-cookie"": ""_auth=0; path=/; expires=Mon, 23 Sep 2024 23:00:42 GMT; domain=.pinterest.com; secure; httponly"", ""p3p"": ""CP=\""This is not a P3P policy. See https://www.pinterest.com/_/_/help/articles/pinterest-and-p3p for more info.\"""", ""content-security-policy"": ""default-src 'self' blob: s.pinimg.com; font-src 'self' s.pinimg.com data: fonts.googleapis.com fonts.gstatic.com use.typekit.net; style-src 'self' blob: 'unsafe-inlin""}"
+4,"GET / HTTP/1.1
+Host: www.pinterest.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.22627735137939453,0.10952901840209961,0.3446464538574219,200,OK,[''],11,11,0,"{""connection"": ""keep-alive"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""x-ua-compatible"": ""IE=edge"", ""reporting-endpoints"": ""coop-endpoint=\""https://www.pinterest.com/_/_/coop_report/\"", coep-endpoint=\""https://www.pinterest.com/_/_/coep_report/\"""", ""cross-origin-opener-policy-report-only"": ""same-origin; report-to=\""coop-endpoint\"""", ""cross-origin-embedder-policy-report-only"": ""require-corp; report-to=\""coep-endpoint\"""", ""set-cookie"": ""_auth=0; path=/; expires=Mon, 23 Sep 2024 23:00:45 GMT; domain=.pinterest.com; secure; httponly"", ""p3p"": ""CP=\""This is not a P3P policy. See https://www.pinterest.com/_/_/help/articles/pinterest-and-p3p for more info.\"""", ""content-security-policy"": ""default-src 'self' blob: s.pinimg.com; font-src 'self' s.pinimg.com data: fonts.googleapis.com fonts.gstatic.com use.typekit.net; style-src 'self' blob: 'unsafe-inlin""}"
+5,"GET / HTTP/1.1
+Host: www.pinterest.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.20278358459472656,0.11160635948181152,0.2548191547393799,200,OK,[''],11,11,0,"{""connection"": ""keep-alive"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""x-ua-compatible"": ""IE=edge"", ""reporting-endpoints"": ""coop-endpoint=\""https://www.pinterest.com/_/_/coop_report/\"", coep-endpoint=\""https://www.pinterest.com/_/_/coep_report/\"""", ""cross-origin-opener-policy-report-only"": ""same-origin; report-to=\""coop-endpoint\"""", ""cross-origin-embedder-policy-report-only"": ""require-corp; report-to=\""coep-endpoint\"""", ""set-cookie"": ""_auth=0; path=/; expires=Mon, 23 Sep 2024 23:00:48 GMT; domain=.pinterest.com; secure; httponly"", ""p3p"": ""CP=\""This is not a P3P policy. See https://www.pinterest.com/_/_/help/articles/pinterest-and-p3p for more info.\"""", ""content-security-policy"": ""default-src 'self' blob: s.pinimg.com; font-src 'self' s.pinimg.com data: fonts.googleapis.com fonts.gstatic.com use.typekit.net; style-src 'self' blob: 'unsafe-inlin""}"
+6,"GET / HTTP/1.1
+Host: www.pinterest.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.23685169219970703,0.1677546501159668,0.2293999195098877,200,OK,[''],11,11,0,"{""connection"": ""keep-alive"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""x-ua-compatible"": ""IE=edge"", ""reporting-endpoints"": ""coop-endpoint=\""https://www.pinterest.com/_/_/coop_report/\"", coep-endpoint=\""https://www.pinterest.com/_/_/coep_report/\"""", ""cross-origin-opener-policy-report-only"": ""same-origin; report-to=\""coop-endpoint\"""", ""cross-origin-embedder-policy-report-only"": ""require-corp; report-to=\""coep-endpoint\"""", ""set-cookie"": ""_auth=0; path=/; expires=Mon, 23 Sep 2024 23:00:51 GMT; domain=.pinterest.com; secure; httponly"", ""p3p"": ""CP=\""This is not a P3P policy. See https://www.pinterest.com/_/_/help/articles/pinterest-and-p3p for more info.\"""", ""content-security-policy"": ""default-src 'self' blob: s.pinimg.com; font-src 'self' s.pinimg.com data: fonts.googleapis.com fonts.gstatic.com use.typekit.net; style-src 'self' blob: 'unsafe-inlin""}"
+7,"GET / HTTP/1.1
+Host: www.pinterest.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.20862650871276855,0.1163337230682373,0.2135462760925293,200,OK,[''],11,11,0,"{""connection"": ""keep-alive"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""x-ua-compatible"": ""IE=edge"", ""reporting-endpoints"": ""coop-endpoint=\""https://www.pinterest.com/_/_/coop_report/\"", coep-endpoint=\""https://www.pinterest.com/_/_/coep_report/\"""", ""cross-origin-opener-policy-report-only"": ""same-origin; report-to=\""coop-endpoint\"""", ""cross-origin-embedder-policy-report-only"": ""require-corp; report-to=\""coep-endpoint\"""", ""set-cookie"": ""_auth=0; path=/; expires=Mon, 23 Sep 2024 23:00:54 GMT; domain=.pinterest.com; secure; httponly"", ""p3p"": ""CP=\""This is not a P3P policy. See https://www.pinterest.com/_/_/help/articles/pinterest-and-p3p for more info.\"""", ""content-security-policy"": ""default-src 'self' blob: s.pinimg.com; font-src 'self' s.pinimg.com data: fonts.googleapis.com fonts.gstatic.com use.typekit.net; style-src 'self' blob: 'unsafe-inlin""}"
+8,"GET / HTTP/1.1
+Host: www.pinterest.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.16881036758422852,0.10286593437194824,0.2152085304260254,200,OK,[''],11,11,0,"{""connection"": ""keep-alive"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""x-ua-compatible"": ""IE=edge"", ""reporting-endpoints"": ""coop-endpoint=\""https://www.pinterest.com/_/_/coop_report/\"", coep-endpoint=\""https://www.pinterest.com/_/_/coep_report/\"""", ""cross-origin-opener-policy-report-only"": ""same-origin; report-to=\""coop-endpoint\"""", ""cross-origin-embedder-policy-report-only"": ""require-corp; report-to=\""coep-endpoint\"""", ""set-cookie"": ""_auth=0; path=/; expires=Mon, 23 Sep 2024 23:00:56 GMT; domain=.pinterest.com; secure; httponly"", ""p3p"": ""CP=\""This is not a P3P policy. See https://www.pinterest.com/_/_/help/articles/pinterest-and-p3p for more info.\"""", ""content-security-policy"": ""default-src 'self' blob: s.pinimg.com; font-src 'self' s.pinimg.com data: fonts.googleapis.com fonts.gstatic.com use.typekit.net; style-src 'self' blob: 'unsafe-inlin""}"
+9,"GET / HTTP/1.1
+Host: www.pinterest.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.182328462600708,0.11509275436401367,0.224761962890625,200,OK,[''],11,11,0,"{""connection"": ""keep-alive"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""x-ua-compatible"": ""IE=edge"", ""reporting-endpoints"": ""coop-endpoint=\""https://www.pinterest.com/_/_/coop_report/\"", coep-endpoint=\""https://www.pinterest.com/_/_/coep_report/\"""", ""cross-origin-opener-policy-report-only"": ""same-origin; report-to=\""coop-endpoint\"""", ""cross-origin-embedder-policy-report-only"": ""require-corp; report-to=\""coep-endpoint\"""", ""set-cookie"": ""_auth=0; path=/; expires=Mon, 23 Sep 2024 23:00:59 GMT; domain=.pinterest.com; secure; httponly"", ""p3p"": ""CP=\""This is not a P3P policy. See https://www.pinterest.com/_/_/help/articles/pinterest-and-p3p for more info.\"""", ""content-security-policy"": ""default-src 'self' blob: s.pinimg.com; font-src 'self' s.pinimg.com data: fonts.googleapis.com fonts.gstatic.com use.typekit.net; style-src 'self' blob: 'unsafe-inlin""}"

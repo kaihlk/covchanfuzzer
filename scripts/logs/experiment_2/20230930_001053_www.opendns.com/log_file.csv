@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.opendns.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.527808427810669,0.1435527801513672,0.1531987190246582,200,OK,[''],12,12,2580,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:10:57 GMT"", ""content-type"": ""text/html"", ""content-length"": ""15365"", ""connection"": ""keep-alive"", ""last-modified"": ""Tue, 11 Oct 2022 22:24:55 GMT"", ""etag"": ""\""6345ed37-3c05\"""", ""accept-ranges"": ""bytes"", ""strict-transport-security"": ""max-age=15768000; includeSubDomains"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff""}"
+1,"GET / HTTP/1.1
+Host: www.opendns.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.406261682510376,0.10867762565612793,0.12024736404418945,200,OK,[''],12,12,3860,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:11:00 GMT"", ""content-type"": ""text/html"", ""content-length"": ""15365"", ""connection"": ""keep-alive"", ""last-modified"": ""Tue, 11 Oct 2022 22:24:55 GMT"", ""etag"": ""\""6345ed37-3c05\"""", ""accept-ranges"": ""bytes"", ""strict-transport-security"": ""max-age=15768000; includeSubDomains"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff""}"
+2,"GET / HTTP/1.1
+Host: www.opendns.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.39499640464782715,0.11018157005310059,0.11158537864685059,200,OK,[''],12,12,2580,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:11:02 GMT"", ""content-type"": ""text/html"", ""content-length"": ""15365"", ""connection"": ""keep-alive"", ""last-modified"": ""Tue, 11 Oct 2022 22:24:55 GMT"", ""etag"": ""\""6345ed37-3c05\"""", ""accept-ranges"": ""bytes"", ""strict-transport-security"": ""max-age=15768000; includeSubDomains"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff""}"
+3,"GET / HTTP/1.1
+Host: www.opendns.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.4470028877258301,0.11854863166809082,0.1431288719177246,200,OK,[''],12,12,1172,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:11:05 GMT"", ""content-type"": ""text/html"", ""content-length"": ""15365"", ""connection"": ""keep-alive"", ""last-modified"": ""Tue, 11 Oct 2022 22:24:55 GMT"", ""etag"": ""\""6345ed37-3c05\"""", ""accept-ranges"": ""bytes"", ""strict-transport-security"": ""max-age=15768000; includeSubDomains"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff""}"
+4,"GET / HTTP/1.1
+Host: www.opendns.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.5705206394195557,0.14634132385253906,0.11007237434387207,200,OK,[''],12,12,3860,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:11:08 GMT"", ""content-type"": ""text/html"", ""content-length"": ""15365"", ""connection"": ""keep-alive"", ""last-modified"": ""Tue, 11 Oct 2022 22:24:55 GMT"", ""etag"": ""\""6345ed37-3c05\"""", ""accept-ranges"": ""bytes"", ""strict-transport-security"": ""max-age=15768000; includeSubDomains"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff""}"
+5,"GET / HTTP/1.1
+Host: www.opendns.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.38744544982910156,0.10037088394165039,0.1086726188659668,200,OK,[''],12,12,3860,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:11:11 GMT"", ""content-type"": ""text/html"", ""content-length"": ""15365"", ""connection"": ""keep-alive"", ""last-modified"": ""Tue, 11 Oct 2022 22:24:55 GMT"", ""etag"": ""\""6345ed37-3c05\"""", ""accept-ranges"": ""bytes"", ""strict-transport-security"": ""max-age=15768000; includeSubDomains"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff""}"
+6,"GET / HTTP/1.1
+Host: www.opendns.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.3771626949310303,0.10945439338684082,0.11228799819946289,200,OK,[''],12,12,1172,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:11:14 GMT"", ""content-type"": ""text/html"", ""content-length"": ""15365"", ""connection"": ""keep-alive"", ""last-modified"": ""Tue, 11 Oct 2022 22:24:55 GMT"", ""etag"": ""\""6345ed37-3c05\"""", ""accept-ranges"": ""bytes"", ""strict-transport-security"": ""max-age=15768000; includeSubDomains"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff""}"
+7,"GET / HTTP/1.1
+Host: www.opendns.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.41084861755371094,0.18435072898864746,0.12295675277709961,200,OK,[''],12,12,3860,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:11:18 GMT"", ""content-type"": ""text/html"", ""content-length"": ""15365"", ""connection"": ""keep-alive"", ""last-modified"": ""Tue, 11 Oct 2022 22:24:55 GMT"", ""etag"": ""\""6345ed37-3c05\"""", ""accept-ranges"": ""bytes"", ""strict-transport-security"": ""max-age=15768000; includeSubDomains"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff""}"
+8,"GET / HTTP/1.1
+Host: www.opendns.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.504706621170044,0.11459636688232422,0.11289620399475098,200,OK,[''],12,12,3860,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:11:22 GMT"", ""content-type"": ""text/html"", ""content-length"": ""15365"", ""connection"": ""keep-alive"", ""last-modified"": ""Tue, 11 Oct 2022 22:24:55 GMT"", ""etag"": ""\""6345ed37-3c05\"""", ""accept-ranges"": ""bytes"", ""strict-transport-security"": ""max-age=15768000; includeSubDomains"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff""}"
+9,"GET / HTTP/1.1
+Host: www.opendns.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.3913614749908447,0.10523033142089844,0.11691904067993164,200,OK,[''],12,12,3860,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:11:25 GMT"", ""content-type"": ""text/html"", ""content-length"": ""15365"", ""connection"": ""keep-alive"", ""last-modified"": ""Tue, 11 Oct 2022 22:24:55 GMT"", ""etag"": ""\""6345ed37-3c05\"""", ""accept-ranges"": ""bytes"", ""strict-transport-security"": ""max-age=15768000; includeSubDomains"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff""}"

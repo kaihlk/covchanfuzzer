@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.google.de
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.2082812786102295,0.11130762100219727,0.09404563903808594,200,OK,[''],16,16,0,"{""date"": ""Fri, 29 Sep 2023 23:01:33 GMT"", ""expires"": ""-1"", ""cache-control"": ""private, max-age=0"", ""content-type"": ""text/html; charset=UTF-8"", ""strict-transport-security"": ""max-age=31536000"", ""content-security-policy-report-only"": ""object-src 'none';base-uri 'self';script-src 'nonce-eAwmelw3NppjlijpVBe-GQ' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp"", ""cross-origin-opener-policy"": ""same-origin-allow-popups; report-to=\""gws\"""", ""report-to"": ""{\""group\"":\""gws\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/gws/other\""}]}"", ""p3p"": ""CP=\""This is not a P3P policy! See g.co/p3phelp for more info.\"""", ""content-encoding"": ""br"", ""server"": ""gws"", ""content-length"": ""67324"", ""x-xss-protection"": ""0"", ""x-frame-options"": ""SAMEORIGIN"", ""set-cookie"": ""CONSENT=PENDING+345; expires=Sun, 28-Sep-2025 23:01:33 GMT; path=/; domain=.google.de; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+1,"GET / HTTP/1.1
+Host: www.google.de
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.2487471103668213,0.11918330192565918,0.1050114631652832,200,OK,[''],16,16,0,"{""date"": ""Fri, 29 Sep 2023 23:01:38 GMT"", ""expires"": ""-1"", ""cache-control"": ""private, max-age=0"", ""content-type"": ""text/html; charset=UTF-8"", ""strict-transport-security"": ""max-age=31536000"", ""content-security-policy-report-only"": ""object-src 'none';base-uri 'self';script-src 'nonce-hS3kxieE9CqOXhyhGPZR3A' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp"", ""cross-origin-opener-policy"": ""same-origin-allow-popups; report-to=\""gws\"""", ""report-to"": ""{\""group\"":\""gws\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/gws/other\""}]}"", ""p3p"": ""CP=\""This is not a P3P policy! See g.co/p3phelp for more info.\"""", ""content-encoding"": ""br"", ""server"": ""gws"", ""content-length"": ""67346"", ""x-xss-protection"": ""0"", ""x-frame-options"": ""SAMEORIGIN"", ""set-cookie"": ""CONSENT=PENDING+150; expires=Sun, 28-Sep-2025 23:01:38 GMT; path=/; domain=.google.de; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+2,"GET / HTTP/1.1
+Host: www.google.de
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.1975998878479004,0.10925745964050293,0.11816978454589844,200,OK,[''],16,16,0,"{""date"": ""Fri, 29 Sep 2023 23:01:42 GMT"", ""expires"": ""-1"", ""cache-control"": ""private, max-age=0"", ""content-type"": ""text/html; charset=UTF-8"", ""strict-transport-security"": ""max-age=31536000"", ""content-security-policy-report-only"": ""object-src 'none';base-uri 'self';script-src 'nonce-4bwgTeqAg32miDfmRMRFaQ' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp"", ""cross-origin-opener-policy"": ""same-origin-allow-popups; report-to=\""gws\"""", ""report-to"": ""{\""group\"":\""gws\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/gws/other\""}]}"", ""p3p"": ""CP=\""This is not a P3P policy! See g.co/p3phelp for more info.\"""", ""content-encoding"": ""br"", ""server"": ""gws"", ""content-length"": ""67261"", ""x-xss-protection"": ""0"", ""x-frame-options"": ""SAMEORIGIN"", ""set-cookie"": ""CONSENT=PENDING+279; expires=Sun, 28-Sep-2025 23:01:42 GMT; path=/; domain=.google.de; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+3,"GET / HTTP/1.1
+Host: www.google.de
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.1820664405822754,0.1057436466217041,0.11046695709228516,200,OK,[''],16,16,0,"{""date"": ""Fri, 29 Sep 2023 23:01:47 GMT"", ""expires"": ""-1"", ""cache-control"": ""private, max-age=0"", ""content-type"": ""text/html; charset=UTF-8"", ""strict-transport-security"": ""max-age=31536000"", ""content-security-policy-report-only"": ""object-src 'none';base-uri 'self';script-src 'nonce-cfXZj5RlkCUZ6vbDEww1YA' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp"", ""cross-origin-opener-policy"": ""same-origin-allow-popups; report-to=\""gws\"""", ""report-to"": ""{\""group\"":\""gws\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/gws/other\""}]}"", ""p3p"": ""CP=\""This is not a P3P policy! See g.co/p3phelp for more info.\"""", ""content-encoding"": ""br"", ""server"": ""gws"", ""content-length"": ""67337"", ""x-xss-protection"": ""0"", ""x-frame-options"": ""SAMEORIGIN"", ""set-cookie"": ""CONSENT=PENDING+583; expires=Sun, 28-Sep-2025 23:01:47 GMT; path=/; domain=.google.de; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+4,"GET / HTTP/1.1
+Host: www.google.de
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.1656644344329834,0.11392378807067871,0.13613224029541016,200,OK,[''],16,16,0,"{""date"": ""Fri, 29 Sep 2023 23:01:51 GMT"", ""expires"": ""-1"", ""cache-control"": ""private, max-age=0"", ""content-type"": ""text/html; charset=UTF-8"", ""strict-transport-security"": ""max-age=31536000"", ""content-security-policy-report-only"": ""object-src 'none';base-uri 'self';script-src 'nonce-EtJgv6g4Zjy8IGl3csW9rg' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp"", ""cross-origin-opener-policy"": ""same-origin-allow-popups; report-to=\""gws\"""", ""report-to"": ""{\""group\"":\""gws\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/gws/other\""}]}"", ""p3p"": ""CP=\""This is not a P3P policy! See g.co/p3phelp for more info.\"""", ""content-encoding"": ""br"", ""server"": ""gws"", ""content-length"": ""67422"", ""x-xss-protection"": ""0"", ""x-frame-options"": ""SAMEORIGIN"", ""set-cookie"": ""CONSENT=PENDING+541; expires=Sun, 28-Sep-2025 23:01:51 GMT; path=/; domain=.google.de; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+5,"GET / HTTP/1.1
+Host: www.google.de
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.17546606063842773,0.11160564422607422,0.1152048110961914,200,OK,[''],16,16,0,"{""date"": ""Fri, 29 Sep 2023 23:01:56 GMT"", ""expires"": ""-1"", ""cache-control"": ""private, max-age=0"", ""content-type"": ""text/html; charset=UTF-8"", ""strict-transport-security"": ""max-age=31536000"", ""content-security-policy-report-only"": ""object-src 'none';base-uri 'self';script-src 'nonce-vVv7fPl0Z4_zkckJEyyvgg' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp"", ""cross-origin-opener-policy"": ""same-origin-allow-popups; report-to=\""gws\"""", ""report-to"": ""{\""group\"":\""gws\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/gws/other\""}]}"", ""p3p"": ""CP=\""This is not a P3P policy! See g.co/p3phelp for more info.\"""", ""content-encoding"": ""br"", ""server"": ""gws"", ""content-length"": ""67300"", ""x-xss-protection"": ""0"", ""x-frame-options"": ""SAMEORIGIN"", ""set-cookie"": ""CONSENT=PENDING+148; expires=Sun, 28-Sep-2025 23:01:56 GMT; path=/; domain=.google.de; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+6,"GET / HTTP/1.1
+Host: www.google.de
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.1709756851196289,0.11287069320678711,0.0902409553527832,200,OK,[''],16,16,0,"{""date"": ""Fri, 29 Sep 2023 23:02:00 GMT"", ""expires"": ""-1"", ""cache-control"": ""private, max-age=0"", ""content-type"": ""text/html; charset=UTF-8"", ""strict-transport-security"": ""max-age=31536000"", ""content-security-policy-report-only"": ""object-src 'none';base-uri 'self';script-src 'nonce-A0jE-tqGKtX-jqSzRRqd4A' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp"", ""cross-origin-opener-policy"": ""same-origin-allow-popups; report-to=\""gws\"""", ""report-to"": ""{\""group\"":\""gws\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/gws/other\""}]}"", ""p3p"": ""CP=\""This is not a P3P policy! See g.co/p3phelp for more info.\"""", ""content-encoding"": ""br"", ""server"": ""gws"", ""content-length"": ""67383"", ""x-xss-protection"": ""0"", ""x-frame-options"": ""SAMEORIGIN"", ""set-cookie"": ""CONSENT=PENDING+132; expires=Sun, 28-Sep-2025 23:02:00 GMT; path=/; domain=.google.de; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+7,"GET / HTTP/1.1
+Host: www.google.de
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.22748231887817383,0.10834193229675293,0.11770939826965332,200,OK,[''],16,16,0,"{""date"": ""Fri, 29 Sep 2023 23:02:05 GMT"", ""expires"": ""-1"", ""cache-control"": ""private, max-age=0"", ""content-type"": ""text/html; charset=UTF-8"", ""strict-transport-security"": ""max-age=31536000"", ""content-security-policy-report-only"": ""object-src 'none';base-uri 'self';script-src 'nonce-6Vbxk860Xp1UWSVDQiW95g' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp"", ""cross-origin-opener-policy"": ""same-origin-allow-popups; report-to=\""gws\"""", ""report-to"": ""{\""group\"":\""gws\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/gws/other\""}]}"", ""p3p"": ""CP=\""This is not a P3P policy! See g.co/p3phelp for more info.\"""", ""content-encoding"": ""br"", ""server"": ""gws"", ""content-length"": ""67324"", ""x-xss-protection"": ""0"", ""x-frame-options"": ""SAMEORIGIN"", ""set-cookie"": ""CONSENT=PENDING+276; expires=Sun, 28-Sep-2025 23:02:05 GMT; path=/; domain=.google.de; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+8,"GET / HTTP/1.1
+Host: www.google.de
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.18790674209594727,0.11198115348815918,0.11453080177307129,200,OK,[''],16,16,0,"{""date"": ""Fri, 29 Sep 2023 23:02:09 GMT"", ""expires"": ""-1"", ""cache-control"": ""private, max-age=0"", ""content-type"": ""text/html; charset=UTF-8"", ""strict-transport-security"": ""max-age=31536000"", ""content-security-policy-report-only"": ""object-src 'none';base-uri 'self';script-src 'nonce-PlJGq-KjwYLIhSf7bOtcXg' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp"", ""cross-origin-opener-policy"": ""same-origin-allow-popups; report-to=\""gws\"""", ""report-to"": ""{\""group\"":\""gws\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/gws/other\""}]}"", ""p3p"": ""CP=\""This is not a P3P policy! See g.co/p3phelp for more info.\"""", ""content-encoding"": ""br"", ""server"": ""gws"", ""content-length"": ""67345"", ""x-xss-protection"": ""0"", ""x-frame-options"": ""SAMEORIGIN"", ""set-cookie"": ""CONSENT=PENDING+671; expires=Sun, 28-Sep-2025 23:02:09 GMT; path=/; domain=.google.de; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+9,"GET / HTTP/1.1
+Host: www.google.de
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.13955950736999512,0.11213374137878418,0.10829281806945801,200,OK,[''],16,16,0,"{""date"": ""Fri, 29 Sep 2023 23:02:14 GMT"", ""expires"": ""-1"", ""cache-control"": ""private, max-age=0"", ""content-type"": ""text/html; charset=UTF-8"", ""strict-transport-security"": ""max-age=31536000"", ""content-security-policy-report-only"": ""object-src 'none';base-uri 'self';script-src 'nonce-yd_6KM_TJU12XbB3KTxBJw' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp"", ""cross-origin-opener-policy"": ""same-origin-allow-popups; report-to=\""gws\"""", ""report-to"": ""{\""group\"":\""gws\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/gws/other\""}]}"", ""p3p"": ""CP=\""This is not a P3P policy! See g.co/p3phelp for more info.\"""", ""content-encoding"": ""br"", ""server"": ""gws"", ""content-length"": ""67309"", ""x-xss-protection"": ""0"", ""x-frame-options"": ""SAMEORIGIN"", ""set-cookie"": ""CONSENT=PENDING+353; expires=Sun, 28-Sep-2025 23:02:14 GMT; path=/; domain=.google.de; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"

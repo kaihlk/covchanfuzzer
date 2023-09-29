@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: login.live.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.22365689277648926,0.11172294616699219,0.15769100189208984,200,OK,[''],19,19,25700,"{""cache-control"": ""no-store, max-age=0"", ""content-type"": ""text/html; charset=utf-8"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 22:09:33 GMT"", ""vary"": ""Accept-Encoding"", ""p3p"": ""CP=\""DSP CUR OTPi IND OTRi ONL FIN\"""", ""x-frame-options"": ""DENY"", ""x-dns-prefetch-control"": ""on"", ""link"": ""<https://lgincdnmsftuswe2.azureedge.net/>; rel=dns-prefetch"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-ms-route-info"": ""C107_BL2"", ""x-ms-request-id"": ""6962ce80-b8bb-459d-b414-b963e7a85b78"", ""ppserver"": ""PPV: 30 H: BL02PF76D6E801B V: 0"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=31536000"", ""x-xss-protection"": ""1; mode=block"", ""set-cookie"": ""OParams=11O.DeMqg08dKVstUPQbyACdK8GKPUQfd7614vh6lO613TEcQDm*o84jcfchUjyGgigAVD6xesVc1mgfILo7TP4GnjlPvQCKEChJY0SOeaHjrToymAHqiIoi4dNjuqVzMZ*pfA$$; domain=login.live.com; Secure; path=/; SameSite=None; HttpOnly"", ""date"": ""Fri, 29 Sep 2023 22:10:32 GMT"", ""content-length"": ""10790""}"
+1,"GET / HTTP/1.1
+Host: login.live.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.19018220901489258,0.11766862869262695,0.18375277519226074,200,OK,[''],19,19,25586,"{""cache-control"": ""no-store, max-age=0"", ""content-type"": ""text/html; charset=utf-8"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 22:09:36 GMT"", ""vary"": ""Accept-Encoding"", ""p3p"": ""CP=\""DSP CUR OTPi IND OTRi ONL FIN\"""", ""x-frame-options"": ""DENY"", ""x-dns-prefetch-control"": ""on"", ""link"": ""<https://lgincdnmsftuswe2.azureedge.net/>; rel=dns-prefetch"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-ms-route-info"": ""C105_BL2"", ""x-ms-request-id"": ""bd8be279-8dcf-45a4-984f-0d9597d7ed4d"", ""ppserver"": ""PPV: 30 H: BL6PPF7DF99D5CB V: 0"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=31536000"", ""x-xss-protection"": ""1; mode=block"", ""set-cookie"": ""OParams=11O.DUjMlA3JCfBlFPkUdlG7ERryc*!C3gLJA8SUIHwht0bB*BTtDjYlLAjrJAH29FFvbyhMibGaj!fM0nfLQESuMs2BkDUtNc1C91gwSE58Xwf0Ur*TbpxeNtm3DLZbMnw6JQ$$; domain=login.live.com; Secure; path=/; SameSite=None; HttpOnly"", ""date"": ""Fri, 29 Sep 2023 22:10:35 GMT"", ""content-length"": ""10771""}"
+2,"GET / HTTP/1.1
+Host: login.live.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.25098252296447754,0.12329864501953125,0.17695236206054688,200,OK,[''],19,19,25589,"{""cache-control"": ""no-store, max-age=0"", ""content-type"": ""text/html; charset=utf-8"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 22:09:39 GMT"", ""vary"": ""Accept-Encoding"", ""p3p"": ""CP=\""DSP CUR OTPi IND OTRi ONL FIN\"""", ""x-frame-options"": ""DENY"", ""x-dns-prefetch-control"": ""on"", ""link"": ""<https://lgincdnmsftuswe2.azureedge.net/>; rel=dns-prefetch"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-ms-route-info"": ""C107_BL2"", ""x-ms-request-id"": ""362bd806-7150-4322-87c8-469cd3bff645"", ""ppserver"": ""PPV: 30 H: BL02EPF0000675E V: 0"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=31536000"", ""x-xss-protection"": ""1; mode=block"", ""set-cookie"": ""OParams=11O.DQWh7yoxuHLlE!!CZ3U*M4iRyB8wA6J7wg43HUZAVVhglyuLtk5Dqn2dPacGiasYI5H3k!0Sb9JIPs!uPpVdq9f4OCismD2Cxz2*6w93bODO4RhLDz54tiWg9MX5hptVlA$$; domain=login.live.com; Secure; path=/; SameSite=None; HttpOnly"", ""date"": ""Fri, 29 Sep 2023 22:10:38 GMT"", ""content-length"": ""10761""}"
+3,"GET / HTTP/1.1
+Host: login.live.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.20945477485656738,0.103271484375,0.20317912101745605,200,OK,[''],19,19,25659,"{""cache-control"": ""no-store, max-age=0"", ""content-type"": ""text/html; charset=utf-8"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 22:09:41 GMT"", ""vary"": ""Accept-Encoding"", ""p3p"": ""CP=\""DSP CUR OTPi IND OTRi ONL FIN\"""", ""x-frame-options"": ""DENY"", ""x-dns-prefetch-control"": ""on"", ""link"": ""<https://lgincdnmsftuswe2.azureedge.net/>; rel=dns-prefetch"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-ms-route-info"": ""C106_BL2"", ""x-ms-request-id"": ""8f86d456-46ad-4881-b977-e90750f71d93"", ""ppserver"": ""PPV: 30 H: BL6PPF6E96B2A71 V: 0"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=31536000"", ""x-xss-protection"": ""1; mode=block"", ""set-cookie"": ""OParams=11O.DdWHffHzM9AY3tE*oCgzQDlSFhGn5Pw7PNxE3wK0vGKGodzjSmtbv4IiSbz8ZHX1lULZRbKEcjt4*VTpr5ldkJB8ZpGC*lcNAS5VDtUnchoLdJD!lYcMZzVhJtkRsPjFSw$$; domain=login.live.com; Secure; path=/; SameSite=None; HttpOnly"", ""date"": ""Fri, 29 Sep 2023 22:10:40 GMT"", ""content-length"": ""10787""}"
+4,"GET / HTTP/1.1
+Host: login.live.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.2587893009185791,0.10582590103149414,0.2170121669769287,200,OK,[''],19,19,25587,"{""cache-control"": ""no-store, max-age=0"", ""content-type"": ""text/html; charset=utf-8"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 22:09:43 GMT"", ""vary"": ""Accept-Encoding"", ""p3p"": ""CP=\""DSP CUR OTPi IND OTRi ONL FIN\"""", ""x-frame-options"": ""DENY"", ""x-dns-prefetch-control"": ""on"", ""link"": ""<https://lgincdnmsftuswe2.azureedge.net/>; rel=dns-prefetch"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-ms-route-info"": ""C107_BL2"", ""x-ms-request-id"": ""b41beef7-91e8-499e-a835-a46ee74340ff"", ""ppserver"": ""PPV: 30 H: BL02PFCAC05B28A V: 0"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=31536000"", ""x-xss-protection"": ""1; mode=block"", ""set-cookie"": ""OParams=11O.DXQLrrWeycUTjDt9yJyFFPRXhWtVN0B04QUDKcAb712bIO5JfxKYd4*j4EEPDTzz0jqNX!lhg!d8TIZyekE6pUhLFOg1Sqg!q6PJ9vp*bSzmAccRvlY51pbGb622sM!U1w$$; domain=login.live.com; Secure; path=/; SameSite=None; HttpOnly"", ""date"": ""Fri, 29 Sep 2023 22:10:43 GMT"", ""content-length"": ""10772""}"
+5,"GET / HTTP/1.1
+Host: login.live.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.18775320053100586,0.1244649887084961,0.17477750778198242,200,OK,[''],19,19,25585,"{""cache-control"": ""no-store, max-age=0"", ""content-type"": ""text/html; charset=utf-8"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 22:09:46 GMT"", ""vary"": ""Accept-Encoding"", ""p3p"": ""CP=\""DSP CUR OTPi IND OTRi ONL FIN\"""", ""x-frame-options"": ""DENY"", ""x-dns-prefetch-control"": ""on"", ""link"": ""<https://lgincdnmsftuswe2.azureedge.net/>; rel=dns-prefetch"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-ms-route-info"": ""C107_BL2"", ""x-ms-request-id"": ""3576005d-65a9-447d-8822-131814947033"", ""ppserver"": ""PPV: 30 H: BL02EPF000066FC V: 0"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=31536000"", ""x-xss-protection"": ""1; mode=block"", ""set-cookie"": ""OParams=11O.DaVlgWmRLNIrNFWK0RaE0A1VrbGrh8EoNnONINGLYKmPAdiyep7x5J9O5QuCZZtFGw*P4fU!JIJl6Deo1qgXTzBAh3p9JLOMKyZpIEw7LTKH6Fv1YkNm1Ygo85YGcNgnyw$$; domain=login.live.com; Secure; path=/; SameSite=None; HttpOnly"", ""date"": ""Fri, 29 Sep 2023 22:10:45 GMT"", ""content-length"": ""10764""}"
+6,"GET / HTTP/1.1
+Host: login.live.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.23268532752990723,0.12029027938842773,0.22899460792541504,200,OK,[''],19,19,25590,"{""cache-control"": ""no-store, max-age=0"", ""content-type"": ""text/html; charset=utf-8"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 22:09:48 GMT"", ""vary"": ""Accept-Encoding"", ""p3p"": ""CP=\""DSP CUR OTPi IND OTRi ONL FIN\"""", ""x-frame-options"": ""DENY"", ""x-dns-prefetch-control"": ""on"", ""link"": ""<https://lgincdnmsftuswe2.azureedge.net/>; rel=dns-prefetch"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-ms-route-info"": ""C107_BL2"", ""x-ms-request-id"": ""207f5099-00ce-44bd-ba76-a8e34b504dc0"", ""ppserver"": ""PPV: 30 H: BL02PF38B0F2845 V: 0"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=31536000"", ""x-xss-protection"": ""1; mode=block"", ""set-cookie"": ""OParams=11O.DfbKV9Y3BhXxK8UaKDb5I15h2Sey2reyxt5Lu7d4FYj5GEC*D090WhupPlEWnMQuZbZdlpT7lrChfgDhJEte6duUafskGhoAFmqV!IYKhYPqRcqDyT19EToFu3SVT9U6uA$$; domain=login.live.com; Secure; path=/; SameSite=None; HttpOnly"", ""date"": ""Fri, 29 Sep 2023 22:10:47 GMT"", ""content-length"": ""10770""}"
+7,"GET / HTTP/1.1
+Host: login.live.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.3638136386871338,0.11159372329711914,0.1568012237548828,200,OK,[''],19,19,25589,"{""cache-control"": ""no-store, max-age=0"", ""content-type"": ""text/html; charset=utf-8"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 22:09:51 GMT"", ""vary"": ""Accept-Encoding"", ""p3p"": ""CP=\""DSP CUR OTPi IND OTRi ONL FIN\"""", ""x-frame-options"": ""DENY"", ""x-dns-prefetch-control"": ""on"", ""link"": ""<https://lgincdnmsftuswe2.azureedge.net/>; rel=dns-prefetch"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-ms-route-info"": ""C107_BL2"", ""x-ms-request-id"": ""11369719-c64e-4545-8db7-3954b280e021"", ""ppserver"": ""PPV: 30 H: BL02PF9E7D40501 V: 0"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=31536000"", ""x-xss-protection"": ""1; mode=block"", ""set-cookie"": ""OParams=11O.DVqQ1pLit!8ZzDPfoR0Rjmu56TP3L!*KCH7qyh11D7eSC9wVSfDUn1q!xVA0nmKIY5Ap362GB7s24YCj1QuupHYo1ghJej*e4TBlvQ8r3349rXxs7mtUCBb9ovTtnBHOeg$$; domain=login.live.com; Secure; path=/; SameSite=None; HttpOnly"", ""date"": ""Fri, 29 Sep 2023 22:10:50 GMT"", ""content-length"": ""10769""}"
+8,"GET / HTTP/1.1
+Host: login.live.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.31700801849365234,0.10405755043029785,0.14730000495910645,200,OK,[''],19,19,25591,"{""cache-control"": ""no-store, max-age=0"", ""content-type"": ""text/html; charset=utf-8"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 22:09:54 GMT"", ""vary"": ""Accept-Encoding"", ""p3p"": ""CP=\""DSP CUR OTPi IND OTRi ONL FIN\"""", ""x-frame-options"": ""DENY"", ""x-dns-prefetch-control"": ""on"", ""link"": ""<https://lgincdnmsftuswe2.azureedge.net/>; rel=dns-prefetch"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-ms-route-info"": ""C107_BL2"", ""x-ms-request-id"": ""69c3cd50-a8a9-4440-b589-592e4d03ef36"", ""ppserver"": ""PPV: 30 H: BL02PFB60FFFC08 V: 0"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=31536000"", ""x-xss-protection"": ""1; mode=block"", ""set-cookie"": ""OParams=11O.DfQE6fvgdnsJuAscCtT!ugLWZWmeTdF6T4!jQ61uPVUuEnME8zj*SKAqdgMOC2RRX6CISrIhZfgGHlt!eYipTejXSj*uWsiUCZVF0lZoaljuEZVKzx*GHtDpFtTT82ibNw$$; domain=login.live.com; Secure; path=/; SameSite=None; HttpOnly"", ""date"": ""Fri, 29 Sep 2023 22:10:53 GMT"", ""content-length"": ""10776""}"
+9,"GET / HTTP/1.1
+Host: login.live.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.1884746551513672,0.11164546012878418,0.12911653518676758,200,OK,[''],19,19,25588,"{""cache-control"": ""no-store, max-age=0"", ""content-type"": ""text/html; charset=utf-8"", ""content-encoding"": ""gzip"", ""expires"": ""Fri, 29 Sep 2023 22:09:56 GMT"", ""vary"": ""Accept-Encoding"", ""p3p"": ""CP=\""DSP CUR OTPi IND OTRi ONL FIN\"""", ""x-frame-options"": ""DENY"", ""x-dns-prefetch-control"": ""on"", ""link"": ""<https://lgincdnmsftuswe2.azureedge.net/>; rel=dns-prefetch"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""x-ms-route-info"": ""C107_BL2"", ""x-ms-request-id"": ""d78b39ad-a304-421e-804b-a56eab134ef7"", ""ppserver"": ""PPV: 30 H: BL02EPF0000676F V: 0"", ""x-content-type-options"": ""nosniff"", ""strict-transport-security"": ""max-age=31536000"", ""x-xss-protection"": ""1; mode=block"", ""set-cookie"": ""OParams=11O.DUdM30IysX4L6p4vUQkUp1L*fX0FrrdsI6biXHnksz2xO1OR7!LSxLZjFneeli1wQ5tkSezlDz2Gib2JpaoMFe8Iyu3LC1FfjGAZ!SCZO495eVALV05LpQpjonHAoOcw!Q$$; domain=login.live.com; Secure; path=/; SameSite=None; HttpOnly"", ""date"": ""Fri, 29 Sep 2023 22:10:56 GMT"", ""content-length"": ""10769""}"

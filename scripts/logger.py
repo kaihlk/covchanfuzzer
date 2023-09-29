@@ -7,9 +7,11 @@ import os
 import json
 import csv
 import class_mapping
+import shutil
 import math
 import pandas
 import scipy.stats as scistats
+import logging
 # import pyshark # doesnt work so well, probably a sudo problem
 
 
@@ -270,7 +272,7 @@ class TestRunLogger:
 
             for request in request_data:
                 csv_writer.writerow(request)
-        print("Prerequest saved")
+        print("Request log file.csv saved")
     
     def save_deviation_status_code(self, data):
         log_file_path = f"{self.log_folder}/deviation-statuscode.csv"
@@ -472,6 +474,7 @@ class ExperimentLogger:
         self.experiment_configuration = experiment_configuration
         self.experiment_folder = self.create_experiment_folder(experiment_configuration["experiment_no"])
         self.experiment_stats={}
+        self.exp_logging=logging.getLogger("main.runner.exp_log")
     
     def get_experiment_folder(self):
         return self.experiment_folder
@@ -561,7 +564,7 @@ class ExperimentLogger:
 
             for prerequest in prerequests:
                 csv_writer.writerow(prerequest)
-        print("Prerequest saved")
+        print("prerequest.csv saved")
         return
     
     def save_exp_stats(self, run_time, messages):
@@ -591,6 +594,14 @@ class ExperimentLogger:
         with open(log_file_path, "w", encoding="utf-8") as file:
             json.dump(request_data, file, indent=4)
         return
+
+    def copy_log_file(self):
+        # Move the log file to a different folder using os.rename
+        new_file_path = f"{self.experiment_folder}/debug.log"
+        old_file_path= f"logs/debug.log"
+        shutil.copy(old_file_path, new_file_path)
+        return
+
 
     def capture_packets_dumpcap(
         self, stop_capture_flag
@@ -643,7 +654,7 @@ class ExperimentLogger:
                         packets_captured = int(line.split(":")[1].strip())
                         break
             except Exception as e:
-                print("Error reading output: ",e)
+                self.exp_logging.error("Error capturing packets: %s",e)
                 packets_captured = None
             self.experiment_stats["captured_packages"]=packets_captured
         except subprocess.TimeoutExpired:
@@ -653,8 +664,9 @@ class ExperimentLogger:
             print("Process 'dumpcap' was successfully terminated.")
             
         
-        except subprocess.CalledProcessError as ex:
-            print("Error occurred during packet capture:", ex)
+        except subprocess.CalledProcessError as e:
+            self.exp_logging.error("Error capturing packets subprocess: %s",e)
+            
         return True
     def extract_packets_per_host(host_list):
         return 0

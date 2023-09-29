@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.digicert.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.279613733291626,0.1113882064819336,0.6395244598388672,200,OK,[''],17,17,317,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:32:57 GMT"", ""content-type"": ""text/html;charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-content-type-options"": ""nosniff"", ""age"": ""28213"", ""last-modified"": ""Fri, 29 Sep 2023 14:42:44 GMT"", ""etag"": ""W/\""1ef4b-606806fff4f6c\"""", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""content-encoding"": ""gzip"", ""set-cookie"": ""incap_ses_770_1323850=0blTRNiOpiuUp4Qt55evCphQF2UAAAAAdq3kj0ltwhIcd+ftAbfwDg==; path=/; Domain=.digicert.com; Secure; SameSite=None"", ""x-incap-sess-cookie-hdr"": ""R1MGECZQGCVbdXct55evCphQF2UAAAAA6SApLd4g/9j8ssHFsBl4Iw=="", ""strict-transport-security"": ""max-age=31536000"", ""x-cdn"": ""Imperva"", ""x-iinfo"": ""6-74748583-74748616 NNNN CT(146 297 0) RT(1696026776066 194) q(0 0 5 -1) r(6 6) U12""}"
+1,"GET / HTTP/1.1
+Host: www.digicert.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.20959782600402832,0.14675474166870117,2.906313896179199,200,OK,[''],17,17,313,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:32:59 GMT"", ""content-type"": ""text/html;charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-content-type-options"": ""nosniff"", ""age"": ""28218"", ""last-modified"": ""Fri, 29 Sep 2023 14:42:41 GMT"", ""etag"": ""W/\""1ef4b-606806fcf69df\"""", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""content-encoding"": ""gzip"", ""set-cookie"": ""incap_ses_770_1323850=W+W6L4zGgXqqt4Qt55evCp1QF2UAAAAAlXGxmtnch/6s3WCkX9b8vA==; path=/; Domain=.digicert.com; Secure; SameSite=None"", ""x-incap-sess-cookie-hdr"": ""H6zVN4pd/3pbdXct55evCp1QF2UAAAAA2GgjB39e+nDnkDDsmkTOrw=="", ""strict-transport-security"": ""max-age=31536000"", ""x-cdn"": ""Imperva"", ""x-iinfo"": ""10-139024513-139024561 NNNN CT(131 267 0) RT(1696026778766 146) q(0 0 4 -1) r(28 28) U12""}"
+2,"GET / HTTP/1.1
+Host: www.digicert.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.2011735439300537,0.12557077407836914,0.6535899639129639,200,OK,[''],17,17,317,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:33:04 GMT"", ""content-type"": ""text/html;charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-content-type-options"": ""nosniff"", ""age"": ""28220"", ""last-modified"": ""Fri, 29 Sep 2023 14:42:44 GMT"", ""etag"": ""W/\""1ef4b-606806fff4f6c\"""", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""content-encoding"": ""gzip"", ""set-cookie"": ""incap_ses_770_1323850=50MzaXuvEn3GwYQt55evCqBQF2UAAAAAvDhVkWoIiBDd27UkrQuvnw==; path=/; Domain=.digicert.com; Secure; SameSite=None"", ""x-incap-sess-cookie-hdr"": ""3RDdYVYcQENbdXct55evCqBQF2UAAAAAVAcTXwdbynRqHcVMaIwIxw=="", ""strict-transport-security"": ""max-age=31536000"", ""x-cdn"": ""Imperva"", ""x-iinfo"": ""3-69328107-69328122 NNNN CT(146 297 0) RT(1696026783781 144) q(0 0 4 -1) r(6 6) U12""}"
+3,"GET / HTTP/1.1
+Host: www.digicert.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.19322729110717773,0.11840295791625977,0.581540584564209,200,OK,[''],17,17,314,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:33:07 GMT"", ""content-type"": ""text/html;charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-content-type-options"": ""nosniff"", ""age"": ""28226"", ""last-modified"": ""Fri, 29 Sep 2023 14:42:41 GMT"", ""etag"": ""W/\""1ef4b-606806fcf69df\"""", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""content-encoding"": ""gzip"", ""set-cookie"": ""incap_ses_770_1323850=zq3wBazz2xoLzYQt55evCqNQF2UAAAAAvqBc9JWdjQcSAyILwgxqpw==; path=/; Domain=.digicert.com; Secure; SameSite=None"", ""x-incap-sess-cookie-hdr"": ""vQlLf6O7GWNbdXct55evCqNQF2UAAAAApYF87ZLmqgDHeaBMponHJA=="", ""strict-transport-security"": ""max-age=31536000"", ""x-cdn"": ""Imperva"", ""x-iinfo"": ""13-215725135-215725192 NNNN CT(138 264 0) RT(1696026786485 122) q(0 0 4 -1) r(5 5) U12""}"
+4,"GET / HTTP/1.1
+Host: www.digicert.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.11728048324584961,0.11237835884094238,0.19942426681518555,200,OK,[''],17,17,328,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:33:09 GMT"", ""content-type"": ""text/html;charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-content-type-options"": ""nosniff"", ""age"": ""28225"", ""last-modified"": ""Fri, 29 Sep 2023 14:42:44 GMT"", ""etag"": ""W/\""1ef4b-606806fff4f6c\"""", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""content-encoding"": ""gzip"", ""set-cookie"": ""incap_ses_770_1323850=eTRhIne2Swxo1IQt55evCqVQF2UAAAAAZxsaKRUV8sXSf1vwM+JuFQ==; path=/; Domain=.digicert.com; Secure; SameSite=None"", ""x-incap-sess-cookie-hdr"": ""sOvWRIvIZmNbdXct55evCqVQF2UAAAAAbI9P6EP63Ab5F5jDHjOb2Q=="", ""strict-transport-security"": ""max-age=31536000"", ""x-cdn"": ""Imperva"", ""x-iinfo"": ""13-215726014-215725192 PNNN RT(1696026789002 41) q(0 0 0 -1) r(2 2) U12""}"
+5,"GET / HTTP/1.1
+Host: www.digicert.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.15880417823791504,0.1115107536315918,0.5618667602539062,200,OK,[''],17,17,316,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:33:11 GMT"", ""content-type"": ""text/html;charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-content-type-options"": ""nosniff"", ""age"": ""28230"", ""last-modified"": ""Fri, 29 Sep 2023 14:42:41 GMT"", ""etag"": ""W/\""1ef4b-606806fcf69df\"""", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""content-encoding"": ""gzip"", ""set-cookie"": ""incap_ses_770_1323850=sf5Xe/U4+ETX3IQt55evCqdQF2UAAAAA3eIpWOjOHeQfW10tcEQNjQ==; path=/; Domain=.digicert.com; Secure; SameSite=None"", ""x-incap-sess-cookie-hdr"": ""AdKvTf6XBGlbdXct55evCqdQF2UAAAAApZ72Ekfts5BweSocIPthsg=="", ""strict-transport-security"": ""max-age=31536000"", ""x-cdn"": ""Imperva"", ""x-iinfo"": ""7-107640467-107640491 NNNN CT(129 262 0) RT(1696026791021 87) q(0 0 4 -1) r(5 5) U12""}"
+6,"GET / HTTP/1.1
+Host: www.digicert.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.19267821311950684,0.13329100608825684,0.6595027446746826,200,OK,[''],17,17,314,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:33:14 GMT"", ""content-type"": ""text/html;charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-content-type-options"": ""nosniff"", ""age"": ""28230"", ""last-modified"": ""Fri, 29 Sep 2023 14:42:44 GMT"", ""etag"": ""W/\""1ef4b-606806fff4f6c\"""", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""content-encoding"": ""gzip"", ""set-cookie"": ""incap_ses_770_1323850=S8FxK6W9Szyr5IQt55evCqpQF2UAAAAAkBCdoY/y7Dd1uU4gJ04rfw==; path=/; Domain=.digicert.com; Secure; SameSite=None"", ""x-incap-sess-cookie-hdr"": ""SdWYV8kr+lpbdXct55evCqpQF2UAAAAA/O44SvAGxo/jUunruTefYA=="", ""strict-transport-security"": ""max-age=31536000"", ""x-cdn"": ""Imperva"", ""x-iinfo"": ""12-193733921-193733950 NNNN CT(147 150 0) RT(1696026793346 128) q(0 1 3 -1) r(5 6) U12""}"
+7,"GET / HTTP/1.1
+Host: www.digicert.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.1675875186920166,0.1101689338684082,0.574202299118042,200,OK,[''],17,17,316,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:33:16 GMT"", ""content-type"": ""text/html;charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-content-type-options"": ""nosniff"", ""age"": ""28232"", ""last-modified"": ""Fri, 29 Sep 2023 14:42:44 GMT"", ""etag"": ""W/\""1ef4b-606806fff4f6c\"""", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""content-encoding"": ""gzip"", ""set-cookie"": ""incap_ses_770_1323850=3YQTRo5TikgG74Qt55evCqxQF2UAAAAAtpDCUmXI8FcE2MCyD5pXdQ==; path=/; Domain=.digicert.com; Secure; SameSite=None"", ""x-incap-sess-cookie-hdr"": ""U4QmB5WQEwpbdXct55evCqxQF2UAAAAAiN6xxsVH+HesuwTxCrlFNA=="", ""strict-transport-security"": ""max-age=31536000"", ""x-cdn"": ""Imperva"", ""x-iinfo"": ""5-126006671-126006683 NNNN CT(130 133 0) RT(1696026796001 78) q(0 0 3 -1) r(4 6) U12""}"
+8,"GET / HTTP/1.1
+Host: www.digicert.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.18377113342285156,0.10346341133117676,0.5972573757171631,200,OK,[''],17,17,316,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:33:19 GMT"", ""content-type"": ""text/html;charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-content-type-options"": ""nosniff"", ""age"": ""28235"", ""last-modified"": ""Fri, 29 Sep 2023 14:42:44 GMT"", ""etag"": ""W/\""1ef4b-606806fff4f6c\"""", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""content-encoding"": ""gzip"", ""set-cookie"": ""incap_ses_770_1323850=wBZkeD7pz2ID+IQt55evCq9QF2UAAAAAW3t4lJQtcNI1GsNqbfQo9w==; path=/; Domain=.digicert.com; Secure; SameSite=None"", ""x-incap-sess-cookie-hdr"": ""BeFZC2o5HGhbdXct55evCq9QF2UAAAAADF8B49Fycnt5WMbbn09yiA=="", ""strict-transport-security"": ""max-age=31536000"", ""x-cdn"": ""Imperva"", ""x-iinfo"": ""9-116219072-116219098 NNNN CT(133 275 0) RT(1696026798481 55) q(0 0 4 -1) r(5 5) U12""}"
+9,"GET / HTTP/1.1
+Host: www.digicert.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.20412421226501465,0.13736939430236816,0.2037363052368164,200,OK,[''],17,17,330,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:33:21 GMT"", ""content-type"": ""text/html;charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-content-type-options"": ""nosniff"", ""age"": ""28240"", ""last-modified"": ""Fri, 29 Sep 2023 14:42:41 GMT"", ""etag"": ""W/\""1ef4b-606806fcf69df\"""", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""content-encoding"": ""gzip"", ""set-cookie"": ""incap_ses_770_1323850=wd2CRqhS93HkAIUt55evCrFQF2UAAAAA5HTEkqNH1q991FUkEOjE9w==; path=/; Domain=.digicert.com; Secure; SameSite=None"", ""x-incap-sess-cookie-hdr"": ""KL2ybIzy5UZbdXct55evCrFQF2UAAAAADO5tGl8Np/CsnnusKDMXjQ=="", ""strict-transport-security"": ""max-age=31536000"", ""x-cdn"": ""Imperva"", ""x-iinfo"": ""6-74753458-74748616 PNNN RT(1696026800994 133) q(0 0 0 -1) r(2 2) U12""}"

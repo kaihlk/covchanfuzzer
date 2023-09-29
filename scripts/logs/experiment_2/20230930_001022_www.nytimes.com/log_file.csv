@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.nytimes.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.15365028381347656,0.13079452514648438,0.0350494384765625,200,OK,[''],29,29,0,"{""connection"": ""close"", ""content-length"": ""227661"", ""server"": ""nginx"", ""content-type"": ""text/html; charset=utf-8"", ""x-b3-traceid"": ""f64bab6701674439afca9a383dadf49b"", ""x-nyt-data-last-modified"": ""Fri, 29 Sep 2023 22:10:01 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 22:10:01 GMT"", ""x-pagetype"": ""vi-homepage"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""cache-control"": ""s-maxage=30,no-cache"", ""x-nyt-route"": ""homepage"", ""x-origin-time"": ""2023-09-29 22:10:17 UTC"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:10:25 GMT"", ""age"": ""19"", ""x-served-by"": ""cache-lga21924-LGA, cache-ams21054-AMS"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""6, 1"", ""x-timer"": ""S1696025425.390704,VS0,VE2"", ""vary"": ""Accept-Encoding, Fastly-SSL"", ""set-cookie"": ""nyt-geo=DE; Expires=Sat, 30 Sep 2023 04:10:25 GMT; Path=/; Domain=.nytimes.com"", ""x-nyt-app-webview"": ""0"", ""x-gdpr"": ""1"", ""x-frame-options"": ""DENY"", ""onion-location"": ""https://www.nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion/"", ""x-api-version"": ""F-F-VI"", ""content-security-policy"": ""upgrade-insecur""}"
+1,"GET / HTTP/1.1
+Host: www.nytimes.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.1606605052947998,0.11200737953186035,0.10944771766662598,200,OK,[''],29,29,0,"{""connection"": ""close"", ""content-length"": ""227833"", ""server"": ""nginx"", ""content-type"": ""text/html; charset=utf-8"", ""x-b3-traceid"": ""4349828970e04a94a4d50849f6aa2e12"", ""x-nyt-data-last-modified"": ""Fri, 29 Sep 2023 22:10:13 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 22:10:13 GMT"", ""x-pagetype"": ""vi-homepage"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""cache-control"": ""s-maxage=30,no-cache"", ""x-nyt-route"": ""homepage"", ""x-origin-time"": ""2023-09-29 22:10:28 UTC"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:10:28 GMT"", ""age"": ""10"", ""x-served-by"": ""cache-lga21927-LGA, cache-ams21041-AMS"", ""x-cache"": ""HIT, MISS"", ""x-cache-hits"": ""1, 0"", ""x-timer"": ""S1696025428.022593,VS0,VE85"", ""vary"": ""Accept-Encoding, Fastly-SSL"", ""set-cookie"": ""nyt-geo=DE; Expires=Sat, 30 Sep 2023 04:10:28 GMT; Path=/; Domain=.nytimes.com"", ""x-nyt-app-webview"": ""0"", ""x-gdpr"": ""1"", ""x-frame-options"": ""DENY"", ""onion-location"": ""https://www.nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion/"", ""x-api-version"": ""F-F-VI"", ""content-security-policy"": ""upgrade-insec""}"
+2,"GET / HTTP/1.1
+Host: www.nytimes.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.2391362190246582,0.12192416191101074,0.0612795352935791,200,OK,[''],29,29,0,"{""connection"": ""close"", ""content-length"": ""227661"", ""server"": ""nginx"", ""content-type"": ""text/html; charset=utf-8"", ""x-b3-traceid"": ""f64bab6701674439afca9a383dadf49b"", ""x-nyt-data-last-modified"": ""Fri, 29 Sep 2023 22:10:01 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 22:10:01 GMT"", ""x-pagetype"": ""vi-homepage"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""cache-control"": ""s-maxage=30,no-cache"", ""x-nyt-route"": ""homepage"", ""x-origin-time"": ""2023-09-29 22:10:17 UTC"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:10:30 GMT"", ""age"": ""24"", ""x-served-by"": ""cache-lga21924-LGA, cache-ams21077-AMS"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""6, 1"", ""x-timer"": ""S1696025431.544747,VS0,VE2"", ""vary"": ""Accept-Encoding, Fastly-SSL"", ""set-cookie"": ""nyt-geo=DE; Expires=Sat, 30 Sep 2023 04:10:30 GMT; Path=/; Domain=.nytimes.com"", ""x-nyt-app-webview"": ""0"", ""x-gdpr"": ""1"", ""x-frame-options"": ""DENY"", ""onion-location"": ""https://www.nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion/"", ""x-api-version"": ""F-F-VI"", ""content-security-policy"": ""upgrade-insecur""}"
+3,"GET / HTTP/1.1
+Host: www.nytimes.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.13912582397460938,0.10923480987548828,0.04488492012023926,200,OK,[''],29,29,0,"{""connection"": ""close"", ""content-length"": ""227661"", ""server"": ""nginx"", ""content-type"": ""text/html; charset=utf-8"", ""x-b3-traceid"": ""f64bab6701674439afca9a383dadf49b"", ""x-nyt-data-last-modified"": ""Fri, 29 Sep 2023 22:10:01 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 22:10:01 GMT"", ""x-pagetype"": ""vi-homepage"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""cache-control"": ""s-maxage=30,no-cache"", ""x-nyt-route"": ""homepage"", ""x-origin-time"": ""2023-09-29 22:10:17 UTC"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:10:33 GMT"", ""age"": ""27"", ""x-served-by"": ""cache-lga21924-LGA, cache-ams21067-AMS"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""6, 1"", ""x-timer"": ""S1696025433.102524,VS0,VE3"", ""vary"": ""Accept-Encoding, Fastly-SSL"", ""set-cookie"": ""nyt-geo=DE; Expires=Sat, 30 Sep 2023 04:10:33 GMT; Path=/; Domain=.nytimes.com"", ""x-nyt-app-webview"": ""0"", ""x-gdpr"": ""1"", ""x-frame-options"": ""DENY"", ""onion-location"": ""https://www.nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion/"", ""x-api-version"": ""F-F-VI"", ""content-security-policy"": ""upgrade-insecur""}"
+4,"GET / HTTP/1.1
+Host: www.nytimes.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.15911865234375,0.1178734302520752,0.032425642013549805,200,OK,[''],29,29,0,"{""connection"": ""close"", ""content-length"": ""227661"", ""server"": ""nginx"", ""content-type"": ""text/html; charset=utf-8"", ""x-b3-traceid"": ""f64bab6701674439afca9a383dadf49b"", ""x-nyt-data-last-modified"": ""Fri, 29 Sep 2023 22:10:01 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 22:10:01 GMT"", ""x-pagetype"": ""vi-homepage"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""cache-control"": ""s-maxage=30,no-cache"", ""x-nyt-route"": ""homepage"", ""x-origin-time"": ""2023-09-29 22:10:17 UTC"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:10:35 GMT"", ""age"": ""29"", ""x-served-by"": ""cache-lga21924-LGA, cache-ams21039-AMS"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""6, 1"", ""x-timer"": ""S1696025436.577273,VS0,VE2"", ""vary"": ""Accept-Encoding, Fastly-SSL"", ""set-cookie"": ""nyt-geo=DE; Expires=Sat, 30 Sep 2023 04:10:35 GMT; Path=/; Domain=.nytimes.com"", ""x-nyt-app-webview"": ""0"", ""x-gdpr"": ""1"", ""x-frame-options"": ""DENY"", ""onion-location"": ""https://www.nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion/"", ""x-api-version"": ""F-F-VI"", ""content-security-policy"": ""upgrade-insecur""}"
+5,"GET / HTTP/1.1
+Host: www.nytimes.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.1641397476196289,0.11040878295898438,0.02585315704345703,200,OK,[''],29,29,0,"{""connection"": ""close"", ""content-length"": ""227668"", ""server"": ""nginx"", ""content-type"": ""text/html; charset=utf-8"", ""x-b3-traceid"": ""147145e9f3de4e1aabba0ea15456152a"", ""x-nyt-data-last-modified"": ""Fri, 29 Sep 2023 22:09:20 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 22:09:20 GMT"", ""x-pagetype"": ""vi-homepage"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""cache-control"": ""s-maxage=30,no-cache"", ""x-nyt-route"": ""homepage"", ""x-origin-time"": ""2023-09-29 22:09:33 UTC"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:10:38 GMT"", ""age"": ""75"", ""x-served-by"": ""cache-lga21925-LGA, cache-ams21034-AMS"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""2, 1"", ""x-timer"": ""S1696025438.254207,VS0,VE3"", ""vary"": ""Accept-Encoding, Fastly-SSL"", ""set-cookie"": ""nyt-geo=DE; Expires=Sat, 30 Sep 2023 04:10:38 GMT; Path=/; Domain=.nytimes.com"", ""x-nyt-app-webview"": ""0"", ""x-gdpr"": ""1"", ""x-frame-options"": ""DENY"", ""onion-location"": ""https://www.nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion/"", ""x-api-version"": ""F-F-VI"", ""content-security-policy"": ""upgrade-insecur""}"
+6,"GET / HTTP/1.1
+Host: www.nytimes.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.15459775924682617,0.10447144508361816,0.032433271408081055,200,OK,[''],29,29,0,"{""connection"": ""close"", ""content-length"": ""227661"", ""server"": ""nginx"", ""content-type"": ""text/html; charset=utf-8"", ""x-b3-traceid"": ""f64bab6701674439afca9a383dadf49b"", ""x-nyt-data-last-modified"": ""Fri, 29 Sep 2023 22:10:01 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 22:10:01 GMT"", ""x-pagetype"": ""vi-homepage"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""cache-control"": ""s-maxage=30,no-cache"", ""x-nyt-route"": ""homepage"", ""x-origin-time"": ""2023-09-29 22:10:17 UTC"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:10:40 GMT"", ""age"": ""35"", ""x-served-by"": ""cache-lga21924-LGA, cache-ams21063-AMS"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""6, 1"", ""x-timer"": ""S1696025441.833984,VS0,VE2"", ""vary"": ""Accept-Encoding, Fastly-SSL"", ""set-cookie"": ""nyt-geo=DE; Expires=Sat, 30 Sep 2023 04:10:40 GMT; Path=/; Domain=.nytimes.com"", ""x-nyt-app-webview"": ""0"", ""x-gdpr"": ""1"", ""x-frame-options"": ""DENY"", ""onion-location"": ""https://www.nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion/"", ""x-api-version"": ""F-F-VI"", ""content-security-policy"": ""upgrade-insecur""}"
+7,"GET / HTTP/1.1
+Host: www.nytimes.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.17585062980651855,0.11188578605651855,0.04070615768432617,200,OK,[''],29,29,0,"{""connection"": ""close"", ""content-length"": ""227776"", ""server"": ""nginx"", ""content-type"": ""text/html; charset=utf-8"", ""x-b3-traceid"": ""122e0be6097742509637dfc2bdc64ee3"", ""x-nyt-data-last-modified"": ""Fri, 29 Sep 2023 22:10:36 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 22:10:36 GMT"", ""x-pagetype"": ""vi-homepage"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""cache-control"": ""s-maxage=30,no-cache"", ""x-nyt-route"": ""homepage"", ""x-origin-time"": ""2023-09-29 22:10:40 UTC"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:10:43 GMT"", ""age"": ""5"", ""x-served-by"": ""cache-lga21924-LGA, cache-ams21081-AMS"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""4, 1"", ""x-timer"": ""S1696025443.280322,VS0,VE5"", ""vary"": ""Accept-Encoding, Fastly-SSL"", ""set-cookie"": ""nyt-geo=DE; Expires=Sat, 30 Sep 2023 04:10:43 GMT; Path=/; Domain=.nytimes.com"", ""x-nyt-app-webview"": ""0"", ""x-gdpr"": ""1"", ""x-frame-options"": ""DENY"", ""onion-location"": ""https://www.nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion/"", ""x-api-version"": ""F-F-VI"", ""content-security-policy"": ""upgrade-insecure""}"
+8,"GET / HTTP/1.1
+Host: www.nytimes.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.2163100242614746,0.10796380043029785,0.05174732208251953,200,OK,[''],29,29,0,"{""connection"": ""close"", ""content-length"": ""227776"", ""server"": ""nginx"", ""content-type"": ""text/html; charset=utf-8"", ""x-b3-traceid"": ""122e0be6097742509637dfc2bdc64ee3"", ""x-nyt-data-last-modified"": ""Fri, 29 Sep 2023 22:10:36 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 22:10:36 GMT"", ""x-pagetype"": ""vi-homepage"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""cache-control"": ""s-maxage=30,no-cache"", ""x-nyt-route"": ""homepage"", ""x-origin-time"": ""2023-09-29 22:10:40 UTC"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:10:45 GMT"", ""age"": ""8"", ""x-served-by"": ""cache-lga21924-LGA, cache-ams21076-AMS"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""4, 1"", ""x-timer"": ""S1696025446.560023,VS0,VE14"", ""vary"": ""Accept-Encoding, Fastly-SSL"", ""set-cookie"": ""nyt-geo=DE; Expires=Sat, 30 Sep 2023 04:10:45 GMT; Path=/; Domain=.nytimes.com"", ""x-nyt-app-webview"": ""0"", ""x-gdpr"": ""1"", ""x-frame-options"": ""DENY"", ""onion-location"": ""https://www.nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion/"", ""x-api-version"": ""F-F-VI"", ""content-security-policy"": ""upgrade-insecur""}"
+9,"GET / HTTP/1.1
+Host: www.nytimes.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.20325374603271484,0.11123514175415039,0.030416250228881836,200,OK,[''],29,29,0,"{""connection"": ""close"", ""content-length"": ""227776"", ""server"": ""nginx"", ""content-type"": ""text/html; charset=utf-8"", ""x-b3-traceid"": ""122e0be6097742509637dfc2bdc64ee3"", ""x-nyt-data-last-modified"": ""Fri, 29 Sep 2023 22:10:36 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 22:10:36 GMT"", ""x-pagetype"": ""vi-homepage"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""cache-control"": ""s-maxage=30,no-cache"", ""x-nyt-route"": ""homepage"", ""x-origin-time"": ""2023-09-29 22:10:40 UTC"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:10:48 GMT"", ""age"": ""10"", ""x-served-by"": ""cache-lga21924-LGA, cache-ams21024-AMS"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""4, 1"", ""x-timer"": ""S1696025448.097912,VS0,VE3"", ""vary"": ""Accept-Encoding, Fastly-SSL"", ""set-cookie"": ""nyt-geo=DE; Expires=Sat, 30 Sep 2023 04:10:48 GMT; Path=/; Domain=.nytimes.com"", ""x-nyt-app-webview"": ""0"", ""x-gdpr"": ""1"", ""x-frame-options"": ""DENY"", ""onion-location"": ""https://www.nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion/"", ""x-api-version"": ""F-F-VI"", ""content-security-policy"": ""upgrade-insecure-reques""}"

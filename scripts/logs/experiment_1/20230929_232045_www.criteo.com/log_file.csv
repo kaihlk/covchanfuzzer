@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.criteo.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.13973259925842285,0.1119997501373291,0.10914945602416992,200,OK,[''],21,21,14560,"{""content-type"": ""text/html; charset=UTF-8"", ""content-length"": ""62778"", ""connection"": ""keep-alive"", ""cache-control"": ""public, max-age=86400"", ""content-encoding"": ""gzip"", ""link"": ""<https://www.criteo.com/>; rel=shortlink"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=300"", ""x-pantheon-styx-hostname"": ""styx-fe4-a-84955cf4f5-c525t"", ""x-styx-req-id"": ""c82fa771-5f02-11ee-bc1c-5a3912e9b30c"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 ff34f581ad0f4009e4c404975952e7f0.cloudfront.net (CloudFront)"", ""date"": ""Fri, 29 Sep 2023 21:20:46 GMT"", ""x-served-by"": ""cache-chi-klot8100156-CHI, cache-ams21080-AMS, cache-ams21038-AMS, cache-ams21038-AMS"", ""x-cache-hits"": ""3, 213, 0, 0"", ""x-timer"": ""S1696022447.621155,VS0,VE4"", ""vary"": ""Accept-Encoding, Cookie, Cookie"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""AMS50-C1"", ""x-amz-cf-id"": ""e5PILBjRyx0wDNAP9GXgubgiL_7xQ8bB_9_oajT6Zl8TuMNoTKBQ6g=="", ""age"": ""4838""}"
+1,"GET / HTTP/1.1
+Host: www.criteo.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.23240375518798828,0.16413664817810059,0.09188413619995117,200,OK,[''],21,21,14560,"{""content-type"": ""text/html; charset=UTF-8"", ""content-length"": ""62778"", ""connection"": ""keep-alive"", ""cache-control"": ""public, max-age=86400"", ""content-encoding"": ""gzip"", ""link"": ""<https://www.criteo.com/>; rel=shortlink"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=300"", ""x-pantheon-styx-hostname"": ""styx-fe4-a-84955cf4f5-c525t"", ""x-styx-req-id"": ""c82fa771-5f02-11ee-bc1c-5a3912e9b30c"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 196da8dbede310a18cd917665afeaa22.cloudfront.net (CloudFront)"", ""date"": ""Fri, 29 Sep 2023 21:20:49 GMT"", ""x-served-by"": ""cache-chi-klot8100156-CHI, cache-ams21080-AMS, cache-ams21045-AMS, cache-ams21045-AMS"", ""x-cache-hits"": ""3, 216, 0, 0"", ""x-timer"": ""S1696022449.380188,VS0,VE3"", ""vary"": ""Accept-Encoding, Cookie, Cookie"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""AMS50-C1"", ""x-amz-cf-id"": ""NtMsSQdUHtC0CblrgJPMwRn8zRDte5XUlNrcfzCXjyWQVrMNO71Jfw=="", ""age"": ""4840""}"
+2,"GET / HTTP/1.1
+Host: www.criteo.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.0711970329284668,0.1304943561553955,0.050405263900756836,200,OK,[''],21,21,0,"{""content-type"": ""text/html; charset=UTF-8"", ""content-length"": ""62778"", ""connection"": ""keep-alive"", ""cache-control"": ""public, max-age=86400"", ""content-encoding"": ""gzip"", ""link"": ""<https://www.criteo.com/>; rel=shortlink"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=300"", ""x-pantheon-styx-hostname"": ""styx-fe4-a-84955cf4f5-c525t"", ""x-styx-req-id"": ""c82fa771-5f02-11ee-bc1c-5a3912e9b30c"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 b2bc712713f500af8be071fa65fa924c.cloudfront.net (CloudFront)"", ""date"": ""Fri, 29 Sep 2023 21:20:52 GMT"", ""x-served-by"": ""cache-chi-klot8100156-CHI, cache-ams21061-AMS, cache-ams21061-AMS, cache-ams21061-AMS"", ""x-cache-hits"": ""3, 9, 0, 0"", ""x-timer"": ""S1696022452.028317,VS0,VE2"", ""vary"": ""Accept-Encoding, Cookie, Cookie"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""AMS50-C1"", ""x-amz-cf-id"": ""OfGo9uYlr82ZOxkqzfWvnEq8AlBiyFmFbJ4IKPF_FudUFTdixCvujg=="", ""age"": ""4843""}"
+3,"GET / HTTP/1.1
+Host: www.criteo.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.14005517959594727,0.1054997444152832,0.03405284881591797,200,OK,[''],21,21,14562,"{""content-type"": ""text/html; charset=UTF-8"", ""content-length"": ""62778"", ""connection"": ""keep-alive"", ""cache-control"": ""public, max-age=86400"", ""content-encoding"": ""gzip"", ""link"": ""<https://www.criteo.com/>; rel=shortlink"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=300"", ""x-pantheon-styx-hostname"": ""styx-fe4-a-84955cf4f5-c525t"", ""x-styx-req-id"": ""c82fa771-5f02-11ee-bc1c-5a3912e9b30c"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 9463f100725b8b17da2d778617835760.cloudfront.net (CloudFront)"", ""date"": ""Fri, 29 Sep 2023 21:20:54 GMT"", ""x-served-by"": ""cache-chi-klot8100156-CHI, cache-ams21020-AMS, cache-ams21020-AMS, cache-ams21020-AMS"", ""x-cache-hits"": ""3, 1, 0, 0"", ""x-timer"": ""S1696022455.641137,VS0,VE4"", ""vary"": ""Accept-Encoding, Cookie, Cookie"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""AMS50-C1"", ""x-amz-cf-id"": ""N8xscrOnte8YG-KmT5HNtU6O3TyMEogty-yxQgytiDhULMmnk1_j1Q=="", ""age"": ""4846""}"
+4,"GET / HTTP/1.1
+Host: www.criteo.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.19397211074829102,0.11489486694335938,0.1098332405090332,200,OK,[''],21,21,14098,"{""content-type"": ""text/html; charset=UTF-8"", ""content-length"": ""62778"", ""connection"": ""keep-alive"", ""cache-control"": ""public, max-age=86400"", ""content-encoding"": ""gzip"", ""link"": ""<https://www.criteo.com/>; rel=shortlink"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=300"", ""x-pantheon-styx-hostname"": ""styx-fe4-a-84955cf4f5-c525t"", ""x-styx-req-id"": ""c82fa771-5f02-11ee-bc1c-5a3912e9b30c"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 042b48eeaf8a253b1b396e09e8bdea20.cloudfront.net (CloudFront)"", ""date"": ""Fri, 29 Sep 2023 21:20:57 GMT"", ""x-served-by"": ""cache-chi-klot8100156-CHI, cache-ams21061-AMS, cache-ams21061-AMS, cache-ams21061-AMS"", ""x-cache-hits"": ""3, 10, 0, 0"", ""x-timer"": ""S1696022457.492951,VS0,VE8"", ""vary"": ""Accept-Encoding, Cookie, Cookie"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""AMS50-C1"", ""x-amz-cf-id"": ""aK7xgZML5oyth6vw2VWP2eosOyoTHMB6N65AiuMK-XrObElROMhrQg=="", ""age"": ""4849""}"
+5,"GET / HTTP/1.1
+Host: www.criteo.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.27112483978271484,0.10991120338439941,0.030488252639770508,200,OK,[''],21,21,0,"{""content-type"": ""text/html; charset=UTF-8"", ""content-length"": ""62778"", ""connection"": ""keep-alive"", ""cache-control"": ""public, max-age=86400"", ""content-encoding"": ""gzip"", ""link"": ""<https://www.criteo.com/>; rel=shortlink"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=300"", ""x-pantheon-styx-hostname"": ""styx-fe4-a-84955cf4f5-c525t"", ""x-styx-req-id"": ""c82fa771-5f02-11ee-bc1c-5a3912e9b30c"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 d8c5e23736c47a3e5184b0a78042898e.cloudfront.net (CloudFront)"", ""date"": ""Fri, 29 Sep 2023 21:21:00 GMT"", ""x-served-by"": ""cache-chi-klot8100156-CHI, cache-ams21061-AMS, cache-ams21061-AMS, cache-ams21061-AMS"", ""x-cache-hits"": ""3, 11, 0, 0"", ""x-timer"": ""S1696022460.002215,VS0,VE2"", ""vary"": ""Accept-Encoding, Cookie, Cookie"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""AMS50-C1"", ""x-amz-cf-id"": ""yGp9fSIZ_cFeHg26CmtMrIo2m61k6j9hUXZBlhVAUMfmXyXL75xFXw=="", ""age"": ""4851""}"
+6,"GET / HTTP/1.1
+Host: www.criteo.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.2284402847290039,0.10664200782775879,0.0333859920501709,200,OK,[''],21,21,0,"{""content-type"": ""text/html; charset=UTF-8"", ""content-length"": ""62778"", ""connection"": ""keep-alive"", ""cache-control"": ""public, max-age=86400"", ""content-encoding"": ""gzip"", ""link"": ""<https://www.criteo.com/>; rel=shortlink"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=300"", ""x-pantheon-styx-hostname"": ""styx-fe4-a-84955cf4f5-c525t"", ""x-styx-req-id"": ""c82fa771-5f02-11ee-bc1c-5a3912e9b30c"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 e7150584c93f85e64aa53364c55a16c6.cloudfront.net (CloudFront)"", ""date"": ""Fri, 29 Sep 2023 21:21:02 GMT"", ""x-served-by"": ""cache-chi-klot8100156-CHI, cache-ams21080-AMS, cache-ams21053-AMS, cache-ams21053-AMS"", ""x-cache-hits"": ""3, 219, 0, 0"", ""x-timer"": ""S1696022463.590612,VS0,VE6"", ""vary"": ""Accept-Encoding, Cookie, Cookie"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""AMS50-C1"", ""x-amz-cf-id"": ""H1uodbDBeDNwt8sWVRFQi3Oti0Dx7XfVa2fvvPyLBpQRgxSIYxnr2A=="", ""age"": ""4854""}"
+7,"GET / HTTP/1.1
+Host: www.criteo.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.16101765632629395,0.11184239387512207,0.09175777435302734,200,OK,[''],21,21,14561,"{""content-type"": ""text/html; charset=UTF-8"", ""content-length"": ""62778"", ""connection"": ""keep-alive"", ""cache-control"": ""public, max-age=86400"", ""content-encoding"": ""gzip"", ""link"": ""<https://www.criteo.com/>; rel=shortlink"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=300"", ""x-pantheon-styx-hostname"": ""styx-fe4-a-84955cf4f5-c525t"", ""x-styx-req-id"": ""c82fa771-5f02-11ee-bc1c-5a3912e9b30c"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 dd133741afef09b02f3e6afd7cb39f40.cloudfront.net (CloudFront)"", ""date"": ""Fri, 29 Sep 2023 21:21:05 GMT"", ""x-served-by"": ""cache-chi-klot8100156-CHI, cache-ams21029-AMS, cache-ams21029-AMS, cache-ams21029-AMS"", ""x-cache-hits"": ""3, 36, 0, 0"", ""x-timer"": ""S1696022465.023769,VS0,VE3"", ""vary"": ""Accept-Encoding, Cookie, Cookie"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""AMS50-C1"", ""x-amz-cf-id"": ""FYyUDc_T-4PigmPPQHtxJ2u8pnp9tKW0hyhO-hds7L88PrNKjOdwiQ=="", ""age"": ""4856""}"
+8,"GET / HTTP/1.1
+Host: www.criteo.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.22498774528503418,0.10564231872558594,0.0811302661895752,200,OK,[''],21,21,14561,"{""content-type"": ""text/html; charset=UTF-8"", ""content-length"": ""62778"", ""connection"": ""keep-alive"", ""cache-control"": ""public, max-age=86400"", ""content-encoding"": ""gzip"", ""link"": ""<https://www.criteo.com/>; rel=shortlink"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=300"", ""x-pantheon-styx-hostname"": ""styx-fe4-a-84955cf4f5-c525t"", ""x-styx-req-id"": ""c82fa771-5f02-11ee-bc1c-5a3912e9b30c"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 c8398cf797b03d1d2d2deda33fe571f0.cloudfront.net (CloudFront)"", ""date"": ""Fri, 29 Sep 2023 21:21:07 GMT"", ""x-served-by"": ""cache-chi-klot8100156-CHI, cache-ams21061-AMS, cache-ams21061-AMS, cache-ams21061-AMS"", ""x-cache-hits"": ""3, 12, 0, 0"", ""x-timer"": ""S1696022468.523457,VS0,VE2"", ""vary"": ""Accept-Encoding, Cookie, Cookie"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""AMS50-C1"", ""x-amz-cf-id"": ""6SB0ueLvXYp8xWwvj0KPKr-OCJIInF627OSyDL5mDbvknLvJQkJ1tQ=="", ""age"": ""4859""}"
+9,"GET / HTTP/1.1
+Host: www.criteo.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.1981182098388672,0.11456489562988281,0.029851198196411133,200,OK,[''],21,21,0,"{""content-type"": ""text/html; charset=UTF-8"", ""content-length"": ""62778"", ""connection"": ""keep-alive"", ""cache-control"": ""public, max-age=86400"", ""content-encoding"": ""gzip"", ""link"": ""<https://www.criteo.com/>; rel=shortlink"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=300"", ""x-pantheon-styx-hostname"": ""styx-fe4-a-84955cf4f5-c525t"", ""x-styx-req-id"": ""c82fa771-5f02-11ee-bc1c-5a3912e9b30c"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 dbd13e5e9621f4e45e6a452ed9862bf0.cloudfront.net (CloudFront)"", ""date"": ""Fri, 29 Sep 2023 21:21:10 GMT"", ""x-served-by"": ""cache-chi-klot8100156-CHI, cache-ams21061-AMS, cache-ams21061-AMS, cache-ams21061-AMS"", ""x-cache-hits"": ""3, 13, 0, 0"", ""x-timer"": ""S1696022470.116530,VS0,VE2"", ""vary"": ""Accept-Encoding, Cookie, Cookie"", ""x-cache"": ""Miss from cloudfront"", ""x-amz-cf-pop"": ""AMS50-C1"", ""x-amz-cf-id"": ""taJQ6Ze4JkBrTlBBwQf1bVlsgonJ3r7ImTJNXgCqLf0GQOtxOcfcZg=="", ""age"": ""4861""}"

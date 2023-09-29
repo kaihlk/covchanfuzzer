@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.etsy.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.15309500694274902,0.12311100959777832,0.9049315452575684,200,OK,[''],17,17,0,"{""connection"": ""keep-alive"", ""server"": ""Apache"", ""set-cookie"": ""last_browse_page=https%3A%2F%2Fwww.etsy.com%2F; path=/; domain=.etsy.com"", ""strict-transport-security"": ""max-age=631138520; includeSubDomains; preload"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block; report=/beacon/csp.php"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""expires"": ""Thu, 19 Nov 1981 08:52:00 GMT"", ""cache-control"": ""private, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"", ""content-type"": ""text/html; charset=UTF-8"", ""via"": ""1.1 google, 1.1 varnish"", ""x-fastly-backend-reqs"": ""23"", ""fastly-restarts"": ""1"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:50:14 GMT"", ""x-served-by"": ""cache-ams21047-A""}"
+1,"GET / HTTP/1.1
+Host: www.etsy.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.1314070224761963,0.11885547637939453,0.3735659122467041,200,OK,[''],17,17,0,"{""connection"": ""keep-alive"", ""server"": ""Apache"", ""set-cookie"": ""last_browse_page=https%3A%2F%2Fwww.etsy.com%2F; path=/; domain=.etsy.com"", ""strict-transport-security"": ""max-age=631138520; includeSubDomains; preload"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block; report=/beacon/csp.php"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""expires"": ""Thu, 19 Nov 1981 08:52:00 GMT"", ""cache-control"": ""private, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"", ""content-type"": ""text/html; charset=UTF-8"", ""via"": ""1.1 google, 1.1 varnish"", ""x-fastly-backend-reqs"": ""24"", ""fastly-restarts"": ""1"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:50:17 GMT"", ""x-served-by"": ""cache-ams21035-A""}"
+2,"GET / HTTP/1.1
+Host: www.etsy.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.22751188278198242,0.18228363990783691,0.4116685390472412,200,OK,[''],17,17,0,"{""connection"": ""keep-alive"", ""server"": ""Apache"", ""set-cookie"": ""last_browse_page=https%3A%2F%2Fwww.etsy.com%2F; path=/; domain=.etsy.com"", ""strict-transport-security"": ""max-age=631138520; includeSubDomains; preload"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block; report=/beacon/csp.php"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""expires"": ""Thu, 19 Nov 1981 08:52:00 GMT"", ""cache-control"": ""private, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"", ""content-type"": ""text/html; charset=UTF-8"", ""via"": ""1.1 google, 1.1 varnish"", ""x-fastly-backend-reqs"": ""25"", ""fastly-restarts"": ""1"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:50:21 GMT"", ""x-served-by"": ""cache-ams21021-A""}"
+3,"GET / HTTP/1.1
+Host: www.etsy.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.10626602172851562,0.1083226203918457,0.3830845355987549,200,OK,[''],17,17,0,"{""connection"": ""keep-alive"", ""server"": ""Apache"", ""set-cookie"": ""last_browse_page=https%3A%2F%2Fwww.etsy.com%2F; path=/; domain=.etsy.com"", ""strict-transport-security"": ""max-age=631138520; includeSubDomains; preload"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block; report=/beacon/csp.php"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""expires"": ""Thu, 19 Nov 1981 08:52:00 GMT"", ""cache-control"": ""private, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"", ""content-type"": ""text/html; charset=UTF-8"", ""via"": ""1.1 google, 1.1 varnish"", ""x-fastly-backend-reqs"": ""27"", ""fastly-restarts"": ""1"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:50:24 GMT"", ""x-served-by"": ""cache-ams21033-A""}"
+4,"GET / HTTP/1.1
+Host: www.etsy.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.12509632110595703,0.11056733131408691,0.4404780864715576,200,OK,[''],17,17,0,"{""connection"": ""keep-alive"", ""server"": ""Apache"", ""set-cookie"": ""last_browse_page=https%3A%2F%2Fwww.etsy.com%2F; path=/; domain=.etsy.com"", ""strict-transport-security"": ""max-age=631138520; includeSubDomains; preload"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block; report=/beacon/csp.php"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""expires"": ""Thu, 19 Nov 1981 08:52:00 GMT"", ""cache-control"": ""private, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"", ""content-type"": ""text/html; charset=UTF-8"", ""via"": ""1.1 google, 1.1 varnish"", ""x-fastly-backend-reqs"": ""30"", ""fastly-restarts"": ""1"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:50:27 GMT"", ""x-served-by"": ""cache-ams21022-A""}"
+5,"GET / HTTP/1.1
+Host: www.etsy.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.1998453140258789,0.14411497116088867,0.42792582511901855,200,OK,[''],17,17,0,"{""connection"": ""keep-alive"", ""server"": ""Apache"", ""set-cookie"": ""last_browse_page=https%3A%2F%2Fwww.etsy.com%2F; path=/; domain=.etsy.com"", ""strict-transport-security"": ""max-age=631138520; includeSubDomains; preload"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block; report=/beacon/csp.php"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""expires"": ""Thu, 19 Nov 1981 08:52:00 GMT"", ""cache-control"": ""private, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"", ""content-type"": ""text/html; charset=UTF-8"", ""via"": ""1.1 google, 1.1 varnish"", ""x-fastly-backend-reqs"": ""32"", ""fastly-restarts"": ""1"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:50:31 GMT"", ""x-served-by"": ""cache-ams21077-A""}"
+6,"GET / HTTP/1.1
+Host: www.etsy.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.18426179885864258,0.1238107681274414,0.3791773319244385,200,OK,[''],17,17,0,"{""connection"": ""keep-alive"", ""server"": ""Apache"", ""set-cookie"": ""last_browse_page=https%3A%2F%2Fwww.etsy.com%2F; path=/; domain=.etsy.com"", ""strict-transport-security"": ""max-age=631138520; includeSubDomains; preload"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block; report=/beacon/csp.php"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""expires"": ""Thu, 19 Nov 1981 08:52:00 GMT"", ""cache-control"": ""private, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"", ""content-type"": ""text/html; charset=UTF-8"", ""via"": ""1.1 google, 1.1 varnish"", ""x-fastly-backend-reqs"": ""34"", ""fastly-restarts"": ""1"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:50:35 GMT"", ""x-served-by"": ""cache-ams21040-AMS""}"
+7,"GET / HTTP/1.1
+Host: www.etsy.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.191025972366333,0.11730098724365234,0.4211595058441162,200,OK,[''],17,17,0,"{""connection"": ""keep-alive"", ""server"": ""Apache"", ""set-cookie"": ""last_browse_page=https%3A%2F%2Fwww.etsy.com%2F; path=/; domain=.etsy.com"", ""strict-transport-security"": ""max-age=631138520; includeSubDomains; preload"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block; report=/beacon/csp.php"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""expires"": ""Thu, 19 Nov 1981 08:52:00 GMT"", ""cache-control"": ""private, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"", ""content-type"": ""text/html; charset=UTF-8"", ""via"": ""1.1 google, 1.1 varnish"", ""x-fastly-backend-reqs"": ""35"", ""fastly-restarts"": ""1"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:50:37 GMT"", ""x-served-by"": ""cache-ams21075-A""}"
+8,"GET / HTTP/1.1
+Host: www.etsy.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.16736602783203125,0.14602971076965332,0.3791029453277588,200,OK,[''],17,17,0,"{""connection"": ""keep-alive"", ""server"": ""Apache"", ""set-cookie"": ""last_browse_page=https%3A%2F%2Fwww.etsy.com%2F; path=/; domain=.etsy.com"", ""strict-transport-security"": ""max-age=631138520; includeSubDomains; preload"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block; report=/beacon/csp.php"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""expires"": ""Thu, 19 Nov 1981 08:52:00 GMT"", ""cache-control"": ""private, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"", ""content-type"": ""text/html; charset=UTF-8"", ""via"": ""1.1 google, 1.1 varnish"", ""x-fastly-backend-reqs"": ""34"", ""fastly-restarts"": ""1"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:50:42 GMT"", ""x-served-by"": ""cache-ams21075-A""}"
+9,"GET / HTTP/1.1
+Host: www.etsy.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.3295614719390869,0.11334729194641113,0.5999634265899658,200,OK,[''],17,17,0,"{""connection"": ""keep-alive"", ""server"": ""Apache"", ""set-cookie"": ""last_browse_page=https%3A%2F%2Fwww.etsy.com%2F; path=/; domain=.etsy.com"", ""strict-transport-security"": ""max-age=631138520; includeSubDomains; preload"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block; report=/beacon/csp.php"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""expires"": ""Thu, 19 Nov 1981 08:52:00 GMT"", ""cache-control"": ""private, no-store, no-cache, must-revalidate, post-check=0, pre-check=0"", ""content-type"": ""text/html; charset=UTF-8"", ""via"": ""1.1 google, 1.1 varnish"", ""x-fastly-backend-reqs"": ""38"", ""fastly-restarts"": ""1"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:50:45 GMT"", ""x-served-by"": ""cache-ams21051-A""}"

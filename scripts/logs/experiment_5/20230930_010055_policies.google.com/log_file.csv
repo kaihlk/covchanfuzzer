@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: policies.google.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.15624451637268066,0.1035451889038086,0.0848538875579834,200,OK,[''],20,20,0,"{""content-type"": ""text/html; charset=utf-8"", ""vary"": ""Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site"", ""x-ua-compatible"": ""IE=edge"", ""cache-control"": ""no-cache, no-store, max-age=0, must-revalidate"", ""pragma"": ""no-cache"", ""expires"": ""Mon, 01 Jan 1990 00:00:00 GMT"", ""date"": ""Fri, 29 Sep 2023 23:00:58 GMT"", ""p3p"": ""CP=\""This is not a P3P policy! See g.co/p3phelp for more info.\"""", ""accept-ch"": ""Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factor, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version"", ""cross-origin-opener-policy"": ""unsafe-none"", ""permissions-policy"": ""ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*"", ""content-security-policy"": ""require-trusted-types-for 'script';report-uri /_/IdentityPoliciesUi/cspreport"", ""cross-origin-resource-policy"": ""same-site"", ""content-encoding"": ""gzip"", ""server"": ""ESF"", ""x-xss-protection"": ""0"", ""x-content-type-options"": ""nosniff"", ""set-cookie"": ""CONSENT=PENDING+744; expires=Sun, 28-Sep-2025 23:00:58 GMT; path=/; domain=.google.com; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000"", ""transfer-encoding"": ""chunked""}"
+1,"GET / HTTP/1.1
+Host: policies.google.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.1717226505279541,0.12922453880310059,0.10048222541809082,200,OK,[''],20,20,0,"{""content-type"": ""text/html; charset=utf-8"", ""vary"": ""Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site"", ""x-ua-compatible"": ""IE=edge"", ""cache-control"": ""no-cache, no-store, max-age=0, must-revalidate"", ""pragma"": ""no-cache"", ""expires"": ""Mon, 01 Jan 1990 00:00:00 GMT"", ""date"": ""Fri, 29 Sep 2023 23:01:00 GMT"", ""p3p"": ""CP=\""This is not a P3P policy! See g.co/p3phelp for more info.\"""", ""cross-origin-opener-policy"": ""unsafe-none"", ""permissions-policy"": ""ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*"", ""accept-ch"": ""Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factor, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version"", ""content-security-policy"": ""require-trusted-types-for 'script';report-uri /_/IdentityPoliciesUi/cspreport"", ""cross-origin-resource-policy"": ""same-site"", ""content-encoding"": ""gzip"", ""server"": ""ESF"", ""x-xss-protection"": ""0"", ""x-content-type-options"": ""nosniff"", ""set-cookie"": ""CONSENT=PENDING+959; expires=Sun, 28-Sep-2025 23:01:00 GMT; path=/; domain=.google.com; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000"", ""transfer-encoding"": ""chunked""}"
+2,"GET / HTTP/1.1
+Host: policies.google.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.2026689052581787,0.2122516632080078,0.07956099510192871,200,OK,[''],20,20,0,"{""content-type"": ""text/html; charset=utf-8"", ""vary"": ""Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site"", ""x-ua-compatible"": ""IE=edge"", ""cache-control"": ""no-cache, no-store, max-age=0, must-revalidate"", ""pragma"": ""no-cache"", ""expires"": ""Mon, 01 Jan 1990 00:00:00 GMT"", ""date"": ""Fri, 29 Sep 2023 23:01:03 GMT"", ""p3p"": ""CP=\""This is not a P3P policy! See g.co/p3phelp for more info.\"""", ""permissions-policy"": ""ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*"", ""content-security-policy"": ""require-trusted-types-for 'script';report-uri /_/IdentityPoliciesUi/cspreport"", ""cross-origin-resource-policy"": ""same-site"", ""cross-origin-opener-policy"": ""unsafe-none"", ""accept-ch"": ""Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factor, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version"", ""content-encoding"": ""gzip"", ""server"": ""ESF"", ""x-xss-protection"": ""0"", ""x-content-type-options"": ""nosniff"", ""set-cookie"": ""CONSENT=PENDING+531; expires=Sun, 28-Sep-2025 23:01:03 GMT; path=/; domain=.google.com; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000"", ""transfer-encoding"": ""chunked""}"
+3,"GET / HTTP/1.1
+Host: policies.google.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.18335962295532227,0.12665414810180664,0.07221198081970215,200,OK,[''],20,20,0,"{""content-type"": ""text/html; charset=utf-8"", ""vary"": ""Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site"", ""x-ua-compatible"": ""IE=edge"", ""cache-control"": ""no-cache, no-store, max-age=0, must-revalidate"", ""pragma"": ""no-cache"", ""expires"": ""Mon, 01 Jan 1990 00:00:00 GMT"", ""date"": ""Fri, 29 Sep 2023 23:01:05 GMT"", ""p3p"": ""CP=\""This is not a P3P policy! See g.co/p3phelp for more info.\"""", ""accept-ch"": ""Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factor, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version"", ""cross-origin-opener-policy"": ""unsafe-none"", ""permissions-policy"": ""ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*"", ""content-security-policy"": ""require-trusted-types-for 'script';report-uri /_/IdentityPoliciesUi/cspreport"", ""cross-origin-resource-policy"": ""same-site"", ""content-encoding"": ""gzip"", ""server"": ""ESF"", ""x-xss-protection"": ""0"", ""x-content-type-options"": ""nosniff"", ""set-cookie"": ""CONSENT=PENDING+892; expires=Sun, 28-Sep-2025 23:01:05 GMT; path=/; domain=.google.com; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000"", ""transfer-encoding"": ""chunked""}"
+4,"GET / HTTP/1.1
+Host: policies.google.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.2497546672821045,0.1344587802886963,0.08279538154602051,200,OK,[''],20,20,0,"{""content-type"": ""text/html; charset=utf-8"", ""vary"": ""Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site"", ""x-ua-compatible"": ""IE=edge"", ""cache-control"": ""no-cache, no-store, max-age=0, must-revalidate"", ""pragma"": ""no-cache"", ""expires"": ""Mon, 01 Jan 1990 00:00:00 GMT"", ""date"": ""Fri, 29 Sep 2023 23:01:07 GMT"", ""p3p"": ""CP=\""This is not a P3P policy! See g.co/p3phelp for more info.\"""", ""permissions-policy"": ""ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*"", ""content-security-policy"": ""require-trusted-types-for 'script';report-uri /_/IdentityPoliciesUi/cspreport"", ""cross-origin-resource-policy"": ""same-site"", ""cross-origin-opener-policy"": ""unsafe-none"", ""accept-ch"": ""Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factor, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version"", ""content-encoding"": ""gzip"", ""server"": ""ESF"", ""x-xss-protection"": ""0"", ""x-content-type-options"": ""nosniff"", ""set-cookie"": ""CONSENT=PENDING+855; expires=Sun, 28-Sep-2025 23:01:07 GMT; path=/; domain=.google.com; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000"", ""transfer-encoding"": ""chunked""}"
+5,"GET / HTTP/1.1
+Host: policies.google.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.2731964588165283,0.10944032669067383,0.08423280715942383,200,OK,[''],20,20,0,"{""content-type"": ""text/html; charset=utf-8"", ""vary"": ""Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site"", ""x-ua-compatible"": ""IE=edge"", ""cache-control"": ""no-cache, no-store, max-age=0, must-revalidate"", ""pragma"": ""no-cache"", ""expires"": ""Mon, 01 Jan 1990 00:00:00 GMT"", ""date"": ""Fri, 29 Sep 2023 23:01:10 GMT"", ""p3p"": ""CP=\""This is not a P3P policy! See g.co/p3phelp for more info.\"""", ""permissions-policy"": ""ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*"", ""content-security-policy"": ""require-trusted-types-for 'script';report-uri /_/IdentityPoliciesUi/cspreport"", ""cross-origin-resource-policy"": ""same-site"", ""cross-origin-opener-policy"": ""unsafe-none"", ""accept-ch"": ""Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factor, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version"", ""content-encoding"": ""gzip"", ""server"": ""ESF"", ""x-xss-protection"": ""0"", ""x-content-type-options"": ""nosniff"", ""set-cookie"": ""CONSENT=PENDING+914; expires=Sun, 28-Sep-2025 23:01:10 GMT; path=/; domain=.google.com; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000"", ""transfer-encoding"": ""chunked""}"
+6,"GET / HTTP/1.1
+Host: policies.google.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.1831352710723877,0.1132667064666748,0.054610252380371094,200,OK,[''],20,20,0,"{""content-type"": ""text/html; charset=utf-8"", ""vary"": ""Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site"", ""x-ua-compatible"": ""IE=edge"", ""cache-control"": ""no-cache, no-store, max-age=0, must-revalidate"", ""pragma"": ""no-cache"", ""expires"": ""Mon, 01 Jan 1990 00:00:00 GMT"", ""date"": ""Fri, 29 Sep 2023 23:01:12 GMT"", ""p3p"": ""CP=\""This is not a P3P policy! See g.co/p3phelp for more info.\"""", ""permissions-policy"": ""ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*"", ""content-security-policy"": ""require-trusted-types-for 'script';report-uri /_/IdentityPoliciesUi/cspreport"", ""cross-origin-resource-policy"": ""same-site"", ""cross-origin-opener-policy"": ""unsafe-none"", ""accept-ch"": ""Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factor, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version"", ""content-encoding"": ""gzip"", ""server"": ""ESF"", ""x-xss-protection"": ""0"", ""x-content-type-options"": ""nosniff"", ""set-cookie"": ""CONSENT=PENDING+128; expires=Sun, 28-Sep-2025 23:01:12 GMT; path=/; domain=.google.com; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000"", ""transfer-encoding"": ""chunked""}"
+7,"GET / HTTP/1.1
+Host: policies.google.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.15342044830322266,0.11907839775085449,0.09895944595336914,200,OK,[''],20,20,0,"{""content-type"": ""text/html; charset=utf-8"", ""vary"": ""Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site"", ""x-ua-compatible"": ""IE=edge"", ""cache-control"": ""no-cache, no-store, max-age=0, must-revalidate"", ""pragma"": ""no-cache"", ""expires"": ""Mon, 01 Jan 1990 00:00:00 GMT"", ""date"": ""Fri, 29 Sep 2023 23:01:14 GMT"", ""p3p"": ""CP=\""This is not a P3P policy! See g.co/p3phelp for more info.\"""", ""accept-ch"": ""Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factor, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version"", ""cross-origin-opener-policy"": ""unsafe-none"", ""permissions-policy"": ""ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*"", ""content-security-policy"": ""require-trusted-types-for 'script';report-uri /_/IdentityPoliciesUi/cspreport"", ""cross-origin-resource-policy"": ""same-site"", ""content-encoding"": ""gzip"", ""server"": ""ESF"", ""x-xss-protection"": ""0"", ""x-content-type-options"": ""nosniff"", ""set-cookie"": ""CONSENT=PENDING+667; expires=Sun, 28-Sep-2025 23:01:14 GMT; path=/; domain=.google.com; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000"", ""transfer-encoding"": ""chunked""}"
+8,"GET / HTTP/1.1
+Host: policies.google.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.2006525993347168,0.11080741882324219,0.06897449493408203,200,OK,[''],20,20,0,"{""content-type"": ""text/html; charset=utf-8"", ""vary"": ""Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site"", ""x-ua-compatible"": ""IE=edge"", ""cache-control"": ""no-cache, no-store, max-age=0, must-revalidate"", ""pragma"": ""no-cache"", ""expires"": ""Mon, 01 Jan 1990 00:00:00 GMT"", ""date"": ""Fri, 29 Sep 2023 23:01:16 GMT"", ""p3p"": ""CP=\""This is not a P3P policy! See g.co/p3phelp for more info.\"""", ""accept-ch"": ""Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factor, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version"", ""cross-origin-opener-policy"": ""unsafe-none"", ""permissions-policy"": ""ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*"", ""content-security-policy"": ""require-trusted-types-for 'script';report-uri /_/IdentityPoliciesUi/cspreport"", ""cross-origin-resource-policy"": ""same-site"", ""content-encoding"": ""gzip"", ""server"": ""ESF"", ""x-xss-protection"": ""0"", ""x-content-type-options"": ""nosniff"", ""set-cookie"": ""CONSENT=PENDING+111; expires=Sun, 28-Sep-2025 23:01:16 GMT; path=/; domain=.google.com; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000"", ""transfer-encoding"": ""chunked""}"
+9,"GET / HTTP/1.1
+Host: policies.google.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.20444297790527344,0.1151590347290039,0.0805063247680664,200,OK,[''],20,20,0,"{""content-type"": ""text/html; charset=utf-8"", ""vary"": ""Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site"", ""x-ua-compatible"": ""IE=edge"", ""cache-control"": ""no-cache, no-store, max-age=0, must-revalidate"", ""pragma"": ""no-cache"", ""expires"": ""Mon, 01 Jan 1990 00:00:00 GMT"", ""date"": ""Fri, 29 Sep 2023 23:01:18 GMT"", ""p3p"": ""CP=\""This is not a P3P policy! See g.co/p3phelp for more info.\"""", ""accept-ch"": ""Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factor, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version"", ""cross-origin-opener-policy"": ""unsafe-none"", ""permissions-policy"": ""ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factor=*, ch-ua-platform=*, ch-ua-platform-version=*"", ""content-security-policy"": ""require-trusted-types-for 'script';report-uri /_/IdentityPoliciesUi/cspreport"", ""cross-origin-resource-policy"": ""same-site"", ""content-encoding"": ""gzip"", ""server"": ""ESF"", ""x-xss-protection"": ""0"", ""x-content-type-options"": ""nosniff"", ""set-cookie"": ""CONSENT=PENDING+831; expires=Sun, 28-Sep-2025 23:01:18 GMT; path=/; domain=.google.com; Secure"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000"", ""transfer-encoding"": ""chunked""}"

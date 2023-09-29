@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.doi.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.2728543281555176,0.10305190086364746,0.6457362174987793,200,OK,[''],15,15,23779,"{""content-type"": ""text/html"", ""content-length"": ""6819"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 23:01:56 GMT"", ""last-modified"": ""Mon, 10 Apr 2023 08:52:49 GMT"", ""etag"": ""\""738314b5665f38027821605b70311c81\"""", ""x-amz-server-side-encryption"": ""AES256"", ""x-amz-meta-md5chksum"": ""738314b5665f38027821605b70311c81"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""server"": ""AmazonS3"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 f9e7fd4b74156e78a449b2e846941478.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""x-amz-cf-id"": ""xVtBVuBcOYgy6mzeQOwFV7Lf95HFUytuYjZiXj9oSbWf8rbpCpjE4Q==""}"
+1,"GET / HTTP/1.1
+Host: www.doi.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.13783812522888184,0.11006402969360352,0.6224544048309326,200,OK,[''],15,15,1376,"{""content-type"": ""text/html"", ""content-length"": ""6819"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 23:02:00 GMT"", ""last-modified"": ""Mon, 10 Apr 2023 08:52:49 GMT"", ""etag"": ""\""738314b5665f38027821605b70311c81\"""", ""x-amz-server-side-encryption"": ""AES256"", ""x-amz-meta-md5chksum"": ""738314b5665f38027821605b70311c81"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""server"": ""AmazonS3"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 78c791f2019c33bd5940f0dca5bfaee0.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""x-amz-cf-id"": ""9rUxYL2iCyww_PZavGsyUipw9c9j0vUvosYIiF6s4VgAPi_9mHFzVA==""}"
+2,"GET / HTTP/1.1
+Host: www.doi.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.204054594039917,0.11117124557495117,0.662456750869751,200,OK,[''],15,15,23779,"{""content-type"": ""text/html"", ""content-length"": ""6819"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 23:02:04 GMT"", ""last-modified"": ""Mon, 10 Apr 2023 08:52:49 GMT"", ""etag"": ""\""738314b5665f38027821605b70311c81\"""", ""x-amz-server-side-encryption"": ""AES256"", ""x-amz-meta-md5chksum"": ""738314b5665f38027821605b70311c81"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""server"": ""AmazonS3"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 a21b25c9d373577fade9001454ef47f0.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""x-amz-cf-id"": ""-RL82HTHypguew3NP2mj_9vIJsY5hXfG3yCveDlWWxp5ZpS-8nlSKw==""}"
+3,"GET / HTTP/1.1
+Host: www.doi.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.11145257949829102,0.11114501953125,0.6487429141998291,200,OK,[''],15,15,0,"{""content-type"": ""text/html"", ""content-length"": ""6819"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 23:02:07 GMT"", ""last-modified"": ""Mon, 10 Apr 2023 08:52:49 GMT"", ""etag"": ""\""738314b5665f38027821605b70311c81\"""", ""x-amz-server-side-encryption"": ""AES256"", ""x-amz-meta-md5chksum"": ""738314b5665f38027821605b70311c81"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""server"": ""AmazonS3"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 a21b25c9d373577fade9001454ef47f0.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""x-amz-cf-id"": ""3LLx1a_xw9UD_PiMF2Pug3gn_85RGyEtu7NGJmKDqw8IwdySlacIMw==""}"
+4,"GET / HTTP/1.1
+Host: www.doi.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.2190256118774414,0.11584877967834473,0.6204242706298828,200,OK,[''],15,15,0,"{""content-type"": ""text/html"", ""content-length"": ""6819"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 23:02:10 GMT"", ""last-modified"": ""Mon, 10 Apr 2023 08:52:49 GMT"", ""etag"": ""\""738314b5665f38027821605b70311c81\"""", ""x-amz-server-side-encryption"": ""AES256"", ""x-amz-meta-md5chksum"": ""738314b5665f38027821605b70311c81"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""server"": ""AmazonS3"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 71b26382155ee54bc1b92cacc095ce82.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""x-amz-cf-id"": ""3vLlTp5p4Eod42ymqtETJous7j97FgY_exj0Gs9Fxw1EHzFPwcsC2w==""}"
+5,"GET / HTTP/1.1
+Host: www.doi.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.22501158714294434,0.10988593101501465,0.6939225196838379,200,OK,[''],15,15,0,"{""content-type"": ""text/html"", ""content-length"": ""6819"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 23:02:14 GMT"", ""last-modified"": ""Mon, 10 Apr 2023 08:52:49 GMT"", ""etag"": ""\""738314b5665f38027821605b70311c81\"""", ""x-amz-server-side-encryption"": ""AES256"", ""x-amz-meta-md5chksum"": ""738314b5665f38027821605b70311c81"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""server"": ""AmazonS3"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 4ca22d583f017dc3ff73501902e6350c.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""x-amz-cf-id"": ""LAhB8LZPHIdQnENGQbdAw3_kMOsbC_0UsV_LmqzSGpNZ5wG67fSkOA==""}"
+6,"GET / HTTP/1.1
+Host: www.doi.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.22790098190307617,0.11115694046020508,0.6208271980285645,200,OK,[''],15,15,0,"{""content-type"": ""text/html"", ""content-length"": ""6819"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 23:02:18 GMT"", ""last-modified"": ""Mon, 10 Apr 2023 08:52:49 GMT"", ""etag"": ""\""738314b5665f38027821605b70311c81\"""", ""x-amz-server-side-encryption"": ""AES256"", ""x-amz-meta-md5chksum"": ""738314b5665f38027821605b70311c81"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""server"": ""AmazonS3"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 419461e8df22e77789a0d74c26c2ecc2.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""x-amz-cf-id"": ""elFnCLJJZHHWpfIZTyHaLX8X4ReH76HqXN4tKcvGe5wL8h4z5mKokA==""}"
+7,"GET / HTTP/1.1
+Host: www.doi.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.22320151329040527,0.14028644561767578,0.5997500419616699,200,OK,[''],15,15,1376,"{""content-type"": ""text/html"", ""content-length"": ""6819"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 23:02:21 GMT"", ""last-modified"": ""Mon, 10 Apr 2023 08:52:49 GMT"", ""etag"": ""\""738314b5665f38027821605b70311c81\"""", ""x-amz-server-side-encryption"": ""AES256"", ""x-amz-meta-md5chksum"": ""738314b5665f38027821605b70311c81"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""server"": ""AmazonS3"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 0e57ab7e4e13f8d49df5255d2b26c06e.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""x-amz-cf-id"": ""gl_Ch_crAM8Xce9QU-qYGbTNgnwi3HuGFUYFzUcZeK_K0XBli0-9RA==""}"
+8,"GET / HTTP/1.1
+Host: www.doi.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.19304633140563965,0.11155557632446289,0.646869421005249,200,OK,[''],15,15,0,"{""content-type"": ""text/html"", ""content-length"": ""6819"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 23:02:25 GMT"", ""last-modified"": ""Mon, 10 Apr 2023 08:52:49 GMT"", ""etag"": ""\""738314b5665f38027821605b70311c81\"""", ""x-amz-server-side-encryption"": ""AES256"", ""x-amz-meta-md5chksum"": ""738314b5665f38027821605b70311c81"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""server"": ""AmazonS3"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 f9895d364ca1362380fa7dca357757d2.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""x-amz-cf-id"": ""0lLq1_ZjYBjsCzQlmjJ3bdxsKJCUD2vAyZvhxEgRl4_0lg1qVcZZpw==""}"
+9,"GET / HTTP/1.1
+Host: www.doi.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.16964077949523926,0.10725665092468262,0.6388461589813232,200,OK,[''],15,15,0,"{""content-type"": ""text/html"", ""content-length"": ""6819"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 23:02:28 GMT"", ""last-modified"": ""Mon, 10 Apr 2023 08:52:49 GMT"", ""etag"": ""\""738314b5665f38027821605b70311c81\"""", ""x-amz-server-side-encryption"": ""AES256"", ""x-amz-meta-md5chksum"": ""738314b5665f38027821605b70311c81"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""server"": ""AmazonS3"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 0e57ab7e4e13f8d49df5255d2b26c06e.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""x-amz-cf-id"": ""S84E-LH0w01f6DOu2Oj9-BiTau11ZBH2rmZItoj2JtCvSc1F8SQi8Q==""}"

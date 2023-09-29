@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.ncbi.nlm.nih.gov
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.5157597064971924,0.10574960708618164,0.13610148429870605,200,OK,[''],17,17,7265,"{""date"": ""Fri, 29 Sep 2023 23:01:21 GMT"", ""server"": ""Apache"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""referrer-policy"": ""origin-when-cross-origin"", ""content-security-policy"": ""upgrade-insecure-requests"", ""caf"": ""2.0.1"", ""upgrade"": ""h2,h2c"", ""connection"": ""Upgrade, Keep-Alive"", ""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""x-ua-compatible"": ""IE=Edge"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""content-length"": ""8745"", ""keep-alive"": ""timeout=1, max=10"", ""content-type"": ""text/html""}"
+1,"GET / HTTP/1.1
+Host: www.ncbi.nlm.nih.gov
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.42348146438598633,0.11319565773010254,0.1618049144744873,200,OK,[''],17,17,7265,"{""date"": ""Fri, 29 Sep 2023 23:01:24 GMT"", ""server"": ""Apache"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""referrer-policy"": ""origin-when-cross-origin"", ""content-security-policy"": ""upgrade-insecure-requests"", ""caf"": ""2.0.1"", ""upgrade"": ""h2,h2c"", ""connection"": ""Upgrade, Keep-Alive"", ""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""x-ua-compatible"": ""IE=Edge"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""content-length"": ""8745"", ""keep-alive"": ""timeout=1, max=10"", ""content-type"": ""text/html""}"
+2,"GET / HTTP/1.1
+Host: www.ncbi.nlm.nih.gov
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.41231632232666016,0.10624885559082031,0.20750045776367188,200,OK,[''],17,17,7265,"{""date"": ""Fri, 29 Sep 2023 23:01:28 GMT"", ""server"": ""Apache"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""referrer-policy"": ""origin-when-cross-origin"", ""content-security-policy"": ""upgrade-insecure-requests"", ""caf"": ""2.0.1"", ""upgrade"": ""h2,h2c"", ""connection"": ""Upgrade, Keep-Alive"", ""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""x-ua-compatible"": ""IE=Edge"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""content-length"": ""8745"", ""keep-alive"": ""timeout=1, max=10"", ""content-type"": ""text/html""}"
+3,"GET / HTTP/1.1
+Host: www.ncbi.nlm.nih.gov
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.4047074317932129,0.10659074783325195,0.15696382522583008,200,OK,[''],17,17,7265,"{""date"": ""Fri, 29 Sep 2023 23:01:31 GMT"", ""server"": ""Apache"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""referrer-policy"": ""origin-when-cross-origin"", ""content-security-policy"": ""upgrade-insecure-requests"", ""caf"": ""2.0.1"", ""upgrade"": ""h2,h2c"", ""connection"": ""Upgrade, Keep-Alive"", ""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""x-ua-compatible"": ""IE=Edge"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""content-length"": ""8745"", ""keep-alive"": ""timeout=1, max=10"", ""content-type"": ""text/html""}"
+4,"GET / HTTP/1.1
+Host: www.ncbi.nlm.nih.gov
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.4715085029602051,0.11463427543640137,0.17500758171081543,200,OK,[''],17,17,7265,"{""date"": ""Fri, 29 Sep 2023 23:01:35 GMT"", ""server"": ""Apache"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""referrer-policy"": ""origin-when-cross-origin"", ""content-security-policy"": ""upgrade-insecure-requests"", ""caf"": ""2.0.1"", ""upgrade"": ""h2,h2c"", ""connection"": ""Upgrade, Keep-Alive"", ""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""x-ua-compatible"": ""IE=Edge"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""content-length"": ""8745"", ""keep-alive"": ""timeout=1, max=10"", ""content-type"": ""text/html""}"
+5,"GET / HTTP/1.1
+Host: www.ncbi.nlm.nih.gov
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.5188407897949219,0.10437369346618652,0.12273097038269043,200,OK,[''],17,17,7265,"{""date"": ""Fri, 29 Sep 2023 23:01:38 GMT"", ""server"": ""Apache"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""referrer-policy"": ""origin-when-cross-origin"", ""content-security-policy"": ""upgrade-insecure-requests"", ""caf"": ""2.0.1"", ""upgrade"": ""h2,h2c"", ""connection"": ""Upgrade, Keep-Alive"", ""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""x-ua-compatible"": ""IE=Edge"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""content-length"": ""8745"", ""keep-alive"": ""timeout=1, max=10"", ""content-type"": ""text/html""}"
+6,"GET / HTTP/1.1
+Host: www.ncbi.nlm.nih.gov
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.414689302444458,0.11104631423950195,0.19058513641357422,200,OK,[''],17,17,7265,"{""date"": ""Fri, 29 Sep 2023 23:01:41 GMT"", ""server"": ""Apache"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""referrer-policy"": ""origin-when-cross-origin"", ""content-security-policy"": ""upgrade-insecure-requests"", ""caf"": ""2.0.1"", ""upgrade"": ""h2,h2c"", ""connection"": ""Upgrade, Keep-Alive"", ""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""x-ua-compatible"": ""IE=Edge"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""content-length"": ""8745"", ""keep-alive"": ""timeout=1, max=10"", ""content-type"": ""text/html""}"
+7,"GET / HTTP/1.1
+Host: www.ncbi.nlm.nih.gov
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.4237978458404541,0.1120915412902832,0.1930558681488037,200,OK,[''],17,17,7265,"{""date"": ""Fri, 29 Sep 2023 23:01:45 GMT"", ""server"": ""Apache"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""referrer-policy"": ""origin-when-cross-origin"", ""content-security-policy"": ""upgrade-insecure-requests"", ""caf"": ""2.0.1"", ""upgrade"": ""h2,h2c"", ""connection"": ""Upgrade, Keep-Alive"", ""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""x-ua-compatible"": ""IE=Edge"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""content-length"": ""8745"", ""keep-alive"": ""timeout=1, max=10"", ""content-type"": ""text/html""}"
+8,"GET / HTTP/1.1
+Host: www.ncbi.nlm.nih.gov
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.4476652145385742,0.10769057273864746,0.16397356986999512,200,OK,[''],17,17,7265,"{""date"": ""Fri, 29 Sep 2023 23:01:48 GMT"", ""server"": ""Apache"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""referrer-policy"": ""origin-when-cross-origin"", ""content-security-policy"": ""upgrade-insecure-requests"", ""caf"": ""2.0.1"", ""upgrade"": ""h2,h2c"", ""connection"": ""Upgrade, Keep-Alive"", ""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""x-ua-compatible"": ""IE=Edge"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""content-length"": ""8745"", ""keep-alive"": ""timeout=1, max=10"", ""content-type"": ""text/html""}"
+9,"GET / HTTP/1.1
+Host: www.ncbi.nlm.nih.gov
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.44318485260009766,0.12144327163696289,0.15460753440856934,200,OK,[''],17,17,7265,"{""date"": ""Fri, 29 Sep 2023 23:01:52 GMT"", ""server"": ""Apache"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""referrer-policy"": ""origin-when-cross-origin"", ""content-security-policy"": ""upgrade-insecure-requests"", ""caf"": ""2.0.1"", ""upgrade"": ""h2,h2c"", ""connection"": ""Upgrade, Keep-Alive"", ""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""x-ua-compatible"": ""IE=Edge"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""content-length"": ""8745"", ""keep-alive"": ""timeout=1, max=10"", ""content-type"": ""text/html""}"

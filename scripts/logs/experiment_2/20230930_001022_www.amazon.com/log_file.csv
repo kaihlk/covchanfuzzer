@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.amazon.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.1537618637084961,0.11397957801818848,0.1739816665649414,200,OK,[''],24,24,0,"{""server"": ""Server"", ""content-type"": ""text/html;charset=UTF-8"", ""x-amz-rid"": ""7BP9ECWDE87ZH98TEPDY"", ""pragma"": ""no-cache"", ""content-language"": ""en-US"", ""expires"": ""-1"", ""x-xss-protection"": ""1;"", ""accept-ch-lifetime"": ""86400"", ""content-security-policy-report-only"": ""default-src 'self' blob: https: data: mediastream: 'unsafe-eval' 'unsafe-inline';report-uri https://metrics.media-amazon.com/"", ""accept-ch"": ""ect,rtt,downlink,device-memory,sec-ch-device-memory,viewport-width,sec-ch-viewport-width,dpr,sec-ch-dpr,sec-ch-ua-platform,sec-ch-ua-platform-version"", ""content-security-policy"": ""upgrade-insecure-requests;report-uri https://metrics.media-amazon.com/"", ""cache-control"": ""no-cache"", ""x-content-type-options"": ""nosniff"", ""x-ua-compatible"": ""IE=edge"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""vary"": ""Content-Type,Accept-Encoding,User-Agent"", ""x-frame-options"": ""SAMEORIGIN"", ""date"": ""Fri, 29 Sep 2023 22:10:26 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""set-cookie"": ""skin=noskin; path=/; domain=.amazon.com"", ""alt-svc"": ""h3=\"":443\""; ma=93600"", ""x-cache"": ""NotCacheable from child""}"
+1,"GET / HTTP/1.1
+Host: www.amazon.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.15799379348754883,0.11589360237121582,0.2566840648651123,200,OK,[''],24,24,0,"{""server"": ""Server"", ""content-type"": ""text/html;charset=UTF-8"", ""x-amz-rid"": ""0ZCD1M1KHV0PM343Q5H1"", ""pragma"": ""no-cache"", ""content-language"": ""en-US"", ""expires"": ""-1"", ""x-xss-protection"": ""1;"", ""accept-ch-lifetime"": ""86400"", ""accept-ch"": ""ect,rtt,downlink,device-memory,sec-ch-device-memory,viewport-width,sec-ch-viewport-width,dpr,sec-ch-dpr,sec-ch-ua-platform,sec-ch-ua-platform-version"", ""cache-control"": ""no-cache"", ""content-security-policy-report-only"": ""default-src 'self' blob: https: data: mediastream: 'unsafe-eval' 'unsafe-inline';report-uri https://metrics.media-amazon.com/"", ""x-content-type-options"": ""nosniff"", ""x-ua-compatible"": ""IE=edge"", ""content-encoding"": ""gzip"", ""content-security-policy"": ""upgrade-insecure-requests;report-uri https://metrics.media-amazon.com/"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""vary"": ""Content-Type,Accept-Encoding,User-Agent"", ""x-frame-options"": ""SAMEORIGIN"", ""date"": ""Fri, 29 Sep 2023 22:10:29 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""set-cookie"": ""skin=noskin; path=/; domain=.amazon.com"", ""alt-svc"": ""h3=\"":443\""; ma=93600"", ""x-cache"": ""NotCacheable from child""}"
+2,"GET / HTTP/1.1
+Host: www.amazon.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.12384438514709473,0.10895419120788574,0.26008176803588867,200,OK,[''],15,15,0,"{""server"": ""Server"", ""content-type"": ""text/html"", ""x-amz-rid"": ""BKQFC3ZNBGNGSWK3MF62"", ""vary"": ""Content-Type,Accept-Encoding,User-Agent"", ""last-modified"": ""Fri, 29 Sep 2023 22:10:18 GMT"", ""etag"": ""\""32e2d-60686b0933331-gzip\"""", ""accept-ranges"": ""bytes"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""date"": ""Fri, 29 Sep 2023 22:10:32 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""set-cookie"": ""skin=noskin; path=/; domain=.amazon.com"", ""alt-svc"": ""h3=\"":443\""; ma=93600"", ""x-cache"": ""NotCacheable from child""}"
+3,"GET / HTTP/1.1
+Host: www.amazon.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.08808135986328125,0.11394309997558594,0.1666548252105713,200,OK,[''],24,24,0,"{""server"": ""Server"", ""content-type"": ""text/html;charset=UTF-8"", ""x-amz-rid"": ""01WD89FAB5GC02W8Y4VV"", ""pragma"": ""no-cache"", ""content-security-policy-report-only"": ""default-src 'self' blob: https: data: mediastream: 'unsafe-eval' 'unsafe-inline';report-uri https://metrics.media-amazon.com/"", ""content-security-policy"": ""upgrade-insecure-requests;report-uri https://metrics.media-amazon.com/"", ""content-language"": ""en-US"", ""expires"": ""-1"", ""x-xss-protection"": ""1;"", ""accept-ch-lifetime"": ""86400"", ""accept-ch"": ""ect,rtt,downlink,device-memory,sec-ch-device-memory,viewport-width,sec-ch-viewport-width,dpr,sec-ch-dpr,sec-ch-ua-platform,sec-ch-ua-platform-version"", ""cache-control"": ""no-cache"", ""x-content-type-options"": ""nosniff"", ""x-ua-compatible"": ""IE=edge"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""vary"": ""Content-Type,Accept-Encoding,User-Agent"", ""x-frame-options"": ""SAMEORIGIN"", ""date"": ""Fri, 29 Sep 2023 22:10:34 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""set-cookie"": ""skin=noskin; path=/; domain=.amazon.com"", ""alt-svc"": ""h3=\"":443\""; ma=93600"", ""x-cache"": ""NotCacheable from child""}"
+4,"GET / HTTP/1.1
+Host: www.amazon.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.1837167739868164,0.10696911811828613,0.19431209564208984,200,OK,[''],24,24,0,"{""server"": ""Server"", ""content-type"": ""text/html;charset=UTF-8"", ""x-amz-rid"": ""ZXBYMSZ4EAPZFWP2WG8T"", ""pragma"": ""no-cache"", ""content-security-policy-report-only"": ""default-src 'self' blob: https: data: mediastream: 'unsafe-eval' 'unsafe-inline';report-uri https://metrics.media-amazon.com/"", ""content-security-policy"": ""upgrade-insecure-requests;report-uri https://metrics.media-amazon.com/"", ""content-language"": ""en-US"", ""expires"": ""-1"", ""x-xss-protection"": ""1;"", ""accept-ch-lifetime"": ""86400"", ""accept-ch"": ""ect,rtt,downlink,device-memory,sec-ch-device-memory,viewport-width,sec-ch-viewport-width,dpr,sec-ch-dpr,sec-ch-ua-platform,sec-ch-ua-platform-version"", ""cache-control"": ""no-cache"", ""x-content-type-options"": ""nosniff"", ""x-ua-compatible"": ""IE=edge"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""vary"": ""Content-Type,Accept-Encoding,User-Agent"", ""x-frame-options"": ""SAMEORIGIN"", ""date"": ""Fri, 29 Sep 2023 22:10:36 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""set-cookie"": ""skin=noskin; path=/; domain=.amazon.com"", ""alt-svc"": ""h3=\"":443\""; ma=93600"", ""x-cache"": ""NotCacheable from child""}"
+5,"GET / HTTP/1.1
+Host: www.amazon.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.1840224266052246,0.12964081764221191,0.18639230728149414,200,OK,[''],24,24,0,"{""server"": ""Server"", ""content-type"": ""text/html;charset=UTF-8"", ""x-amz-rid"": ""9BDXB10MFK1NG118JBA6"", ""content-language"": ""en-US"", ""pragma"": ""no-cache"", ""cache-control"": ""no-cache"", ""x-xss-protection"": ""1;"", ""x-content-type-options"": ""nosniff"", ""accept-ch"": ""ect,rtt,downlink,device-memory,sec-ch-device-memory,viewport-width,sec-ch-viewport-width,dpr,sec-ch-dpr,sec-ch-ua-platform,sec-ch-ua-platform-version"", ""x-ua-compatible"": ""IE=edge"", ""content-security-policy"": ""upgrade-insecure-requests;report-uri https://metrics.media-amazon.com/"", ""content-security-policy-report-only"": ""default-src 'self' blob: https: data: mediastream: 'unsafe-eval' 'unsafe-inline';report-uri https://metrics.media-amazon.com/"", ""expires"": ""-1"", ""accept-ch-lifetime"": ""86400"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""vary"": ""Content-Type,Accept-Encoding,User-Agent"", ""x-frame-options"": ""SAMEORIGIN"", ""date"": ""Fri, 29 Sep 2023 22:10:39 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""set-cookie"": ""skin=noskin; path=/; domain=.amazon.com"", ""alt-svc"": ""h3=\"":443\""; ma=93600"", ""x-cache"": ""NotCacheable from child""}"
+6,"GET / HTTP/1.1
+Host: www.amazon.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.22749757766723633,0.11069965362548828,0.17404747009277344,200,OK,[''],24,24,0,"{""server"": ""Server"", ""content-type"": ""text/html;charset=UTF-8"", ""x-amz-rid"": ""B657NJR3EB2S5V3TSGMT"", ""pragma"": ""no-cache"", ""content-security-policy-report-only"": ""default-src 'self' blob: https: data: mediastream: 'unsafe-eval' 'unsafe-inline';report-uri https://metrics.media-amazon.com/"", ""content-language"": ""en-US"", ""expires"": ""-1"", ""x-xss-protection"": ""1;"", ""accept-ch-lifetime"": ""86400"", ""accept-ch"": ""ect,rtt,downlink,device-memory,sec-ch-device-memory,viewport-width,sec-ch-viewport-width,dpr,sec-ch-dpr,sec-ch-ua-platform,sec-ch-ua-platform-version"", ""content-security-policy"": ""upgrade-insecure-requests;report-uri https://metrics.media-amazon.com/"", ""cache-control"": ""no-cache"", ""x-content-type-options"": ""nosniff"", ""x-ua-compatible"": ""IE=edge"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""vary"": ""Content-Type,Accept-Encoding,User-Agent"", ""x-frame-options"": ""SAMEORIGIN"", ""date"": ""Fri, 29 Sep 2023 22:10:42 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""set-cookie"": ""skin=noskin; path=/; domain=.amazon.com"", ""alt-svc"": ""h3=\"":443\""; ma=93600"", ""x-cache"": ""NotCacheable from child""}"
+7,"GET / HTTP/1.1
+Host: www.amazon.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.14596796035766602,0.10877871513366699,0.18268346786499023,200,OK,[''],24,24,0,"{""server"": ""Server"", ""content-type"": ""text/html;charset=UTF-8"", ""x-amz-rid"": ""S7TG30KD6E7D164FK6RW"", ""content-language"": ""en-US"", ""content-security-policy-report-only"": ""default-src 'self' blob: https: data: mediastream: 'unsafe-eval' 'unsafe-inline';report-uri https://metrics.media-amazon.com/"", ""content-security-policy"": ""upgrade-insecure-requests;report-uri https://metrics.media-amazon.com/"", ""pragma"": ""no-cache"", ""cache-control"": ""no-cache"", ""x-xss-protection"": ""1;"", ""x-content-type-options"": ""nosniff"", ""accept-ch"": ""ect,rtt,downlink,device-memory,sec-ch-device-memory,viewport-width,sec-ch-viewport-width,dpr,sec-ch-dpr,sec-ch-ua-platform,sec-ch-ua-platform-version"", ""x-ua-compatible"": ""IE=edge"", ""expires"": ""-1"", ""accept-ch-lifetime"": ""86400"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""vary"": ""Content-Type,Accept-Encoding,User-Agent"", ""x-frame-options"": ""SAMEORIGIN"", ""date"": ""Fri, 29 Sep 2023 22:10:44 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""set-cookie"": ""skin=noskin; path=/; domain=.amazon.com"", ""alt-svc"": ""h3=\"":443\""; ma=93600"", ""x-cache"": ""NotCacheable from child""}"
+8,"GET / HTTP/1.1
+Host: www.amazon.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.09348511695861816,0.10033535957336426,0.20921540260314941,200,OK,[''],24,24,0,"{""server"": ""Server"", ""content-type"": ""text/html;charset=UTF-8"", ""x-amz-rid"": ""ANG34FKZMGVD3Z5BCPXT"", ""pragma"": ""no-cache"", ""content-language"": ""en-US"", ""expires"": ""-1"", ""x-xss-protection"": ""1;"", ""accept-ch-lifetime"": ""86400"", ""content-security-policy"": ""upgrade-insecure-requests;report-uri https://metrics.media-amazon.com/"", ""accept-ch"": ""ect,rtt,downlink,device-memory,sec-ch-device-memory,viewport-width,sec-ch-viewport-width,dpr,sec-ch-dpr,sec-ch-ua-platform,sec-ch-ua-platform-version"", ""cache-control"": ""no-cache"", ""x-content-type-options"": ""nosniff"", ""x-ua-compatible"": ""IE=edge"", ""content-encoding"": ""gzip"", ""content-security-policy-report-only"": ""default-src 'self' blob: https: data: mediastream: 'unsafe-eval' 'unsafe-inline';report-uri https://metrics.media-amazon.com/"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""vary"": ""Content-Type,Accept-Encoding,User-Agent"", ""x-frame-options"": ""SAMEORIGIN"", ""date"": ""Fri, 29 Sep 2023 22:10:46 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""set-cookie"": ""skin=noskin; path=/; domain=.amazon.com"", ""alt-svc"": ""h3=\"":443\""; ma=93600"", ""x-cache"": ""NotCacheable from child""}"
+9,"GET / HTTP/1.1
+Host: www.amazon.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.2196636199951172,0.1173088550567627,0.22493195533752441,200,OK,[''],24,24,0,"{""server"": ""Server"", ""content-type"": ""text/html;charset=UTF-8"", ""x-amz-rid"": ""4ZWC2C2MXJMG5PC1Y4BK"", ""content-security-policy"": ""upgrade-insecure-requests;report-uri https://metrics.media-amazon.com/"", ""pragma"": ""no-cache"", ""content-language"": ""en-US"", ""content-security-policy-report-only"": ""default-src 'self' blob: https: data: mediastream: 'unsafe-eval' 'unsafe-inline';report-uri https://metrics.media-amazon.com/"", ""expires"": ""-1"", ""x-xss-protection"": ""1;"", ""accept-ch-lifetime"": ""86400"", ""accept-ch"": ""ect,rtt,downlink,device-memory,sec-ch-device-memory,viewport-width,sec-ch-viewport-width,dpr,sec-ch-dpr,sec-ch-ua-platform,sec-ch-ua-platform-version"", ""cache-control"": ""no-cache"", ""x-content-type-options"": ""nosniff"", ""x-ua-compatible"": ""IE=edge"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""vary"": ""Content-Type,Accept-Encoding,User-Agent"", ""x-frame-options"": ""SAMEORIGIN"", ""date"": ""Fri, 29 Sep 2023 22:10:49 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""set-cookie"": ""skin=noskin; path=/; domain=.amazon.com"", ""alt-svc"": ""h3=\"":443\""; ma=93600"", ""x-cache"": ""NotCacheable from child""}"

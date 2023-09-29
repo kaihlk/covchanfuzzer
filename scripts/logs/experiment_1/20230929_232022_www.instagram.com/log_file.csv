@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.instagram.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.1569356918334961,0.11002707481384277,0.06780195236206055,200,OK,[''],7,7,0,"{""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""accept-ch-lifetime"": ""4838400"", ""accept-ch"": ""viewport-width,dpr,Sec-CH-Prefers-Color-Scheme,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Platform-Version,Sec-CH-UA-Model"", ""reporting-endpoints"": ""default=\""https://www.instagram.com/error/ig_web_error_reports/?device_level=unknown\"""", ""report-to"": ""{\""max_age\"":259200,\""endpoints\"":[{\""url\"":\""https:\\/\\/www.instagram.com\\/error\\/ig_web_error_reports\\/?device_level=unknown\""}]}"", ""content-security-policy-report-only"": ""default-src *.facebook.com *.fbcdn.net *.instagram.com data: blob:;script-src *.facebook.com *.fbcdn.net *.facebook.net 'unsafe-inline' 'unsafe-eval' blob: data: 'self' *.instagram.com static.cdninstagram.com;style-src data: blob: 'unsafe-inline' *.fbcdn.net *.facebook.com *.instagram.com static.cdninstagram.com;connect-src *.facebook.com facebook.com *.fbcdn.net *.facebook.net wss://*.facebook.com:* blob: *.instagram.com *.cdninstagram.com wss://*.instagram.com:* 'self' wss://edge-chat.instagram.com connect.facebook.net;font-src *.facebook.com data: *.fbcdn.net *.instagram.com static.cdninstagram.com *.intern.facebook.com;img-src *.instagram.com *.facebook.com *.fbcdn.net data: blob: *.cdninstagram.com *.fbsbx.com android-webview-video-poster:;media-src *.facebook.com *.fbcdn.net *.instagram.com *.cdninstagram.com cdn.fbsbx.com data: blob:;frame-src *.instagram.com *.facebook.com *.fbsbx.com fbsbx.com data:;worker-src *.instagram.com/static_resources/webworker_v1/init_script/ *.instagram.com/static_resources/webworker/init_script/ *.instagram.com/static_resources/sharedworker/init_script/ *.instagram.com/www-service-worker.js;block-all-mixed-content;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;""}"
+1,"GET / HTTP/1.1
+Host: www.instagram.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.1300656795501709,0.12015080451965332,0.07091069221496582,200,OK,[''],7,7,0,"{""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""accept-ch-lifetime"": ""4838400"", ""accept-ch"": ""viewport-width,dpr,Sec-CH-Prefers-Color-Scheme,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Platform-Version,Sec-CH-UA-Model"", ""reporting-endpoints"": ""default=\""https://www.instagram.com/error/ig_web_error_reports/?device_level=unknown\"""", ""report-to"": ""{\""max_age\"":259200,\""endpoints\"":[{\""url\"":\""https:\\/\\/www.instagram.com\\/error\\/ig_web_error_reports\\/?device_level=unknown\""}]}"", ""content-security-policy-report-only"": ""default-src *.facebook.com *.fbcdn.net *.instagram.com data: blob:;script-src *.facebook.com *.fbcdn.net *.facebook.net 'unsafe-inline' 'unsafe-eval' blob: data: 'self' *.instagram.com static.cdninstagram.com;style-src data: blob: 'unsafe-inline' *.fbcdn.net *.facebook.com *.instagram.com static.cdninstagram.com;connect-src *.facebook.com facebook.com *.fbcdn.net *.facebook.net wss://*.facebook.com:* blob: *.instagram.com *.cdninstagram.com wss://*.instagram.com:* 'self' wss://edge-chat.instagram.com connect.facebook.net;font-src *.facebook.com data: *.fbcdn.net *.instagram.com static.cdninstagram.com *.intern.facebook.com;img-src *.instagram.com *.facebook.com *.fbcdn.net data: blob: *.cdninstagram.com *.fbsbx.com android-webview-video-poster:;media-src *.facebook.com *.fbcdn.net *.instagram.com *.cdninstagram.com cdn.fbsbx.com data: blob:;frame-src *.instagram.com *.facebook.com *.fbsbx.com fbsbx.com data:;worker-src *.instagram.com/static_resources/webworker_v1/init_script/ *.instagram.com/static_resources/webworker/init_script/ *.instagram.com/static_resources/sharedworker/init_script/ *.instagram.com/www-service-worker.js;block-all-mixed-content;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;""}"
+2,"GET / HTTP/1.1
+Host: www.instagram.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.17405128479003906,0.11170721054077148,0.06193423271179199,200,OK,[''],7,7,0,"{""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""accept-ch-lifetime"": ""4838400"", ""accept-ch"": ""viewport-width,dpr,Sec-CH-Prefers-Color-Scheme,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Platform-Version,Sec-CH-UA-Model"", ""reporting-endpoints"": ""default=\""https://www.instagram.com/error/ig_web_error_reports/?device_level=unknown\"""", ""report-to"": ""{\""max_age\"":259200,\""endpoints\"":[{\""url\"":\""https:\\/\\/www.instagram.com\\/error\\/ig_web_error_reports\\/?device_level=unknown\""}]}"", ""content-security-policy-report-only"": ""default-src *.facebook.com *.fbcdn.net *.instagram.com data: blob:;script-src *.facebook.com *.fbcdn.net *.facebook.net 'unsafe-inline' 'unsafe-eval' blob: data: 'self' *.instagram.com static.cdninstagram.com;style-src data: blob: 'unsafe-inline' *.fbcdn.net *.facebook.com *.instagram.com static.cdninstagram.com;connect-src *.facebook.com facebook.com *.fbcdn.net *.facebook.net wss://*.facebook.com:* blob: *.instagram.com *.cdninstagram.com wss://*.instagram.com:* 'self' wss://edge-chat.instagram.com connect.facebook.net;font-src *.facebook.com data: *.fbcdn.net *.instagram.com static.cdninstagram.com *.intern.facebook.com;img-src *.instagram.com *.facebook.com *.fbcdn.net data: blob: *.cdninstagram.com *.fbsbx.com android-webview-video-poster:;media-src *.facebook.com *.fbcdn.net *.instagram.com *.cdninstagram.com cdn.fbsbx.com data: blob:;frame-src *.instagram.com *.facebook.com *.fbsbx.com fbsbx.com data:;worker-src *.instagram.com/static_resources/webworker_v1/init_script/ *.instagram.com/static_resources/webworker/init_script/ *.instagram.com/static_resources/sharedworker/init_script/ *.instagram.com/www-service-worker.js;block-all-mixed-content;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;""}"
+3,"GET / HTTP/1.1
+Host: www.instagram.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.20839810371398926,0.12428450584411621,0.060967206954956055,200,OK,[''],7,7,0,"{""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""accept-ch-lifetime"": ""4838400"", ""accept-ch"": ""viewport-width,dpr,Sec-CH-Prefers-Color-Scheme,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Platform-Version,Sec-CH-UA-Model"", ""reporting-endpoints"": ""default=\""https://www.instagram.com/error/ig_web_error_reports/?device_level=unknown\"""", ""report-to"": ""{\""max_age\"":259200,\""endpoints\"":[{\""url\"":\""https:\\/\\/www.instagram.com\\/error\\/ig_web_error_reports\\/?device_level=unknown\""}]}"", ""content-security-policy-report-only"": ""default-src *.facebook.com *.fbcdn.net *.instagram.com data: blob:;script-src *.facebook.com *.fbcdn.net *.facebook.net 'unsafe-inline' 'unsafe-eval' blob: data: 'self' *.instagram.com static.cdninstagram.com;style-src data: blob: 'unsafe-inline' *.fbcdn.net *.facebook.com *.instagram.com static.cdninstagram.com;connect-src *.facebook.com facebook.com *.fbcdn.net *.facebook.net wss://*.facebook.com:* blob: *.instagram.com *.cdninstagram.com wss://*.instagram.com:* 'self' wss://edge-chat.instagram.com connect.facebook.net;font-src *.facebook.com data: *.fbcdn.net *.instagram.com static.cdninstagram.com *.intern.facebook.com;img-src *.instagram.com *.facebook.com *.fbcdn.net data: blob: *.cdninstagram.com *.fbsbx.com android-webview-video-poster:;media-src *.facebook.com *.fbcdn.net *.instagram.com *.cdninstagram.com cdn.fbsbx.com data: blob:;frame-src *.instagram.com *.facebook.com *.fbsbx.com fbsbx.com data:;worker-src *.instagram.com/static_resources/webworker_v1/init_script/ *.instagram.com/static_resources/webworker/init_script/ *.instagram.com/static_resources/sharedworker/init_script/ *.instagram.com/www-service-worker.js;block-all-mixed-content;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;""}"
+4,"GET / HTTP/1.1
+Host: www.instagram.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.18783259391784668,0.11013484001159668,0.06828880310058594,200,OK,[''],7,7,0,"{""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""accept-ch-lifetime"": ""4838400"", ""accept-ch"": ""viewport-width,dpr,Sec-CH-Prefers-Color-Scheme,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Platform-Version,Sec-CH-UA-Model"", ""reporting-endpoints"": ""default=\""https://www.instagram.com/error/ig_web_error_reports/?device_level=unknown\"""", ""report-to"": ""{\""max_age\"":259200,\""endpoints\"":[{\""url\"":\""https:\\/\\/www.instagram.com\\/error\\/ig_web_error_reports\\/?device_level=unknown\""}]}"", ""content-security-policy-report-only"": ""default-src *.facebook.com *.fbcdn.net *.instagram.com data: blob:;script-src *.facebook.com *.fbcdn.net *.facebook.net 'unsafe-inline' 'unsafe-eval' blob: data: 'self' *.instagram.com static.cdninstagram.com;style-src data: blob: 'unsafe-inline' *.fbcdn.net *.facebook.com *.instagram.com static.cdninstagram.com;connect-src *.facebook.com facebook.com *.fbcdn.net *.facebook.net wss://*.facebook.com:* blob: *.instagram.com *.cdninstagram.com wss://*.instagram.com:* 'self' wss://edge-chat.instagram.com connect.facebook.net;font-src *.facebook.com data: *.fbcdn.net *.instagram.com static.cdninstagram.com *.intern.facebook.com;img-src *.instagram.com *.facebook.com *.fbcdn.net data: blob: *.cdninstagram.com *.fbsbx.com android-webview-video-poster:;media-src *.facebook.com *.fbcdn.net *.instagram.com *.cdninstagram.com cdn.fbsbx.com data: blob:;frame-src *.instagram.com *.facebook.com *.fbsbx.com fbsbx.com data:;worker-src *.instagram.com/static_resources/webworker_v1/init_script/ *.instagram.com/static_resources/webworker/init_script/ *.instagram.com/static_resources/sharedworker/init_script/ *.instagram.com/www-service-worker.js;block-all-mixed-content;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;""}"
+5,"GET / HTTP/1.1
+Host: www.instagram.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.19513535499572754,0.1266160011291504,0.10338973999023438,200,OK,[''],7,7,0,"{""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""accept-ch-lifetime"": ""4838400"", ""accept-ch"": ""viewport-width,dpr,Sec-CH-Prefers-Color-Scheme,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Platform-Version,Sec-CH-UA-Model"", ""reporting-endpoints"": ""default=\""https://www.instagram.com/error/ig_web_error_reports/?device_level=unknown\"""", ""report-to"": ""{\""max_age\"":259200,\""endpoints\"":[{\""url\"":\""https:\\/\\/www.instagram.com\\/error\\/ig_web_error_reports\\/?device_level=unknown\""}]}"", ""content-security-policy-report-only"": ""default-src *.facebook.com *.fbcdn.net *.instagram.com data: blob:;script-src *.facebook.com *.fbcdn.net *.facebook.net 'unsafe-inline' 'unsafe-eval' blob: data: 'self' *.instagram.com static.cdninstagram.com;style-src data: blob: 'unsafe-inline' *.fbcdn.net *.facebook.com *.instagram.com static.cdninstagram.com;connect-src *.facebook.com facebook.com *.fbcdn.net *.facebook.net wss://*.facebook.com:* blob: *.instagram.com *.cdninstagram.com wss://*.instagram.com:* 'self' wss://edge-chat.instagram.com connect.facebook.net;font-src *.facebook.com data: *.fbcdn.net *.instagram.com static.cdninstagram.com *.intern.facebook.com;img-src *.instagram.com *.facebook.com *.fbcdn.net data: blob: *.cdninstagram.com *.fbsbx.com android-webview-video-poster:;media-src *.facebook.com *.fbcdn.net *.instagram.com *.cdninstagram.com cdn.fbsbx.com data: blob:;frame-src *.instagram.com *.facebook.com *.fbsbx.com fbsbx.com data:;worker-src *.instagram.com/static_resources/webworker_v1/init_script/ *.instagram.com/static_resources/webworker/init_script/ *.instagram.com/static_resources/sharedworker/init_script/ *.instagram.com/www-service-worker.js;block-all-mixed-content;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;""}"
+6,"GET / HTTP/1.1
+Host: www.instagram.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.1847519874572754,0.10611367225646973,0.06983709335327148,200,OK,[''],7,7,0,"{""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""accept-ch-lifetime"": ""4838400"", ""accept-ch"": ""viewport-width,dpr,Sec-CH-Prefers-Color-Scheme,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Platform-Version,Sec-CH-UA-Model"", ""reporting-endpoints"": ""default=\""https://www.instagram.com/error/ig_web_error_reports/?device_level=unknown\"""", ""report-to"": ""{\""max_age\"":259200,\""endpoints\"":[{\""url\"":\""https:\\/\\/www.instagram.com\\/error\\/ig_web_error_reports\\/?device_level=unknown\""}]}"", ""content-security-policy-report-only"": ""default-src *.facebook.com *.fbcdn.net *.instagram.com data: blob:;script-src *.facebook.com *.fbcdn.net *.facebook.net 'unsafe-inline' 'unsafe-eval' blob: data: 'self' *.instagram.com static.cdninstagram.com;style-src data: blob: 'unsafe-inline' *.fbcdn.net *.facebook.com *.instagram.com static.cdninstagram.com;connect-src *.facebook.com facebook.com *.fbcdn.net *.facebook.net wss://*.facebook.com:* blob: *.instagram.com *.cdninstagram.com wss://*.instagram.com:* 'self' wss://edge-chat.instagram.com connect.facebook.net;font-src *.facebook.com data: *.fbcdn.net *.instagram.com static.cdninstagram.com *.intern.facebook.com;img-src *.instagram.com *.facebook.com *.fbcdn.net data: blob: *.cdninstagram.com *.fbsbx.com android-webview-video-poster:;media-src *.facebook.com *.fbcdn.net *.instagram.com *.cdninstagram.com cdn.fbsbx.com data: blob:;frame-src *.instagram.com *.facebook.com *.fbsbx.com fbsbx.com data:;worker-src *.instagram.com/static_resources/webworker_v1/init_script/ *.instagram.com/static_resources/webworker/init_script/ *.instagram.com/static_resources/sharedworker/init_script/ *.instagram.com/www-service-worker.js;block-all-mixed-content;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;""}"
+7,"GET / HTTP/1.1
+Host: www.instagram.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.16701245307922363,0.11237525939941406,0.12580037117004395,200,OK,[''],7,7,0,"{""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""accept-ch-lifetime"": ""4838400"", ""accept-ch"": ""viewport-width,dpr,Sec-CH-Prefers-Color-Scheme,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Platform-Version,Sec-CH-UA-Model"", ""reporting-endpoints"": ""default=\""https://www.instagram.com/error/ig_web_error_reports/?device_level=unknown\"""", ""report-to"": ""{\""max_age\"":259200,\""endpoints\"":[{\""url\"":\""https:\\/\\/www.instagram.com\\/error\\/ig_web_error_reports\\/?device_level=unknown\""}]}"", ""content-security-policy-report-only"": ""default-src *.facebook.com *.fbcdn.net *.instagram.com data: blob:;script-src *.facebook.com *.fbcdn.net *.facebook.net 'unsafe-inline' 'unsafe-eval' blob: data: 'self' *.instagram.com static.cdninstagram.com;style-src data: blob: 'unsafe-inline' *.fbcdn.net *.facebook.com *.instagram.com static.cdninstagram.com;connect-src *.facebook.com facebook.com *.fbcdn.net *.facebook.net wss://*.facebook.com:* blob: *.instagram.com *.cdninstagram.com wss://*.instagram.com:* 'self' wss://edge-chat.instagram.com connect.facebook.net;font-src *.facebook.com data: *.fbcdn.net *.instagram.com static.cdninstagram.com *.intern.facebook.com;img-src *.instagram.com *.facebook.com *.fbcdn.net data: blob: *.cdninstagram.com *.fbsbx.com android-webview-video-poster:;media-src *.facebook.com *.fbcdn.net *.instagram.com *.cdninstagram.com cdn.fbsbx.com data: blob:;frame-src *.instagram.com *.facebook.com *.fbsbx.com fbsbx.com data:;worker-src *.instagram.com/static_resources/webworker_v1/init_script/ *.instagram.com/static_resources/webworker/init_script/ *.instagram.com/static_resources/sharedworker/init_script/ *.instagram.com/www-service-worker.js;block-all-mixed-content;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;""}"
+8,"GET / HTTP/1.1
+Host: www.instagram.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.23995733261108398,0.1119084358215332,0.06377387046813965,200,OK,[''],7,7,0,"{""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""accept-ch-lifetime"": ""4838400"", ""accept-ch"": ""viewport-width,dpr,Sec-CH-Prefers-Color-Scheme,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Platform-Version,Sec-CH-UA-Model"", ""reporting-endpoints"": ""default=\""https://www.instagram.com/error/ig_web_error_reports/?device_level=unknown\"""", ""report-to"": ""{\""max_age\"":259200,\""endpoints\"":[{\""url\"":\""https:\\/\\/www.instagram.com\\/error\\/ig_web_error_reports\\/?device_level=unknown\""}]}"", ""content-security-policy-report-only"": ""default-src *.facebook.com *.fbcdn.net *.instagram.com data: blob:;script-src *.facebook.com *.fbcdn.net *.facebook.net 'unsafe-inline' 'unsafe-eval' blob: data: 'self' *.instagram.com static.cdninstagram.com;style-src data: blob: 'unsafe-inline' *.fbcdn.net *.facebook.com *.instagram.com static.cdninstagram.com;connect-src *.facebook.com facebook.com *.fbcdn.net *.facebook.net wss://*.facebook.com:* blob: *.instagram.com *.cdninstagram.com wss://*.instagram.com:* 'self' wss://edge-chat.instagram.com connect.facebook.net;font-src *.facebook.com data: *.fbcdn.net *.instagram.com static.cdninstagram.com *.intern.facebook.com;img-src *.instagram.com *.facebook.com *.fbcdn.net data: blob: *.cdninstagram.com *.fbsbx.com android-webview-video-poster:;media-src *.facebook.com *.fbcdn.net *.instagram.com *.cdninstagram.com cdn.fbsbx.com data: blob:;frame-src *.instagram.com *.facebook.com *.fbsbx.com fbsbx.com data:;worker-src *.instagram.com/static_resources/webworker_v1/init_script/ *.instagram.com/static_resources/webworker/init_script/ *.instagram.com/static_resources/sharedworker/init_script/ *.instagram.com/www-service-worker.js;block-all-mixed-content;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;""}"
+9,"GET / HTTP/1.1
+Host: www.instagram.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.21263957023620605,0.1194772720336914,0.07138919830322266,200,OK,[''],7,7,0,"{""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""accept-ch-lifetime"": ""4838400"", ""accept-ch"": ""viewport-width,dpr,Sec-CH-Prefers-Color-Scheme,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Platform-Version,Sec-CH-UA-Model"", ""reporting-endpoints"": ""default=\""https://www.instagram.com/error/ig_web_error_reports/?device_level=unknown\"""", ""report-to"": ""{\""max_age\"":259200,\""endpoints\"":[{\""url\"":\""https:\\/\\/www.instagram.com\\/error\\/ig_web_error_reports\\/?device_level=unknown\""}]}"", ""content-security-policy-report-only"": ""default-src *.facebook.com *.fbcdn.net *.instagram.com data: blob:;script-src *.facebook.com *.fbcdn.net *.facebook.net 'unsafe-inline' 'unsafe-eval' blob: data: 'self' *.instagram.com static.cdninstagram.com;style-src data: blob: 'unsafe-inline' *.fbcdn.net *.facebook.com *.instagram.com static.cdninstagram.com;connect-src *.facebook.com facebook.com *.fbcdn.net *.facebook.net wss://*.facebook.com:* blob: *.instagram.com *.cdninstagram.com wss://*.instagram.com:* 'self' wss://edge-chat.instagram.com connect.facebook.net;font-src *.facebook.com data: *.fbcdn.net *.instagram.com static.cdninstagram.com *.intern.facebook.com;img-src *.instagram.com *.facebook.com *.fbcdn.net data: blob: *.cdninstagram.com *.fbsbx.com android-webview-video-poster:;media-src *.facebook.com *.fbcdn.net *.instagram.com *.cdninstagram.com cdn.fbsbx.com data: blob:;frame-src *.instagram.com *.facebook.com *.fbsbx.com fbsbx.com data:;worker-src *.instagram.com/static_resources/webworker_v1/init_script/ *.instagram.com/static_resources/webworker/init_script/ *.instagram.com/static_resources/sharedworker/init_script/ *.instagram.com/www-service-worker.js;block-all-mixed-content;report-uri https://www.facebook.com/csp/reporting/?m=c&minimize=0;""}"

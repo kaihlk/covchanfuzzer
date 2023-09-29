@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.nasa.gov
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.24959349632263184,0.10341882705688477,0.03478193283081055,200,OK,[''],16,16,698,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:34:26 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""content-length"": ""36023"", ""connection"": ""keep-alive"", ""host-header"": ""a9130478a60e5f9135f765b23f26593b"", ""x-launch-status"": ""Go Flight!"", ""x-robots-tag"": ""index, follow"", ""link"": ""<https://www.nasa.gov/>; rel=shortlink"", ""x-rq"": ""ams7 85 187 443"", ""cache-control"": ""max-age=300, must-revalidate"", ""content-encoding"": ""gzip"", ""age"": ""289"", ""x-cache"": ""hit"", ""vary"": ""Accept-Encoding"", ""accept-ranges"": ""bytes""}"
+1,"GET / HTTP/1.1
+Host: www.nasa.gov
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.15667390823364258,0.10950446128845215,0.03696084022521973,200,OK,[''],16,16,698,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:34:29 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""content-length"": ""36023"", ""connection"": ""keep-alive"", ""host-header"": ""a9130478a60e5f9135f765b23f26593b"", ""x-launch-status"": ""Go Flight!"", ""x-robots-tag"": ""index, follow"", ""link"": ""<https://www.nasa.gov/>; rel=shortlink"", ""x-rq"": ""ams7 85 187 443"", ""cache-control"": ""max-age=300, must-revalidate"", ""content-encoding"": ""gzip"", ""age"": ""292"", ""x-cache"": ""hit"", ""vary"": ""Accept-Encoding"", ""accept-ranges"": ""bytes""}"
+2,"GET / HTTP/1.1
+Host: www.nasa.gov
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.2358403205871582,0.12506937980651855,0.020380496978759766,200,OK,[''],16,16,698,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:34:32 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""content-length"": ""36023"", ""connection"": ""keep-alive"", ""host-header"": ""a9130478a60e5f9135f765b23f26593b"", ""x-launch-status"": ""Go Flight!"", ""x-robots-tag"": ""index, follow"", ""link"": ""<https://www.nasa.gov/>; rel=shortlink"", ""x-rq"": ""ams7 85 187 443"", ""cache-control"": ""max-age=300, must-revalidate"", ""content-encoding"": ""gzip"", ""age"": ""295"", ""x-cache"": ""hit"", ""vary"": ""Accept-Encoding"", ""accept-ranges"": ""bytes""}"
+3,"GET / HTTP/1.1
+Host: www.nasa.gov
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.1589984893798828,0.11088967323303223,0.0359344482421875,200,OK,[''],16,16,698,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:34:35 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""content-length"": ""36023"", ""connection"": ""keep-alive"", ""host-header"": ""a9130478a60e5f9135f765b23f26593b"", ""x-launch-status"": ""Go Flight!"", ""x-robots-tag"": ""index, follow"", ""link"": ""<https://www.nasa.gov/>; rel=shortlink"", ""x-rq"": ""ams7 85 187 443"", ""cache-control"": ""max-age=300, must-revalidate"", ""content-encoding"": ""gzip"", ""age"": ""297"", ""x-cache"": ""hit"", ""vary"": ""Accept-Encoding"", ""accept-ranges"": ""bytes""}"
+4,"GET / HTTP/1.1
+Host: www.nasa.gov
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.15914463996887207,0.10451602935791016,0.05938458442687988,200,OK,[''],16,16,698,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:34:37 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""content-length"": ""36023"", ""connection"": ""keep-alive"", ""host-header"": ""a9130478a60e5f9135f765b23f26593b"", ""x-launch-status"": ""Go Flight!"", ""x-robots-tag"": ""index, follow"", ""link"": ""<https://www.nasa.gov/>; rel=shortlink"", ""x-rq"": ""ams7 85 187 443"", ""cache-control"": ""max-age=300, must-revalidate"", ""content-encoding"": ""gzip"", ""age"": ""300"", ""x-cache"": ""hit"", ""vary"": ""Accept-Encoding"", ""accept-ranges"": ""bytes""}"
+5,"GET / HTTP/1.1
+Host: www.nasa.gov
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.20615243911743164,0.11590695381164551,0.7107956409454346,200,OK,[''],16,16,672,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:34:40 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""host-header"": ""a9130478a60e5f9135f765b23f26593b"", ""x-launch-status"": ""Go Flight!"", ""x-robots-tag"": ""index, follow"", ""link"": ""<https://www.nasa.gov/>; rel=shortlink"", ""x-rq"": ""ams7 85 188 443"", ""cache-control"": ""max-age=300, must-revalidate"", ""content-encoding"": ""gzip"", ""age"": ""0"", ""x-cache"": ""miss"", ""vary"": ""Accept-Encoding"", ""accept-ranges"": ""bytes""}"
+6,"GET / HTTP/1.1
+Host: www.nasa.gov
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.18946146965026855,0.11179423332214355,0.030095338821411133,200,OK,[''],16,16,692,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:34:44 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""content-length"": ""36024"", ""connection"": ""keep-alive"", ""host-header"": ""a9130478a60e5f9135f765b23f26593b"", ""x-launch-status"": ""Go Flight!"", ""x-robots-tag"": ""index, follow"", ""link"": ""<https://www.nasa.gov/>; rel=shortlink"", ""x-rq"": ""ams7 85 187 443"", ""cache-control"": ""max-age=300, must-revalidate"", ""content-encoding"": ""gzip"", ""age"": ""0"", ""x-cache"": ""hit"", ""vary"": ""Accept-Encoding"", ""accept-ranges"": ""bytes""}"
+7,"GET / HTTP/1.1
+Host: www.nasa.gov
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.15893125534057617,0.11327433586120605,0.040946006774902344,200,OK,[''],16,16,692,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:34:46 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""content-length"": ""36024"", ""connection"": ""keep-alive"", ""host-header"": ""a9130478a60e5f9135f765b23f26593b"", ""x-launch-status"": ""Go Flight!"", ""x-robots-tag"": ""index, follow"", ""link"": ""<https://www.nasa.gov/>; rel=shortlink"", ""x-rq"": ""ams7 85 187 443"", ""cache-control"": ""max-age=300, must-revalidate"", ""content-encoding"": ""gzip"", ""age"": ""3"", ""x-cache"": ""hit"", ""vary"": ""Accept-Encoding"", ""accept-ranges"": ""bytes""}"
+8,"GET / HTTP/1.1
+Host: www.nasa.gov
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.1734628677368164,0.10935163497924805,0.03543448448181152,200,OK,[''],16,16,692,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:34:50 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""content-length"": ""36024"", ""connection"": ""keep-alive"", ""host-header"": ""a9130478a60e5f9135f765b23f26593b"", ""x-launch-status"": ""Go Flight!"", ""x-robots-tag"": ""index, follow"", ""link"": ""<https://www.nasa.gov/>; rel=shortlink"", ""x-rq"": ""ams7 85 187 443"", ""cache-control"": ""max-age=300, must-revalidate"", ""content-encoding"": ""gzip"", ""age"": ""6"", ""x-cache"": ""hit"", ""vary"": ""Accept-Encoding"", ""accept-ranges"": ""bytes""}"
+9,"GET / HTTP/1.1
+Host: www.nasa.gov
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.12951111793518066,0.13610243797302246,0.032166481018066406,200,OK,[''],16,16,692,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 22:34:52 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""content-length"": ""36024"", ""connection"": ""keep-alive"", ""host-header"": ""a9130478a60e5f9135f765b23f26593b"", ""x-launch-status"": ""Go Flight!"", ""x-robots-tag"": ""index, follow"", ""link"": ""<https://www.nasa.gov/>; rel=shortlink"", ""x-rq"": ""ams7 85 187 443"", ""cache-control"": ""max-age=300, must-revalidate"", ""content-encoding"": ""gzip"", ""age"": ""9"", ""x-cache"": ""hit"", ""vary"": ""Accept-Encoding"", ""accept-ranges"": ""bytes""}"

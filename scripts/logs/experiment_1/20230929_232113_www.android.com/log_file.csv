@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.android.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.29023098945617676,0.12324976921081543,0.04594850540161133,200,OK,[''],16,16,555,"{""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""content-type"": ""text/html"", ""content-security-policy-report-only"": ""require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/uxe-owners-acl/android"", ""cross-origin-opener-policy-report-only"": ""same-origin; report-to=\""uxe-owners-acl/android\"""", ""report-to"": ""{\""group\"":\""uxe-owners-acl/android\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/uxe-owners-acl/android\""}]}"", ""content-length"": ""29929"", ""date"": ""Fri, 29 Sep 2023 21:21:15 GMT"", ""expires"": ""Fri, 29 Sep 2023 21:21:15 GMT"", ""cache-control"": ""private, max-age=3000"", ""last-modified"": ""Wed, 27 Sep 2023 08:18:00 GMT"", ""x-content-type-options"": ""nosniff"", ""server"": ""sffe"", ""x-xss-protection"": ""0"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+1,"GET / HTTP/1.1
+Host: www.android.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.14579248428344727,0.1061563491821289,0.06996607780456543,200,OK,[''],16,16,555,"{""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""content-type"": ""text/html"", ""content-security-policy-report-only"": ""require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/uxe-owners-acl/android"", ""cross-origin-opener-policy-report-only"": ""same-origin; report-to=\""uxe-owners-acl/android\"""", ""report-to"": ""{\""group\"":\""uxe-owners-acl/android\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/uxe-owners-acl/android\""}]}"", ""content-length"": ""29929"", ""date"": ""Fri, 29 Sep 2023 21:21:17 GMT"", ""expires"": ""Fri, 29 Sep 2023 21:21:17 GMT"", ""cache-control"": ""private, max-age=3000"", ""last-modified"": ""Wed, 27 Sep 2023 08:18:00 GMT"", ""x-content-type-options"": ""nosniff"", ""server"": ""sffe"", ""x-xss-protection"": ""0"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+2,"GET / HTTP/1.1
+Host: www.android.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.11813545227050781,0.10111737251281738,0.045884132385253906,200,OK,[''],16,16,555,"{""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""content-type"": ""text/html"", ""content-security-policy-report-only"": ""require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/uxe-owners-acl/android"", ""cross-origin-opener-policy-report-only"": ""same-origin; report-to=\""uxe-owners-acl/android\"""", ""report-to"": ""{\""group\"":\""uxe-owners-acl/android\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/uxe-owners-acl/android\""}]}"", ""content-length"": ""29929"", ""date"": ""Fri, 29 Sep 2023 21:21:19 GMT"", ""expires"": ""Fri, 29 Sep 2023 21:21:19 GMT"", ""cache-control"": ""private, max-age=3000"", ""last-modified"": ""Wed, 27 Sep 2023 08:18:00 GMT"", ""x-content-type-options"": ""nosniff"", ""server"": ""sffe"", ""x-xss-protection"": ""0"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+3,"GET / HTTP/1.1
+Host: www.android.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.18420696258544922,0.11822223663330078,0.05253028869628906,200,OK,[''],16,16,555,"{""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""content-type"": ""text/html"", ""content-security-policy-report-only"": ""require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/uxe-owners-acl/android"", ""cross-origin-opener-policy-report-only"": ""same-origin; report-to=\""uxe-owners-acl/android\"""", ""report-to"": ""{\""group\"":\""uxe-owners-acl/android\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/uxe-owners-acl/android\""}]}"", ""content-length"": ""29929"", ""date"": ""Fri, 29 Sep 2023 21:21:21 GMT"", ""expires"": ""Fri, 29 Sep 2023 21:21:21 GMT"", ""cache-control"": ""private, max-age=3000"", ""last-modified"": ""Wed, 27 Sep 2023 08:18:00 GMT"", ""x-content-type-options"": ""nosniff"", ""server"": ""sffe"", ""x-xss-protection"": ""0"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+4,"GET / HTTP/1.1
+Host: www.android.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.1503140926361084,0.11298203468322754,0.04806375503540039,200,OK,[''],16,16,555,"{""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""content-type"": ""text/html"", ""content-security-policy-report-only"": ""require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/uxe-owners-acl/android"", ""cross-origin-opener-policy-report-only"": ""same-origin; report-to=\""uxe-owners-acl/android\"""", ""report-to"": ""{\""group\"":\""uxe-owners-acl/android\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/uxe-owners-acl/android\""}]}"", ""content-length"": ""29929"", ""date"": ""Fri, 29 Sep 2023 21:21:24 GMT"", ""expires"": ""Fri, 29 Sep 2023 21:21:24 GMT"", ""cache-control"": ""private, max-age=3000"", ""last-modified"": ""Wed, 27 Sep 2023 08:18:00 GMT"", ""x-content-type-options"": ""nosniff"", ""server"": ""sffe"", ""x-xss-protection"": ""0"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+5,"GET / HTTP/1.1
+Host: www.android.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.18391013145446777,0.1177816390991211,0.04751729965209961,200,OK,[''],16,16,555,"{""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""content-type"": ""text/html"", ""content-security-policy-report-only"": ""require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/uxe-owners-acl/android"", ""cross-origin-opener-policy-report-only"": ""same-origin; report-to=\""uxe-owners-acl/android\"""", ""report-to"": ""{\""group\"":\""uxe-owners-acl/android\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/uxe-owners-acl/android\""}]}"", ""content-length"": ""29929"", ""date"": ""Fri, 29 Sep 2023 21:21:26 GMT"", ""expires"": ""Fri, 29 Sep 2023 21:21:26 GMT"", ""cache-control"": ""private, max-age=3000"", ""last-modified"": ""Wed, 27 Sep 2023 08:18:00 GMT"", ""x-content-type-options"": ""nosniff"", ""server"": ""sffe"", ""x-xss-protection"": ""0"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+6,"GET / HTTP/1.1
+Host: www.android.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.18514442443847656,0.13827991485595703,0.057653188705444336,200,OK,[''],16,16,555,"{""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""content-type"": ""text/html"", ""content-security-policy-report-only"": ""require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/uxe-owners-acl/android"", ""cross-origin-opener-policy-report-only"": ""same-origin; report-to=\""uxe-owners-acl/android\"""", ""report-to"": ""{\""group\"":\""uxe-owners-acl/android\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/uxe-owners-acl/android\""}]}"", ""content-length"": ""29929"", ""date"": ""Fri, 29 Sep 2023 21:21:28 GMT"", ""expires"": ""Fri, 29 Sep 2023 21:21:28 GMT"", ""cache-control"": ""private, max-age=3000"", ""last-modified"": ""Wed, 27 Sep 2023 08:18:00 GMT"", ""x-content-type-options"": ""nosniff"", ""server"": ""sffe"", ""x-xss-protection"": ""0"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+7,"GET / HTTP/1.1
+Host: www.android.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.3449063301086426,0.1124725341796875,0.04141640663146973,200,OK,[''],16,16,555,"{""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""content-type"": ""text/html"", ""content-security-policy-report-only"": ""require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/uxe-owners-acl/android"", ""cross-origin-opener-policy-report-only"": ""same-origin; report-to=\""uxe-owners-acl/android\"""", ""report-to"": ""{\""group\"":\""uxe-owners-acl/android\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/uxe-owners-acl/android\""}]}"", ""content-length"": ""29929"", ""date"": ""Fri, 29 Sep 2023 21:21:30 GMT"", ""expires"": ""Fri, 29 Sep 2023 21:21:30 GMT"", ""cache-control"": ""private, max-age=3000"", ""last-modified"": ""Wed, 27 Sep 2023 08:18:00 GMT"", ""x-content-type-options"": ""nosniff"", ""server"": ""sffe"", ""x-xss-protection"": ""0"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+8,"GET / HTTP/1.1
+Host: www.android.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.20044851303100586,0.12123394012451172,0.06938695907592773,200,OK,[''],16,16,555,"{""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""content-type"": ""text/html"", ""content-security-policy-report-only"": ""require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/uxe-owners-acl/android"", ""cross-origin-opener-policy-report-only"": ""same-origin; report-to=\""uxe-owners-acl/android\"""", ""report-to"": ""{\""group\"":\""uxe-owners-acl/android\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/uxe-owners-acl/android\""}]}"", ""content-length"": ""29929"", ""date"": ""Fri, 29 Sep 2023 21:21:32 GMT"", ""expires"": ""Fri, 29 Sep 2023 21:21:32 GMT"", ""cache-control"": ""private, max-age=3000"", ""last-modified"": ""Wed, 27 Sep 2023 08:18:00 GMT"", ""x-content-type-options"": ""nosniff"", ""server"": ""sffe"", ""x-xss-protection"": ""0"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"
+9,"GET / HTTP/1.1
+Host: www.android.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.20163655281066895,0.11160540580749512,0.045299530029296875,200,OK,[''],16,16,555,"{""accept-ranges"": ""bytes"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""br"", ""content-type"": ""text/html"", ""content-security-policy-report-only"": ""require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/uxe-owners-acl/android"", ""cross-origin-opener-policy-report-only"": ""same-origin; report-to=\""uxe-owners-acl/android\"""", ""report-to"": ""{\""group\"":\""uxe-owners-acl/android\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://csp.withgoogle.com/csp/report-to/uxe-owners-acl/android\""}]}"", ""content-length"": ""29929"", ""date"": ""Fri, 29 Sep 2023 21:21:35 GMT"", ""expires"": ""Fri, 29 Sep 2023 21:21:35 GMT"", ""cache-control"": ""private, max-age=3000"", ""last-modified"": ""Wed, 27 Sep 2023 08:18:00 GMT"", ""x-content-type-options"": ""nosniff"", ""server"": ""sffe"", ""x-xss-protection"": ""0"", ""alt-svc"": ""h3=\"":443\""; ma=2592000,h3-29=\"":443\""; ma=2592000""}"

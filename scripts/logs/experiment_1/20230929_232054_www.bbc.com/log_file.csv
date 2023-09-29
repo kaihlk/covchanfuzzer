@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.bbc.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.2777860164642334,0.11085057258605957,0.0691380500793457,200,OK,[''],32,32,0,"{""connection"": ""keep-alive"", ""content-length"": ""45482"", ""content-type"": ""text/html; charset=UTF-8"", ""belfrage-cache-status"": ""MISS"", ""bid"": ""sally"", ""brequestid"": ""2ca455138480469f860df4312638539b"", ""bsig"": ""2cf064e14eb09c62a19b776a6952424f"", ""content-encoding"": ""gzip"", ""etag"": ""W/\""88adde885cec6930746ec1959fe4c861\"""", ""req-svc-chain"": ""FASTLY,GTM,BELFRAGE"", ""via"": ""1.1 BBC-GTM, 1.1 df153902fc47e450893ee30df220e710.cloudfront.net (CloudFront), 1.1 Belfrage, 1.1 varnish"", ""x-amz-cf-id"": ""fQsUg6oUCM_XBX2BrfzWSfEl9YQd4C-kIC2b3KD09tJPrIgSygV2qg=="", ""x-amz-cf-pop"": ""DUB56-P1"", ""origin-agent-cluster"": ""?0"", ""nel"": ""{\""report_to\"":\""default\"",\""max_age\"":2592000,\""include_subdomains\"":true,\""failure_fraction\"":0.25}"", ""x-bbc-edge-cache-status"": ""HIT"", ""report-to"": ""{\""group\"":\""default\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://default.bbc-reporting-api.app/report-endpoint\"",\""priority\"":1}],\""include_subdomains\"":true}"", ""server"": ""BBC-GTM"", ""strict-transport-security"": ""max-age=31536000; preload"", ""fastly-restarts"": ""1"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 21:20:56 GMT"", ""x-fastly-cache-status"": ""HIT-CLUSTER"", ""x-served-by"": ""cache-ams21058-AMS"", ""x-cache"": ""Miss from cloudfront, HIT"", ""x-cache-hits"": ""1"", ""x-timer"": ""S1696022457.560435,VS0,VE4"", ""x-fastly-pre-flight-cache"": ""MISS, HIT"", ""x-fastly-pre-flight-cache-status"": ""HIT-CLUSTER"", ""x-cache-age"": ""43"", ""x-lb-nocache"": ""true"", ""cache-control"": ""private, stale-if-error=90, stale-while-revalidate=30, max-age=0, must""}"
+1,"GET / HTTP/1.1
+Host: www.bbc.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.1853039264678955,0.1109309196472168,0.040389299392700195,200,OK,[''],32,32,0,"{""connection"": ""keep-alive"", ""content-length"": ""45482"", ""content-type"": ""text/html; charset=UTF-8"", ""belfrage-cache-status"": ""MISS"", ""bid"": ""sally"", ""brequestid"": ""2ca455138480469f860df4312638539b"", ""bsig"": ""2cf064e14eb09c62a19b776a6952424f"", ""content-encoding"": ""gzip"", ""etag"": ""W/\""88adde885cec6930746ec1959fe4c861\"""", ""req-svc-chain"": ""FASTLY,GTM,BELFRAGE"", ""via"": ""1.1 BBC-GTM, 1.1 df153902fc47e450893ee30df220e710.cloudfront.net (CloudFront), 1.1 Belfrage, 1.1 varnish"", ""x-amz-cf-id"": ""fQsUg6oUCM_XBX2BrfzWSfEl9YQd4C-kIC2b3KD09tJPrIgSygV2qg=="", ""x-amz-cf-pop"": ""DUB56-P1"", ""origin-agent-cluster"": ""?0"", ""nel"": ""{\""report_to\"":\""default\"",\""max_age\"":2592000,\""include_subdomains\"":true,\""failure_fraction\"":0.25}"", ""x-bbc-edge-cache-status"": ""HIT"", ""report-to"": ""{\""group\"":\""default\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://default.bbc-reporting-api.app/report-endpoint\"",\""priority\"":1}],\""include_subdomains\"":true}"", ""server"": ""BBC-GTM"", ""strict-transport-security"": ""max-age=31536000; preload"", ""fastly-restarts"": ""1"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 21:20:59 GMT"", ""x-fastly-cache-status"": ""HIT-CLUSTER"", ""x-served-by"": ""cache-ams21061-AMS"", ""x-cache"": ""Miss from cloudfront, HIT"", ""x-cache-hits"": ""1"", ""x-timer"": ""S1696022459.064939,VS0,VE5"", ""x-fastly-pre-flight-cache"": ""MISS, HIT"", ""x-fastly-pre-flight-cache-status"": ""HIT-CLUSTER"", ""x-cache-age"": ""46"", ""x-lb-nocache"": ""true"", ""cache-control"": ""private, stale-if-error=90, stale-while-revalidate=30, max-age=0, must""}"
+2,"GET / HTTP/1.1
+Host: www.bbc.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.18195343017578125,0.1136617660522461,0.04407000541687012,200,OK,[''],32,32,0,"{""connection"": ""keep-alive"", ""content-length"": ""45482"", ""content-type"": ""text/html; charset=UTF-8"", ""belfrage-cache-status"": ""MISS"", ""bid"": ""sally"", ""brequestid"": ""2ca455138480469f860df4312638539b"", ""bsig"": ""2cf064e14eb09c62a19b776a6952424f"", ""content-encoding"": ""gzip"", ""etag"": ""W/\""88adde885cec6930746ec1959fe4c861\"""", ""req-svc-chain"": ""FASTLY,GTM,BELFRAGE"", ""via"": ""1.1 BBC-GTM, 1.1 df153902fc47e450893ee30df220e710.cloudfront.net (CloudFront), 1.1 Belfrage, 1.1 varnish"", ""x-amz-cf-id"": ""fQsUg6oUCM_XBX2BrfzWSfEl9YQd4C-kIC2b3KD09tJPrIgSygV2qg=="", ""x-amz-cf-pop"": ""DUB56-P1"", ""origin-agent-cluster"": ""?0"", ""nel"": ""{\""report_to\"":\""default\"",\""max_age\"":2592000,\""include_subdomains\"":true,\""failure_fraction\"":0.25}"", ""x-bbc-edge-cache-status"": ""HIT"", ""report-to"": ""{\""group\"":\""default\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://default.bbc-reporting-api.app/report-endpoint\"",\""priority\"":1}],\""include_subdomains\"":true}"", ""server"": ""BBC-GTM"", ""strict-transport-security"": ""max-age=31536000; preload"", ""fastly-restarts"": ""1"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 21:21:01 GMT"", ""x-fastly-cache-status"": ""HIT-CLUSTER"", ""x-served-by"": ""cache-ams21045-AMS"", ""x-cache"": ""Miss from cloudfront, HIT"", ""x-cache-hits"": ""1"", ""x-timer"": ""S1696022462.570680,VS0,VE7"", ""x-fastly-pre-flight-cache"": ""MISS, HIT"", ""x-fastly-pre-flight-cache-status"": ""HIT-CLUSTER"", ""x-cache-age"": ""48"", ""x-lb-nocache"": ""true"", ""cache-control"": ""private, stale-if-error=90, stale-while-revalidate=30, max-age=0, must""}"
+3,"GET / HTTP/1.1
+Host: www.bbc.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.16226673126220703,0.11154341697692871,0.028295516967773438,200,OK,[''],32,32,0,"{""connection"": ""keep-alive"", ""content-length"": ""45482"", ""content-type"": ""text/html; charset=UTF-8"", ""belfrage-cache-status"": ""MISS"", ""bid"": ""sally"", ""brequestid"": ""2ca455138480469f860df4312638539b"", ""bsig"": ""2cf064e14eb09c62a19b776a6952424f"", ""content-encoding"": ""gzip"", ""etag"": ""W/\""88adde885cec6930746ec1959fe4c861\"""", ""req-svc-chain"": ""FASTLY,GTM,BELFRAGE"", ""via"": ""1.1 BBC-GTM, 1.1 df153902fc47e450893ee30df220e710.cloudfront.net (CloudFront), 1.1 Belfrage, 1.1 varnish"", ""x-amz-cf-id"": ""fQsUg6oUCM_XBX2BrfzWSfEl9YQd4C-kIC2b3KD09tJPrIgSygV2qg=="", ""x-amz-cf-pop"": ""DUB56-P1"", ""origin-agent-cluster"": ""?0"", ""nel"": ""{\""report_to\"":\""default\"",\""max_age\"":2592000,\""include_subdomains\"":true,\""failure_fraction\"":0.25}"", ""x-bbc-edge-cache-status"": ""HIT"", ""report-to"": ""{\""group\"":\""default\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://default.bbc-reporting-api.app/report-endpoint\"",\""priority\"":1}],\""include_subdomains\"":true}"", ""server"": ""BBC-GTM"", ""strict-transport-security"": ""max-age=31536000; preload"", ""fastly-restarts"": ""1"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 21:21:04 GMT"", ""x-fastly-cache-status"": ""HIT"", ""x-served-by"": ""cache-ams21044-AMS"", ""x-cache"": ""Miss from cloudfront, HIT"", ""x-cache-hits"": ""2"", ""x-timer"": ""S1696022464.372258,VS0,VE2"", ""x-fastly-pre-flight-cache"": ""MISS, HIT"", ""x-fastly-pre-flight-cache-status"": ""HIT-CLUSTER"", ""x-cache-age"": ""52"", ""x-lb-nocache"": ""true"", ""cache-control"": ""private, stale-if-error=90, stale-while-revalidate=30, max-age=0, must-revalid""}"
+4,"GET / HTTP/1.1
+Host: www.bbc.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.20086455345153809,0.1048727035522461,0.02679133415222168,200,OK,[''],32,32,0,"{""connection"": ""keep-alive"", ""content-length"": ""45482"", ""content-type"": ""text/html; charset=UTF-8"", ""belfrage-cache-status"": ""MISS"", ""bid"": ""sally"", ""brequestid"": ""2ca455138480469f860df4312638539b"", ""bsig"": ""2cf064e14eb09c62a19b776a6952424f"", ""content-encoding"": ""gzip"", ""etag"": ""W/\""88adde885cec6930746ec1959fe4c861\"""", ""req-svc-chain"": ""FASTLY,GTM,BELFRAGE"", ""via"": ""1.1 BBC-GTM, 1.1 df153902fc47e450893ee30df220e710.cloudfront.net (CloudFront), 1.1 Belfrage, 1.1 varnish"", ""x-amz-cf-id"": ""fQsUg6oUCM_XBX2BrfzWSfEl9YQd4C-kIC2b3KD09tJPrIgSygV2qg=="", ""x-amz-cf-pop"": ""DUB56-P1"", ""origin-agent-cluster"": ""?0"", ""nel"": ""{\""report_to\"":\""default\"",\""max_age\"":2592000,\""include_subdomains\"":true,\""failure_fraction\"":0.25}"", ""x-bbc-edge-cache-status"": ""HIT"", ""report-to"": ""{\""group\"":\""default\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://default.bbc-reporting-api.app/report-endpoint\"",\""priority\"":1}],\""include_subdomains\"":true}"", ""server"": ""BBC-GTM"", ""strict-transport-security"": ""max-age=31536000; preload"", ""fastly-restarts"": ""1"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 21:21:06 GMT"", ""x-fastly-cache-status"": ""HIT-CLUSTER"", ""x-served-by"": ""cache-ams21059-AMS"", ""x-cache"": ""Miss from cloudfront, HIT"", ""x-cache-hits"": ""1"", ""x-timer"": ""S1696022467.824244,VS0,VE4"", ""x-fastly-pre-flight-cache"": ""MISS, HIT"", ""x-fastly-pre-flight-cache-status"": ""HIT-CLUSTER"", ""x-cache-age"": ""54"", ""x-lb-nocache"": ""true"", ""cache-control"": ""private, stale-if-error=90, stale-while-revalidate=30, max-age=0, must""}"
+5,"GET / HTTP/1.1
+Host: www.bbc.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.21155548095703125,0.12480282783508301,0.05269289016723633,200,OK,[''],32,32,0,"{""connection"": ""keep-alive"", ""content-length"": ""45482"", ""content-type"": ""text/html; charset=UTF-8"", ""belfrage-cache-status"": ""MISS"", ""bid"": ""sally"", ""brequestid"": ""2ca455138480469f860df4312638539b"", ""bsig"": ""2cf064e14eb09c62a19b776a6952424f"", ""content-encoding"": ""gzip"", ""etag"": ""W/\""88adde885cec6930746ec1959fe4c861\"""", ""req-svc-chain"": ""FASTLY,GTM,BELFRAGE"", ""via"": ""1.1 BBC-GTM, 1.1 df153902fc47e450893ee30df220e710.cloudfront.net (CloudFront), 1.1 Belfrage, 1.1 varnish"", ""x-amz-cf-id"": ""fQsUg6oUCM_XBX2BrfzWSfEl9YQd4C-kIC2b3KD09tJPrIgSygV2qg=="", ""x-amz-cf-pop"": ""DUB56-P1"", ""origin-agent-cluster"": ""?0"", ""nel"": ""{\""report_to\"":\""default\"",\""max_age\"":2592000,\""include_subdomains\"":true,\""failure_fraction\"":0.25}"", ""x-bbc-edge-cache-status"": ""HIT"", ""report-to"": ""{\""group\"":\""default\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://default.bbc-reporting-api.app/report-endpoint\"",\""priority\"":1}],\""include_subdomains\"":true}"", ""server"": ""BBC-GTM"", ""strict-transport-security"": ""max-age=31536000; preload"", ""fastly-restarts"": ""1"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 21:21:09 GMT"", ""x-fastly-cache-status"": ""HIT-CLUSTER"", ""x-served-by"": ""cache-ams21033-AMS"", ""x-cache"": ""Miss from cloudfront, HIT"", ""x-cache-hits"": ""1"", ""x-timer"": ""S1696022469.432101,VS0,VE4"", ""x-fastly-pre-flight-cache"": ""MISS, HIT"", ""x-fastly-pre-flight-cache-status"": ""HIT-CLUSTER"", ""x-cache-age"": ""56"", ""x-lb-nocache"": ""true"", ""cache-control"": ""private, stale-if-error=90, stale-while-revalidate=30, max-age=0, must""}"
+6,"GET / HTTP/1.1
+Host: www.bbc.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.21817779541015625,0.16640639305114746,0.023431777954101562,200,OK,[''],32,32,0,"{""connection"": ""keep-alive"", ""content-length"": ""45482"", ""content-type"": ""text/html; charset=UTF-8"", ""belfrage-cache-status"": ""MISS"", ""bid"": ""sally"", ""brequestid"": ""2ca455138480469f860df4312638539b"", ""bsig"": ""2cf064e14eb09c62a19b776a6952424f"", ""content-encoding"": ""gzip"", ""etag"": ""W/\""88adde885cec6930746ec1959fe4c861\"""", ""req-svc-chain"": ""FASTLY,GTM,BELFRAGE"", ""via"": ""1.1 BBC-GTM, 1.1 df153902fc47e450893ee30df220e710.cloudfront.net (CloudFront), 1.1 Belfrage, 1.1 varnish"", ""x-amz-cf-id"": ""fQsUg6oUCM_XBX2BrfzWSfEl9YQd4C-kIC2b3KD09tJPrIgSygV2qg=="", ""x-amz-cf-pop"": ""DUB56-P1"", ""origin-agent-cluster"": ""?0"", ""nel"": ""{\""report_to\"":\""default\"",\""max_age\"":2592000,\""include_subdomains\"":true,\""failure_fraction\"":0.25}"", ""x-bbc-edge-cache-status"": ""HIT"", ""report-to"": ""{\""group\"":\""default\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://default.bbc-reporting-api.app/report-endpoint\"",\""priority\"":1}],\""include_subdomains\"":true}"", ""server"": ""BBC-GTM"", ""strict-transport-security"": ""max-age=31536000; preload"", ""fastly-restarts"": ""1"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 21:21:11 GMT"", ""x-fastly-cache-status"": ""HIT-CLUSTER"", ""x-served-by"": ""cache-ams21060-AMS"", ""x-cache"": ""Miss from cloudfront, HIT"", ""x-cache-hits"": ""1"", ""x-timer"": ""S1696022472.906178,VS0,VE3"", ""x-fastly-pre-flight-cache"": ""MISS, HIT"", ""x-fastly-pre-flight-cache-status"": ""HIT-CLUSTER"", ""x-cache-age"": ""59"", ""x-lb-nocache"": ""true"", ""cache-control"": ""private, stale-if-error=90, stale-while-revalidate=30, max-age=0, must""}"
+7,"GET / HTTP/1.1
+Host: www.bbc.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.19434571266174316,0.10806155204772949,0.05169177055358887,200,OK,[''],32,32,0,"{""connection"": ""keep-alive"", ""content-length"": ""45482"", ""content-type"": ""text/html; charset=UTF-8"", ""belfrage-cache-status"": ""MISS"", ""bid"": ""sally"", ""brequestid"": ""2ca455138480469f860df4312638539b"", ""bsig"": ""2cf064e14eb09c62a19b776a6952424f"", ""content-encoding"": ""gzip"", ""etag"": ""W/\""88adde885cec6930746ec1959fe4c861\"""", ""req-svc-chain"": ""FASTLY,GTM,BELFRAGE"", ""via"": ""1.1 BBC-GTM, 1.1 df153902fc47e450893ee30df220e710.cloudfront.net (CloudFront), 1.1 Belfrage, 1.1 varnish"", ""x-amz-cf-id"": ""fQsUg6oUCM_XBX2BrfzWSfEl9YQd4C-kIC2b3KD09tJPrIgSygV2qg=="", ""x-amz-cf-pop"": ""DUB56-P1"", ""origin-agent-cluster"": ""?0"", ""nel"": ""{\""report_to\"":\""default\"",\""max_age\"":2592000,\""include_subdomains\"":true,\""failure_fraction\"":0.25}"", ""x-bbc-edge-cache-status"": ""HIT"", ""report-to"": ""{\""group\"":\""default\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://default.bbc-reporting-api.app/report-endpoint\"",\""priority\"":1}],\""include_subdomains\"":true}"", ""server"": ""BBC-GTM"", ""strict-transport-security"": ""max-age=31536000; preload"", ""fastly-restarts"": ""1"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 21:21:14 GMT"", ""x-fastly-cache-status"": ""HIT-STALE-CLUSTER"", ""x-served-by"": ""cache-ams21034-AMS"", ""x-cache"": ""Miss from cloudfront, HIT"", ""x-cache-hits"": ""1"", ""x-timer"": ""S1696022475.541140,VS0,VE4"", ""x-fastly-pre-flight-cache"": ""MISS, HIT"", ""x-fastly-pre-flight-cache-status"": ""HIT-CLUSTER"", ""x-cache-age"": ""61"", ""x-lb-nocache"": ""true"", ""cache-control"": ""private, stale-if-error=90, stale-while-revalidate=30, max-age=0""}"
+8,"GET / HTTP/1.1
+Host: www.bbc.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.17731690406799316,0.11106300354003906,0.031442880630493164,200,OK,[''],32,32,0,"{""connection"": ""keep-alive"", ""content-length"": ""45482"", ""content-type"": ""text/html; charset=UTF-8"", ""belfrage-cache-status"": ""MISS"", ""bid"": ""sally"", ""brequestid"": ""2ca455138480469f860df4312638539b"", ""bsig"": ""2cf064e14eb09c62a19b776a6952424f"", ""content-encoding"": ""gzip"", ""etag"": ""W/\""88adde885cec6930746ec1959fe4c861\"""", ""req-svc-chain"": ""FASTLY,GTM,BELFRAGE"", ""via"": ""1.1 BBC-GTM, 1.1 df153902fc47e450893ee30df220e710.cloudfront.net (CloudFront), 1.1 Belfrage, 1.1 varnish"", ""x-amz-cf-id"": ""fQsUg6oUCM_XBX2BrfzWSfEl9YQd4C-kIC2b3KD09tJPrIgSygV2qg=="", ""x-amz-cf-pop"": ""DUB56-P1"", ""origin-agent-cluster"": ""?0"", ""nel"": ""{\""report_to\"":\""default\"",\""max_age\"":2592000,\""include_subdomains\"":true,\""failure_fraction\"":0.25}"", ""x-bbc-edge-cache-status"": ""HIT"", ""report-to"": ""{\""group\"":\""default\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://default.bbc-reporting-api.app/report-endpoint\"",\""priority\"":1}],\""include_subdomains\"":true}"", ""server"": ""BBC-GTM"", ""strict-transport-security"": ""max-age=31536000; preload"", ""fastly-restarts"": ""1"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 21:21:17 GMT"", ""x-fastly-cache-status"": ""HIT"", ""x-served-by"": ""cache-ams21065-AMS"", ""x-cache"": ""Miss from cloudfront, HIT"", ""x-cache-hits"": ""2"", ""x-timer"": ""S1696022477.170626,VS0,VE2"", ""x-fastly-pre-flight-cache"": ""MISS, HIT"", ""x-fastly-pre-flight-cache-status"": ""HIT-CLUSTER"", ""x-cache-age"": ""3"", ""x-lb-nocache"": ""true"", ""cache-control"": ""private, stale-if-error=90, stale-while-revalidate=30, max-age=0, must-revalida""}"
+9,"GET / HTTP/1.1
+Host: www.bbc.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.15477538108825684,0.11233830451965332,0.03494763374328613,200,OK,[''],32,32,0,"{""connection"": ""keep-alive"", ""content-length"": ""45482"", ""content-type"": ""text/html; charset=UTF-8"", ""belfrage-cache-status"": ""MISS"", ""bid"": ""sally"", ""brequestid"": ""2ca455138480469f860df4312638539b"", ""bsig"": ""2cf064e14eb09c62a19b776a6952424f"", ""content-encoding"": ""gzip"", ""etag"": ""W/\""88adde885cec6930746ec1959fe4c861\"""", ""req-svc-chain"": ""FASTLY,GTM,BELFRAGE"", ""via"": ""1.1 BBC-GTM, 1.1 df153902fc47e450893ee30df220e710.cloudfront.net (CloudFront), 1.1 Belfrage, 1.1 varnish"", ""x-amz-cf-id"": ""fQsUg6oUCM_XBX2BrfzWSfEl9YQd4C-kIC2b3KD09tJPrIgSygV2qg=="", ""x-amz-cf-pop"": ""DUB56-P1"", ""origin-agent-cluster"": ""?0"", ""nel"": ""{\""report_to\"":\""default\"",\""max_age\"":2592000,\""include_subdomains\"":true,\""failure_fraction\"":0.25}"", ""x-bbc-edge-cache-status"": ""HIT"", ""report-to"": ""{\""group\"":\""default\"",\""max_age\"":2592000,\""endpoints\"":[{\""url\"":\""https://default.bbc-reporting-api.app/report-endpoint\"",\""priority\"":1}],\""include_subdomains\"":true}"", ""server"": ""BBC-GTM"", ""strict-transport-security"": ""max-age=31536000; preload"", ""fastly-restarts"": ""1"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 21:21:20 GMT"", ""x-fastly-cache-status"": ""HIT-CLUSTER"", ""x-served-by"": ""cache-ams21078-AMS"", ""x-cache"": ""Miss from cloudfront, HIT"", ""x-cache-hits"": ""1"", ""x-timer"": ""S1696022480.075806,VS0,VE4"", ""x-fastly-pre-flight-cache"": ""MISS, HIT"", ""x-fastly-pre-flight-cache-status"": ""HIT-CLUSTER"", ""x-cache-age"": ""5"", ""x-lb-nocache"": ""true"", ""cache-control"": ""private, stale-if-error=90, stale-while-revalidate=30, max-age=0, must-""}"

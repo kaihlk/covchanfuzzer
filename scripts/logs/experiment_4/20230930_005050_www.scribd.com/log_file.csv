@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.scribd.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.17762351036071777,0.11387395858764648,0.04850602149963379,200,OK,[''],30,30,0,"{""connection"": ""keep-alive"", ""content-length"": ""101153"", ""content-type"": ""text/html; charset=utf-8"", ""cache-control"": ""public, no-cache"", ""content-encoding"": ""br"", ""content-security-policy"": ""frame-ancestors 'self'"", ""etag"": ""W/\""08c4c5499a28f54aec426a5fd1a97545\"""", ""link"": ""<https://cmp.osano.com/AzZdHGSGtpxCq1Cpt/4e10b135-d113-4574-a477-270ace40bba7/osano.js?language=en>; rel=preload; as=script; critical"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""server"": ""nginx"", ""status"": ""200 OK"", ""x-content-type-options"": ""nosniff"", ""x-download-options"": ""noopen"", ""x-frame-options"": ""SAMEORIGIN"", ""x-permitted-cross-domain-policies"": ""none"", ""x-request-id"": ""ad64d28a619521a680e30c11b21d8cb09d1c4b6f96616a84b5e4d717d10f47a2"", ""x-runtime"": ""0.289905"", ""x-xss-protection"": ""1; mode=block"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:50:54 GMT"", ""via"": ""1.1 varnish"", ""age"": ""169939"", ""x-served-by"": ""cache-ams21065-AMS"", ""x-cache"": ""HIT"", ""x-cache-hits"": ""1"", ""x-timer"": ""S1696027854.492664,VS0,VE1"", ""vary"": ""Accept-Encoding, X-Language-Locale, X-Scribd-Country-Code"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains"", ""set-cookie"": ""scribd_ubtc=u%3D563f719a-67ea-4282-a619-128f7a586d76%26h%3DNRe2PEpgicUHqWLphIEbppMtCakF8sEXKK1DPaCuaDc%3D; Domain=.scribd.com; Path=/; Expires=Sun, 05 Sep 2123 22:50:54 GMT; SameSite=None; Secure"", ""alt-svc"": ""h3=\"":443\"";ma=86400,h3-29=\"":443\"";ma=86400,h3-27=\"":443\"";ma=86400""}"
+1,"GET / HTTP/1.1
+Host: www.scribd.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.16945767402648926,0.11729741096496582,0.034792184829711914,200,OK,[''],30,30,0,"{""connection"": ""keep-alive"", ""content-length"": ""101153"", ""content-type"": ""text/html; charset=utf-8"", ""cache-control"": ""public, no-cache"", ""content-encoding"": ""br"", ""content-security-policy"": ""frame-ancestors 'self'"", ""etag"": ""W/\""08c4c5499a28f54aec426a5fd1a97545\"""", ""link"": ""<https://cmp.osano.com/AzZdHGSGtpxCq1Cpt/4e10b135-d113-4574-a477-270ace40bba7/osano.js?language=en>; rel=preload; as=script; critical"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""server"": ""nginx"", ""status"": ""200 OK"", ""x-content-type-options"": ""nosniff"", ""x-download-options"": ""noopen"", ""x-frame-options"": ""SAMEORIGIN"", ""x-permitted-cross-domain-policies"": ""none"", ""x-request-id"": ""ad64d28a619521a680e30c11b21d8cb09d1c4b6f96616a84b5e4d717d10f47a2"", ""x-runtime"": ""0.289905"", ""x-xss-protection"": ""1; mode=block"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:50:56 GMT"", ""via"": ""1.1 varnish"", ""age"": ""169941"", ""x-served-by"": ""cache-ams21081-AMS"", ""x-cache"": ""HIT"", ""x-cache-hits"": ""1"", ""x-timer"": ""S1696027857.928977,VS0,VE1"", ""vary"": ""Accept-Encoding, X-Language-Locale, X-Scribd-Country-Code"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains"", ""set-cookie"": ""scribd_ubtc=u%3Dbcb4e6c9-6ba2-4d89-96da-23b6f5592996%26h%3D0A2TUHy24OGPCmFSFaCMRtzPTtnZb%2FxU3BbQZwIqX8A%3D; Domain=.scribd.com; Path=/; Expires=Sun, 05 Sep 2123 22:50:56 GMT; SameSite=None; Secure"", ""alt-svc"": ""h3=\"":443\"";ma=86400,h3-29=\"":443\"";ma=86400,h3-27=\"":443\"";ma=86400""}"
+2,"GET / HTTP/1.1
+Host: www.scribd.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.25211524963378906,0.1112515926361084,0.0769815444946289,200,OK,[''],30,30,0,"{""connection"": ""keep-alive"", ""content-length"": ""101153"", ""content-type"": ""text/html; charset=utf-8"", ""cache-control"": ""public, no-cache"", ""content-encoding"": ""br"", ""content-security-policy"": ""frame-ancestors 'self'"", ""etag"": ""W/\""08c4c5499a28f54aec426a5fd1a97545\"""", ""link"": ""<https://cmp.osano.com/AzZdHGSGtpxCq1Cpt/4e10b135-d113-4574-a477-270ace40bba7/osano.js?language=en>; rel=preload; as=script; critical"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""server"": ""nginx"", ""status"": ""200 OK"", ""x-content-type-options"": ""nosniff"", ""x-download-options"": ""noopen"", ""x-frame-options"": ""SAMEORIGIN"", ""x-permitted-cross-domain-policies"": ""none"", ""x-request-id"": ""ad64d28a619521a680e30c11b21d8cb09d1c4b6f96616a84b5e4d717d10f47a2"", ""x-runtime"": ""0.289905"", ""x-xss-protection"": ""1; mode=block"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:50:59 GMT"", ""via"": ""1.1 varnish"", ""age"": ""169944"", ""x-served-by"": ""cache-ams21049-AMS"", ""x-cache"": ""HIT"", ""x-cache-hits"": ""1"", ""x-timer"": ""S1696027859.320522,VS0,VE6"", ""vary"": ""Accept-Encoding, X-Language-Locale, X-Scribd-Country-Code"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains"", ""set-cookie"": ""scribd_ubtc=u%3D7d2046f4-96a2-45bb-838e-7585f74a482f%26h%3D4k7ct%2BnUv4UfP3NT%2BEVFvl0yn97UpFOpkz3CB5sYc2g%3D; Domain=.scribd.com; Path=/; Expires=Sun, 05 Sep 2123 22:50:59 GMT; SameSite=None; Secure"", ""alt-svc"": ""h3=\"":443\"";ma=86400,h3-29=\"":443\"";ma=86400,h3-27=\"":443\"";ma=86400""}"
+3,"GET / HTTP/1.1
+Host: www.scribd.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.20192742347717285,0.10616087913513184,0.05349302291870117,200,OK,[''],30,30,0,"{""connection"": ""keep-alive"", ""content-length"": ""101153"", ""content-type"": ""text/html; charset=utf-8"", ""cache-control"": ""public, no-cache"", ""content-encoding"": ""br"", ""content-security-policy"": ""frame-ancestors 'self'"", ""etag"": ""W/\""08c4c5499a28f54aec426a5fd1a97545\"""", ""link"": ""<https://cmp.osano.com/AzZdHGSGtpxCq1Cpt/4e10b135-d113-4574-a477-270ace40bba7/osano.js?language=en>; rel=preload; as=script; critical"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""server"": ""nginx"", ""status"": ""200 OK"", ""x-content-type-options"": ""nosniff"", ""x-download-options"": ""noopen"", ""x-frame-options"": ""SAMEORIGIN"", ""x-permitted-cross-domain-policies"": ""none"", ""x-request-id"": ""ad64d28a619521a680e30c11b21d8cb09d1c4b6f96616a84b5e4d717d10f47a2"", ""x-runtime"": ""0.289905"", ""x-xss-protection"": ""1; mode=block"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:51:01 GMT"", ""via"": ""1.1 varnish"", ""age"": ""169946"", ""x-served-by"": ""cache-ams21052-AMS"", ""x-cache"": ""HIT"", ""x-cache-hits"": ""1"", ""x-timer"": ""S1696027861.468891,VS0,VE1"", ""vary"": ""Accept-Encoding, X-Language-Locale, X-Scribd-Country-Code"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains"", ""set-cookie"": ""scribd_ubtc=u%3De9819f3b-102d-4ece-9650-31b814f91962%26h%3DMgNl2ELR0%2B8fuofr5LB9JmdmImglLE%2FcOKLKJ88YfS0%3D; Domain=.scribd.com; Path=/; Expires=Sun, 05 Sep 2123 22:51:01 GMT; SameSite=None; Secure"", ""alt-svc"": ""h3=\"":443\"";ma=86400,h3-29=\"":443\"";ma=86400,h3-27=\"":443\"";ma=86400""}"
+4,"GET / HTTP/1.1
+Host: www.scribd.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.15630054473876953,0.11638021469116211,0.029432058334350586,200,OK,[''],30,30,0,"{""connection"": ""keep-alive"", ""content-length"": ""101153"", ""content-type"": ""text/html; charset=utf-8"", ""cache-control"": ""public, no-cache"", ""content-encoding"": ""br"", ""content-security-policy"": ""frame-ancestors 'self'"", ""etag"": ""W/\""08c4c5499a28f54aec426a5fd1a97545\"""", ""link"": ""<https://cmp.osano.com/AzZdHGSGtpxCq1Cpt/4e10b135-d113-4574-a477-270ace40bba7/osano.js?language=en>; rel=preload; as=script; critical"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""server"": ""nginx"", ""status"": ""200 OK"", ""x-content-type-options"": ""nosniff"", ""x-download-options"": ""noopen"", ""x-frame-options"": ""SAMEORIGIN"", ""x-permitted-cross-domain-policies"": ""none"", ""x-request-id"": ""ad64d28a619521a680e30c11b21d8cb09d1c4b6f96616a84b5e4d717d10f47a2"", ""x-runtime"": ""0.289905"", ""x-xss-protection"": ""1; mode=block"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:51:03 GMT"", ""via"": ""1.1 varnish"", ""age"": ""169948"", ""x-served-by"": ""cache-ams21059-AMS"", ""x-cache"": ""HIT"", ""x-cache-hits"": ""1"", ""x-timer"": ""S1696027863.495257,VS0,VE1"", ""vary"": ""Accept-Encoding, X-Language-Locale, X-Scribd-Country-Code"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains"", ""set-cookie"": ""scribd_ubtc=u%3D7a716963-9b2a-441f-b3c2-dc3a41b196ec%26h%3D299W3yGUOw1QrRBB5SOABhRW3eixv5v1JZ4Wpgtsyiw%3D; Domain=.scribd.com; Path=/; Expires=Sun, 05 Sep 2123 22:51:03 GMT; SameSite=None; Secure"", ""alt-svc"": ""h3=\"":443\"";ma=86400,h3-29=\"":443\"";ma=86400,h3-27=\"":443\"";ma=86400""}"
+5,"GET / HTTP/1.1
+Host: www.scribd.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.6495671272277832,0.11800765991210938,0.21513080596923828,200,OK,[''],30,30,0,"{""connection"": ""keep-alive"", ""content-length"": ""101153"", ""content-type"": ""text/html; charset=utf-8"", ""cache-control"": ""public, no-cache"", ""content-encoding"": ""br"", ""content-security-policy"": ""frame-ancestors 'self'"", ""etag"": ""W/\""08c4c5499a28f54aec426a5fd1a97545\"""", ""link"": ""<https://cmp.osano.com/AzZdHGSGtpxCq1Cpt/4e10b135-d113-4574-a477-270ace40bba7/osano.js?language=en>; rel=preload; as=script; critical"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""server"": ""nginx"", ""status"": ""200 OK"", ""x-content-type-options"": ""nosniff"", ""x-download-options"": ""noopen"", ""x-frame-options"": ""SAMEORIGIN"", ""x-permitted-cross-domain-policies"": ""none"", ""x-request-id"": ""ad64d28a619521a680e30c11b21d8cb09d1c4b6f96616a84b5e4d717d10f47a2"", ""x-runtime"": ""0.289905"", ""x-xss-protection"": ""1; mode=block"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:51:06 GMT"", ""via"": ""1.1 varnish"", ""age"": ""169951"", ""x-served-by"": ""cache-ams21068-AMS"", ""x-cache"": ""HIT"", ""x-cache-hits"": ""2"", ""x-timer"": ""S1696027866.186074,VS0,VE0"", ""vary"": ""Accept-Encoding, X-Language-Locale, X-Scribd-Country-Code"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains"", ""set-cookie"": ""scribd_ubtc=u%3Dce802c00-f2ce-45df-a28c-2ed27b1ada50%26h%3DTVtN6I6sorF4lwJzlujiWp%2FbPEgrKa0PkwoMKTDRSG0%3D; Domain=.scribd.com; Path=/; Expires=Sun, 05 Sep 2123 22:51:06 GMT; SameSite=None; Secure"", ""alt-svc"": ""h3=\"":443\"";ma=86400,h3-29=\"":443\"";ma=86400,h3-27=\"":443\"";ma=86400""}"
+6,"GET / HTTP/1.1
+Host: www.scribd.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.1395399570465088,0.10205864906311035,0.044560909271240234,200,OK,[''],30,30,0,"{""connection"": ""keep-alive"", ""content-length"": ""101153"", ""content-type"": ""text/html; charset=utf-8"", ""cache-control"": ""public, no-cache"", ""content-encoding"": ""br"", ""content-security-policy"": ""frame-ancestors 'self'"", ""etag"": ""W/\""08c4c5499a28f54aec426a5fd1a97545\"""", ""link"": ""<https://cmp.osano.com/AzZdHGSGtpxCq1Cpt/4e10b135-d113-4574-a477-270ace40bba7/osano.js?language=en>; rel=preload; as=script; critical"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""server"": ""nginx"", ""status"": ""200 OK"", ""x-content-type-options"": ""nosniff"", ""x-download-options"": ""noopen"", ""x-frame-options"": ""SAMEORIGIN"", ""x-permitted-cross-domain-policies"": ""none"", ""x-request-id"": ""ad64d28a619521a680e30c11b21d8cb09d1c4b6f96616a84b5e4d717d10f47a2"", ""x-runtime"": ""0.289905"", ""x-xss-protection"": ""1; mode=block"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:51:08 GMT"", ""via"": ""1.1 varnish"", ""age"": ""169953"", ""x-served-by"": ""cache-ams21051-AMS"", ""x-cache"": ""HIT"", ""x-cache-hits"": ""1"", ""x-timer"": ""S1696027868.459857,VS0,VE1"", ""vary"": ""Accept-Encoding, X-Language-Locale, X-Scribd-Country-Code"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains"", ""set-cookie"": ""scribd_ubtc=u%3D2549f0d9-55d0-43e1-88a7-4e129f0595eb%26h%3DaqhV3NY2%2Bpg0aAgQvH9Qx2IODg9R%2Bh5PKAhi84wYz3g%3D; Domain=.scribd.com; Path=/; Expires=Sun, 05 Sep 2123 22:51:08 GMT; SameSite=None; Secure"", ""alt-svc"": ""h3=\"":443\"";ma=86400,h3-29=\"":443\"";ma=86400,h3-27=\"":443\"";ma=86400""}"
+7,"GET / HTTP/1.1
+Host: www.scribd.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.18606138229370117,0.15943050384521484,0.13192009925842285,200,OK,[''],30,30,0,"{""connection"": ""keep-alive"", ""content-length"": ""101153"", ""content-type"": ""text/html; charset=utf-8"", ""cache-control"": ""public, no-cache"", ""content-encoding"": ""br"", ""content-security-policy"": ""frame-ancestors 'self'"", ""etag"": ""W/\""08c4c5499a28f54aec426a5fd1a97545\"""", ""link"": ""<https://cmp.osano.com/AzZdHGSGtpxCq1Cpt/4e10b135-d113-4574-a477-270ace40bba7/osano.js?language=en>; rel=preload; as=script; critical"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""server"": ""nginx"", ""status"": ""200 OK"", ""x-content-type-options"": ""nosniff"", ""x-download-options"": ""noopen"", ""x-frame-options"": ""SAMEORIGIN"", ""x-permitted-cross-domain-policies"": ""none"", ""x-request-id"": ""ad64d28a619521a680e30c11b21d8cb09d1c4b6f96616a84b5e4d717d10f47a2"", ""x-runtime"": ""0.289905"", ""x-xss-protection"": ""1; mode=block"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:51:10 GMT"", ""via"": ""1.1 varnish"", ""age"": ""169955"", ""x-served-by"": ""cache-ams21063-AMS"", ""x-cache"": ""HIT"", ""x-cache-hits"": ""1"", ""x-timer"": ""S1696027870.439111,VS0,VE1"", ""vary"": ""Accept-Encoding, X-Language-Locale, X-Scribd-Country-Code"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains"", ""set-cookie"": ""scribd_ubtc=u%3Df073d044-eb1b-4333-9f11-89eaf991ac30%26h%3DnIik62ReRokUgfThwWL%2F85tEVJsfv9QSvjbJtVdy%2BtM%3D; Domain=.scribd.com; Path=/; Expires=Sun, 05 Sep 2123 22:51:10 GMT; SameSite=None; Secure"", ""alt-svc"": ""h3=\"":443\"";ma=86400,h3-29=\"":443\"";ma=86400,h3-27=\"":443\"";ma=86400""}"
+8,"GET / HTTP/1.1
+Host: www.scribd.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.21084237098693848,0.11138224601745605,0.04248523712158203,200,OK,[''],30,30,0,"{""connection"": ""keep-alive"", ""content-length"": ""101153"", ""content-type"": ""text/html; charset=utf-8"", ""cache-control"": ""public, no-cache"", ""content-encoding"": ""br"", ""content-security-policy"": ""frame-ancestors 'self'"", ""etag"": ""W/\""08c4c5499a28f54aec426a5fd1a97545\"""", ""link"": ""<https://cmp.osano.com/AzZdHGSGtpxCq1Cpt/4e10b135-d113-4574-a477-270ace40bba7/osano.js?language=en>; rel=preload; as=script; critical"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""server"": ""nginx"", ""status"": ""200 OK"", ""x-content-type-options"": ""nosniff"", ""x-download-options"": ""noopen"", ""x-frame-options"": ""SAMEORIGIN"", ""x-permitted-cross-domain-policies"": ""none"", ""x-request-id"": ""ad64d28a619521a680e30c11b21d8cb09d1c4b6f96616a84b5e4d717d10f47a2"", ""x-runtime"": ""0.289905"", ""x-xss-protection"": ""1; mode=block"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:51:12 GMT"", ""via"": ""1.1 varnish"", ""age"": ""169957"", ""x-served-by"": ""cache-ams21065-AMS"", ""x-cache"": ""HIT"", ""x-cache-hits"": ""2"", ""x-timer"": ""S1696027873.937923,VS0,VE0"", ""vary"": ""Accept-Encoding, X-Language-Locale, X-Scribd-Country-Code"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains"", ""set-cookie"": ""scribd_ubtc=u%3Def226ca2-1099-47b9-8975-85a4d72384a5%26h%3D1U%2BnYlGJEl%2BqyP0DlqN9fOsOq1FigwinkV3K1emberQ%3D; Domain=.scribd.com; Path=/; Expires=Sun, 05 Sep 2123 22:51:12 GMT; SameSite=None; Secure"", ""alt-svc"": ""h3=\"":443\"";ma=86400,h3-29=\"":443\"";ma=86400,h3-27=\"":443\"";ma=86400""}"
+9,"GET / HTTP/1.1
+Host: www.scribd.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.1900804042816162,0.10288786888122559,0.034739017486572266,200,OK,[''],30,30,0,"{""connection"": ""keep-alive"", ""content-length"": ""101153"", ""content-type"": ""text/html; charset=utf-8"", ""cache-control"": ""public, no-cache"", ""content-encoding"": ""br"", ""content-security-policy"": ""frame-ancestors 'self'"", ""etag"": ""W/\""08c4c5499a28f54aec426a5fd1a97545\"""", ""link"": ""<https://cmp.osano.com/AzZdHGSGtpxCq1Cpt/4e10b135-d113-4574-a477-270ace40bba7/osano.js?language=en>; rel=preload; as=script; critical"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""server"": ""nginx"", ""status"": ""200 OK"", ""x-content-type-options"": ""nosniff"", ""x-download-options"": ""noopen"", ""x-frame-options"": ""SAMEORIGIN"", ""x-permitted-cross-domain-policies"": ""none"", ""x-request-id"": ""ad64d28a619521a680e30c11b21d8cb09d1c4b6f96616a84b5e4d717d10f47a2"", ""x-runtime"": ""0.289905"", ""x-xss-protection"": ""1; mode=block"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:51:14 GMT"", ""via"": ""1.1 varnish"", ""age"": ""169959"", ""x-served-by"": ""cache-ams21059-AMS"", ""x-cache"": ""HIT"", ""x-cache-hits"": ""2"", ""x-timer"": ""S1696027875.945375,VS0,VE0"", ""vary"": ""Accept-Encoding, X-Language-Locale, X-Scribd-Country-Code"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains"", ""set-cookie"": ""scribd_ubtc=u%3De8b9af17-f4e5-47ca-8831-863400d19370%26h%3DjAzuaMQCfMFUh%2FX1kdEtxbDPMfKeVqO8piXBkbA%2F6iE%3D; Domain=.scribd.com; Path=/; Expires=Sun, 05 Sep 2123 22:51:14 GMT; SameSite=None; Secure"", ""alt-svc"": ""h3=\"":443\"";ma=86400,h3-29=\"":443\"";ma=86400,h3-27=\"":443\"";ma=86400""}"

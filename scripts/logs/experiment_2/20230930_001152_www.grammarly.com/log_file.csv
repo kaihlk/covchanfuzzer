@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.grammarly.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.4111745357513428,0.10851526260375977,0.2749035358428955,200,OK,[''],12,12,14548,"{""date"": ""Fri, 29 Sep 2023 22:11:56 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-xss-protection"": ""1; mode=block"", ""referrer-policy"": ""no-referrer-when-downgrade"", ""cache-control"": ""max-age=0, no-store, no-cache"", ""content-security-policy"": ""frame-ancestors 'self' *.grammarly.com"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=31536000"", ""set-cookie"": ""browser_info=FIREFOX:102:COMPUTER:SUPPORTED:FREEMIUM:WINDOWS_10:WINDOWS; Max-Age=3600; Domain=grammarly.com; Path=/""}"
+1,"GET / HTTP/1.1
+Host: www.grammarly.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.5051918029785156,0.11125779151916504,0.2862257957458496,200,OK,[''],12,12,14518,"{""date"": ""Fri, 29 Sep 2023 22:11:59 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-xss-protection"": ""1; mode=block"", ""referrer-policy"": ""no-referrer-when-downgrade"", ""cache-control"": ""max-age=0, no-store, no-cache"", ""content-security-policy"": ""frame-ancestors 'self' *.grammarly.com"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=31536000"", ""set-cookie"": ""browser_info=FIREFOX:102:COMPUTER:SUPPORTED:FREEMIUM:WINDOWS_10:WINDOWS; Max-Age=3600; Domain=grammarly.com; Path=/""}"
+2,"GET / HTTP/1.1
+Host: www.grammarly.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.37859416007995605,0.11136651039123535,0.2868013381958008,200,OK,[''],12,12,14516,"{""date"": ""Fri, 29 Sep 2023 22:12:02 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-xss-protection"": ""1; mode=block"", ""referrer-policy"": ""no-referrer-when-downgrade"", ""cache-control"": ""max-age=0, no-store, no-cache"", ""content-security-policy"": ""frame-ancestors 'self' *.grammarly.com"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=31536000"", ""set-cookie"": ""browser_info=FIREFOX:102:COMPUTER:SUPPORTED:FREEMIUM:WINDOWS_10:WINDOWS; Max-Age=3600; Domain=grammarly.com; Path=/""}"
+3,"GET / HTTP/1.1
+Host: www.grammarly.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.45865488052368164,0.10935711860656738,0.29496192932128906,200,OK,[''],12,12,14497,"{""date"": ""Fri, 29 Sep 2023 22:12:05 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-xss-protection"": ""1; mode=block"", ""referrer-policy"": ""no-referrer-when-downgrade"", ""cache-control"": ""max-age=0, no-store, no-cache"", ""content-security-policy"": ""frame-ancestors 'self' *.grammarly.com"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=31536000"", ""set-cookie"": ""browser_info=FIREFOX:102:COMPUTER:SUPPORTED:FREEMIUM:WINDOWS_10:WINDOWS; Max-Age=3600; Domain=grammarly.com; Path=/""}"
+4,"GET / HTTP/1.1
+Host: www.grammarly.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.5895822048187256,0.1692945957183838,0.26906490325927734,200,OK,[''],12,12,14486,"{""date"": ""Fri, 29 Sep 2023 22:12:08 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-xss-protection"": ""1; mode=block"", ""referrer-policy"": ""no-referrer-when-downgrade"", ""cache-control"": ""max-age=0, no-store, no-cache"", ""content-security-policy"": ""frame-ancestors 'self' *.grammarly.com"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=31536000"", ""set-cookie"": ""browser_info=FIREFOX:102:COMPUTER:SUPPORTED:FREEMIUM:WINDOWS_10:WINDOWS; Max-Age=3600; Domain=grammarly.com; Path=/""}"
+5,"GET / HTTP/1.1
+Host: www.grammarly.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.42661452293395996,0.11104917526245117,0.3074922561645508,200,OK,[''],12,12,14527,"{""date"": ""Fri, 29 Sep 2023 22:12:11 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-xss-protection"": ""1; mode=block"", ""referrer-policy"": ""no-referrer-when-downgrade"", ""cache-control"": ""max-age=0, no-store, no-cache"", ""content-security-policy"": ""frame-ancestors 'self' *.grammarly.com"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=31536000"", ""set-cookie"": ""browser_info=FIREFOX:102:COMPUTER:SUPPORTED:FREEMIUM:WINDOWS_10:WINDOWS; Max-Age=3600; Domain=grammarly.com; Path=/""}"
+6,"GET / HTTP/1.1
+Host: www.grammarly.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.4094367027282715,0.11751294136047363,0.3103938102722168,200,OK,[''],12,12,14552,"{""date"": ""Fri, 29 Sep 2023 22:12:14 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-xss-protection"": ""1; mode=block"", ""referrer-policy"": ""no-referrer-when-downgrade"", ""cache-control"": ""max-age=0, no-store, no-cache"", ""content-security-policy"": ""frame-ancestors 'self' *.grammarly.com"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=31536000"", ""set-cookie"": ""browser_info=FIREFOX:102:COMPUTER:SUPPORTED:FREEMIUM:WINDOWS_10:WINDOWS; Max-Age=3600; Domain=grammarly.com; Path=/""}"
+7,"GET / HTTP/1.1
+Host: www.grammarly.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.47991251945495605,0.10791754722595215,0.2696104049682617,200,OK,[''],12,12,14520,"{""date"": ""Fri, 29 Sep 2023 22:12:18 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-xss-protection"": ""1; mode=block"", ""referrer-policy"": ""no-referrer-when-downgrade"", ""cache-control"": ""max-age=0, no-store, no-cache"", ""content-security-policy"": ""frame-ancestors 'self' *.grammarly.com"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=31536000"", ""set-cookie"": ""browser_info=FIREFOX:102:COMPUTER:SUPPORTED:FREEMIUM:WINDOWS_10:WINDOWS; Max-Age=3600; Domain=grammarly.com; Path=/""}"
+8,"GET / HTTP/1.1
+Host: www.grammarly.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.42508959770202637,0.11108803749084473,0.27552151679992676,200,OK,[''],12,12,14551,"{""date"": ""Fri, 29 Sep 2023 22:12:21 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-xss-protection"": ""1; mode=block"", ""referrer-policy"": ""no-referrer-when-downgrade"", ""cache-control"": ""max-age=0, no-store, no-cache"", ""content-security-policy"": ""frame-ancestors 'self' *.grammarly.com"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=31536000"", ""set-cookie"": ""browser_info=FIREFOX:102:COMPUTER:SUPPORTED:FREEMIUM:WINDOWS_10:WINDOWS; Max-Age=3600; Domain=grammarly.com; Path=/""}"
+9,"GET / HTTP/1.1
+Host: www.grammarly.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,431,HTTP/1.1,0.4297308921813965,0.10766410827636719,0.29125142097473145,200,OK,[''],12,12,14519,"{""date"": ""Fri, 29 Sep 2023 22:12:24 GMT"", ""content-type"": ""text/html; charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""x-xss-protection"": ""1; mode=block"", ""referrer-policy"": ""no-referrer-when-downgrade"", ""cache-control"": ""max-age=0, no-store, no-cache"", ""content-security-policy"": ""frame-ancestors 'self' *.grammarly.com"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=31536000"", ""set-cookie"": ""browser_info=FIREFOX:102:COMPUTER:SUPPORTED:FREEMIUM:WINDOWS_10:WINDOWS; Max-Age=3600; Domain=grammarly.com; Path=/""}"

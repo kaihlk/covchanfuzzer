@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.sharethrough.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.289139986038208,0.10636711120605469,0.11721444129943848,200,OK,[''],16,16,15056,"{""date"": ""Fri, 29 Sep 2023 23:02:50 GMT"", ""content-type"": ""text/html"", ""content-length"": ""24121"", ""connection"": ""keep-alive"", ""x-frame-options"": ""SAMEORIGIN"", ""content-security-policy"": ""frame-ancestors 'self'"", ""x-lambda-id"": ""7de83fbc-c262-462c-824d-b15c8c79aa18"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""age"": ""8447"", ""x-served-by"": ""cache-iad-kcgs7200105-IAD, cache-dub4333-DUB"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""1, 10"", ""x-timer"": ""S1696028571.950407,VS0,VE0"", ""vary"": ""Accept-Encoding,x-wf-forwarded-proto"", ""x-cluster-name"": ""eu-west-1-prod-hosting-red""}"
+1,"GET / HTTP/1.1
+Host: www.sharethrough.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.4737391471862793,0.10133647918701172,0.1630263328552246,200,OK,[''],16,16,15057,"{""date"": ""Fri, 29 Sep 2023 23:02:53 GMT"", ""content-type"": ""text/html"", ""content-length"": ""24121"", ""connection"": ""keep-alive"", ""x-frame-options"": ""SAMEORIGIN"", ""content-security-policy"": ""frame-ancestors 'self'"", ""x-lambda-id"": ""7de83fbc-c262-462c-824d-b15c8c79aa18"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""age"": ""8449"", ""x-served-by"": ""cache-iad-kcgs7200105-IAD, cache-dub4330-DUB"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""1, 8"", ""x-timer"": ""S1696028574.933203,VS0,VE0"", ""vary"": ""Accept-Encoding,x-wf-forwarded-proto"", ""x-cluster-name"": ""eu-west-1-prod-hosting-red""}"
+2,"GET / HTTP/1.1
+Host: www.sharethrough.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.2886817455291748,0.12990021705627441,0.13465666770935059,200,OK,[''],16,16,15056,"{""date"": ""Fri, 29 Sep 2023 23:02:57 GMT"", ""content-type"": ""text/html"", ""content-length"": ""24121"", ""connection"": ""keep-alive"", ""x-frame-options"": ""SAMEORIGIN"", ""content-security-policy"": ""frame-ancestors 'self'"", ""x-lambda-id"": ""7de83fbc-c262-462c-824d-b15c8c79aa18"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""age"": ""8454"", ""x-served-by"": ""cache-iad-kcgs7200105-IAD, cache-dub4333-DUB"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""1, 11"", ""x-timer"": ""S1696028578.630233,VS0,VE0"", ""vary"": ""Accept-Encoding,x-wf-forwarded-proto"", ""x-cluster-name"": ""eu-west-1-prod-hosting-red""}"
+3,"GET / HTTP/1.1
+Host: www.sharethrough.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.3682384490966797,0.10980081558227539,0.19138312339782715,200,OK,[''],16,16,15056,"{""date"": ""Fri, 29 Sep 2023 23:03:00 GMT"", ""content-type"": ""text/html"", ""content-length"": ""24121"", ""connection"": ""keep-alive"", ""x-frame-options"": ""SAMEORIGIN"", ""content-security-policy"": ""frame-ancestors 'self'"", ""x-lambda-id"": ""7de83fbc-c262-462c-824d-b15c8c79aa18"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""age"": ""8456"", ""x-served-by"": ""cache-iad-kcgs7200105-IAD, cache-dub4335-DUB"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""1, 16"", ""x-timer"": ""S1696028581.731379,VS0,VE0"", ""vary"": ""Accept-Encoding,x-wf-forwarded-proto"", ""x-cluster-name"": ""eu-west-1-prod-hosting-red""}"
+4,"GET / HTTP/1.1
+Host: www.sharethrough.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.3023242950439453,0.11292719841003418,0.315676212310791,200,OK,[''],16,16,15056,"{""date"": ""Fri, 29 Sep 2023 23:03:03 GMT"", ""content-type"": ""text/html"", ""content-length"": ""24121"", ""connection"": ""keep-alive"", ""x-frame-options"": ""SAMEORIGIN"", ""content-security-policy"": ""frame-ancestors 'self'"", ""x-lambda-id"": ""7de83fbc-c262-462c-824d-b15c8c79aa18"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""age"": ""8459"", ""x-served-by"": ""cache-iad-kcgs7200105-IAD, cache-lhr7347-LHR"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""14, 1"", ""x-timer"": ""S1696028584.751525,VS0,VE1"", ""vary"": ""Accept-Encoding,x-wf-forwarded-proto"", ""x-cluster-name"": ""eu-west-1-prod-hosting-red""}"
+5,"GET / HTTP/1.1
+Host: www.sharethrough.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.24425721168518066,0.11348819732666016,0.13584613800048828,200,OK,[''],16,16,15056,"{""date"": ""Fri, 29 Sep 2023 23:03:06 GMT"", ""content-type"": ""text/html"", ""content-length"": ""24121"", ""connection"": ""keep-alive"", ""x-frame-options"": ""SAMEORIGIN"", ""content-security-policy"": ""frame-ancestors 'self'"", ""x-lambda-id"": ""7de83fbc-c262-462c-824d-b15c8c79aa18"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""age"": ""8462"", ""x-served-by"": ""cache-iad-kcgs7200105-IAD, cache-dub4329-DUB"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""1, 17"", ""x-timer"": ""S1696028587.876919,VS0,VE0"", ""vary"": ""Accept-Encoding,x-wf-forwarded-proto"", ""x-cluster-name"": ""eu-west-1-prod-hosting-red""}"
+6,"GET / HTTP/1.1
+Host: www.sharethrough.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.26546311378479004,0.1112978458404541,0.16197729110717773,200,OK,[''],16,16,15056,"{""date"": ""Fri, 29 Sep 2023 23:03:09 GMT"", ""content-type"": ""text/html"", ""content-length"": ""24121"", ""connection"": ""keep-alive"", ""x-frame-options"": ""SAMEORIGIN"", ""content-security-policy"": ""frame-ancestors 'self'"", ""x-lambda-id"": ""7de83fbc-c262-462c-824d-b15c8c79aa18"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""age"": ""8465"", ""x-served-by"": ""cache-iad-kcgs7200105-IAD, cache-dub4344-DUB"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""1, 17"", ""x-timer"": ""S1696028590.735478,VS0,VE0"", ""vary"": ""Accept-Encoding,x-wf-forwarded-proto"", ""x-cluster-name"": ""eu-west-1-prod-hosting-red""}"
+7,"GET / HTTP/1.1
+Host: www.sharethrough.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.26386046409606934,0.11516046524047852,0.2813901901245117,200,OK,[''],16,16,15056,"{""date"": ""Fri, 29 Sep 2023 23:03:13 GMT"", ""content-type"": ""text/html"", ""content-length"": ""24121"", ""connection"": ""keep-alive"", ""x-frame-options"": ""SAMEORIGIN"", ""content-security-policy"": ""frame-ancestors 'self'"", ""x-lambda-id"": ""7de83fbc-c262-462c-824d-b15c8c79aa18"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""age"": ""8469"", ""x-served-by"": ""cache-iad-kcgs7200105-IAD, cache-lhr7337-LHR"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""14, 1"", ""x-timer"": ""S1696028593.104865,VS0,VE7"", ""vary"": ""Accept-Encoding,x-wf-forwarded-proto"", ""x-cluster-name"": ""eu-west-1-prod-hosting-red""}"
+8,"GET / HTTP/1.1
+Host: www.sharethrough.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.2487022876739502,0.11869072914123535,0.19031810760498047,200,OK,[''],16,16,15056,"{""date"": ""Fri, 29 Sep 2023 23:03:16 GMT"", ""content-type"": ""text/html"", ""content-length"": ""24121"", ""connection"": ""keep-alive"", ""x-frame-options"": ""SAMEORIGIN"", ""content-security-policy"": ""frame-ancestors 'self'"", ""x-lambda-id"": ""7de83fbc-c262-462c-824d-b15c8c79aa18"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""age"": ""8472"", ""x-served-by"": ""cache-iad-kcgs7200105-IAD, cache-lhr7350-LHR"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""14, 1"", ""x-timer"": ""S1696028596.995004,VS0,VE1"", ""vary"": ""Accept-Encoding,x-wf-forwarded-proto"", ""x-cluster-name"": ""eu-west-1-prod-hosting-red""}"
+9,"GET / HTTP/1.1
+Host: www.sharethrough.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.26402926445007324,0.11161923408508301,0.20152664184570312,200,OK,[''],16,16,15056,"{""date"": ""Fri, 29 Sep 2023 23:03:19 GMT"", ""content-type"": ""text/html"", ""content-length"": ""24121"", ""connection"": ""keep-alive"", ""x-frame-options"": ""SAMEORIGIN"", ""content-security-policy"": ""frame-ancestors 'self'"", ""x-lambda-id"": ""7de83fbc-c262-462c-824d-b15c8c79aa18"", ""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""age"": ""8475"", ""x-served-by"": ""cache-iad-kcgs7200105-IAD, cache-lhr7342-LHR"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""14, 1"", ""x-timer"": ""S1696028599.084904,VS0,VE1"", ""vary"": ""Accept-Encoding,x-wf-forwarded-proto"", ""x-cluster-name"": ""eu-west-1-prod-hosting-red""}"

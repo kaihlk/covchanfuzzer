@@ -1,0 +1,152 @@
+{
+    "configuration_variables": {
+        "experiment_no": 1,
+        "comment": "Test of function CC1(Basic) Relative URI",
+        "verbose": false,
+        "timestamp": "20230929_232007",
+        "covertchannel_request_number": 1,
+        "covertchannel_connection_number": 1,
+        "covertchannel_timing_number": 1,
+        "fuzz_value": 0.7,
+        "num_attempts": 10,
+        "max_targets": 100,
+        "max_workers": 32,
+        "wait_between_request": 0,
+        "base_line_check_frequency": 0,
+        "check_basic_request": 1,
+        "target_list": "target_list_subdomain_10000.csv",
+        "target_subset_size": 5,
+        "target_add_www": true,
+        "target_port": 443,
+        "conn_timeout": 5,
+        "nw_interface": "enp0s3",
+        "use_ipv4": true,
+        "use_TLS": true,
+        "use_HTTP2": false,
+        "HTTP_version": "HTTP/1.1",
+        "method": "GET",
+        "url": "",
+        "path": "/",
+        "standard_subdomain": "www",
+        "relative_uri": true,
+        "include_subdomain": true,
+        "include_port": false,
+        "include_subdomain_host_header": true,
+        "headers": null,
+        "standard_headers": "firefox_HTTP/1.1_TLS",
+        "content": "random"
+    },
+    "result_variables": {
+        "host_ip_info": {
+            "host": "www.bing.com",
+            "socket_info": [
+                [
+                    2,
+                    1,
+                    6,
+                    "",
+                    [
+                        "2.16.204.134",
+                        443
+                    ]
+                ],
+                [
+                    2,
+                    1,
+                    6,
+                    "",
+                    [
+                        "2.16.204.158",
+                        443
+                    ]
+                ],
+                [
+                    2,
+                    1,
+                    6,
+                    "",
+                    [
+                        "2.16.204.138",
+                        443
+                    ]
+                ],
+                [
+                    2,
+                    1,
+                    6,
+                    "",
+                    [
+                        "2.16.204.155",
+                        443
+                    ]
+                ],
+                [
+                    2,
+                    1,
+                    6,
+                    "",
+                    [
+                        "2.16.204.148",
+                        443
+                    ]
+                ],
+                [
+                    2,
+                    1,
+                    6,
+                    "",
+                    [
+                        "2.16.204.161",
+                        443
+                    ]
+                ]
+            ],
+            "ip_address": "2.16.204.134",
+            "port": 443
+        },
+        "covertchannel_request_name": "<class 'http1_request_builder.HTTP1_Request_Builder'>",
+        "covertchannel_timing_name": "<class 'http1_request_builder.HTTP1_Request_Builder'>",
+        "Received_Status_Codes": {
+            "200": 10
+        },
+        "Logged_Messages": 10,
+        "Logged_Messages_of_scheduled_attempts": 1.0,
+        "Response Properties": {
+            "Messages": 10,
+            "1xx": 0,
+            "2xx": 10,
+            "3xx": 0,
+            "4xx": 0,
+            "5xx": 0,
+            "9xx": 0
+        }
+    },
+    "statistics": {
+        "Host": "www.bing.com",
+        "IP": "2.16.204.134",
+        "IPv4": true,
+        "TLS": true,
+        "HTTP/2": false,
+        "Messages Send": 10,
+        "1xx": 0.0,
+        "2xx": 100.0,
+        "3xx": 0.0,
+        "4xx": 0.0,
+        "5xx": 0.0,
+        "9xx": 0.0,
+        "Avg Response Time": 0.07679874897003174,
+        "StdD Response Time": 0.018018646457826006,
+        "Avg Deviation Count": 0.0,
+        "StdD Deviation Count": 0.0,
+        "Avg Request Length": 426.0,
+        "StdD Request Length": 0.0,
+        "Avg URI Length": 1.0,
+        "StdD URI Length": 0.0,
+        "Avg Response Header Keys": 14.0,
+        "StdD Response Header Keys": 0.0,
+        "Avg Response Body Length": 0.0,
+        "StdD Response Body Length": 0.0,
+        "CHI2 Test Deviation-Statuscode": 0.0,
+        "CHI2 Test p": 1.0
+    }
+}

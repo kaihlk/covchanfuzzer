@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: httpd.apache.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.33379292488098145,0.1366746425628662,0.031549930572509766,200,OK,[''],16,16,0,"{""connection"": ""keep-alive"", ""content-length"": ""2723"", ""server"": ""Apache"", ""last-modified"": ""Thu, 06 Apr 2023 17:38:39 GMT"", ""etag"": ""\""20a1-5f8ae6104811e-gzip\"""", ""content-encoding"": ""gzip"", ""content-type"": ""text/html"", ""via"": ""1.1 varnish, 1.1 varnish"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 21:21:40 GMT"", ""age"": ""4984"", ""x-served-by"": ""cache-hel1410025-HEL, cache-fra-etou8220030-FRA"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""24, 1"", ""x-timer"": ""S1696022501.613800,VS0,VE2"", ""vary"": ""Accept-Encoding""}"
+1,"GET / HTTP/1.1
+Host: httpd.apache.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.4466884136199951,0.11778831481933594,0.04735159873962402,200,OK,[''],16,16,0,"{""connection"": ""keep-alive"", ""content-length"": ""2723"", ""server"": ""Apache"", ""last-modified"": ""Thu, 06 Apr 2023 17:38:39 GMT"", ""etag"": ""\""20a1-5f8ae6104811e-gzip\"""", ""content-encoding"": ""gzip"", ""content-type"": ""text/html"", ""via"": ""1.1 varnish, 1.1 varnish"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 21:21:44 GMT"", ""age"": ""4988"", ""x-served-by"": ""cache-hel1410025-HEL, cache-fra-eddf8230048-FRA"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""24, 1"", ""x-timer"": ""S1696022505.514630,VS0,VE1"", ""vary"": ""Accept-Encoding""}"
+2,"GET / HTTP/1.1
+Host: httpd.apache.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.19790053367614746,0.11120438575744629,0.030154705047607422,200,OK,[''],16,16,0,"{""connection"": ""keep-alive"", ""content-length"": ""2723"", ""server"": ""Apache"", ""last-modified"": ""Thu, 06 Apr 2023 17:38:39 GMT"", ""etag"": ""\""20a1-5f8ae6104811e-gzip\"""", ""content-encoding"": ""gzip"", ""content-type"": ""text/html"", ""via"": ""1.1 varnish, 1.1 varnish"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 21:21:48 GMT"", ""age"": ""4992"", ""x-served-by"": ""cache-hel1410025-HEL, cache-fra-etou8220061-FRA"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""24, 1"", ""x-timer"": ""S1696022509.565628,VS0,VE1"", ""vary"": ""Accept-Encoding""}"
+3,"GET / HTTP/1.1
+Host: httpd.apache.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.4108092784881592,0.11155939102172852,0.03127431869506836,200,OK,[''],16,16,0,"{""connection"": ""keep-alive"", ""content-length"": ""2723"", ""server"": ""Apache"", ""last-modified"": ""Thu, 06 Apr 2023 17:38:39 GMT"", ""etag"": ""\""20a1-5f8ae6104811e-gzip\"""", ""content-encoding"": ""gzip"", ""content-type"": ""text/html"", ""via"": ""1.1 varnish, 1.1 varnish"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 21:21:52 GMT"", ""age"": ""4996"", ""x-served-by"": ""cache-hel1410025-HEL, cache-fra-etou8220095-FRA"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""24, 1"", ""x-timer"": ""S1696022512.352017,VS0,VE1"", ""vary"": ""Accept-Encoding""}"
+4,"GET / HTTP/1.1
+Host: httpd.apache.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.14816880226135254,0.11206960678100586,0.028598785400390625,200,OK,[''],16,16,0,"{""connection"": ""keep-alive"", ""content-length"": ""2723"", ""server"": ""Apache"", ""last-modified"": ""Thu, 06 Apr 2023 17:38:39 GMT"", ""etag"": ""\""20a1-5f8ae6104811e-gzip\"""", ""content-encoding"": ""gzip"", ""content-type"": ""text/html"", ""via"": ""1.1 varnish, 1.1 varnish"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 21:21:55 GMT"", ""age"": ""4999"", ""x-served-by"": ""cache-hel1410025-HEL, cache-fra-eddf8230030-FRA"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""24, 1"", ""x-timer"": ""S1696022516.898715,VS0,VE1"", ""vary"": ""Accept-Encoding""}"
+5,"GET / HTTP/1.1
+Host: httpd.apache.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.16779184341430664,0.10648512840270996,0.028504133224487305,200,OK,[''],16,16,0,"{""connection"": ""keep-alive"", ""content-length"": ""2723"", ""server"": ""Apache"", ""last-modified"": ""Thu, 06 Apr 2023 17:38:39 GMT"", ""etag"": ""\""20a1-5f8ae6104811e-gzip\"""", ""content-encoding"": ""gzip"", ""content-type"": ""text/html"", ""via"": ""1.1 varnish, 1.1 varnish"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 21:21:59 GMT"", ""age"": ""5003"", ""x-served-by"": ""cache-hel1410025-HEL, cache-fra-eddf8230095-FRA"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""24, 1"", ""x-timer"": ""S1696022519.393783,VS0,VE1"", ""vary"": ""Accept-Encoding""}"
+6,"GET / HTTP/1.1
+Host: httpd.apache.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.23815441131591797,0.1142125129699707,0.0329747200012207,200,OK,[''],16,16,0,"{""connection"": ""keep-alive"", ""content-length"": ""2723"", ""server"": ""Apache"", ""last-modified"": ""Thu, 06 Apr 2023 17:38:39 GMT"", ""etag"": ""\""20a1-5f8ae6104811e-gzip\"""", ""content-encoding"": ""gzip"", ""content-type"": ""text/html"", ""via"": ""1.1 varnish, 1.1 varnish"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 21:22:02 GMT"", ""age"": ""5006"", ""x-served-by"": ""cache-hel1410025-HEL, cache-fra-etou8220047-FRA"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""24, 1"", ""x-timer"": ""S1696022523.938736,VS0,VE1"", ""vary"": ""Accept-Encoding""}"
+7,"GET / HTTP/1.1
+Host: httpd.apache.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.14800596237182617,0.12362051010131836,0.04834246635437012,200,OK,[''],16,16,0,"{""connection"": ""keep-alive"", ""content-length"": ""2723"", ""server"": ""Apache"", ""last-modified"": ""Thu, 06 Apr 2023 17:38:39 GMT"", ""etag"": ""\""20a1-5f8ae6104811e-gzip\"""", ""content-encoding"": ""gzip"", ""content-type"": ""text/html"", ""via"": ""1.1 varnish, 1.1 varnish"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 21:22:06 GMT"", ""age"": ""5010"", ""x-served-by"": ""cache-hel1410025-HEL, cache-fra-etou8220028-FRA"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""24, 1"", ""x-timer"": ""S1696022526.389863,VS0,VE11"", ""vary"": ""Accept-Encoding""}"
+8,"GET / HTTP/1.1
+Host: httpd.apache.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.23602557182312012,0.11100292205810547,0.0382535457611084,200,OK,[''],16,16,0,"{""connection"": ""keep-alive"", ""content-length"": ""2723"", ""server"": ""Apache"", ""last-modified"": ""Thu, 06 Apr 2023 17:38:39 GMT"", ""etag"": ""\""20a1-5f8ae6104811e-gzip\"""", ""content-encoding"": ""gzip"", ""content-type"": ""text/html"", ""via"": ""1.1 varnish, 1.1 varnish"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 21:22:10 GMT"", ""age"": ""5014"", ""x-served-by"": ""cache-hel1410025-HEL, cache-fra-eddf8230089-FRA"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""24, 1"", ""x-timer"": ""S1696022530.276636,VS0,VE1"", ""vary"": ""Accept-Encoding""}"
+9,"GET / HTTP/1.1
+Host: httpd.apache.org
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,430,HTTP/1.1,0.21191978454589844,0.11342668533325195,0.08740043640136719,200,OK,[''],16,16,0,"{""connection"": ""keep-alive"", ""content-length"": ""2723"", ""server"": ""Apache"", ""last-modified"": ""Thu, 06 Apr 2023 17:38:39 GMT"", ""etag"": ""\""20a1-5f8ae6104811e-gzip\"""", ""content-encoding"": ""gzip"", ""content-type"": ""text/html"", ""via"": ""1.1 varnish, 1.1 varnish"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 21:22:13 GMT"", ""age"": ""5017"", ""x-served-by"": ""cache-hel1410025-HEL, cache-fra-eddf8230088-FRA"", ""x-cache"": ""HIT, HIT"", ""x-cache-hits"": ""24, 1"", ""x-timer"": ""S1696022534.730998,VS0,VE2"", ""vary"": ""Accept-Encoding""}"

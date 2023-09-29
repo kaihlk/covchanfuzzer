@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.ui.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.17865705490112305,0.16167354583740234,0.0353853702545166,200,OK,[''],18,18,9951,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:44:12 GMT"", ""server"": ""nginx"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 7ef2f2ef10b33b89c251a780db8113ec.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P2"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""J5rz-bMp6fetckDJyJNZRlZjTQUHJPL8tRZ-ikRDDlPYfHzjTquFGQ=="", ""age"": ""277"", ""referrer-policy"": ""same-origin"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""vary"": ""Origin""}"
+1,"GET / HTTP/1.1
+Host: www.ui.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.12273836135864258,0.1249992847442627,0.09927248954772949,200,OK,[''],18,18,9951,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:44:12 GMT"", ""server"": ""nginx"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 b1798c28d0a3b77deb65265a32d0e278.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P2"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""wFsj7QforUVgFmUVzKEffUVonkY5bfe4Sbz67DDwULAZBkC5ZgFJTg=="", ""age"": ""279"", ""referrer-policy"": ""same-origin"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""vary"": ""Origin""}"
+2,"GET / HTTP/1.1
+Host: www.ui.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.2243340015411377,0.14225101470947266,0.03309345245361328,200,OK,[''],18,18,9951,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:44:12 GMT"", ""server"": ""nginx"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 81ecaa6db2d0fa9d47412a499ce429f2.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P2"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""7I2nkFRtryzEzBXE9YWjjT-ZidJsrXjntcOuCuJGkb7gRmXcRkeRLg=="", ""age"": ""282"", ""referrer-policy"": ""same-origin"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""vary"": ""Origin""}"
+3,"GET / HTTP/1.1
+Host: www.ui.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.16681289672851562,0.11159014701843262,0.04128551483154297,200,OK,[''],18,18,9951,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:44:12 GMT"", ""server"": ""nginx"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 45e3199947a7cf13526e49c4cabda3b8.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P2"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""G-S1v3UgZD1167SblgXv18_p9sOT8dp4mzALXVRGz4j7-3TNxUuFug=="", ""age"": ""284"", ""referrer-policy"": ""same-origin"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""vary"": ""Origin""}"
+4,"GET / HTTP/1.1
+Host: www.ui.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.12659049034118652,0.11744022369384766,0.12389588356018066,200,OK,[''],18,18,9951,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:44:12 GMT"", ""server"": ""nginx"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 b8b95510d85e7e4b69b927da534dc290.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P2"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""4BuqC0Bmp-_7U2p5uqfwbb8Yf2luL6oIBcNoaF6mfwo8RVXvnRBxqQ=="", ""age"": ""286"", ""referrer-policy"": ""same-origin"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""vary"": ""Origin""}"
+5,"GET / HTTP/1.1
+Host: www.ui.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.19715237617492676,0.1151430606842041,0.024066925048828125,200,OK,[''],18,18,9951,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:44:12 GMT"", ""server"": ""nginx"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 84c210424bc648cf84cb9425addd241e.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P2"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""QAtfdiHUItcW08eO8CPmE3yP9Jq7w8fZKRmaK2BT5vjqxcPg4QBbdQ=="", ""age"": ""288"", ""referrer-policy"": ""same-origin"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""vary"": ""Origin""}"
+6,"GET / HTTP/1.1
+Host: www.ui.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.20103764533996582,0.20047712326049805,0.026966333389282227,200,OK,[''],18,18,9951,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:44:12 GMT"", ""server"": ""nginx"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 dbd64dbf2e06de1908b4c325512a96a6.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P2"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""BA1Pz_dcIUKK1TZjUlwHwTqY996KQxf-oFMATNghafYfZa_D1_ap-w=="", ""age"": ""290"", ""referrer-policy"": ""same-origin"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""vary"": ""Origin""}"
+7,"GET / HTTP/1.1
+Host: www.ui.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.22935795783996582,0.24263930320739746,0.03708195686340332,200,OK,[''],18,18,9951,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:44:12 GMT"", ""server"": ""nginx"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 48fca78aec25689594f8d5730af7f418.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P2"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""bnnzkDFkcyPbn2AGEUU8mxaWUzKsDofo1KmtI06YgGAmMcHekw8YaA=="", ""age"": ""292"", ""referrer-policy"": ""same-origin"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""vary"": ""Origin""}"
+8,"GET / HTTP/1.1
+Host: www.ui.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.15348029136657715,0.11580824851989746,0.07231879234313965,200,OK,[''],18,18,9951,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:44:12 GMT"", ""server"": ""nginx"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 78fbb205d6a3896467f7e69057356150.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P2"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""yRzQdhLw-vGO-qgYknPyX_kUb776NWOa2Muk0eu89QvXy7LjPN8e_Q=="", ""age"": ""294"", ""referrer-policy"": ""same-origin"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""vary"": ""Origin""}"
+9,"GET / HTTP/1.1
+Host: www.ui.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,424,HTTP/1.1,0.1483325958251953,0.11206626892089844,0.039525508880615234,200,OK,[''],18,18,9951,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""date"": ""Fri, 29 Sep 2023 22:44:12 GMT"", ""server"": ""nginx"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""x-content-type-options"": ""nosniff"", ""content-encoding"": ""gzip"", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 81ecaa6db2d0fa9d47412a499ce429f2.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P2"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""BTURWEkss5l7nmxWmj3k896KClN6E_gYsyVMpJ_9Xg9It8qbvbW8sA=="", ""age"": ""296"", ""referrer-policy"": ""same-origin"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""vary"": ""Origin""}"

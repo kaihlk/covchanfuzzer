@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.dailymotion.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.19858169555664062,0.1003270149230957,0.12094449996948242,200,OK,[''],15,15,0,"{""cache-control"": ""no-cache"", ""content-encoding"": ""gzip"", ""content-length"": ""15736"", ""content-security-policy"": ""upgrade-insecure-requests"", ""content-security-policy-report-only"": ""default-src https: blob: wss: data: android-webview-video-poster: android-webview: chrome-extension: safari-extension: 'unsafe-eval' 'unsafe-inline'; report-uri https://www.dailymotion.com/content_security_policy_report_uri"", ""content-type"": ""text/html; charset=utf-8"", ""date"": ""Fri, 29 Sep 2023 21:22:14 GMT"", ""expect-ct"": ""max-age=0, report-uri=\""https://www.dailymotion.com/content_security_policy_report_uri\"""", ""referrer-policy"": ""no-referrer-when-downgrade"", ""server"": ""DMS/1.0.42"", ""server-timing"": ""total;dur=15, dc;desc=\""dc3\"""", ""set-cookie"": ""v1st=7777a218-78f2-42a4-9754-3bf99a70ed85; Path=/; Domain=dailymotion.com; Expires=Tue, 29 Oct 2024 22:22:14 GMT; Max-Age=34217999; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=31708800; includeSubDomains; preload"", ""timing-allow-origin"": ""*"", ""vary"": ""X-DM""}"
+1,"GET / HTTP/1.1
+Host: www.dailymotion.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.19833898544311523,0.1059117317199707,0.05572199821472168,200,OK,[''],15,15,0,"{""cache-control"": ""no-cache"", ""content-encoding"": ""gzip"", ""content-length"": ""15736"", ""content-security-policy"": ""upgrade-insecure-requests"", ""content-security-policy-report-only"": ""default-src https: blob: wss: data: android-webview-video-poster: android-webview: chrome-extension: safari-extension: 'unsafe-eval' 'unsafe-inline'; report-uri https://www.dailymotion.com/content_security_policy_report_uri"", ""content-type"": ""text/html; charset=utf-8"", ""date"": ""Fri, 29 Sep 2023 21:22:17 GMT"", ""expect-ct"": ""max-age=0, report-uri=\""https://www.dailymotion.com/content_security_policy_report_uri\"""", ""referrer-policy"": ""no-referrer-when-downgrade"", ""server"": ""DMS/1.0.42"", ""server-timing"": ""total;dur=19, dc;desc=\""dc3\"""", ""set-cookie"": ""v1st=549bd078-1097-4e0d-b283-1121c749d3c1; Path=/; Domain=dailymotion.com; Expires=Tue, 29 Oct 2024 22:22:17 GMT; Max-Age=34217999; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=31708800; includeSubDomains; preload"", ""timing-allow-origin"": ""*"", ""vary"": ""X-DM""}"
+2,"GET / HTTP/1.1
+Host: www.dailymotion.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.2541086673736572,0.12627625465393066,0.04763674736022949,200,OK,[''],15,15,0,"{""cache-control"": ""no-cache"", ""content-encoding"": ""gzip"", ""content-length"": ""15736"", ""content-security-policy"": ""upgrade-insecure-requests"", ""content-security-policy-report-only"": ""default-src https: blob: wss: data: android-webview-video-poster: android-webview: chrome-extension: safari-extension: 'unsafe-eval' 'unsafe-inline'; report-uri https://www.dailymotion.com/content_security_policy_report_uri"", ""content-type"": ""text/html; charset=utf-8"", ""date"": ""Fri, 29 Sep 2023 21:22:20 GMT"", ""expect-ct"": ""max-age=0, report-uri=\""https://www.dailymotion.com/content_security_policy_report_uri\"""", ""referrer-policy"": ""no-referrer-when-downgrade"", ""server"": ""DMS/1.0.42"", ""server-timing"": ""total;dur=17, dc;desc=\""dc3\"""", ""set-cookie"": ""v1st=090a774d-8e09-454d-8735-f8d9787ab66d; Path=/; Domain=dailymotion.com; Expires=Tue, 29 Oct 2024 22:22:20 GMT; Max-Age=34217999; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=31708800; includeSubDomains; preload"", ""timing-allow-origin"": ""*"", ""vary"": ""X-DM""}"
+3,"GET / HTTP/1.1
+Host: www.dailymotion.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.2274188995361328,0.11160516738891602,0.08810043334960938,200,OK,[''],15,15,0,"{""cache-control"": ""no-cache"", ""content-encoding"": ""gzip"", ""content-length"": ""15736"", ""content-security-policy"": ""upgrade-insecure-requests"", ""content-security-policy-report-only"": ""default-src https: blob: wss: data: android-webview-video-poster: android-webview: chrome-extension: safari-extension: 'unsafe-eval' 'unsafe-inline'; report-uri https://www.dailymotion.com/content_security_policy_report_uri"", ""content-type"": ""text/html; charset=utf-8"", ""date"": ""Fri, 29 Sep 2023 21:22:23 GMT"", ""expect-ct"": ""max-age=0, report-uri=\""https://www.dailymotion.com/content_security_policy_report_uri\"""", ""referrer-policy"": ""no-referrer-when-downgrade"", ""server"": ""DMS/1.0.42"", ""server-timing"": ""total;dur=19, dc;desc=\""dc3\"""", ""set-cookie"": ""v1st=f92f52f6-c71a-4c64-9d82-672cb7531e03; Path=/; Domain=dailymotion.com; Expires=Tue, 29 Oct 2024 22:22:23 GMT; Max-Age=34217999; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=31708800; includeSubDomains; preload"", ""timing-allow-origin"": ""*"", ""vary"": ""X-DM""}"
+4,"GET / HTTP/1.1
+Host: www.dailymotion.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.22713375091552734,0.11153292655944824,0.05522418022155762,200,OK,[''],15,15,0,"{""cache-control"": ""no-cache"", ""content-encoding"": ""gzip"", ""content-length"": ""15736"", ""content-security-policy"": ""upgrade-insecure-requests"", ""content-security-policy-report-only"": ""default-src https: blob: wss: data: android-webview-video-poster: android-webview: chrome-extension: safari-extension: 'unsafe-eval' 'unsafe-inline'; report-uri https://www.dailymotion.com/content_security_policy_report_uri"", ""content-type"": ""text/html; charset=utf-8"", ""date"": ""Fri, 29 Sep 2023 21:22:26 GMT"", ""expect-ct"": ""max-age=0, report-uri=\""https://www.dailymotion.com/content_security_policy_report_uri\"""", ""referrer-policy"": ""no-referrer-when-downgrade"", ""server"": ""DMS/1.0.42"", ""server-timing"": ""total;dur=18, dc;desc=\""dc3\"""", ""set-cookie"": ""v1st=9e727c96-fc7d-44a6-8f34-d00172b3cbc4; Path=/; Domain=dailymotion.com; Expires=Tue, 29 Oct 2024 22:22:26 GMT; Max-Age=34217999; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=31708800; includeSubDomains; preload"", ""timing-allow-origin"": ""*"", ""vary"": ""X-DM""}"
+5,"GET / HTTP/1.1
+Host: www.dailymotion.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.20595359802246094,0.11716198921203613,0.09520459175109863,200,OK,[''],15,15,0,"{""cache-control"": ""no-cache"", ""content-encoding"": ""gzip"", ""content-length"": ""15736"", ""content-security-policy"": ""upgrade-insecure-requests"", ""content-security-policy-report-only"": ""default-src https: blob: wss: data: android-webview-video-poster: android-webview: chrome-extension: safari-extension: 'unsafe-eval' 'unsafe-inline'; report-uri https://www.dailymotion.com/content_security_policy_report_uri"", ""content-type"": ""text/html; charset=utf-8"", ""date"": ""Fri, 29 Sep 2023 21:22:28 GMT"", ""expect-ct"": ""max-age=0, report-uri=\""https://www.dailymotion.com/content_security_policy_report_uri\"""", ""referrer-policy"": ""no-referrer-when-downgrade"", ""server"": ""DMS/1.0.42"", ""server-timing"": ""total;dur=18, dc;desc=\""dc3\"""", ""set-cookie"": ""v1st=1db1ed6f-c2e0-4eed-8305-c2ed029193f1; Path=/; Domain=dailymotion.com; Expires=Tue, 29 Oct 2024 22:22:28 GMT; Max-Age=34217999; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=31708800; includeSubDomains; preload"", ""timing-allow-origin"": ""*"", ""vary"": ""X-DM""}"
+6,"GET / HTTP/1.1
+Host: www.dailymotion.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.17329859733581543,0.11936712265014648,0.06028628349304199,200,OK,[''],15,15,0,"{""cache-control"": ""no-cache"", ""content-encoding"": ""gzip"", ""content-length"": ""15736"", ""content-security-policy"": ""upgrade-insecure-requests"", ""content-security-policy-report-only"": ""default-src https: blob: wss: data: android-webview-video-poster: android-webview: chrome-extension: safari-extension: 'unsafe-eval' 'unsafe-inline'; report-uri https://www.dailymotion.com/content_security_policy_report_uri"", ""content-type"": ""text/html; charset=utf-8"", ""date"": ""Fri, 29 Sep 2023 21:22:31 GMT"", ""expect-ct"": ""max-age=0, report-uri=\""https://www.dailymotion.com/content_security_policy_report_uri\"""", ""referrer-policy"": ""no-referrer-when-downgrade"", ""server"": ""DMS/1.0.42"", ""server-timing"": ""total;dur=17, dc;desc=\""dc3\"""", ""set-cookie"": ""v1st=7c954294-4655-49ea-a65d-fc160a4d9ae7; Path=/; Domain=dailymotion.com; Expires=Tue, 29 Oct 2024 22:22:31 GMT; Max-Age=34217999; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=31708800; includeSubDomains; preload"", ""timing-allow-origin"": ""*"", ""vary"": ""X-DM""}"
+7,"GET / HTTP/1.1
+Host: www.dailymotion.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.26886439323425293,0.10867691040039062,0.045690298080444336,200,OK,[''],15,15,0,"{""cache-control"": ""no-cache"", ""content-encoding"": ""gzip"", ""content-length"": ""15736"", ""content-security-policy"": ""upgrade-insecure-requests"", ""content-security-policy-report-only"": ""default-src https: blob: wss: data: android-webview-video-poster: android-webview: chrome-extension: safari-extension: 'unsafe-eval' 'unsafe-inline'; report-uri https://www.dailymotion.com/content_security_policy_report_uri"", ""content-type"": ""text/html; charset=utf-8"", ""date"": ""Fri, 29 Sep 2023 21:22:34 GMT"", ""expect-ct"": ""max-age=0, report-uri=\""https://www.dailymotion.com/content_security_policy_report_uri\"""", ""referrer-policy"": ""no-referrer-when-downgrade"", ""server"": ""DMS/1.0.42"", ""server-timing"": ""total;dur=13, dc;desc=\""dc3\"""", ""set-cookie"": ""v1st=b1ceb439-3ae3-4f2d-a471-526da6090220; Path=/; Domain=dailymotion.com; Expires=Tue, 29 Oct 2024 22:22:34 GMT; Max-Age=34217999; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=31708800; includeSubDomains; preload"", ""timing-allow-origin"": ""*"", ""vary"": ""X-DM""}"
+8,"GET / HTTP/1.1
+Host: www.dailymotion.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.2137012481689453,0.11050009727478027,0.04860353469848633,200,OK,[''],15,15,0,"{""cache-control"": ""no-cache"", ""content-encoding"": ""gzip"", ""content-length"": ""15736"", ""content-security-policy"": ""upgrade-insecure-requests"", ""content-security-policy-report-only"": ""default-src https: blob: wss: data: android-webview-video-poster: android-webview: chrome-extension: safari-extension: 'unsafe-eval' 'unsafe-inline'; report-uri https://www.dailymotion.com/content_security_policy_report_uri"", ""content-type"": ""text/html; charset=utf-8"", ""date"": ""Fri, 29 Sep 2023 21:22:36 GMT"", ""expect-ct"": ""max-age=0, report-uri=\""https://www.dailymotion.com/content_security_policy_report_uri\"""", ""referrer-policy"": ""no-referrer-when-downgrade"", ""server"": ""DMS/1.0.42"", ""server-timing"": ""total;dur=15, dc;desc=\""dc3\"""", ""set-cookie"": ""v1st=c815d7ac-527c-4efe-9136-1af0eea4e8d9; Path=/; Domain=dailymotion.com; Expires=Tue, 29 Oct 2024 22:22:36 GMT; Max-Age=34217999; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=31708800; includeSubDomains; preload"", ""timing-allow-origin"": ""*"", ""vary"": ""X-DM""}"
+9,"GET / HTTP/1.1
+Host: www.dailymotion.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,433,HTTP/1.1,0.4564785957336426,0.11295342445373535,0.061369895935058594,200,OK,[''],15,15,0,"{""cache-control"": ""no-cache"", ""content-encoding"": ""gzip"", ""content-length"": ""15736"", ""content-security-policy"": ""upgrade-insecure-requests"", ""content-security-policy-report-only"": ""default-src https: blob: wss: data: android-webview-video-poster: android-webview: chrome-extension: safari-extension: 'unsafe-eval' 'unsafe-inline'; report-uri https://www.dailymotion.com/content_security_policy_report_uri"", ""content-type"": ""text/html; charset=utf-8"", ""date"": ""Fri, 29 Sep 2023 21:22:39 GMT"", ""expect-ct"": ""max-age=0, report-uri=\""https://www.dailymotion.com/content_security_policy_report_uri\"""", ""referrer-policy"": ""no-referrer-when-downgrade"", ""server"": ""DMS/1.0.42"", ""server-timing"": ""total;dur=18, dc;desc=\""dc3\"""", ""set-cookie"": ""v1st=b6b8a69d-796b-48f7-95a4-cae7f5cbaea6; Path=/; Domain=dailymotion.com; Expires=Tue, 29 Oct 2024 22:22:39 GMT; Max-Age=34217999; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=31708800; includeSubDomains; preload"", ""timing-allow-origin"": ""*"", ""vary"": ""X-DM""}"

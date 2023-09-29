@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.mit.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.1503586769104004,0.10933279991149902,0.03471541404724121,200,OK,[''],13,13,46733,"{""server"": ""Apache"", ""last-modified"": ""Fri, 29 Sep 2023 04:00:47 GMT"", ""etag"": ""\""10e8304a-b6bc-65164bef\"""", ""accept-ranges"": ""bytes"", ""x-cnection"": ""close"", ""content-type"": ""text/html"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""date"": ""Fri, 29 Sep 2023 22:33:49 GMT"", ""content-length"": ""12013"", ""connection"": ""keep-alive"", ""content-security-policy"": ""frame-ancestors 'self' https://web.mit.edu https://www.mit.edu http://web.mit.edu http://www.mit.edu"", ""x-frame-options"": ""SAMEORIGIN""}"
+1,"GET / HTTP/1.1
+Host: www.mit.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.15450477600097656,0.1112825870513916,0.06651926040649414,200,OK,[''],13,13,46733,"{""server"": ""Apache"", ""last-modified"": ""Fri, 29 Sep 2023 04:00:47 GMT"", ""etag"": ""\""10e8304a-b6bc-65164bef\"""", ""accept-ranges"": ""bytes"", ""x-cnection"": ""close"", ""content-type"": ""text/html"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""date"": ""Fri, 29 Sep 2023 22:33:52 GMT"", ""content-length"": ""12013"", ""connection"": ""keep-alive"", ""content-security-policy"": ""frame-ancestors 'self' https://web.mit.edu https://www.mit.edu http://web.mit.edu http://www.mit.edu"", ""x-frame-options"": ""SAMEORIGIN""}"
+2,"GET / HTTP/1.1
+Host: www.mit.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.10863542556762695,0.12362933158874512,0.02303600311279297,200,OK,[''],13,13,46733,"{""server"": ""Apache"", ""last-modified"": ""Fri, 29 Sep 2023 04:00:47 GMT"", ""etag"": ""\""10e8304a-b6bc-65164bef\"""", ""accept-ranges"": ""bytes"", ""x-cnection"": ""close"", ""content-type"": ""text/html"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""date"": ""Fri, 29 Sep 2023 22:33:55 GMT"", ""content-length"": ""12013"", ""connection"": ""keep-alive"", ""content-security-policy"": ""frame-ancestors 'self' https://web.mit.edu https://www.mit.edu http://web.mit.edu http://www.mit.edu"", ""x-frame-options"": ""SAMEORIGIN""}"
+3,"GET / HTTP/1.1
+Host: www.mit.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.1369028091430664,0.10062170028686523,0.09270119667053223,200,OK,[''],13,13,46733,"{""server"": ""Apache"", ""last-modified"": ""Fri, 29 Sep 2023 04:00:47 GMT"", ""etag"": ""\""10e8304a-b6bc-65164bef\"""", ""accept-ranges"": ""bytes"", ""x-cnection"": ""close"", ""content-type"": ""text/html"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""date"": ""Fri, 29 Sep 2023 22:33:58 GMT"", ""content-length"": ""12013"", ""connection"": ""keep-alive"", ""content-security-policy"": ""frame-ancestors 'self' https://web.mit.edu https://www.mit.edu http://web.mit.edu http://www.mit.edu"", ""x-frame-options"": ""SAMEORIGIN""}"
+4,"GET / HTTP/1.1
+Host: www.mit.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.13863611221313477,0.11190128326416016,0.05807352066040039,200,OK,[''],13,13,46733,"{""server"": ""Apache"", ""last-modified"": ""Fri, 29 Sep 2023 04:00:47 GMT"", ""etag"": ""\""10e8304a-b6bc-65164bef\"""", ""accept-ranges"": ""bytes"", ""x-cnection"": ""close"", ""content-type"": ""text/html"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""date"": ""Fri, 29 Sep 2023 22:34:00 GMT"", ""content-length"": ""12013"", ""connection"": ""keep-alive"", ""content-security-policy"": ""frame-ancestors 'self' https://web.mit.edu https://www.mit.edu http://web.mit.edu http://www.mit.edu"", ""x-frame-options"": ""SAMEORIGIN""}"
+5,"GET / HTTP/1.1
+Host: www.mit.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.11679911613464355,0.10806655883789062,0.11980152130126953,200,OK,[''],13,13,46733,"{""server"": ""Apache"", ""last-modified"": ""Fri, 29 Sep 2023 04:00:47 GMT"", ""etag"": ""\""10e8304a-b6bc-65164bef\"""", ""accept-ranges"": ""bytes"", ""x-cnection"": ""close"", ""content-type"": ""text/html"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""date"": ""Fri, 29 Sep 2023 22:34:03 GMT"", ""content-length"": ""12013"", ""connection"": ""keep-alive"", ""content-security-policy"": ""frame-ancestors 'self' https://web.mit.edu https://www.mit.edu http://web.mit.edu http://www.mit.edu"", ""x-frame-options"": ""SAMEORIGIN""}"
+6,"GET / HTTP/1.1
+Host: www.mit.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.20210909843444824,0.11124181747436523,0.1143343448638916,200,OK,[''],13,13,46733,"{""server"": ""Apache"", ""last-modified"": ""Fri, 29 Sep 2023 04:00:47 GMT"", ""etag"": ""\""10e8304a-b6bc-65164bef\"""", ""accept-ranges"": ""bytes"", ""x-cnection"": ""close"", ""content-type"": ""text/html"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""date"": ""Fri, 29 Sep 2023 22:34:06 GMT"", ""content-length"": ""12013"", ""connection"": ""keep-alive"", ""content-security-policy"": ""frame-ancestors 'self' https://web.mit.edu https://www.mit.edu http://web.mit.edu http://www.mit.edu"", ""x-frame-options"": ""SAMEORIGIN""}"
+7,"GET / HTTP/1.1
+Host: www.mit.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.1293959617614746,0.11433100700378418,0.04539775848388672,200,OK,[''],13,13,46733,"{""server"": ""Apache"", ""last-modified"": ""Fri, 29 Sep 2023 04:00:47 GMT"", ""etag"": ""\""10e8304a-b6bc-65164bef\"""", ""accept-ranges"": ""bytes"", ""x-cnection"": ""close"", ""content-type"": ""text/html"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""date"": ""Fri, 29 Sep 2023 22:34:08 GMT"", ""content-length"": ""12013"", ""connection"": ""keep-alive"", ""content-security-policy"": ""frame-ancestors 'self' https://web.mit.edu https://www.mit.edu http://web.mit.edu http://www.mit.edu"", ""x-frame-options"": ""SAMEORIGIN""}"
+8,"GET / HTTP/1.1
+Host: www.mit.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.14962100982666016,0.11105155944824219,0.1102902889251709,200,OK,[''],13,13,46733,"{""server"": ""Apache"", ""last-modified"": ""Fri, 29 Sep 2023 04:00:47 GMT"", ""etag"": ""\""10e8304a-b6bc-65164bef\"""", ""accept-ranges"": ""bytes"", ""x-cnection"": ""close"", ""content-type"": ""text/html"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""date"": ""Fri, 29 Sep 2023 22:34:11 GMT"", ""content-length"": ""12013"", ""connection"": ""keep-alive"", ""content-security-policy"": ""frame-ancestors 'self' https://web.mit.edu https://www.mit.edu http://web.mit.edu http://www.mit.edu"", ""x-frame-options"": ""SAMEORIGIN""}"
+9,"GET / HTTP/1.1
+Host: www.mit.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.1709892749786377,0.14217424392700195,0.08276677131652832,200,OK,[''],13,13,46733,"{""server"": ""Apache"", ""last-modified"": ""Fri, 29 Sep 2023 04:00:47 GMT"", ""etag"": ""\""10e8304a-b6bc-65164bef\"""", ""accept-ranges"": ""bytes"", ""x-cnection"": ""close"", ""content-type"": ""text/html"", ""vary"": ""Accept-Encoding"", ""content-encoding"": ""gzip"", ""date"": ""Fri, 29 Sep 2023 22:34:14 GMT"", ""content-length"": ""12013"", ""connection"": ""keep-alive"", ""content-security-policy"": ""frame-ancestors 'self' https://web.mit.edu https://www.mit.edu http://web.mit.edu http://www.mit.edu"", ""x-frame-options"": ""SAMEORIGIN""}"

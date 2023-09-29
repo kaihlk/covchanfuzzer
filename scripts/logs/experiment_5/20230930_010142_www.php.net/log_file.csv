@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.php.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.18204259872436523,0.12578082084655762,0.17775988578796387,200,OK,[''],15,15,45944,"{""server"": ""myracloud"", ""date"": ""Fri, 29 Sep 2023 23:01:45 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""last-modified"": ""Fri, 29 Sep 2023 22:50:10 GMT"", ""content-language"": ""en"", ""permissions-policy"": ""interest-cohort=()"", ""x-frame-options"": ""SAMEORIGIN"", ""set-cookie"": ""LAST_NEWS=1696028504; expires=Sat, 28-Sep-2024 23:01:45 GMT; Max-Age=31536000; path=/; domain=.php.net"", ""link"": ""<https://www.php.net/index>; rel=shorturl"", ""content-encoding"": ""gzip"", ""vary"": ""accept-encoding"", ""expires"": ""Fri, 29 Sep 2023 23:01:45 GMT"", ""cache-control"": ""max-age=0""}"
+1,"GET / HTTP/1.1
+Host: www.php.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.177628755569458,0.11190390586853027,0.21236944198608398,200,OK,[''],15,15,45944,"{""server"": ""myracloud"", ""date"": ""Fri, 29 Sep 2023 23:01:48 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""last-modified"": ""Fri, 29 Sep 2023 22:50:10 GMT"", ""content-language"": ""en"", ""permissions-policy"": ""interest-cohort=()"", ""x-frame-options"": ""SAMEORIGIN"", ""set-cookie"": ""LAST_NEWS=1696028507; expires=Sat, 28-Sep-2024 23:01:48 GMT; Max-Age=31536000; path=/; domain=.php.net"", ""link"": ""<https://www.php.net/index>; rel=shorturl"", ""content-encoding"": ""gzip"", ""vary"": ""accept-encoding"", ""expires"": ""Fri, 29 Sep 2023 23:01:48 GMT"", ""cache-control"": ""max-age=0""}"
+2,"GET / HTTP/1.1
+Host: www.php.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.3340158462524414,0.11104178428649902,0.39386987686157227,200,OK,[''],15,15,45944,"{""server"": ""myracloud"", ""date"": ""Fri, 29 Sep 2023 23:01:51 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""last-modified"": ""Fri, 29 Sep 2023 22:50:10 GMT"", ""content-language"": ""en"", ""permissions-policy"": ""interest-cohort=()"", ""x-frame-options"": ""SAMEORIGIN"", ""set-cookie"": ""LAST_NEWS=1696028511; expires=Sat, 28-Sep-2024 23:01:51 GMT; Max-Age=31536000; path=/; domain=.php.net"", ""link"": ""<https://www.php.net/index>; rel=shorturl"", ""content-encoding"": ""gzip"", ""vary"": ""accept-encoding"", ""expires"": ""Fri, 29 Sep 2023 23:01:51 GMT"", ""cache-control"": ""max-age=0""}"
+3,"GET / HTTP/1.1
+Host: www.php.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.26003503799438477,0.10351157188415527,0.16619443893432617,200,OK,[''],15,15,45944,"{""server"": ""myracloud"", ""date"": ""Fri, 29 Sep 2023 23:01:54 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""last-modified"": ""Fri, 29 Sep 2023 22:50:10 GMT"", ""content-language"": ""en"", ""permissions-policy"": ""interest-cohort=()"", ""x-frame-options"": ""SAMEORIGIN"", ""set-cookie"": ""LAST_NEWS=1696028514; expires=Sat, 28-Sep-2024 23:01:54 GMT; Max-Age=31536000; path=/; domain=.php.net"", ""link"": ""<https://www.php.net/index>; rel=shorturl"", ""content-encoding"": ""gzip"", ""vary"": ""accept-encoding"", ""expires"": ""Fri, 29 Sep 2023 23:01:54 GMT"", ""cache-control"": ""max-age=0""}"
+4,"GET / HTTP/1.1
+Host: www.php.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.25415802001953125,0.11132526397705078,0.28763818740844727,200,OK,[''],15,15,45944,"{""server"": ""myracloud"", ""date"": ""Fri, 29 Sep 2023 23:01:57 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""last-modified"": ""Fri, 29 Sep 2023 22:50:10 GMT"", ""content-language"": ""en"", ""permissions-policy"": ""interest-cohort=()"", ""x-frame-options"": ""SAMEORIGIN"", ""set-cookie"": ""LAST_NEWS=1696028517; expires=Sat, 28-Sep-2024 23:01:57 GMT; Max-Age=31536000; path=/; domain=.php.net"", ""link"": ""<https://www.php.net/index>; rel=shorturl"", ""content-encoding"": ""gzip"", ""vary"": ""accept-encoding"", ""expires"": ""Fri, 29 Sep 2023 23:01:57 GMT"", ""cache-control"": ""max-age=0""}"
+5,"GET / HTTP/1.1
+Host: www.php.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.2190546989440918,0.10255789756774902,0.40884947776794434,200,OK,[''],15,15,45944,"{""server"": ""myracloud"", ""date"": ""Fri, 29 Sep 2023 23:02:00 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""last-modified"": ""Fri, 29 Sep 2023 22:50:10 GMT"", ""content-language"": ""en"", ""permissions-policy"": ""interest-cohort=()"", ""x-frame-options"": ""SAMEORIGIN"", ""set-cookie"": ""LAST_NEWS=1696028520; expires=Sat, 28-Sep-2024 23:02:00 GMT; Max-Age=31536000; path=/; domain=.php.net"", ""link"": ""<https://www.php.net/index>; rel=shorturl"", ""content-encoding"": ""gzip"", ""vary"": ""accept-encoding"", ""expires"": ""Fri, 29 Sep 2023 23:02:00 GMT"", ""cache-control"": ""max-age=0""}"
+6,"GET / HTTP/1.1
+Host: www.php.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.206892728805542,0.11285161972045898,0.31618499755859375,200,OK,[''],15,15,45944,"{""server"": ""myracloud"", ""date"": ""Fri, 29 Sep 2023 23:02:03 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""last-modified"": ""Fri, 29 Sep 2023 22:50:10 GMT"", ""content-language"": ""en"", ""permissions-policy"": ""interest-cohort=()"", ""x-frame-options"": ""SAMEORIGIN"", ""set-cookie"": ""LAST_NEWS=1696028523; expires=Sat, 28-Sep-2024 23:02:03 GMT; Max-Age=31536000; path=/; domain=.php.net"", ""link"": ""<https://www.php.net/index>; rel=shorturl"", ""content-encoding"": ""gzip"", ""vary"": ""accept-encoding"", ""expires"": ""Fri, 29 Sep 2023 23:02:03 GMT"", ""cache-control"": ""max-age=0""}"
+7,"GET / HTTP/1.1
+Host: www.php.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.17948627471923828,0.15701007843017578,0.17547202110290527,200,OK,[''],15,15,45944,"{""server"": ""myracloud"", ""date"": ""Fri, 29 Sep 2023 23:02:06 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""last-modified"": ""Fri, 29 Sep 2023 22:50:10 GMT"", ""content-language"": ""en"", ""permissions-policy"": ""interest-cohort=()"", ""x-frame-options"": ""SAMEORIGIN"", ""set-cookie"": ""LAST_NEWS=1696028526; expires=Sat, 28-Sep-2024 23:02:06 GMT; Max-Age=31536000; path=/; domain=.php.net"", ""link"": ""<https://www.php.net/index>; rel=shorturl"", ""content-encoding"": ""gzip"", ""vary"": ""accept-encoding"", ""expires"": ""Fri, 29 Sep 2023 23:02:06 GMT"", ""cache-control"": ""max-age=0""}"
+8,"GET / HTTP/1.1
+Host: www.php.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.1960759162902832,0.11321043968200684,0.20299983024597168,200,OK,[''],15,15,45944,"{""server"": ""myracloud"", ""date"": ""Fri, 29 Sep 2023 23:02:08 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""last-modified"": ""Fri, 29 Sep 2023 22:50:10 GMT"", ""content-language"": ""en"", ""permissions-policy"": ""interest-cohort=()"", ""x-frame-options"": ""SAMEORIGIN"", ""set-cookie"": ""LAST_NEWS=1696028528; expires=Sat, 28-Sep-2024 23:02:08 GMT; Max-Age=31536000; path=/; domain=.php.net"", ""link"": ""<https://www.php.net/index>; rel=shorturl"", ""content-encoding"": ""gzip"", ""vary"": ""accept-encoding"", ""expires"": ""Fri, 29 Sep 2023 23:02:08 GMT"", ""cache-control"": ""max-age=0""}"
+9,"GET / HTTP/1.1
+Host: www.php.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,425,HTTP/1.1,0.15887784957885742,0.1549842357635498,0.22568559646606445,200,OK,[''],15,15,45944,"{""server"": ""myracloud"", ""date"": ""Fri, 29 Sep 2023 23:02:11 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""last-modified"": ""Fri, 29 Sep 2023 22:50:10 GMT"", ""content-language"": ""en"", ""permissions-policy"": ""interest-cohort=()"", ""x-frame-options"": ""SAMEORIGIN"", ""set-cookie"": ""LAST_NEWS=1696028531; expires=Sat, 28-Sep-2024 23:02:11 GMT; Max-Age=31536000; path=/; domain=.php.net"", ""link"": ""<https://www.php.net/index>; rel=shorturl"", ""content-encoding"": ""gzip"", ""vary"": ""accept-encoding"", ""expires"": ""Fri, 29 Sep 2023 23:02:11 GMT"", ""cache-control"": ""max-age=0""}"

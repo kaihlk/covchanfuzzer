@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.researchgate.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.2598133087158203,0.10779023170471191,0.0956735610961914,200,OK,[''],23,23,2,"{""date"": ""Fri, 29 Sep 2023 23:01:24 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""cf-ray"": ""80e7d9091de7b8fd-AMS"", ""cf-cache-status"": ""HIT"", ""cache-control"": ""no-store, no-cache, must-revalidate, post-check=0, pre-check=0"", ""expires"": ""Thu, 19 Nov 1981 08:52:00 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 21:37:16 GMT"", ""set-cookie"": ""__cf_bm=O.g0MDyKjVCdEu9E497pxZcWzpccTMEP6Gyhf2ORvVE-1696028484-0-AX3k0fm3LOyQNQj5TeOLhCyQKt8QiVanDMvEP8ZA49iaLobOXlXzHIdYaqMVpqVBp7xazPnr+BT0J4QKw2T7rlAUeE6qR+HNXoEQ+zWVx3+k; path=/; expires=Fri, 29-Sep-23 23:31:24 GMT; domain=.researchgate.net; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=15552000; includeSubDomains; preload"", ""p3p"": ""CP=\""IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA\"""", ""pragma"": ""no-cache"", ""x-content-type-options"": ""nosniff"", ""x-envoy-upstream-service-time"": ""54"", ""x-frame-options"": ""SAMEORIGIN"", ""x-rg-pi"": ""1"", ""x-ua-compatible"": ""IE=Edge"", ""x-xss-protection"": ""1; mode=block"", ""vary"": ""Accept-Encoding"", ""server"": ""cloudflare"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+1,"GET / HTTP/1.1
+Host: www.researchgate.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.22515058517456055,0.1399977207183838,0.08196306228637695,200,OK,[''],23,23,2,"{""date"": ""Fri, 29 Sep 2023 23:01:26 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""cf-ray"": ""80e7d916cc9c1ee7-AMS"", ""cf-cache-status"": ""HIT"", ""cache-control"": ""no-store, no-cache, must-revalidate, post-check=0, pre-check=0"", ""expires"": ""Thu, 19 Nov 1981 08:52:00 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 17:37:49 GMT"", ""set-cookie"": ""__cf_bm=bVt9K820B2Tw4WT1ixWWKReehMl1jx2V5.qqE47eP2Q-1696028486-0-AeWwXZXYTdr4U3SsyxdMoP4dLCklYb4ToFtzcqstDCQxXvf76LSJQ/ar6CybaV7wEO3pFp+cioWTUdnK0QVK6c3gwTfda/ZTUSP8le1DJWdr; path=/; expires=Fri, 29-Sep-23 23:31:26 GMT; domain=.researchgate.net; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=15552000; includeSubDomains; preload"", ""p3p"": ""CP=\""IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA\"""", ""pragma"": ""no-cache"", ""x-content-type-options"": ""nosniff"", ""x-envoy-upstream-service-time"": ""60"", ""x-frame-options"": ""SAMEORIGIN"", ""x-rg-pi"": ""1"", ""x-ua-compatible"": ""IE=Edge"", ""x-xss-protection"": ""1; mode=block"", ""vary"": ""Accept-Encoding"", ""server"": ""cloudflare"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+2,"GET / HTTP/1.1
+Host: www.researchgate.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.24188899993896484,0.10105180740356445,0.06475996971130371,200,OK,[''],23,23,2,"{""date"": ""Fri, 29 Sep 2023 23:01:28 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""cf-ray"": ""80e7d9236ae3b950-AMS"", ""cf-cache-status"": ""HIT"", ""cache-control"": ""no-store, no-cache, must-revalidate, post-check=0, pre-check=0"", ""expires"": ""Thu, 19 Nov 1981 08:52:00 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 21:37:16 GMT"", ""set-cookie"": ""__cf_bm=2QABTX1tFGqM9YydUxo6wxVywVe4bm_pTmKDg1RRqcM-1696028488-0-Ab4hKAq+tF5s0zn4Q42WEx41rxJeCj12Wfll3FcjhdwPxr9ZS+Ar3+0wOAmLoeb6sARp7C/2yaN/WNQ+txzWcfRIXlwYSN8xuPveE0/NkuJG; path=/; expires=Fri, 29-Sep-23 23:31:28 GMT; domain=.researchgate.net; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=15552000; includeSubDomains; preload"", ""p3p"": ""CP=\""IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA\"""", ""pragma"": ""no-cache"", ""x-content-type-options"": ""nosniff"", ""x-envoy-upstream-service-time"": ""54"", ""x-frame-options"": ""SAMEORIGIN"", ""x-rg-pi"": ""1"", ""x-ua-compatible"": ""IE=Edge"", ""x-xss-protection"": ""1; mode=block"", ""vary"": ""Accept-Encoding"", ""server"": ""cloudflare"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+3,"GET / HTTP/1.1
+Host: www.researchgate.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.14821410179138184,0.10468459129333496,0.09045171737670898,200,OK,[''],23,23,102,"{""date"": ""Fri, 29 Sep 2023 23:01:30 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""cf-ray"": ""80e7d930a8741b04-AMS"", ""cf-cache-status"": ""HIT"", ""cache-control"": ""no-store, no-cache, must-revalidate, post-check=0, pre-check=0"", ""expires"": ""Thu, 19 Nov 1981 08:52:00 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 15:28:08 GMT"", ""set-cookie"": ""__cf_bm=MGO_pkww27WfijNVTuvlfPdwFnfa2FdYH0_7.4rDSwo-1696028490-0-Abwx5O/qzWbFKUklTzQvqS1g1xXWC5a9ExcG9C7l6cnOuK3t/lW56MKi0P4eA/f4E6qc3WSyy9kGaHKn5mCvNduB+rcag4PAs8y7RF7HepT2; path=/; expires=Fri, 29-Sep-23 23:31:30 GMT; domain=.researchgate.net; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=15552000; includeSubDomains; preload"", ""p3p"": ""CP=\""IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA\"""", ""pragma"": ""no-cache"", ""x-content-type-options"": ""nosniff"", ""x-envoy-upstream-service-time"": ""48"", ""x-frame-options"": ""SAMEORIGIN"", ""x-rg-pi"": ""1"", ""x-ua-compatible"": ""IE=Edge"", ""x-xss-protection"": ""1; mode=block"", ""vary"": ""Accept-Encoding"", ""server"": ""cloudflare"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+4,"GET / HTTP/1.1
+Host: www.researchgate.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.23402142524719238,0.11094832420349121,0.07350420951843262,200,OK,[''],23,23,42,"{""date"": ""Fri, 29 Sep 2023 23:01:32 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""cf-ray"": ""80e7d93cef05d0d1-AMS"", ""cf-cache-status"": ""HIT"", ""cache-control"": ""no-store, no-cache, must-revalidate, post-check=0, pre-check=0"", ""expires"": ""Thu, 19 Nov 1981 08:52:00 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 21:37:16 GMT"", ""set-cookie"": ""__cf_bm=jaWX69Fn2hL30Y8MwhzwlX2NhzoAxJWAAWlvytI38jM-1696028492-0-AeiVtitNAPPewD2/QDMQaecv7azXr/DCPasFOPQA4qGnX4qstKHz0VL6IYKg66Tfpm1BpkemiK4a1XSTWTQLJFI0U/s+I91haLoRGrNGSlz4; path=/; expires=Fri, 29-Sep-23 23:31:32 GMT; domain=.researchgate.net; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=15552000; includeSubDomains; preload"", ""p3p"": ""CP=\""IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA\"""", ""pragma"": ""no-cache"", ""x-content-type-options"": ""nosniff"", ""x-envoy-upstream-service-time"": ""54"", ""x-frame-options"": ""SAMEORIGIN"", ""x-rg-pi"": ""1"", ""x-ua-compatible"": ""IE=Edge"", ""x-xss-protection"": ""1; mode=block"", ""vary"": ""Accept-Encoding"", ""server"": ""cloudflare"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+5,"GET / HTTP/1.1
+Host: www.researchgate.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.22687029838562012,0.10569381713867188,0.06806802749633789,200,OK,[''],23,23,2,"{""date"": ""Fri, 29 Sep 2023 23:01:34 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""cf-ray"": ""80e7d94a9a26b98c-AMS"", ""cf-cache-status"": ""HIT"", ""cache-control"": ""no-store, no-cache, must-revalidate, post-check=0, pre-check=0"", ""expires"": ""Thu, 19 Nov 1981 08:52:00 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 21:37:16 GMT"", ""set-cookie"": ""__cf_bm=8RvsZJK6nyGomXRXkxarl9Oys5l5_oJld9UQbt1NBbk-1696028494-0-ARvl7FLqJ0KwEIlwCDq2c34OWN3QAJbipPBfvjUhyk8jUwWBzBC+HkqsTi17+cCuyu7YcbMoS3nLoAgy9fatzZLwJWAtSyawkFg8ntY5gLVc; path=/; expires=Fri, 29-Sep-23 23:31:34 GMT; domain=.researchgate.net; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=15552000; includeSubDomains; preload"", ""p3p"": ""CP=\""IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA\"""", ""pragma"": ""no-cache"", ""x-content-type-options"": ""nosniff"", ""x-envoy-upstream-service-time"": ""54"", ""x-frame-options"": ""SAMEORIGIN"", ""x-rg-pi"": ""1"", ""x-ua-compatible"": ""IE=Edge"", ""x-xss-protection"": ""1; mode=block"", ""vary"": ""Accept-Encoding"", ""server"": ""cloudflare"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+6,"GET / HTTP/1.1
+Host: www.researchgate.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.33744168281555176,0.121490478515625,0.12603545188903809,200,OK,[''],23,23,2,"{""date"": ""Fri, 29 Sep 2023 23:01:36 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""cf-ray"": ""80e7d9564d6b1b0c-AMS"", ""cf-cache-status"": ""HIT"", ""cache-control"": ""no-store, no-cache, must-revalidate, post-check=0, pre-check=0"", ""expires"": ""Thu, 19 Nov 1981 08:52:00 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 15:28:08 GMT"", ""set-cookie"": ""__cf_bm=49gstgeD_fTzn17Hn9MaZMT4n2Hb_MLESVpn2vl01NU-1696028496-0-AQDaW8BjlqVnUaEJs7nGLUTHjaL4l8PAKAsal0PIvw/kITLLNaF4/wOpuyflky0ODOb7Pp5AJO3L37rI6EIWKgwKyYQdIs48hUxSI3XhaYvO; path=/; expires=Fri, 29-Sep-23 23:31:36 GMT; domain=.researchgate.net; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=15552000; includeSubDomains; preload"", ""p3p"": ""CP=\""IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA\"""", ""pragma"": ""no-cache"", ""x-content-type-options"": ""nosniff"", ""x-envoy-upstream-service-time"": ""48"", ""x-frame-options"": ""SAMEORIGIN"", ""x-rg-pi"": ""1"", ""x-ua-compatible"": ""IE=Edge"", ""x-xss-protection"": ""1; mode=block"", ""vary"": ""Accept-Encoding"", ""server"": ""cloudflare"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+7,"GET / HTTP/1.1
+Host: www.researchgate.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.2929556369781494,0.11202836036682129,0.048186302185058594,200,OK,[''],23,23,2,"{""date"": ""Fri, 29 Sep 2023 23:01:38 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""cf-ray"": ""80e7d9633d5b1cbe-AMS"", ""cf-cache-status"": ""HIT"", ""cache-control"": ""no-store, no-cache, must-revalidate, post-check=0, pre-check=0"", ""expires"": ""Thu, 19 Nov 1981 08:52:00 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 16:41:29 GMT"", ""set-cookie"": ""__cf_bm=05kbyhXMu5inRizsJi2IGXXb6kGQEJhTgOHsWwHNyjg-1696028498-0-ARuqjZKUsI9XzqbI6iQeJE5H9epUlIcVFa11V/YymhbTrT+idjGEWE+JweQw+0AqdOHhI4222Mi6PWzJ3BkrSv+1ONlojSEM1j2Ej1Vl9mNn; path=/; expires=Fri, 29-Sep-23 23:31:38 GMT; domain=.researchgate.net; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=15552000; includeSubDomains; preload"", ""p3p"": ""CP=\""IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA\"""", ""pragma"": ""no-cache"", ""x-content-type-options"": ""nosniff"", ""x-envoy-upstream-service-time"": ""61"", ""x-frame-options"": ""SAMEORIGIN"", ""x-rg-pi"": ""1"", ""x-ua-compatible"": ""IE=Edge"", ""x-xss-protection"": ""1; mode=block"", ""vary"": ""Accept-Encoding"", ""server"": ""cloudflare"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+8,"GET / HTTP/1.1
+Host: www.researchgate.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.1835157871246338,0.10564160346984863,0.07654976844787598,200,OK,[''],23,23,2,"{""date"": ""Fri, 29 Sep 2023 23:01:40 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""cf-ray"": ""80e7d9703b58b7ea-AMS"", ""cf-cache-status"": ""HIT"", ""cache-control"": ""no-store, no-cache, must-revalidate, post-check=0, pre-check=0"", ""expires"": ""Thu, 19 Nov 1981 08:52:00 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 15:27:14 GMT"", ""set-cookie"": ""__cf_bm=VoBCQSaOyhtb.W8hh1W_0RyG.1ANhNPh2QDuVWy..b4-1696028500-0-ARavEEkmdRBcolS/xN6e9g1yLb7h2ZAw2XZtTUTNsv6RtjtPp/RbydilLRXghe1CMrhL0jznc5sHZBmSocWPP4xqNiCM/DXjvYFYFb5F4t/c; path=/; expires=Fri, 29-Sep-23 23:31:40 GMT; domain=.researchgate.net; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=15552000; includeSubDomains; preload"", ""p3p"": ""CP=\""IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA\"""", ""pragma"": ""no-cache"", ""x-content-type-options"": ""nosniff"", ""x-envoy-upstream-service-time"": ""46"", ""x-frame-options"": ""SAMEORIGIN"", ""x-rg-pi"": ""1"", ""x-ua-compatible"": ""IE=Edge"", ""x-xss-protection"": ""1; mode=block"", ""vary"": ""Accept-Encoding"", ""server"": ""cloudflare"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"
+9,"GET / HTTP/1.1
+Host: www.researchgate.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,434,HTTP/1.1,0.27903103828430176,0.1260969638824463,0.08000636100769043,200,OK,[''],23,23,2,"{""date"": ""Fri, 29 Sep 2023 23:01:42 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""cf-ray"": ""80e7d97dbadbb8e2-AMS"", ""cf-cache-status"": ""HIT"", ""cache-control"": ""no-store, no-cache, must-revalidate, post-check=0, pre-check=0"", ""expires"": ""Thu, 19 Nov 1981 08:52:00 GMT"", ""last-modified"": ""Fri, 29 Sep 2023 21:37:16 GMT"", ""set-cookie"": ""__cf_bm=tOOUYJ4xlhY.BeVpKcUOJGcLaPIFvuddGoeC_GgNAcE-1696028502-0-AWqxzhgljfIqW4KdbzD5/Lwiw9Q+KqqVVFGoZ8w31fci0B9pF+YKpnzjGXLX0ZOZkMdIWjocEeSDLZzWqkHlU9xZXKk9e1yUPQ7Mpxe/2UQg; path=/; expires=Fri, 29-Sep-23 23:31:42 GMT; domain=.researchgate.net; HttpOnly; Secure; SameSite=None"", ""strict-transport-security"": ""max-age=15552000; includeSubDomains; preload"", ""p3p"": ""CP=\""IDC DSP COR CURa ADMa OUR IND PHY ONL COM STA\"""", ""pragma"": ""no-cache"", ""x-content-type-options"": ""nosniff"", ""x-envoy-upstream-service-time"": ""54"", ""x-frame-options"": ""SAMEORIGIN"", ""x-rg-pi"": ""1"", ""x-ua-compatible"": ""IE=Edge"", ""x-xss-protection"": ""1; mode=block"", ""vary"": ""Accept-Encoding"", ""server"": ""cloudflare"", ""content-encoding"": ""br"", ""alt-svc"": ""h3=\"":443\""; ma=86400""}"

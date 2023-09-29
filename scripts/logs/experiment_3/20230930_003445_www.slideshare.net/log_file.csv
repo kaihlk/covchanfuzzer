@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.slideshare.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.13901114463806152,0.11041975021362305,0.24674725532531738,200,OK,[''],21,21,0,"{""connection"": ""keep-alive"", ""content-type"": ""text/html; charset=utf-8"", ""server"": ""nginx"", ""x-powered-by"": ""Next.js"", ""etag"": ""\""15fi1p50ivy2dcw\"""", ""cache-control"": ""private, no-cache, no-store, max-age=0, must-revalidate"", ""content-encoding"": ""gzip"", ""p3p"": ""CP=\""OTI DSP COR CUR ADM DEV PSD IVD CONo OUR IND\"""", ""x-content-type-options"": ""nosniff"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:34:50 GMT"", ""via"": ""1.1 varnish"", ""x-served-by"": ""cache-ams21048-AMS"", ""x-cache"": ""MISS"", ""x-cache-hits"": ""0"", ""x-timer"": ""S1696026890.165119,VS0,VE211"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""browser_id=1e5c2f56-8cd4-4a4f-9f6b-cd3d41e4bf75; Domain=.slideshare.net; Path=/; Expires=Wed, 27 Sep 2028 22:34:50 GMT"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""alt-svc"": ""h3=\"":443\"";ma=86400,h3-29=\"":443\"";ma=86400,h3-27=\"":443\"";ma=86400"", ""transfer-encoding"": ""chunked""}"
+1,"GET / HTTP/1.1
+Host: www.slideshare.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.14906883239746094,0.11109662055969238,0.38503479957580566,200,OK,[''],21,21,0,"{""connection"": ""keep-alive"", ""content-type"": ""text/html; charset=utf-8"", ""server"": ""nginx"", ""x-powered-by"": ""Next.js"", ""etag"": ""\""ct17iio3mk2dcw\"""", ""cache-control"": ""private, no-cache, no-store, max-age=0, must-revalidate"", ""content-encoding"": ""gzip"", ""p3p"": ""CP=\""OTI DSP COR CUR ADM DEV PSD IVD CONo OUR IND\"""", ""x-content-type-options"": ""nosniff"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:34:53 GMT"", ""via"": ""1.1 varnish"", ""x-served-by"": ""cache-ams21051-AMS"", ""x-cache"": ""MISS"", ""x-cache-hits"": ""0"", ""x-timer"": ""S1696026893.360759,VS0,VE349"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""browser_id=2303db4b-601b-4db5-9e97-8760c5f9d606; Domain=.slideshare.net; Path=/; Expires=Wed, 27 Sep 2028 22:34:53 GMT"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""alt-svc"": ""h3=\"":443\"";ma=86400,h3-29=\"":443\"";ma=86400,h3-27=\"":443\"";ma=86400"", ""transfer-encoding"": ""chunked""}"
+2,"GET / HTTP/1.1
+Host: www.slideshare.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.15886354446411133,0.21130108833312988,0.6299068927764893,200,OK,[''],21,21,0,"{""connection"": ""keep-alive"", ""content-type"": ""text/html; charset=utf-8"", ""server"": ""nginx"", ""x-powered-by"": ""Next.js"", ""etag"": ""\""e5bg5r9d872dcw\"""", ""cache-control"": ""private, no-cache, no-store, max-age=0, must-revalidate"", ""content-encoding"": ""gzip"", ""p3p"": ""CP=\""OTI DSP COR CUR ADM DEV PSD IVD CONo OUR IND\"""", ""x-content-type-options"": ""nosniff"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:34:56 GMT"", ""via"": ""1.1 varnish"", ""x-served-by"": ""cache-ams21059-AMS"", ""x-cache"": ""MISS"", ""x-cache-hits"": ""0"", ""x-timer"": ""S1696026896.224057,VS0,VE603"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""browser_id=85f95a62-a743-4582-84a3-8ac49568bb0f; Domain=.slideshare.net; Path=/; Expires=Wed, 27 Sep 2028 22:34:56 GMT"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""alt-svc"": ""h3=\"":443\"";ma=86400,h3-29=\"":443\"";ma=86400,h3-27=\"":443\"";ma=86400"", ""transfer-encoding"": ""chunked""}"
+3,"GET / HTTP/1.1
+Host: www.slideshare.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.15554499626159668,0.1746046543121338,0.2608015537261963,200,OK,[''],21,21,0,"{""connection"": ""keep-alive"", ""content-type"": ""text/html; charset=utf-8"", ""server"": ""nginx"", ""x-powered-by"": ""Next.js"", ""etag"": ""\""e5bg5r9d872dcw\"""", ""cache-control"": ""private, no-cache, no-store, max-age=0, must-revalidate"", ""content-encoding"": ""gzip"", ""p3p"": ""CP=\""OTI DSP COR CUR ADM DEV PSD IVD CONo OUR IND\"""", ""x-content-type-options"": ""nosniff"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:34:59 GMT"", ""via"": ""1.1 varnish"", ""x-served-by"": ""cache-ams21046-AMS"", ""x-cache"": ""MISS"", ""x-cache-hits"": ""0"", ""x-timer"": ""S1696026899.341086,VS0,VE225"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""browser_id=6076f36b-9fb1-43c8-b701-311b05b1adbe; Domain=.slideshare.net; Path=/; Expires=Wed, 27 Sep 2028 22:34:59 GMT"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""alt-svc"": ""h3=\"":443\"";ma=86400,h3-29=\"":443\"";ma=86400,h3-27=\"":443\"";ma=86400"", ""transfer-encoding"": ""chunked""}"
+4,"GET / HTTP/1.1
+Host: www.slideshare.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.23258304595947266,0.11155033111572266,0.2861652374267578,200,OK,[''],21,21,0,"{""connection"": ""keep-alive"", ""content-type"": ""text/html; charset=utf-8"", ""server"": ""nginx"", ""x-powered-by"": ""Next.js"", ""etag"": ""\""wro32yastx2dcw\"""", ""cache-control"": ""private, no-cache, no-store, max-age=0, must-revalidate"", ""content-encoding"": ""gzip"", ""p3p"": ""CP=\""OTI DSP COR CUR ADM DEV PSD IVD CONo OUR IND\"""", ""x-content-type-options"": ""nosniff"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:35:02 GMT"", ""via"": ""1.1 varnish"", ""x-served-by"": ""cache-ams21062-AMS"", ""x-cache"": ""MISS"", ""x-cache-hits"": ""0"", ""x-timer"": ""S1696026902.148128,VS0,VE222"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""browser_id=f2d49c0e-ca8f-46d4-9840-bf8dbeedab25; Domain=.slideshare.net; Path=/; Expires=Wed, 27 Sep 2028 22:35:02 GMT"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""alt-svc"": ""h3=\"":443\"";ma=86400,h3-29=\"":443\"";ma=86400,h3-27=\"":443\"";ma=86400"", ""transfer-encoding"": ""chunked""}"
+5,"GET / HTTP/1.1
+Host: www.slideshare.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.1844336986541748,0.10585308074951172,0.35245466232299805,200,OK,[''],21,21,0,"{""connection"": ""keep-alive"", ""content-type"": ""text/html; charset=utf-8"", ""server"": ""nginx"", ""x-powered-by"": ""Next.js"", ""etag"": ""\""ct17iio3mk2dcw\"""", ""cache-control"": ""private, no-cache, no-store, max-age=0, must-revalidate"", ""content-encoding"": ""gzip"", ""p3p"": ""CP=\""OTI DSP COR CUR ADM DEV PSD IVD CONo OUR IND\"""", ""x-content-type-options"": ""nosniff"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:35:05 GMT"", ""via"": ""1.1 varnish"", ""x-served-by"": ""cache-ams21037-AMS"", ""x-cache"": ""MISS"", ""x-cache-hits"": ""0"", ""x-timer"": ""S1696026905.966984,VS0,VE320"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""browser_id=7eb23ce9-f598-4821-ac35-e7dbc167c159; Domain=.slideshare.net; Path=/; Expires=Wed, 27 Sep 2028 22:35:05 GMT"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""alt-svc"": ""h3=\"":443\"";ma=86400,h3-29=\"":443\"";ma=86400,h3-27=\"":443\"";ma=86400"", ""transfer-encoding"": ""chunked""}"
+6,"GET / HTTP/1.1
+Host: www.slideshare.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.1792147159576416,0.1414194107055664,0.2373652458190918,200,OK,[''],21,21,0,"{""connection"": ""keep-alive"", ""content-type"": ""text/html; charset=utf-8"", ""server"": ""nginx"", ""x-powered-by"": ""Next.js"", ""etag"": ""\""15fi1p50ivy2dcw\"""", ""cache-control"": ""private, no-cache, no-store, max-age=0, must-revalidate"", ""content-encoding"": ""gzip"", ""p3p"": ""CP=\""OTI DSP COR CUR ADM DEV PSD IVD CONo OUR IND\"""", ""x-content-type-options"": ""nosniff"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:35:08 GMT"", ""via"": ""1.1 varnish"", ""x-served-by"": ""cache-ams21078-AMS"", ""x-cache"": ""MISS"", ""x-cache-hits"": ""0"", ""x-timer"": ""S1696026908.266868,VS0,VE208"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""browser_id=ddf9e5c7-1cd6-43b4-b7b6-3de4e5c9c290; Domain=.slideshare.net; Path=/; Expires=Wed, 27 Sep 2028 22:35:08 GMT"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""alt-svc"": ""h3=\"":443\"";ma=86400,h3-29=\"":443\"";ma=86400,h3-27=\"":443\"";ma=86400"", ""transfer-encoding"": ""chunked""}"
+7,"GET / HTTP/1.1
+Host: www.slideshare.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.15642666816711426,0.13245105743408203,0.6223337650299072,200,OK,[''],21,21,0,"{""connection"": ""keep-alive"", ""content-type"": ""text/html; charset=utf-8"", ""server"": ""nginx"", ""x-powered-by"": ""Next.js"", ""etag"": ""\""ct17iio3mk2dcw\"""", ""cache-control"": ""private, no-cache, no-store, max-age=0, must-revalidate"", ""content-encoding"": ""gzip"", ""p3p"": ""CP=\""OTI DSP COR CUR ADM DEV PSD IVD CONo OUR IND\"""", ""x-content-type-options"": ""nosniff"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:35:11 GMT"", ""via"": ""1.1 varnish"", ""x-served-by"": ""cache-ams21060-AMS"", ""x-cache"": ""MISS"", ""x-cache-hits"": ""0"", ""x-timer"": ""S1696026911.786939,VS0,VE587"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""browser_id=90401b01-3454-4611-aad6-4dad8ddb3a9d; Domain=.slideshare.net; Path=/; Expires=Wed, 27 Sep 2028 22:35:11 GMT"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""alt-svc"": ""h3=\"":443\"";ma=86400,h3-29=\"":443\"";ma=86400,h3-27=\"":443\"";ma=86400"", ""transfer-encoding"": ""chunked""}"
+8,"GET / HTTP/1.1
+Host: www.slideshare.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.2178480625152588,0.11325931549072266,0.31206488609313965,200,OK,[''],21,21,0,"{""connection"": ""keep-alive"", ""content-type"": ""text/html; charset=utf-8"", ""server"": ""nginx"", ""x-powered-by"": ""Next.js"", ""etag"": ""\""e5bg5r9d872dcw\"""", ""cache-control"": ""private, no-cache, no-store, max-age=0, must-revalidate"", ""content-encoding"": ""gzip"", ""p3p"": ""CP=\""OTI DSP COR CUR ADM DEV PSD IVD CONo OUR IND\"""", ""x-content-type-options"": ""nosniff"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:35:14 GMT"", ""via"": ""1.1 varnish"", ""x-served-by"": ""cache-ams21067-AMS"", ""x-cache"": ""MISS"", ""x-cache-hits"": ""0"", ""x-timer"": ""S1696026914.402654,VS0,VE271"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""browser_id=09ec8b44-871d-4ebd-b8af-a8e45540421a; Domain=.slideshare.net; Path=/; Expires=Wed, 27 Sep 2028 22:35:14 GMT"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""alt-svc"": ""h3=\"":443\"";ma=86400,h3-29=\"":443\"";ma=86400,h3-27=\"":443\"";ma=86400"", ""transfer-encoding"": ""chunked""}"
+9,"GET / HTTP/1.1
+Host: www.slideshare.net
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,432,HTTP/1.1,0.19611620903015137,0.14458584785461426,0.27374815940856934,200,OK,[''],21,21,0,"{""connection"": ""keep-alive"", ""content-type"": ""text/html; charset=utf-8"", ""server"": ""nginx"", ""x-powered-by"": ""Next.js"", ""etag"": ""\""wro32yastx2dcw\"""", ""cache-control"": ""private, no-cache, no-store, max-age=0, must-revalidate"", ""content-encoding"": ""gzip"", ""p3p"": ""CP=\""OTI DSP COR CUR ADM DEV PSD IVD CONo OUR IND\"""", ""x-content-type-options"": ""nosniff"", ""accept-ranges"": ""bytes"", ""date"": ""Fri, 29 Sep 2023 22:35:17 GMT"", ""via"": ""1.1 varnish"", ""x-served-by"": ""cache-ams21082-AMS"", ""x-cache"": ""MISS"", ""x-cache-hits"": ""0"", ""x-timer"": ""S1696026918.628773,VS0,VE228"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""browser_id=750c8944-7ead-415c-8776-ceb5973b9122; Domain=.slideshare.net; Path=/; Expires=Wed, 27 Sep 2028 22:35:17 GMT"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""alt-svc"": ""h3=\"":443\"";ma=86400,h3-29=\"":443\"";ma=86400,h3-27=\"":443\"";ma=86400"", ""transfer-encoding"": ""chunked""}"

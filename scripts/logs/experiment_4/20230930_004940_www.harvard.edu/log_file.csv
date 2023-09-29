@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.harvard.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.29367899894714355,0.11392021179199219,0.04570317268371582,200,OK,[''],25,25,0,"{""connection"": ""keep-alive"", ""content-length"": ""57157"", ""cache-control"": ""public, max-age=1200"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=UTF-8"", ""link"": ""<https://www.harvard.edu/>; rel=shortlink"", ""permissions-policy"": ""geolocation=(self)"", ""referrer-policy"": ""no-referrer-when-downgrade"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=31622400"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""SAMEORIGIN"", ""x-pantheon-styx-hostname"": ""styx-fe1-a-685d4d5969-pxdm7"", ""x-pingback"": ""https://www.harvard.edu/xmlrpc.php"", ""x-styx-req-id"": ""4ca293a3-5f18-11ee-b5f1-3acc535259fd"", ""x-xss-protection"": ""1; mode=block"", ""age"": ""935"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish"", ""date"": ""Fri, 29 Sep 2023 22:49:42 GMT"", ""x-served-by"": ""cache-chi-klot8100144-CHI, cache-ams21030-AMS, cache-ams21030-AMS, cache-ams21070-AMS"", ""x-cache"": ""MISS, HIT, MISS, MISS"", ""x-cache-hits"": ""0, 17, 0, 0"", ""x-timer"": ""S1696027782.273757,VS0,VE14"", ""vary"": ""Accept-Encoding, Cookie, Cookie, orig-host""}"
+1,"GET / HTTP/1.1
+Host: www.harvard.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.2621004581451416,0.1446692943572998,0.1818099021911621,200,OK,[''],25,25,0,"{""connection"": ""keep-alive"", ""content-length"": ""57157"", ""cache-control"": ""public, max-age=1200"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=UTF-8"", ""link"": ""<https://www.harvard.edu/>; rel=shortlink"", ""permissions-policy"": ""geolocation=(self)"", ""referrer-policy"": ""no-referrer-when-downgrade"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=31622400"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""SAMEORIGIN"", ""x-pantheon-styx-hostname"": ""styx-fe1-a-685d4d5969-pxdm7"", ""x-pingback"": ""https://www.harvard.edu/xmlrpc.php"", ""x-styx-req-id"": ""4ca293a3-5f18-11ee-b5f1-3acc535259fd"", ""x-xss-protection"": ""1; mode=block"", ""age"": ""938"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish"", ""date"": ""Fri, 29 Sep 2023 22:49:45 GMT"", ""x-served-by"": ""cache-chi-klot8100144-CHI, cache-ams21030-AMS, cache-ams21030-AMS, cache-ams21075-AMS"", ""x-cache"": ""MISS, HIT, MISS, MISS"", ""x-cache-hits"": ""0, 18, 0, 0"", ""x-timer"": ""S1696027785.210663,VS0,VE106"", ""vary"": ""Accept-Encoding, Cookie, Cookie, orig-host""}"
+2,"GET / HTTP/1.1
+Host: www.harvard.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.2879049777984619,0.10052847862243652,0.04829001426696777,200,OK,[''],25,25,0,"{""connection"": ""keep-alive"", ""content-length"": ""57157"", ""cache-control"": ""public, max-age=1200"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=UTF-8"", ""link"": ""<https://www.harvard.edu/>; rel=shortlink"", ""permissions-policy"": ""geolocation=(self)"", ""referrer-policy"": ""no-referrer-when-downgrade"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=31622400"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""SAMEORIGIN"", ""x-pantheon-styx-hostname"": ""styx-fe1-a-685d4d5969-pxdm7"", ""x-pingback"": ""https://www.harvard.edu/xmlrpc.php"", ""x-styx-req-id"": ""4ca293a3-5f18-11ee-b5f1-3acc535259fd"", ""x-xss-protection"": ""1; mode=block"", ""age"": ""941"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish"", ""date"": ""Fri, 29 Sep 2023 22:49:48 GMT"", ""x-served-by"": ""cache-chi-klot8100144-CHI, cache-ams21030-AMS, cache-ams21030-AMS, cache-ams21071-AMS"", ""x-cache"": ""MISS, HIT, MISS, MISS"", ""x-cache-hits"": ""0, 19, 0, 0"", ""x-timer"": ""S1696027788.318319,VS0,VE16"", ""vary"": ""Accept-Encoding, Cookie, Cookie, orig-host""}"
+3,"GET / HTTP/1.1
+Host: www.harvard.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.15337085723876953,0.13687849044799805,0.04712820053100586,200,OK,[''],25,25,0,"{""connection"": ""keep-alive"", ""content-length"": ""57157"", ""cache-control"": ""public, max-age=1200"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=UTF-8"", ""link"": ""<https://www.harvard.edu/>; rel=shortlink"", ""permissions-policy"": ""geolocation=(self)"", ""referrer-policy"": ""no-referrer-when-downgrade"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=31622400"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""SAMEORIGIN"", ""x-pantheon-styx-hostname"": ""styx-fe1-a-685d4d5969-pxdm7"", ""x-pingback"": ""https://www.harvard.edu/xmlrpc.php"", ""x-styx-req-id"": ""4ca293a3-5f18-11ee-b5f1-3acc535259fd"", ""x-xss-protection"": ""1; mode=block"", ""age"": ""944"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish"", ""date"": ""Fri, 29 Sep 2023 22:49:51 GMT"", ""x-served-by"": ""cache-chi-klot8100144-CHI, cache-ams21030-AMS, cache-ams21030-AMS, cache-ams21068-AMS"", ""x-cache"": ""MISS, HIT, MISS, MISS"", ""x-cache-hits"": ""0, 20, 0, 0"", ""x-timer"": ""S1696027791.084986,VS0,VE16"", ""vary"": ""Accept-Encoding, Cookie, Cookie, orig-host""}"
+4,"GET / HTTP/1.1
+Host: www.harvard.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.25449132919311523,0.12053608894348145,0.033057451248168945,200,OK,[''],25,25,0,"{""connection"": ""keep-alive"", ""content-length"": ""57157"", ""cache-control"": ""public, max-age=1200"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=UTF-8"", ""link"": ""<https://www.harvard.edu/>; rel=shortlink"", ""permissions-policy"": ""geolocation=(self)"", ""referrer-policy"": ""no-referrer-when-downgrade"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=31622400"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""SAMEORIGIN"", ""x-pantheon-styx-hostname"": ""styx-fe1-a-685d4d5969-pxdm7"", ""x-pingback"": ""https://www.harvard.edu/xmlrpc.php"", ""x-styx-req-id"": ""4ca293a3-5f18-11ee-b5f1-3acc535259fd"", ""x-xss-protection"": ""1; mode=block"", ""age"": ""947"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish"", ""date"": ""Fri, 29 Sep 2023 22:49:53 GMT"", ""x-served-by"": ""cache-chi-klot8100144-CHI, cache-ams21030-AMS, cache-ams21030-AMS, cache-ams21062-AMS"", ""x-cache"": ""MISS, HIT, MISS, MISS"", ""x-cache-hits"": ""0, 21, 0, 0"", ""x-timer"": ""S1696027794.889318,VS0,VE4"", ""vary"": ""Accept-Encoding, Cookie, Cookie, orig-host""}"
+5,"GET / HTTP/1.1
+Host: www.harvard.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.1552426815032959,0.11308550834655762,0.027927637100219727,200,OK,[''],25,25,0,"{""connection"": ""keep-alive"", ""content-length"": ""57157"", ""cache-control"": ""public, max-age=1200"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=UTF-8"", ""link"": ""<https://www.harvard.edu/>; rel=shortlink"", ""permissions-policy"": ""geolocation=(self)"", ""referrer-policy"": ""no-referrer-when-downgrade"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=31622400"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""SAMEORIGIN"", ""x-pantheon-styx-hostname"": ""styx-fe1-a-685d4d5969-pxdm7"", ""x-pingback"": ""https://www.harvard.edu/xmlrpc.php"", ""x-styx-req-id"": ""4ca293a3-5f18-11ee-b5f1-3acc535259fd"", ""x-xss-protection"": ""1; mode=block"", ""age"": ""950"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish"", ""date"": ""Fri, 29 Sep 2023 22:49:56 GMT"", ""x-served-by"": ""cache-chi-klot8100144-CHI, cache-ams21030-AMS, cache-ams21030-AMS, cache-ams21037-AMS"", ""x-cache"": ""MISS, HIT, MISS, MISS"", ""x-cache-hits"": ""0, 23, 0, 0"", ""x-timer"": ""S1696027797.503647,VS0,VE3"", ""vary"": ""Accept-Encoding, Cookie, Cookie, orig-host""}"
+6,"GET / HTTP/1.1
+Host: www.harvard.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.19567131996154785,0.1121363639831543,0.05643296241760254,200,OK,[''],25,25,0,"{""connection"": ""keep-alive"", ""content-length"": ""57157"", ""cache-control"": ""public, max-age=1200"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=UTF-8"", ""link"": ""<https://www.harvard.edu/>; rel=shortlink"", ""permissions-policy"": ""geolocation=(self)"", ""referrer-policy"": ""no-referrer-when-downgrade"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=31622400"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""SAMEORIGIN"", ""x-pantheon-styx-hostname"": ""styx-fe1-a-685d4d5969-pxdm7"", ""x-pingback"": ""https://www.harvard.edu/xmlrpc.php"", ""x-styx-req-id"": ""4ca293a3-5f18-11ee-b5f1-3acc535259fd"", ""x-xss-protection"": ""1; mode=block"", ""age"": ""952"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish"", ""date"": ""Fri, 29 Sep 2023 22:49:59 GMT"", ""x-served-by"": ""cache-chi-klot8100144-CHI, cache-ams21030-AMS, cache-ams21030-AMS, cache-ams21051-AMS"", ""x-cache"": ""MISS, HIT, MISS, MISS"", ""x-cache-hits"": ""0, 24, 0, 0"", ""x-timer"": ""S1696027799.024134,VS0,VE3"", ""vary"": ""Accept-Encoding, Cookie, Cookie, orig-host""}"
+7,"GET / HTTP/1.1
+Host: www.harvard.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.15886902809143066,0.11142373085021973,0.04382634162902832,200,OK,[''],25,25,0,"{""connection"": ""keep-alive"", ""content-length"": ""57157"", ""cache-control"": ""public, max-age=1200"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=UTF-8"", ""link"": ""<https://www.harvard.edu/>; rel=shortlink"", ""permissions-policy"": ""geolocation=(self)"", ""referrer-policy"": ""no-referrer-when-downgrade"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=31622400"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""SAMEORIGIN"", ""x-pantheon-styx-hostname"": ""styx-fe1-a-685d4d5969-pxdm7"", ""x-pingback"": ""https://www.harvard.edu/xmlrpc.php"", ""x-styx-req-id"": ""4ca293a3-5f18-11ee-b5f1-3acc535259fd"", ""x-xss-protection"": ""1; mode=block"", ""age"": ""955"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish"", ""date"": ""Fri, 29 Sep 2023 22:50:01 GMT"", ""x-served-by"": ""cache-chi-klot8100144-CHI, cache-ams21028-AMS, cache-ams21062-AMS, cache-ams21062-AMS"", ""x-cache"": ""MISS, HIT, MISS, MISS"", ""x-cache-hits"": ""0, 12, 0, 0"", ""x-timer"": ""S1696027802.568205,VS0,VE6"", ""vary"": ""Accept-Encoding, Cookie, Cookie, orig-host""}"
+8,"GET / HTTP/1.1
+Host: www.harvard.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.16852378845214844,0.10558891296386719,0.03040146827697754,200,OK,[''],25,25,0,"{""connection"": ""keep-alive"", ""content-length"": ""57157"", ""cache-control"": ""public, max-age=1200"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=UTF-8"", ""link"": ""<https://www.harvard.edu/>; rel=shortlink"", ""permissions-policy"": ""geolocation=(self)"", ""referrer-policy"": ""no-referrer-when-downgrade"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=31622400"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""SAMEORIGIN"", ""x-pantheon-styx-hostname"": ""styx-fe1-a-685d4d5969-pxdm7"", ""x-pingback"": ""https://www.harvard.edu/xmlrpc.php"", ""x-styx-req-id"": ""4ca293a3-5f18-11ee-b5f1-3acc535259fd"", ""x-xss-protection"": ""1; mode=block"", ""age"": ""957"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish"", ""date"": ""Fri, 29 Sep 2023 22:50:04 GMT"", ""x-served-by"": ""cache-chi-klot8100144-CHI, cache-ams21030-AMS, cache-ams21030-AMS, cache-ams21049-AMS"", ""x-cache"": ""MISS, HIT, MISS, MISS"", ""x-cache-hits"": ""0, 25, 0, 0"", ""x-timer"": ""S1696027804.443248,VS0,VE6"", ""vary"": ""Accept-Encoding, Cookie, Cookie, orig-host""}"
+9,"GET / HTTP/1.1
+Host: www.harvard.edu
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.2687947750091553,0.11617708206176758,0.05634903907775879,200,OK,[''],25,25,0,"{""connection"": ""keep-alive"", ""content-length"": ""57157"", ""cache-control"": ""public, max-age=1200"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=UTF-8"", ""link"": ""<https://www.harvard.edu/>; rel=shortlink"", ""permissions-policy"": ""geolocation=(self)"", ""referrer-policy"": ""no-referrer-when-downgrade"", ""server"": ""nginx"", ""strict-transport-security"": ""max-age=31622400"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""SAMEORIGIN"", ""x-pantheon-styx-hostname"": ""styx-fe1-a-685d4d5969-pxdm7"", ""x-pingback"": ""https://www.harvard.edu/xmlrpc.php"", ""x-styx-req-id"": ""4ca293a3-5f18-11ee-b5f1-3acc535259fd"", ""x-xss-protection"": ""1; mode=block"", ""age"": ""960"", ""accept-ranges"": ""bytes"", ""via"": ""1.1 varnish, 1.1 varnish, 1.1 varnish, 1.1 varnish"", ""date"": ""Fri, 29 Sep 2023 22:50:06 GMT"", ""x-served-by"": ""cache-chi-klot8100144-CHI, cache-ams21030-AMS, cache-ams21030-AMS, cache-ams21069-AMS"", ""x-cache"": ""MISS, HIT, MISS, MISS"", ""x-cache-hits"": ""0, 26, 0, 0"", ""x-timer"": ""S1696027807.967060,VS0,VE3"", ""vary"": ""Accept-Encoding, Cookie, Cookie, orig-host""}"

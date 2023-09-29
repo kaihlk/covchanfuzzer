@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.ebay.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.13831686973571777,0.11718988418579102,0.33861207962036133,200,OK,[''],17,17,365,"{""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""accept-ch"": ""sec-ch-ua-model,sec-ch-ua-platform-version,sec-ch-ua-full-version"", ""content-type"": ""text/html; charset=utf-8"", ""rlogid"": ""t6u%60tsodhct%60d13%3F%3Ctofpbqqjfmaqba36*tt1ss(rbpv6602-18ae3222e39-0x303"", ""x-envoy-upstream-service-time"": ""284"", ""content-encoding"": ""gzip"", ""server"": ""ebay-proxy-server"", ""strict-transport-security"": ""max-age=31536000"", ""x-edgeconnect-midmile-rtt"": ""9"", ""x-edgeconnect-origin-mex-latency"": ""289"", ""date"": ""Fri, 29 Sep 2023 22:49:42 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""ak_bmsc=56A1019EEB34EF39CC73EAE78C696402~000000000000000000000000000000~YAAQWB0QAuXMiMqKAQAABS8i4xWFm8kLPY6vm1MSI5301SR7nOE5GfYT5LNb4EluxYP6YnlPPtXN0QB5mKNXYsyspX+ISpegbr7eWzx0vVF3XvQWU6JCG8E+DxSSqobyEmHFdduDDy0b0Mgo9bcbgxCYJmSHpWWnV3IEDkDatnmDS3jyWQBIrxuBN3+o4p/eqTlrmI16DF8ZqgVASmwf3RZxWDMzRNAxg5UhKbx/O1e+JKJ/Wrw8K83kOgigaDOkgIryKQ+Bbn2bADsAQnOTxpqlvQeq4QdkhQjbDCPOCDODEuryBQgy8iRMCl4y8vhElzOMrvgTgFZ4m4ELqy6haHWViuUcC7e2f0GfcSOzeGcWqRXf3w5tcCRwMA==; Domain=.ebay.com; Path=/; Expires=Sat, 30 Sep 2023 00:49:42 GMT; Max-Age=7200; HttpOnly""}"
+1,"GET / HTTP/1.1
+Host: www.ebay.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.2631707191467285,0.10847234725952148,0.39003753662109375,200,OK,[''],17,17,358,"{""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""accept-ch"": ""sec-ch-ua-model,sec-ch-ua-platform-version,sec-ch-ua-full-version"", ""content-type"": ""text/html; charset=utf-8"", ""rlogid"": ""t6u%60tsodhct%60d13%3F%3Ckuvpbqqjfmaqba36*yb%60%7F%60(rbpv6762-18ae3223ab2-0x2303"", ""x-envoy-upstream-service-time"": ""311"", ""content-encoding"": ""gzip"", ""server"": ""ebay-proxy-server"", ""strict-transport-security"": ""max-age=31536000"", ""x-edgeconnect-midmile-rtt"": ""6"", ""x-edgeconnect-origin-mex-latency"": ""317"", ""date"": ""Fri, 29 Sep 2023 22:49:46 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""ak_bmsc=AEB75978C85DDE3318671D3559F51BFE~000000000000000000000000000000~YAAQWB0QAgvNiMqKAQAAkzsi4xWoY0f4Df/IyD4jcx9lUmE9HlAnP9BRPHlbIt/K2MVNyA43c1VN2GbxDnlbTQT5c+9ckQQwyq2JINwVOUZZpigGiZEjdlhHJPfEEPVfv1TnkxgCIs0/EHhH7xTmCBO74dLqm/6oyMfsdxnsU8j3sh80RJrWua/BrGaKpXVXib/KAk1ctIGT2ZzQUy8oLkWgL3QHKomJex4mSz+EyEMpy1VIFJ7joxxxMpRkiI3bp/iSOvS3DpQS6dgGjocwRTrPbEFRrcn3tphgrAvuxphHqC47ZB1REI/XjjnSTAUQUGvMdCUi/qPu4Si/jsWhdcQXwC6byLVDgtqVMAH5KIJ+DeyGf+lPYbW9sA==; Domain=.ebay.com; Path=/; Expires=Sat, 30 Sep 2023 00:49:45 GMT; Max-Age=7199; HttpOnly""}"
+2,"GET / HTTP/1.1
+Host: www.ebay.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.15799260139465332,0.1532149314880371,0.3292660713195801,200,OK,[''],15,15,688,"{""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""accept-ch"": ""sec-ch-ua-model,sec-ch-ua-platform-version,sec-ch-ua-full-version"", ""content-type"": ""text/html; charset=utf-8"", ""rlogid"": ""t6u%60tsodhct%60d13%3F%3Ctofpbqqjfmaqba36*1rwam(rbpv6612-18ae32245c0-0x2303"", ""x-envoy-upstream-service-time"": ""275"", ""content-encoding"": ""gzip"", ""server"": ""ebay-proxy-server"", ""strict-transport-security"": ""max-age=31536000"", ""date"": ""Fri, 29 Sep 2023 22:49:48 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""ak_bmsc=DD81EC845C53B14DDF883756C6B35357~000000000000000000000000000000~YAAQWB0QAifNiMqKAQAAgUYi4xU/p1tfzS34QiDoIPS4kqGELG18W+hQjA4BkvBGLWATKabi/Xhhs1ELEJ7JKLaFDL4cEBmX9vLll4UmTdWQlQjTBJ+Mh71QjzqlmSQOs2IYo+MITD5uYvbI6gwFo8F9ieGmSbmiWjOdGgFlGE6c7v9GviAGWd2bS9GSl15foadOkn1evfg4jXuq1fcx+q3lJNAEU7EEafhSFitwkpGdufPc5YfFCaTI8Go9JmaPbqPRwmHar7i7Fqe3HQewX1Z0RSngdia2dIkcvXOzVaNV5fXLpE2RAThhxJftXW4gDVUMGhAn/KEaLSSPkHYckDHikDG0yWEmKh2/wCZf9Z8JWE7Wqofd4Nv/XA==; Domain=.ebay.com; Path=/; Expires=Sat, 30 Sep 2023 00:49:48 GMT; Max-Age=7200; HttpOnly""}"
+3,"GET / HTTP/1.1
+Host: www.ebay.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.19517135620117188,0.10669183731079102,0.3819575309753418,200,OK,[''],17,17,364,"{""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""accept-ch"": ""sec-ch-ua-model,sec-ch-ua-platform-version,sec-ch-ua-full-version"", ""content-type"": ""text/html; charset=utf-8"", ""rlogid"": ""t6u%60tsodhct%60d13%3F%3Ckuvpbqqjfmaqba36*rgvji(rbpv674%3C-18ae32250e9-0x303"", ""x-envoy-upstream-service-time"": ""281"", ""content-encoding"": ""gzip"", ""server"": ""ebay-proxy-server"", ""strict-transport-security"": ""max-age=31536000"", ""x-edgeconnect-midmile-rtt"": ""5"", ""x-edgeconnect-origin-mex-latency"": ""286"", ""date"": ""Fri, 29 Sep 2023 22:49:51 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""ak_bmsc=C5D0993EE89672B25119F522472F19A7~000000000000000000000000000000~YAAQWB0QAjfNiMqKAQAAu1Ei4xXkRJz/V07Ejtka6lIuGehCcr8gvsdKPZbiqqiL5x6oif4pnMJsUD5QZxzktggR5j2pzgiriNEktBgfSotb6AVN9wxcumCNjRQXY5TDRDjMgFI7rA8L1mFTMq+U5bajgzgn0HHA4WGdKSr3iREXLD7VWvnVXxsLqkB8w2nsdycT2pIlY7fNCTcufqzO60fW0Zj6m1a4ftoSDyRkPVpfAznSwHrDfIUm6R6QQrB8P7XDiZsm9Gpwx6xLOu2cG9uGWJf3RCHkPxj9ZegAt4JKSItKzA2741YgMyiKEcoMCK5fGtZCFVdHtIOTQjLizRX4b5IOXOctpnO4kfjXQtV+yMCSCVOdZ8/pSA==; Domain=.ebay.com; Path=/; Expires=Sat, 30 Sep 2023 00:49:51 GMT; Max-Age=7200; HttpOnly""}"
+4,"GET / HTTP/1.1
+Host: www.ebay.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.15724515914916992,0.10534262657165527,0.3070669174194336,200,OK,[''],17,17,367,"{""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""accept-ch"": ""sec-ch-ua-model,sec-ch-ua-platform-version,sec-ch-ua-full-version"", ""content-type"": ""text/html; charset=utf-8"", ""rlogid"": ""t6u%60tsodhct%60d13%3F%3Ctofpbqqjfmaqba36*%3Bumeq(rbpv6612-18ae3225b80-0x303"", ""x-envoy-upstream-service-time"": ""267"", ""content-encoding"": ""gzip"", ""server"": ""ebay-proxy-server"", ""strict-transport-security"": ""max-age=31536000"", ""x-edgeconnect-midmile-rtt"": ""5"", ""x-edgeconnect-origin-mex-latency"": ""272"", ""date"": ""Fri, 29 Sep 2023 22:49:54 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""ak_bmsc=7A931893E14484F6BF01DE8379FCF5C6~000000000000000000000000000000~YAAQWB0QAmvNiMqKAQAAPFwi4xWQfCQnclrywyIMY0fYLz9AhGHu+kbftAAccWSO/iLR2bcBUDw/fm3B0OkidnhF60VQgUjuBOh9VlQOjJgOmrmlHVGv/AWzeiMpVzpXTcosovWp6kMNsjeMUj2IkDgKI5x19xBD1ci6rGoVyjDQ+X/VPsV1JUNxQ+g8Ly7K52tUbR7Npi04K7E3AjYVBhLbwSbs61OUHFtOyj7b3c7YL5ZULLhY1VflfwIIqbi0KX7jzrf9K6SkPoC21QtDmEEn9j5I9TTRIUFBHJD7BVjcqUxuRIAEbMux9hXeUO1RH754pw0uwbn4ICi/+2379CalHSwwrzmlkSFYVpwN1m27CfNQAVJcH8EE3g==; Domain=.ebay.com; Path=/; Expires=Sat, 30 Sep 2023 00:49:54 GMT; Max-Age=7200; HttpOnly""}"
+5,"GET / HTTP/1.1
+Host: www.ebay.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.1481320858001709,0.11281418800354004,0.3201906681060791,200,OK,[''],15,15,688,"{""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""accept-ch"": ""sec-ch-ua-model,sec-ch-ua-platform-version,sec-ch-ua-full-version"", ""content-type"": ""text/html; charset=utf-8"", ""rlogid"": ""t6u%60tsodhct%60d13%3F%3Ctofpbqqjfmaqba36*q2ecu(rbpv6602-18ae322659a-0x1304"", ""x-envoy-upstream-service-time"": ""267"", ""content-encoding"": ""gzip"", ""server"": ""ebay-proxy-server"", ""strict-transport-security"": ""max-age=31536000"", ""date"": ""Fri, 29 Sep 2023 22:49:57 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""ak_bmsc=6E89D7A472A423DE4311EDE18DFC1028~000000000000000000000000000000~YAAQWB0QApXNiMqKAQAAWGYi4xWp2o0rtyHb5HgUT54qf0RB2rKqVXQlm3lpELNgHDZegXJ18ergTbCWCM0wUtRqdgrcyWghtrbh4+cVei6V9m0rspQei+8Hf9WEaUO2B1wF4Gqo4OVtD/6Cvs1V2VjLHjhTrGiDf7b8x5LQJnqPO42j9VjEmYlb4NOx/gI8mmhVMvzMF2ZP4agsA8x3TsOwZh6AaxvvjjVcUpD63iy5knhIkGJvi+I3TINIJCrZZa+1no8J2ahJEMZdre/6T+YLVZK7v5okeosfZVn0tWY/gXZjJNpS8U+ri7YfOFn78+D48lHdqBYh39va75SEFKTZ+MWnWOdl8aFycoWn/G/8q2jVVlwMN9vqFA==; Domain=.ebay.com; Path=/; Expires=Sat, 30 Sep 2023 00:49:56 GMT; Max-Age=7199; HttpOnly""}"
+6,"GET / HTTP/1.1
+Host: www.ebay.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.18296551704406738,0.11234521865844727,0.32102084159851074,200,OK,[''],17,17,374,"{""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""accept-ch"": ""sec-ch-ua-model,sec-ch-ua-platform-version,sec-ch-ua-full-version"", ""content-type"": ""text/html; charset=utf-8"", ""rlogid"": ""t6u%60tsodhct%60d13%3F%3Ctofpbqqjfmaqba36*mcvjw(rbpv6612-18ae3226fec-0x302"", ""x-envoy-upstream-service-time"": ""267"", ""content-encoding"": ""gzip"", ""server"": ""ebay-proxy-server"", ""strict-transport-security"": ""max-age=31536000"", ""x-edgeconnect-midmile-rtt"": ""5"", ""x-edgeconnect-origin-mex-latency"": ""272"", ""date"": ""Fri, 29 Sep 2023 22:49:59 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""ak_bmsc=DE1FDEC0083B9EB24FDD0CCB33C80A6E~000000000000000000000000000000~YAAQWB0QAqDNiMqKAQAAqXAi4xVI/RC/nLDybDqbBAgVKgfumN5j3RP7XijTbfOaOkXcHPyyCEh33BCwykG+vLM/5oQDf21gsfj5o6FeG05vzQowFaZ97dcrdW8S9fHwGHU9GV0xTnTnn9LXnx+wTW93xkX2QyVvYXryAIruktn2hwVl6+oxYlQa0UUmXe74nKzIZoSRk0l1fm4ZNXMxPbS7E5vtuEtpmZM+Ytmz4f0KrDeyqg7lvmYj1Q1vaVrGcZMyphT7fXWbE4C7Ii2NK4LGp8ewNnCjrrdQ/yKOVKVOiTd1q7NBEXCCYwTVXqpiGRihU6cI2de7mMIAD5TnyVjRXx/Gd8pnAAV9ewnUNJAus/bA4eYlivYGUg==; Domain=.ebay.com; Path=/; Expires=Sat, 30 Sep 2023 00:49:59 GMT; Max-Age=7200; HttpOnly""}"
+7,"GET / HTTP/1.1
+Host: www.ebay.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.1625959873199463,0.10990643501281738,0.2989053726196289,200,OK,[''],15,15,682,"{""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""accept-ch"": ""sec-ch-ua-model,sec-ch-ua-platform-version,sec-ch-ua-full-version"", ""content-type"": ""text/html; charset=utf-8"", ""rlogid"": ""t6u%60tsodhct%60d13%3F%3Ckuvpbqqjfmaqba36*%3B%3Du0o(rbpv674%3C-18ae3227990-0x1302"", ""x-envoy-upstream-service-time"": ""254"", ""content-encoding"": ""gzip"", ""server"": ""ebay-proxy-server"", ""strict-transport-security"": ""max-age=31536000"", ""date"": ""Fri, 29 Sep 2023 22:50:02 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""ak_bmsc=A479721777F1F60D7971DF504A43705B~000000000000000000000000000000~YAAQWB0QArnNiMqKAQAAPnoi4xVvcrFmMzJyY+gnkvIPvUivq4KDF2Eez5fRotUlmhm0CHhBSMgsuR8Fh3SLa6QXz9dAEE8afnJZhOdzNKHuabAb2/B+SZ5ZVW/4YGRfNiwDiLhbSQeXRimCTjhi6X/fs3T73IkE5YYXHmOcDFICYD51DTdjPXhDAJxfVvH1Dmn6Q1oYZifhXoVvsV8z+OguthsHH00kWURcLFfPSde6vV4O9Y4BiF+gI9aSz+IJlhp5s9lixT04/9n3dvNsMilkaK4eLA8NIFY38A1TmyAng/M4dy5NqIi7HfR589Y29NfFytkZWp2GHE7v7wJ/UQu5DNm5okP5uDsh1YEE38HJNLm+dMe1mYcGgA==; Domain=.ebay.com; Path=/; Expires=Sat, 30 Sep 2023 00:50:01 GMT; Max-Age=7199; HttpOnly""}"
+8,"GET / HTTP/1.1
+Host: www.ebay.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.0820775032043457,0.11826658248901367,0.2910892963409424,200,OK,[''],17,17,10,"{""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""accept-ch"": ""sec-ch-ua-model,sec-ch-ua-platform-version,sec-ch-ua-full-version"", ""content-type"": ""text/html; charset=utf-8"", ""rlogid"": ""t6u%60tsodhct%60d13%3F%3Ckuvpbqqjfmaqba36*6b20g(rbpv674%3C-18ae3228473-0x304"", ""content-encoding"": ""gzip"", ""x-envoy-upstream-service-time"": ""246"", ""server"": ""ebay-proxy-server"", ""strict-transport-security"": ""max-age=31536000"", ""x-edgeconnect-midmile-rtt"": ""5"", ""x-edgeconnect-origin-mex-latency"": ""250"", ""date"": ""Fri, 29 Sep 2023 22:50:04 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""ak_bmsc=66FC37AC5A5471D02755FB796EBDC7DE~000000000000000000000000000000~YAAQWB0QAtHNiMqKAQAAIoUi4xVvXLroUZm2q+iaMElqorkajQxKoukXefah5hW/PV0LlrNg7N6SoU6L7OSVYrl4Stq1cAZquf1px6CPJgcGU/vw1ubuYDOHwDowdKSJN0R93V1cd1Gi0QASWaByYin6yiIfr8i3Y4X9Dc9Lm91U9Kn+WQrTumfpPpU9soz/JwNfcPHaNJiPKYKrFO5Z3jBX3Cen5c2boC1OZTRgUPofYyAoBJ5fM2J2eNTj0alq8z0Ec1/nyHv3yI/USrgFGkkcfVUong9E7Qzl0IasVqSLc7sJC+1h6poiWkBlkVVVhMIyMaXjJD2XzRa6u2q+iNhUlMqJCmSQ9arzOdACqsfaFcWFmuDMowpNOA==; Domain=.ebay.com; Path=/; Expires=Sat, 30 Sep 2023 00:50:04 GMT; Max-Age=7200; HttpOnly""}"
+9,"GET / HTTP/1.1
+Host: www.ebay.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.16074156761169434,0.12150764465332031,0.31567907333374023,200,OK,[''],15,15,688,"{""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""SAMEORIGIN"", ""accept-ch"": ""sec-ch-ua-model,sec-ch-ua-platform-version,sec-ch-ua-full-version"", ""content-type"": ""text/html; charset=utf-8"", ""rlogid"": ""t6u%60tsodhct%60d13%3F%3Ckuvpbqqjfmaqba36*qk%3Foa(rbpv6762-18ae3228eb7-0x2303"", ""x-envoy-upstream-service-time"": ""267"", ""content-encoding"": ""gzip"", ""server"": ""ebay-proxy-server"", ""strict-transport-security"": ""max-age=31536000"", ""date"": ""Fri, 29 Sep 2023 22:50:07 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""vary"": ""Accept-Encoding"", ""set-cookie"": ""ak_bmsc=316B0E02865E065C25FAE04FF3EC0115~000000000000000000000000000000~YAAQWB0QAt3NiMqKAQAAd48i4xWUgc7l/Kb6ZUYJIgp5aXsOKu9dkqp+4PlAmbHiEjjUx241bjkCZnjV/qyMMMMbGSzQitCiurTvDPMmcP1GPM+PUJkdL/nmq2qkgF4JEYzS0/4/i9wDP2pvgDtd82/b+qTDCSSipNWd/4tg5CrKTpeRsd9olBy86SmBkHe+yUiafr+aCuE1xkV4WzlsaBLCsXay05fI0KSE8USfS60OoTMmTy1zOUl5u5j5DtT1xisgfvn4nXBvJv6bj31dO/fYMgJATwNxvjVFC24ODRsJa2UPVkus0oYNUPi2A8WfMZkY089MSdH5QCtlE68c+FudvhnMXtyYDThnsOCgoxvK6wOnxHVTUcRhqA==; Domain=.ebay.com; Path=/; Expires=Sat, 30 Sep 2023 00:50:07 GMT; Max-Age=7200; HttpOnly""}"

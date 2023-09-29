@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.amazon.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.232590913772583,0.10589957237243652,0.18821978569030762,200,OK,[''],27,27,369,"{""content-type"": ""text/html;charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 21:20:25 GMT"", ""x-amz-rid"": ""NDSKJCD65Z8VER9KH6HN"", ""set-cookie"": ""skin=noskin; path=/; domain=.amazon.com"", ""pragma"": ""no-cache"", ""content-language"": ""en-US"", ""expires"": ""-1"", ""x-xss-protection"": ""1;"", ""accept-ch-lifetime"": ""86400"", ""accept-ch"": ""ect,rtt,downlink,device-memory,sec-ch-device-memory,viewport-width,sec-ch-viewport-width,dpr,sec-ch-dpr,sec-ch-ua-platform,sec-ch-ua-platform-version"", ""content-security-policy"": ""upgrade-insecure-requests;report-uri https://metrics.media-amazon.com/"", ""cache-control"": ""no-cache"", ""x-content-type-options"": ""nosniff"", ""x-ua-compatible"": ""IE=edge"", ""content-security-policy-report-only"": ""default-src 'self' blob: https: data: mediastream: 'unsafe-eval' 'unsafe-inline';report-uri https://metrics.media-amazon.com/"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""vary"": ""Content-Type,Accept-Encoding,User-Agent"", ""x-frame-options"": ""SAMEORIGIN"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 e028ce7d5e71301b0e973ef66c9bbff8.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C2"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""BUPVXvOZObmhBtIdAOLoQnaI4o5uX2QAYEuq_He2_SnsOLBFYf0SnQ==""}"
+1,"GET / HTTP/1.1
+Host: www.amazon.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.10060834884643555,0.10632014274597168,0.2341904640197754,200,OK,[''],27,27,396,"{""content-type"": ""text/html;charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 21:20:26 GMT"", ""x-amz-rid"": ""RWZKEMDTFS5FTVSJ0CS1"", ""set-cookie"": ""skin=noskin; path=/; domain=.amazon.com"", ""pragma"": ""no-cache"", ""content-language"": ""en-US"", ""expires"": ""-1"", ""x-xss-protection"": ""1;"", ""content-security-policy-report-only"": ""default-src 'self' blob: https: data: mediastream: 'unsafe-eval' 'unsafe-inline';report-uri https://metrics.media-amazon.com/"", ""accept-ch-lifetime"": ""86400"", ""accept-ch"": ""ect,rtt,downlink,device-memory,sec-ch-device-memory,viewport-width,sec-ch-viewport-width,dpr,sec-ch-dpr,sec-ch-ua-platform,sec-ch-ua-platform-version"", ""cache-control"": ""no-cache"", ""x-content-type-options"": ""nosniff"", ""x-ua-compatible"": ""IE=edge"", ""content-encoding"": ""gzip"", ""content-security-policy"": ""upgrade-insecure-requests;report-uri https://metrics.media-amazon.com/"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""vary"": ""Content-Type,Accept-Encoding,User-Agent"", ""x-frame-options"": ""SAMEORIGIN"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 91f22b7bc376e5af9531f3690bd2d5d2.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C2"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""8iM3qn37kKUlDFk__jodB6kNWjuNhRcwL9TVk1fBGMbui8Y4N6aVuA==""}"
+2,"GET / HTTP/1.1
+Host: www.amazon.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.18433570861816406,0.10290265083312988,0.20951294898986816,200,OK,[''],27,27,4988,"{""content-type"": ""text/html;charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 21:20:29 GMT"", ""x-amz-rid"": ""29CVB4TERQX722E1H4EN"", ""set-cookie"": ""skin=noskin; path=/; domain=.amazon.com"", ""pragma"": ""no-cache"", ""content-language"": ""en-US"", ""expires"": ""-1"", ""x-xss-protection"": ""1;"", ""accept-ch-lifetime"": ""86400"", ""accept-ch"": ""ect,rtt,downlink,device-memory,sec-ch-device-memory,viewport-width,sec-ch-viewport-width,dpr,sec-ch-dpr,sec-ch-ua-platform,sec-ch-ua-platform-version"", ""content-security-policy"": ""upgrade-insecure-requests;report-uri https://metrics.media-amazon.com/"", ""cache-control"": ""no-cache"", ""content-security-policy-report-only"": ""default-src 'self' blob: https: data: mediastream: 'unsafe-eval' 'unsafe-inline';report-uri https://metrics.media-amazon.com/"", ""x-content-type-options"": ""nosniff"", ""x-ua-compatible"": ""IE=edge"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""vary"": ""Content-Type,Accept-Encoding,User-Agent"", ""x-frame-options"": ""SAMEORIGIN"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 0e4b604319ca1dc81c333441f110c482.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C2"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""LvS-hLVZ9rEkYTOaOQimNpaGMHpDBJkMBxkjhiyjp_dGlJusZitjSw==""}"
+3,"GET / HTTP/1.1
+Host: www.amazon.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.1229405403137207,0.11156725883483887,0.20513391494750977,200,OK,[''],27,27,5017,"{""content-type"": ""text/html;charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 21:20:30 GMT"", ""x-amz-rid"": ""A91HQN4SFCGH2X9JMC13"", ""set-cookie"": ""skin=noskin; path=/; domain=.amazon.com"", ""x-content-type-options"": ""nosniff"", ""accept-ch-lifetime"": ""86400"", ""expires"": ""-1"", ""x-ua-compatible"": ""IE=edge"", ""content-security-policy"": ""upgrade-insecure-requests;report-uri https://metrics.media-amazon.com/"", ""x-xss-protection"": ""1;"", ""pragma"": ""no-cache"", ""content-security-policy-report-only"": ""default-src 'self' blob: https: data: mediastream: 'unsafe-eval' 'unsafe-inline';report-uri https://metrics.media-amazon.com/"", ""cache-control"": ""no-cache"", ""accept-ch"": ""ect,rtt,downlink,device-memory,sec-ch-device-memory,viewport-width,sec-ch-viewport-width,dpr,sec-ch-dpr,sec-ch-ua-platform,sec-ch-ua-platform-version"", ""content-language"": ""en-US"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""vary"": ""Content-Type,Accept-Encoding,User-Agent"", ""x-frame-options"": ""SAMEORIGIN"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 205ffb8e514fb7232a031d1454df1292.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C2"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""teL4Wy_PTMG9M8R_byZ_7DAs_u9Ai5hoZinK-XWIUqYIqkcvBr8P4Q==""}"
+4,"GET / HTTP/1.1
+Host: www.amazon.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.2187330722808838,0.12483668327331543,0.2526688575744629,200,OK,[''],18,18,14803,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 21:20:33 GMT"", ""x-amz-rid"": ""F9ZHV3ZJ9V6QJJ3F76BZ"", ""set-cookie"": ""skin=noskin; path=/; domain=.amazon.com"", ""vary"": ""Content-Type,Accept-Encoding,User-Agent"", ""last-modified"": ""Fri, 29 Sep 2023 21:19:37 GMT"", ""etag"": ""\""32e2d-60685fb54ef0f-gzip\"""", ""accept-ranges"": ""bytes"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 be43ad4ac2015a11cc932d5a96f3e716.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C2"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""TSQ2CXbeDbPhoXlVhbGySBhW2je6yja-QMgZDmlNjJ6HW6kzGRzYYg==""}"
+5,"GET / HTTP/1.1
+Host: www.amazon.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.18500018119812012,0.1325700283050537,0.2178637981414795,200,OK,[''],27,27,396,"{""content-type"": ""text/html;charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 21:20:35 GMT"", ""x-amz-rid"": ""7C63P0F1TV716XDKAHA7"", ""set-cookie"": ""skin=noskin; path=/; domain=.amazon.com"", ""pragma"": ""no-cache"", ""content-language"": ""en-US"", ""expires"": ""-1"", ""x-xss-protection"": ""1;"", ""accept-ch-lifetime"": ""86400"", ""accept-ch"": ""ect,rtt,downlink,device-memory,sec-ch-device-memory,viewport-width,sec-ch-viewport-width,dpr,sec-ch-dpr,sec-ch-ua-platform,sec-ch-ua-platform-version"", ""content-security-policy"": ""upgrade-insecure-requests;report-uri https://metrics.media-amazon.com/"", ""cache-control"": ""no-cache"", ""x-content-type-options"": ""nosniff"", ""x-ua-compatible"": ""IE=edge"", ""content-security-policy-report-only"": ""default-src 'self' blob: https: data: mediastream: 'unsafe-eval' 'unsafe-inline';report-uri https://metrics.media-amazon.com/"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""vary"": ""Content-Type,Accept-Encoding,User-Agent"", ""x-frame-options"": ""SAMEORIGIN"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 205ffb8e514fb7232a031d1454df1292.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C2"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""ZSJArUT6hHl0wvRKnox2kvxI8NT7lhmm69RSUfpbziTECQdSRuFvJA==""}"
+6,"GET / HTTP/1.1
+Host: www.amazon.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.16390395164489746,0.11278200149536133,0.46648335456848145,200,OK,[''],27,27,369,"{""content-type"": ""text/html;charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 21:20:37 GMT"", ""x-amz-rid"": ""PJGSBWD99WJE7FNRSVCC"", ""set-cookie"": ""skin=noskin; path=/; domain=.amazon.com"", ""content-security-policy-report-only"": ""default-src 'self' blob: https: data: mediastream: 'unsafe-eval' 'unsafe-inline';report-uri https://metrics.media-amazon.com/"", ""x-content-type-options"": ""nosniff"", ""accept-ch-lifetime"": ""86400"", ""expires"": ""-1"", ""x-ua-compatible"": ""IE=edge"", ""x-xss-protection"": ""1;"", ""pragma"": ""no-cache"", ""content-security-policy"": ""upgrade-insecure-requests;report-uri https://metrics.media-amazon.com/"", ""cache-control"": ""no-cache"", ""accept-ch"": ""ect,rtt,downlink,device-memory,sec-ch-device-memory,viewport-width,sec-ch-viewport-width,dpr,sec-ch-dpr,sec-ch-ua-platform,sec-ch-ua-platform-version"", ""content-language"": ""en-US"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""vary"": ""Content-Type,Accept-Encoding,User-Agent"", ""x-frame-options"": ""SAMEORIGIN"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 f2bfcb0e5eaa96cb4b9aaa38ccd55546.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C2"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""0P8yry-ae8-CNF_G50pGNty8jmIwxy-U8CyiIiwIAxgtpIzjEjJ5Ag==""}"
+7,"GET / HTTP/1.1
+Host: www.amazon.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.11138439178466797,0.11081433296203613,0.23676252365112305,200,OK,[''],27,27,369,"{""content-type"": ""text/html;charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 21:20:39 GMT"", ""x-amz-rid"": ""W6EEGEZJY5WJXJ997ABX"", ""set-cookie"": ""skin=noskin; path=/; domain=.amazon.com"", ""pragma"": ""no-cache"", ""content-security-policy-report-only"": ""default-src 'self' blob: https: data: mediastream: 'unsafe-eval' 'unsafe-inline';report-uri https://metrics.media-amazon.com/"", ""content-security-policy"": ""upgrade-insecure-requests;report-uri https://metrics.media-amazon.com/"", ""content-language"": ""en-US"", ""expires"": ""-1"", ""x-xss-protection"": ""1;"", ""accept-ch-lifetime"": ""86400"", ""accept-ch"": ""ect,rtt,downlink,device-memory,sec-ch-device-memory,viewport-width,sec-ch-viewport-width,dpr,sec-ch-dpr,sec-ch-ua-platform,sec-ch-ua-platform-version"", ""cache-control"": ""no-cache"", ""x-content-type-options"": ""nosniff"", ""x-ua-compatible"": ""IE=edge"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""vary"": ""Content-Type,Accept-Encoding,User-Agent"", ""x-frame-options"": ""SAMEORIGIN"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 2e44a3b2c1d0f478404fb20d9971a778.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C2"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""-7pBb--tKYeVhcpFHGJIVC1Iip6TAD87-Po4wnL3gRAyqHziTV6vZw==""}"
+8,"GET / HTTP/1.1
+Host: www.amazon.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.23270702362060547,0.1314387321472168,0.4787423610687256,200,OK,[''],27,27,369,"{""content-type"": ""text/html;charset=UTF-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 21:20:42 GMT"", ""x-amz-rid"": ""GSS8CVAHB5167FWRRBHK"", ""set-cookie"": ""skin=noskin; path=/; domain=.amazon.com"", ""x-content-type-options"": ""nosniff"", ""accept-ch-lifetime"": ""86400"", ""expires"": ""-1"", ""x-ua-compatible"": ""IE=edge"", ""x-xss-protection"": ""1;"", ""content-security-policy-report-only"": ""default-src 'self' blob: https: data: mediastream: 'unsafe-eval' 'unsafe-inline';report-uri https://metrics.media-amazon.com/"", ""pragma"": ""no-cache"", ""cache-control"": ""no-cache"", ""accept-ch"": ""ect,rtt,downlink,device-memory,sec-ch-device-memory,viewport-width,sec-ch-viewport-width,dpr,sec-ch-dpr,sec-ch-ua-platform,sec-ch-ua-platform-version"", ""content-language"": ""en-US"", ""content-encoding"": ""gzip"", ""content-security-policy"": ""upgrade-insecure-requests;report-uri https://metrics.media-amazon.com/"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""vary"": ""Content-Type,Accept-Encoding,User-Agent"", ""x-frame-options"": ""SAMEORIGIN"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 2408979685aa1bdb752824d292e63bf6.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C2"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""lfY53yjKPj5epASaD5kdCWsyEbYWICEobS1ksGEwsUHjpAEWx_rZYQ==""}"
+9,"GET / HTTP/1.1
+Host: www.amazon.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.27614307403564453,0.1111602783203125,0.2467494010925293,200,OK,[''],18,18,14803,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 21:20:44 GMT"", ""x-amz-rid"": ""Q7CD5SC9Q9YHZ7WAP2BZ"", ""set-cookie"": ""skin=noskin; path=/; domain=.amazon.com"", ""vary"": ""Content-Type,Accept-Encoding,User-Agent"", ""last-modified"": ""Fri, 29 Sep 2023 21:20:26 GMT"", ""etag"": ""\""32e2d-60685fe464280-gzip\"""", ""accept-ranges"": ""bytes"", ""content-encoding"": ""gzip"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 2408979685aa1bdb752824d292e63bf6.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-C2"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""yosS9aUvEpq597Gs4OFSndxN03CvsXbVRKq1hRCjWHRHaMKgQ9FVQA==""}"

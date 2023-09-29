@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.dropbox.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.180678129196167,0.10617589950561523,1.4107213020324707,200,OK,[''],18,18,0,"{""content-security-policy"": ""report-uri https://www.dropbox.com/csp_log?policy_name=metaserver-dynamic ; script-src 'unsafe-eval' 'strict-dynamic' 'nonce-xBN0qCyOC33G4GkrmG2V' 'nonce-j41SVE9RaAy3JoBZVhFM'"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""set-cookie"": ""locale=en; Domain=dropbox.com; expires=Wed, 27 Sep 2028 22:33:48 GMT; Path=/; SameSite=None; Secure"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""DENY"", ""x-permitted-cross-domain-policies"": ""none"", ""x-xss-protection"": ""1; mode=block"", ""content-type"": ""text/html; charset=utf-8"", ""accept-encoding"": ""identity,gzip"", ""date"": ""Fri, 29 Sep 2023 22:33:48 GMT"", ""server"": ""envoy"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains"", ""cache-control"": ""no-cache, no-store"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding"", ""x-dropbox-response-origin"": ""far_remote"", ""x-dropbox-request-id"": ""01c0044bf28943cd9efff63c52f9260d"", ""transfer-encoding"": ""chunked""}"
+1,"GET / HTTP/1.1
+Host: www.dropbox.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.13923048973083496,0.12433791160583496,0.9961724281311035,200,OK,[''],18,18,0,"{""content-security-policy"": ""report-uri https://www.dropbox.com/csp_log?policy_name=metaserver-dynamic ; script-src 'unsafe-eval' 'strict-dynamic' 'nonce-wCJCqWqBzArhE3lXdn2B' 'nonce-96iQulKHgTvHb1x9qoYq'"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""set-cookie"": ""locale=en; Domain=dropbox.com; expires=Wed, 27 Sep 2028 22:33:51 GMT; Path=/; SameSite=None; Secure"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""DENY"", ""x-permitted-cross-domain-policies"": ""none"", ""x-xss-protection"": ""1; mode=block"", ""content-type"": ""text/html; charset=utf-8"", ""accept-encoding"": ""identity,gzip"", ""date"": ""Fri, 29 Sep 2023 22:33:50 GMT"", ""server"": ""envoy"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains"", ""cache-control"": ""no-cache, no-store"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding"", ""x-dropbox-response-origin"": ""far_remote"", ""x-dropbox-request-id"": ""d3bdc0024ec34c90827cf7a26ce34070"", ""transfer-encoding"": ""chunked""}"
+2,"GET / HTTP/1.1
+Host: www.dropbox.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.2790360450744629,0.10872244834899902,0.9038348197937012,200,OK,[''],18,18,0,"{""content-security-policy"": ""report-uri https://www.dropbox.com/csp_log?policy_name=metaserver-dynamic ; script-src 'unsafe-eval' 'strict-dynamic' 'nonce-JmV9PozIK4J12ruEAKfk' 'nonce-S1aGCZPuGytPAapzl7qg'"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""set-cookie"": ""locale=en; Domain=dropbox.com; expires=Wed, 27 Sep 2028 22:33:53 GMT; Path=/; SameSite=None; Secure"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""DENY"", ""x-permitted-cross-domain-policies"": ""none"", ""x-xss-protection"": ""1; mode=block"", ""content-type"": ""text/html; charset=utf-8"", ""accept-encoding"": ""identity,gzip"", ""date"": ""Fri, 29 Sep 2023 22:33:53 GMT"", ""server"": ""envoy"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains"", ""cache-control"": ""no-cache, no-store"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding"", ""x-dropbox-response-origin"": ""far_remote"", ""x-dropbox-request-id"": ""e52f2b7cd9124478884cd7b39e06e95d"", ""transfer-encoding"": ""chunked""}"
+3,"GET / HTTP/1.1
+Host: www.dropbox.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.1488935947418213,0.11176228523254395,0.9612646102905273,200,OK,[''],18,18,0,"{""content-security-policy"": ""report-uri https://www.dropbox.com/csp_log?policy_name=metaserver-dynamic ; script-src 'unsafe-eval' 'strict-dynamic' 'nonce-wpf8SehjWFLz/P2Ju+WW' 'nonce-4TJzhsLp++/CdSNAMlWI'"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""set-cookie"": ""locale=en; Domain=dropbox.com; expires=Wed, 27 Sep 2028 22:33:56 GMT; Path=/; SameSite=None; Secure"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""DENY"", ""x-permitted-cross-domain-policies"": ""none"", ""x-xss-protection"": ""1; mode=block"", ""content-type"": ""text/html; charset=utf-8"", ""accept-encoding"": ""identity,gzip"", ""date"": ""Fri, 29 Sep 2023 22:33:56 GMT"", ""server"": ""envoy"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains"", ""cache-control"": ""no-cache, no-store"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding"", ""x-dropbox-response-origin"": ""far_remote"", ""x-dropbox-request-id"": ""946f88854dd0429589d13a8b37309902"", ""transfer-encoding"": ""chunked""}"
+4,"GET / HTTP/1.1
+Host: www.dropbox.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.1669466495513916,0.11225533485412598,0.8970153331756592,200,OK,[''],18,18,0,"{""content-security-policy"": ""report-uri https://www.dropbox.com/csp_log?policy_name=metaserver-dynamic ; script-src 'unsafe-eval' 'strict-dynamic' 'nonce-JqK9F24Pfc0HxEX8x5b4' 'nonce-s6dZfdtjCxubJNRmfe9x'"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""set-cookie"": ""locale=en; Domain=dropbox.com; expires=Wed, 27 Sep 2028 22:33:59 GMT; Path=/; SameSite=None; Secure"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""DENY"", ""x-permitted-cross-domain-policies"": ""none"", ""x-xss-protection"": ""1; mode=block"", ""content-type"": ""text/html; charset=utf-8"", ""accept-encoding"": ""identity,gzip"", ""date"": ""Fri, 29 Sep 2023 22:33:59 GMT"", ""server"": ""envoy"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains"", ""cache-control"": ""no-cache, no-store"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding"", ""x-dropbox-response-origin"": ""far_remote"", ""x-dropbox-request-id"": ""66b28a92d0ae4e37a6a99d8f53a0b8c2"", ""transfer-encoding"": ""chunked""}"
+5,"GET / HTTP/1.1
+Host: www.dropbox.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.1787586212158203,0.12282061576843262,0.7659602165222168,200,OK,[''],18,18,0,"{""content-security-policy"": ""report-uri https://www.dropbox.com/csp_log?policy_name=metaserver-dynamic ; script-src 'unsafe-eval' 'strict-dynamic' 'nonce-GggGD82b4HcXJYjIgg/3' 'nonce-LtKHc9btbPmoluOfWhkD'"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""set-cookie"": ""locale=en; Domain=dropbox.com; expires=Wed, 27 Sep 2028 22:34:02 GMT; Path=/; SameSite=None; Secure"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""DENY"", ""x-permitted-cross-domain-policies"": ""none"", ""x-xss-protection"": ""1; mode=block"", ""content-type"": ""text/html; charset=utf-8"", ""accept-encoding"": ""identity,gzip"", ""date"": ""Fri, 29 Sep 2023 22:34:01 GMT"", ""server"": ""envoy"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains"", ""cache-control"": ""no-cache, no-store"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding"", ""x-dropbox-response-origin"": ""far_remote"", ""x-dropbox-request-id"": ""8902e6ce9a1d46f0b75b119121b90ffe"", ""transfer-encoding"": ""chunked""}"
+6,"GET / HTTP/1.1
+Host: www.dropbox.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.19544458389282227,0.14167046546936035,0.9199552536010742,200,OK,[''],18,18,0,"{""content-security-policy"": ""report-uri https://www.dropbox.com/csp_log?policy_name=metaserver-dynamic ; script-src 'unsafe-eval' 'strict-dynamic' 'nonce-q4MmME0Jz+NQII7bfO2u' 'nonce-k1w+o6d48iF6+qNbMv/n'"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""set-cookie"": ""locale=en; Domain=dropbox.com; expires=Wed, 27 Sep 2028 22:34:05 GMT; Path=/; SameSite=None; Secure"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""DENY"", ""x-permitted-cross-domain-policies"": ""none"", ""x-xss-protection"": ""1; mode=block"", ""content-type"": ""text/html; charset=utf-8"", ""accept-encoding"": ""identity,gzip"", ""date"": ""Fri, 29 Sep 2023 22:34:04 GMT"", ""server"": ""envoy"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains"", ""cache-control"": ""no-cache, no-store"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding"", ""x-dropbox-response-origin"": ""far_remote"", ""x-dropbox-request-id"": ""e87cc7678a88451fbd82e6a6668eca78"", ""transfer-encoding"": ""chunked""}"
+7,"GET / HTTP/1.1
+Host: www.dropbox.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.12814807891845703,0.11035823822021484,0.8844249248504639,200,OK,[''],18,18,0,"{""content-security-policy"": ""report-uri https://www.dropbox.com/csp_log?policy_name=metaserver-dynamic ; script-src 'unsafe-eval' 'strict-dynamic' 'nonce-yz6xWgghg0KjIcjKyfqD' 'nonce-QyFv5tX/u0neGrHZUvLe'"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""set-cookie"": ""locale=en; Domain=dropbox.com; expires=Wed, 27 Sep 2028 22:34:07 GMT; Path=/; SameSite=None; Secure"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""DENY"", ""x-permitted-cross-domain-policies"": ""none"", ""x-xss-protection"": ""1; mode=block"", ""content-type"": ""text/html; charset=utf-8"", ""accept-encoding"": ""identity,gzip"", ""date"": ""Fri, 29 Sep 2023 22:34:07 GMT"", ""server"": ""envoy"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains"", ""cache-control"": ""no-cache, no-store"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding"", ""x-dropbox-response-origin"": ""far_remote"", ""x-dropbox-request-id"": ""7c201f89575a4a54b458349f21f4dcbb"", ""transfer-encoding"": ""chunked""}"
+8,"GET / HTTP/1.1
+Host: www.dropbox.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.1462266445159912,0.11179518699645996,0.8273780345916748,200,OK,[''],18,18,0,"{""content-security-policy"": ""report-uri https://www.dropbox.com/csp_log?policy_name=metaserver-dynamic ; script-src 'unsafe-eval' 'strict-dynamic' 'nonce-lefODEGDwuLg54ZwBw+P' 'nonce-S39K576JiPukyn2wjkfV'"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""set-cookie"": ""locale=en; Domain=dropbox.com; expires=Wed, 27 Sep 2028 22:34:10 GMT; Path=/; SameSite=None; Secure"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""DENY"", ""x-permitted-cross-domain-policies"": ""none"", ""x-xss-protection"": ""1; mode=block"", ""content-type"": ""text/html; charset=utf-8"", ""accept-encoding"": ""identity,gzip"", ""date"": ""Fri, 29 Sep 2023 22:34:09 GMT"", ""server"": ""envoy"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains"", ""cache-control"": ""no-cache, no-store"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding"", ""x-dropbox-response-origin"": ""far_remote"", ""x-dropbox-request-id"": ""f7454de88f7e43099284125ab698640f"", ""transfer-encoding"": ""chunked""}"
+9,"GET / HTTP/1.1
+Host: www.dropbox.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.18535661697387695,0.11111903190612793,1.0116872787475586,200,OK,[''],18,18,4655,"{""content-security-policy"": ""report-uri https://www.dropbox.com/csp_log?policy_name=metaserver-dynamic ; script-src 'unsafe-eval' 'strict-dynamic' 'nonce-0lXOLuDnWB5gjyvqx+r5' 'nonce-MxZRfH0dSU1WCpjb5RIA'"", ""referrer-policy"": ""strict-origin-when-cross-origin"", ""set-cookie"": ""locale=en; Domain=dropbox.com; expires=Wed, 27 Sep 2028 22:34:12 GMT; Path=/; SameSite=None; Secure"", ""x-content-type-options"": ""nosniff"", ""x-frame-options"": ""DENY"", ""x-permitted-cross-domain-policies"": ""none"", ""x-xss-protection"": ""1; mode=block"", ""content-type"": ""text/html; charset=utf-8"", ""accept-encoding"": ""identity,gzip"", ""date"": ""Fri, 29 Sep 2023 22:34:12 GMT"", ""server"": ""envoy"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains"", ""cache-control"": ""no-cache, no-store"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding"", ""x-dropbox-response-origin"": ""far_remote"", ""x-dropbox-request-id"": ""7918ad9be0924dd5b028aa7e3b732a9d"", ""transfer-encoding"": ""chunked""}"

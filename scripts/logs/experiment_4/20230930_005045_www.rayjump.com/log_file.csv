@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.rayjump.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.0782783031463623,0.11309957504272461,0.017761707305908203,200,OK,[''],13,13,0,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""nginx"", ""last-modified"": ""Tue, 29 Aug 2023 06:30:07 GMT"", ""content-encoding"": ""gzip"", ""date"": ""Fri, 29 Sep 2023 09:13:28 GMT"", ""etag"": ""\""64ed906f-fe7\"""", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 fce8106dca6331a9ef447b7d400205f8.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""x-amz-cf-id"": ""AvVtgtVJlSzY6qvssyzNuMZfFlSavc6JQET5UzN8GDztDqUhkWrZfQ=="", ""age"": ""49040""}"
+1,"GET / HTTP/1.1
+Host: www.rayjump.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.18529343605041504,0.10663866996765137,0.0249483585357666,200,OK,[''],13,13,0,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""nginx"", ""last-modified"": ""Tue, 29 Aug 2023 06:30:07 GMT"", ""content-encoding"": ""gzip"", ""date"": ""Fri, 29 Sep 2023 09:13:28 GMT"", ""etag"": ""\""64ed906f-fe7\"""", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 f9e7fd4b74156e78a449b2e846941478.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""x-amz-cf-id"": ""Z07ICuqR1hWWVIfkpZm74yypu_24G2UWhX773mdKx2PWRfj48DOGbg=="", ""age"": ""49042""}"
+2,"GET / HTTP/1.1
+Host: www.rayjump.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.14037799835205078,0.10812950134277344,0.01876044273376465,200,OK,[''],13,13,0,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""nginx"", ""last-modified"": ""Tue, 29 Aug 2023 06:30:07 GMT"", ""content-encoding"": ""gzip"", ""date"": ""Fri, 29 Sep 2023 09:13:28 GMT"", ""etag"": ""\""64ed906f-fe7\"""", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 60fdae524298443cc52e327d1b093408.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""x-amz-cf-id"": ""0YvjOpU6KI32OzIJJO3iVCYXxPaTyaeyCMoc1niKl4Tzk-OCQe5SCw=="", ""age"": ""49045""}"
+3,"GET / HTTP/1.1
+Host: www.rayjump.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.20990991592407227,0.10652399063110352,0.053240299224853516,200,OK,[''],13,13,0,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""nginx"", ""last-modified"": ""Tue, 29 Aug 2023 06:30:07 GMT"", ""content-encoding"": ""gzip"", ""date"": ""Fri, 29 Sep 2023 09:13:28 GMT"", ""etag"": ""\""64ed906f-fe7\"""", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 c25f4c3e9095efed7de1aa324e9d84e2.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""x-amz-cf-id"": ""Fcx9xCzZM8AZkvOyC5aKYTvURU8Sk_SyEatZRGoMREaGK5hxHDRZ1A=="", ""age"": ""49048""}"
+4,"GET / HTTP/1.1
+Host: www.rayjump.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.14034152030944824,0.1073005199432373,0.04700827598571777,200,OK,[''],13,13,3503,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""nginx"", ""last-modified"": ""Tue, 29 Aug 2023 06:30:07 GMT"", ""content-encoding"": ""gzip"", ""date"": ""Fri, 29 Sep 2023 09:13:28 GMT"", ""etag"": ""\""64ed906f-fe7\"""", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 f9895d364ca1362380fa7dca357757d2.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""x-amz-cf-id"": ""gwlJk-JTfkSFK1ZHABIqbbllLNp3ekoHNf1LIO6bXFyVbaHNFSYkhA=="", ""age"": ""49050""}"
+5,"GET / HTTP/1.1
+Host: www.rayjump.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.25060462951660156,0.11777973175048828,0.04841446876525879,200,OK,[''],13,13,3503,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""nginx"", ""last-modified"": ""Tue, 29 Aug 2023 06:30:07 GMT"", ""content-encoding"": ""gzip"", ""date"": ""Fri, 29 Sep 2023 09:13:28 GMT"", ""etag"": ""\""64ed906f-fe7\"""", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 99c082d51ab1d5dd3b28271abf556164.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""x-amz-cf-id"": ""GRMwZnVVWEUnOHqi3eH05Gc6tdtWF742xcnVvje_BOqXn6-aPX4OqA=="", ""age"": ""49053""}"
+6,"GET / HTTP/1.1
+Host: www.rayjump.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.12381291389465332,0.11098217964172363,0.10482001304626465,200,OK,[''],13,13,0,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""nginx"", ""last-modified"": ""Tue, 29 Aug 2023 06:30:07 GMT"", ""content-encoding"": ""gzip"", ""date"": ""Fri, 29 Sep 2023 09:13:28 GMT"", ""etag"": ""\""64ed906f-fe7\"""", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 f6000cfec7fa5ef85a04c1160d44340e.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""x-amz-cf-id"": ""i3UiGxEcf-1I24_85319s5rg9xqj_EIL4y5d8-U8Lv3fL0dw3hq3fg=="", ""age"": ""49056""}"
+7,"GET / HTTP/1.1
+Host: www.rayjump.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.3407912254333496,0.11624360084533691,0.02096271514892578,200,OK,[''],13,13,3503,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""nginx"", ""last-modified"": ""Tue, 29 Aug 2023 06:30:07 GMT"", ""content-encoding"": ""gzip"", ""date"": ""Fri, 29 Sep 2023 09:13:28 GMT"", ""etag"": ""\""64ed906f-fe7\"""", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 f9e7fd4b74156e78a449b2e846941478.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""x-amz-cf-id"": ""kd-vepLB2N_RPtWZzeR3bp7WWoqj4Voic7YI8e8b-drhlyiN1J2KTw=="", ""age"": ""49059""}"
+8,"GET / HTTP/1.1
+Host: www.rayjump.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.191162109375,0.10462450981140137,0.03191351890563965,200,OK,[''],13,13,3503,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""nginx"", ""last-modified"": ""Tue, 29 Aug 2023 06:30:07 GMT"", ""content-encoding"": ""gzip"", ""date"": ""Fri, 29 Sep 2023 09:13:28 GMT"", ""etag"": ""\""64ed906f-fe7\"""", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 0e57ab7e4e13f8d49df5255d2b26c06e.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""x-amz-cf-id"": ""PHVuPdz48MJvaHK6H02gHcmBtcU2_-x5Sf3S0LyuVrTQ3dHf71n5CA=="", ""age"": ""49061""}"
+9,"GET / HTTP/1.1
+Host: www.rayjump.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.21714258193969727,0.11773538589477539,0.031080245971679688,200,OK,[''],13,13,3503,"{""content-type"": ""text/html"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""nginx"", ""last-modified"": ""Tue, 29 Aug 2023 06:30:07 GMT"", ""content-encoding"": ""gzip"", ""date"": ""Fri, 29 Sep 2023 09:13:28 GMT"", ""etag"": ""\""64ed906f-fe7\"""", ""x-cache"": ""Hit from cloudfront"", ""via"": ""1.1 fce8106dca6331a9ef447b7d400205f8.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""x-amz-cf-id"": ""czV_eDxglZgy6XLoeAfXPp1YUnBFQNjnXFOmv65tfQSdMEb75WHpUw=="", ""age"": ""49063""}"

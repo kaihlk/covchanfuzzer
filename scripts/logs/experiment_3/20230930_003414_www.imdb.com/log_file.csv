@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.imdb.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.18116283416748047,0.1005089282989502,2.084568500518799,200,OK,[''],20,20,7567,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 22:34:19 GMT"", ""x-amz-rid"": ""TYYMSR4TTM0JJ19ZZNRA"", ""set-cookie"": ""next-sid=X2XphFMW1_uyIgC-nWY7y; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly"", ""content-security-policy"": ""frame-ancestors 'self' imdb.com *.imdb.com *.media-imdb.com withoutabox.com *.withoutabox.com amazon.com *.amazon.com amazon.co.uk *.amazon.co.uk amazon.de *.amazon.de translate.google.com images.google.com www.google.com www.google.co.uk search.aol.com bing.com www.bing.com"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""etag"": ""\""15v1j9p6j69lcmd\"""", ""cache-control"": ""private, no-cache, no-store, max-age=0, must-revalidate"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding,Content-Type,Accept-Encoding,User-Agent"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 8fd479f9732c98acd630e18c99fdcc6c.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""U7aRrmLk_47hySssT9ZqJoPiMMpIqMWJCSPMsVjz_36GZVL6U6RJsg==""}"
+1,"GET / HTTP/1.1
+Host: www.imdb.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.11685585975646973,0.11518096923828125,1.9691102504730225,200,OK,[''],20,20,14244,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 22:34:23 GMT"", ""x-amz-rid"": ""EYC2RG98J950TD7C1GVW"", ""set-cookie"": ""next-sid=OJKlijVOgpjjIQrl9Qbfp; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly"", ""content-security-policy"": ""frame-ancestors 'self' imdb.com *.imdb.com *.media-imdb.com withoutabox.com *.withoutabox.com amazon.com *.amazon.com amazon.co.uk *.amazon.co.uk amazon.de *.amazon.de translate.google.com images.google.com www.google.com www.google.co.uk search.aol.com bing.com www.bing.com"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""etag"": ""\""gg7id7ory7lcng\"""", ""cache-control"": ""private, no-cache, no-store, max-age=0, must-revalidate"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding,Content-Type,Accept-Encoding,User-Agent"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 af209935e4592b541002ca7e51382b90.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""cTIXkkOF5cq6xZkHiICJtSOFz0yEJpy6D9kX3wYg7NBuOPX1KtTR6g==""}"
+2,"GET / HTTP/1.1
+Host: www.imdb.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.08352780342102051,0.10659933090209961,1.804687738418579,200,OK,[''],20,20,7561,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 22:34:27 GMT"", ""x-amz-rid"": ""QVJC1Z8SPCFQS52RJYZ1"", ""set-cookie"": ""next-sid=oPH9tgkfZyDLXh1Svim5z; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly"", ""content-security-policy"": ""frame-ancestors 'self' imdb.com *.imdb.com *.media-imdb.com withoutabox.com *.withoutabox.com amazon.com *.amazon.com amazon.co.uk *.amazon.co.uk amazon.de *.amazon.de translate.google.com images.google.com www.google.com www.google.co.uk search.aol.com bing.com www.bing.com"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""etag"": ""\""qlcojzf73vlcpc\"""", ""cache-control"": ""private, no-cache, no-store, max-age=0, must-revalidate"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding,Content-Type,Accept-Encoding,User-Agent"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 b222596b4b3100894e93b364e4a94890.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""f6vPZ2qmq5FzG54-0_rsveDU8zg5adQSoUZQLMM_taR8e1WKXp0Qrg==""}"
+3,"GET / HTTP/1.1
+Host: www.imdb.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.16028451919555664,0.10940170288085938,2.07442569732666,200,OK,[''],20,20,7556,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 22:34:32 GMT"", ""x-amz-rid"": ""9Q4B3B6ZF0PYYRGKQPT1"", ""set-cookie"": ""next-sid=BqrnC-glGVUHF1PZGmnJY; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly"", ""content-security-policy"": ""frame-ancestors 'self' imdb.com *.imdb.com *.media-imdb.com withoutabox.com *.withoutabox.com amazon.com *.amazon.com amazon.co.uk *.amazon.co.uk amazon.de *.amazon.de translate.google.com images.google.com www.google.com www.google.co.uk search.aol.com bing.com www.bing.com"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""etag"": ""\""jwciv2pw4zlcnz\"""", ""cache-control"": ""private, no-cache, no-store, max-age=0, must-revalidate"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding,Content-Type,Accept-Encoding,User-Agent"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 eabf0052502240e2b09c2e962490cabc.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""B3r3sa834Vm2EVCquOQsP5ZAcDlO-5aa1WjNZ8lmvVo4axmZYjcmFA==""}"
+4,"GET / HTTP/1.1
+Host: www.imdb.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.13440799713134766,0.1636824607849121,2.2432236671447754,200,OK,[''],20,20,7555,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 22:34:36 GMT"", ""x-amz-rid"": ""BY8VWGJ57SD2S0TWQB9P"", ""set-cookie"": ""next-sid=qYm9jnnT-CMpYvtJVvWSX; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly"", ""content-security-policy"": ""frame-ancestors 'self' imdb.com *.imdb.com *.media-imdb.com withoutabox.com *.withoutabox.com amazon.com *.amazon.com amazon.co.uk *.amazon.co.uk amazon.de *.amazon.de translate.google.com images.google.com www.google.com www.google.co.uk search.aol.com bing.com www.bing.com"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""etag"": ""\""16iziiudxgllcng\"""", ""cache-control"": ""private, no-cache, no-store, max-age=0, must-revalidate"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding,Content-Type,Accept-Encoding,User-Agent"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 f831aab6d5418e01406fa93bd6a1d650.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""xxvuvd1-VMswXCtqIg4mCC6uiTprQTdPQvnTS3Lx3ldP1RypJ5WEyg==""}"
+5,"GET / HTTP/1.1
+Host: www.imdb.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.32445406913757324,0.12132644653320312,2.6027615070343018,200,OK,[''],20,20,7547,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 22:34:41 GMT"", ""x-amz-rid"": ""N31130636Q57YT2E1B15"", ""set-cookie"": ""next-sid=dR-9qeL_eo2DeNLqHCJHv; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly"", ""content-security-policy"": ""frame-ancestors 'self' imdb.com *.imdb.com *.media-imdb.com withoutabox.com *.withoutabox.com amazon.com *.amazon.com amazon.co.uk *.amazon.co.uk amazon.de *.amazon.de translate.google.com images.google.com www.google.com www.google.co.uk search.aol.com bing.com www.bing.com"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""etag"": ""\""tqzdjak28dlco0\"""", ""cache-control"": ""private, no-cache, no-store, max-age=0, must-revalidate"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding,Content-Type,Accept-Encoding,User-Agent"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 938af0a58a4fcbf3c08e6c39b89440e2.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""-myd-oMcTQIeG-6e-s8EtzxEAlP58yrAcuWuf262RmhKln8jG_MKdQ==""}"
+6,"GET / HTTP/1.1
+Host: www.imdb.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.11717629432678223,0.11402153968811035,2.8085453510284424,200,OK,[''],20,20,14272,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 22:34:46 GMT"", ""x-amz-rid"": ""PXYMRP8SS3B87NJG0YA1"", ""set-cookie"": ""next-sid=IpqjCQ0pKKCM7kG5rG54T; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly"", ""content-security-policy"": ""frame-ancestors 'self' imdb.com *.imdb.com *.media-imdb.com withoutabox.com *.withoutabox.com amazon.com *.amazon.com amazon.co.uk *.amazon.co.uk amazon.de *.amazon.de translate.google.com images.google.com www.google.com www.google.co.uk search.aol.com bing.com www.bing.com"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""etag"": ""\""mkrwk7cxf5lcou\"""", ""cache-control"": ""private, no-cache, no-store, max-age=0, must-revalidate"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding,Content-Type,Accept-Encoding,User-Agent"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 e3435d60cd338994e4187428e5fd4e42.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""eh1gbeEljKo-IrDzibeVQ4if9rI9WvIMCPV6w9-PQXYskMFpitzcMQ==""}"
+7,"GET / HTTP/1.1
+Host: www.imdb.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.27402496337890625,0.10667157173156738,2.06483793258667,200,OK,[''],20,20,7575,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 22:34:51 GMT"", ""x-amz-rid"": ""ZRAADZCR2EEBBBSCZRJC"", ""set-cookie"": ""next-sid=yf13cETw6zxPPScIJnPJM; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly"", ""content-security-policy"": ""frame-ancestors 'self' imdb.com *.imdb.com *.media-imdb.com withoutabox.com *.withoutabox.com amazon.com *.amazon.com amazon.co.uk *.amazon.co.uk amazon.de *.amazon.de translate.google.com images.google.com www.google.com www.google.co.uk search.aol.com bing.com www.bing.com"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""etag"": ""\""12pgx54vnyylcpn\"""", ""cache-control"": ""private, no-cache, no-store, max-age=0, must-revalidate"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding,Content-Type,Accept-Encoding,User-Agent"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 f6000cfec7fa5ef85a04c1160d44340e.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""LL3tjGkcZrmGSdZvF70Ri42jJIG51jqj8zQCC05WD3rdIGGqWJhd6w==""}"
+8,"GET / HTTP/1.1
+Host: www.imdb.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.1341874599456787,0.11207175254821777,2.1206400394439697,200,OK,[''],20,20,14256,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 22:34:55 GMT"", ""x-amz-rid"": ""6SYERQ918F7FY15JZP3P"", ""set-cookie"": ""next-sid=1ShCpxm-Z0F3x6cf9QyYy; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly"", ""content-security-policy"": ""frame-ancestors 'self' imdb.com *.imdb.com *.media-imdb.com withoutabox.com *.withoutabox.com amazon.com *.amazon.com amazon.co.uk *.amazon.co.uk amazon.de *.amazon.de translate.google.com images.google.com www.google.com www.google.co.uk search.aol.com bing.com www.bing.com"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""etag"": ""\""4i6uwfz9tildx8\"""", ""cache-control"": ""private, no-cache, no-store, max-age=0, must-revalidate"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding,Content-Type,Accept-Encoding,User-Agent"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 9d26481a7f37b9dc40bb6ae05a5281ca.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""k-rJQw3eqGjsrXkuENgz59EydYvclN-2zL2C5rqAOS-PaWcYIjLAWA==""}"
+9,"GET / HTTP/1.1
+Host: www.imdb.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.32599973678588867,0.11684966087341309,2.120177745819092,200,OK,[''],20,20,14252,"{""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""server"": ""Server"", ""date"": ""Fri, 29 Sep 2023 22:35:00 GMT"", ""x-amz-rid"": ""2J0017CGB2FRSK93725F"", ""set-cookie"": ""next-sid=hsH3vLFHARccbku8APg0p; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly"", ""content-security-policy"": ""frame-ancestors 'self' imdb.com *.imdb.com *.media-imdb.com withoutabox.com *.withoutabox.com amazon.com *.amazon.com amazon.co.uk *.amazon.co.uk amazon.de *.amazon.de translate.google.com images.google.com www.google.com www.google.co.uk search.aol.com bing.com www.bing.com"", ""x-frame-options"": ""SAMEORIGIN"", ""x-xss-protection"": ""1; mode=block"", ""etag"": ""\""45v3xae0milcn5\"""", ""cache-control"": ""private, no-cache, no-store, max-age=0, must-revalidate"", ""content-encoding"": ""gzip"", ""vary"": ""Accept-Encoding,Content-Type,Accept-Encoding,User-Agent"", ""strict-transport-security"": ""max-age=47474747; includeSubDomains; preload"", ""x-cache"": ""Miss from cloudfront"", ""via"": ""1.1 c25f4c3e9095efed7de1aa324e9d84e2.cloudfront.net (CloudFront)"", ""x-amz-cf-pop"": ""HAM50-P1"", ""alt-svc"": ""h3=\"":443\""; ma=86400"", ""x-amz-cf-id"": ""ztTmpx6_-9qOuC6juag0uS7QytYozNOupgajmBPy3ZkBL1c-MNBFbA==""}"

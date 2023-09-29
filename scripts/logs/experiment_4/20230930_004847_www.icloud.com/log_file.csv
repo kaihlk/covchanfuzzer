@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.icloud.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.13021230697631836,0.12045121192932129,0.04582047462463379,200,OK,[''],21,21,13952,"{""server"": ""AppleHttpServer/3faf4ee9434b"", ""content-type"": ""text/html"", ""content-length"": ""48166"", ""etag"": ""\""18ad0f7daf8bc26\"""", ""content-language"": ""en-us"", ""content-encoding"": ""br"", ""content-location"": ""/system/icloud.com/index.html.en-us.brotli"", ""vary"": ""accept-encoding"", ""content-version"": ""V1"", ""x-frame-options"": ""SAMEORIGIN"", ""x-robots-tag"": ""noarchive"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""cache-control"": ""public, max-age=300"", ""x-content-type-options"": ""nosniff"", ""content-security-policy"": ""img-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com *.mzstatic.com; media-src 'self' blob: data: *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn; font-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com; connect-src blob: 'self' icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com; frame-src 'self' blob: mailto: tel: *.icloud.com *.apple.com *.icloud-sandbox.com *.icloud-content.com *.icloud-content.com.cn; frame-ancestors 'self' *.icloud.com *.apple.com; form-action 'self' *.icloud.com *.apple.com; child-src blob: 'self'; base-uri 'self' *.icloud.com *.cdn-apple.com; report-uri https://feedbackws.icloud.com/reportRaw"", ""x-xss-protection"": ""1; mode=block"", ""expect-ct"": ""max-age=30, report-uri=\""https://feedbackws.icloud.com/reportRaw\"""", ""x-apple-request-uuid"": ""c199b59e-7c2c-425a-8e9a-44195933bb4c"", ""access-control-expose-headers"": ""X-Apple-Request-UUID,Via"", ""date"": ""Fri, 29 Sep 2023 22:48:50 GMT"", ""connection"": ""keep-alive""}"
+1,"GET / HTTP/1.1
+Host: www.icloud.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.23583555221557617,0.10133695602416992,0.15411162376403809,200,OK,[''],21,21,13952,"{""server"": ""AppleHttpServer/3faf4ee9434b"", ""content-type"": ""text/html"", ""content-length"": ""48166"", ""etag"": ""\""18ad0f7daf8bc26\"""", ""content-language"": ""en-us"", ""content-encoding"": ""br"", ""content-location"": ""/system/icloud.com/index.html.en-us.brotli"", ""vary"": ""accept-encoding"", ""content-version"": ""V1"", ""x-frame-options"": ""SAMEORIGIN"", ""x-robots-tag"": ""noarchive"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""cache-control"": ""public, max-age=300"", ""x-content-type-options"": ""nosniff"", ""content-security-policy"": ""img-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com *.mzstatic.com; media-src 'self' blob: data: *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn; font-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com; connect-src blob: 'self' icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com; frame-src 'self' blob: mailto: tel: *.icloud.com *.apple.com *.icloud-sandbox.com *.icloud-content.com *.icloud-content.com.cn; frame-ancestors 'self' *.icloud.com *.apple.com; form-action 'self' *.icloud.com *.apple.com; child-src blob: 'self'; base-uri 'self' *.icloud.com *.cdn-apple.com; report-uri https://feedbackws.icloud.com/reportRaw"", ""x-xss-protection"": ""1; mode=block"", ""expect-ct"": ""max-age=30, report-uri=\""https://feedbackws.icloud.com/reportRaw\"""", ""x-apple-request-uuid"": ""c199b59e-7c2c-425a-8e9a-44195933bb4c"", ""access-control-expose-headers"": ""X-Apple-Request-UUID,Via"", ""date"": ""Fri, 29 Sep 2023 22:48:52 GMT"", ""connection"": ""keep-alive""}"
+2,"GET / HTTP/1.1
+Host: www.icloud.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.16335821151733398,0.1455676555633545,0.054119110107421875,200,OK,[''],21,21,13952,"{""server"": ""AppleHttpServer/3faf4ee9434b"", ""content-type"": ""text/html"", ""content-length"": ""48166"", ""etag"": ""\""18ad0f7daf8bc26\"""", ""content-language"": ""en-us"", ""content-encoding"": ""br"", ""content-location"": ""/system/icloud.com/index.html.en-us.brotli"", ""vary"": ""accept-encoding"", ""content-version"": ""V1"", ""x-frame-options"": ""SAMEORIGIN"", ""x-robots-tag"": ""noarchive"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""cache-control"": ""public, max-age=300"", ""x-content-type-options"": ""nosniff"", ""content-security-policy"": ""img-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com *.mzstatic.com; media-src 'self' blob: data: *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn; font-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com; connect-src blob: 'self' icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com; frame-src 'self' blob: mailto: tel: *.icloud.com *.apple.com *.icloud-sandbox.com *.icloud-content.com *.icloud-content.com.cn; frame-ancestors 'self' *.icloud.com *.apple.com; form-action 'self' *.icloud.com *.apple.com; child-src blob: 'self'; base-uri 'self' *.icloud.com *.cdn-apple.com; report-uri https://feedbackws.icloud.com/reportRaw"", ""x-xss-protection"": ""1; mode=block"", ""expect-ct"": ""max-age=30, report-uri=\""https://feedbackws.icloud.com/reportRaw\"""", ""x-apple-request-uuid"": ""c199b59e-7c2c-425a-8e9a-44195933bb4c"", ""access-control-expose-headers"": ""X-Apple-Request-UUID,Via"", ""date"": ""Fri, 29 Sep 2023 22:48:54 GMT"", ""connection"": ""keep-alive""}"
+3,"GET / HTTP/1.1
+Host: www.icloud.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.09220004081726074,0.1102285385131836,0.030148983001708984,200,OK,[''],21,21,13952,"{""server"": ""AppleHttpServer/3faf4ee9434b"", ""content-type"": ""text/html"", ""content-length"": ""48166"", ""etag"": ""\""18ad0f7daf8bc26\"""", ""content-language"": ""en-us"", ""content-encoding"": ""br"", ""content-location"": ""/system/icloud.com/index.html.en-us.brotli"", ""vary"": ""accept-encoding"", ""content-version"": ""V1"", ""x-frame-options"": ""SAMEORIGIN"", ""x-robots-tag"": ""noarchive"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""cache-control"": ""public, max-age=300"", ""x-content-type-options"": ""nosniff"", ""content-security-policy"": ""img-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com *.mzstatic.com; media-src 'self' blob: data: *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn; font-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com; connect-src blob: 'self' icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com; frame-src 'self' blob: mailto: tel: *.icloud.com *.apple.com *.icloud-sandbox.com *.icloud-content.com *.icloud-content.com.cn; frame-ancestors 'self' *.icloud.com *.apple.com; form-action 'self' *.icloud.com *.apple.com; child-src blob: 'self'; base-uri 'self' *.icloud.com *.cdn-apple.com; report-uri https://feedbackws.icloud.com/reportRaw"", ""x-xss-protection"": ""1; mode=block"", ""expect-ct"": ""max-age=30, report-uri=\""https://feedbackws.icloud.com/reportRaw\"""", ""x-apple-request-uuid"": ""c199b59e-7c2c-425a-8e9a-44195933bb4c"", ""access-control-expose-headers"": ""X-Apple-Request-UUID,Via"", ""date"": ""Fri, 29 Sep 2023 22:48:56 GMT"", ""connection"": ""keep-alive""}"
+4,"GET / HTTP/1.1
+Host: www.icloud.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.220320463180542,0.10951542854309082,0.03995013236999512,200,OK,[''],21,21,13952,"{""server"": ""AppleHttpServer/3faf4ee9434b"", ""content-type"": ""text/html"", ""content-length"": ""48166"", ""etag"": ""\""18ad0f7daf8bc26\"""", ""content-language"": ""en-us"", ""content-encoding"": ""br"", ""content-location"": ""/system/icloud.com/index.html.en-us.brotli"", ""vary"": ""accept-encoding"", ""content-version"": ""V1"", ""x-frame-options"": ""SAMEORIGIN"", ""x-robots-tag"": ""noarchive"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""cache-control"": ""public, max-age=300"", ""x-content-type-options"": ""nosniff"", ""content-security-policy"": ""img-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com *.mzstatic.com; media-src 'self' blob: data: *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn; font-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com; connect-src blob: 'self' icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com; frame-src 'self' blob: mailto: tel: *.icloud.com *.apple.com *.icloud-sandbox.com *.icloud-content.com *.icloud-content.com.cn; frame-ancestors 'self' *.icloud.com *.apple.com; form-action 'self' *.icloud.com *.apple.com; child-src blob: 'self'; base-uri 'self' *.icloud.com *.cdn-apple.com; report-uri https://feedbackws.icloud.com/reportRaw"", ""x-xss-protection"": ""1; mode=block"", ""expect-ct"": ""max-age=30, report-uri=\""https://feedbackws.icloud.com/reportRaw\"""", ""x-apple-request-uuid"": ""c199b59e-7c2c-425a-8e9a-44195933bb4c"", ""access-control-expose-headers"": ""X-Apple-Request-UUID,Via"", ""date"": ""Fri, 29 Sep 2023 22:48:59 GMT"", ""connection"": ""keep-alive""}"
+5,"GET / HTTP/1.1
+Host: www.icloud.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.22658371925354004,0.10560917854309082,0.07548999786376953,200,OK,[''],21,21,13952,"{""server"": ""AppleHttpServer/3faf4ee9434b"", ""content-type"": ""text/html"", ""content-length"": ""48166"", ""etag"": ""\""18ad0f7daf8bc26\"""", ""content-language"": ""en-us"", ""content-encoding"": ""br"", ""content-location"": ""/system/icloud.com/index.html.en-us.brotli"", ""vary"": ""accept-encoding"", ""content-version"": ""V1"", ""x-frame-options"": ""SAMEORIGIN"", ""x-robots-tag"": ""noarchive"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""cache-control"": ""public, max-age=300"", ""x-content-type-options"": ""nosniff"", ""content-security-policy"": ""img-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com *.mzstatic.com; media-src 'self' blob: data: *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn; font-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com; connect-src blob: 'self' icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com; frame-src 'self' blob: mailto: tel: *.icloud.com *.apple.com *.icloud-sandbox.com *.icloud-content.com *.icloud-content.com.cn; frame-ancestors 'self' *.icloud.com *.apple.com; form-action 'self' *.icloud.com *.apple.com; child-src blob: 'self'; base-uri 'self' *.icloud.com *.cdn-apple.com; report-uri https://feedbackws.icloud.com/reportRaw"", ""x-xss-protection"": ""1; mode=block"", ""expect-ct"": ""max-age=30, report-uri=\""https://feedbackws.icloud.com/reportRaw\"""", ""x-apple-request-uuid"": ""c199b59e-7c2c-425a-8e9a-44195933bb4c"", ""access-control-expose-headers"": ""X-Apple-Request-UUID,Via"", ""date"": ""Fri, 29 Sep 2023 22:49:01 GMT"", ""connection"": ""keep-alive""}"
+6,"GET / HTTP/1.1
+Host: www.icloud.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.09094071388244629,0.11032652854919434,0.04155564308166504,200,OK,[''],21,21,13952,"{""server"": ""AppleHttpServer/3faf4ee9434b"", ""content-type"": ""text/html"", ""content-length"": ""48166"", ""etag"": ""\""18ad0f7daf8bc26\"""", ""content-language"": ""en-us"", ""content-encoding"": ""br"", ""content-location"": ""/system/icloud.com/index.html.en-us.brotli"", ""vary"": ""accept-encoding"", ""content-version"": ""V1"", ""x-frame-options"": ""SAMEORIGIN"", ""x-robots-tag"": ""noarchive"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""cache-control"": ""public, max-age=300"", ""x-content-type-options"": ""nosniff"", ""content-security-policy"": ""img-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com *.mzstatic.com; media-src 'self' blob: data: *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn; font-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com; connect-src blob: 'self' icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com; frame-src 'self' blob: mailto: tel: *.icloud.com *.apple.com *.icloud-sandbox.com *.icloud-content.com *.icloud-content.com.cn; frame-ancestors 'self' *.icloud.com *.apple.com; form-action 'self' *.icloud.com *.apple.com; child-src blob: 'self'; base-uri 'self' *.icloud.com *.cdn-apple.com; report-uri https://feedbackws.icloud.com/reportRaw"", ""x-xss-protection"": ""1; mode=block"", ""expect-ct"": ""max-age=30, report-uri=\""https://feedbackws.icloud.com/reportRaw\"""", ""x-apple-request-uuid"": ""c199b59e-7c2c-425a-8e9a-44195933bb4c"", ""access-control-expose-headers"": ""X-Apple-Request-UUID,Via"", ""date"": ""Fri, 29 Sep 2023 22:49:03 GMT"", ""connection"": ""keep-alive""}"
+7,"GET / HTTP/1.1
+Host: www.icloud.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.15895295143127441,0.13403606414794922,0.0448453426361084,200,OK,[''],21,21,13952,"{""server"": ""AppleHttpServer/3faf4ee9434b"", ""content-type"": ""text/html"", ""content-length"": ""48166"", ""etag"": ""\""18ad0f7daf8bc26\"""", ""content-language"": ""en-us"", ""content-encoding"": ""br"", ""content-location"": ""/system/icloud.com/index.html.en-us.brotli"", ""vary"": ""accept-encoding"", ""content-version"": ""V1"", ""x-frame-options"": ""SAMEORIGIN"", ""x-robots-tag"": ""noarchive"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""cache-control"": ""public, max-age=300"", ""x-content-type-options"": ""nosniff"", ""content-security-policy"": ""img-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com *.mzstatic.com; media-src 'self' blob: data: *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn; font-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com; connect-src blob: 'self' icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com; frame-src 'self' blob: mailto: tel: *.icloud.com *.apple.com *.icloud-sandbox.com *.icloud-content.com *.icloud-content.com.cn; frame-ancestors 'self' *.icloud.com *.apple.com; form-action 'self' *.icloud.com *.apple.com; child-src blob: 'self'; base-uri 'self' *.icloud.com *.cdn-apple.com; report-uri https://feedbackws.icloud.com/reportRaw"", ""x-xss-protection"": ""1; mode=block"", ""expect-ct"": ""max-age=30, report-uri=\""https://feedbackws.icloud.com/reportRaw\"""", ""x-apple-request-uuid"": ""c199b59e-7c2c-425a-8e9a-44195933bb4c"", ""access-control-expose-headers"": ""X-Apple-Request-UUID,Via"", ""date"": ""Fri, 29 Sep 2023 22:49:06 GMT"", ""connection"": ""keep-alive""}"
+8,"GET / HTTP/1.1
+Host: www.icloud.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.1630384922027588,0.10988688468933105,0.04033303260803223,200,OK,[''],21,21,13952,"{""server"": ""AppleHttpServer/3faf4ee9434b"", ""content-type"": ""text/html"", ""content-length"": ""48166"", ""etag"": ""\""18ad0f7daf8bc26\"""", ""content-language"": ""en-us"", ""content-encoding"": ""br"", ""content-location"": ""/system/icloud.com/index.html.en-us.brotli"", ""vary"": ""accept-encoding"", ""content-version"": ""V1"", ""x-frame-options"": ""SAMEORIGIN"", ""x-robots-tag"": ""noarchive"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""cache-control"": ""public, max-age=300"", ""x-content-type-options"": ""nosniff"", ""content-security-policy"": ""img-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com *.mzstatic.com; media-src 'self' blob: data: *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn; font-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com; connect-src blob: 'self' icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com; frame-src 'self' blob: mailto: tel: *.icloud.com *.apple.com *.icloud-sandbox.com *.icloud-content.com *.icloud-content.com.cn; frame-ancestors 'self' *.icloud.com *.apple.com; form-action 'self' *.icloud.com *.apple.com; child-src blob: 'self'; base-uri 'self' *.icloud.com *.cdn-apple.com; report-uri https://feedbackws.icloud.com/reportRaw"", ""x-xss-protection"": ""1; mode=block"", ""expect-ct"": ""max-age=30, report-uri=\""https://feedbackws.icloud.com/reportRaw\"""", ""x-apple-request-uuid"": ""c199b59e-7c2c-425a-8e9a-44195933bb4c"", ""access-control-expose-headers"": ""X-Apple-Request-UUID,Via"", ""date"": ""Fri, 29 Sep 2023 22:49:08 GMT"", ""connection"": ""keep-alive""}"
+9,"GET / HTTP/1.1
+Host: www.icloud.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.19631600379943848,0.10887837409973145,0.05800271034240723,200,OK,[''],21,21,13952,"{""server"": ""AppleHttpServer/3faf4ee9434b"", ""content-type"": ""text/html"", ""content-length"": ""48166"", ""etag"": ""\""18ad0f7daf8bc26\"""", ""content-language"": ""en-us"", ""content-encoding"": ""br"", ""content-location"": ""/system/icloud.com/index.html.en-us.brotli"", ""vary"": ""accept-encoding"", ""content-version"": ""V1"", ""x-frame-options"": ""SAMEORIGIN"", ""x-robots-tag"": ""noarchive"", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""cache-control"": ""public, max-age=300"", ""x-content-type-options"": ""nosniff"", ""content-security-policy"": ""img-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com *.mzstatic.com; media-src 'self' blob: data: *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn; font-src 'self' blob: data: icloud.com *.icloud.com *.apple.com *.cdn-apple.com; connect-src blob: 'self' icloud.com *.icloud.com *.apple.com *.cdn-apple.com *.icloud-content.com *.icloud-content.com.cn *.apple-mapkit.com; frame-src 'self' blob: mailto: tel: *.icloud.com *.apple.com *.icloud-sandbox.com *.icloud-content.com *.icloud-content.com.cn; frame-ancestors 'self' *.icloud.com *.apple.com; form-action 'self' *.icloud.com *.apple.com; child-src blob: 'self'; base-uri 'self' *.icloud.com *.cdn-apple.com; report-uri https://feedbackws.icloud.com/reportRaw"", ""x-xss-protection"": ""1; mode=block"", ""expect-ct"": ""max-age=30, report-uri=\""https://feedbackws.icloud.com/reportRaw\"""", ""x-apple-request-uuid"": ""c199b59e-7c2c-425a-8e9a-44195933bb4c"", ""access-control-expose-headers"": ""X-Apple-Request-UUID,Via"", ""date"": ""Fri, 29 Sep 2023 22:49:10 GMT"", ""connection"": ""keep-alive""}"

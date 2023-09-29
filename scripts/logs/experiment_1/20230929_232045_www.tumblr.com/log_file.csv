@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.tumblr.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.2508420944213867,0.14627885818481445,0.2010941505432129,200,OK,[''],14,14,0,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 21:20:47 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""vary"": ""x-ua-device, Accept-Language"", ""x-rid"": ""3f322158ea8782aa25379d06b7b8118d"", ""content-security-policy"": ""script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.recaptcha.net/recaptcha/api.js https://c0.pubmine.com https://s.pubmine.com https://criteo.com https://*.criteo.com https://criteo.net https://*.criteo.net https://*.vexowi.com https://vexowi.com https://c.amazon-adsystem.com https://*.3lift.com https://3lift.com https://z.moatads.com https://*.moatads.com https://*.smartadserver.com https://app.link https://*.sascdn.com https://securepubads.g.doubleclick.net https://tpc.googlesyndication.com https://www.googletagservices.com/ https://cdn.parsely.com https://a.teads.tv/analytics/tag.js https://assets.tumblr.com https://ads.pubmatic.com https://cdn.jsdelivr.net https://s3-us-west-2.amazonaws.com/sftemp/sf_v1.0.1/ https://assets.tumblr.com/pop/ 'nonce-ZTU2YTIwMzViYTRjNmFiMzZlZjM1ODZhOTE1ODY1OGM='; report-uri /svc/cspreports; object-src 'none'; worker-src blob: 'self'; base-uri 'self'"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""deny"", ""cache-control"": ""no-cache"", ""etag"": ""W/\""c26e-bi/xabEEhX2X+wXMlYrmNF9JQJQ\"""", ""x-response-time"": ""61m""}"
+1,"GET / HTTP/1.1
+Host: www.tumblr.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.16528725624084473,0.12381887435913086,0.025176048278808594,200,OK,[''],14,14,0,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 21:20:49 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""vary"": ""x-ua-device, Accept-Language"", ""x-rid"": ""3f322158ea8782aa25379d06b7b8118d"", ""content-security-policy"": ""script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.recaptcha.net/recaptcha/api.js https://c0.pubmine.com https://s.pubmine.com https://criteo.com https://*.criteo.com https://criteo.net https://*.criteo.net https://*.vexowi.com https://vexowi.com https://c.amazon-adsystem.com https://*.3lift.com https://3lift.com https://z.moatads.com https://*.moatads.com https://*.smartadserver.com https://app.link https://*.sascdn.com https://securepubads.g.doubleclick.net https://tpc.googlesyndication.com https://www.googletagservices.com/ https://cdn.parsely.com https://a.teads.tv/analytics/tag.js https://assets.tumblr.com https://ads.pubmatic.com https://cdn.jsdelivr.net https://s3-us-west-2.amazonaws.com/sftemp/sf_v1.0.1/ https://assets.tumblr.com/pop/ 'nonce-ZTU2YTIwMzViYTRjNmFiMzZlZjM1ODZhOTE1ODY1OGM='; report-uri /svc/cspreports; object-src 'none'; worker-src blob: 'self'; base-uri 'self'"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""deny"", ""cache-control"": ""no-cache"", ""etag"": ""W/\""c26e-bi/xabEEhX2X+wXMlYrmNF9JQJQ\"""", ""x-response-time"": ""61m""}"
+2,"GET / HTTP/1.1
+Host: www.tumblr.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.14180302619934082,0.1114039421081543,0.04281735420227051,200,OK,[''],14,14,0,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 21:20:52 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""vary"": ""x-ua-device, Accept-Language"", ""x-rid"": ""3f322158ea8782aa25379d06b7b8118d"", ""content-security-policy"": ""script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.recaptcha.net/recaptcha/api.js https://c0.pubmine.com https://s.pubmine.com https://criteo.com https://*.criteo.com https://criteo.net https://*.criteo.net https://*.vexowi.com https://vexowi.com https://c.amazon-adsystem.com https://*.3lift.com https://3lift.com https://z.moatads.com https://*.moatads.com https://*.smartadserver.com https://app.link https://*.sascdn.com https://securepubads.g.doubleclick.net https://tpc.googlesyndication.com https://www.googletagservices.com/ https://cdn.parsely.com https://a.teads.tv/analytics/tag.js https://assets.tumblr.com https://ads.pubmatic.com https://cdn.jsdelivr.net https://s3-us-west-2.amazonaws.com/sftemp/sf_v1.0.1/ https://assets.tumblr.com/pop/ 'nonce-ZTU2YTIwMzViYTRjNmFiMzZlZjM1ODZhOTE1ODY1OGM='; report-uri /svc/cspreports; object-src 'none'; worker-src blob: 'self'; base-uri 'self'"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""deny"", ""cache-control"": ""no-cache"", ""etag"": ""W/\""c26e-bi/xabEEhX2X+wXMlYrmNF9JQJQ\"""", ""x-response-time"": ""61m""}"
+3,"GET / HTTP/1.1
+Host: www.tumblr.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.2540473937988281,0.11740970611572266,0.022337675094604492,200,OK,[''],14,14,0,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 21:20:55 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""vary"": ""x-ua-device, Accept-Language"", ""x-rid"": ""6d7d0555f8ac8fab4d3d987484e92b7d"", ""content-security-policy"": ""script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.recaptcha.net/recaptcha/api.js https://c0.pubmine.com https://s.pubmine.com https://criteo.com https://*.criteo.com https://criteo.net https://*.criteo.net https://*.vexowi.com https://vexowi.com https://c.amazon-adsystem.com https://*.3lift.com https://3lift.com https://z.moatads.com https://*.moatads.com https://*.smartadserver.com https://app.link https://*.sascdn.com https://securepubads.g.doubleclick.net https://tpc.googlesyndication.com https://www.googletagservices.com/ https://cdn.parsely.com https://a.teads.tv/analytics/tag.js https://assets.tumblr.com https://ads.pubmatic.com https://cdn.jsdelivr.net https://s3-us-west-2.amazonaws.com/sftemp/sf_v1.0.1/ https://assets.tumblr.com/pop/ 'nonce-MDhkYmI4OTQxYTRmNmNjZGU0ZWVlMTYzMDYzZGE1YWM='; report-uri /svc/cspreports; object-src 'none'; worker-src blob: 'self'; base-uri 'self'"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""deny"", ""cache-control"": ""no-cache"", ""etag"": ""W/\""8989-qmQWjnf3mOTkDVZnOR0mSI189Ss\"""", ""x-response-time"": ""49m""}"
+4,"GET / HTTP/1.1
+Host: www.tumblr.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.18252134323120117,0.10849237442016602,0.03578019142150879,200,OK,[''],14,14,0,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 21:20:57 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""vary"": ""x-ua-device, Accept-Language"", ""x-rid"": ""6d7d0555f8ac8fab4d3d987484e92b7d"", ""content-security-policy"": ""script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.recaptcha.net/recaptcha/api.js https://c0.pubmine.com https://s.pubmine.com https://criteo.com https://*.criteo.com https://criteo.net https://*.criteo.net https://*.vexowi.com https://vexowi.com https://c.amazon-adsystem.com https://*.3lift.com https://3lift.com https://z.moatads.com https://*.moatads.com https://*.smartadserver.com https://app.link https://*.sascdn.com https://securepubads.g.doubleclick.net https://tpc.googlesyndication.com https://www.googletagservices.com/ https://cdn.parsely.com https://a.teads.tv/analytics/tag.js https://assets.tumblr.com https://ads.pubmatic.com https://cdn.jsdelivr.net https://s3-us-west-2.amazonaws.com/sftemp/sf_v1.0.1/ https://assets.tumblr.com/pop/ 'nonce-MDhkYmI4OTQxYTRmNmNjZGU0ZWVlMTYzMDYzZGE1YWM='; report-uri /svc/cspreports; object-src 'none'; worker-src blob: 'self'; base-uri 'self'"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""deny"", ""cache-control"": ""no-cache"", ""etag"": ""W/\""8989-qmQWjnf3mOTkDVZnOR0mSI189Ss\"""", ""x-response-time"": ""49m""}"
+5,"GET / HTTP/1.1
+Host: www.tumblr.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.17934393882751465,0.16181707382202148,0.027642011642456055,200,OK,[''],14,14,0,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 21:21:00 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""vary"": ""x-ua-device, Accept-Language"", ""x-rid"": ""6d7d0555f8ac8fab4d3d987484e92b7d"", ""content-security-policy"": ""script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.recaptcha.net/recaptcha/api.js https://c0.pubmine.com https://s.pubmine.com https://criteo.com https://*.criteo.com https://criteo.net https://*.criteo.net https://*.vexowi.com https://vexowi.com https://c.amazon-adsystem.com https://*.3lift.com https://3lift.com https://z.moatads.com https://*.moatads.com https://*.smartadserver.com https://app.link https://*.sascdn.com https://securepubads.g.doubleclick.net https://tpc.googlesyndication.com https://www.googletagservices.com/ https://cdn.parsely.com https://a.teads.tv/analytics/tag.js https://assets.tumblr.com https://ads.pubmatic.com https://cdn.jsdelivr.net https://s3-us-west-2.amazonaws.com/sftemp/sf_v1.0.1/ https://assets.tumblr.com/pop/ 'nonce-MDhkYmI4OTQxYTRmNmNjZGU0ZWVlMTYzMDYzZGE1YWM='; report-uri /svc/cspreports; object-src 'none'; worker-src blob: 'self'; base-uri 'self'"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""deny"", ""cache-control"": ""no-cache"", ""etag"": ""W/\""8989-qmQWjnf3mOTkDVZnOR0mSI189Ss\"""", ""x-response-time"": ""49m""}"
+6,"GET / HTTP/1.1
+Host: www.tumblr.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.18702268600463867,0.11417531967163086,0.044023990631103516,200,OK,[''],14,14,0,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 21:21:02 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""vary"": ""x-ua-device, Accept-Language"", ""x-rid"": ""6d7d0555f8ac8fab4d3d987484e92b7d"", ""content-security-policy"": ""script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.recaptcha.net/recaptcha/api.js https://c0.pubmine.com https://s.pubmine.com https://criteo.com https://*.criteo.com https://criteo.net https://*.criteo.net https://*.vexowi.com https://vexowi.com https://c.amazon-adsystem.com https://*.3lift.com https://3lift.com https://z.moatads.com https://*.moatads.com https://*.smartadserver.com https://app.link https://*.sascdn.com https://securepubads.g.doubleclick.net https://tpc.googlesyndication.com https://www.googletagservices.com/ https://cdn.parsely.com https://a.teads.tv/analytics/tag.js https://assets.tumblr.com https://ads.pubmatic.com https://cdn.jsdelivr.net https://s3-us-west-2.amazonaws.com/sftemp/sf_v1.0.1/ https://assets.tumblr.com/pop/ 'nonce-MDhkYmI4OTQxYTRmNmNjZGU0ZWVlMTYzMDYzZGE1YWM='; report-uri /svc/cspreports; object-src 'none'; worker-src blob: 'self'; base-uri 'self'"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""deny"", ""cache-control"": ""no-cache"", ""etag"": ""W/\""8989-qmQWjnf3mOTkDVZnOR0mSI189Ss\"""", ""x-response-time"": ""49m""}"
+7,"GET / HTTP/1.1
+Host: www.tumblr.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.23912954330444336,0.10163164138793945,0.03422236442565918,200,OK,[''],14,14,0,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 21:21:05 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""vary"": ""x-ua-device, Accept-Language"", ""x-rid"": ""3f322158ea8782aa25379d06b7b8118d"", ""content-security-policy"": ""script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.recaptcha.net/recaptcha/api.js https://c0.pubmine.com https://s.pubmine.com https://criteo.com https://*.criteo.com https://criteo.net https://*.criteo.net https://*.vexowi.com https://vexowi.com https://c.amazon-adsystem.com https://*.3lift.com https://3lift.com https://z.moatads.com https://*.moatads.com https://*.smartadserver.com https://app.link https://*.sascdn.com https://securepubads.g.doubleclick.net https://tpc.googlesyndication.com https://www.googletagservices.com/ https://cdn.parsely.com https://a.teads.tv/analytics/tag.js https://assets.tumblr.com https://ads.pubmatic.com https://cdn.jsdelivr.net https://s3-us-west-2.amazonaws.com/sftemp/sf_v1.0.1/ https://assets.tumblr.com/pop/ 'nonce-ZTU2YTIwMzViYTRjNmFiMzZlZjM1ODZhOTE1ODY1OGM='; report-uri /svc/cspreports; object-src 'none'; worker-src blob: 'self'; base-uri 'self'"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""deny"", ""cache-control"": ""no-cache"", ""etag"": ""W/\""c26e-bi/xabEEhX2X+wXMlYrmNF9JQJQ\"""", ""x-response-time"": ""61m""}"
+8,"GET / HTTP/1.1
+Host: www.tumblr.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.1815948486328125,0.1290302276611328,0.027399539947509766,200,OK,[''],14,14,0,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 21:21:07 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""vary"": ""x-ua-device, Accept-Language"", ""x-rid"": ""6d7d0555f8ac8fab4d3d987484e92b7d"", ""content-security-policy"": ""script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.recaptcha.net/recaptcha/api.js https://c0.pubmine.com https://s.pubmine.com https://criteo.com https://*.criteo.com https://criteo.net https://*.criteo.net https://*.vexowi.com https://vexowi.com https://c.amazon-adsystem.com https://*.3lift.com https://3lift.com https://z.moatads.com https://*.moatads.com https://*.smartadserver.com https://app.link https://*.sascdn.com https://securepubads.g.doubleclick.net https://tpc.googlesyndication.com https://www.googletagservices.com/ https://cdn.parsely.com https://a.teads.tv/analytics/tag.js https://assets.tumblr.com https://ads.pubmatic.com https://cdn.jsdelivr.net https://s3-us-west-2.amazonaws.com/sftemp/sf_v1.0.1/ https://assets.tumblr.com/pop/ 'nonce-MDhkYmI4OTQxYTRmNmNjZGU0ZWVlMTYzMDYzZGE1YWM='; report-uri /svc/cspreports; object-src 'none'; worker-src blob: 'self'; base-uri 'self'"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""deny"", ""cache-control"": ""no-cache"", ""etag"": ""W/\""8989-qmQWjnf3mOTkDVZnOR0mSI189Ss\"""", ""x-response-time"": ""49m""}"
+9,"GET / HTTP/1.1
+Host: www.tumblr.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,428,HTTP/1.1,0.12828779220581055,0.11744999885559082,0.028974056243896484,200,OK,[''],14,14,0,"{""server"": ""nginx"", ""date"": ""Fri, 29 Sep 2023 21:21:10 GMT"", ""content-type"": ""text/html; charset=utf-8"", ""transfer-encoding"": ""chunked"", ""connection"": ""keep-alive"", ""vary"": ""x-ua-device, Accept-Language"", ""x-rid"": ""6d7d0555f8ac8fab4d3d987484e92b7d"", ""content-security-policy"": ""script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.recaptcha.net/recaptcha/api.js https://c0.pubmine.com https://s.pubmine.com https://criteo.com https://*.criteo.com https://criteo.net https://*.criteo.net https://*.vexowi.com https://vexowi.com https://c.amazon-adsystem.com https://*.3lift.com https://3lift.com https://z.moatads.com https://*.moatads.com https://*.smartadserver.com https://app.link https://*.sascdn.com https://securepubads.g.doubleclick.net https://tpc.googlesyndication.com https://www.googletagservices.com/ https://cdn.parsely.com https://a.teads.tv/analytics/tag.js https://assets.tumblr.com https://ads.pubmatic.com https://cdn.jsdelivr.net https://s3-us-west-2.amazonaws.com/sftemp/sf_v1.0.1/ https://assets.tumblr.com/pop/ 'nonce-MDhkYmI4OTQxYTRmNmNjZGU0ZWVlMTYzMDYzZGE1YWM='; report-uri /svc/cspreports; object-src 'none'; worker-src blob: 'self'; base-uri 'self'"", ""x-content-type-options"": ""nosniff"", ""x-xss-protection"": ""1; mode=block"", ""x-frame-options"": ""deny"", ""cache-control"": ""no-cache"", ""etag"": ""W/\""8989-qmQWjnf3mOTkDVZnOR0mSI189Ss\"""", ""x-response-time"": ""49m""}"

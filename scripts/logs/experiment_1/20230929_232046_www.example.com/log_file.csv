@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.42848753929138184,0.10648560523986816,0.11136388778686523,200,OK,[''],13,13,0,"{""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""age"": ""244077"", ""cache-control"": ""max-age=604800"", ""content-type"": ""text/html; charset=UTF-8"", ""date"": ""Fri, 29 Sep 2023 21:20:50 GMT"", ""etag"": ""\""3147526947\"""", ""expires"": ""Fri, 06 Oct 2023 21:20:50 GMT"", ""last-modified"": ""Thu, 17 Oct 2019 07:18:26 GMT"", ""server"": ""ECS (nyb/1DCD)"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""HIT"", ""content-length"": ""648""}"
+1,"GET / HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.42940211296081543,0.11382317543029785,0.14819097518920898,200,OK,[''],13,13,0,"{""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""age"": ""213871"", ""cache-control"": ""max-age=604800"", ""content-type"": ""text/html; charset=UTF-8"", ""date"": ""Fri, 29 Sep 2023 21:20:53 GMT"", ""etag"": ""\""3147526947\"""", ""expires"": ""Fri, 06 Oct 2023 21:20:53 GMT"", ""last-modified"": ""Thu, 17 Oct 2019 07:18:26 GMT"", ""server"": ""ECS (nyb/1D2F)"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""HIT"", ""content-length"": ""648""}"
+2,"GET / HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.441866397857666,0.1142585277557373,0.11305046081542969,200,OK,[''],13,13,0,"{""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""age"": ""361109"", ""cache-control"": ""max-age=604800"", ""content-type"": ""text/html; charset=UTF-8"", ""date"": ""Fri, 29 Sep 2023 21:20:55 GMT"", ""etag"": ""\""3147526947\"""", ""expires"": ""Fri, 06 Oct 2023 21:20:55 GMT"", ""last-modified"": ""Thu, 17 Oct 2019 07:18:26 GMT"", ""server"": ""ECS (nyb/1D2E)"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""HIT"", ""content-length"": ""648""}"
+3,"GET / HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.40413641929626465,0.1113739013671875,0.10247564315795898,200,OK,[''],13,13,0,"{""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""age"": ""213876"", ""cache-control"": ""max-age=604800"", ""content-type"": ""text/html; charset=UTF-8"", ""date"": ""Fri, 29 Sep 2023 21:20:58 GMT"", ""etag"": ""\""3147526947\"""", ""expires"": ""Fri, 06 Oct 2023 21:20:58 GMT"", ""last-modified"": ""Thu, 17 Oct 2019 07:18:26 GMT"", ""server"": ""ECS (nyb/1D2F)"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""HIT"", ""content-length"": ""648""}"
+4,"GET / HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.5064523220062256,0.11103439331054688,0.11144518852233887,200,OK,[''],13,13,0,"{""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""age"": ""301918"", ""cache-control"": ""max-age=604800"", ""content-type"": ""text/html; charset=UTF-8"", ""date"": ""Fri, 29 Sep 2023 21:21:00 GMT"", ""etag"": ""\""3147526947\"""", ""expires"": ""Fri, 06 Oct 2023 21:21:00 GMT"", ""last-modified"": ""Thu, 17 Oct 2019 07:18:26 GMT"", ""server"": ""ECS (nyb/1D07)"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""HIT"", ""content-length"": ""648""}"
+5,"GET / HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.45119428634643555,0.10383272171020508,0.12499332427978516,200,OK,[''],13,13,0,"{""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""age"": ""213881"", ""cache-control"": ""max-age=604800"", ""content-type"": ""text/html; charset=UTF-8"", ""date"": ""Fri, 29 Sep 2023 21:21:03 GMT"", ""etag"": ""\""3147526947\"""", ""expires"": ""Fri, 06 Oct 2023 21:21:03 GMT"", ""last-modified"": ""Thu, 17 Oct 2019 07:18:26 GMT"", ""server"": ""ECS (nyb/1D2F)"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""HIT"", ""content-length"": ""648""}"
+6,"GET / HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.36034488677978516,0.11155819892883301,0.10971736907958984,200,OK,[''],13,13,0,"{""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""age"": ""213883"", ""cache-control"": ""max-age=604800"", ""content-type"": ""text/html; charset=UTF-8"", ""date"": ""Fri, 29 Sep 2023 21:21:05 GMT"", ""etag"": ""\""3147526947\"""", ""expires"": ""Fri, 06 Oct 2023 21:21:05 GMT"", ""last-modified"": ""Thu, 17 Oct 2019 07:18:26 GMT"", ""server"": ""ECS (nyb/1D2F)"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""HIT"", ""content-length"": ""648""}"
+7,"GET / HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.37122392654418945,0.11246871948242188,0.10680818557739258,200,OK,[''],13,13,0,"{""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""age"": ""244095"", ""cache-control"": ""max-age=604800"", ""content-type"": ""text/html; charset=UTF-8"", ""date"": ""Fri, 29 Sep 2023 21:21:08 GMT"", ""etag"": ""\""3147526947\"""", ""expires"": ""Fri, 06 Oct 2023 21:21:08 GMT"", ""last-modified"": ""Thu, 17 Oct 2019 07:18:26 GMT"", ""server"": ""ECS (nyb/1DCD)"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""HIT"", ""content-length"": ""648""}"
+8,"GET / HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.5298783779144287,0.11084651947021484,0.09645390510559082,200,OK,[''],13,13,0,"{""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""age"": ""213888"", ""cache-control"": ""max-age=604800"", ""content-type"": ""text/html; charset=UTF-8"", ""date"": ""Fri, 29 Sep 2023 21:21:10 GMT"", ""etag"": ""\""3147526947\"""", ""expires"": ""Fri, 06 Oct 2023 21:21:10 GMT"", ""last-modified"": ""Thu, 17 Oct 2019 07:18:26 GMT"", ""server"": ""ECS (nyb/1D2F)"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""HIT"", ""content-length"": ""648""}"
+9,"GET / HTTP/1.1
+Host: www.example.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,429,HTTP/1.1,0.4405181407928467,0.10751128196716309,0.1246335506439209,200,OK,[''],13,13,0,"{""content-encoding"": ""gzip"", ""accept-ranges"": ""bytes"", ""age"": ""244100"", ""cache-control"": ""max-age=604800"", ""content-type"": ""text/html; charset=UTF-8"", ""date"": ""Fri, 29 Sep 2023 21:21:13 GMT"", ""etag"": ""\""3147526947\"""", ""expires"": ""Fri, 06 Oct 2023 21:21:13 GMT"", ""last-modified"": ""Thu, 17 Oct 2019 07:18:26 GMT"", ""server"": ""ECS (nyb/1DCD)"", ""vary"": ""Accept-Encoding"", ""x-cache"": ""HIT"", ""content-length"": ""648""}"

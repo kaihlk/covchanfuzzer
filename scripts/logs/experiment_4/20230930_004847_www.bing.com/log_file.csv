@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.bing.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.1900463104248047,0.11063098907470703,0.14484024047851562,200,OK,[''],14,14,0,"{""content-type"": ""text/html; charset=utf-8"", ""cache-control"": ""private"", ""content-encoding"": ""br"", ""vary"": ""Accept-Encoding"", ""x-eventid"": ""65175453638f4d129bf7c0722afbae66"", ""useragentreductionoptout"": ""A7kgTC5xdZ2WIVGZEfb1hUoNuvjzOZX3VIV/BA6C18kQOOF50Q0D3oWoAm49k3BQImkujKILc7JmPysWk3CSjwUAAACMeyJvcmlnaW4iOiJodHRwczovL3d3dy5iaW5nLmNvbTo0NDMiLCJmZWF0dXJlIjoiU2VuZEZ1bGxVc2VyQWdlbnRBZnRlclJlZHVjdGlvbiIsImV4cGlyeSI6MTY4NDg4NjM5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""p3p"": ""CP=\""NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND\"""", ""date"": ""Fri, 29 Sep 2023 22:48:51 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""set-cookie"": ""_HPVN=CS=eyJQbiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiUCJ9LCJTYyI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiSCJ9LCJReiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiVCJ9LCJBcCI6dHJ1ZSwiTXV0ZSI6dHJ1ZSwiTGFkIjoiMjAyMy0wOS0yOVQwMDowMDowMFoiLCJJb3RkIjowLCJHd2IiOjAsIkRmdCI6bnVsbCwiTXZzIjowLCJGbHQiOjAsIkltcCI6MX0=; domain=.bing.com; expires=Wed, 23-Oct-2024 22:48:51 GMT; path=/; secure; SameSite=None"", ""alt-svc"": ""h3=\"":443\""; ma=93600"", ""x-cdn-traceid"": ""0.a11d1002.1696027731.50bcbe1f""}"
+1,"GET / HTTP/1.1
+Host: www.bing.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.19534945487976074,0.1286475658416748,0.06761646270751953,200,OK,[''],14,14,0,"{""content-type"": ""text/html; charset=utf-8"", ""cache-control"": ""private"", ""content-encoding"": ""br"", ""vary"": ""Accept-Encoding"", ""x-eventid"": ""651754551c114717a3fdf98a7b9f388e"", ""useragentreductionoptout"": ""A7kgTC5xdZ2WIVGZEfb1hUoNuvjzOZX3VIV/BA6C18kQOOF50Q0D3oWoAm49k3BQImkujKILc7JmPysWk3CSjwUAAACMeyJvcmlnaW4iOiJodHRwczovL3d3dy5iaW5nLmNvbTo0NDMiLCJmZWF0dXJlIjoiU2VuZEZ1bGxVc2VyQWdlbnRBZnRlclJlZHVjdGlvbiIsImV4cGlyeSI6MTY4NDg4NjM5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""p3p"": ""CP=\""NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND\"""", ""date"": ""Fri, 29 Sep 2023 22:48:53 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""set-cookie"": ""_HPVN=CS=eyJQbiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiUCJ9LCJTYyI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiSCJ9LCJReiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiVCJ9LCJBcCI6dHJ1ZSwiTXV0ZSI6dHJ1ZSwiTGFkIjoiMjAyMy0wOS0yOVQwMDowMDowMFoiLCJJb3RkIjowLCJHd2IiOjAsIkRmdCI6bnVsbCwiTXZzIjowLCJGbHQiOjAsIkltcCI6MX0=; domain=.bing.com; expires=Wed, 23-Oct-2024 22:48:53 GMT; path=/; secure; SameSite=None"", ""alt-svc"": ""h3=\"":443\""; ma=93600"", ""x-cdn-traceid"": ""0.a11d1002.1696027733.50bccc7a""}"
+2,"GET / HTTP/1.1
+Host: www.bing.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.1914522647857666,0.11491227149963379,0.0555570125579834,200,OK,[''],14,14,0,"{""content-type"": ""text/html; charset=utf-8"", ""cache-control"": ""private"", ""content-encoding"": ""br"", ""vary"": ""Accept-Encoding"", ""x-eventid"": ""651754577e874840b8d72514f858a913"", ""useragentreductionoptout"": ""A7kgTC5xdZ2WIVGZEfb1hUoNuvjzOZX3VIV/BA6C18kQOOF50Q0D3oWoAm49k3BQImkujKILc7JmPysWk3CSjwUAAACMeyJvcmlnaW4iOiJodHRwczovL3d3dy5iaW5nLmNvbTo0NDMiLCJmZWF0dXJlIjoiU2VuZEZ1bGxVc2VyQWdlbnRBZnRlclJlZHVjdGlvbiIsImV4cGlyeSI6MTY4NDg4NjM5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""p3p"": ""CP=\""NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND\"""", ""date"": ""Fri, 29 Sep 2023 22:48:55 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""set-cookie"": ""_HPVN=CS=eyJQbiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiUCJ9LCJTYyI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiSCJ9LCJReiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiVCJ9LCJBcCI6dHJ1ZSwiTXV0ZSI6dHJ1ZSwiTGFkIjoiMjAyMy0wOS0yOVQwMDowMDowMFoiLCJJb3RkIjowLCJHd2IiOjAsIkRmdCI6bnVsbCwiTXZzIjowLCJGbHQiOjAsIkltcCI6MX0=; domain=.bing.com; expires=Wed, 23-Oct-2024 22:48:55 GMT; path=/; secure; SameSite=None"", ""alt-svc"": ""h3=\"":443\""; ma=93600"", ""x-cdn-traceid"": ""0.a11d1002.1696027735.50bcd7dd""}"
+3,"GET / HTTP/1.1
+Host: www.bing.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.15576815605163574,0.1423335075378418,0.06442952156066895,200,OK,[''],14,14,0,"{""content-type"": ""text/html; charset=utf-8"", ""cache-control"": ""private"", ""content-encoding"": ""br"", ""vary"": ""Accept-Encoding"", ""x-eventid"": ""651754590b4947a180819b56aa3b6eac"", ""useragentreductionoptout"": ""A7kgTC5xdZ2WIVGZEfb1hUoNuvjzOZX3VIV/BA6C18kQOOF50Q0D3oWoAm49k3BQImkujKILc7JmPysWk3CSjwUAAACMeyJvcmlnaW4iOiJodHRwczovL3d3dy5iaW5nLmNvbTo0NDMiLCJmZWF0dXJlIjoiU2VuZEZ1bGxVc2VyQWdlbnRBZnRlclJlZHVjdGlvbiIsImV4cGlyeSI6MTY4NDg4NjM5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""p3p"": ""CP=\""NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND\"""", ""date"": ""Fri, 29 Sep 2023 22:48:57 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""set-cookie"": ""_HPVN=CS=eyJQbiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiUCJ9LCJTYyI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiSCJ9LCJReiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiVCJ9LCJBcCI6dHJ1ZSwiTXV0ZSI6dHJ1ZSwiTGFkIjoiMjAyMy0wOS0yOVQwMDowMDowMFoiLCJJb3RkIjowLCJHd2IiOjAsIkRmdCI6bnVsbCwiTXZzIjowLCJGbHQiOjAsIkltcCI6MX0=; domain=.bing.com; expires=Wed, 23-Oct-2024 22:48:57 GMT; path=/; secure; SameSite=None"", ""alt-svc"": ""h3=\"":443\""; ma=93600"", ""x-cdn-traceid"": ""0.a11d1002.1696027737.50bce424""}"
+4,"GET / HTTP/1.1
+Host: www.bing.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.1992182731628418,0.12707805633544922,0.0655827522277832,200,OK,[''],14,14,0,"{""content-type"": ""text/html; charset=utf-8"", ""cache-control"": ""private"", ""content-encoding"": ""br"", ""vary"": ""Accept-Encoding"", ""x-eventid"": ""6517545cb34041549eb868e4cb112966"", ""useragentreductionoptout"": ""A7kgTC5xdZ2WIVGZEfb1hUoNuvjzOZX3VIV/BA6C18kQOOF50Q0D3oWoAm49k3BQImkujKILc7JmPysWk3CSjwUAAACMeyJvcmlnaW4iOiJodHRwczovL3d3dy5iaW5nLmNvbTo0NDMiLCJmZWF0dXJlIjoiU2VuZEZ1bGxVc2VyQWdlbnRBZnRlclJlZHVjdGlvbiIsImV4cGlyeSI6MTY4NDg4NjM5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""p3p"": ""CP=\""NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND\"""", ""date"": ""Fri, 29 Sep 2023 22:49:00 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""set-cookie"": ""_HPVN=CS=eyJQbiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiUCJ9LCJTYyI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiSCJ9LCJReiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiVCJ9LCJBcCI6dHJ1ZSwiTXV0ZSI6dHJ1ZSwiTGFkIjoiMjAyMy0wOS0yOVQwMDowMDowMFoiLCJJb3RkIjowLCJHd2IiOjAsIkRmdCI6bnVsbCwiTXZzIjowLCJGbHQiOjAsIkltcCI6MX0=; domain=.bing.com; expires=Wed, 23-Oct-2024 22:49:00 GMT; path=/; secure; SameSite=None"", ""alt-svc"": ""h3=\"":443\""; ma=93600"", ""x-cdn-traceid"": ""0.a11d1002.1696027740.50bcf04b""}"
+5,"GET / HTTP/1.1
+Host: www.bing.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.3254382610321045,0.10761380195617676,0.07589125633239746,200,OK,[''],14,14,0,"{""content-type"": ""text/html; charset=utf-8"", ""cache-control"": ""private"", ""content-encoding"": ""br"", ""vary"": ""Accept-Encoding"", ""x-eventid"": ""6517545e84014ff2b65087c50cc74ed3"", ""useragentreductionoptout"": ""A7kgTC5xdZ2WIVGZEfb1hUoNuvjzOZX3VIV/BA6C18kQOOF50Q0D3oWoAm49k3BQImkujKILc7JmPysWk3CSjwUAAACMeyJvcmlnaW4iOiJodHRwczovL3d3dy5iaW5nLmNvbTo0NDMiLCJmZWF0dXJlIjoiU2VuZEZ1bGxVc2VyQWdlbnRBZnRlclJlZHVjdGlvbiIsImV4cGlyeSI6MTY4NDg4NjM5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""p3p"": ""CP=\""NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND\"""", ""date"": ""Fri, 29 Sep 2023 22:49:02 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""set-cookie"": ""_HPVN=CS=eyJQbiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiUCJ9LCJTYyI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiSCJ9LCJReiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiVCJ9LCJBcCI6dHJ1ZSwiTXV0ZSI6dHJ1ZSwiTGFkIjoiMjAyMy0wOS0yOVQwMDowMDowMFoiLCJJb3RkIjowLCJHd2IiOjAsIkRmdCI6bnVsbCwiTXZzIjowLCJGbHQiOjAsIkltcCI6MX0=; domain=.bing.com; expires=Wed, 23-Oct-2024 22:49:02 GMT; path=/; secure; SameSite=None"", ""alt-svc"": ""h3=\"":443\""; ma=93600"", ""x-cdn-traceid"": ""0.a11d1002.1696027742.50bcfc31""}"
+6,"GET / HTTP/1.1
+Host: www.bing.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.1967921257019043,0.17437982559204102,0.0863654613494873,200,OK,[''],14,14,0,"{""content-type"": ""text/html; charset=utf-8"", ""cache-control"": ""private"", ""content-encoding"": ""br"", ""vary"": ""Accept-Encoding"", ""x-eventid"": ""65175460e70f4ea6b19b56a4e7cf826f"", ""useragentreductionoptout"": ""A7kgTC5xdZ2WIVGZEfb1hUoNuvjzOZX3VIV/BA6C18kQOOF50Q0D3oWoAm49k3BQImkujKILc7JmPysWk3CSjwUAAACMeyJvcmlnaW4iOiJodHRwczovL3d3dy5iaW5nLmNvbTo0NDMiLCJmZWF0dXJlIjoiU2VuZEZ1bGxVc2VyQWdlbnRBZnRlclJlZHVjdGlvbiIsImV4cGlyeSI6MTY4NDg4NjM5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""p3p"": ""CP=\""NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND\"""", ""date"": ""Fri, 29 Sep 2023 22:49:04 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""set-cookie"": ""_HPVN=CS=eyJQbiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiUCJ9LCJTYyI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiSCJ9LCJReiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiVCJ9LCJBcCI6dHJ1ZSwiTXV0ZSI6dHJ1ZSwiTGFkIjoiMjAyMy0wOS0yOVQwMDowMDowMFoiLCJJb3RkIjowLCJHd2IiOjAsIkRmdCI6bnVsbCwiTXZzIjowLCJGbHQiOjAsIkltcCI6MX0=; domain=.bing.com; expires=Wed, 23-Oct-2024 22:49:04 GMT; path=/; secure; SameSite=None"", ""alt-svc"": ""h3=\"":443\""; ma=93600"", ""x-cdn-traceid"": ""0.a11d1002.1696027744.50bd08e1""}"
+7,"GET / HTTP/1.1
+Host: www.bing.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.10912799835205078,0.10050654411315918,0.13212084770202637,200,OK,[''],14,14,0,"{""content-type"": ""text/html; charset=utf-8"", ""cache-control"": ""private"", ""content-encoding"": ""br"", ""vary"": ""Accept-Encoding"", ""x-eventid"": ""651754627d394303854f858f6b401537"", ""useragentreductionoptout"": ""A7kgTC5xdZ2WIVGZEfb1hUoNuvjzOZX3VIV/BA6C18kQOOF50Q0D3oWoAm49k3BQImkujKILc7JmPysWk3CSjwUAAACMeyJvcmlnaW4iOiJodHRwczovL3d3dy5iaW5nLmNvbTo0NDMiLCJmZWF0dXJlIjoiU2VuZEZ1bGxVc2VyQWdlbnRBZnRlclJlZHVjdGlvbiIsImV4cGlyeSI6MTY4NDg4NjM5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""p3p"": ""CP=\""NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND\"""", ""date"": ""Fri, 29 Sep 2023 22:49:07 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""set-cookie"": ""_HPVN=CS=eyJQbiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiUCJ9LCJTYyI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiSCJ9LCJReiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiVCJ9LCJBcCI6dHJ1ZSwiTXV0ZSI6dHJ1ZSwiTGFkIjoiMjAyMy0wOS0yOVQwMDowMDowMFoiLCJJb3RkIjowLCJHd2IiOjAsIkRmdCI6bnVsbCwiTXZzIjowLCJGbHQiOjAsIkltcCI6MX0=; domain=.bing.com; expires=Wed, 23-Oct-2024 22:49:06 GMT; path=/; secure; SameSite=None"", ""alt-svc"": ""h3=\"":443\""; ma=93600"", ""x-cdn-traceid"": ""0.a11d1002.1696027746.50bd1211""}"
+8,"GET / HTTP/1.1
+Host: www.bing.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.15493297576904297,0.11139631271362305,0.0593106746673584,200,OK,[''],14,14,0,"{""content-type"": ""text/html; charset=utf-8"", ""cache-control"": ""private"", ""content-encoding"": ""br"", ""vary"": ""Accept-Encoding"", ""x-eventid"": ""65175465eb3f484486433827082bda5c"", ""useragentreductionoptout"": ""A7kgTC5xdZ2WIVGZEfb1hUoNuvjzOZX3VIV/BA6C18kQOOF50Q0D3oWoAm49k3BQImkujKILc7JmPysWk3CSjwUAAACMeyJvcmlnaW4iOiJodHRwczovL3d3dy5iaW5nLmNvbTo0NDMiLCJmZWF0dXJlIjoiU2VuZEZ1bGxVc2VyQWdlbnRBZnRlclJlZHVjdGlvbiIsImV4cGlyeSI6MTY4NDg4NjM5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""p3p"": ""CP=\""NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND\"""", ""date"": ""Fri, 29 Sep 2023 22:49:09 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""set-cookie"": ""_HPVN=CS=eyJQbiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiUCJ9LCJTYyI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiSCJ9LCJReiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiVCJ9LCJBcCI6dHJ1ZSwiTXV0ZSI6dHJ1ZSwiTGFkIjoiMjAyMy0wOS0yOVQwMDowMDowMFoiLCJJb3RkIjowLCJHd2IiOjAsIkRmdCI6bnVsbCwiTXZzIjowLCJGbHQiOjAsIkltcCI6MX0=; domain=.bing.com; expires=Wed, 23-Oct-2024 22:49:09 GMT; path=/; secure; SameSite=None"", ""alt-svc"": ""h3=\"":443\""; ma=93600"", ""x-cdn-traceid"": ""0.a11d1002.1696027749.50bd1d58""}"
+9,"GET / HTTP/1.1
+Host: www.bing.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.11670041084289551,0.10959076881408691,0.06808137893676758,200,OK,[''],14,14,0,"{""content-type"": ""text/html; charset=utf-8"", ""cache-control"": ""private"", ""content-encoding"": ""br"", ""vary"": ""Accept-Encoding"", ""x-eventid"": ""651754679aef437d9d8436de11f4132f"", ""useragentreductionoptout"": ""A7kgTC5xdZ2WIVGZEfb1hUoNuvjzOZX3VIV/BA6C18kQOOF50Q0D3oWoAm49k3BQImkujKILc7JmPysWk3CSjwUAAACMeyJvcmlnaW4iOiJodHRwczovL3d3dy5iaW5nLmNvbTo0NDMiLCJmZWF0dXJlIjoiU2VuZEZ1bGxVc2VyQWdlbnRBZnRlclJlZHVjdGlvbiIsImV4cGlyeSI6MTY4NDg4NjM5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="", ""strict-transport-security"": ""max-age=31536000; includeSubDomains; preload"", ""p3p"": ""CP=\""NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND\"""", ""date"": ""Fri, 29 Sep 2023 22:49:11 GMT"", ""transfer-encoding"": ""chunked"", ""connection"": ""Transfer-Encoding"", ""set-cookie"": ""_HPVN=CS=eyJQbiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiUCJ9LCJTYyI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiSCJ9LCJReiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiVCJ9LCJBcCI6dHJ1ZSwiTXV0ZSI6dHJ1ZSwiTGFkIjoiMjAyMy0wOS0yOVQwMDowMDowMFoiLCJJb3RkIjowLCJHd2IiOjAsIkRmdCI6bnVsbCwiTXZzIjowLCJGbHQiOjAsIkltcCI6MX0=; domain=.bing.com; expires=Wed, 23-Oct-2024 22:49:11 GMT; path=/; secure; SameSite=None"", ""alt-svc"": ""h3=\"":443\""; ma=93600"", ""x-cdn-traceid"": ""0.a11d1002.1696027751.50bd2b8f""}"

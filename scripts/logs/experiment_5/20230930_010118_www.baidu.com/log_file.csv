@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.baidu.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,1.005690336227417,0.12976384162902832,0.3352091312408447,200,OK,[''],9,9,0,"{""connection"": ""keep-alive"", ""content-encoding"": ""gzip"", ""content-security-policy"": ""frame-ancestors 'self' https://chat.baidu.com http://mirror-chat.baidu.com https://fj-chat.baidu.com https://hba-chat.baidu.com https://hbe-chat.baidu.com https://njjs-chat.baidu.com https://nj-chat.baidu.com https://hna-chat.baidu.com https://hnb-chat.baidu.com http://debug.baidu-int.com;"", ""content-type"": ""text/html; charset=utf-8"", ""date"": ""Fri, 29 Sep 2023 23:01:22 GMT"", ""p3p"": ""CP=\"" OTI DSP COR IVA OUR IND COM \"""", ""server"": ""BWS/1.1"", ""set-cookie"": ""BAIDUID=85B5E7F1600456EA1B133C3576321470:FG=1; max-age=31536000; expires=Sat, 28-Sep-24 23:01:22 GMT; domain=.baidu.com; path=/; version=1; comment=bd"", ""traceid"": ""1696028482032836634615803459094800546208""}"
+1,"GET / HTTP/1.1
+Host: www.baidu.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.8947196006774902,0.11117100715637207,0.32181286811828613,200,OK,[''],9,9,0,"{""connection"": ""keep-alive"", ""content-encoding"": ""gzip"", ""content-security-policy"": ""frame-ancestors 'self' https://chat.baidu.com http://mirror-chat.baidu.com https://fj-chat.baidu.com https://hba-chat.baidu.com https://hbe-chat.baidu.com https://njjs-chat.baidu.com https://nj-chat.baidu.com https://hna-chat.baidu.com https://hnb-chat.baidu.com http://debug.baidu-int.com;"", ""content-type"": ""text/html; charset=utf-8"", ""date"": ""Fri, 29 Sep 2023 23:01:25 GMT"", ""p3p"": ""CP=\"" OTI DSP COR IVA OUR IND COM \"""", ""server"": ""BWS/1.1"", ""set-cookie"": ""BAIDUID=134CF078FB37FCCA637979D8B8E0860F:FG=1; max-age=31536000; expires=Sat, 28-Sep-24 23:01:25 GMT; domain=.baidu.com; path=/; version=1; comment=bd"", ""traceid"": ""1696028485041153153014569085287771825748""}"
+2,"GET / HTTP/1.1
+Host: www.baidu.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.9395313262939453,0.11172866821289062,0.3436887264251709,200,OK,[''],9,9,0,"{""connection"": ""keep-alive"", ""content-encoding"": ""gzip"", ""content-security-policy"": ""frame-ancestors 'self' https://chat.baidu.com http://mirror-chat.baidu.com https://fj-chat.baidu.com https://hba-chat.baidu.com https://hbe-chat.baidu.com https://njjs-chat.baidu.com https://nj-chat.baidu.com https://hna-chat.baidu.com https://hnb-chat.baidu.com http://debug.baidu-int.com;"", ""content-type"": ""text/html; charset=utf-8"", ""date"": ""Fri, 29 Sep 2023 23:01:29 GMT"", ""p3p"": ""CP=\"" OTI DSP COR IVA OUR IND COM \"""", ""server"": ""BWS/1.1"", ""set-cookie"": ""BAIDUID=2F031E7FFA79AB3814F5B0EF1712F542:FG=1; max-age=31536000; expires=Sat, 28-Sep-24 23:01:29 GMT; domain=.baidu.com; path=/; version=1; comment=bd"", ""traceid"": ""169602848908586186349392768463292926128""}"
+3,"GET / HTTP/1.1
+Host: www.baidu.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,1.0295536518096924,0.11255574226379395,0.31880640983581543,200,OK,[''],9,9,0,"{""connection"": ""keep-alive"", ""content-encoding"": ""gzip"", ""content-security-policy"": ""frame-ancestors 'self' https://chat.baidu.com http://mirror-chat.baidu.com https://fj-chat.baidu.com https://hba-chat.baidu.com https://hbe-chat.baidu.com https://njjs-chat.baidu.com https://nj-chat.baidu.com https://hna-chat.baidu.com https://hnb-chat.baidu.com http://debug.baidu-int.com;"", ""content-type"": ""text/html; charset=utf-8"", ""date"": ""Fri, 29 Sep 2023 23:01:32 GMT"", ""p3p"": ""CP=\"" OTI DSP COR IVA OUR IND COM \"""", ""server"": ""BWS/1.1"", ""set-cookie"": ""BAIDUID=BE8A8D02401BDBB3DA72C2BDF5EB023E:FG=1; max-age=31536000; expires=Sat, 28-Sep-24 23:01:32 GMT; domain=.baidu.com; path=/; version=1; comment=bd"", ""traceid"": ""1696028492046245300211622600726144931071""}"
+4,"GET / HTTP/1.1
+Host: www.baidu.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.8917572498321533,0.12821316719055176,0.32501959800720215,200,OK,[''],9,9,0,"{""connection"": ""keep-alive"", ""content-encoding"": ""gzip"", ""content-security-policy"": ""frame-ancestors 'self' https://chat.baidu.com http://mirror-chat.baidu.com https://fj-chat.baidu.com https://hba-chat.baidu.com https://hbe-chat.baidu.com https://njjs-chat.baidu.com https://nj-chat.baidu.com https://hna-chat.baidu.com https://hnb-chat.baidu.com http://debug.baidu-int.com;"", ""content-type"": ""text/html; charset=utf-8"", ""date"": ""Fri, 29 Sep 2023 23:01:36 GMT"", ""p3p"": ""CP=\"" OTI DSP COR IVA OUR IND COM \"""", ""server"": ""BWS/1.1"", ""set-cookie"": ""BAIDUID=EA1F447DD538A092F2F3FBAFA872A312:FG=1; max-age=31536000; expires=Sat, 28-Sep-24 23:01:36 GMT; domain=.baidu.com; path=/; version=1; comment=bd"", ""traceid"": ""1696028496046225639417443940467896808204""}"
+5,"GET / HTTP/1.1
+Host: www.baidu.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.9446680545806885,0.10764527320861816,0.31829833984375,200,OK,[''],9,9,0,"{""connection"": ""keep-alive"", ""content-encoding"": ""gzip"", ""content-security-policy"": ""frame-ancestors 'self' https://chat.baidu.com http://mirror-chat.baidu.com https://fj-chat.baidu.com https://hba-chat.baidu.com https://hbe-chat.baidu.com https://njjs-chat.baidu.com https://nj-chat.baidu.com https://hna-chat.baidu.com https://hnb-chat.baidu.com http://debug.baidu-int.com;"", ""content-type"": ""text/html; charset=utf-8"", ""date"": ""Fri, 29 Sep 2023 23:01:39 GMT"", ""p3p"": ""CP=\"" OTI DSP COR IVA OUR IND COM \"""", ""server"": ""BWS/1.1"", ""set-cookie"": ""BAIDUID=D7B1AAB8FF69E85A9EDCD9CE95BCB6CD:FG=1; max-age=31536000; expires=Sat, 28-Sep-24 23:01:39 GMT; domain=.baidu.com; path=/; version=1; comment=bd"", ""traceid"": ""1696028499075782426615702236662778405760""}"
+6,"GET / HTTP/1.1
+Host: www.baidu.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.9903347492218018,0.1138615608215332,0.343660831451416,200,OK,[''],9,9,0,"{""connection"": ""keep-alive"", ""content-encoding"": ""gzip"", ""content-security-policy"": ""frame-ancestors 'self' https://chat.baidu.com http://mirror-chat.baidu.com https://fj-chat.baidu.com https://hba-chat.baidu.com https://hbe-chat.baidu.com https://njjs-chat.baidu.com https://nj-chat.baidu.com https://hna-chat.baidu.com https://hnb-chat.baidu.com http://debug.baidu-int.com;"", ""content-type"": ""text/html; charset=utf-8"", ""date"": ""Fri, 29 Sep 2023 23:01:43 GMT"", ""p3p"": ""CP=\"" OTI DSP COR IVA OUR IND COM \"""", ""server"": ""BWS/1.1"", ""set-cookie"": ""BAIDUID=94C0047445EF436572184E3FE8FEBDA1:FG=1; max-age=31536000; expires=Sat, 28-Sep-24 23:01:43 GMT; domain=.baidu.com; path=/; version=1; comment=bd"", ""traceid"": ""1696028503022776858614826816791917261779""}"
+7,"GET / HTTP/1.1
+Host: www.baidu.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,0.9523963928222656,0.11417293548583984,0.31440019607543945,200,OK,[''],9,9,0,"{""connection"": ""keep-alive"", ""content-encoding"": ""gzip"", ""content-security-policy"": ""frame-ancestors 'self' https://chat.baidu.com http://mirror-chat.baidu.com https://fj-chat.baidu.com https://hba-chat.baidu.com https://hbe-chat.baidu.com https://njjs-chat.baidu.com https://nj-chat.baidu.com https://hna-chat.baidu.com https://hnb-chat.baidu.com http://debug.baidu-int.com;"", ""content-type"": ""text/html; charset=utf-8"", ""date"": ""Fri, 29 Sep 2023 23:01:46 GMT"", ""p3p"": ""CP=\"" OTI DSP COR IVA OUR IND COM \"""", ""server"": ""BWS/1.1"", ""set-cookie"": ""BAIDUID=A4CF013CAD72817861ED678A08A124C0:FG=1; max-age=31536000; expires=Sat, 28-Sep-24 23:01:46 GMT; domain=.baidu.com; path=/; version=1; comment=bd"", ""traceid"": ""1696028506046245300210813089447722208695""}"
+8,"GET / HTTP/1.1
+Host: www.baidu.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,1.0845897197723389,0.14061522483825684,0.4113602638244629,200,OK,[''],9,9,0,"{""connection"": ""keep-alive"", ""content-encoding"": ""gzip"", ""content-security-policy"": ""frame-ancestors 'self' https://chat.baidu.com http://mirror-chat.baidu.com https://fj-chat.baidu.com https://hba-chat.baidu.com https://hbe-chat.baidu.com https://njjs-chat.baidu.com https://nj-chat.baidu.com https://hna-chat.baidu.com https://hnb-chat.baidu.com http://debug.baidu-int.com;"", ""content-type"": ""text/html; charset=utf-8"", ""date"": ""Fri, 29 Sep 2023 23:01:50 GMT"", ""p3p"": ""CP=\"" OTI DSP COR IVA OUR IND COM \"""", ""server"": ""BWS/1.1"", ""set-cookie"": ""BAIDUID=C0548E112D5F09E2EE71386E8066DBCD:FG=1; max-age=31536000; expires=Sat, 28-Sep-24 23:01:50 GMT; domain=.baidu.com; path=/; version=1; comment=bd"", ""traceid"": ""1696028510069739956210230479178424911260""}"
+9,"GET / HTTP/1.1
+Host: www.baidu.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,427,HTTP/1.1,1.0396366119384766,0.11217522621154785,0.32980966567993164,200,OK,[''],9,9,0,"{""connection"": ""keep-alive"", ""content-encoding"": ""gzip"", ""content-security-policy"": ""frame-ancestors 'self' https://chat.baidu.com http://mirror-chat.baidu.com https://fj-chat.baidu.com https://hba-chat.baidu.com https://hbe-chat.baidu.com https://njjs-chat.baidu.com https://nj-chat.baidu.com https://hna-chat.baidu.com https://hnb-chat.baidu.com http://debug.baidu-int.com;"", ""content-type"": ""text/html; charset=utf-8"", ""date"": ""Fri, 29 Sep 2023 23:01:53 GMT"", ""p3p"": ""CP=\"" OTI DSP COR IVA OUR IND COM \"""", ""server"": ""BWS/1.1"", ""set-cookie"": ""BAIDUID=4D97DC4E4E00E2D5693FB7621CE8A0F8:FG=1; max-age=31536000; expires=Sat, 28-Sep-24 23:01:53 GMT; domain=.baidu.com; path=/; version=1; comment=bd"", ""traceid"": ""1696028513068003252210524421706461848977""}"

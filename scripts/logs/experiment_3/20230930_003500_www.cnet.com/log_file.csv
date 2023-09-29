@@ -1,0 +1,141 @@
+number,request,deviation_count,uri,request_length,http_version,Socket_Connect_Time,Socket_Close_Time,Response_Time,status_code,reason_phrase,error_message,response_header_count,response_header_length,response_body_length,response_header_fields
+0,"GET / HTTP/1.1
+Host: www.cnet.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.1978752613067627,0.11513805389404297,0.1387331485748291,200,OK,[''],11,11,0,"{""connection"": ""keep-alive"", ""content-length"": ""173152"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=utf-8"", ""last-modified"": ""Fri, 29 Sep 2023 22:31:09 GMT"", ""date"": ""Fri, 29 Sep 2023 22:35:03 GMT"", ""set-cookie"": ""country_code=de; max-age=604800; path=/; domain=.cnet.com; Secure; SameSite=Lax;"", ""vary"": ""Accept-Encoding, User-Agent"", ""cache-control"": ""max-age=300, private"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""accept-ranges"": ""bytes""}"
+1,"GET / HTTP/1.1
+Host: www.cnet.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.16324210166931152,0.11107802391052246,0.14119720458984375,200,OK,[''],11,11,0,"{""connection"": ""keep-alive"", ""content-length"": ""173152"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=utf-8"", ""last-modified"": ""Fri, 29 Sep 2023 22:31:09 GMT"", ""date"": ""Fri, 29 Sep 2023 22:35:06 GMT"", ""set-cookie"": ""country_code=de; max-age=604800; path=/; domain=.cnet.com; Secure; SameSite=Lax;"", ""vary"": ""Accept-Encoding, User-Agent"", ""cache-control"": ""max-age=300, private"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""accept-ranges"": ""bytes""}"
+2,"GET / HTTP/1.1
+Host: www.cnet.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.16338181495666504,0.10985422134399414,0.1465451717376709,200,OK,[''],11,11,0,"{""connection"": ""keep-alive"", ""content-length"": ""173152"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=utf-8"", ""last-modified"": ""Fri, 29 Sep 2023 22:31:09 GMT"", ""date"": ""Fri, 29 Sep 2023 22:35:09 GMT"", ""set-cookie"": ""country_code=de; max-age=604800; path=/; domain=.cnet.com; Secure; SameSite=Lax;"", ""vary"": ""Accept-Encoding, User-Agent"", ""cache-control"": ""max-age=300, private"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""accept-ranges"": ""bytes""}"
+3,"GET / HTTP/1.1
+Host: www.cnet.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.21919584274291992,0.112152099609375,0.14871859550476074,200,OK,[''],11,11,0,"{""connection"": ""keep-alive"", ""content-length"": ""173152"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=utf-8"", ""last-modified"": ""Fri, 29 Sep 2023 22:31:09 GMT"", ""date"": ""Fri, 29 Sep 2023 22:35:12 GMT"", ""set-cookie"": ""country_code=de; max-age=604800; path=/; domain=.cnet.com; Secure; SameSite=Lax;"", ""vary"": ""Accept-Encoding, User-Agent"", ""cache-control"": ""max-age=300, private"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""accept-ranges"": ""bytes""}"
+4,"GET / HTTP/1.1
+Host: www.cnet.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.21942567825317383,0.10921072959899902,0.13491129875183105,200,OK,[''],11,11,0,"{""connection"": ""keep-alive"", ""content-length"": ""173152"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=utf-8"", ""last-modified"": ""Fri, 29 Sep 2023 22:31:09 GMT"", ""date"": ""Fri, 29 Sep 2023 22:35:15 GMT"", ""set-cookie"": ""country_code=de; max-age=604800; path=/; domain=.cnet.com; Secure; SameSite=Lax;"", ""vary"": ""Accept-Encoding, User-Agent"", ""cache-control"": ""max-age=300, private"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""accept-ranges"": ""bytes""}"
+5,"GET / HTTP/1.1
+Host: www.cnet.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.20600485801696777,0.12901687622070312,0.1585237979888916,200,OK,[''],11,11,0,"{""connection"": ""keep-alive"", ""content-length"": ""173152"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=utf-8"", ""last-modified"": ""Fri, 29 Sep 2023 22:31:09 GMT"", ""date"": ""Fri, 29 Sep 2023 22:35:18 GMT"", ""set-cookie"": ""country_code=de; max-age=604800; path=/; domain=.cnet.com; Secure; SameSite=Lax;"", ""vary"": ""Accept-Encoding, User-Agent"", ""cache-control"": ""max-age=300, private"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""accept-ranges"": ""bytes""}"
+6,"GET / HTTP/1.1
+Host: www.cnet.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.25850677490234375,0.11876368522644043,0.16370463371276855,200,OK,[''],11,11,0,"{""connection"": ""keep-alive"", ""content-length"": ""173152"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=utf-8"", ""last-modified"": ""Fri, 29 Sep 2023 22:31:09 GMT"", ""date"": ""Fri, 29 Sep 2023 22:35:21 GMT"", ""set-cookie"": ""country_code=de; max-age=604800; path=/; domain=.cnet.com; Secure; SameSite=Lax;"", ""vary"": ""Accept-Encoding, User-Agent"", ""cache-control"": ""max-age=300, private"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""accept-ranges"": ""bytes""}"
+7,"GET / HTTP/1.1
+Host: www.cnet.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.21565628051757812,0.12405800819396973,0.1404411792755127,200,OK,[''],11,11,0,"{""connection"": ""keep-alive"", ""content-length"": ""173152"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=utf-8"", ""last-modified"": ""Fri, 29 Sep 2023 22:31:09 GMT"", ""date"": ""Fri, 29 Sep 2023 22:35:24 GMT"", ""set-cookie"": ""country_code=de; max-age=604800; path=/; domain=.cnet.com; Secure; SameSite=Lax;"", ""vary"": ""Accept-Encoding, User-Agent"", ""cache-control"": ""max-age=300, private"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""accept-ranges"": ""bytes""}"
+8,"GET / HTTP/1.1
+Host: www.cnet.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.25446629524230957,0.13160920143127441,0.13318467140197754,200,OK,[''],11,11,0,"{""connection"": ""keep-alive"", ""content-length"": ""173152"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=utf-8"", ""last-modified"": ""Fri, 29 Sep 2023 22:31:09 GMT"", ""date"": ""Fri, 29 Sep 2023 22:35:27 GMT"", ""set-cookie"": ""country_code=de; max-age=604800; path=/; domain=.cnet.com; Secure; SameSite=Lax;"", ""vary"": ""Accept-Encoding, User-Agent"", ""cache-control"": ""max-age=300, private"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""accept-ranges"": ""bytes""}"
+9,"GET / HTTP/1.1
+Host: www.cnet.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: cross-site
+
+",0,/,426,HTTP/1.1,0.6138155460357666,0.11100101470947266,0.15117502212524414,200,OK,[''],11,11,0,"{""connection"": ""keep-alive"", ""content-length"": ""173152"", ""content-encoding"": ""gzip"", ""content-type"": ""text/html; charset=utf-8"", ""last-modified"": ""Fri, 29 Sep 2023 22:31:09 GMT"", ""date"": ""Fri, 29 Sep 2023 22:35:30 GMT"", ""set-cookie"": ""country_code=de; max-age=604800; path=/; domain=.cnet.com; Secure; SameSite=Lax;"", ""vary"": ""Accept-Encoding, User-Agent"", ""cache-control"": ""max-age=300, private"", ""strict-transport-security"": ""max-age=63072000; includeSubDomains; preload"", ""accept-ranges"": ""bytes""}"
