@@ -62,7 +62,7 @@ class Domain_Response_Analyzator():
         num_clusters = 10
 
         # K-Means-Modell erstellen und auf die ausgewählte Spalte anwenden
-        kmeans = KMeans(n_clusters=num_clusters)
+        kmeans = KMeans(n_clusters=num_clusters, n_init="auto")
         data_frame['Cluster'] = kmeans.fit_predict(selected_column.values.reshape(-1, 1))
 
  

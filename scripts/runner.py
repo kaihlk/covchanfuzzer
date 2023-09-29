@@ -31,11 +31,10 @@ class ExperimentRunner:
         self.prerequest_list=[]
         self.lock_prl = threading.Lock()
         self.exp_log=None
+        self.pd_matrix=pandas.DataFrame(columns=["Attempt No.\Domain"])
+        self.lock_matrix=threading.Lock()
 
-        
-        
-        
-        """  self.pd_matrix=pandas.DataFrame(columns=["Attempt No.\Domain"])
+        """
         expected_attempts=self.experiment_configuration["max_targets"]*self.experiment_configuration["num_attempts"]
         for attempt in range(0, expected_attempts):
             self.pd_matrix.loc[attempt] = [attempt]
@@ -97,7 +96,7 @@ class ExperimentRunner:
         host=None
         response_line=None
         response_status_code=None
-        local_configuration=self.experiment_configuration
+        local_configuration=self.experiment_configuration.copy()
         local_configuration["covertchannel_request_number"]= 1
         local_configuration["covertchannel_connection_number"]= 1
         local_configuration["covertchannel_timing_number"]= 1
@@ -253,29 +252,18 @@ class ExperimentRunner:
             
         return prerequest
     #Doesnt'work, too slow, thread unsafe
-    """ def add_entry_to_domain_prerequest_matrix(self, domain, attempt_no, response_line):
+    def add_entry_to_domain_prerequest_matrix(self, domain, attempt_no, response_line):
         if response_line!=None:
             response_status_code = response_line["status_code"] 
         else:
             response_status_code=999
         # Ensure the "Domain" column is present in the DataFrame
-        if "Domain" not in self.pd_matrix.columns:
-            self.pd_matrix["Domain"] = None
-        if domain not in self.pd_matrix.index:
-            self.pd_matrix.at[domain, "Domain"] = domain
+        with self.lock_matrix:
+            if domain not in self.pd_matrix.index:
+                self.pd_matrix.at[domain, "Attempt No.\Domain"] = domain
+            self.pd_matrix.at[domain, attempt_no] = response_status_code
         
-        if (domain, attempt_no) in self.pd_matrix.index:
-            # Append a number to the domain to make it unique
-            new_domain = domain
-            count = 1
-            while (new_domain, attempt_no) in self.pd_matrix.index:
-                new_domain = f"{domain}_{count}"
-                count += 1
-            domain = new_domain
-
-        self.pd_matrix.at[domain, attempt_no] = response_status_code
-        
-        return """
+        return
 
 
     def add_nr_and_status_code_to_request_list(self, attempt_no, response_line):
@@ -355,10 +343,10 @@ class ExperimentRunner:
                             self.add_nr_and_status_code_to_request_list(i,response_line)
                         except Exception as e:
                             print("Exception during updating request_list",e)
-                        #try:
-                        #    self.add_entry_to_domain_prerequest_matrix(i, domain, response_line )
-                        #except Exception as e:
-                        #    print("Exception during updating request matrix",e)
+                        try:
+                            self.add_entry_to_domain_prerequest_matrix(i, domain, response_line )
+                        except Exception as e:
+                            print("Exception during updating request matrix",e)
                         
                         
                         
@@ -503,7 +491,19 @@ class ExperimentRunner:
                     try:
                         # Save the results
                         new_targets, invalid_entries = completed_task.result()
-                        checked_target_list.extend(new_targets)
+                        # Make sure that no double entries are created, due to manipulationg the subdomain
+                        print(type(checked_target_list))
+                        
+                        for target in new_targets:
+                            host = target.get("host")
+                            double_entry=False
+                            for entry in checked_target_list:
+                                if host == entry.get("host"):
+                                    invalid_entries += 1
+                                    double_entry=True
+                                    break
+                            if not double_entry:
+                                checked_target_list.append(target)
                         invalid_entry_counts+=invalid_entries
                     except Exception as e:
                         logging.error("Error while processing completed task: %s", e)
@@ -613,7 +613,7 @@ class ExperimentRunner:
             self.exp_log.save_base_checks_fails(self.base_check_fails)
             self.exp_log.save_prerequests(self.prerequest_list)
             self.exp_log.prerequest_statisics(self.prerequest_list, self.message_count)
-            #self.exp_log.save_pdmatrix(self.pd_matrix)
+            self.exp_log.save_pdmatrix(self.pd_matrix)
             self.exp_log.save_exp_stats(duration, self.message_count)
             exp_analyzer.Domain_Response_Analyzator(self.exp_log.get_experiment_folder()).start()
             #self.exp_log.analyze_prerequest_outcome()  
