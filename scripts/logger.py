@@ -93,9 +93,11 @@ class TestRunLogger:
             length_body=len(body)
         
         if response_header_fields is None:
+            count_header_fields=0
             length_header=0
         else: 
-            length_header=len(response_header_fields.items())
+            count_header_fields=len(response_header_fields.items())
+            length_header=len(response_header_fields)
                    
         request_data = {
             "number": attempt_number,
@@ -110,8 +112,8 @@ class TestRunLogger:
             "status_code": response_status_code,
             "reason_phrase": response_reason_phrase,
             "error_message": error_message,
-            "response_header_count": length_header,
-            "response_header_length": len(response_header_fields),
+            "response_header_count": count_header_fields,
+            "response_header_length": length_header,
             "response_body_length": length_body,
             "response_header_fields": json.dumps(response_header_fields),
             
@@ -127,8 +129,8 @@ class TestRunLogger:
             "status_code": response_status_code,
             "reason_phrase": response_reason_phrase,
             "error_message": error_message,
-            "response_header_count": length_header,
-            "response_header_length": len(response_header_fields),
+            "response_header_count": count_header_fields,
+            "response_header_length": length_header,
             "response_body_length": length_body,
             "response_header_fields": response_header_fields,
             

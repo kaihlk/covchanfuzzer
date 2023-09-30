@@ -33,7 +33,7 @@ class ExperimentRunner:
         self.exp_log=None
         self.pd_matrix=pandas.DataFrame(columns=["Attempt No.\Domain"])
         self.lock_matrix=threading.Lock()
-        runner_logger = logging.getLogger('main.runner')
+        self.runner_logger = logging.getLogger('main.runner')
 
 
         """ def get_target_subset(self, start_position=0, length=10)-> list:
@@ -142,7 +142,7 @@ class ExperimentRunner:
                 if not 0 <= self.target_port <= 65535:
                     raise(ValueError())
             except ValueError:
-                runner_logger.error("Invalid Portnumber in Experiment Configuration: %s", self.target_port)
+                self.runner_logger.error("Invalid Portnumber in Experiment Configuration: %s", self.target_port)
         else:
             if self.experiment_configuration["use_TLS"]:
                 self.target_port=443
@@ -163,7 +163,7 @@ class ExperimentRunner:
         try:
             socket_info, error = CustomHTTP().lookup_dns(uri, self.target_port, self.experiment_configuration["use_ipv4"])
         except Exception as e:
-             runner_logger.error("Error during Socket Creation/DNS Lookup of URI: %s, Error: %s", uri, e)
+             self.runner_logger.error("Error during Socket Creation/DNS Lookup of URI: %s, Error: %s", uri, e)
         if error!= None:
             #Extend List when DNS Lookup Fails (Thread Safe)
             with self.lock_df:
@@ -175,7 +175,7 @@ class ExperimentRunner:
                 try: 
                     ip_address, port=  socket_info[0][4]
                 except Exception as e:
-                    runner_logger.error("Error getting Port and IP from Socket Info: %s", e)              
+                    self.runner_logger.error("Error getting Port and IP from Socket Info: %s", e)              
             #IPv6 Socket_Info
             else:
                 ip_address=  socket_info[4][0]
@@ -219,7 +219,7 @@ class ExperimentRunner:
         try:
             request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration, self.target_port)
         except Exception as e:
-                runner_logger.error("Error generating request: %s", e)  
+                self.runner_logger.error("Error generating request: %s", e)  
         if self.experiment_configuration["verbose"]==True:
             print(request)
         prerequest= {
@@ -315,7 +315,7 @@ class ExperimentRunner:
             try:
                 prerequest=self.get_next_prerequest(i)
             except Exception as e:
-                runner_logger.error("Error getting Prerequest from list %s", e) 
+                self.runner_logger.error("Error getting Prerequest from list %s", e) 
               
             
             for host_data,logger in zip(sub_set_dns, logger_list):
@@ -331,7 +331,7 @@ class ExperimentRunner:
                         deviation_count=prerequest["deviation_count"]
                         
                     except Exception as e:
-                        runner_logger.error("Error building request for host: %s", e)  
+                        self.runner_logger.error("Error building request for host: %s", e)  
                     try:
                         start_time=time.time()
                         response_line, response_header_fields, body, measured_times, error_message = self.send_and_receive_request(i, request, deviation_count, domain, host_data, logger.get_logging_folder())
@@ -339,11 +339,11 @@ class ExperimentRunner:
                         try:
                             self.add_nr_and_status_code_to_request_list(i,response_line)
                         except Exception as e:
-                            runner_logger.error("Exception during updating request_list: %s", e)  
+                            self.runner_logger.error("Exception during updating request_list: %s", e)  
                         try:
                             self.add_entry_to_domain_prerequest_matrix(i, domain, response_line )
                         except Exception as e:
-                            runner_logger.error("Exception during updating request matrix: %s", e)  
+                            self.runner_logger.error("Exception during updating request matrix: %s", e)  
                         self.check_content(body)
                         with self.lock_mc:
                             self.message_count+=1
@@ -351,14 +351,14 @@ class ExperimentRunner:
                         response_time=end_time-start_time
                         print("Message No: " + str(self.message_count)+" Host: "+str(host_data["host"])+" Complete Message Time: " + str(response_time))
                     except Exception as e:
-                        runner_logger.error("Error sending/receiving request: %s", e)                        
+                        self.runner_logger.error("Error sending/receiving request: %s", e)                        
         return 
 
     def fuzz_subset(self, target_list, start_position, subset_length):
         try: 
             subset= self.get_target_subset(target_list, start_position, subset_length)
         except Exception as e:#
-            runner_logger.error("Error while getting subset objects: %s", e)
+            self.runner_logger.error("Error while getting subset objects: %s", e)
         #Initialise Logger List
         logger_list=[]            
         #Create logger object for each target in subset_dns
@@ -367,18 +367,18 @@ class ExperimentRunner:
                 logger=TestRunLogger(self.experiment_configuration, self.exp_log.get_experiment_folder(), entry, entry["host"], entry["ip_address"], entry["port"])
                 logger_list.append(logger)           
             except Exception as e:
-                runner_logger.error("Error while creating logger objects: %s", e)  
+                self.runner_logger.error("Error while creating logger objects: %s", e)  
         #Start the processing of the subset_dns and its corresponding loggers
         try:
             self.run_experiment_subset(logger_list, subset)
         except Exception as e:
-            runner_logger.error("Exception during run_experiment_subset: %s", e)
+            self.runner_logger.error("Exception during run_experiment_subset: %s", e)
         # Save Log files in the logger files
         for logger in logger_list:
             try:
                 logger.save_logfiles()
             except Exception as e:
-                runner_logger.error("Exception during saving log_files: %s", e)
+                self.runner_logger.error("Exception during saving log_files: %s", e)
         return subset
 
         
@@ -490,7 +490,7 @@ class ExperimentRunner:
                                 checked_target_list.append(target)
                         invalid_entry_counts+=invalid_entries
                     except Exception as e:
-                        runner_logger.error("Error while processing completed task: %s", e)
+                        self.runner_logger.error("Error while processing completed task: %s", e)
                     finally:
                         # Remove the task from the list
                         subsets_tasks.remove(completed_task)
@@ -561,7 +561,7 @@ class ExperimentRunner:
                             fuzz_tasks.append(fuzz_task)
                             active_workers+=1
                         except Exception as e:
-                            runner_logger.error("Error during subset Fuzzing DNS Lookups for subset: %s", e)
+                            self.runner_logger.error("Error during subset Fuzzing DNS Lookups for subset: %s", e)
                             active_workers -= 1
                             continue
                     #Wait for a completed task
@@ -570,7 +570,7 @@ class ExperimentRunner:
                         try:
                             processed_targets += len(completed_task.result())
                         except Exception as e:
-                            runner_logger.error("Error while processing completed task: %s", e)
+                            self.runner_logger.error("Error while processing completed task: %s", e)
                         finally:
                             # Remove the task from the list
                             fuzz_tasks.remove(completed_task)
@@ -581,7 +581,7 @@ class ExperimentRunner:
 
             
         except Exception as e:
-            runner_logger.error("During the experiment an error occured", e)
+            self.runner_logger.error("During the experiment an error occured", e)
         finally:
              # Wait for the global capture thread to finish
             global_stop_event.set() 
@@ -603,7 +603,7 @@ class ExperimentRunner:
                 exp_analyzer.Domain_Response_Analyzator(self.exp_log.get_experiment_folder()).start()
                 #self.exp_log.analyze_prerequest_outcome()
             except Exception() as e:
-                runner_logger.error("Exception During saving the Experiment Logs/Results: %s", e)
+                self.runner_logger.error("Exception During saving the Experiment Logs/Results: %s", e)
             finally:
                 self.exp_log.copy_log_file()
         return
