@@ -15,6 +15,7 @@ import http1_request_builder as request_builder
 import pandas
 import exp_analyzer
 import logging
+import hashlib
 
 class ExperimentRunner:
     '''Runs the experiment itself'''
@@ -34,7 +35,7 @@ class ExperimentRunner:
         self.pd_matrix=pandas.DataFrame(columns=["Attempt No.\Domain"])
         self.lock_matrix=threading.Lock()
         self.runner_logger = logging.getLogger('main.runner')
-
+        self.error_event = threading.Event()
 
         """ def get_target_subset(self, start_position=0, length=10)-> list:
         Takes a subset from the target list to reduce the traffic to one target, in order to
@@ -216,15 +217,37 @@ class ExperimentRunner:
         '''Build a HTTP Request Package and sends it and processes the response'''
         #Build HTTP Request after the selected covered channel
         selected_covered_channel = class_mapping.requests_builders[covert_channel]()
-        try:
-            request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration, self.target_port)
-        except Exception as e:
-                self.runner_logger.error("Error generating request: %s", e)  
+        unique=False
+        
+        maximum_retries=100*self.experiment_configuration["num_attempts"]
+        retry=0
+        
+        while unique==False: 
+            
+            try:
+                request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration, self.target_port)
+                request_hash = hashlib.md5(str(request).encode()).hexdigest()
+                if len(self.prerequest_list)==0:
+                    unique=True
+                for entry in self.prerequest_list:
+                    if request_hash!=entry["request_hash"]:
+                        unique=True
+                    else:
+                        unique=False
+                        break
+                retry+=1
+                if retry>=maximum_retries:
+                    raise RuntimeError("Unable to generate a unique prerequest after maximum retries.")
+            except Exception as e:
+                self.runner_logger.error("Error generating request: %s", e)
+                self.error_event.set()
+                raise  
         if self.experiment_configuration["verbose"]==True:
             print(request)
         prerequest= {
             "Nr":0,
             "request":request,
+            "request_hash": request_hash,
             "deviation_count":deviation_count,
             "uri":uri,
             "1xx":0,
@@ -311,12 +334,15 @@ class ExperimentRunner:
         '''Run the experiment'''
      
         for i in range(self.experiment_configuration["num_attempts"]):
-            
+            if self.error_event.is_set():
+                break
             try:
                 prerequest=self.get_next_prerequest(i)
+            except RuntimeError as e:
+                self.runner_logger.error("Error getting Prerequest from list %s", e) 
+                raise  
             except Exception as e:
                 self.runner_logger.error("Error getting Prerequest from list %s", e) 
-              
             
             for host_data,logger in zip(sub_set_dns, logger_list):
             #Round Robin one Host after each other
@@ -357,7 +383,7 @@ class ExperimentRunner:
     def fuzz_subset(self, target_list, start_position, subset_length):
         try: 
             subset= self.get_target_subset(target_list, start_position, subset_length)
-        except Exception as e:#
+        except Exception as e:
             self.runner_logger.error("Error while getting subset objects: %s", e)
         #Initialise Logger List
         logger_list=[]            
@@ -371,6 +397,10 @@ class ExperimentRunner:
         #Start the processing of the subset_dns and its corresponding loggers
         try:
             self.run_experiment_subset(logger_list, subset)
+        except RuntimeError as e:
+            self.runner_logger.error("Exception during run_experiment_subset: %s", e)
+            raise
+            return subset
         except Exception as e:
             self.runner_logger.error("Exception during run_experiment_subset: %s", e)
         # Save Log files in the logger files
@@ -536,7 +566,7 @@ class ExperimentRunner:
             processed_targets=0
             start_position=0
             
-            
+        
             'Iterate through target list'
             with concurrent.futures.ThreadPoolExecutor(max_workers=self.experiment_configuration["max_workers"]) as fuzz_executor:
                 #Iterate though the list, if DNS Lookups or Basechecks fail, the entry from the list is droped and a new entry will be appended
@@ -560,26 +590,37 @@ class ExperimentRunner:
                             # Submit the subset for processing to executor
                             fuzz_tasks.append(fuzz_task)
                             active_workers+=1
+                            if self.error_event.is_set():
+                                break
+
+
                         except Exception as e:
                             self.runner_logger.error("Error during subset Fuzzing DNS Lookups for subset: %s", e)
                             active_workers -= 1
                             continue
+                    if self.error_event.is_set():
+                        break
+
                     #Wait for a completed task
+                    
                     completed_tasks, _ = concurrent.futures.wait(fuzz_tasks, return_when=concurrent.futures.FIRST_COMPLETED)
                     for completed_task in completed_tasks:
                         try:
                             processed_targets += len(completed_task.result())
+
                         except Exception as e:
                             self.runner_logger.error("Error while processing completed task: %s", e)
                         finally:
                             # Remove the task from the list
                             fuzz_tasks.remove(completed_task)
                             active_workers -= 1
-
-
                     
-
+                    
+        except RuntimeError as e:
+            self.runner_logger.error("During the experiment an error occured", e)
+            raise
             
+        
         except Exception as e:
             self.runner_logger.error("During the experiment an error occured", e)
         finally:
@@ -599,7 +640,7 @@ class ExperimentRunner:
                 self.exp_log.save_prerequests(self.prerequest_list)
                 self.exp_log.prerequest_statisics(self.prerequest_list, self.message_count)
                 self.exp_log.save_pdmatrix(self.pd_matrix)
-                self.exp_log.save_exp_stats(duration, self.message_count)
+                self.exp_log.save_exp_stats(duration, self.message_count, invalid_entries)
                 exp_analyzer.Domain_Response_Analyzator(self.exp_log.get_experiment_folder()).start()
                 #self.exp_log.analyze_prerequest_outcome()
             except Exception() as e:

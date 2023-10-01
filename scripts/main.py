@@ -109,19 +109,19 @@ def main():
         "verbose": False,
         "timestamp": time.strftime("%Y%m%d_%H%M%S"),
         #Covert Channel Option
-        "covertchannel_request_number": 2,
+        "covertchannel_request_number": 4,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
         "fuzz_value":0.7,
         #Target Selection Options  
-        "num_attempts": 1000,
-        "max_targets": 1000, #len(self.target_list):
+        "num_attempts": 10,
+        "max_targets": 100, #len(self.target_list):
         "max_workers": 32,  # Parallel Processing of subsets,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
         "check_basic_request": 2,
         "target_list": "target_list_subdomain_10000.csv",#"target_list_subdomain_10000.csv",#"new_target_list.csv",
-        "target_subset_size": 40,
+        "target_subset_size": 5,
         "target_add_www": True,  #Add www if no other subdomain is known
         #"target_host": "www.example.com",  #Just for special useipvstt
         "target_port": 443, #443, 8080 Apache

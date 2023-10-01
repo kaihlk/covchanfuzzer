@@ -569,7 +569,7 @@ class ExperimentLogger:
         print("prerequest.csv saved")
         return
     
-    def save_exp_stats(self, run_time, messages):
+    def save_exp_stats(self, run_time, messages, invalid_entries):
         self.experiment_stats["Experiment_Configuration"]=self.experiment_configuration
         self.experiment_stats["Experiment_Duration(s)"]=run_time
         self.experiment_stats["Experiment_Duration(h)"]=run_time/3600
@@ -579,7 +579,8 @@ class ExperimentLogger:
         active_workers=math.ceil(self.experiment_configuration["max_targets"]/self.experiment_configuration["target_subset_size"])
         if active_workers>self.experiment_configuration["max_workers"]: active_workers=self.experiment_configuration["max_workers"]
         self.experiment_stats["Active_Workers"]=active_workers
-        self.experiment_stats["Folder_Size"]=self.get_directory_size_mb(self.experiment_folder)
+        self.experiment_stats["Folder_Size im MB"]=self.get_directory_size_mb(self.experiment_folder)
+        self.experiment_stats["Invalid Target Entries"]=invalid_entries
         file_path = f"{self.experiment_folder}/experiment_outcome.json"
         with open(file_path, "w", encoding="utf-8") as file:
             json.dump(self.experiment_stats, file, indent=4)
