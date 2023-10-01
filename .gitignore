@@ -2,7 +2,7 @@
 *.pyc
 
 # Ignore all pcap files inside the scripts/log directory and its subdirectories
-scripts/log/
+scripts/logs/
 scripts/logs/debug.log
 scripts/logs/experiment_list.csv
 scripts/logs/experiment_5/base_check_fails.csv
@@ -5498,3 +5498,15 @@ scripts/logs/experiment_8/20231001_214319_www.sharethrough.com/request_response.
 scripts/logs/experiment_8/20231001_214319_www.sharethrough.com/sessionkeys.txt
 scripts/logs/experiment_8/20231001_214319_www.sharethrough.com/wireshark_script.sh
 scripts/logs/experiment_8/base_request/sessionkeys.txt
+scripts/logs/experiment_5/base_check_fails.csv
+scripts/logs/experiment_5/captured_packets.pcapng
+scripts/logs/experiment_5/debug.log
+scripts/logs/experiment_5/dns_lookup_fails.csv
+scripts/logs/experiment_5/exp_stats_2xx_histogramm.png
+scripts/logs/experiment_5/exp_stats_host_statuscode.png
+scripts/logs/experiment_5/exp_stats_prerequest_statuscodes.png
+scripts/logs/experiment_5/experiment_outcome.json
+scripts/logs/experiment_5/experiment_stats.csv
+scripts/logs/experiment_5/pd_matrix.csv
+scripts/logs/experiment_5/prerequests.csv
+scripts/logs/experiment_5/base_request/sessionkeys.txt
