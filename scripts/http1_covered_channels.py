@@ -37,7 +37,8 @@ def generate_standard_request(self, port, method, path, headers, content, fuzzva
     # Insert the Host header at the beginning of the list
     headers.insert(0, ("Host", self.host_placeholder))
     # Build the request from request line and headersport
-    request_line, new_uri = self.build_request_line(port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
+    scheme=""
+    request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
     request_string = request_line
     for header in headers:
         request_string += f"{header[0]}: {header[1]}\r\n"
@@ -66,7 +67,8 @@ class HTTP1_Request_CC_Case_Insensitivity(HTTP1_Request_Builder):
         headers.insert(0, ("Host", self.host_placeholder))
 
         # Build the request_line from the provided arguments
-        request_line, new_uri = self.build_request_line(port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
+        scheme=""
+        request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
        
 
         # Define Request first line
@@ -108,7 +110,8 @@ class HTTP1_Request_CC_Random_Whitespace(HTTP1_Request_Builder):
         headers.insert(0, ("Host", self.host_placeholder))
         print(fuzzvalue)
         # Build the request_line from the provided arguments
-        request_line, new_uri = self.build_request_line(port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
+        scheme=""
+        request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
        
         deviation_count = 0
         request_string = request_line
@@ -145,9 +148,9 @@ class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
         else:
             # Create a copy to avoid modifying the original list
             headers = headers.copy()
-
+        scheme=""
         # Build the request_line from the provided arguments
-        request_line, new_uri = self.build_request_line(port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
+        request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
        
         deviation_count = 0
         hostheader=self.host_placeholder
@@ -182,61 +185,53 @@ class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
         Empty or not given port assune 80
         http as scheme name and host name case insenitivity'''
         
+        #Relative URI does not make sense here
+        relative_uri=False
+        scheme=""
+
         # Check if headers are provided elsewise take default headers
         if headers is None:
             headers = default_headers.copy()
         else:
             # Create a copy to avoid modifying the original list
             headers = headers.copy()
-        
         # Insert the Host header at the beginning of the list
-        headers.insert(0, ("Host", self.host_placeholder))
-
-        # Parse the given host
-        #TODO
-        #scheme, subdomain, self.host_placeholder, domain, hostport, path = self.parse_host(url,host)
-
-        # Build a new URL from the given host
+        headers.insert(0, ("Host", self.host_placeholder))        
         deviation_count = 0
         
-        if scheme == "":
-            scheme = "https"
-        new_scheme = random.choice([scheme + "://", "", "http://", scheme, "https://"])
+        #Randomly include a scheme
+        new_scheme = random.choice([scheme, "", "http", "https"])
         if new_scheme != scheme:
             deviation_count += 1
-
-        if subdomain == "":
-            subdomain = "www"
-        new_subdomain = random.choice([subdomain, subdomain + ".", "", "www."])
-        if new_subdomain != subdomain:
-            deviation_count += 1
-
-        new_hostname = random.choice([hostname, hostname + "." + domain, domain, "", "." + domain])
-        if new_hostname != hostname + "." + domain:
-            deviation_count += 1
-
-        if hostport == "":
-            hostport = port
+        #Randomly include a subdomain
+        new_include_subdomain= random.choice([False, True])
+        if new_include_subdomain!= include_subdomain:
+            deviation_count+=1
+        #Randomly include a port
+        new_include_port=random.choice([False, True])
+        if new_include_port!= include_port:
+            deviation_count+=1
+        #Randomly choose a port
         new_port = random.choice(
             [
-                "",
-                ":" + str(hostport),
                 ":" + str(port),
-                #":" + "80",
-                #":" + "443",
-                #":" + str(random.randint(0, 65535)),  #Hard to analyze
+                ":" + "80",
+                ":" + "443",
+                ":" + str(random.randint(0, 65535)),  #Hard to analyze
             ]
         )
-        if new_port != hostport:
+        if new_port !=port:
             deviation_count += 1
 
         new_path = random.choice(["", "/", "/" + path])
         if new_path != path:
             deviation_count += 1
 
-        new_url = new_scheme + new_subdomain + new_hostname + new_port + new_path
-
-        request_line = f"{method} {new_url} HTTP/1.1\r\n"
+        
+        # Build a new URL from the given host
+        request_line, new_uri = self.build_request_line(new_port, method, new_path, headers, scheme, fuzzvalue, relative_uri, new_include_subdomain, new_include_port, protocol)
+        
+        request_line = f"{method} {new_uri} HTTP/1.1\r\n"
 
         request_string = request_line
         for header in headers:
@@ -244,7 +239,7 @@ class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
 
         request_string += "\r\n"
 
-        return request_string, deviation_count, new_url
+        return request_string, deviation_count, new_uri
 
 class HTTP1_Request_CC_URI_Represenation_Apache_Localhost(HTTP1_Request_Builder):
     def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
@@ -330,29 +325,31 @@ class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
         else:
             # Create a copy to avoid modifying the original list
             headers = headers.copy()
+        scheme=""
+        request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
+       
 
         # Insert the Host header at the beginning of the list
         headers.insert(0, ("Host", self.host_placeholder))
 
         # Parse the given host
-        #TODO
         scheme, subdomain, hostname, domain, hostport, path = self.parse_host(url,host)
 
         # Build a new URL from the given host, add some deviation if not all fields are provided
 
-        if scheme == "":
-            scheme = random.choice(["http://", "https://"])
-        if subdomain == "":
-            subdomain = "www"
-        new_hostname = subdomain + "." + hostname + "." + domain
-        if hostport == "":
-            hostport = random.choice(["", ":" + str(port)])
+        #if scheme == "":
+        #    scheme = random.choice(["http://", "https://"])
+        #if subdomain == "":
+        #    subdomain = "www"
+        #new_hostname = subdomain + "." + hostname + "." + domain
+        #if hostport == "":
+        #    hostport = random.choice(["", ":" + str(port)])
 
-        new_url, deviation_count = random_switch_case_of_char_in_string(
-            scheme + new_hostname + hostport + path, fuzzvalue
+        new_uri, deviation_count = random_switch_case_of_char_in_string(
+            new_uri, fuzzvalue
         )
 
-        request_line = f"{method} {new_url} HTTP/1.1\r\n"
+        request_line = f"{method} {new_uri} HTTP/1.1\r\n"
         request_string = request_line
 
         for header in headers:
@@ -582,8 +579,8 @@ class HTTP1_Request_CC_URI_Common_Addresses(HTTP1_Request_Builder):
             deviation_count += 1
         
         
-
-        request_line, new_uri = self.build_request_line(port, method, new_path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
+        scheme=""
+        request_line, new_uri = self.build_request_line(port, method, new_path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
 
         request_string = request_line
         for header in headers:
@@ -648,7 +645,7 @@ class HTTP1_Request_CC_URI_Common_Addresses_And_Anchors(HTTP1_Request_Builder):
         if new_path != path:
             deviation_count += 1
         
-        request_line, new_uri = self.build_request_line(port, method, new_path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
+        request_line, new_uri = self.build_request_line(port, method, new_path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
        
         request_string = request_line
         for header in headers:
