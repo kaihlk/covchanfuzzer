@@ -228,7 +228,7 @@ class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
             deviation_count += 1
 
         
-        # Build a new URL from the given host
+        # Build a new URL from the input
         request_line, new_uri = self.build_request_line(new_port, method, new_path, headers, scheme, fuzzvalue, relative_uri, new_include_subdomain, new_include_port, protocol)
         
         request_line = f"{method} {new_uri} HTTP/1.1\r\n"
@@ -243,6 +243,8 @@ class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
 
 class HTTP1_Request_CC_URI_Represenation_Apache_Localhost(HTTP1_Request_Builder):
     def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
+        
+        #Not longer used
         '''URI in the request line
         Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers
         Divide in 3 cover channels due to difference of technique
@@ -317,6 +319,10 @@ class HTTP1_Request_CC_URI_Represenation_Apache_Localhost(HTTP1_Request_Builder)
 
 
 class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
+    def __init__(self):
+        super().__init__()  # Call the constructor of the base class first
+        self.cc_uri_post_generation = True
+
     def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
         '''CC URI  with addional changes in Case insensitvity'''
         # Check if headers are provided elsewise take default headers
@@ -326,30 +332,19 @@ class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
             # Create a copy to avoid modifying the original list
             headers = headers.copy()
         scheme=""
-        request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
-       
 
         # Insert the Host header at the beginning of the list
         headers.insert(0, ("Host", self.host_placeholder))
 
-        # Parse the given host
-        scheme, subdomain, hostname, domain, hostport, path = self.parse_host(url,host)
 
-        # Build a new URL from the given host, add some deviation if not all fields are provided
+          # Build a new URL from the given host
+        request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
+        
 
-        #if scheme == "":
-        #    scheme = random.choice(["http://", "https://"])
-        #if subdomain == "":
-        #    subdomain = "www"
-        #new_hostname = subdomain + "." + hostname + "." + domain
-        #if hostport == "":
-        #    hostport = random.choice(["", ":" + str(port)])
-
-        new_uri, deviation_count = random_switch_case_of_char_in_string(
-            new_uri, fuzzvalue
-        )
-
-        request_line = f"{method} {new_uri} HTTP/1.1\r\n"
+        deviation_count=0
+        if protocol=="":
+            protocol="HTTP/1.1"
+        request_line = f"{method} {new_uri} {protocol}\r\n"
         request_string = request_line
 
         for header in headers:
@@ -357,7 +352,39 @@ class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
 
         request_string += "\r\n"
 
-        return request_string, deviation_count, new_url
+        return request_string, deviation_count, new_uri
+
+    def replace_host_and_domain(self, prerequest, domain, standard_subdomain="", host=None, include_subdomain_host_header=False, override_uri="", fuzzvalue=0.5):
+        #CC specific
+        try:
+            subdomains, hostname, tldomain =self.parse_host(domain)
+            if subdomains=="":
+                subdomains=standard_subdomain            
+            
+            new_domain=hostname+"."+tldomain
+            if host==None:
+                if include_subdomain_host_header==True:
+                    host=subdomains+"."+new_domain
+                else: 
+                    host=domain
+            if override_uri!="":
+                new_domain=override_uri
+                prerequest=prerequest.replace('https://', '',1)
+            ##CC Change URI Case###
+            #Change URI Case
+            new_domain, deviation_count_domain = random_switch_case_of_char_in_string(new_domain, fuzzvalue)
+            new_subdomains, deviation_count_subdomains = random_switch_case_of_char_in_string(subdomains, fuzzvalue)
+            deviation_count=deviation_count_domain+deviation_count_subdomains
+            #This inserts the sudomain in the uri    
+            request=prerequest.replace(self.subdomain_placeholder,new_subdomains)
+            request=request.replace(self.domain_placeholder, new_domain)
+            #The Subdomain inclusion for the host header field takes places here, 
+            request=request.replace(self.host_placeholder, host)
+            return request, deviation_count
+        except Exception as ex:
+            print(ex)
+
+
 
 class HTTP1_Request_CC_URI_Hex_Hex(HTTP1_Request_Builder):
     # CC with addional changes in the URL,  HEX Representation of the URL

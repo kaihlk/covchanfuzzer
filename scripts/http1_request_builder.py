@@ -15,6 +15,7 @@ class HTTP1_Request_Builder:
         self.domain_placeholder=">>DOMAIN_PLACEHOLDER<<"
         self.subdomain_placeholder=">>SUDBDOMAIN_PLACEHOLDER<<"
         self.generated_request=""
+        self.cc_uri_post_generation=False
         self.default_headers_sets = {
             # The request line and the host and the url field must be generated and inserted in the functions
             "curl_HTTP/1.1(TLS)": [
@@ -93,6 +94,12 @@ class HTTP1_Request_Builder:
 
             ],
         }
+
+
+    def get_cc_uri_post_generation(self):
+        return self.cc_uri_post_generation
+
+
     def parse_host(self,host):
         #Initialize variables
         subdomains = ""
@@ -247,7 +254,10 @@ class HTTP1_Request_Builder:
                 request=request.replace(self.domain_placeholder, new_domain)
                 #The Subdomain inclusion for the host header field takes places here, 
                 request=request.replace(self.host_placeholder, host)
-                return request
+
+                deviation_count=0
+
+                return request, deviation_count
             except Exception as ex:
                 print(ex)
 

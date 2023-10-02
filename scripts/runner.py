@@ -36,6 +36,7 @@ class ExperimentRunner:
         self.lock_matrix=threading.Lock()
         self.runner_logger = logging.getLogger('main.runner')
         self.error_event = threading.Event()
+        self.cc_uri_post_generation=False
 
         """ def get_target_subset(self, start_position=0, length=10)-> list:
         Takes a subset from the target list to reduce the traffic to one target, in order to
@@ -106,7 +107,7 @@ class ExperimentRunner:
         uri=subdomains+hostname+"."+tldomain
         request_string, deviation_count, new_uri=request_builder.HTTP1_Request_Builder().generate_request(local_configuration, 443)
         #host deprecated?
-        request=request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, uri, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"]) #Carefull some hosts expect more
+        request, _ =request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, uri, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"]) #Carefull some hosts expect more
         
         if local_configuration["include_subdomain_host_header"]==True:
             host=subdomains+hostname+"."+tldomain
@@ -218,26 +219,30 @@ class ExperimentRunner:
         #Build HTTP Request after the selected covered channel
         selected_covered_channel = class_mapping.requests_builders[covert_channel]()
         unique=False
-        
         maximum_retries=100*self.experiment_configuration["num_attempts"]
         retry=0
         
-        while unique==False: 
-            
+        while unique==False:            
             try:
                 request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration, self.target_port)
                 request_hash = hashlib.md5(str(request).encode()).hexdigest()
-                if len(self.prerequest_list)==0:
-                    unique=True
-                for entry in self.prerequest_list:
-                    if request_hash!=entry["request_hash"]:
+                #Some CC may be added after pregeneration, example changing the URI, would lead needlessly to RunTime Exception
+                self.cc_uri_post_generation=selected_covered_channel.get_cc_uri_post_generation()
+                if self.cc_uri_post_generation==False:
+                    if len(self.prerequest_list)==0:
                         unique=True
-                    else:
-                        unique=False
-                        break
-                retry+=1
-                if retry>=maximum_retries:
-                    raise RuntimeError("Unable to generate a unique prerequest after maximum retries.")
+                    for entry in self.prerequest_list:
+                        if request_hash!=entry["request_hash"]:
+                            unique=True
+                        else:
+                            unique=False
+                            break
+                    retry+=1
+                    if retry>=maximum_retries:
+                        raise RuntimeError("Unable to generate a unique prerequest after maximum retries.")
+                else:
+                    #If CC is added later skip the unique check
+                    unique=True        
             except Exception as e:
                 self.runner_logger.error("Error generating request: %s", e)
                 self.error_event.set()
@@ -353,9 +358,10 @@ class ExperimentRunner:
                     # Send the HTTP request and get the response in the main threads
                     try:                                                                                        
                         domain=host_data["host"]
-                        request=request_builder.HTTP1_Request_Builder().replace_host_and_domain(prerequest["request"],domain, self.experiment_configuration["standard_subdomain"],host=None, include_subdomain_host_header=self.experiment_configuration["include_subdomain_host_header"], override_uri="")
-                        deviation_count=prerequest["deviation_count"]
-                        
+                        selected_covered_channel = class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]()
+                        request, deviation_count_uri=selected_covered_channel.replace_host_and_domain(prerequest["request"],domain, self.experiment_configuration["standard_subdomain"],host=None, include_subdomain_host_header=self.experiment_configuration["include_subdomain_host_header"], override_uri="")
+                        deviation_count_request=prerequest["deviation_count"]
+                        deviation_count=deviation_count_uri+deviation_count_request
                     except Exception as e:
                         self.runner_logger.error("Error building request for host: %s", e)  
                     try:

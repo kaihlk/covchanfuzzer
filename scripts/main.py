@@ -109,7 +109,7 @@ def main():
         "verbose": False,
         "timestamp": time.strftime("%Y%m%d_%H%M%S"),
         #Covert Channel Option
-        "covertchannel_request_number": 5,
+        "covertchannel_request_number": 6,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
         "fuzz_value":0.7,
@@ -139,7 +139,7 @@ def main():
         "url": "",   #Complete URl
         "path": "/", #Dynamic, List, ?
         "standard_subdomain": "www", #use www if not provided
-        "relative_uri": True, # build a relative uri without the host in the requestline: /index.html
+        "relative_uri": False, # build a relative uri without the host in the requestline: /index.html
         "include_subdomain": True, #include the subdomain, when building requestline, if none given use <standard_subdomain>
         "include_port":False,
         "include_subdomain_host_header": True,
