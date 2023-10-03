@@ -1,14 +1,12 @@
 #main
 
-#from upgrade_target_list import Target_List_Upgrader, Target_List_Analyzer
+
 import csv
 import time
 import os
 import logging
 from runner import ExperimentRunner
-from logger import ExperimentLogger, TestRunLogger
-import class_mapping
-
+from upgrade_target_list import Target_List_Upgrader, Target_List_Analyzer
 
 ##For Information
 """ class_mapping_requests ={
@@ -98,27 +96,18 @@ def load_target_list(target_list_csv):
     print("List loaded from: " + target_list_csv)
     print("List Length: ", len(loaded_list))
     return loaded_list
-
-
-        
+       
 def main():
     '''Function that runs the connection, selection of the CC and the fuzzer'''
-    
 
     log_path=get_logs_directory()
     print("Logpath: ", log_path)
 
     main_logger=configure_logger(log_path)
-    
-    print(main_logger)
-    # TODO
-  
 
-   
     # Experiment Configuration Values
     description= input("Input Experiment Description:")
     exp_no=get_last_experiment_number(log_path)+1
-
 
     experiment_configuration = {
         "experiment_no": exp_no,
@@ -171,22 +160,20 @@ def main():
     analyze_list=False
     upgrade_list=False
     run_exp=True
-    if run_exp==True:
+    if run_exp is True:
         try:
-            
             experiment=ExperimentRunner(experiment_configuration, target_list, log_path)
-            experiment.setup_and_start_experiment()
-            
+            experiment.setup_and_start_experiment()        
         except Exception as e:
             main_logger.error("Experiment run failed: %s", e)
-    if upgrade_list==True:
+    if upgrade_list is True:
         upgrade_path="upgraded_"+experiment_configuration["target_list"]
-        #new_path2="upgraded_and_cleaned"+experiment_configuration["target_list"]
-        upgrader=Target_List_Analyzer(new_path, new_path2, experiment_configuration)
-        #upgrader=Target_List_Upgrader(experiment_configuration,upgrade_path).upgrade_list(
+        new_path="upgraded_and_cleaned"+experiment_configuration["target_list"]
+        upgrader=Target_List_Analyzer(new_path, new_path, experiment_configuration)
+        upgrader=Target_List_Upgrader(experiment_configuration,upgrade_path).upgrade_list()
         upgrader.analyze_data()
 
-    if analyze_list==True:
+    if analyze_list is True:
         analyze_path="analysed_"+experiment_configuration["target_list"]
         target_analizer=Target_List_Analyzer(upgrade_path, analyze_path, experiment_configuration)
         target_analizer.analyze_data()
