@@ -4,26 +4,26 @@
 
 import concurrent.futures
 from concurrent.futures import FIRST_COMPLETED
-
 import time
+import logging
+import hashlib
 import threading
+import pandas
 import http1_covered_channels
 from logger import ExperimentLogger , TestRunLogger
 from custom_http_client import CustomHTTP
 import class_mapping
 import http1_request_builder as request_builder
-import pandas
+
 import exp_analyzer
-import logging
-import hashlib
+
 
 class ExperimentRunner:
     '''Runs the experiment itself'''
     def __init__(self, experiment_configuration, target_list, global_log_folder):
         self.experiment_configuration = experiment_configuration
         self.global_log_folder=global_log_folder
-        self.target_list=target_list
-       
+        self.target_list=target_list   
         self.base_check_fails=[]
         self.lock_bcf = threading.Lock()
         self.dns_fails=[]
@@ -51,6 +51,7 @@ class ExperimentRunner:
         sub_set=sub_set[:length]
         return sub_set
          """
+
     def get_target_subset(self, target_list, start_position=0, length=10)-> list:
         """Takes a subset from the target list to reduce the traffic to one target, in order to """
         #Check inputs
@@ -75,11 +76,11 @@ class ExperimentRunner:
         #Build sub_set List with valid targets
         for entry in subset:
             dns_entry, error = self.add_dns_info(entry)
-            #Check Socket Info 
-            if dns_entry!=None:
+            #Check Socket Info
+            if dns_entry is not None:
                 #Check http options
                 print(dns_entry)
-                if self.check_entry_http_options(dns_entry)==True:
+                if self.check_entry_http_options(dns_entry) is True:
                     checked_subset.append(dns_entry)
                 else:
                     invalid_entries_count+=1
@@ -91,30 +92,32 @@ class ExperimentRunner:
 
 
     def basic_request(self,domain, socket_info):
-        
+        """Performs as basic request with the selected options to check, if they match the host configuration"""
+        #Initialize Variables
         host=None
         response_line=None
         response_status_code=None
+        #Build a local configuration for Basic Requests
         local_configuration=self.experiment_configuration.copy()
         local_configuration["covertchannel_request_number"]= 1
         local_configuration["covertchannel_connection_number"]= 1
         local_configuration["covertchannel_timing_number"]= 1
         subdomains, hostname, tldomain= request_builder.HTTP1_Request_Builder().parse_host(domain)
-        if local_configuration["target_add_www"]==True:
+        if local_configuration["target_add_www"] is True:
             if subdomains=="":
                 subdomains="www"
         if subdomains!="":
-                subdomains=subdomains+"."
+            subdomains=subdomains+"."
         uri=subdomains+hostname+"."+tldomain
-        request_string, deviation_count, new_uri=request_builder.HTTP1_Request_Builder().generate_request(local_configuration, 443)
+        request_string, _, _=request_builder.HTTP1_Request_Builder().generate_request(local_configuration, 443)
         #host deprecated?
-        request, _ =request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, uri, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"]) #Carefull some hosts expect more
-        
-        if local_configuration["include_subdomain_host_header"]==True:
+        #Carefull some hosts expect more 
+        request, _ =request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, uri, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"])       
+        if local_configuration["include_subdomain_host_header"] is True:
             host=subdomains+hostname+"."+tldomain
-        else: 
+        else:
             host=hostname+"."+tldomain
-        
+        # Perform Request
         response_line, response_header_fields, body, measured_times, error_message  = CustomHTTP().http_request(
             host=host,#host is important for building the TLS context
             use_ipv4=self.experiment_configuration["use_ipv4"],
@@ -124,37 +127,37 @@ class ExperimentRunner:
             timeout=self.experiment_configuration["conn_timeout"],
             verbose=self.experiment_configuration["verbose"],
             log_path=self.exp_log.get_experiment_folder()+"/base_request",    #Transfer to save TLS Keys
-        )    
-        if response_line!=None:
+        )
+        if response_line is not None:
             response_status_code = response_line["status_code"]
         return response_status_code
     
 
     def baseline_check(self):
-        #Todo
+        """Check if the host is not blocking the request due to detection"""
+        #TODO: TLS Rebuild Messages doesnt work
         return True
 
     def add_dns_info(self, entry):
         """Adds DNS Information to each entry. Port and IP depending on Experiment_Configuration Options use_IPv4, use_TLS"""
-        #sub_set_dns=[]
         entry_dns=None
         #Configure Port
         if self.experiment_configuration["target_port"] is not None:
             try:
-                self.target_port=int(self.experiment_configuration["target_port"])
-                if not 0 <= self.target_port <= 65535:
+                target_port=int(self.experiment_configuration["target_port"])
+                if not 0 <= target_port <= 65535:
                     raise(ValueError())
             except ValueError:
-                self.runner_logger.error("Invalid Portnumber in Experiment Configuration: %s", self.target_port)
+                self.runner_logger.error("Invalid Portnumber in Experiment Configuration: %s", target_port)
         else:
             if self.experiment_configuration["use_TLS"]:
-                self.target_port=443
+                target_port=443
             else: 
-                self.target_port=80
+                target_port=80
         #TODO Catch the case that IPv4 or IPv6 is not provided, some sites sends more than one IP/Port set per protocoll version,  example macromedia.com and criteo.com            
         subdomains, hostname, tldomain= request_builder.HTTP1_Request_Builder().parse_host(entry)
         #Add www or keep subdomain if present, if selected and no other subdomain is present
-        if self.experiment_configuration["target_add_www"]==True:
+        if self.experiment_configuration["target_add_www"] is True:
             if subdomains=="":
                 subdomains="www"
         #If a aubdomain is present, add a dot
@@ -164,28 +167,27 @@ class ExperimentRunner:
         uri=subdomains+hostname+"."+tldomain
         print("DNS Lookup for: "+uri)
         try:
-            socket_info, error = CustomHTTP().lookup_dns(uri, self.target_port, self.experiment_configuration["use_ipv4"])
+            socket_info, error = CustomHTTP().lookup_dns(uri, target_port, self.experiment_configuration["use_ipv4"])
         except Exception as e:
              self.runner_logger.error("Error during Socket Creation/DNS Lookup of URI: %s, Error: %s", uri, e)
-        if error!= None:
+        if error is not None:
             #Extend List when DNS Lookup Fails (Thread Safe)
             with self.lock_df:
-                self.dns_fails.append([uri,error])
-            
+                self.dns_fails.append([uri,error])           
         else:
             #IPv4 Socket_Info
             if self.experiment_configuration["use_ipv4"]:
                 try: 
                     ip_address, port=  socket_info[0][4]
                 except Exception as e:
-                    self.runner_logger.error("Error getting Port and IP from Socket Info: %s", e)              
+                    self.runner_logger.error("Error getting Port and IP from Socket Info: %s", e)
             #IPv6 Socket_Info
             else:
                 ip_address=  socket_info[4][0]
                 port = socket_info[4][1]
             #Check Port (maybe not needed)
-            if port!=self.target_port:
-                print("Warning: Retrieved port doesn't match configured port (r. Port/c.Port"+str(port)+"/"+str(self.target_port))
+            if port!=target_port:
+                print("Warning: Retrieved port doesn't match configured port (r. Port/c.Port"+str(port)+"/"+str(target_port))
             entry_dns={"host":uri, "socket_info":socket_info, "ip_address":ip_address, "port":port }
                 
         return entry_dns, None
@@ -208,8 +210,8 @@ class ExperimentRunner:
         else:
             #Add Entry without Basic Check if option is 0
             check=True
-        if check==False:
-            #Extend Lisst when Basic Check Fails
+        if check is False:
+            #Extend List when Basic Check Fails
             with self.lock_bcf:
                 self.base_check_fails.append([entry_dns["host"], basic_request_status_code])           
         return check
@@ -223,13 +225,13 @@ class ExperimentRunner:
         maximum_retries=100*self.experiment_configuration["num_attempts"]
         retry=0
         
-        while unique==False:            
+        while unique is False:
             try:
-                request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration, self.target_port)
+                request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration, self.experiment_configuration["target_port"])
                 request_hash = hashlib.md5(str(request).encode()).hexdigest()
                 #Some CC may be added after pregeneration, example changing the URI, would lead needlessly to RunTime Exception
                 self.cc_uri_post_generation=selected_covered_channel.get_cc_uri_post_generation()
-                if self.cc_uri_post_generation==False:
+                if self.cc_uri_post_generation is False:
                     if len(self.prerequest_list)==0:
                         unique=True
                     for entry in self.prerequest_list:
@@ -243,12 +245,12 @@ class ExperimentRunner:
                         raise RuntimeError("Unable to generate a unique prerequest after maximum retries.")
                 else:
                     #If CC is added later skip the unique check
-                    unique=True        
+                    unique=True
             except Exception as e:
                 self.runner_logger.error("Error generating request: %s", e)
                 self.error_event.set()
                 raise  
-        if self.experiment_configuration["verbose"]==True:
+        if self.experiment_configuration["verbose"] is True:
             print(request)
         prerequest= {
             "Nr":0,
@@ -268,17 +270,22 @@ class ExperimentRunner:
 
 
     def get_next_prerequest(self, attempt_number):
+        """Get next Prerequest from Prerequest List or create and add to list if not existing"""
+        #Thread safe
         with self.lock_prl:
+            #Check if new prerequest needs to be pregenerated
             if attempt_number>=len(self.prerequest_list):
                 prerequest = self.pregenerate_request(self.experiment_configuration["covertchannel_request_number"])
                 self.prerequest_list.append(prerequest)
+            #Or take it from the Prerequest List
             else: 
-                prerequest=self.prerequest_list[attempt_number]
-            
+                prerequest=self.prerequest_list[attempt_number]          
         return prerequest
-    #Doesnt'work, too slow, thread unsafe
+
+    
     def add_entry_to_domain_prerequest_matrix(self, domain, attempt_no, response_line):
-        if response_line!=None:
+        """Save response and prerequest no to a matrix for further analysation"""
+        if response_line is not None:
             response_status_code = response_line["status_code"] 
         else:
             response_status_code=999
@@ -292,10 +299,11 @@ class ExperimentRunner:
 
 
     def add_nr_and_status_code_to_request_list(self, attempt_no, response_line):
+        """Save Response Statuscode to prerequest_list"""
         with self.lock_prl:
             self.prerequest_list[attempt_no]["Nr"]=attempt_no
-            if response_line!=None:
-                response_status_code = response_line["status_code"] 
+            if response_line is not None:
+                response_status_code = response_line["status_code"]
             else:
                 response_status_code=999   
             first_digit = str(response_status_code)[0]
@@ -311,14 +319,14 @@ class ExperimentRunner:
                 self.prerequest_list[attempt_no]["5xx"]+=1
             else:
                 self.prerequest_list[attempt_no]["9xx"]+=1
-        
         return
         
     def check_content(self, body):
-        #TODO add hash function and standard body
+        #TODO add hash or check length function and standard body
         return True
     
-    def send_and_receive_request(self, attempt_number, request, deviation_count, uri, host_data, log_path):    
+    def send_and_receive_request(self, attempt_number, request, deviation_count, uri, host_data, log_path):
+        """Send the request and receive response"""
         response_line, response_header_fields, body, measured_times, error_message  = CustomHTTP().http_request(
             host=host_data["host"],
             use_ipv4=self.experiment_configuration["use_ipv4"],
@@ -329,14 +337,13 @@ class ExperimentRunner:
             verbose=self.experiment_configuration["verbose"],
             log_path=log_path,    #Transfer to save TLS Keys
         )
-        if self.experiment_configuration["verbose"]==True:
+        if self.experiment_configuration["verbose"] is True:
             print("Response:",response_line)
       
         return response_line, response_header_fields, body, measured_times, error_message
 
 
     def run_experiment_subset(self, logger_list, sub_set_dns):
-
         '''Run the experiment'''
      
         for i in range(self.experiment_configuration["num_attempts"]):
@@ -357,7 +364,7 @@ class ExperimentRunner:
                     print("Baseline Check Failure, Connection maybe blocked")
                 else:     
                     # Send the HTTP request and get the response in the main threads
-                    try:                                                                                        
+                    try:
                         domain=host_data["host"]
                         selected_covered_channel = class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]()
                         request, deviation_count_uri=selected_covered_channel.replace_host_and_domain(prerequest["request"],domain, self.experiment_configuration["standard_subdomain"],host=None, include_subdomain_host_header=self.experiment_configuration["include_subdomain_host_header"], override_uri="")
@@ -388,6 +395,7 @@ class ExperimentRunner:
         return 
 
     def fuzz_subset(self, target_list, start_position, subset_length):
+        """Take the subset from target_list, start a logger for domain and execute Experiment"""
         try: 
             subset= self.get_target_subset(target_list, start_position, subset_length)
         except Exception as e:
@@ -395,8 +403,8 @@ class ExperimentRunner:
         #Initialise Logger List
         logger_list=[]            
         #Create logger object for each target in subset_dns
-        for entry in subset: 
-            try:   
+        for entry in subset:
+            try:
                 logger=TestRunLogger(self.experiment_configuration, self.exp_log.get_experiment_folder(), entry, entry["host"], entry["ip_address"], entry["port"])
                 logger_list.append(logger)           
             except Exception as e:
@@ -490,14 +498,14 @@ class ExperimentRunner:
         
         #Build futures to look up DNS until enough target are collected or end of target list is reached
         with concurrent.futures.ThreadPoolExecutor(max_workers) as subset_executor:
-            while len(checked_target_list)<max_targets or end_of_list==True: 
+            while len(checked_target_list)<max_targets or end_of_list is True:
                 while active_workers<max_workers:
                     # If target_list limit is reached, break
                     if  start_position>len(target_list):
                         print("End of list reached")
                         #    #Raise Error?
                         end_of_list=True
-                        break    
+                        break
                     #Get DNS Infomation for the subset, if the lookup fails for an entry the subset will be shortened
                     subset_task = subset_executor.submit(self.check_target_list_subset, target_list,start_position, subset_length)
                     # Shift the start position for next iteration
@@ -513,8 +521,7 @@ class ExperimentRunner:
                         # Save the results
                         new_targets, invalid_entries = completed_task.result()
                         # Make sure that no double entries are created, due to manipulationg the subdomain
-                        print(type(checked_target_list))
-                        
+                        print(type(checked_target_list))                     
                         for target in new_targets:
                             host = target.get("host")
                             double_entry=False
@@ -540,7 +547,6 @@ class ExperimentRunner:
 
     def setup_and_start_experiment(self):
         '''Setups the Experiment, creates an experiment logger, and starts the experiment run'''
-        
         try:
             start_time=time.time()
             #Create Folder for the experiment and save the path

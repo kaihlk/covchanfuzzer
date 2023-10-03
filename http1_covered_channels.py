@@ -471,28 +471,35 @@ class HTTP1_Request_CC_URI_Hex_Hex(HTTP1_Request_Builder):
 
         return request_string, deviation_count, new_url
 
-
+# CC which adds header fields from the common and uncommon header list 
 class HTTP1_Request_CC_Random_Content(HTTP1_Request_Builder):
-    # CC which adds header fields from the common and uncommon header list
  
-    
-    
     def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
         '''Generation of request package '''
 
-
+         # Check if headers are provided elsewise take default headers
+        if headers is None:
+            headers = default_headers.copy()
+        else:
+            # Create a copy to avoid modifying the original list
+            headers = headers.copy()
+        scheme=""
 
         # Insert the Host header at the beginning of the list
         headers.insert(0, ("Host", self.host_placeholder))
 
-        # Build the request_line from the provided arguments
-        request_line = f"{method} {url} HTTP/1.1\r\n"
+
+          # Build a new URL from the given host
+        request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
+        content="random"
+
+        deviation_count=0
 
         # Add Content more randomness, content length field yes, no, wrong value, other position
         if content is not None:
             if content=="random":
-                "Generate Random Content"
-                length=random.randint(0, 10)
+                #"Generate Random Content"
+                length=random.randint(0, 100)
                 content = mutators.generate_random_string(string.printable, length)     
             if random.random()<fuzzvalue:
                 if random.random()<fuzzvalue:
@@ -506,19 +513,14 @@ class HTTP1_Request_CC_Random_Content(HTTP1_Request_Builder):
         request_string = request_line
         for header in headers:
             request_string += f"{header[0]}: {header[1]}\r\n"
-
         # Add the ending of the request
         request_string += "\r\n"
-
         # Add Content
         if content is not None:
             request_string += content
-    
-
-
         # No deviation
         deviation_count = len(content)
-        return request_string, deviation_count, new_url
+        return request_string, deviation_count, new_uri
 
 
 class HTTP1_Request_CC_Random_Content_No_Lenght_Field(HTTP1_Request_Builder):
