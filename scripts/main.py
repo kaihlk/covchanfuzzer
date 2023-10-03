@@ -35,6 +35,18 @@ class_mapping_timing  = {
     2: Frequency_Modulation,
     3: Amplitude_Modulation,
 } """
+def get_logs_directory():
+    #Get Script Directory
+    script_directory = os.path.dirname(os.path.abspath(__file__))
+    parent_directory = os.path.dirname(script_directory)
+
+    #Check if directory for experiment_logs exist
+    logs_directory = os.path.join(parent_directory, "logs")
+    #Check if logs directory exists, elsewise create it
+    if not os.path.exists(logs_directory):
+        os.makedirs(logs_directory)
+
+    return logs_directory
 
 def configure_logger():
 
@@ -91,6 +103,10 @@ def load_target_list(target_list_csv):
 def main():
     '''Function that runs the connection, selection of the CC and the fuzzer'''
     
+
+    log_dir=get_logs_directory()
+
+
     main_logger=configure_logger()
     
     print(main_logger)
@@ -153,7 +169,7 @@ def main():
 
     analyze_list=False
     upgrade_list=False
-    run_exp=True
+    run_exp=False
     if run_exp==True:
         try:
             
