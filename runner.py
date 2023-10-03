@@ -19,8 +19,9 @@ import hashlib
 
 class ExperimentRunner:
     '''Runs the experiment itself'''
-    def __init__(self, experiment_configuration, target_list):
+    def __init__(self, experiment_configuration, target_list, global_log_folder):
         self.experiment_configuration = experiment_configuration
+        self.global_log_folder=global_log_folder
         self.target_list=target_list
        
         self.base_check_fails=[]
@@ -483,7 +484,7 @@ class ExperimentRunner:
         subsets_tasks=[]
         checked_target_list=[]
         active_workers=0
-        subset_length=int(max_targets/max_workers)    
+        subset_length=max(int(max_targets/max_workers),1)    
         #Make sure if that the target list has enough entries --Maybe drop
         if max_targets>len(target_list): max_targets=len(target_list)
         
@@ -543,7 +544,7 @@ class ExperimentRunner:
         try:
             start_time=time.time()
             #Create Folder for the experiment and save the path
-            self.exp_log=ExperimentLogger(self.experiment_configuration)
+            self.exp_log=ExperimentLogger(self.experiment_configuration, self.global_log_folder)
 
             #Start Global Capturing Process
 
@@ -573,7 +574,7 @@ class ExperimentRunner:
             start_position=0
             
         
-            'Iterate through target list'
+            #Iterate through target list
             with concurrent.futures.ThreadPoolExecutor(max_workers=self.experiment_configuration["max_workers"]) as fuzz_executor:
                 #Iterate though the list, if DNS Lookups or Basechecks fail, the entry from the list is droped and a new entry will be appended
                 #Take subsets from target_list until the the processed targets are equal or less than  configured max_targets 

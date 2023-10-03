@@ -1,15 +1,16 @@
 #main
 
-from upgrade_target_list import Target_List_Upgrader, Target_List_Analyzer
-from runner import ExperimentRunner
-from logger import ExperimentLogger, TestRunLogger
-import class_mapping
+#from upgrade_target_list import Target_List_Upgrader, Target_List_Analyzer
 import csv
 import time
 import os
 import logging
+from runner import ExperimentRunner
+from logger import ExperimentLogger, TestRunLogger
+import class_mapping
 
-##For Infoe
+
+##For Information
 """ class_mapping_requests ={
     1: HTTP1_Request_Builder,
     2: HTTP1_Request_CC_Case_Insensitivity,
@@ -35,8 +36,9 @@ class_mapping_timing  = {
     2: Frequency_Modulation,
     3: Amplitude_Modulation,
 } """
+
 def get_logs_directory():
-    #Get Script Directory
+    """Get or create local log directory"""
     script_directory = os.path.dirname(os.path.abspath(__file__))
     parent_directory = os.path.dirname(script_directory)
 
@@ -48,14 +50,14 @@ def get_logs_directory():
 
     return logs_directory
 
-def configure_logger():
-
+def configure_logger(log_path):
+    """Configure the logger for exceptions and debugging"""
 
     # Configure the logging settings
     logging.basicConfig(
         level=logging.DEBUG,  #Set the desired log level
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-        filename='logs/debug.log',  
+        filename=f'{log_path}/debug.log',
         filemode='w'  #'w' for overwrite, 'a' for append
     )
 
@@ -71,12 +73,11 @@ def configure_logger():
 
     return main_logger
 
-def get_last_experiment_number():
-    file_path = "logs/experiment_list.csv"
-    
+def get_last_experiment_number(log_path):
+    """Get or create Folder for experiment log files"""
+    file_path = f"{log_path}/experiment_list.csv"  
     if not os.path.exists(file_path) or os.path.getsize(file_path) == 0:
         return 0 # First Experiment
-    
     with open(file_path, "r") as csvfile:
         csv_reader = csv.DictReader(csvfile)
         last_row = None
@@ -85,7 +86,7 @@ def get_last_experiment_number():
     return int(last_row["experiment_no"])
 
 def load_target_list(target_list_csv):
-    # Load the list back from the CSV file, considering only the first two columns
+    """Load the list back from the CSV file, considering only the first two colum"""
     loaded_list = []
     with open(target_list_csv, 'r') as csvfile:
         csv_reader = csv.reader(csvfile)
@@ -104,10 +105,10 @@ def main():
     '''Function that runs the connection, selection of the CC and the fuzzer'''
     
 
-    log_dir=get_logs_directory()
+    log_path=get_logs_directory()
+    print("Logpath: ", log_path)
 
-
-    main_logger=configure_logger()
+    main_logger=configure_logger(log_path)
     
     print(main_logger)
     # TODO
@@ -116,7 +117,7 @@ def main():
    
     # Experiment Configuration Values
     description= input("Input Experiment Description:")
-    exp_no=get_last_experiment_number()+1
+    exp_no=get_last_experiment_number(log_path)+1
 
 
     experiment_configuration = {
@@ -130,8 +131,8 @@ def main():
         "covertchannel_timing_number": 1,
         "fuzz_value":0.7,
         #Target Selection Options  
-        "num_attempts": 10,
-        "max_targets": 100, #len(self.target_list):
+        "num_attempts": 2,
+        "max_targets": 10, #len(self.target_list):
         "max_workers": 32,  # Parallel Processing of subsets,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
@@ -166,14 +167,15 @@ def main():
 
 
     }
-
+    target_list=load_target_list(experiment_configuration["target_list"])
     analyze_list=False
     upgrade_list=False
-    run_exp=False
+    run_exp=True
     if run_exp==True:
         try:
             
-            experiment=ExperimentRunner(experiment_configuration, load_target_list(experiment_configuration["target_list"])).setup_and_start_experiment()
+            experiment=ExperimentRunner(experiment_configuration, target_list, log_path)
+            experiment.setup_and_start_experiment()
             
         except Exception as e:
             main_logger.error("Experiment run failed: %s", e)

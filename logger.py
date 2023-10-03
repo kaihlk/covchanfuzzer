@@ -472,19 +472,21 @@ class TestRunLogger:
         return """
 
 class ExperimentLogger:
-    def __init__(self, experiment_configuration):
+    def __init__(self, experiment_configuration, global_log_folder):
         self.experiment_configuration = experiment_configuration
-        self.experiment_folder = self.create_experiment_folder(experiment_configuration["experiment_no"])
+        self.experiment_folder = self.create_experiment_folder(experiment_configuration["experiment_no"], global_log_folder)
         self.experiment_stats={}
         self.exp_logging=logging.getLogger("main.runner.exp_log")
+        self.global_log_folder=global_log_folder
+       
     
     def get_experiment_folder(self):
         return self.experiment_folder
 
-    def create_experiment_folder(self, exp_number):
+    def create_experiment_folder(self, exp_number, global_log_folder):
         '''Create an experiment folder, if not already exist '''
        
-        exp_folder = f"logs/experiment_{exp_number}"
+        exp_folder = f"{global_log_folder}/experiment_{exp_number}"
         os.makedirs(exp_folder, exist_ok=True) #If it already exists, doesn't care
         os.makedirs(exp_folder+"/base_request", exist_ok=True)
         return exp_folder
@@ -501,7 +503,7 @@ class ExperimentLogger:
         """Adds an entry describing the experiment and the outcome into a list"""
         #TODO update header line when new keys are added to experiment konfiguration
 
-        file_path = "logs/experiment_list.csv"
+        file_path = self.global_log_folder+"/experiment_list.csv"
         exists = os.path.exists(file_path)
         
         with open(file_path, "a+", newline="") as csvfile:
@@ -601,7 +603,7 @@ class ExperimentLogger:
     def copy_log_file(self):
         # Move the log file to a different folder using os.rename
         new_file_path = f"{self.experiment_folder}/debug.log"
-        old_file_path= f"logs/debug.log"
+        old_file_path= f"{self.global_log_folder}/debug.log"
         shutil.copy(old_file_path, new_file_path)
         return
 
