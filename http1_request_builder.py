@@ -207,7 +207,7 @@ class HTTP1_Request_Builder:
         deviation_count=0     
         return request_string, deviation_count, new_uri
 
-    def generate_request(self, experiment_configuration, selected_port):
+    def generate_request(self, experiment_configuration, selected_port, new_fuzzvalue=0):
         
         #host=host_data["host"]
         port=selected_port
@@ -216,7 +216,10 @@ class HTTP1_Request_Builder:
         headers=experiment_configuration["headers"]
         standard_headers=experiment_configuration["standard_headers"]
         content=experiment_configuration["content"]
-        fuzzvalue=experiment_configuration["fuzz_value"]
+        #Allow more flexibility in the fuzzing
+        if new_fuzzvalue==0:
+            fuzzvalue=experiment_configuration["fuzz_value"]
+        else: fuzzvalue=new_fuzzvalue
         
         relative_uri=experiment_configuration["relative_uri"]
         include_subdomain=experiment_configuration["include_subdomain"]

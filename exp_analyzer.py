@@ -1,5 +1,6 @@
 # Experimentdata-Analysisation-Domain-Statuscode
 import pandas as pandas
+import os
 import matplotlib
 import matplotlib.pyplot as mpl
 import numpy as numpy
@@ -62,8 +63,8 @@ class Domain_Response_Analyzator():
         num_clusters = 10
 
         # K-Means-Modell erstellen und auf die ausgewählte Spalte anwenden
-        kmeans = KMeans(n_clusters=num_clusters, n_init="auto")
-        data_frame['Cluster'] = kmeans.fit_predict(selected_column.values.reshape(-1, 1))
+        #kmeans = KMeans(n_clusters=num_clusters, n_init="auto")
+        #data_frame['Cluster'] = kmeans.fit_predict(selected_column.values.reshape(-1, 1))
 
  
         mpl.figure(figsize=(12, 6))
@@ -74,9 +75,9 @@ class Domain_Response_Analyzator():
         values, bins, bars=mpl.hist(data,weights = [1/len(data)] * len(data), bins=bins, color='blue', edgecolor='black', alpha=0.7, label='2xx Frequency', orientation='vertical')
         mpl.gca().yaxis.set_major_formatter(PercentFormatter(1))
         
-        mpl.xlabel('Share of domains')
-        mpl.ylabel('Share of 2xx responses')
-        mpl.title('Histogramm of domains based on 2xx share')
+        mpl.xlabel('Domain Cluster (10%)')
+        mpl.ylabel('Percentage of 2xx Status Codes (%)')
+        mpl.title('Histogramm: Success Rate Distribution Among Domains')
          # Add labels above each bar
           
 
@@ -99,11 +100,22 @@ class Domain_Response_Analyzator():
         mpl.grid(True)
         mpl.tight_layout()
         mpl.savefig(self.exp_path+'/exp_stats_prerequest_statuscodes.png', dpi=300, bbox_inches='tight')
-       # mpl.show()
+        mpl.show()
         
         return
 
+def get_logs_directory():
+    """Get or create local log directory"""
+    script_directory = os.path.dirname(os.path.abspath(__file__))
+    parent_directory = os.path.dirname(script_directory)
+
+    # Check if directory for experiment_logs exist
+    logs_directory = os.path.join(parent_directory, "logs")
+   
+    return logs_directory
+
 if __name__ == "__main__":
-    path = "logs/experiment_82/"
+    log_dir=get_logs_directory()
+    path = f"{log_dir}/experiment_5/"
     dra = Domain_Response_Analyzator(path)
     dra.start()

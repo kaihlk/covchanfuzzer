@@ -9,6 +9,7 @@ import logging
 import hashlib
 import threading
 import pandas
+import random
 import http1_covered_channels
 from logger import ExperimentLogger , TestRunLogger
 from custom_http_client import CustomHTTP
@@ -87,7 +88,7 @@ class ExperimentRunner:
             else:
                 invalid_entries_count+=1
             # Repeat until sub_set has desired lenght
-        print(checked_subset)    
+           
         return checked_subset, invalid_entries_count
 
 
@@ -222,34 +223,61 @@ class ExperimentRunner:
         #Build HTTP Request after the selected covered channel
         selected_covered_channel = class_mapping.requests_builders[covert_channel]()
         unique=False
+        
+        deviation_count_spread=False
         maximum_retries=100*self.experiment_configuration["num_attempts"]
         retry=0
-        
-        while unique is False:
+        new_fuzzvalue=0
+        ### Break the circle if the prerequest is unique or the deviation count is accpeted
+        while unique is False or deviation_count_spread is False:
             try:
-                request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration, self.experiment_configuration["target_port"])
+                deviation_count_spread=False
+                deviation_count_found=False
+                request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration, self.experiment_configuration["target_port"],new_fuzzvalue)
                 request_hash = hashlib.md5(str(request).encode()).hexdigest()
                 #Some CC may be added after pregeneration, example changing the URI, would lead needlessly to RunTime Exception
                 self.cc_uri_post_generation=selected_covered_channel.get_cc_uri_post_generation()
                 if self.cc_uri_post_generation is False:
-                    if len(self.prerequest_list)==0:
-                        unique=True
-                    for entry in self.prerequest_list:
-                        if request_hash!=entry["request_hash"]:
+                        #First Entry is always unique    
+                        if len(self.prerequest_list)==0:
                             unique=True
-                        else:
-                            unique=False
-                            break
-                    retry+=1
-                    if retry>=maximum_retries:
-                        raise RuntimeError("Unable to generate a unique prerequest after maximum retries.")
+                            deviation_count_spread=True
+                        #Iterate through prerequest list to check if entry is already existing or a similar entry within 5% deviation_count isn  already existing
+                        for entry in self.prerequest_list:
+                            #Found if is within 5% range
+                            if abs(deviation_count - entry["deviation_count"]) < deviation_count*0.05:
+                                deviation_count_found=True
+                            #Check uniqueness
+                            if request_hash!=entry["request_hash"]:
+                                unique=True
+                            #Break if already existing
+                            else:
+                                unique=False
+                                break
+                        #Prevent endless loop if all variations have been tried
+                        retry+=1
+                        if retry>maximum_retries:
+                            raise RuntimeError("Unable to generate a unique prerequest after maximum retries.")
+                         ###Mechanismus to higher the spread of different deviation counts
+                        if deviation_count_found==True:
+                            if random.random()>self.experiment_configuration["spread_deviation"]:
+                                deviation_count_spread=True
+                            else:
+                                 retry-=1
+                                 new_fuzzvalue=random.random()
+                                 print(new_fuzzvalue)
+                        else: 
+                            deviation_count_spread=True
+                                 
+
                 else:
-                    #If CC is added later skip the unique check
+                    #If CC Variation is added later skip the unique check
                     unique=True
             except Exception as e:
                 self.runner_logger.error("Error generating request: %s", e)
                 self.error_event.set()
                 raise  
+           
         if self.experiment_configuration["verbose"] is True:
             print(request)
         prerequest= {
@@ -521,7 +549,7 @@ class ExperimentRunner:
                         # Save the results
                         new_targets, invalid_entries = completed_task.result()
                         # Make sure that no double entries are created, due to manipulationg the subdomain
-                        print(type(checked_target_list))                     
+                                           
                         for target in new_targets:
                             host = target.get("host")
                             double_entry=False
@@ -568,11 +596,12 @@ class ExperimentRunner:
             #Loop over List
 
 
-
+            #Initialize 
             fuzz_tasks=[]
             subset_length=self.experiment_configuration["target_subset_size"]
             max_workers=self.experiment_configuration["max_workers"]
-            max_active_workers=self.experiment_configuration["max_targets"]/max_workers
+            #Check max ative workers depending on configuration
+            max_active_workers=max(self.experiment_configuration["max_targets"]/subset_length,1)
             if max_active_workers>self.experiment_configuration["max_workers"]:
                 max_active_workers=self.experiment_configuration["max_workers"]
             active_workers=0
@@ -591,6 +620,7 @@ class ExperimentRunner:
                         # If target_list limit is reached, break_
                         if start_position+subset_length>len(prepared_target_list):
                         #    #Raise Error?
+                            subset_length-=1
                             break
                                 #Get DNS Infomation for the subset, if the lookup fails for an entry the subset will be shortened
                         try:
