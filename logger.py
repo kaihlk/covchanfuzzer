@@ -583,6 +583,7 @@ class ExperimentLogger:
         self.experiment_stats["Active_Workers"]=active_workers
         self.experiment_stats["Folder_Size im MB"]=self.get_directory_size_mb(self.experiment_folder)
         self.experiment_stats["Invalid Target Entries"]=invalid_entries
+        
         file_path = f"{self.experiment_folder}/experiment_outcome.json"
         with open(file_path, "w", encoding="utf-8") as file:
             json.dump(self.experiment_stats, file, indent=4)

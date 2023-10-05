@@ -1,11 +1,15 @@
 # Experimentdata-Analysisation-Domain-Statuscode
 import pandas as pandas
 import os
+import json
 import matplotlib
 import matplotlib.pyplot as mpl
 import numpy as numpy
 from sklearn.cluster import KMeans
 from matplotlib.ticker import PercentFormatter
+import seaborn as sns
+from scipy.stats import norm
+from scipy import stats
 
 
 class Domain_Response_Analyzator():
@@ -14,13 +18,159 @@ class Domain_Response_Analyzator():
         self.data_frame_exp_stats = pandas.read_csv(
             path+"/experiment_stats.csv")
         self.data_frame_prerequest_stats = pandas.read_csv(
-            path+"/prerequests.csv")    
+            path+"/prerequests.csv")
+        self.experiment_configuration=self.load_exp_outcome(self.exp_path)
+        
+        return
+
+    def load_exp_outcome(self, path):
+        json_file_path = path+'/experiment_outcome.json'
+
+        # Load the JSON file
+        with open(json_file_path, 'r') as file:
+            data = json.load(file)
+
+        # Extract the dictionaries from the JSON data
+        captured_packages = data["captured_packages"]
+        outcome = data["Outcome"]
+        experiment_configuration = data["Experiment_Configuration"]
+        experiment_duration_seconds = data["Experiment_Duration(s)"]
+        packets_per_second = data["Packets_per_second"]
+        messages = data["Messages"]
+        messages_per_second = data["Messages_per_second"]
+        active_workers = data["Active_Workers"]
+        folder_size_mb = data["Folder_Size im MB"]
+        invalid_target_entries = data["Invalid Target Entries"]
+        return experiment_configuration
 
     def start(self):
         self.plot_unsorted_data(self.data_frame_exp_stats)
         self.cluster_domains(self.data_frame_exp_stats)
         self.cluster_prerequest(self.data_frame_prerequest_stats)
+        host_statistics=self.host_stats(self.data_frame_exp_stats)
+        prerequest_statistics=self.prerequest_stats(self.data_frame_prerequest_stats)
+        
+        self.save_exp_analyzer_results(host_statistics, prerequest_statistics)
+        self.plot_deviation_count_distribution(self.data_frame_prerequest_stats)
+        self.plot_2xx_over_attempt_no(self.data_frame_prerequest_stats)
+        return
 
+
+    def save_exp_analyzer_results(self, host_statistics, prerequest_statistics):
+        log_file_path = self.exp_path + '/exp_analyzer_data.json'
+        results = {
+            'host_statistics': host_statistics,
+            'prerequest_statistics': prerequest_statistics,  
+        }
+        with open(log_file_path, "w", encoding="utf-8") as file:
+            json.dump(results, file, indent=4)
+
+
+    
+    
+    def host_stats(self, data_frame):
+
+        ###Host with maximum 200
+        ###Host with minimum 200
+        ###Host average 200
+        df_2xx = data_frame[['Host', '2xx']]
+        host_statistics={
+            'min_2xx': df_2xx['2xx'].min(),
+            'max_2xx': df_2xx['2xx'].max(),
+            'avg_2xx': df_2xx['2xx'].mean(),
+            'std_2xx': numpy.std(df_2xx['2xx']),
+            'min_2xx_no': df_2xx.loc[df_2xx['2xx'] == df_2xx['2xx'].min(), 'Host'].iloc[0],
+            'max_2xx_no': df_2xx.loc[df_2xx['2xx'] == df_2xx['2xx'].max(), 'Host'].iloc[0],
+        
+        }
+        
+        return host_statistics
+    
+
+
+    def prerequest_stats(self, data_frame):
+        # Assuming 'Nr', 'deviation_count', and '2xx' are columns in the DataFrame
+        df_2xx = data_frame[['Nr', 'deviation_count', '2xx']]
+
+        prereq_statistics = {
+            'min_2xx': int(df_2xx['2xx'].min()),
+            'max_2xx': int(df_2xx['2xx'].max()),
+            'avg_2xx': df_2xx['2xx'].mean(),
+            'std_deviation_2xx': numpy.std(df_2xx['2xx']),
+            'min_2xx_no': int(df_2xx.loc[df_2xx['2xx'] == df_2xx['2xx'].min(), 'Nr'].iloc[0]),
+            'max_2xx_no': int(df_2xx.loc[df_2xx['2xx'] == df_2xx['2xx'].max(), 'Nr'].iloc[0]),
+            'min_deviation_count': int(df_2xx['deviation_count'].min()),
+            'max_deviation_count': int(df_2xx['deviation_count'].max()),
+            'avg_deviation_count': df_2xx['deviation_count'].mean(),
+            'std_deviation_deviation_count': numpy.std(df_2xx['deviation_count']),
+            'min_deviation_count_no': int(df_2xx.loc[df_2xx['deviation_count'] == df_2xx['deviation_count'].min(), 'Nr'].iloc[0]),
+            'max_deviation_count_no': int(df_2xx.loc[df_2xx['deviation_count'] == df_2xx['deviation_count'].max(), 'Nr'].iloc[0]),
+        }
+
+        return prereq_statistics
+
+
+    def plot_2xx_over_attempt_no(self, data_frame):
+        # Calculate the share of '200x' values over the total attempt number
+        data_frame['Share_2xx'] = (data_frame['2xx'] / self.experiment_configuration["max_targets"]) * 100
+
+        # Create a plot
+        mpl.figure(figsize=(10, 6))
+        mpl.plot(data_frame['Nr'], data_frame['Share_2xx'], marker='', linestyle='-')
+        
+        slope, intercept, r_value, p_value, std_err = stats.linregress(data_frame['Nr'], data_frame['Share_2xx'])
+        regression_line = slope * data_frame['Nr'] + intercept
+        mpl.plot(data_frame['Nr'], regression_line, 'r--', label='Regression Line')
+
+
+
+        # Customize labels and title
+        mpl.xlabel('Attempt Index')
+        mpl.ylabel('Share of 2xx Responses')
+        mpl.title('Development of the 2xx Response over Message No.')
+
+        # Show the plot
+        mpl.grid(True)
+        mpl.tight_layout()
+        mpl.show()
+
+        mpl.savefig(self.exp_path+'/exp_stats_2xx_nr_development.png', dpi=300, bbox_inches='tight')
+        
+        return
+    
+    def plot_deviation_count_distribution(self, data_frame):
+        #deviation_count = data_frame['deviation_count']
+        
+        deviation_count = data_frame['deviation_count'].values
+        # Calculate mean and standard deviation
+        mean = deviation_count.mean()
+        std_dev = deviation_count.std()
+        print("Type")
+        print(data_frame['deviation_count'].shape)
+        # Create a histogram
+        mpl.figure(figsize=(10, 6))
+        sns.histplot(deviation_count, kde=True, color='blue', bins=30, label='Data Distribution')
+
+        # Overlay a normal distribution curve
+        x = numpy.linspace(deviation_count.min(), deviation_count.max(), 100)
+        x = numpy.linspace(deviation_count.min(), deviation_count.max(), 30)
+        #x = numpy.linspace(deviation_count.min() - 3 * std_dev, deviation_count.max() + 3 * std_dev, 100)
+        pdf = norm.pdf(x, mean, std_dev)*1000 #TODO? max_targets?
+        mpl.plot(x, pdf, 'r-', lw=2, label='Normal Distribution')
+
+        mpl.xlabel('Deviation Count')
+        mpl.ylabel('Frequency')
+        mpl.title('Histogram: Deviation Count Distribution')
+        mpl.legend()
+        mpl.grid(True)
+
+        # Show the plot or save it to a file
+        #mpl.show()
+        mpl.savefig(self.exp_path+'/exp_stats_deviation_distribution.png', dpi=300, bbox_inches='tight')
+        
+
+
+    
     def plot_unsorted_data(self, df):
         # Daten in NumPy-Arrays umwandeln
         data_frame = df.sort_values(by=['1xx','3xx', '4xx', '5xx', '9xx', '2xx'], ascending=[False,False, False, False, False, True])
@@ -45,7 +195,7 @@ class Domain_Response_Analyzator():
 
         mpl.xlabel('Hosts')
         mpl.ylabel('Statuscodes share')
-        mpl.title('Distibution of statuscodes per Host')
+        mpl.title('Distribution of statuscodes per host')
         mpl.legend()
         mpl.xticks(rotation=90)  # Für bessere Lesbarkeit der Host-Namen
         mpl.grid(True)
@@ -87,20 +237,23 @@ class Domain_Response_Analyzator():
                     dpi=300, bbox_inches='tight')
         #mpl.show() 
         return
+        
     def cluster_prerequest(self, data_frame):
         mpl.figure(figsize=(8, 6))
-        mpl.scatter(data_frame['deviation_count'], data_frame['2xx'], alpha=0.5)  # Alpha for transparency
+        mpl.scatter(data_frame['deviation_count'], data_frame['2xx']/self.experiment_configuration["max_targets"], alpha=0.5)  # Alpha for transparency
 
         # Add labels and title
-        mpl.xlabel('Deviation Count')
-        mpl.ylabel('2xx Value')
-        mpl.title('Scatter Plot of Deviation Count vs. 2xx Value')
+        mpl.xlabel('Deviation Count per Message')
+        mpl.ylabel('2xx Responses (%)')
+        mpl.title('Scatter Plot of Deviation Count vs. 2xx Responses')
+        mpl.gca().set_yticklabels(['{:.1f}%'.format(x*100) for x in mpl.gca().get_yticks()])
+
 
         # Show the plot
         mpl.grid(True)
         mpl.tight_layout()
         mpl.savefig(self.exp_path+'/exp_stats_prerequest_statuscodes.png', dpi=300, bbox_inches='tight')
-        mpl.show()
+        #mpl.show()
         
         return
 
@@ -116,6 +269,6 @@ def get_logs_directory():
 
 if __name__ == "__main__":
     log_dir=get_logs_directory()
-    path = f"{log_dir}/experiment_5/"
+    path = f"{log_dir}/experiment_14"
     dra = Domain_Response_Analyzator(path)
     dra.start()
