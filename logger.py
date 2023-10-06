@@ -155,7 +155,16 @@ class TestRunLogger:
         elif first_digit== "9":
             self.data_count["9xx"]+=1
 
-        dev_to_status= {"Attempt No.": attempt_number, "Deviation Count": deviation_count, "Status Code": response_status_code}
+        dev_to_status= {
+            "Attempt No.": attempt_number,
+            "uri":uri, 
+            "Deviation Count": deviation_count, 
+            "Status Code": response_status_code, 
+            "Response_Time": measured_times["Response_Time"],
+            "response_header_count": count_header_fields,
+            "response_header_length": length_header,
+            "response_body_length": length_body,
+            "response_header_fields": response_header_fields, }
   
         self.deviation_to_status_code.append(dev_to_status) 
         

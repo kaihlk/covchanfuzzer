@@ -207,7 +207,7 @@ class HTTP1_Request_Builder:
         deviation_count=0     
         return request_string, deviation_count, new_uri
 
-    def generate_request(self, experiment_configuration, selected_port, new_fuzzvalue=0):
+    def generate_request(self, experiment_configuration, selected_port, new_fuzz_value=0):
         
         #host=host_data["host"]
         port=selected_port
@@ -217,9 +217,9 @@ class HTTP1_Request_Builder:
         standard_headers=experiment_configuration["standard_headers"]
         content=experiment_configuration["content"]
         #Allow more flexibility in the fuzzing
-        if new_fuzzvalue==0:
-            fuzzvalue=experiment_configuration["fuzz_value"]
-        else: fuzzvalue=new_fuzzvalue
+        if new_fuzz_value==0:
+            fuzz_value=experiment_configuration["min_fuzz_value"]
+        else: fuzz_value=new_fuzz_value
         
         relative_uri=experiment_configuration["relative_uri"]
         include_subdomain=experiment_configuration["include_subdomain"]
@@ -235,7 +235,7 @@ class HTTP1_Request_Builder:
             # Create a copy to avoid modifying the original list
 
 
-        return self.generate_cc_request(port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
+        return self.generate_cc_request(port, method, path, headers, content, fuzz_value, relative_uri, include_subdomain, include_port, protocol)
 
     def replace_host_and_domain(self, prerequest, domain, standard_subdomain="", host=None, include_subdomain_host_header=False, override_uri=""):
             try:

@@ -108,7 +108,7 @@ class HTTP1_Request_CC_Random_Whitespace(HTTP1_Request_Builder):
         
         # Insert the Host header at the beginning of the list
         headers.insert(0, ("Host", self.host_placeholder))
-        print(fuzzvalue)
+        
         # Build the request_line from the provided arguments
         scheme=""
         request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
@@ -121,14 +121,14 @@ class HTTP1_Request_CC_Random_Whitespace(HTTP1_Request_Builder):
             # Random choice if value is changed
             if random.random() < fuzzvalue:
                 # Create a string with random number of Whitespaces and Tabulators, third possible char?  ????
-                whitespace = ""
+                whitespaces = ""
                 while random.random() < fuzzvalue:
                     # Random Choice from Tabulator, Whitespace, carriage retrun + newline + Whitespace
-                    random_string = random.choice(["\t", " ", "\r\n "])
-                    whitespace += random_string
+                    random_linearwhithespace = random.choice(["\t", " ", "\r\n "])
+                    whitespaces += random_linearwhithespace
                     deviation_count += 1
                 # Add the whitespace string at the end of the value
-                field_value += whitespace
+                field_value += whitespaces
             # Build the line of the request string
             request_string += f"{field_name}: {field_value}\r\n"
 
