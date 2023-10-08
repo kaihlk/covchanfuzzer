@@ -5,6 +5,7 @@ import csv
 import time
 import os
 import logging
+import scapy.all as scapy
 from runner import ExperimentRunner
 from upgrade_target_list import Target_List_Upgrader
 #from upgrade_target_list import Target_List_Analyzer
@@ -35,6 +36,19 @@ class_mapping_timing  = {
     2: Frequency_Modulation,
     3: Amplitude_Modulation,
 } """
+
+
+
+
+def is_network_adapter_present(adapter_name):
+    # Get a list of available network interfaces using Scapy's conf.ifaces dictionary.
+    network_interfaces = scapy.get_if_list()
+    print("Network Adapters:", network_interfaces)
+    if adapter_name in network_interfaces:
+        print("Configured Network Adapter is ok")
+    else:
+        raise ValueError(f"Network adapter '{adapter_name}' is not present.") 
+    return 
 
 
 def get_logs_directory():
@@ -120,28 +134,28 @@ def main():
         "verbose": False,
         "timestamp": time.strftime("%Y%m%d_%H%M%S"),
         # Covert Channel Option
-        "covertchannel_request_number": 2,
+        "covertchannel_request_number": 4,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
         "min_fuzz_value": 0.01,
         "spread_deviation": 0.9,
         # Target Selection Options
-        "num_attempts": 1000,
-        "max_targets": 1000,  # len(self.target_list):
+        "num_attempts": 100,
+        "max_targets": 100,  # len(self.target_list):
         "max_workers": 40,  # Parallel Processing of subsets,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
         "check_basic_request": 2,
         # "target_list_subdomain_10000.csv",#"new_target_list.csv",
         "target_list": "target_list_subdomain_10000.csv",
-        "target_subset_size": 25,
+        "target_subset_size": 5,
         "target_add_www": True,  # Add www if no other subdomain is known
         # "target_host": "www.example.com",  #Just for special useipvstt
         "target_port": 443,  # 443, 8080 Apache
 
         # Connection Options
         "conn_timeout": 5,  # seconds
-        "nw_interface": "enp0s31s6",  # lo, docker, enp0s3
+        "nw_interface": "enp0s3",#1s6",  # lo, docker, enp0s3
         "use_ipv4": True,
         "use_TLS": True,
         "use_HTTP2": False,
@@ -164,12 +178,13 @@ def main():
         "content": "random",  # "random", "some_text""fuzz_value": 0.9,
      
     }
-    target_list = load_target_list(experiment_configuration["target_list"])
     analyze_list = False
     upgrade_list = False
     run_exp = True
     if run_exp is True:
         try:
+            is_network_adapter_present(experiment_configuration["nw_interface"])
+            target_list = load_target_list(experiment_configuration["target_list"])
             experiment = ExperimentRunner(
                 experiment_configuration, target_list, log_path)
             experiment.setup_and_start_experiment()
