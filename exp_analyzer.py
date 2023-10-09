@@ -238,7 +238,7 @@ class Domain_Response_Analyzator():
         mpl.title('Histogramm: Success Rate Distribution Among Domains')
          # Add labels above each bar
 
-        mpl.bar_label(bars, labels = [f'{x.get_height():.0%}' for x in bars], fontsize=15, color='black')
+        mpl.bar_label(bars, labels = [f'{x.get_height():.2%}' for x in bars], fontsize=15, color='black')
         mpl.savefig(self.exp_path+'/exp_stats_2xx_histogramm.png',
                     dpi=300, bbox_inches='tight')
         #mpl.show() 

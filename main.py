@@ -178,8 +178,7 @@ def main():
         "content": "random",  # "random", "some_text""fuzz_value": 0.9,
      
     }
-    analyze_list = False
-    upgrade_list = False
+   
     run_exp = True
     if run_exp is True:
         try:
@@ -190,22 +189,8 @@ def main():
             experiment.setup_and_start_experiment()
         except Exception as e:
             main_logger.error("Experiment run failed: %s", e)
-    if upgrade_list is True:
-        upgrade_path = "upgraded_"+experiment_configuration["target_list"]
-        new_path = "upgraded_and_cleaned" + \
-            experiment_configuration["target_list"]
-        upgrader = Target_List_Analyzer(
-            new_path, new_path, experiment_configuration)
-        upgrader = Target_List_Upgrader(
-            experiment_configuration, upgrade_path).upgrade_list()
-        upgrader.analyze_data()
 
-    if analyze_list is True:
-        analyze_path = "analysed_"+experiment_configuration["target_list"]
-        target_analizer = Target_List_Analyzer(
-            upgrade_path, analyze_path, experiment_configuration)
-        target_analizer.analyze_data()
-        print("Data Check Complete")
+    
 
     print("Done")
 

@@ -113,7 +113,9 @@ class HTTP1_Request_Builder:
             hostname = parts[-2]
             subdomains=".".join(parts[:-2])  #Multiple Subodmains possible
 
-        else: raise ValueError("Unable to parse host")
+        else: 
+            print("Unable to parse host")
+            raise ValueError("Unable to parse host")
   
 
         return subdomains, hostname, tldomain

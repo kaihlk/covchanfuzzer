@@ -43,9 +43,8 @@ class Target_List_Upgrader():
                 subdomains="www"
         subdomains=subdomains+"."        
         uri=subdomains+hostname+"."+tldomain
-        
-
         socket_info, ex = CustomHTTP().lookup_dns(uri, 80, self.experiment_configuration["use_ipv4"])
+        print(socket_info, ex)
         if socket_info:
             return socket_info
         else:
@@ -59,6 +58,7 @@ class Target_List_Upgrader():
         uri=subdomains+hostname+"."+tldomain
         
         socket_info, ex = CustomHTTP().lookup_dns(uri, 443, self.experiment_configuration["use_ipv4"])
+        print(socket_info, ex)
         if socket_info:
             return socket_info
         else:
@@ -85,7 +85,7 @@ class Target_List_Upgrader():
         host=None
         request_string, deviation_count, new_uri=request_builder.HTTP1_Request_Builder().generate_request(local_configuration, 80) 
         
-        request=request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, domain, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"]) #Carefull some hosts expect more
+        request, _ =request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, domain, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"]) #Carefull some hosts expect more
         response_line, response_header_fields, body, measured_times, error_message  = CustomHTTP().http_request(
             host=domain,
             use_ipv4=self.experiment_configuration["use_ipv4"],
@@ -129,7 +129,7 @@ class Target_List_Upgrader():
         host=None
         request_string, deviation_count, new_uri=request_builder.HTTP1_Request_Builder().generate_request(local_configuration, 443)
     
-        request=request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, domain, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"]) #Carefull some hosts expect more
+        request, _ =request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, domain, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"]) #Carefull some hosts expect more
         response_line, response_header_fields, body, measured_times, error_message  = CustomHTTP().http_request(
             host=uri,
             use_ipv4=self.experiment_configuration["use_ipv4"],
@@ -171,7 +171,7 @@ class Target_List_Upgrader():
         
         host=None
         request_string, deviation_count, new_uri=request_builder.HTTP1_Request_Builder().generate_request(local_configuration, 443)
-        request=request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, domain, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"]) #Carefull some hosts expect more
+        request, _ =request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, domain, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"]) #Carefull some hosts expect more
         response_line, response_header_fields, body, measured_times, error_message  = CustomHTTP().http_request(
             host=uri,
             use_ipv4=self.experiment_configuration["use_ipv4"],
@@ -214,7 +214,7 @@ class Target_List_Upgrader():
         
         host=None
         request_string, deviation_count, new_uri=request_builder.HTTP1_Request_Builder().generate_request(local_configuration, 443)
-        request=request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, domain, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"]) #Carefull some hosts expect more
+        request, _ =request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, domain, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"]) #Carefull some hosts expect more
         response_line, response_header_fields, body, measured_times, error_message  = CustomHTTP().http_request(
             host=uri,
             use_ipv4=self.experiment_configuration["use_ipv4"],
@@ -257,7 +257,7 @@ class Target_List_Upgrader():
         
         host=None
         request_string, deviation_count, new_uri=request_builder.HTTP1_Request_Builder().generate_request(local_configuration, 443)
-        request=request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, domain, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"]) #Carefull some hosts expect more
+        request, _ =request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, domain, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"]) #Carefull some hosts expect more
         
         response_line, response_header_fields, body, measured_times, error_message  = CustomHTTP().http_request(
             host=uri,
@@ -302,7 +302,7 @@ class Target_List_Upgrader():
         
         host=None
         request_string, deviation_count, new_uri=request_builder.HTTP1_Request_Builder().generate_request(local_configuration, 443)
-        request=request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, domain, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"]) #Carefull some hosts expect more
+        request, _ =request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, domain, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"]) #Carefull some hosts expect more
         response_line, response_header_fields, body, measured_times, error_message  = CustomHTTP().http_request(
             host=uri,
 
@@ -347,7 +347,7 @@ class Target_List_Upgrader():
         
         host=uri
         request_string, deviation_count, alt_uri=request_builder.HTTP1_Request_Builder().generate_request(local_configuration, 443)
-        request=request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, new_location, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"], override_uri=new_location) #Carefull some hosts expect more
+        request, _ =request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, new_location, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"], override_uri=new_location) #Carefull some hosts expect more
         response_line, response_header_fields, body, measured_times, error_message  = CustomHTTP().http_request(
             host=uri,    
             use_ipv4=self.experiment_configuration["use_ipv4"],
@@ -380,11 +380,10 @@ class Target_List_Upgrader():
 
     def upgrade_list(self):
         
+
+        #Get Socket Info
         self.data_frame['Socket Info 80'] = self.data_frame['Domain'].apply(self.add_dns_with_standard_subdomain_80)
         self.data_frame['Socket Info 443'] = self.data_frame['Domain'].apply(self.add_dns_with_standard_subdomain_443)
-        
-       
-
         self.data_frame['Socket Info WWW 80'] = self.data_frame['Domain'].apply(self.add_dns_with_www_subdomain_80)
         self.data_frame['Socket Info WWW 443'] = self.data_frame['Domain'].apply(self.add_dns_with_www_subdomain_443)
         #print("Test 1")
@@ -394,7 +393,7 @@ class Target_List_Upgrader():
         #print("Test 2") 
         #self.experiment_configuration["verbose"]=True
         #self.data_frame['HTTPS absolute URI, no or given subdomain']= self.data_frame.apply(lambda row: self.add_https_absolute_uri_without_subdomain(row['Domain'], row['Socket Info 443']),axis=1)
-        self.data_frame[['HTTPS absolute URI, no or given subdomain, Statuscode', 'HTTPS absolute URI, no or given subdomain, new Location']] = self.data_frame.apply(
+        self.data_frame[['HTTPS absolute URI, no or given subdomain', 'HTTPS absolute URI, no or given subdomain, Location']] = self.data_frame.apply(
             lambda row: self.add_https_absolute_uri_without_subdomain(row['Domain'], row['Socket Info 443']),
             axis=1,
             result_type='expand'
@@ -403,7 +402,7 @@ class Target_List_Upgrader():
         #print("Test 3")
         #self.experiment_configuration["verbose"]=True
         #self.data_frame['HTTPS absolute URI, www or given subdomain']= self.data_frame.apply(lambda row: self.add_https_absolute_uri_www_subdomain(row['Domain'], row['Socket Info WWW 443']),axis=1)
-        self.data_frame[['HTTPS absolute URI, www or given subdomain, Statuscode', 'HTTPS absolute URI, www or given subdomain, new Location']] = self.data_frame.apply(
+        self.data_frame[['HTTPS absolute URI, www or given subdomain', 'HTTPS absolute URI, www or given subdomain, Location']] = self.data_frame.apply(
             lambda row: self.add_https_absolute_uri_www_subdomain(row['Domain'], row['Socket Info WWW 443']),
             axis=1,
             result_type='expand'
@@ -411,19 +410,19 @@ class Target_List_Upgrader():
      
        # self.experiment_configuration["verbose"]=True
         #self.data_frame['HTTPS absolute URI, www or given subdomain, host incl subdomain']= self.data_frame.apply(lambda row: self.add_https_absolute_uri_www_subdomain_incl_host(row['Domain'], row['Socket Info WWW 443']),axis=1)
-        self.data_frame[['HTTPS absolute URI, www or given subdomain, host incl subdomain', 'HTTPS absolute URI, www or given subdomain, host incl subdomain, new Location']] = self.data_frame.apply(
+        self.data_frame[['HTTPS absolute URI, www or given subdomain, host incl subdomain', 'HTTPS absolute URI, www or given subdomain, host incl subdomain, Location']] = self.data_frame.apply(
             lambda row: self.add_https_absolute_uri_www_subdomain_incl_host(row['Domain'], row['Socket Info WWW 443']),
             axis=1,
             result_type='expand'
         )
-        self.data_frame['Try new Location absolute'] = self.data_frame.apply(
-            lambda row: self.add_new_location(row['Domain'], row['HTTPS absolute URI, www or given subdomain, host incl subdomain, new Location'], row['Socket Info WWW 443']) if pandas.notna(row['HTTPS absolute URI, www or given subdomain, host incl subdomain, new Location']) else '',
-            axis=1
-            )  
+        #self.data_frame['Try new Location absolute'] = self.data_frame.apply(
+        #    lambda row: self.add_new_location(row['Domain'], row['HTTPS absolute URI, www or given subdomain, host incl subdomain, new Location'], row['Socket Info WWW 443']) if pandas.notna(row['HTTPS absolute URI, www or given subdomain, host incl subdomain, new Location']) else '',
+        #    axis=1
+         #   )  
         
        # self.experiment_configuration["verbose"]=True
         #self.data_frame['HTTPS relative URI, no or standard subdomain']= self.data_frame.apply(lambda row: self.add_https_relative_uri_without_subdomain(row['Domain'], row['Socket Info WWW 443']),axis=1)
-        self.data_frame[['HTTPS relative URI, no or standard subdomain, host excl subdomain, statuscode', 'HTTPS relative URI, no or standard subdomain, host excl subdomain, new Location']] = self.data_frame.apply(
+        self.data_frame[['HTTPS relative URI, no or standard subdomain, host excl subdomain', 'HTTPS relative URI, no or standard subdomain, host excl subdomain, Location']] = self.data_frame.apply(
             lambda row: self.add_https_relative_uri_without_subdomain(row['Domain'], row['Socket Info WWW 443']),
             axis=1,
             result_type='expand'
@@ -431,14 +430,14 @@ class Target_List_Upgrader():
      
       #  self.experiment_configuration["verbose"]=True      
         #self.data_frame['HTTPS relative URI, www or standard subdomain, host incl subdomain']= self.data_frame.apply(lambda row: self.add_https_relative_uri_www_subdomain_incl_host(row['Domain'], row['Socket Info WWW 443']),axis=1)
-        self.data_frame[['HTTPS relative URI, www or standard subdomain, host incl subdomain, statuscode', 'HTTPS relative URI, www or standard subdomain, host incl subdomain, new Location']] = self.data_frame.apply(
+        self.data_frame[['HTTPS relative URI, www or standard subdomain, host incl subdomain', 'HTTPS relative URI, www or standard subdomain, host incl subdomain, Location']] = self.data_frame.apply(
             lambda row: self.add_https_relative_uri_www_subdomain_incl_host(row['Domain'], row['Socket Info WWW 443']),
             axis=1,
             result_type='expand'
             )
-        self.data_frame['Try new Location relative'] = self.data_frame.apply(
-            lambda row: self.add_new_location(row['Domain'], row['HTTPS relative URI, www or standard subdomain, host incl subdomain, new Location'], row['Socket Info WWW 443']) if pandas.notna(row['HTTPS relative URI, www or standard subdomain, host incl subdomain, new Location']) else '',
-        axis=1)  
+        #self.data_frame['Try new Location relative'] = self.data_frame.apply(
+        #    lambda row: self.add_new_location(row['Domain'], row['HTTPS relative URI, www or standard subdomain, host incl subdomain, new Location'], row['Socket Info WWW 443']) if pandas.notna(row['HTTPS relative URI, www or standard subdomain, host incl subdomain, new Location']) else '',
+        #axis=1)  
         
  
 
@@ -447,18 +446,35 @@ class Target_List_Upgrader():
         self.data_frame['Socket Info 443'] = self.data_frame['Socket Info 443'].apply(json.dumps) 
         self.data_frame['Socket Info WWW 80'] = self.data_frame['Socket Info WWW 80'].apply(json.dumps)
         self.data_frame['Socket Info WWW 443'] = self.data_frame['Socket Info WWW 443'].apply(json.dumps)
-        self.data_frame['HTTP (TCP, Port 80) leads to 3xx redirect']= self.data_frame['HTTP (TCP, Port 80) leads to 3xx redirect'].apply(json.dumps)
-        self.data_frame['HTTP (TCP, Port 80, www) leads to 3xx redirect']= self.data_frame['HTTP (TCP, Port 80, www) leads to 3xx redirect'].apply(json.dumps)
+        #self.data_frame['HTTP (TCP, Port 80) leads to 3xx redirect']= self.data_frame['HTTP (TCP, Port 80) leads to 3xx redirect'].apply(json.dumps)
+        #self.data_frame['HTTP (TCP, Port 80, www) leads to 3xx redirect']= self.data_frame['HTTP (TCP, Port 80, www) leads to 3xx redirect'].apply(json.dumps)
         #self.data_frame['HTTPS absolute URI, no or given subdomain'] = self.data_frame['HTTPS absolute URI, no or given subdomain'].apply(json.dumps)
         #self.data_frame['HTTPS absolute URI, www or given subdomain'] = self.data_frame['HTTPS absolute URI, www or given subdomain'].apply(json.dumps)
         #self.data_frame['HTTPS absolute URI, www or given subdomain, host incl subdomain'] = self.data_frame['HTTPS absolute URI, www or given subdomain, host incl subdomain'].apply(json.dumps)
-        #self.data_frame['HTTPS relative URI, no or standard subdomain'] = self.data_frame['HTTPS relative URI, no or standard subdomain'].apply(json.dumps)
+        #self.data_frame['HTTPS relative URI, no or standard subdomain, host incl subdomain'] = self.data_frame['HTTPS relative URI, no or standard subdomain'].apply(json.dumps)
         #self.data_frame['HTTPS relative URI, www or standard subdomain, host incl subdomain'] = self.data_frame['HTTPS relative URI, www or standard subdomain, host incl subdomain'].apply(json.dumps)
        
-        self.data_frame['Try new Location absolute'] = self.data_frame['Try new Location relative'].apply(json.dumps)
-        self.data_frame['Try new Location relative'] = self.data_frame['Try new Location absolute'].apply(json.dumps)
+        #self.data_frame['Try new Location absolute'] = self.data_frame['Try new Location relative'].apply(json.dumps)
+        #s#elf.data_frame['Try new Location relative'] = self.data_frame['Try new Location absolute'].apply(json.dumps)
     
         self.save_data_frame_to_upgraded_list(self.new_path) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Target_List_Analyzer(): 
     def __init__(self, old_path, new_path, experiment_configuration):
@@ -859,3 +875,75 @@ class Target_List_Analyzer():
 
         self.save_data_frame_to_upgraded_list(self.new_path, df_responses)
         return
+
+
+if __name__ == "__main__":
+    experiment_configuration = {
+        "experiment_no": 5,
+        "comment": "TEST",
+        "verbose": False,
+        
+        # Covert Channel Option
+        "covertchannel_request_number": 4,
+        "covertchannel_connection_number": 1,
+        "covertchannel_timing_number": 1,
+        "min_fuzz_value": 0.01,
+        "spread_deviation": 0.9,
+        # Target Selection Options
+        "num_attempts": 100,
+        "max_targets": 100,  # len(self.target_list):
+        "max_workers": 40,  # Parallel Processing of subsets,
+        "wait_between_request": 0,
+        "base_line_check_frequency": 0,
+        "check_basic_request": 2,
+        # "target_list_subdomain_10000.csv",#"new_target_list.csv",
+        "target_list": "target_list_subdomain_10.csv",
+        "target_subset_size": 5,
+        "target_add_www": True,  # Add www if no other subdomain is known
+        # "target_host": "www.example.com",  #Just for special useipvstt
+        "target_port": 443,  # 443, 8080 Apache
+
+        # Connection Options
+        "conn_timeout": 5,  # seconds
+        "nw_interface": "enp0s3",#1s6",  # lo, docker, enp0s3
+        "use_ipv4": True,
+        "use_TLS": True,
+        "use_HTTP2": False,
+
+        # HTTP Message Options
+        "HTTP_version": "HTTP/1.1",
+        "method": "GET",
+        "url": "",  # Complete URl
+        "path": "/",  # Dynamic, List, ?
+        "standard_subdomain": "www",  # use www if not provided
+        # build a relative uri without the host in the requestline: /index.html
+        "relative_uri": False,
+        # include the subdomain, when building requestline, if none given use <standard_subdomain>
+        "include_subdomain": True,
+        "include_port": False,
+        "include_subdomain_host_header": True,
+        "headers": None,
+        # curl_HTTP/1.1(TLS), firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
+        "standard_headers": "firefox_HTTP/1.1_TLS",
+        "content": "random",  # "random", "some_text""fuzz_value": 0.9,
+     
+    }
+    
+    
+    target_list=experiment_configuration["target_list"]
+    analyze_list = False
+    upgrade_list = True
+    if upgrade_list is True:
+        #upgrade_path = "upgraded_"+target_list
+        new_path = "upgraded_and_cleaned_" + target_list
+        upgrader = Target_List_Upgrader(experiment_configuration, new_path) 
+        upgrader.upgrade_list()
+        #upgrader.analyze_data()
+
+    if analyze_list is True:
+        analyze_path = "analysed_"+target_list
+        target_analizer = Target_List_Analyzer(
+            upgrade_path, analyze_path, experiment_configuration)
+        target_analizer.analyze_data()
+        print("Data Check Complete")
+   
