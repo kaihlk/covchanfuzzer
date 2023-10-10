@@ -118,7 +118,7 @@ class Domain_Response_Analyzator():
         data_frame['Share_2xx'] = (data_frame['2xx'] / self.experiment_configuration["max_targets"]) * 100
         data_frame = data_frame.sort_values(by='no')
         # Create a plot
-        mpl.figure(figsize=(10, 6))
+        mpl.figure(figsize=(10, 8))
         mpl.plot(data_frame['no'], data_frame['Share_2xx'], marker='', linestyle='-')
         
         slope, intercept, r_value, p_value, std_err = stats.linregress(data_frame['no'], data_frame['Share_2xx'])
@@ -138,7 +138,7 @@ class Domain_Response_Analyzator():
         mpl.tight_layout()
 
         mpl.savefig(self.exp_path+'/exp_stats_2xx_no_development.png', dpi=300, bbox_inches='tight')
-        mpl.show()
+        #mpl.show()
         return
 
     
@@ -152,27 +152,27 @@ class Domain_Response_Analyzator():
         mean = deviation_count.mean()
         std_dev = deviation_count.std()
         # Create a histogram
-        mpl.figure(figsize=(10, 6))
+        mpl.figure(figsize=(10, 8))
         sns.histplot(deviation_count, kde=True, color='blue', bins=100, label='Data Distribution')
 
-        # Overlay a normal distribution curve
-        x = numpy.linspace(deviation_count.min(), deviation_count.max(), 100)
-        #x = numpy.linspace(deviation_count.min(), deviation_count.max(), 30)
-        #x = numpy.linspace(deviation_count.min() - 3 * std_dev, deviation_count.max() + 3 * std_dev, 100)
-        #pdf = norm.pdf(x, mean, std_dev)*1000 #TODO? max_targets?
-        #mpl.plot(x, pdf, 'r-', lw=2, label='Normal Distribution')
+    
 
-        mpl.xlabel('Deviation Count')
-        mpl.ylabel('Share %')
+        mpl.xlabel('Deviations from original Request')
+        mpl.ylabel('Share of Requests (%)')
         mpl.title('Histogram: Deviation Count Distribution')
         mpl.legend()
         mpl.grid(True)
 
+        
+        mpl.savefig(self.exp_path+'/exp_stats_deviation_distribution.png', dpi=300, bbox_inches='tight')
         # Show the plot or save it to a file
         #mpl.show()
-        mpl.savefig(self.exp_path+'/exp_stats_deviation_distribution.png', dpi=300, bbox_inches='tight')
-        
-
+        # Overlay a normal distribution curve
+        #x = numpy.linspace(deviation_count.min(), deviation_count.max(), 100)
+        #x = numpy.linspace(deviation_count.min(), deviation_count.max(), 30)
+        #x = numpy.linspace(deviation_count.min() - 3 * std_dev, deviation_count.max() + 3 * std_dev, 100)
+        #pdf = norm.pdf(x, mean, std_dev)*1000 #TODO? max_targets?
+        #mpl.plot(x, pdf, 'r-', lw=2, label='Normal Distribution')
   
     
     def plot_unsorted_data(self, df):
@@ -222,7 +222,7 @@ class Domain_Response_Analyzator():
         num_clusters = 10
 
  
-        mpl.figure(figsize=(12, 6))
+        mpl.figure(figsize=(10, 8))
         mpl.style.use('fivethirtyeight')
         #Weight percentage
         bins=[0,10,20,30,40,50,60,70,80,90,100]
@@ -233,8 +233,8 @@ class Domain_Response_Analyzator():
 
         mpl.xticks(bins)
         
-        mpl.xlabel('Domain Cluster (10%)')
-        mpl.ylabel('Percentage of 2xx Status Codes (%)')
+        mpl.xlabel('Domain Cluster (10% Bins)')
+        mpl.ylabel('Share of 2xx Status Codes (%)')
         mpl.title('Histogramm: Success Rate Distribution Among Domains')
          # Add labels above each bar
 
@@ -246,13 +246,13 @@ class Domain_Response_Analyzator():
         
     def cluster_prerequest(self, data_frame):
         """Figure 3"""
-        mpl.figure(figsize=(8, 6))
+        mpl.figure(figsize=(10, 8))
         mpl.scatter(data_frame['deviation_count'], data_frame['2xx'] / self.experiment_configuration["max_targets"] * 100, alpha=0.5, s=500)  # Alpha for transparency
 
         # Add labels and title
         mpl.xlabel('Deviation Count per Message')
         mpl.ylabel('2xx Responses (%)')
-        mpl.title('Scatter Plot of Deviation Count vs. 2xx Responses')
+        mpl.title('Scatter Plot of 2xx Responses over Deviation')
 
         # Set y-axis limits to 0% and 100%
         mpl.ylim(0, 100)

@@ -219,7 +219,7 @@ class CustomHTTP(HTTP):
 
                 return stream_socket, error_message
             except socket.error as e:
-                self.httplogger.error("Exception during connecting the TCP Socket: ",e)
+                self.httplogger.error("Exception during connecting the TCP Socket: %s",e)
                 error_message = str(e)
                 return None, error_message
 

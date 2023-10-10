@@ -20,7 +20,7 @@ def random_switch_case_of_char_in_string(original_string, fuzzvalue):
             if c.isupper():
                 modified_string = modified_string + c.lower()
                 deviation_count += 1
-            elif c.islower:
+            elif c.islower():
                 modified_string = modified_string + c.upper()
                 deviation_count += 1
             else:

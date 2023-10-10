@@ -1,5 +1,6 @@
 import pandas
 import json
+import logging
 from runner import ExperimentRunner
 from custom_http_client import CustomHTTP
 import http1_request_builder as request_builder
@@ -11,6 +12,7 @@ class Target_List_Upgrader():
         self.experiment_configuration = experiment_configuration
         self.data_frame=self.read_host_list_to_dataframe(experiment_configuration["target_list"])
         self.new_path=new_path
+        self.runner_logger = logging.getLogger('main.runner')
 
     def read_host_list_to_dataframe(self,path):
         data_frame= pandas.read_csv(path)
@@ -875,6 +877,28 @@ class Target_List_Analyzer():
 
         self.save_data_frame_to_upgraded_list(self.new_path, df_responses)
         return
+def configure_logger(log_path):
+    """Configure the logger for exceptions and debugging"""
+
+    # Configure the logging settings
+    logging.basicConfig(
+        level=logging.DEBUG,  # Set the desired log level
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        filename=f'{log_path}/debug.log',
+        filemode='w'  # 'w' for overwrite, 'a' for append
+    )
+
+    # Create a logger instance for your main script
+    main_logger = logging.getLogger('main')
+
+    # Optionally, configure a console handler to print log messages to the console
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.DEBUG)
+    console_formatter = logging.Formatter('%(levelname)s - %(message)s')
+    console_handler.setFormatter(console_formatter)
+    main_logger.addHandler(console_handler)
+
+    return main_logger
 
 
 if __name__ == "__main__":
@@ -897,7 +921,7 @@ if __name__ == "__main__":
         "base_line_check_frequency": 0,
         "check_basic_request": 2,
         # "target_list_subdomain_10000.csv",#"new_target_list.csv",
-        "target_list": "target_list_subdomain_10.csv",
+        "target_list": "target_list_subdomain_10000.csv",
         "target_subset_size": 5,
         "target_add_www": True,  # Add www if no other subdomain is known
         # "target_host": "www.example.com",  #Just for special useipvstt
@@ -928,7 +952,7 @@ if __name__ == "__main__":
         "content": "random",  # "random", "some_text""fuzz_value": 0.9,
      
     }
-    
+    main_logger = configure_logger(".tranco")
     
     target_list=experiment_configuration["target_list"]
     analyze_list = False
