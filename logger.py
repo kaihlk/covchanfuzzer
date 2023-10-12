@@ -531,6 +531,7 @@ class ExperimentLogger:
                 csv_writer.writerow([entry])
         print("DNS Lookup Fails Saved")
         return
+
     def save_pdmatrix(self, pd_matrix):
         file_path = f"{self.experiment_folder}/pd_matrix.csv"            
         pd_matrix.to_csv(file_path, index=False)
@@ -562,19 +563,21 @@ class ExperimentLogger:
         self.experiment_stats["Outcome"]=result_stats
         return
 
-
+    def uri_deviation_table(self,uri_dev_table, rel_uri_dev_table):
+        file_path = f"{self.experiment_folder}/uri_dev_statuscode.csv"            
+        uri_dev_table.to_csv(file_path, index=False)
+        file_path = f"{self.experiment_folder}/rel_uri_dev_statuscode.csv"            
+        rel_uri_dev_table.to_csv(file_path, index=False)
+        
+        print("Prerequest - Domain Matrix saved")
+        return
 
     def save_prerequests(self, prerequests):
         """Saves the prerequest list"""
-        
-
         file_path = f"{self.experiment_folder}/prerequests.csv"
-        
         with open(file_path, "w", newline="") as csvfile:
-            
             csv_writer = csv.DictWriter(csvfile, fieldnames=prerequests[0].keys())
             csv_writer.writeheader()
-
             for prerequest in prerequests:
                 csv_writer.writerow(prerequest)
         print("prerequest.csv saved")

@@ -39,7 +39,9 @@ class ExperimentRunner:
         self.runner_logger = logging.getLogger('main.runner')
         self.error_event = threading.Event()
         self.cc_uri_post_generation=False
-
+        self.uri_deviation_table=pandas.DataFrame(columns=["Deviation Count"])
+        self.rel_uri_deviation_table=pandas.DataFrame(columns=["Relative Deviation"])
+        self.lock_udt= threading.Lock()
         """ def get_target_subset(self, start_position=0, length=10)-> list:
         Takes a subset from the target list to reduce the traffic to one target, in order to
         
@@ -113,7 +115,7 @@ class ExperimentRunner:
         request_string, _, _=request_builder.HTTP1_Request_Builder().generate_request(local_configuration, 443)
         #host deprecated?
         #Carefull some hosts expect more 
-        request, _ =request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, uri, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"])       
+        request, _, _ =request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, uri, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"])       
         if local_configuration["include_subdomain_host_header"] is True:
             host=subdomains+hostname+"."+tldomain
         else:
@@ -235,15 +237,17 @@ class ExperimentRunner:
                 deviation_count_spread=False
                 deviation_count_found=False
                 deviation_count=0
+                #Make sure, that a least a bit of cc data is added
+                self.cc_uri_post_generation=False       
                 while self.cc_uri_post_generation is False and deviation_count==0:
                     request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration, self.experiment_configuration["target_port"],new_fuzz_value)
-                request_hash = hashlib.md5(str(request).encode()).hexdigest()
+                    request_hash = hashlib.md5(str(request).encode()).hexdigest()
+                
+                    self.cc_uri_post_generation=selected_covered_channel.get_cc_uri_post_generation()
+                    print(self.cc_uri_post_generation)
+                    
                 #Some CC may be added after pregeneration, example changing the URI, would lead needlessly to RunTime Exception
-                self.cc_uri_post_generation=selected_covered_channel.get_cc_uri_post_generation()
-                if self.cc_uri_post_generation is False:
-                        #Make sure, that a least a bit of cc data is added
-                       
-                        
+                if self.cc_uri_post_generation is False:        
                         #First Entry is always unique    
                         if len(self.prerequest_list)==0:
                             unique=True
@@ -280,11 +284,10 @@ class ExperimentRunner:
                                  print("New Fuzz Value: ", new_fuzz_value)
                         else: 
                             deviation_count_spread=True
-                                 
-
                 else:
                     #If CC Variation is added later skip the unique check
                     unique=True
+                    deviation_count_spread=True
             except Exception as e:
                 self.runner_logger.error("Error generating request: %s", e)
                 self.error_event.set()
@@ -360,7 +363,78 @@ class ExperimentRunner:
             else:
                 self.prerequest_list[attempt_no]["9xx"]+=1
         return
-        
+
+
+    def add_devcount_and_status_code_to_df(self, deviation_count, response_line, uri):
+        """Save Response Statuscode to URI Table"""
+        with self.lock_udt:
+            if response_line is not None:
+                response_status_code = response_line["status_code"]
+            else:
+                response_status_code = 999
+            first_digit = str(response_status_code)[0]
+            category = first_digit + "xx"
+            
+            if category not in self.uri_deviation_table.columns:
+                self.uri_deviation_table[category] = 0
+
+            if category not in self.rel_uri_deviation_table.columns:
+                self.rel_uri_deviation_table[category] = 0
+
+            
+            if deviation_count <= 0:
+                rel_deviation= 0  
+            rel_deviation = (deviation_count / len(uri)) * 100  # Calculate relative change in percentage
+            # Round to the nearest whole percent   
+            rel_deviation = round(rel_deviation)
+            
+            #RELATIV DF
+            if rel_deviation not in self.rel_uri_deviation_table["Relative Deviation"].values:
+                new_row = {"Relative Deviation": rel_deviation}
+                for col in self.rel_uri_deviation_table.columns:
+                    if col != "Relative Deviation":
+                        new_row[col] = 0
+
+                # Create a new DataFrame with the new row
+                new_df = pandas.DataFrame([new_row])
+
+                # Concatenate the new DataFrame with the existing DataFrame
+                self.rel_uri_deviation_table = pandas.concat([self.rel_uri_deviation_table, new_df], ignore_index=True)
+
+            #ABSOLUT DF
+            # Check if the deviation_count row already exists in the DataFrame
+            if deviation_count not in self.uri_deviation_table["Deviation Count"].values:
+                new_row = {"Deviation Count": deviation_count}
+                for col in self.uri_deviation_table.columns:
+                    if col != "Deviation Count":
+                        new_row[col] = 0
+
+                # Create a new DataFrame with the new row
+                new_df = pandas.DataFrame([new_row])
+
+                # Concatenate the new DataFrame with the existing DataFrame
+                self.uri_deviation_table = pandas.concat([self.uri_deviation_table, new_df], ignore_index=True)
+
+
+            # Find the index of the deviation_count row
+            row_index = self.uri_deviation_table.index[self.uri_deviation_table["Deviation Count"] == deviation_count].tolist()[0]
+            rel_row_index = self.rel_uri_deviation_table.index[self.rel_uri_deviation_table["Relative Deviation"] == rel_deviation].tolist()[0]
+
+            # Get the current count for the specified category
+            count = self.uri_deviation_table.at[row_index, category]
+            rel_count = self.rel_uri_deviation_table.at[rel_row_index, category]
+            # Increment the value in the specified category column
+            self.uri_deviation_table.at[row_index, category] = count + 1
+            self.rel_uri_deviation_table.at[rel_row_index, category] = rel_count + 1
+            
+            # Sort the DataFrame by "Deviation Count" in ascending order
+            self.uri_deviation_table = self.uri_deviation_table.sort_values(by="Deviation Count", ascending=True)
+            self.rel_uri_deviation_table = self.rel_uri_deviation_table.sort_values(by="Relative Deviation", ascending=True)
+        return 
+
+    
+
+
     def check_content(self, body):
         #TODO add hash or check length function and standard body
         return True
@@ -407,15 +481,17 @@ class ExperimentRunner:
                     try:
                         domain=host_data["host"]
                         selected_covered_channel = class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]()
-                        request, deviation_count_uri=selected_covered_channel.replace_host_and_domain(prerequest["request"],domain, self.experiment_configuration["standard_subdomain"],host=None, include_subdomain_host_header=self.experiment_configuration["include_subdomain_host_header"], override_uri="")
+                        request, deviation_count_uri, uri=selected_covered_channel.replace_host_and_domain(prerequest["request"],domain, self.experiment_configuration["standard_subdomain"],host=None, include_subdomain_host_header=self.experiment_configuration["include_subdomain_host_header"], override_uri="")
                         deviation_count_request=prerequest["deviation_count"]
                         deviation_count=deviation_count_uri+deviation_count_request
+                        
+
                     except Exception as e:
                         self.runner_logger.error("Error building request for host: %s", e)  
                     try:
                         start_time=time.time()
                         response_line, response_header_fields, body, measured_times, error_message = self.send_and_receive_request(i, request, deviation_count, domain, host_data, logger.get_logging_folder())
-                        logger.add_request_response_data(i, request, deviation_count, prerequest["uri"], response_line, response_header_fields, body, measured_times, error_message)
+                        logger.add_request_response_data(i, request, deviation_count, uri, response_line, response_header_fields, body, measured_times, error_message)
                         try:
                             self.add_no_and_status_code_to_request_list(i,response_line)
                         except Exception as e:
@@ -423,7 +499,9 @@ class ExperimentRunner:
                         try:
                             self.add_entry_to_domain_prerequest_matrix(i, domain, response_line )
                         except Exception as e:
-                            self.runner_logger.error("Exception during updating request matrix: %s", e)  
+                            self.runner_logger.error("Exception during updating request matrix: %s", e) 
+                        self.add_devcount_and_status_code_to_df(deviation_count_uri, response_line, uri)    
+
                         self.check_content(body)
                         with self.lock_mc:
                             self.message_count+=1
@@ -694,6 +772,7 @@ class ExperimentRunner:
                 self.exp_log.save_base_checks_fails(self.base_check_fails)
                 self.exp_log.save_prerequests(self.prerequest_list)
                 self.exp_log.prerequest_statisics(self.prerequest_list, self.message_count)
+                self.exp_log.uri_deviation_table(self.uri_deviation_table, self.rel_uri_deviation_table)
                 self.exp_log.save_pdmatrix(self.pd_matrix)
                 self.exp_log.save_exp_stats(duration, self.message_count, invalid_entries)
                 exp_analyzer.Domain_Response_Analyzator(self.exp_log.get_experiment_folder()).start()

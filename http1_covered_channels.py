@@ -376,11 +376,14 @@ class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
             new_subdomains, deviation_count_subdomains = random_switch_case_of_char_in_string(subdomains, fuzzvalue)
             deviation_count=deviation_count_domain+deviation_count_subdomains
             #This inserts the sudomain in the uri    
-            request=prerequest.replace(self.subdomain_placeholder,new_subdomains)
-            request=request.replace(self.domain_placeholder, new_domain)
+            prerequest_sub=prerequest.replace(self.subdomain_placeholder,new_subdomains)
+            request=prerequest_sub.replace(self.domain_placeholder, new_domain)
             #The Subdomain inclusion for the host header field takes places here, 
             request=request.replace(self.host_placeholder, host)
-            return request, deviation_count
+            
+            new_uri=self.extract_new_uri(request)
+            
+            return request, deviation_count, new_uri
         except Exception as ex:
             print(ex)
 

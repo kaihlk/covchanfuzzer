@@ -100,6 +100,16 @@ class HTTP1_Request_Builder:
         return self.cc_uri_post_generation
 
 
+    def extract_new_uri(self, request):
+        parts = request.split(' ')
+
+        # The URI is the second part after the first space
+        if len(parts) >= 2:
+            new_uri = parts[1]
+        else:
+            print("URI not found in the request.")
+        return new_uri
+
     def parse_host(self,host):
         #Initialize variables
         subdomains = ""
@@ -262,7 +272,8 @@ class HTTP1_Request_Builder:
 
                 deviation_count=0
 
-                return request, deviation_count
+                new_uri=self.extract_new_uri(request)
+                return request, deviation_count, new_uri
             except Exception as ex:
                 print(ex)
 
