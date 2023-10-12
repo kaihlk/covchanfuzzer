@@ -564,8 +564,10 @@ class ExperimentLogger:
         return
 
     def uri_deviation_table(self,uri_dev_table, rel_uri_dev_table):
+        uri_dev_table['Sum'] = uri_dev_table.iloc[:, 1:].sum(axis=1)
         file_path = f"{self.experiment_folder}/uri_dev_statuscode.csv"            
         uri_dev_table.to_csv(file_path, index=False)
+        rel_uri_dev_table['Sum'] = rel_uri_dev_table.iloc[:, 1:].sum(axis=1)
         file_path = f"{self.experiment_folder}/rel_uri_dev_statuscode.csv"            
         rel_uri_dev_table.to_csv(file_path, index=False)
         

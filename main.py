@@ -140,8 +140,8 @@ def main():
         "min_fuzz_value": 0.01,
         "spread_deviation": 0.9,
         # Target Selection Options
-        "num_attempts": 25,
-        "max_targets": 20,  # len(self.target_list):
+        "num_attempts": 1000,
+        "max_targets": 1000,  # len(self.target_list):
         "max_workers": 40,  # Parallel Processing of subsets,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
@@ -155,7 +155,7 @@ def main():
 
         # Connection Options
         "conn_timeout": 5,  # seconds
-        "nw_interface": "enp0s3",#1s6",  # lo, docker, enp0s3
+        "nw_interface": "enp31f6",#1s6",  # lo, docker, enp0s3
         "use_ipv4": True,
         "use_TLS": True,
         "use_HTTP2": False,

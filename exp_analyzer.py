@@ -20,6 +20,10 @@ class Domain_Response_Analyzator():
             path+"/experiment_stats.csv")
         self.data_frame_prerequest_stats = pandas.read_csv(
             path+"/prerequests.csv")
+        self.data_frame_uri = pandas.read_csv(
+            path+"/uri_dev_statuscode.csv")
+        self.data_frame_rel_uri = pandas.read_csv(
+            path+"/rel_uri_dev_statuscode.csv")        
         self.experiment_configuration=self.load_exp_outcome(self.exp_path)
         self.dra_logging=logging.getLogger("main.runner.dra_logger")
         
@@ -55,6 +59,12 @@ class Domain_Response_Analyzator():
         self.save_exp_analyzer_results(host_statistics, prerequest_statistics)
         self.plot_deviation_count_distribution(self.data_frame_prerequest_stats)
         self.plot_2xx_over_attempt_no(self.data_frame_prerequest_stats)
+        self.plot_uri_deviation_count_distribution(self.data_frame_uri)
+        self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
+        self.plot_scatter_prerequest(self.data_frame_rel_uri)
+        
+        
+        
         return
 
 
@@ -148,12 +158,11 @@ class Domain_Response_Analyzator():
         
         deviation_count = data_frame['deviation_count'].values
         relative_deviation_count = deviation_count / self.experiment_configuration["num_attempts"]*100
-        # Calculate mean and standard deviation
-        mean = deviation_count.mean()
-        std_dev = deviation_count.std()
+
+    
         # Create a histogram
         mpl.figure(figsize=(10, 8))
-        sns.histplot(deviation_count, kde=True, color='blue', bins=100, label='Data Distribution')
+        sns.histplot(relative_deviation_count, kde=True, color='blue', bins=100, label='Data Distribution')
 
     
 
@@ -173,7 +182,43 @@ class Domain_Response_Analyzator():
         #x = numpy.linspace(deviation_count.min() - 3 * std_dev, deviation_count.max() + 3 * std_dev, 100)
         #pdf = norm.pdf(x, mean, std_dev)*1000 #TODO? max_targets?
         #mpl.plot(x, pdf, 'r-', lw=2, label='Normal Distribution')
-  
+    
+    def plot_uri_deviation_count_distribution(self, data_frame):
+        """Plot 4.1"""
+        deviation_counts = data_frame['Deviation Count'].values
+        sums=data_frame['Sum'].values
+        frequency = sums / data_frame['Sum'].values.sum()*100
+        # Create a histogram
+        mpl.figure(figsize=(10, 8))
+        mpl.bar(deviation_counts, frequency, color='blue', label='Data Distribution')
+        #sns.histplot(deviation_counts, kde=True, color='blue', bins=100, label='Data Distribution')
+
+        mpl.xlabel('Deviation Count from original URI')
+        mpl.ylabel('Share of Requests (%)')
+        mpl.title('Deviation Count URI Distribution')
+        mpl.legend()
+        mpl.grid(True) 
+        mpl.savefig(self.exp_path+'/exp_stats_uri_deviation_distribution.png', dpi=300, bbox_inches='tight')
+    
+    def plot_rel_uri_deviation_distribution(self, data_frame):
+        
+        
+        deviation_counts = data_frame['Relative Deviation'].values
+        sums=data_frame['Sum'].values
+        frequency = sums / data_frame['Sum'].values.sum()*100
+
+        # Create a histogram
+        mpl.figure(figsize=(10, 8))
+        mpl.bar(deviation_counts, frequency, color='blue', label='Data Distribution')
+
+        mpl.xlabel('Relative Deviation (%) from original URI')
+        mpl.ylabel('Share of Requests (%)')
+        mpl.title('Relative Deviation URI Distribution')
+        mpl.legend()
+        mpl.grid(True)
+
+        
+        mpl.savefig(self.exp_path+'/exp_stats_rel_uri_deviation_distribution.png', dpi=300, bbox_inches='tight')
     
     def plot_unsorted_data(self, df):
         # Daten in NumPy-Arrays umwandeln
@@ -267,6 +312,32 @@ class Domain_Response_Analyzator():
         mpl.tight_layout()
         mpl.savefig(self.exp_path+'/exp_stats_prerequest_statuscodes.png', dpi=300, bbox_inches='tight')
         #mpl.show()
+        return
+
+
+    def plot_scatter_prerequest(self, data_frame):
+        """Figure 3.1"""
+        mpl.figure(figsize=(10, 8))
+        mpl.scatter(data_frame['Relative Deviation'], data_frame['2xx'] / data_frame['Sum'] * 100, alpha=0.5, s=500)  # Alpha for transparency
+
+        # Add labels and title
+        mpl.xlabel('Relative Deviation of URI')
+        mpl.ylabel('2xx Responses (%)')
+        mpl.title('Scatter Plot of 2xx Responses over relative URI Deviation')
+
+        # Set y-axis limits to 0% and 100%
+        mpl.ylim(0, 100)
+
+        # Set y-tick locations and format labels as percentages
+        yticks = mpl.gca().get_yticks()
+        mpl.gca().set_yticks(yticks)
+        mpl.gca().set_yticklabels(['{:.1f}%'.format(ytick) for ytick in yticks])
+
+        # Show the plot
+        mpl.grid(True)
+        mpl.tight_layout()
+        mpl.savefig(self.exp_path+'/exp_stats_rel_uri_statuscodes.png', dpi=300, bbox_inches='tight')
+        #mpl.show()
 
         return
 
@@ -283,6 +354,6 @@ def get_logs_directory():
 
 if __name__ == "__main__":
     log_dir=get_logs_directory()
-    path = f"{log_dir}/experiment_28"
+    path = f"{log_dir}/experiment_43"
     dra = Domain_Response_Analyzator(path)
     dra.start()
