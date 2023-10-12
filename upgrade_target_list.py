@@ -1,6 +1,7 @@
 import pandas
 import json
 import logging
+import re
 from runner import ExperimentRunner
 from custom_http_client import CustomHTTP
 import http1_request_builder as request_builder
@@ -508,15 +509,47 @@ class Target_List_Analyzer():
         data_frame.to_csv(new_path,index=False)
         return
 
-    def count_socket_errors(self, data_frame):
-        #Returns the count of error per row
-        #Assume the Socket Data in the third columne and the next thre following
+    def count_socket_errors_by_column(self,data_frame, index):
+        """Counts Socket Error in the column of the dataframe"""
+        error_counts_per_column = {}
+        total_error_count = 0
+
+        # Get the values of the specified column using iloc
+        column_values = data_frame.iloc[:, index]
+
+        for value in column_values:
+            if isinstance(value, str) and 'Errno' in value:
+                # Extract the 'Errno-X' part from the error message
+                match = re.search(r'Errno-(\d+)', value)
+                if match:
+                    errno_key = match.group(0)  # Use "Errno-X" as the key
+                    error_counts_per_column[errno_key] = error_counts_per_column.get(errno_key, 0) + 1
+                    total_error_count += 1
+
+        return error_counts_per_column, total_error_count
+
         
-        error_counts = {}
-        for column in data_frame.columns[2:6]:  # Column index starts with
-            error_per_column = data_frame[column].apply(lambda x: 1 if isinstance(x, str) and 'Errno' in x else 0).sum()
-            error_counts[f"{column}"] = error_per_column
-        return error_counts
+    def count_socket_errors(self, data_frame, indices):
+        results = pandas.DataFrame()
+        
+        for index in indices:
+            if index < len(data_frame.columns):
+                column_name = data_frame.columns[index]
+                column_counts, total_error_count = self.count_socket_errors_by_column(data_frame, index)
+                if column_counts is not None:
+                    # Create a DataFrame with the counts and use the original column name as the header
+                    counts_df = pandas.DataFrame({column_name: column_counts})
+                    
+                    # Concatenate the counts DataFrame with the results DataFrame
+                    results = pandas.concat([results, counts_df], axis=1)
+                    
+        
+        results.reset_index(inplace=True)
+        results = results.rename(columns = {'index':'Error No.'})
+        results.sort_values(by='Error No.', ascending=True, inplace=True) 
+        results.reset_index()
+        return results
+
 
     def count_errors_per_row(self, data_frame):
         error_counts_per_row = data_frame.apply(lambda row: sum(1 for column in row[1:] if isinstance(column, str) and 'Errno' in column), axis=1)
@@ -555,7 +588,7 @@ class Target_List_Analyzer():
         
         return value_counts
  
-    def analyze_column_statuscode_by_indexes(self, data_frame, column_indexes):
+    def analyze_column_statuscode_by_indices(self, data_frame, column_indexes):
         results = pandas.DataFrame()
         
         for index in column_indexes:
@@ -621,6 +654,9 @@ class Target_List_Analyzer():
                 if isinstance(value, int):
                     return value
                 
+                if value == '"(999, \'\')"' or value == "(999, '')":
+                    return 999
+
                 # If the value is a float or a string representation of a float, convert it to an integer
                 if isinstance(value, float) or (isinstance(value, str) and value.replace('.', '', 1).isdigit()):
                     return int(float(value))
@@ -792,7 +828,19 @@ class Target_List_Analyzer():
 
 
     def analyze_data(self):
+        print("Total number of Entries: ", self.total_requests) 
+        column_indices=[2, 3, 4, 5]
+        socket_errors_df=self.count_socket_errors(self.data_frame, column_indices)
+    
+        column_indices=[6, 7, 8, 10 ,12,14,16]
+        cleaned_df=self.clean_up_column(self.data_frame, column_indices)
+        status_code_df=self.analyze_column_statuscode_by_indices(cleaned_df,column_indices)
+        status_code_statistics_grouped=self.group_statuscodes(status_code_df)
+        self.save_data_frame_to_upgraded_list("socket_errors_df.csv", socket_errors_df) 
+        self.save_data_frame_to_upgraded_list("status_code_statistics.csv", status_code_df)
+        self.save_data_frame_to_upgraded_list("status_code_statistics_grouped.csv", status_code_statistics_grouped)
         
+        """ 
         print("Total number of Entries: ", self.total_requests)       
         #Analyze DNS/Socket Data
         print("DNS/Socket Errors per Options")
@@ -860,7 +908,7 @@ class Target_List_Analyzer():
         new_list=self.extract_sublist(df_uri, column_indexes, 17, 200, 1000)
         self.save_data_frame_to_upgraded_list("target_list_tls_rel_sub_subhost.csv", new_list)
         return 
-
+        """
 
     def filter_data(self):
         df_filtered_errors=self.analyze_dns_data(self.data_frame)
@@ -955,8 +1003,8 @@ if __name__ == "__main__":
     main_logger = configure_logger(".tranco")
     
     target_list=experiment_configuration["target_list"]
-    analyze_list = False
-    upgrade_list = True
+    analyze_list = True
+    upgrade_list = False
     if upgrade_list is True:
         #upgrade_path = "upgraded_"+target_list
         new_path = "upgraded_and_cleaned_" + target_list
@@ -965,6 +1013,7 @@ if __name__ == "__main__":
         #upgrader.analyze_data()
 
     if analyze_list is True:
+        upgrade_path = "upgraded_and_cleaned_" + target_list
         analyze_path = "analysed_"+target_list
         target_analizer = Target_List_Analyzer(
             upgrade_path, analyze_path, experiment_configuration)
