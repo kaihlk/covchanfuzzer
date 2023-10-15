@@ -532,6 +532,15 @@ class ExperimentLogger:
         print("DNS Lookup Fails Saved")
         return
 
+    def save_target_list(self,target_list):
+        file_path = f"{self.experiment_folder}/target_list.csv"
+        with open(file_path, "a+", newline="") as csvfile:
+            csv_writer = csv.writer(csvfile)
+            for entry in dns_fails:
+                csv_writer.writerow([entry])
+        print("Target List Saved")
+        return
+
     def save_pdmatrix(self, pd_matrix):
         file_path = f"{self.experiment_folder}/pd_matrix.csv"            
         pd_matrix.to_csv(file_path, index=False)

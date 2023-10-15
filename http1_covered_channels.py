@@ -353,8 +353,8 @@ class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
         request_string += "\r\n"
 
         return request_string, deviation_count, new_uri
-
-    def replace_host_and_domain(self, prerequest, domain, standard_subdomain="", host=None, include_subdomain_host_header=False, override_uri="", fuzzvalue=0.5):
+    
+    def replace_host_and_domain(self, prerequest, domain, standard_subdomain="", host=None, include_subdomain_host_header=False, path="",override_uri="", fuzzvalue=0.5):
         #CC specific
         try:
             subdomains, hostname, tldomain =self.parse_host(domain)
@@ -374,11 +374,13 @@ class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
             #Change URI Case
             new_domain, deviation_count_domain = random_switch_case_of_char_in_string(new_domain, fuzzvalue)
             new_subdomains, deviation_count_subdomains = random_switch_case_of_char_in_string(subdomains, fuzzvalue)
-            deviation_count=deviation_count_domain+deviation_count_subdomains
+            new_path, deviation_count_path = random_switch_case_of_char_in_string(subdomains, fuzzvalue)
+            deviation_count=deviation_count_domain+deviation_count_subdomains+deviation_count_path
             #This inserts the sudomain in the uri    
             prerequest_sub=prerequest.replace(self.subdomain_placeholder,new_subdomains)
             request=prerequest_sub.replace(self.domain_placeholder, new_domain)
-            #The Subdomain inclusion for the host header field takes places here, 
+            request=request.replace(self.path_placeholder, new_path)
+            #The Subdomain inclusion for the host header field takes places here,
             request=request.replace(self.host_placeholder, host)
             
             new_uri=self.extract_new_uri(request)

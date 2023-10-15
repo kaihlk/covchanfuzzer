@@ -140,12 +140,12 @@ def main():
         "min_fuzz_value": 0.01,
         "spread_deviation": 0.9,
         # Target Selection Options
-        "num_attempts": 1000,
-        "max_targets": 1000,  # len(self.target_list):
-        "max_workers": 40,  # Parallel Processing of subsets,
+        "num_attempts": 10,
+        "max_targets": 15,  # len(self.target_list):
+        "max_workers": 1,  # Parallel Processing of subsets,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
-        "check_basic_request": 2,
+        "check_basic_request": 1,
         # "target_list_subdomain_10000.csv",#"new_target_list.csv",
         "target_list": "target_list_subdomain_10000.csv",
         "target_subset_size": 3,
@@ -155,7 +155,7 @@ def main():
 
         # Connection Options
         "conn_timeout": 5,  # seconds
-        "nw_interface": "enp31f6",#1s6",  # lo, docker, enp0s3
+        "nw_interface": "enp0s3",#31f6",#1s6",  # lo, docker, enp0s3
         "use_ipv4": True,
         "use_TLS": True,
         "use_HTTP2": False,
@@ -164,7 +164,10 @@ def main():
         "HTTP_version": "HTTP/1.1",
         "method": "GET",
         "url": "",  # Complete URl
+        "follow_redirect": True, #Follow the first redirect if provided
         "path": "/",  # Dynamic, List, ?
+        "crawl_paths": 5, #(dafault 0 )
+
         "standard_subdomain": "www",  # use www if not provided
         # build a relative uri without the host in the requestline: /index.html
         "relative_uri": False,
@@ -176,6 +179,7 @@ def main():
         # curl_HTTP/1.1(TLS), firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
         "standard_headers": "firefox_HTTP/1.1_TLS",
         "content": "random",  # "random", "some_text""fuzz_value": 0.9,
+
      
     }
    

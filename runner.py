@@ -13,6 +13,7 @@ import random
 import http1_covered_channels
 from logger import ExperimentLogger , TestRunLogger
 from custom_http_client import CustomHTTP
+from host_crawler import host_crawler
 import class_mapping
 import http1_request_builder as request_builder
 
@@ -82,8 +83,17 @@ class ExperimentRunner:
             #Check Socket Info
             if dns_entry is not None:
                 #Check http options
-                print(dns_entry)
-                if self.check_entry_http_options(dns_entry) is True:
+                if self.experiment_configuration["verbose"] is True:
+                    print(dns_entry)
+                check, new_location=self.check_entry_http_options(dns_entry)
+                dns_entry['location']=new_location
+                if check is True:
+                    if new_location is not None:
+                        crawl_uri=new_location
+                    else:
+                        crawl_uri=dns_entry["host"]
+                    paths=host_crawler().get_paths(crawl_uri, self.experiment_configuration["target_port"], self.experiment_configuration["crawl_paths"], max_attempts=5, time_out=self.experiment_configuration["conn_timeout"])
+                    dns_entry["path"]=paths
                     checked_subset.append(dns_entry)
                 else:
                     invalid_entries_count+=1
@@ -100,6 +110,7 @@ class ExperimentRunner:
         host=None
         response_line=None
         response_status_code=None
+        redirect_location=None
         #Build a local configuration for Basic Requests
         local_configuration=self.experiment_configuration.copy()
         local_configuration["covertchannel_request_number"]= 1
@@ -115,6 +126,8 @@ class ExperimentRunner:
         request_string, _, _=request_builder.HTTP1_Request_Builder().generate_request(local_configuration, 443)
         #host deprecated?
         #Carefull some hosts expect more 
+        if "wiki" in domain:
+            print("WIKI")
         request, _, _ =request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, uri, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"])       
         if local_configuration["include_subdomain_host_header"] is True:
             host=subdomains+hostname+"."+tldomain
@@ -133,7 +146,9 @@ class ExperimentRunner:
         )
         if response_line is not None:
             response_status_code = response_line["status_code"]
-        return response_status_code
+            if str(response_status_code)[0]=="3":
+                redirect_location=response_header_fields.get('location') # Returns none if not pressent
+        return response_status_code, redirect_location
     
 
     def baseline_check(self):
@@ -196,15 +211,20 @@ class ExperimentRunner:
         return entry_dns, None
 
 
-    def check_entry_http_options(self, entry_dns): 
+    def check_entry_http_options(self, entry_dns, follow_redirect=False): 
         """Perform n basic requests if option is set."""
+
         check=False
         basic_request_status_code=0
         if self.experiment_configuration["check_basic_request"]!=0:
             for i in range(self.experiment_configuration["check_basic_request"]):
                 #Check if basic request is answered with a 2xx response
-                basic_request_status_code=self.basic_request(entry_dns["host"], entry_dns["socket_info"])
+                basic_request_status_code, new_location =self.basic_request(entry_dns["host"], entry_dns["socket_info"])
                 first_digit = str(basic_request_status_code)[0]
+                #Check first redirect
+                if first_digit == "3" and follow_redirect is True:
+                    basic_request_status_code, _ =self.basic_request(entry_dns["host"], entry_dns["socket_info"])
+                    first_digit = str(basic_request_status_code)[0]
                 if first_digit == "2":
                     check=True
                 else:
@@ -217,7 +237,7 @@ class ExperimentRunner:
             #Extend List when Basic Check Fails
             with self.lock_bcf:
                 self.base_check_fails.append([entry_dns["host"], basic_request_status_code])           
-        return check
+        return check, new_location
         
 
     def pregenerate_request(self, covert_channel):
@@ -456,6 +476,15 @@ class ExperimentRunner:
       
         return response_line, response_header_fields, body, measured_times, error_message
 
+    def prepare_host_paths(self):
+        #TODO:
+        #Wordlist like WFuzz 
+        #Intelligen Link Exploration
+        return 
+
+    def get_host_specific_path(self, host_data):
+        path=random.choice(host_data["paths"])
+        return path
 
     def run_experiment_subset(self, logger_list, sub_set_dns):
         '''Run the experiment'''
@@ -474,14 +503,18 @@ class ExperimentRunner:
             for host_data,logger in zip(sub_set_dns, logger_list):
             #Round Robin one Host after each other
                 if self.baseline_check() is False:
-                    #TODO
+                    #TODO, raise error
                     print("Baseline Check Failure, Connection maybe blocked")
                 else:     
                     # Send the HTTP request and get the response in the main threads
                     try:
+                        #Adapt the prerequest to the host
                         domain=host_data["host"]
+                        domain_paths=self.get_host_specific_path(host_data)
                         selected_covered_channel = class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]()
-                        request, deviation_count_uri, uri=selected_covered_channel.replace_host_and_domain(prerequest["request"],domain, self.experiment_configuration["standard_subdomain"],host=None, include_subdomain_host_header=self.experiment_configuration["include_subdomain_host_header"], override_uri="")
+                        path=selected_covered_channel.path_generator(domain_paths, test_path=self.experiment_configuration["path"], fuzz_value=self.experiment_configuration["min_fuzz_value"])
+                        request, deviation_count_uri, uri=selected_covered_channel.replace_host_and_domain(prerequest["request"],domain, self.experiment_configuration["standard_subdomain"],host=None, include_subdomain_host_header=self.experiment_configuration["include_subdomain_host_header"], path=path, override_uri="", fuzz_value=self.experiment_configuration["min_fuzz_value"])
+                        
                         deviation_count_request=prerequest["deviation_count"]
                         deviation_count=deviation_count_uri+deviation_count_request
                         
@@ -767,8 +800,10 @@ class ExperimentRunner:
             print("Processed Targets: ",processed_targets)
             #Save OutCome to experiment Folder csv.
             try:
+                
                 self.exp_log.add_global_entry_to_experiment_list(self.experiment_configuration["experiment_no"])
                 self.exp_log.save_dns_fails(self.dns_fails)
+                self.exp_log.save_target_list(self.target_list)
                 self.exp_log.save_base_checks_fails(self.base_check_fails)
                 self.exp_log.save_prerequests(self.prerequest_list)
                 self.exp_log.prerequest_statisics(self.prerequest_list, self.message_count)

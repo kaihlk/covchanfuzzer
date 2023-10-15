@@ -14,6 +14,7 @@ class HTTP1_Request_Builder:
         self.host_placeholder= ">>HOST_PLACEHOLDER<<"
         self.domain_placeholder=">>DOMAIN_PLACEHOLDER<<"
         self.subdomain_placeholder=">>SUDBDOMAIN_PLACEHOLDER<<"
+        self.path_placeholder=">>>PATH_PLACEHOLDER<<<"
         self.generated_request=""
         self.cc_uri_post_generation=False
         self.default_headers_sets = {
@@ -193,7 +194,7 @@ class HTTP1_Request_Builder:
             else:
                 new_port=""
             #absolute uri
-            new_uri =scheme + subdomain + self.domain_placeholder + new_port + path
+            new_uri =scheme + subdomain + self.domain_placeholder + new_port + self.path_placeholder
         else:
             new_uri=path
 
@@ -249,25 +250,45 @@ class HTTP1_Request_Builder:
 
         return self.generate_cc_request(port, method, path, headers, content, fuzz_value, relative_uri, include_subdomain, include_port, protocol)
 
-    def replace_host_and_domain(self, prerequest, domain, standard_subdomain="", host=None, include_subdomain_host_header=False, override_uri=""):
+    def path_generator(self, domain_specific_path=[], test_path="", fuzzvalue=0.5):
+        """Adapts the path of the domain (randomly one from the domain specific path list) and/or the CC, returns empty string'' if no input specified"""
+        if len(domain_specific_path)!=0:
+            path=random.choice(domain_specific_path)
+        else: path=test_path
+        ##Insert CC Part here
+        
+        
+        return path
+
+
+
+
+
+    def replace_host_and_domain(self, prerequest, domain, standard_subdomain="", host=None, include_subdomain_host_header=False, path="", override_uri="", fuzzvalue=0.5):
+            "Replace the the Placeholders from the Prerequest to adapt it to the host"
             try:
+                #Prepare the parts of URI
+                #Break the domain into pieces
                 subdomains, hostname, tldomain =self.parse_host(domain)
                 if subdomains=="":
-                    subdomains=standard_subdomain            
-                
+                    subdomains=standard_subdomain
                 new_domain=hostname+"."+tldomain
-                if host==None:
-                    if include_subdomain_host_header==True:
+                #Build host from domain if not provided
+                if host is None:
+                    if include_subdomain_host_header is True:
                         host=subdomains+"."+new_domain
-                    else: 
+                    else:
                         host=domain
+                #Replace domain if override_uri
                 if override_uri!="":
                     new_domain=override_uri
                     prerequest=prerequest.replace('https://', '',1)
-                #This inserts the sudomain in the uri    
+                new_path=path    
+                #This inserts the sudomain in the uri
                 request=prerequest.replace(self.subdomain_placeholder,subdomains)
                 request=request.replace(self.domain_placeholder, new_domain)
-                #The Subdomain inclusion for the host header field takes places here, 
+                request=request.replace(self.path_placeholder, new_path)
+                #The Subdomain inclusion for the host header field takes places here,
                 request=request.replace(self.host_placeholder, host)
 
                 deviation_count=0
