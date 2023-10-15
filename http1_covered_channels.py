@@ -214,16 +214,13 @@ class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
         #Randomly choose a port
         new_port = random.choice(
             [
-                ":" + str(port),
-                ":" + "80",
-                ":" + "443",
-                ":" + str(random.randint(0, 65535)),  #Hard to analyze
+                str(port),"80","443",str(random.randint(0, 65535)),  #Hard to analyze
             ]
         )
         if new_port !=port:
             deviation_count += 1
 
-        new_path = random.choice(["", "/", "/" + path])
+        new_path = random.choice(["", "/", path])
         if new_path != path:
             deviation_count += 1
 

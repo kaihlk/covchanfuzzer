@@ -147,6 +147,8 @@ class host_crawler:
 
         paths=[]
         paths.append("")
+        if link_count==0:
+            return paths
         start_time=time.time()
         try:
             while start_time-time.time()<time_out*link_count:
@@ -164,7 +166,7 @@ class host_crawler:
 
 if __name__ == '__main__':
     
-    target_url = "https://de.wikipedia.org"  # Change this to the target URL
+    target_url = "https://www.google.com"  # Change this to the target URL
     max_links_to_return = 5
     max_attempts = 5
     crawler=host_crawler()

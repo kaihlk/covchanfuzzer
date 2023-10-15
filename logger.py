@@ -536,7 +536,7 @@ class ExperimentLogger:
         file_path = f"{self.experiment_folder}/target_list.csv"
         with open(file_path, "a+", newline="") as csvfile:
             csv_writer = csv.writer(csvfile)
-            for entry in dns_fails:
+            for entry in target_list:
                 csv_writer.writerow([entry])
         print("Target List Saved")
         return

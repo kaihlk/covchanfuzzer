@@ -134,7 +134,7 @@ def main():
         "verbose": False,
         "timestamp": time.strftime("%Y%m%d_%H%M%S"),
         # Covert Channel Option
-        "covertchannel_request_number": 6,
+        "covertchannel_request_number": 5,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
         "min_fuzz_value": 0.01,
@@ -142,7 +142,7 @@ def main():
         # Target Selection Options
         "num_attempts": 10,
         "max_targets": 15,  # len(self.target_list):
-        "max_workers": 1,  # Parallel Processing of subsets,
+        "max_workers": 5,  # Parallel Processing of subsets,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
         "check_basic_request": 1,
@@ -164,9 +164,9 @@ def main():
         "HTTP_version": "HTTP/1.1",
         "method": "GET",
         "url": "",  # Complete URl
-        "follow_redirect": True, #Follow the first redirect if provided
+        "follow_redirect": False, #Follow the first redirect if provided
         "path": "/",  # Dynamic, List, ?
-        "crawl_paths": 5, #(dafault 0 )
+        "crawl_paths": 0, #(dafault 0 )
 
         "standard_subdomain": "www",  # use www if not provided
         # build a relative uri without the host in the requestline: /index.html

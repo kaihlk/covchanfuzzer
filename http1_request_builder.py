@@ -249,7 +249,7 @@ class HTTP1_Request_Builder:
 
 
         return self.generate_cc_request(port, method, path, headers, content, fuzz_value, relative_uri, include_subdomain, include_port, protocol)
-
+        
     def path_generator(self, domain_specific_path=[], test_path="", fuzzvalue=0.5):
         """Adapts the path of the domain (randomly one from the domain specific path list) and/or the CC, returns empty string'' if no input specified"""
         if len(domain_specific_path)!=0:

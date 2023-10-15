@@ -93,7 +93,7 @@ class ExperimentRunner:
                     else:
                         crawl_uri=dns_entry["host"]
                     paths=host_crawler().get_paths(crawl_uri, self.experiment_configuration["target_port"], self.experiment_configuration["crawl_paths"], max_attempts=5, time_out=self.experiment_configuration["conn_timeout"])
-                    dns_entry["path"]=paths
+                    dns_entry["paths"]=paths
                     checked_subset.append(dns_entry)
                 else:
                     invalid_entries_count+=1
@@ -512,8 +512,8 @@ class ExperimentRunner:
                         domain=host_data["host"]
                         domain_paths=self.get_host_specific_path(host_data)
                         selected_covered_channel = class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]()
-                        path=selected_covered_channel.path_generator(domain_paths, test_path=self.experiment_configuration["path"], fuzz_value=self.experiment_configuration["min_fuzz_value"])
-                        request, deviation_count_uri, uri=selected_covered_channel.replace_host_and_domain(prerequest["request"],domain, self.experiment_configuration["standard_subdomain"],host=None, include_subdomain_host_header=self.experiment_configuration["include_subdomain_host_header"], path=path, override_uri="", fuzz_value=self.experiment_configuration["min_fuzz_value"])
+                        path=selected_covered_channel.path_generator(domain_paths, test_path=self.experiment_configuration["path"], fuzzvalue=self.experiment_configuration["min_fuzz_value"])
+                        request, deviation_count_uri, uri=selected_covered_channel.replace_host_and_domain(prerequest["request"],domain, self.experiment_configuration["standard_subdomain"],host=None, include_subdomain_host_header=self.experiment_configuration["include_subdomain_host_header"], path=path, override_uri="", fuzzvalue=self.experiment_configuration["min_fuzz_value"])
                         
                         deviation_count_request=prerequest["deviation_count"]
                         deviation_count=deviation_count_uri+deviation_count_request

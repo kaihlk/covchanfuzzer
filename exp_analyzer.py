@@ -20,10 +20,8 @@ class Domain_Response_Analyzator():
             path+"/experiment_stats.csv")
         self.data_frame_prerequest_stats = pandas.read_csv(
             path+"/prerequests.csv")
-        ##self.data_frame_uri = pandas.read_csv(
-        #s    path+"/uri_dev_statuscode.csv")
-        #self.data_frame_rel_uri = pandas.read_csv(
-        #    path+"/rel_uri_dev_statuscode.csv")        
+        self.data_frame_uri = pandas.read_csv(path+"/uri_dev_statuscode.csv")
+        self.data_frame_rel_uri = pandas.read_csv(path+"/rel_uri_dev_statuscode.csv")        
         self.experiment_configuration=self.load_exp_outcome(self.exp_path)
         self.dra_logging=logging.getLogger("main.runner.dra_logger")
         
@@ -59,9 +57,9 @@ class Domain_Response_Analyzator():
         self.save_exp_analyzer_results(host_statistics, prerequest_statistics)
         self.plot_deviation_count_distribution(self.data_frame_prerequest_stats)
         self.plot_2xx_over_attempt_no(self.data_frame_prerequest_stats)
-        #self.plot_uri_deviation_count_distribution(self.data_frame_uri)
-        #self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
-        #self.plot_scatter_prerequest(self.data_frame_rel_uri)
+        self.plot_uri_deviation_count_distribution(self.data_frame_uri)
+        self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
+        self.plot_scatter_prerequest(self.data_frame_rel_uri)
         self.plot_hosts_responses(self.data_frame_exp_stats)
         
         
@@ -250,6 +248,7 @@ class Domain_Response_Analyzator():
         mpl.savefig(self.exp_path+'/exp_stats_host_statuscode.png',
                     dpi=300, bbox_inches='tight')
         #mpl.show()
+        
     def plot_hosts_responses(self, dataframe, num_clusters=100):
         file_path=self.exp_path+"/sortet_data.csv"
         
@@ -261,7 +260,11 @@ class Domain_Response_Analyzator():
         df = df.sort_values(by=['2xx', '1xx', '3xx', '4xx', '5xx', '9xx'], ascending=[False, False, False, False, False, False])
 
         # Divide Host into Cluster
-        num_clusters = 100
+        if len(df)<100:
+            num_clusters=len(df)
+        else: 
+            num_clusters = 100
+        
         cluster_size = len(df) // num_clusters
         df['Cluster'] = numpy.repeat(range(num_clusters), cluster_size)
         
@@ -272,19 +275,20 @@ class Domain_Response_Analyzator():
 
         #Build Diagram
         mpl.style.use('fivethirtyeight')
-        colors = ['#9B59B6', '#2ECC71', '#F1C40F', '#E74C3C',  '#3498DB',   '#34495E']
+        colors = ['#9B59BB', '#2ECC77', '#F1C400', '#E74C33',  '#3498DD',   '#344955']
         ax = clustered_data.plot(kind='bar',  stacked=True, figsize=(12, 6),width=1, color=colors )
         
-        mpl.xlabel('Cluster (100)')
+        mpl.xlabel('Clustered Hosts')
         xticks = numpy.arange(0, num_clusters+1, 10)
         ax.set_xticks(xticks)
-        ax.set_xticklabels(xticks)
+        #ax.set_xticklabels(xticks)
         mpl.ylabel('Share of Response Codes')
         mpl.title('Response Codes over Host Cluster')
-        mpl.legend(title='Response Codes')
+        mpl.legend(title='Response Codes', loc='lower left')
 
-        mpl.show()
-
+        #mpl.show()
+        mpl.savefig(self.exp_path+'/exp_stats_host_statuscode_bars.png',
+                    dpi=300, bbox_inches='tight')
 
         """ 
         # Normalize response code values by dividing by the total response count for each host
@@ -547,6 +551,6 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/extracted_logs/attic/experiment_17"
+    path = f"{log_dir}/extracted_logs/attic/experiment_21"
     dra = Domain_Response_Analyzator(path)
     dra.start()
