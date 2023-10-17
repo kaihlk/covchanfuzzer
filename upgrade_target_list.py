@@ -24,7 +24,7 @@ class Target_List_Upgrader():
         return
 
     def add_dns_with_standard_subdomain_80(self, domain):
-        socket_info, ex = CustomHTTP().lookup_dns(domain, 80, self.experiment_configuration["use_ipv4"])
+        socket_info, new_domain, ex = CustomHTTP().lookup_dns(domain, 80, self.experiment_configuration["use_ipv4"])
         print(socket_info, ex)
         if socket_info:
             return socket_info
@@ -32,7 +32,7 @@ class Target_List_Upgrader():
             return ex
 
     def add_dns_with_standard_subdomain_443(self, domain):
-        socket_info, ex = CustomHTTP().lookup_dns(domain, 443, self.experiment_configuration["use_ipv4"])
+        socket_info, new_domain, ex = CustomHTTP().lookup_dns(domain, 443, self.experiment_configuration["use_ipv4"])
         print(socket_info, ex)
         if socket_info:
             return socket_info
@@ -46,7 +46,7 @@ class Target_List_Upgrader():
                 subdomains="www"
         subdomains=subdomains+"."        
         uri=subdomains+hostname+"."+tldomain
-        socket_info, ex = CustomHTTP().lookup_dns(uri, 80, self.experiment_configuration["use_ipv4"])
+        socket_info, new_domain,  ex = CustomHTTP().lookup_dns(uri, 80, self.experiment_configuration["use_ipv4"])
         print(socket_info, ex)
         if socket_info:
             return socket_info
@@ -60,7 +60,7 @@ class Target_List_Upgrader():
         subdomains=subdomains+"."        
         uri=subdomains+hostname+"."+tldomain
         
-        socket_info, ex = CustomHTTP().lookup_dns(uri, 443, self.experiment_configuration["use_ipv4"])
+        socket_info, new_domain, ex = CustomHTTP().lookup_dns(uri, 443, self.experiment_configuration["use_ipv4"])
         print(socket_info, ex)
         if socket_info:
             return socket_info

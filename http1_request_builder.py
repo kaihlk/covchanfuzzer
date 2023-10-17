@@ -113,11 +113,25 @@ class HTTP1_Request_Builder:
 
     def parse_host(self,host):
         #Initialize variables
+        scheme=""
         subdomains = ""
         hostname = ""
         domain = ""
         
-        parts = host.split(".")
+        if "://" in host:
+            # Split the host into scheme and the rest of the URL
+            parts = host.split("://", 1)
+            scheme = parts[0]
+            remaining = parts[1]
+        else:
+            remaining = host
+
+        # Split the remaining URI into subdomain, hostname, domain, and port (if present)
+        parts = remaining.split("/", 1)
+        if len(parts) == 2:
+            remaining, path = parts
+
+        parts = remaining.split(".")
 
         if len(parts) >= 2:
             tldomain = parts[-1]

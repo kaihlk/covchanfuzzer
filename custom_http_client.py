@@ -169,10 +169,20 @@ class CustomHTTP(HTTP):
                     socket.SOCK_STREAM,
                     socket.IPPROTO_TCP,
                 )
-        except socket.gaierror as e:
-            self.httplogger.error("DNS Lookup failed: %s", e)
-            return None, str(e)
-        return address, None
+        except socket.gaierror as error:
+            self.httplogger.error("DNS Lookup failed: %s", error)
+            if "Name or service not known" in str(error) or "No address associated with hostname" in str(error):
+                # Attempt DNS lookup for the parent domain, Rekursion!!!
+                parts = hostname.split('.')
+                if len(parts) > 2:
+                    parent_domain = '.'.join(parts[1:])
+                    return self.lookup_dns(parent_domain, portnumber, use_ipv4)
+                else:
+                    return None, hostname, str(error)
+            else:
+                return None, hostname, str(error)
+
+        return address, hostname, None
 
     def create_tcp_socket(self, ip_info, timeout):
         '''Create and Connect a TCP socket'''
@@ -202,6 +212,7 @@ class CustomHTTP(HTTP):
             # Building the SSL context
             ssl_ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
             ssl_ctx.load_verify_locations("/etc/ssl/certs/ca-certificates.crt")
+            ssl_ctx.check_hostname = False
             # Export Sessionkeys, to be able to analyze encrypted Traffic with Wireshark etc.
             ssl_ctx.keylog_filename = f"{log_path}/sessionkeys.txt"
             ssl_ctx.set_alpn_protocols(["http/1.1"])  # h2 is a RFC7540-hardcoded value

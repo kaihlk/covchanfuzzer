@@ -95,8 +95,6 @@ class HTTP1_Request_CC_Random_Whitespace(HTTP1_Request_Builder):
 # fuzzvalue defines the propability whether a value is changed and how many whitespaces/tabs/newlines are added
 # Possible endless Loop, here is CC to learn something about the maximum size of the Request size
     
-
-
        
     def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
         # Check if headers are provided elsewise take default headers

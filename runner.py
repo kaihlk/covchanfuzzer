@@ -25,8 +25,10 @@ class ExperimentRunner:
     def __init__(self, experiment_configuration, target_list, global_log_folder):
         self.experiment_configuration = experiment_configuration
         self.global_log_folder=global_log_folder
-        self.target_list=target_list   
-        self.base_check_fails=[]
+        self.target_list=target_list
+        self.lock_ptl=threading.Lock()
+        self.processed_targets=[]   
+        self.base_check_fails=[]   
         self.lock_bcf = threading.Lock()
         self.dns_fails=[]
         self.lock_df = threading.Lock()
@@ -82,16 +84,13 @@ class ExperimentRunner:
             dns_entry, error = self.add_dns_info(entry)
             #Check Socket Info
             if dns_entry is not None:
-                #Check http options
+                #Check http options, update dns entry if redirect is possible and selected
                 if self.experiment_configuration["verbose"] is True:
                     print(dns_entry)
-                check, new_location=self.check_entry_http_options(dns_entry)
-                dns_entry['location']=new_location
+                check, dns_entry=self.check_entry_http_options(dns_entry, self.experiment_configuration["follow_redirect"])
+                
                 if check is True:
-                    if new_location is not None:
-                        crawl_uri=new_location
-                    else:
-                        crawl_uri=dns_entry["host"]
+                    crawl_uri=dns_entry["host"]
                     paths=host_crawler().get_paths(crawl_uri, self.experiment_configuration["target_port"], self.experiment_configuration["crawl_paths"], max_attempts=5, time_out=self.experiment_configuration["conn_timeout"])
                     dns_entry["paths"]=paths
                     checked_subset.append(dns_entry)
@@ -126,8 +125,7 @@ class ExperimentRunner:
         request_string, _, _=request_builder.HTTP1_Request_Builder().generate_request(local_configuration, 443)
         #host deprecated?
         #Carefull some hosts expect more 
-        if "wiki" in domain:
-            print("WIKI")
+     
         request, _, _ =request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, uri, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"])       
         if local_configuration["include_subdomain_host_header"] is True:
             host=subdomains+hostname+"."+tldomain
@@ -185,7 +183,7 @@ class ExperimentRunner:
         uri=subdomains+hostname+"."+tldomain
         print("DNS Lookup for: "+uri)
         try:
-            socket_info, error = CustomHTTP().lookup_dns(uri, target_port, self.experiment_configuration["use_ipv4"])
+            socket_info, new_hostname, error = CustomHTTP().lookup_dns(uri, target_port, self.experiment_configuration["use_ipv4"])
         except Exception as e:
              self.runner_logger.error("Error during Socket Creation/DNS Lookup of URI: %s, Error: %s", uri, e)
         if error is not None:
@@ -213,18 +211,26 @@ class ExperimentRunner:
 
     def check_entry_http_options(self, entry_dns, follow_redirect=False): 
         """Perform n basic requests if option is set."""
-
+        redirect_entry_dns=None
         check=False
         basic_request_status_code=0
         if self.experiment_configuration["check_basic_request"]!=0:
             for i in range(self.experiment_configuration["check_basic_request"]):
-                #Check if basic request is answered with a 2xx response
+                #Check if basic request is answered with a 2xx or 3xx response
+                print("Basic Check No. ",i," Target: ", entry_dns["host"])
                 basic_request_status_code, new_location =self.basic_request(entry_dns["host"], entry_dns["socket_info"])
                 first_digit = str(basic_request_status_code)[0]
+                print("Result: ", first_digit)
                 #Check first redirect
                 if first_digit == "3" and follow_redirect is True:
-                    basic_request_status_code, _ =self.basic_request(entry_dns["host"], entry_dns["socket_info"])
-                    first_digit = str(basic_request_status_code)[0]
+                    #Check redirect location
+                    print("Checking redirect location:", new_location)
+                    #Overwrite entry DNS, Lookup new Location
+                    entry_dns, error =self.add_dns_info(new_location)
+                    second_request_status_code, second_location =self.basic_request(new_location, entry_dns["socket_info"])
+                    #Overwrite śecond location
+                    first_digit = str(second_request_status_code)[0]
+                    print("Result: ", first_digit)
                 if first_digit == "2":
                     check=True
                 else:
@@ -237,7 +243,8 @@ class ExperimentRunner:
             #Extend List when Basic Check Fails
             with self.lock_bcf:
                 self.base_check_fails.append([entry_dns["host"], basic_request_status_code])           
-        return check, new_location
+        print(entry_dns)
+        return check, entry_dns
         
 
     def pregenerate_request(self, covert_channel):
@@ -264,7 +271,6 @@ class ExperimentRunner:
                     request_hash = hashlib.md5(str(request).encode()).hexdigest()
                 
                     self.cc_uri_post_generation=selected_covered_channel.get_cc_uri_post_generation()
-                    print(self.cc_uri_post_generation)
                     
                 #Some CC may be added after pregeneration, example changing the URI, would lead needlessly to RunTime Exception
                 if self.cc_uri_post_generation is False:        
@@ -717,7 +723,8 @@ class ExperimentRunner:
             print("invalid_entries", invalid_entries)
             print("Valid Entires", len(prepared_target_list))
             #Loop over List
-
+            #Save List
+            self.processed_targets=prepared_target_list
 
             #Initialize 
             fuzz_tasks=[]
@@ -803,7 +810,7 @@ class ExperimentRunner:
                 
                 self.exp_log.add_global_entry_to_experiment_list(self.experiment_configuration["experiment_no"])
                 self.exp_log.save_dns_fails(self.dns_fails)
-                self.exp_log.save_target_list(self.target_list)
+                self.exp_log.save_target_list(self.processed_targets)
                 self.exp_log.save_base_checks_fails(self.base_check_fails)
                 self.exp_log.save_prerequests(self.prerequest_list)
                 self.exp_log.prerequest_statisics(self.prerequest_list, self.message_count)

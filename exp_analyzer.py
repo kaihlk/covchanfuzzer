@@ -11,7 +11,7 @@ from matplotlib.ticker import PercentFormatter
 import seaborn as sns
 from scipy.stats import norm
 from scipy import stats
-
+from scipy.optimize import curve_fit
 
 class Domain_Response_Analyzator():
     def __init__(self, path):
@@ -20,8 +20,8 @@ class Domain_Response_Analyzator():
             path+"/experiment_stats.csv")
         self.data_frame_prerequest_stats = pandas.read_csv(
             path+"/prerequests.csv")
-        self.data_frame_uri = pandas.read_csv(path+"/uri_dev_statuscode.csv")
-        self.data_frame_rel_uri = pandas.read_csv(path+"/rel_uri_dev_statuscode.csv")        
+        #self.data_frame_uri = pandas.read_csv(path+"/uri_dev_statuscode.csv")
+        #self.data_frame_rel_uri = pandas.read_csv(path+"/rel_uri_dev_statuscode.csv")        
         self.experiment_configuration=self.load_exp_outcome(self.exp_path)
         self.dra_logging=logging.getLogger("main.runner.dra_logger")
         
@@ -57,9 +57,9 @@ class Domain_Response_Analyzator():
         self.save_exp_analyzer_results(host_statistics, prerequest_statistics)
         self.plot_deviation_count_distribution(self.data_frame_prerequest_stats)
         self.plot_2xx_over_attempt_no(self.data_frame_prerequest_stats)
-        self.plot_uri_deviation_count_distribution(self.data_frame_uri)
-        self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
-        self.plot_scatter_prerequest(self.data_frame_rel_uri)
+        #self.plot_uri_deviation_count_distribution(self.data_frame_uri)
+        #self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
+        #self.plot_scatter_prerequest(self.data_frame_rel_uri)
         self.plot_hosts_responses(self.data_frame_exp_stats)
         
         
@@ -157,7 +157,7 @@ class Domain_Response_Analyzator():
         # Create a histogram
         mpl.figure(figsize=(10, 8))
         sns.histplot(x=deviation_count, stat='percent', kde=True, color='blue', bins=100, label='Data Distribution')#b s
-        mpl.ylim(0, 100)
+        mpl.ylim(0, 50)
         mpl.xlabel('Deviations from original Request')
         mpl.ylabel('Share of Requests (%)')
         mpl.title('Histogram: Deviation Count Distribution')
@@ -458,6 +458,7 @@ class Domain_Response_Analyzator():
         # Save or display the plot
         mpl.savefig(self.exp_path + '/exp_stats_host_statuscode_bars.png', dpi=300, bbox_inches='tight')
         # mpl.show() """
+
     def cluster_domains(self, data_frame):
         """Figure 2"""
         selected_column = data_frame['2xx']
@@ -488,7 +489,32 @@ class Domain_Response_Analyzator():
     def cluster_prerequest(self, data_frame):
         """Figure 3"""
         mpl.figure(figsize=(10, 8))
-        mpl.scatter(data_frame['deviation_count'], data_frame['2xx'] / self.experiment_configuration["max_targets"] * 100, alpha=0.5, s=500)  # Alpha for transparency
+        data_frame['2xx_percentage'] = data_frame['2xx'] / self.experiment_configuration["max_targets"] * 100
+        
+        #Exp19 Specific
+        def linear_regression(x, m, b):
+            return m * x + b
+        data_frame['Cluster'] = pandas.cut(data_frame['2xx_percentage'], bins=[0, 32, 42, 62, 100], labels=['Cluster 1', 'Cluster 2', 'Cluster 3', 'Cluster 4'])
+        cluster_2 = data_frame[data_frame['Cluster'] == 'Cluster 2']
+        cluster_3 = data_frame[data_frame['Cluster'] == 'Cluster 3']
+        
+        #params_2, covariance_2 = curve_fit(linear_regression, cluster_2['deviation_count'], cluster_2['2xx_percentage'])
+        #params_3, covariance_3 = curve_fit(linear_regression, cluster_3['deviation_count'], cluster_3['2xx_percentage'])
+
+        #x_values = numpy.linspace(min(cluster_2['deviation_count']), max(cluster_2['deviation_count']), 100)
+        #y_fit_2 = linear_regression(x_values, *params_2)
+
+        #x_values = numpy.linspace(min(cluster_3['deviation_count']), max(cluster_3['deviation_count']), 100)
+        #y_fit_3 = linear_regression(x_values, *params_3)
+
+        #mpl.plot(x_values, y_fit_2, label='Regression Curve for Cluster 2', color='green')
+        #mpl.plot(x_values, y_fit_3, label='Regression Curve for Cluster 3', color='purple')
+        mean_2 = cluster_2['2xx_percentage'].mean()
+        mean_3 = cluster_3['2xx_percentage'].mean()
+        mpl.axhline(mean_2, color='green', linestyle='--', label=f'Mean Cluster 1: {mean_2:.1f}%')
+        mpl.axhline(mean_3, color='red', linestyle='--', label=f'Mean Cluster 2: {mean_3:.1f}%')
+
+        mpl.scatter(data_frame['deviation_count'], data_frame['2xx_percentage'], alpha=0.5, s=500)  # Alpha for transparency
 
         # Add labels and title
         mpl.xlabel('Deviation Count per Message')
@@ -506,6 +532,7 @@ class Domain_Response_Analyzator():
         # Show the plot
         mpl.grid(True)
         mpl.tight_layout()
+        mpl.legend()
         mpl.savefig(self.exp_path+'/exp_stats_prerequest_statuscodes.png', dpi=300, bbox_inches='tight')
         #mpl.show()
         return
@@ -551,6 +578,6 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/extracted_logs/attic/experiment_21"
+    path = f"{log_dir}/extracted_logs/attic/experiment_19"
     dra = Domain_Response_Analyzator(path)
     dra.start()
