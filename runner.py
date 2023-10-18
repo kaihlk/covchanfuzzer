@@ -16,7 +16,7 @@ from custom_http_client import CustomHTTP
 from host_crawler import host_crawler
 import class_mapping
 import http1_request_builder as request_builder
-
+from urllib.parse import urljoin
 import exp_analyzer
 
 
@@ -225,6 +225,10 @@ class ExperimentRunner:
                 if first_digit == "3" and follow_redirect is True:
                     #Check redirect location
                     print("Checking redirect location:", new_location)
+                    #Check if it is relative redirect
+                    if not new_location.startswith(('http:', 'https:')):
+                        new_location = entry_dns["host"]+ new_location
+
                     #Overwrite entry DNS, Lookup new Location
                     entry_dns, error =self.add_dns_info(new_location)
                     second_request_status_code, second_location =self.basic_request(new_location, entry_dns["socket_info"])
@@ -247,10 +251,9 @@ class ExperimentRunner:
         return check, entry_dns
         
 
-    def pregenerate_request(self, covert_channel):
-        '''Build a HTTP Request Package and sends it and processes the response'''
+    def pregenerate_request(self, covert_channel, attempt_no):
+        '''Build a HTTP Request Message and sends it and processes the response'''
         #Build HTTP Request after the selected covered channel
-        selected_covered_channel = class_mapping.requests_builders[covert_channel]()
         unique=False
         min_fuzz_value= self.experiment_configuration["min_fuzz_value"]
         deviation_count_spread=False
@@ -258,66 +261,75 @@ class ExperimentRunner:
         retry=0
         random_element=random.random()
         new_fuzz_value = min_fuzz_value + ( random_element* (1-2*min_fuzz_value))
-        ### Break the circle if the prerequest is unique or the deviation count is accpeted
-        while unique is False or deviation_count_spread is False:
-            try:
-                deviation_count_spread=False
-                deviation_count_found=False
-                deviation_count=0
-                #Make sure, that a least a bit of cc data is added
-                self.cc_uri_post_generation=False       
-                while self.cc_uri_post_generation is False and deviation_count==0:
-                    request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration, self.experiment_configuration["target_port"],new_fuzz_value)
-                    request_hash = hashlib.md5(str(request).encode()).hexdigest()
-                
-                    self.cc_uri_post_generation=selected_covered_channel.get_cc_uri_post_generation()
+        selected_covered_channel = class_mapping.requests_builders[covert_channel]()
+        if selected_covered_channel=="Request_from_CSV":
+            request, deviation_count, uri = self.get_prerequest_from_list(attempt_no, self.experiment_configuration["CSV_request_list"])
+
+        elif selected_covered_channel=="HTTP1_Request_Builder":
+            request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration, self.experiment_configuration["target_port"],new_fuzz_value)
+            request_hash = hashlib.md5(str(request).encode()).hexdigest()       
+        else:
+            
+            ### Break the loop if the prerequest is unique or the deviation count is accpeted
+            while unique is False or deviation_count_spread is False:
+                try:
+                    deviation_count_spread=False
+                    deviation_count_found=False
+                    deviation_count=0
+                    #Make sure, that a least a bit of cc data is added
+                    self.cc_uri_post_generation=False       
+                    while self.cc_uri_post_generation is False and deviation_count==0:
+                        request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration, self.experiment_configuration["target_port"],new_fuzz_value)
+                        request_hash = hashlib.md5(str(request).encode()).hexdigest()
                     
-                #Some CC may be added after pregeneration, example changing the URI, would lead needlessly to RunTime Exception
-                if self.cc_uri_post_generation is False:        
-                        #First Entry is always unique    
-                        if len(self.prerequest_list)==0:
-                            unique=True
-                            deviation_count_spread=True
-                        #Iterate through prerequest list to check if entry is already existing or a similar entry within 5% deviation_count isn  already existing
-                        for entry in self.prerequest_list:
-                            #Found if is within 5% range
-                            if abs(deviation_count - entry["deviation_count"]) < deviation_count*0.05:
-                                deviation_count_found=True
-                            #Check uniqueness
-                            if request_hash!=entry["request_hash"]:
-                                unique=True
-                            #Break if already existing
-                            else:
-                                random_element=random.random()
-                                new_fuzz_value = min_fuzz_value + ( random_element* (1-2*min_fuzz_value))
-                                unique=False
-                                break
-                        #Prevent endless loop if all variations have been tried, save them for later check
+                        self.cc_uri_post_generation=selected_covered_channel.get_cc_uri_post_generation()
                         
-                        if retry>maximum_retries:
-                            self.exp_log.save_prerequests(self.prerequest_list)
-                            raise RuntimeError("Unable to generate a unique prerequest after maximum retries.")
-                         ###Mechanismus to higher the spread of different deviation counts
-                        retry+=1
-                        if deviation_count_found==True:
-                            if random.random()>self.experiment_configuration["spread_deviation"]:
+                    #Some CC may be added after pregeneration, example changing the URI, would lead needlessly to RunTime Exception
+                    if self.cc_uri_post_generation is False:        
+                            #First Entry is always unique    
+                            if len(self.prerequest_list)==0:
+                                unique=True
                                 deviation_count_spread=True
-                            else:
-                                 retry-=1
-                                 random_element=random.random()
-                                 new_fuzz_value = min_fuzz_value + ( random_element* (1-2*min_fuzz_value))
-                                
-                                 print("New Fuzz Value: ", new_fuzz_value)
-                        else: 
-                            deviation_count_spread=True
-                else:
-                    #If CC Variation is added later skip the unique check
-                    unique=True
-                    deviation_count_spread=True
-            except Exception as e:
-                self.runner_logger.error("Error generating request: %s", e)
-                self.error_event.set()
-                raise  
+                            #Iterate through prerequest list to check if entry is already existing or a similar entry within 5% deviation_count isn  already existing
+                            for entry in self.prerequest_list:
+                                #Found if is within 5% range
+                                if abs(deviation_count - entry["deviation_count"]) < deviation_count*0.05:
+                                    deviation_count_found=True
+                                #Check uniqueness
+                                if request_hash!=entry["request_hash"]:
+                                    unique=True
+                                #Break if already existing
+                                else:
+                                    random_element=random.random()
+                                    new_fuzz_value = min_fuzz_value + ( random_element* (1-2*min_fuzz_value))
+                                    unique=False
+                                    break
+                            #Prevent endless loop if all variations have been tried, save them for later check
+                            
+                            if retry>maximum_retries:
+                                self.exp_log.save_prerequests(self.prerequest_list)
+                                raise RuntimeError("Unable to generate a unique prerequest after maximum retries.")
+                            ###Mechanismus to higher the spread of different deviation counts
+                            retry+=1
+                            if deviation_count_found==True:
+                                if random.random()>self.experiment_configuration["spread_deviation"]:
+                                    deviation_count_spread=True
+                                else:
+                                    retry-=1
+                                    random_element=random.random()
+                                    new_fuzz_value = min_fuzz_value + ( random_element* (1-2*min_fuzz_value))
+                                    
+                                    print("New Fuzz Value: ", new_fuzz_value)
+                            else: 
+                                deviation_count_spread=True
+                    else:
+                        #If CC Variation is added later skip the unique check
+                        unique=True
+                        deviation_count_spread=True
+                except Exception as e:
+                    self.runner_logger.error("Error generating request: %s", e)
+                    self.error_event.set()
+                    raise  
            
         if self.experiment_configuration["verbose"] is True:
             print(request)
@@ -337,14 +349,19 @@ class ExperimentRunner:
 
         return prerequest
 
+    def get_prerequest_from_list(self, attempt, request_list):
+        uri=""
+        request=""
+        deviation_count=0
+        return request, deviation_count, uri    
 
     def get_next_prerequest(self, attempt_number):
         """Get next Prerequest from Prerequest List or create and add to list if not existing"""
         #Thread safe
         with self.lock_prl:
-            #Check if new prerequest needs to be pregenerated
+            #Check if new prerequest needs to be get
             if attempt_number>=len(self.prerequest_list):
-                prerequest = self.pregenerate_request(self.experiment_configuration["covertchannel_request_number"])
+                prerequest = self.pregenerate_request(self.experiment_configuration["covertchannel_request_number"],attempt_number)
                 self.prerequest_list.append(prerequest)
             #Or take it from the Prerequest List
             else: 

@@ -12,8 +12,9 @@ from upgrade_target_list import Target_List_Upgrader
 
 # For Information
 """ class_mapping_requests ={
+    0: HTTP1_Request_from_CSV
     1: HTTP1_Request_Builder,
-    2: HTTP1_Request_CC_Case_Insensitivity,
+    2: HTTP1_Request_CC_Case_sInsensitivity,
     3: HTTP1_Request_CC_Random_Whitespace,
     4: HTTP1_Request_CC_Reordering_Header_Fields,
     5: HTTP1_Reqeust_CC_URI_Representation,
@@ -21,7 +22,7 @@ from upgrade_target_list import Target_List_Upgrader
     7: HTTP1_Reqeust_CC_URI_Hex_Hex,
     8: HTTP1_Request_CC_Random_Content,
     9: HTTP1_Request_CC_Random_Content_No_Lenght_Field,
-    10: HTTP1_Request_CC_URI_Common_Addresses
+    10: HTTP1_Request_CC_URI_Common_Addresses    
 }
 
 class_mapping_connection = {
@@ -134,7 +135,7 @@ def main():
         "verbose": False,
         "timestamp": time.strftime("%Y%m%d_%H%M%S"),
         # Covert Channel Option
-        "covertchannel_request_number":2,
+        "covertchannel_request_number":5,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
         "min_fuzz_value": 0.01,
@@ -142,7 +143,7 @@ def main():
         # Target Selection Options
         "num_attempts": 2,
         "max_targets": 20,  # len(self.target_list):
-        "max_workers": 1,  # Parallel Processing of subsets,
+        "max_workers": 4,  # Parallel Processing of subsets,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
         "check_basic_request": 3,

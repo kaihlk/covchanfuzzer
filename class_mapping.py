@@ -3,6 +3,7 @@ from http1_covered_channels import *
 
 
 requests_builders ={
+    0: HTTP1_Request_from_CSV,
     1: HTTP1_Request_Builder,
     2: HTTP1_Request_CC_Case_Insensitivity,
     3: HTTP1_Request_CC_Random_Whitespace,
