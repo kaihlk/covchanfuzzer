@@ -117,6 +117,7 @@ class HTTP1_Request_Builder:
         subdomains = ""
         hostname = ""
         domain = ""
+        path=""
         
         if "://" in host:
             # Split the host into scheme and the rest of the URL
@@ -143,7 +144,7 @@ class HTTP1_Request_Builder:
             raise ValueError("Unable to parse host")
   
 
-        return subdomains, hostname, tldomain
+        return subdomains, hostname, tldomain, path
 
         #host may be part of the uri
     def parse_uri(self, uri, host):
@@ -283,7 +284,7 @@ class HTTP1_Request_Builder:
             try:
                 #Prepare the parts of URI
                 #Break the domain into pieces
-                subdomains, hostname, tldomain =self.parse_host(domain)
+                subdomains, hostname, tldomain, path =self.parse_host(domain)
                 if subdomains=="":
                     subdomains=standard_subdomain
                 new_domain=hostname+"."+tldomain

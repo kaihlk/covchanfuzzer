@@ -115,7 +115,7 @@ class ExperimentRunner:
         local_configuration["covertchannel_request_number"]= 1
         local_configuration["covertchannel_connection_number"]= 1
         local_configuration["covertchannel_timing_number"]= 1
-        subdomains, hostname, tldomain= request_builder.HTTP1_Request_Builder().parse_host(domain)
+        subdomains, hostname, tldomain, path= request_builder.HTTP1_Request_Builder().parse_host(domain)
         if local_configuration["target_add_www"] is True:
             if subdomains=="":
                 subdomains="www"
@@ -171,7 +171,7 @@ class ExperimentRunner:
             else: 
                 target_port=80
         #TODO Catch the case that IPv4 or IPv6 is not provided, some sites sends more than one IP/Port set per protocoll version,  example macromedia.com and criteo.com            
-        subdomains, hostname, tldomain= request_builder.HTTP1_Request_Builder().parse_host(entry)
+        subdomains, hostname, tldomain, path= request_builder.HTTP1_Request_Builder().parse_host(entry)
         #Add www or keep subdomain if present, if selected and no other subdomain is present
         if self.experiment_configuration["target_add_www"] is True:
             if subdomains=="":
@@ -204,6 +204,8 @@ class ExperimentRunner:
             #Check Port (maybe not needed)
             if port!=target_port:
                 print("Warning: Retrieved port doesn't match configured port (r. Port/c.Port"+str(port)+"/"+str(target_port))
+            if path!="":
+                uri=uri+"/"+path
             entry_dns={"host":uri, "socket_info":socket_info, "ip_address":ip_address, "port":port }
                 
         return entry_dns, None
@@ -261,12 +263,12 @@ class ExperimentRunner:
         retry=0
         random_element=random.random()
         new_fuzz_value = min_fuzz_value + ( random_element* (1-2*min_fuzz_value))
-        selected_covered_channel = class_mapping.requests_builders[covert_channel]()
-        if selected_covered_channel=="Request_from_CSV":
+        selected_covert_channel = class_mapping.requests_builders[covert_channel]()
+        if covert_channel==0:
             request, deviation_count, uri = self.get_prerequest_from_list(attempt_no, self.experiment_configuration["CSV_request_list"])
 
-        elif selected_covered_channel=="HTTP1_Request_Builder":
-            request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration, self.experiment_configuration["target_port"],new_fuzz_value)
+        elif covert_channel==1:
+            request, deviation_count, uri = selected_covert_channel.generate_request(self.experiment_configuration, self.experiment_configuration["target_port"],new_fuzz_value)
             request_hash = hashlib.md5(str(request).encode()).hexdigest()       
         else:
             
@@ -279,10 +281,10 @@ class ExperimentRunner:
                     #Make sure, that a least a bit of cc data is added
                     self.cc_uri_post_generation=False       
                     while self.cc_uri_post_generation is False and deviation_count==0:
-                        request, deviation_count, uri = selected_covered_channel.generate_request(self.experiment_configuration, self.experiment_configuration["target_port"],new_fuzz_value)
+                        request, deviation_count, uri = selected_covert_channel.generate_request(self.experiment_configuration, self.experiment_configuration["target_port"],new_fuzz_value)
                         request_hash = hashlib.md5(str(request).encode()).hexdigest()
                     
-                        self.cc_uri_post_generation=selected_covered_channel.get_cc_uri_post_generation()
+                        self.cc_uri_post_generation=selected_covert_channel.get_cc_uri_post_generation()
                         
                     #Some CC may be added after pregeneration, example changing the URI, would lead needlessly to RunTime Exception
                     if self.cc_uri_post_generation is False:        
@@ -311,7 +313,7 @@ class ExperimentRunner:
                                 raise RuntimeError("Unable to generate a unique prerequest after maximum retries.")
                             ###Mechanismus to higher the spread of different deviation counts
                             retry+=1
-                            if deviation_count_found==True:
+                            if deviation_count_found is True:
                                 if random.random()>self.experiment_configuration["spread_deviation"]:
                                     deviation_count_spread=True
                                 else:
@@ -536,7 +538,9 @@ class ExperimentRunner:
                         domain_paths=self.get_host_specific_path(host_data)
                         selected_covered_channel = class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]()
                         path=selected_covered_channel.path_generator(domain_paths, test_path=self.experiment_configuration["path"], fuzzvalue=self.experiment_configuration["min_fuzz_value"])
-                        request, deviation_count_uri, uri=selected_covered_channel.replace_host_and_domain(prerequest["request"],domain, self.experiment_configuration["standard_subdomain"],host=None, include_subdomain_host_header=self.experiment_configuration["include_subdomain_host_header"], path=path, override_uri="", fuzzvalue=self.experiment_configuration["min_fuzz_value"])
+                        
+                        #INSERT CLEVER DEVIATION SPREADER HERE
+                        request, deviation_count_uri, uri=selected_covered_channel.replace_host_and_domain(prerequest["request"],domain, self.experiment_configuration["standard_subdomain"],host=None, include_subdomain_host_header=self.experiment_configuration["include_subdomain_host_header"], path=path, override_uri="", fuzzvalue=0.5)##self.experiment_configuration["min_fuzz_value"])
                         
                         deviation_count_request=prerequest["deviation_count"]
                         deviation_count=deviation_count_uri+deviation_count_request

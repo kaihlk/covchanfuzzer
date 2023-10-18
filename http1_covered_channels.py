@@ -459,7 +459,7 @@ class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
             #Change URI Case
             new_domain, deviation_count_domain = random_switch_case_of_char_in_string(new_domain, fuzzvalue)
             new_subdomains, deviation_count_subdomains = random_switch_case_of_char_in_string(subdomains, fuzzvalue)
-            new_path, deviation_count_path = random_switch_case_of_char_in_string(subdomains, fuzzvalue)
+            new_path, deviation_count_path = random_switch_case_of_char_in_string(path, fuzzvalue)
             deviation_count=deviation_count_domain+deviation_count_subdomains+deviation_count_path
             #This inserts the sudomain in the uri    
             prerequest_sub=prerequest.replace(self.subdomain_placeholder,new_subdomains)

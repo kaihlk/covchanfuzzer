@@ -157,7 +157,7 @@ def main():
 
         # Connection Options
         "conn_timeout": 5,  # seconds
-        "nw_interface": "enp6s0",#31f6",#1s6",  # lo, docker, enp0s3
+        "nw_interface": "enp0s3",#31f6",#1s6",  # lo, docker, enp0s3
         "use_ipv4": True,
         "use_TLS": True,
         "use_HTTP2": False,
@@ -166,8 +166,8 @@ def main():
         "HTTP_version": "HTTP/1.1",
         "method": "GET",
         "url": "",  # Complete URl
-        "follow_redirect": True, #Follow the first redirect if provided
-        "path": "/",  # Dynamic, List, ?
+        "follow_redirect": False, #Follow the first redirect if provided
+        "path": "/",  # Dynamic, List, ?s
         "crawl_paths": 0, #(dafault 0 )
 
         "standard_subdomain": "www",  # use www if not provided
