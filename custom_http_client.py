@@ -398,7 +398,7 @@ class CustomHTTP(HTTP):
                 print("Stream Socket Connection Time")
                 print(socket_connect_time)
         except Exception as e:
-            self.httplogger.error("Error during socket connection",e)
+            self.httplogger.error("Error during socket connection %s",e)
             error_messages.append(e)            
             if 'tls_socket' in locals():
                 tls_socket.close()
