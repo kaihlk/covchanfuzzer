@@ -111,40 +111,45 @@ class HTTP1_Request_Builder:
             print("URI not found in the request.")
         return new_uri
 
-    def parse_host(self,host):
+    def parse_host(self, uri):
         #Initialize variables
         scheme=""
         subdomains = ""
-        hostname = ""
         domain = ""
+        tldomain = ""
+        port=""
         path=""
         
-        if "://" in host:
+        #scheme
+        if "://" in uri:
             # Split the host into scheme and the rest of the URL
-            parts = host.split("://", 1)
+            parts = uri.split("://", 1)
             scheme = parts[0]
-            remaining = parts[1]
+            rest = parts[1]
         else:
-            remaining = host
-
-        # Split the remaining URI into subdomain, hostname, domain, and port (if present)
-        parts = remaining.split("/", 1)
-        if len(parts) == 2:
-            remaining, path = parts
-
-        parts = remaining.split(".")
+            rest = uri
+        # path
+        if "/" in rest:
+            parts = rest.split("/", 1)
+            rest = parts[0]
+            path = parts[1]
+        #port
+        if ":" in rest:
+            parts = rest.split(":", 1)
+            port=parts[1]
+            rest=parts[0]
+        #split hostname
+        parts = rest.split(".")
 
         if len(parts) >= 2:
             tldomain = parts[-1]
-            hostname = parts[-2]
-            subdomains=".".join(parts[:-2])  #Multiple Subodmains possible
-
+            domain= parts[-2]
+            subdomains=".".join(parts[:-2])  #Multiple Subodmains possible, if no parts it will be empty
         else: 
             print("Unable to parse host")
             raise ValueError("Unable to parse host")
-  
 
-        return subdomains, hostname, tldomain, path
+        return scheme, subdomains, domain, tldomain, port, path
 
         #host may be part of the uri
     def parse_uri(self, uri, host):
@@ -284,7 +289,7 @@ class HTTP1_Request_Builder:
             try:
                 #Prepare the parts of URI
                 #Break the domain into pieces
-                subdomains, hostname, tldomain, path =self.parse_host(domain)
+                _scheme, subdomains, hostname, tldomain, _port, path =self.parse_host(domain)
                 if subdomains=="":
                     subdomains=standard_subdomain
                 new_domain=hostname+"."+tldomain

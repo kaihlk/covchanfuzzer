@@ -115,7 +115,7 @@ class ExperimentRunner:
         local_configuration["covertchannel_request_number"]= 1
         local_configuration["covertchannel_connection_number"]= 1
         local_configuration["covertchannel_timing_number"]= 1
-        subdomains, hostname, tldomain, path= request_builder.HTTP1_Request_Builder().parse_host(domain)
+        _scheme, subdomains, hostname, tldomain, _port, _path= request_builder.HTTP1_Request_Builder().parse_host(domain)
         if local_configuration["target_add_www"] is True:
             if subdomains=="":
                 subdomains="www"
@@ -171,7 +171,7 @@ class ExperimentRunner:
             else: 
                 target_port=80
         #TODO Catch the case that IPv4 or IPv6 is not provided, some sites sends more than one IP/Port set per protocoll version,  example macromedia.com and criteo.com            
-        subdomains, hostname, tldomain, path= request_builder.HTTP1_Request_Builder().parse_host(entry)
+        _scheme,subdomains, hostname, tldomain, _port, path= request_builder.HTTP1_Request_Builder().parse_host(entry)
         #Add www or keep subdomain if present, if selected and no other subdomain is present
         if self.experiment_configuration["target_add_www"] is True:
             if subdomains=="":

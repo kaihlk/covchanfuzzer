@@ -135,7 +135,7 @@ def main():
         "verbose": False,
         "timestamp": time.strftime("%Y%m%d_%H%M%S"),
         # Covert Channel Option
-        "covertchannel_request_number":5,
+        "covertchannel_request_number":6,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
         "min_fuzz_value": 0.01,
@@ -157,7 +157,7 @@ def main():
 
         # Connection Options
         "conn_timeout": 5,  # seconds
-        "nw_interface": "enp0s3",#31f6",#1s6",  # lo, docker, enp0s3
+        "nw_interface": "enp0s31f6#0s3",#31f6",#1s6",  # lo, docker, enp0s3
         "use_ipv4": True,
         "use_TLS": True,
         "use_HTTP2": False,
