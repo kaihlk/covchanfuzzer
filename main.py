@@ -141,23 +141,23 @@ def main():
         "min_fuzz_value": 0.01,
         "spread_deviation": 0.9,
         # Target Selection Options
-        "num_attempts": 1000,
-        "max_targets": 1000,  # len(self.target_list):
-        "max_workers": 25,  # Parallel Processing of subsets,
+        "num_attempts": 1,
+        "max_targets": 10,  # len(self.target_list):
+        "max_workers": 2,  # Parallel Processing of subsets,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
         "check_basic_request": 2,
 
         # "target_list_subdomain_10000.csv",#"new_target_list.csv",
         "target_list": "target_list_subdomain_10000.csv",
-        "target_subset_size": 40,
+
+        "target_subset_size": 3,
         "target_add_www": True,  # Add www if no other subdomain is known
         # "target_host": "www.example.com",  #Just for special useipvstt
         "target_port": 443,  # 443, 8080 Apache
-
         # Connection Options
         "conn_timeout": 5,  # seconds
-        "nw_interface": "enp0s31f6#0s3",#31f6",#1s6",  # lo, docker, enp0s3
+        "nw_interface": "enp0s3",#s31f6#0s3",#31f6",#1s6",  # lo, docker, enp0s3
         "use_ipv4": True,
         "use_TLS": True,
         "use_HTTP2": False,
@@ -166,7 +166,7 @@ def main():
         "HTTP_version": "HTTP/1.1",
         "method": "GET",
         "url": "",  # Complete URl
-        "follow_redirect": False, #Follow the first redirect if provided
+        "follow_redirects": 2, #Follow the first redirect if provided
         "path": "/",  # Dynamic, List, ?s
         "crawl_paths": 0, #(dafault 0 )
 
@@ -174,7 +174,7 @@ def main():
         # build a relative uri without the host in the requestline: /index.html
         "relative_uri": False,
         # include the subdomain, when building requestline, if none given use <standard_subdomain>
-        "include_subdomain": True,
+        "include_subdomain": True,  #Check maybe drop
         "include_port": False,
         "include_subdomain_host_header": True,
         "headers": None,

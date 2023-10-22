@@ -180,9 +180,9 @@ class CustomHTTP(HTTP):
                 else:
                     return None, hostname, str(error)
             else:"""
-            return None, hostname, str(error)
+            return None,  str(error)#None, hostname, str(error)
 
-        return address, hostname, None
+        return address, None#address, hostname, None
 
     def create_tcp_socket(self, ip_info, timeout):
         '''Create and Connect a TCP socket'''
@@ -250,7 +250,8 @@ class CustomHTTP(HTTP):
                 self.httplogger.error("Exception connecting TLS Socket: %s", e)
                 return None, error_message
 
-    def build_http_headers(self, host, path, headers, custom_request):
+    def build_http_headers(self, host, path, headers, custom_request=None):
+        """Builds an http Request, uuses standard values if no custom request provided"""
         http_headers = {
             "Accept_Encoding": b"gzip, deflate",
             "Cache_Control": b"no-cache",

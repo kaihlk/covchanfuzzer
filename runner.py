@@ -16,6 +16,7 @@ from custom_http_client import CustomHTTP
 from host_crawler import host_crawler
 import class_mapping
 import http1_request_builder as request_builder
+import target_list_preparator
 from urllib.parse import urljoin
 import exp_analyzer
 
@@ -723,8 +724,14 @@ class ExperimentRunner:
 
         return checked_target_list, invalid_entry_counts            
 
+
     def setup_and_start_experiment(self):
         '''Setups the Experiment, creates an experiment logger, and starts the experiment run'''
+        self.exp_log=ExperimentLogger(self.experiment_configuration, self.global_log_folder)
+        list_preparator=target_list_preparator.Target_List_Preperator(self.experiment_configuration, self.exp_log)
+        df_target_list=list_preparator.prepare_target_list()
+        print("Erfolg")
+        """
         try:
             start_time=time.time()
             #Create Folder for the experiment and save the path
@@ -736,17 +743,16 @@ class ExperimentRunner:
             global_capture_thread = threading.Thread(target=self.exp_log.capture_packets_dumpcap, args=(global_stop_event,))
             global_capture_thread.start()
             time.sleep(1)
-
-            
+           
             #Prepare Target List
-            prepared_target_list, invalid_entries=self.prepare_target_list(self.target_list, self.experiment_configuration["max_targets"], self.experiment_configuration["max_workers"])
+            #prepared_target_list, invalid_entries=self.prepare_target_list(self.target_list, self.experiment_configuration["max_targets"], self.experiment_configuration["max_workers"])
             #TODO Save them?
-            print("invalid_entries", invalid_entries)
-            print("Valid Entires", len(prepared_target_list))
+            #print("invalid_entries", invalid_entries)
+            #print("Valid Entires", len(prepared_target_list))
             #Loop over List
             #Save List
-            self.processed_targets=prepared_target_list
-
+            #self.processed_targets=prepared_target_list
+          
             #Initialize 
             fuzz_tasks=[]
             subset_length=self.experiment_configuration["target_subset_size"]
@@ -844,7 +850,7 @@ class ExperimentRunner:
                 self.runner_logger.error("Exception During saving the Experiment Logs/Results: %s", e)
             finally:
                 self.exp_log.copy_log_file()
-        return
+        return"""
 
     """capture_threads=[] 
 

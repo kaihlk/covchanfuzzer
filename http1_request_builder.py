@@ -205,7 +205,7 @@ class HTTP1_Request_Builder:
                     scheme="http://"
                 #subdomains                      
             if include_subdomain:
-               subdomain=self.subdomain_placeholder+"."
+               subdomain=self.subdomain_placeholder   ###SUBDOMAINS need to be ended with .
             else:
                subdomain="" 
             #Port
@@ -216,7 +216,8 @@ class HTTP1_Request_Builder:
             #absolute uri
             new_uri =scheme + subdomain + self.domain_placeholder + new_port + self.path_placeholder
         else:
-            new_uri=path
+            #relative uri
+            new_uri=self.path_placeholder
 
         request_line = f"{method} {new_uri} {protocol}\r\n"
 
@@ -239,6 +240,7 @@ class HTTP1_Request_Builder:
         request_string += "\r\n"
         deviation_count=0     
         return request_string, deviation_count, new_uri
+
 
     def generate_request(self, experiment_configuration, selected_port, new_fuzz_value=0):
         
@@ -266,50 +268,51 @@ class HTTP1_Request_Builder:
             else:
                 headers = self.default_headers_sets["curl_HTTP/1.1(TLS)"].copy()
             # Create a copy to avoid modifying the original list
-
-
         return self.generate_cc_request(port, method, path, headers, content, fuzz_value, relative_uri, include_subdomain, include_port, protocol)
         
+
     def path_generator(self, domain_specific_path=[], test_path="", fuzzvalue=0.5):
         """Adapts the path of the domain (randomly one from the domain specific path list) and/or the CC, returns empty string'' if no input specified"""
         if len(domain_specific_path)!=0:
             path=random.choice(domain_specific_path)
         else: path=test_path
         ##Insert CC Part here
-        
-        
         return path
 
 
-
-
-
-    def replace_host_and_domain(self, prerequest, domain, standard_subdomain="", host=None, include_subdomain_host_header=False, path="", override_uri="", fuzzvalue=0.5):
+    def replace_host_and_domain(self, prerequest, uri, standard_subdomain="", host_header=None, include_subdomain_host_header=False, path="", override_uri="", fuzzvalue=0.5):
             "Replace the the Placeholders from the Prerequest to adapt it to the host"
             try:
                 #Prepare the parts of URI
                 #Break the domain into pieces
-                _scheme, subdomains, hostname, tldomain, _port, path =self.parse_host(domain)
-                if subdomains=="":
-                    subdomains=standard_subdomain
+                _scheme, subdomains, hostname, tldomain, _port, uri_path =self.parse_host(uri)
+                #if subdomains=="":
+                #    subdomains=standard_subdomain
+                if not subdomains=="" and not subdomains.endswith('.'):
+                    subdomains += '.'
                 new_domain=hostname+"."+tldomain
                 #Build host from domain if not provided
-                if host is None:
+                if host_header is None:
                     if include_subdomain_host_header is True:
-                        host=subdomains+"."+new_domain
+                        host_header=subdomains+"."+new_domain
                     else:
-                        host=domain
+                        host_header=new_domain
                 #Replace domain if override_uri
                 if override_uri!="":
                     new_domain=override_uri
                     prerequest=prerequest.replace('https://', '',1)
-                new_path=path    
+                if uri_path=="":
+                    new_path=path
+                else:
+                    new_path=uri_path
+                if not new_path.startswith("/"):
+                    new_path="/"+new_path   
                 #This inserts the sudomain in the uri
                 request=prerequest.replace(self.subdomain_placeholder,subdomains)
                 request=request.replace(self.domain_placeholder, new_domain)
                 request=request.replace(self.path_placeholder, new_path)
                 #The Subdomain inclusion for the host header field takes places here,
-                request=request.replace(self.host_placeholder, host)
+                request=request.replace(self.host_placeholder, host_header)
 
                 deviation_count=0
 

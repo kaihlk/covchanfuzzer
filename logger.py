@@ -58,6 +58,7 @@ class TestRunLogger:
         log_folder = f"{self.experiment_folder}/{timestamp}_{self.target_host}"
         os.makedirs(log_folder, exist_ok=True)
         return log_folder
+        
     def get_logging_folder(self):
         return self.log_folder
 
