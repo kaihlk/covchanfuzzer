@@ -207,8 +207,11 @@ class HTTP1_Request_CC_Random_Whitespace_opt(HTTP1_Request_Builder):
                 # Create a string with random number of Whitespaces and Tabulators, third possible char?  ????
                 whitespaces = ""
                 while random.random() < fuzzvalue:
-                    # Random Choice from Tabulator, Whitespace, carriage retrun + newline + Whitespace
-                    random_linearwhithespace = random.choice(["\t", " ", "\r\n "])
+                    # Random Choice from Tabulator, Whitespace, no carriage retrun + newline + Whitespace
+                    if field_name!="Host":     #no tab at host
+                        random_linearwhithespace = random.choice(["\t", " "])
+                    else: 
+                        random_linearwhithespace = " "
                     whitespaces += random_linearwhithespace
                     deviation_count += 1
                 # Add the whitespace string at the end of the value

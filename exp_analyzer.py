@@ -20,8 +20,8 @@ class Domain_Response_Analyzator():
             path+"/experiment_stats.csv")
         self.data_frame_prerequest_stats = pandas.read_csv(
             path+"/prerequests.csv")
-        #self.data_frame_uri = pandas.read_csv(path+"/uri_dev_statuscode.csv")
-        #self.data_frame_rel_uri = pandas.read_csv(path+"/rel_uri_dev_statuscode.csv")        
+        self.data_frame_uri = pandas.read_csv(path+"/uri_dev_statuscode.csv")
+        self.data_frame_rel_uri = pandas.read_csv(path+"/rel_uri_dev_statuscode.csv")        
         self.experiment_configuration=self.load_exp_outcome(self.exp_path)
         self.dra_logging=logging.getLogger("main.runner.dra_logger")
         
@@ -57,9 +57,9 @@ class Domain_Response_Analyzator():
         self.save_exp_analyzer_results(host_statistics, prerequest_statistics)
         self.plot_deviation_count_distribution(self.data_frame_prerequest_stats)
         self.plot_2xx_over_attempt_no(self.data_frame_prerequest_stats)
-        #self.plot_uri_deviation_count_distribution(self.data_frame_uri)
-        #self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
-        #self.plot_scatter_prerequest(self.data_frame_rel_uri)
+        self.plot_uri_deviation_count_distribution(self.data_frame_uri)
+        self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
+        self.plot_scatter_prerequest(self.data_frame_rel_uri)
         self.plot_hosts_responses(self.data_frame_exp_stats)
         
         
@@ -212,7 +212,7 @@ class Domain_Response_Analyzator():
     
     def plot_unsorted_data(self, df):
         # Daten in NumPy-Arrays umwandeln
-        data_frame = df.sort_values(by=['1xx','3xx', '4xx', '5xx', '9xx', '2xx'], ascending=[False,False, False, False, False, True])
+        data_frame = df.sort_values(by=['3xx', '4xx', '5xx', '9xx', '2xx'], ascending=[False, False, False, False, True])
 
         hosts = numpy.array(data_frame['Host'])
 
@@ -578,6 +578,6 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/extracted_logs/attic/experiment_19"
+    path = f"{log_dir}/extracted_logs/EOW/experiment_4"
     dra = Domain_Response_Analyzator(path)
     dra.start()

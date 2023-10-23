@@ -14,7 +14,8 @@ requests_builders ={
     8: HTTP1_Request_CC_Random_Content,
     9: HTTP1_Request_CC_Random_Content_No_Lenght_Field,
     10: HTTP1_Request_CC_URI_Common_Addresses,
-    11: HTTP1_Request_CC_URI_Common_Addresses_And_Anchors
+    11: HTTP1_Request_CC_URI_Common_Addresses_And_Anchors,
+    31: HTTP1_Request_CC_Random_Whitespace_opt,
 }
 
 """ class_mapping_connection = {

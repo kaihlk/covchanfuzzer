@@ -172,31 +172,6 @@ class Target_List_Preperator:
         print("Column Names (Headers):", df.columns)
         return df
 
-
-        """"    def get_target_subset_from_dataframe(self, target_dataframe, start_position=0, length=10):
-        Takes a subset from the target DataFrame and returns it as a new DataFrame
-        
-        # Check inputs
-        if start_position < 0 or start_position + length > len(target_dataframe):
-            raise ValueError("Invalid start_position")
-        
-        # Extract the subset DataFrame
-        subset_df = target_dataframe.iloc[start_position:start_position+length].copy()
-        
-        return subset_df"""
-
-    def get_target_subset(self, target_list, start_position=0, length=10)-> list:
-        #Takes a subset from the target list to reduce the traffic to one target, in order to 
-        #Check inputs
-        if start_position <0 or start_position+length > len(target_list):
-            raise ValueError("Invalid start_position")
-        subset=target_list[start_position:]
-        #Prevent length exeeding target_list
-        if length > len(subset):
-            length = len(subset)
-        subset=subset[:length]
-        return subset
-    
     
     def prepare_target(self, index, uri, max_redirect=2):
         """Processes a target, get DNS info, follows redirects and and check answers of basic requests"""
@@ -240,7 +215,7 @@ class Target_List_Preperator:
             log_path=self.exp_log_folder,    #Transfer to save TLS Keys
             )
 
-            if error_messages!="":
+            if len(error_messages)>1:
                 errors+=f"{uri}: HTTP Errors: {error_messages} "
             request_response_data={
                     "tranco_ranc": index,
@@ -252,14 +227,10 @@ class Target_List_Preperator:
                     "response_header":response_header_fields,
                      }
             with self.lock_rrd:
-                self.request_response_data_list.append(request_response_data)
-
-            
+                self.request_response_data_list.append(request_response_data)            
             if response_line is not None:
                 response_status_code = response_line["status_code"]
-                first_digit=int(str(response_status_code)[0])          
-         
-                
+                first_digit=int(str(response_status_code)[0])
                 if first_digit==2: 
                     passed_checks+=1 
                     print("passed checks: ",passed_checks)
@@ -329,7 +300,7 @@ class Target_List_Preperator:
                     # Try Standard Domain if no subdomain left
                     if last_try is True:
                         raise ValueError(f"Could not get DNS Info for: {uri} Error Messages: {errors}")
-                    target_host = standard_subdomain+"."+parts[0]
+                    target_host = standard_subdomain+"."+parts[0]+"."+parts[1]
                     last_try=True
         except Exception as e:
                 self.target_prep_logger.error(f"An error occurred during DNS Lookup: {e}")
@@ -363,6 +334,7 @@ class Target_List_Preperator:
     def check_target_list_subset(self, target_list, start_position=0, length=10 ):
         """Checks a subset from the target list, returns the validated entries"""
         #Check Inputs
+        
         print(start_position)
         if start_position <0 or start_position+length > len(target_list):
             raise ValueError("Invalid start_position")
@@ -374,11 +346,14 @@ class Target_List_Preperator:
         for index,row in subset.iterrows():
             target_data, errors=self.prepare_target(row['Rank'] , row['Domain'] )
             if target_data!=None:
-                row = pandas.DataFrame.from_dict(target_data, orient="index").T
-                df_checked_targets = pandas.concat([df_checked_targets, row], ignore_index=True)
                 if self.experiment_configuration["crawl_paths"]>0:
                     crawl_uri=target_data["uri"]
                     paths=host_crawler().get_paths(crawl_uri, self.experiment_configuration["target_port"], self.experiment_configuration["crawl_paths"], max_attempts=5, time_out=self.experiment_configuration["conn_timeout"])             
+                else:
+                    paths=["/ "]
+                target_data["paths"] = paths
+                row = pandas.DataFrame.from_dict(target_data, orient="index").T
+                df_checked_targets = pandas.concat([df_checked_targets, row], ignore_index=True)    
             else:
                 print("Errors:", errors)
                 invalid_entries_count+=1 

@@ -21,13 +21,14 @@ import logging
 
 
 class TestRunLogger:
-    def __init__(self, experiment_configuration, experiment_folder, host_ip_info, target_host, target_ip, target_port):
+    def __init__(self, experiment_configuration, experiment_folder, host_ip_info, target_host, target_ip, target_port, target_paths):
         self.experiment_configuration = experiment_configuration
         self.experiment_folder=experiment_folder
         self.host_ip_info=host_ip_info
         self.target_ip = target_ip
         self.target_port = target_port
         self.target_host =target_host
+        self.target_paths=target_paths
         self.log_folder = self.create_logging_folder()
         self.request_data_list=[]
         self.status_code_count= {}
@@ -360,8 +361,9 @@ class TestRunLogger:
 
         self.result_variables = {
             "host_ip_info": self.host_ip_info,
+            "paths": self.target_paths,
             "covertchannel_request_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_request_number"]]),
-            "covertchannel_request_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_connection_number"]]),
+            "covertchannel_connection_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_connection_number"]]),
             "covertchannel_timing_name": str(class_mapping.requests_builders[self.experiment_configuration["covertchannel_timing_number"]]),
             "Received_Status_Codes": self.status_code_count,
             "Logged_Messages": self.logged_attempts,
