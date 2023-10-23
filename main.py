@@ -2,6 +2,7 @@
 
 
 import csv
+import requests
 import time
 import os
 import logging
@@ -14,7 +15,7 @@ from upgrade_target_list import Target_List_Upgrader
 """ class_mapping_requests ={
     0: HTTP1_Request_from_CSV
     1: HTTP1_Request_Builder,
-    2: HTTP1_Request_CC_Case_sInsensitivity,
+    2: HTTP1_Request_CC_Case_Insensitivity,
     3: HTTP1_Request_CC_Random_Whitespace,
     4: HTTP1_Request_CC_Reordering_Header_Fields,
     5: HTTP1_Reqeust_CC_URI_Representation,
@@ -102,6 +103,22 @@ def get_last_experiment_number(log_path):
             last_row = row
     return int(last_row["experiment_no"])
 
+def get_public_ips():
+        try:
+            ip_info = {}
+            
+            # Get IPv4 address
+            response_ipv4 = requests.get("http://httpbin.org/ip")
+            if response_ipv4.status_code == 200:
+                data_ipv4 = response_ipv4.json()
+                return data_ipv4.get("origin")
+            else:
+                ip_info = "Unable to retrieve IPv4 address."
+
+            return ip_info
+
+        except requests.RequestException as e:
+            return {"error": str(e)}
 
 def load_target_list(target_list_csv):
     """Load the list back from the CSV file, considering only the first two colum"""
@@ -135,15 +152,15 @@ def main():
         "verbose": False,
         "timestamp": time.strftime("%Y%m%d_%H%M%S"),
         # Covert Channel Option
-        "covertchannel_request_number":6,
+        "covertchannel_request_number":31,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
         "min_fuzz_value": 0.01,
         "spread_deviation": 0.9,
         # Target Selection Options
-        "num_attempts": 1,
-        "max_targets": 10,  # len(self.target_list):
-        "max_workers": 2,  # Parallel Processing of subsets,
+        "num_attempts": 1000,
+        "max_targets": 1000,  # len(self.target_list):
+        "max_workers": 25,  # Parallel Processing of subsets,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
         "check_basic_request": 2,
@@ -151,13 +168,13 @@ def main():
         # "target_list_subdomain_10000.csv",#"new_target_list.csv",
         "target_list": "target_list_subdomain_10000.csv",
 
-        "target_subset_size": 3,
+        "target_subset_size": 40,
         "target_add_www": True,  # Add www if no other subdomain is known
         # "target_host": "www.example.com",  #Just for special useipvstt
         "target_port": 443,  # 443, 8080 Apache
         # Connection Options
         "conn_timeout": 5,  # seconds
-        "nw_interface": "enp0s3",#s31f6#0s3",#31f6",#1s6",  # lo, docker, enp0s3
+        "nw_interface": "enp0s3",#"enp0s31f6",#"enp0s3",#s31f6#0s3",#31f6",#1s6",  # lo, docker, enp0s3
         "use_ipv4": True,
         "use_TLS": True,
         "use_HTTP2": False,
@@ -166,7 +183,7 @@ def main():
         "HTTP_version": "HTTP/1.1",
         "method": "GET",
         "url": "",  # Complete URl
-        "follow_redirects": 2, #Follow the first redirect if provided
+        "follow_redirects": 1, #Follow the first redirect if provided
         "path": "/",  # Dynamic, List, ?s
         "crawl_paths": 0, #(dafault 0 )
 
@@ -181,10 +198,16 @@ def main():
         # curl_HTTP/1.1(TLS), firefox_HTTP/1.1, firefox_HTTP/1.1_TLS, chromium_HTTP/1.1, chromium_HTTP/1.1_TLS"
         "standard_headers": "firefox_HTTP/1.1_TLS",
         "content": "random",  # "random", "some_text""fuzz_value": 0.9,
-
+        "ip":get_public_ips()
      
     }
-   
+
+
+  
+
+  
+
+
     run_exp = True
     if run_exp is True:
         try:
