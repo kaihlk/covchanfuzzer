@@ -370,9 +370,10 @@ class CustomHTTP(HTTP):
 
 
         # DNS Lookup if info not provided, maybe delete it
-        #if host_ip_info is None:
-        #    host_ip_info = self.lookup_dns(host,port)
-        #print(host_ip_info)
+        if host_ip_info is None:
+
+            host_ip_info = self.lookup_dns(host,port,use_ipv4)
+            host_ip_info=host_ip_info[0]
         #TODO Add IPV6 support
         
         req = self.build_http_headers(host, path, headers, custom_request)

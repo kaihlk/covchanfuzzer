@@ -843,12 +843,12 @@ class ExperimentRunner:
 
         except RuntimeError as e:
             self.runner_logger.error(
-                "During the experiment an error occured", e)
+                "During the experiment an error occured" %s, e)
             raise
 
         except Exception as e:
             self.runner_logger.error(
-                "During the experiment an error occured", e)
+                "During the experiment an error occured %s", e)
         finally:
             # Wait for the global capture thread to finish
             global_stop_event.set()

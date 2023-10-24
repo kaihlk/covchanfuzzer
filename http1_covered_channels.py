@@ -224,6 +224,51 @@ class HTTP1_Request_CC_Random_Whitespace_opt(HTTP1_Request_Builder):
 
         return request_string, deviation_count, new_uri
 
+class HTTP1_Request_CC_Random_Whitespace_opt2(HTTP1_Request_Builder):
+    #Try to verify findings of first runn
+    
+       
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
+        # Check if headers are provided elsewise take default headers
+        if headers is None:
+            headers = default_headers.copy()
+        else:
+            # Create a copy to avoid modifying the original list
+            headers = headers.copy()
+        
+        # Insert the Host header at the beginning of the list
+        headers.insert(0, ("Host", self.host_placeholder))
+        
+        # Build the request_line from the provided arguments
+        scheme=""
+        request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
+       
+        deviation_count = 0
+        request_string = request_line
+        # Iterate over header fields(HTTP1_Request_Builder):
+        for header in headers:
+            field_name, field_value = header
+            # Random choice if value is changed
+            if random.random() < fuzzvalue:
+                # Create a string with random number of Whitespaces and Tabulators, third possible char?  ????
+                whitespaces = ""
+                while random.random() < fuzzvalue:
+                    # Random Choice from Tabulator, Whitespace, no carriage retrun + newline + Whitespace
+                    if field_name!="Host":     #no tab at host
+                        random_linearwhithespace = random.choice(["\t", " "])
+                    else: 
+                        random_linearwhithespace = ""
+                    whitespaces += random_linearwhithespace
+                    deviation_count += 1
+                # Add the whitespace string at the end of the value
+                field_value += whitespaces
+            # Build the line of the request string
+            request_string += f"{field_name}: {field_value}\r\n"
+
+        # End the request Sclass HTTP1_Request_CC_tring
+        request_string += "\r\n"
+
+        return request_string, deviation_count, new_uri
 
 
 
@@ -328,6 +373,73 @@ class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
         request_string += "\r\n"
 
         return request_string, deviation_count, new_uri
+
+
+class HTTP1_Request_CC_URI_Represenation_opt(HTTP1_Request_Builder):
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
+        '''URI in the request line
+        Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers
+        Divide in 3 cover channels due to difference of technique
+        Change the part of the path to make an absolute URI, may include scheme, port or
+        Empty or not given port assune 80
+        http as scheme name and host name case insenitivity'''
+        
+        #Relative URI does not make sense here
+        relative_uri=False
+        scheme=""
+
+        # Check if headers are provided elsewise take default headers
+        if headers is None:
+            headers = default_headers.copy()
+        else:
+            # Create a copy to avoid modifying the original list
+            headers = headers.copy()
+        # Insert the Host header at the beginning of the list
+        headers.insert(0, ("Host", self.host_placeholder))        
+        deviation_count = 0
+        
+        #Randomly include a scheme
+        new_scheme = random.choice([scheme, "", "http://", "https://"])
+        if new_scheme != scheme:
+            deviation_count += 1
+        #Randomly include a subdomain
+        new_include_subdomain= include_subdomain #random.choice([False, True])
+        if new_include_subdomain!= include_subdomain:
+            deviation_count+=1
+        #Randomly include a port
+        new_include_port=random.choice([False, True])
+        if new_include_port!= include_port:
+            deviation_count+=1
+        #Randomly choose a port
+        new_port = random.choice(
+            [
+                str(port),"80","443",str(random.randint(0, 65535)),  #Hard to analyze
+            ]
+        )
+        if new_port !=port:
+            deviation_count += 1
+
+        new_path = random.choice(["", "/", path])
+        if new_path != path:
+            deviation_count += 1
+
+        
+        # Build a new URL from the input
+        request_line, new_uri = self.build_request_line(new_port, method, new_path, headers, new_scheme, fuzzvalue, relative_uri, new_include_subdomain, new_include_port, protocol)
+        
+        request_line = f"{method} {new_uri} HTTP/1.1\r\n"
+
+        request_string = request_line
+        for header in headers:
+            request_string += f"{header[0]}: {header[1]}\r\n"
+
+        request_string += "\r\n"
+
+        return request_string, deviation_count, new_uri
+
+
+
+
 
 class HTTP1_Request_CC_URI_Represenation_Apache_Localhost(HTTP1_Request_Builder):
     def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):

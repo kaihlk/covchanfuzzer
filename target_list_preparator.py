@@ -30,6 +30,11 @@ class Target_List_Preperator:
         dataframe.to_csv(file_path, index=False)
         print("CSV Saved: ", file_path)
         return
+    def save_df_json(self, dataframe, filename):
+        file_path = f"{self.exp_log_folder}/{filename}"            
+        dataframe.to_json(file_path, index=False)
+        print("JSON Saved: ", file_path)
+        return
 
     def save_dict_list(self, dict_list, filename):
         '''Save the recorded requests'''
@@ -60,6 +65,7 @@ class Target_List_Preperator:
             
         self.save_df(df_target_data, filename="target_list.csv")
         self.save_dict_list(self.request_response_data_list, filename="request_response.csv")
+        self.save_df_json(df_target_data, filename="target_list.json")
         return df_target_data
 
     
@@ -348,7 +354,7 @@ class Target_List_Preperator:
             if target_data!=None:
                 if self.experiment_configuration["crawl_paths"]>0:
                     crawl_uri=target_data["uri"]
-                    paths=host_crawler().get_paths(crawl_uri, self.experiment_configuration["target_port"], self.experiment_configuration["crawl_paths"], max_attempts=5, time_out=self.experiment_configuration["conn_timeout"])             
+                    paths=host_crawler(self.experiment_configuration, self.exp_log_folder).get_paths(crawl_uri, self.experiment_configuration["target_port"], self.experiment_configuration["crawl_paths"], max_attempts=5, time_out=self.experiment_configuration["conn_timeout"])             
                 else:
                     paths=["/ "]
                 target_data["paths"] = paths
