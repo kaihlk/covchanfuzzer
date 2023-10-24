@@ -5,8 +5,9 @@
 import string
 import random
 import mutators
-from urllib.parse import quote
+import urllib.parse
 from http1_request_builder import HTTP1_Request_Builder
+
 
 
 def random_switch_case_of_char_in_string(original_string, fuzzvalue):
@@ -889,6 +890,101 @@ class HTTP1_Request_CC_URI_Common_Addresses_And_Anchors(HTTP1_Request_Builder):
           
         return request_string, deviation_count, new_uri
 
+
+class HTTP1_Request_CC_URI_Extend_with_fragments(HTTP1_Request_Builder):
+    def __init__(self):
+        super().__init__()  # Call the constructor of the base class first
+        self.cc_uri_post_generation = True
+
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
+        '''CC URI  with addional changes in Case insensitvity'''
+        # Check if headers are provided elsewise take default headers
+        if headers is None:
+            headers = default_headers.copy()
+        else:
+            # Create a copy to avoid modifying the original list
+            headers = headers.copy()
+        scheme=""
+
+        # Insert the Host header at the beginning of the list
+        headers.insert(0, ("Host", self.host_placeholder))
+
+
+          # Build a new URL from the given host
+        request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
+        
+
+        deviation_count=0
+        if protocol=="":
+            protocol="HTTP/1.1"
+        request_line = f"{method} {new_uri} {protocol}\r\n"
+        request_string = request_line
+
+        for header in headers:
+            request_string += f"{header[0]}: {header[1]}\r\n"
+
+        request_string += "\r\n"
+
+        return request_string, deviation_count, new_uri
+
+    def replace_host_and_domain(self, prerequest, uri, standard_subdomain="", host_header=None, include_subdomain_host_header=False, path="", override_uri="", fuzzvalue=0.5):
+        "Replace the the Placeholders from the Prerequest to adapt it to the host"
+        try:
+            #Prepare the parts of URI
+            #Break the domain into pieces
+            _scheme, subdomains, hostname, tldomain, _port, uri_path =self.parse_host(uri)
+            #if subdomains=="":
+            #    subdomains=standard_subdomain
+            if not subdomains=="" and not subdomains.endswith('.'):
+                subdomains += '.'
+            new_domain=hostname+"."+tldomain
+            #Build host from domain if not provided
+            if host_header is None:
+                if include_subdomain_host_header is True:
+                    host_header=subdomains+"."+new_domain
+                else:
+                    host_header=new_domain
+            #Replace domain if override_uri
+            if override_uri!="":
+                new_domain=override_uri
+                prerequest=prerequest.replace('https://', '',1)
+            if uri_path=="":
+                new_path=path
+            else:
+                new_path=uri_path
+            if not new_path.startswith("/"):
+                new_path="/"+new_path   
+
+            ###CC Part#
+            max_length=1024*10    #8kb nginx and apache limit for repsonse line
+            fuzzvalue=0.5     #Insert Logic in runnner
+            char_sets = {
+                "letters_digits": string.ascii_letters + string.digits,
+                "subdelimiters": "!$&'()*+,;=",
+                "general_delimiters": ":/?#[]@"
+            }
+            chosen_set = random.choice(list(char_sets.keys()))
+            fragment=mutators.generate_random_string(chosen_set, max_length, 0)
+            if random.random()<fuzzvalue:
+                fragment = urllib.parse.quote(fragment) 
+            deviation_count=len(fragment)+1
+            new_path=new_path+"#"+fragment
+            #### 
+
+                       
+            #This inserts the sudomain in the uri
+            request=prerequest.replace(self.subdomain_placeholder,subdomains)
+            request=request.replace(self.domain_placeholder, new_domain)
+            request=request.replace(self.path_placeholder, new_path)
+            #The Subdomain inclusion for the host header field takes places here,
+            request=request.replace(self.host_placeholder, host_header)
+
+    
+
+            new_uri=self.extract_new_uri(request)
+            return request, deviation_count, new_uri
+        except Exception as ex:
+            print(ex)
 
 
 

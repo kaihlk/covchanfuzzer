@@ -2,6 +2,7 @@
 #methods to mutate inputs
 
 import random
+import string
 """ print(SampleString)
     print(mutators.delete_random_char(SampleString))
     print(mutators.insert_random_char(SampleString))
@@ -60,12 +61,10 @@ def random_slice_and_swap_string(s: str) -> str :
     pos = random.randint(0, len(s) - 1)
     return s[pos:] + s[:pos]
 
-def generate_random_string(char_set: str, length: int, minlength=0) -> str :
+def generate_random_string( char_set: str = string.ascii_letters + string.digits,length: int = 100, minlength: int = 0) -> str:
     # Generate a random string from a charset
     random_chars = [random.choice(char_set) for _ in range(minlength, length)]
     return ''.join(random_chars)
-
-
 #### List Mutatations #### 
 
 def delete_random_entry(kv_list: list) -> list:
