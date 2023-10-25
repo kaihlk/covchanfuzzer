@@ -158,12 +158,12 @@ def main():
         "min_fuzz_value": 0.01,
         "spread_deviation": 0.9,
         # Target Selection Options
-        "num_attempts": 10,
+        "num_attempts": 1000,
         "max_targets": 1000,  # len(self.target_list):
         "max_workers": 25,  # Parallel Processing of subsets,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
-        "check_basic_request": 1,
+        "check_basic_request": 2,
 
         # "target_list_subdomain_10000.csv",#"new_target_list.csv",
         "target_list": "target_list_subdomain_10000.csv",
@@ -174,7 +174,10 @@ def main():
         "target_port": 443,  # 443, 8080 Apache
         # Connection Options
         "conn_timeout": 5,  # seconds
-        "nw_interface": "enp0s3",#1f6",#"enp0s3",#s31f6#0s3",#31f6",#1s6",  # lo, docker, enp0s3
+        #"nw_interface": "enp0s3" lappy
+        #"nw_interface": "enp0s31f6",#attic
+        "nw_interface": "enp6s0", #EOW #1f6",#"enp0s3",#s31f6#0s3",#31f6",#1s6",  # lo, docker, enp0s3
+        
         "use_ipv4": True,
         "use_TLS": True,
         "use_HTTP2": False,
