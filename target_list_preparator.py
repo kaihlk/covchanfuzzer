@@ -82,6 +82,9 @@ class Target_List_Preperator:
         subsets_tasks=[]
         df_checked_targets=pandas.DataFrame()#checked_target_list=[]
         active_workers=0
+
+        if max_workers>=10: max_workers=10
+
         subset_length=max(int(max_targets/max_workers),1)    
         #Make sure if that the target list has enough entries --Maybe drop
         ##if max_targets>len(target_list):
@@ -290,9 +293,11 @@ class Target_List_Preperator:
             subdomains+="."
         target_host=subdomains+hostname+"."+tldomain
         try:
+            
             last_try=False
             errors=""
             while True:
+                time.sleep(0.2)  # Just for DNS r
                 socket_info, error = CustomHTTP().lookup_dns(target_host, target_port, use_ipv4)    
                 if socket_info is not None:
                     # Socket info found, exit the loop
@@ -342,7 +347,7 @@ class Target_List_Preperator:
         #Check Inputs
         
         print(start_position)
-        if start_position <0 or start_position+length > len(target_list):
+        if start_position < 0 or start_position+length > len(target_list):
             raise ValueError("Invalid start_position")
         #initalize counter for failed DNS LookUp http_options
         invalid_entries_count=0
@@ -356,7 +361,7 @@ class Target_List_Preperator:
                     crawl_uri=target_data["uri"]
                     paths=host_crawler(self.experiment_configuration, self.exp_log_folder).get_paths(crawl_uri, self.experiment_configuration["target_port"], self.experiment_configuration["crawl_paths"], max_attempts=5, time_out=self.experiment_configuration["conn_timeout"])             
                 else:
-                    paths=["/ "]
+                    paths=["/"]
                 target_data["paths"] = paths
                 row = pandas.DataFrame.from_dict(target_data, orient="index").T
                 df_checked_targets = pandas.concat([df_checked_targets, row], ignore_index=True)    
