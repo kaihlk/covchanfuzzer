@@ -214,7 +214,8 @@ class CustomHTTP(HTTP):
             ssl_ctx.load_verify_locations("/etc/ssl/certs/ca-certificates.crt")
             ssl_ctx.check_hostname = False
             # Export Sessionkeys, to be able to analyze encrypted Traffic with Wireshark etc.
-            ssl_ctx.keylog_filename = f"{log_path}/sessionkeys.txt"
+            if log_path is not None:
+                ssl_ctx.keylog_filename= f"{log_path}/sessionkeys.txt"
             ssl_ctx.set_alpn_protocols(["http/1.1"])  # h2 is a RFC7540-hardcoded value
             ssl_sock = ssl_ctx.wrap_socket(s, server_hostname=hostname)
         except Exception as e:

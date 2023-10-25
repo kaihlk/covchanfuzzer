@@ -254,7 +254,12 @@ class Target_List_Preperator:
                         if not redirect_location.startswith(('http:', 'https:')):
                             uri = socket_dns_info["host"]+ redirect_location
                         else:
-                            uri = redirect_location
+                            #Sometimes location header is 2not processed properly in from scapy, it comes doubled
+                            parts=redirect_location.split("://")
+                            if len(parts)>2:
+                                uri = parts[0] + "://" + parts[-1]
+                            else:
+                                uri=redirect_location
                     else:
                         errors+=f"{uri}: Redirect Location not found"       
                 else:
@@ -358,8 +363,19 @@ class Target_List_Preperator:
             target_data, errors=self.prepare_target(row['Rank'] , row['Domain'] )
             if target_data!=None:
                 if self.experiment_configuration["crawl_paths"]>0:
-                    crawl_uri=target_data["uri"]
-                    paths=host_crawler(self.experiment_configuration, self.exp_log_folder).get_paths(crawl_uri, self.experiment_configuration["target_port"], self.experiment_configuration["crawl_paths"], max_attempts=5, time_out=self.experiment_configuration["conn_timeout"])             
+                    try:
+                        crawl_uri=target_data["uri"]
+                        print("Crawling:", crawl_uri)
+                        host_crawler_instance = host_crawler(self.experiment_configuration, self.exp_log_folder)
+                        with concurrent.futures.ThreadPoolExecutor() as executor:
+                            future = executor.submit(host_crawler_instance.get_paths, crawl_uri, self.experiment_configuration["target_port"], self.experiment_configuration["crawl_paths"], max_attempts=5, timeout=self.experiment_configuration["conn_timeout"])
+                            paths = future.result(self.experiment_configuration["crawl_paths"]+self.experiment_configuration["conn_timeout"])
+                    except concurrent.futures.TimeoutError:
+                        print("The crawling operation exceeded the specified timeout.")
+                        paths = ["/"]
+                    except Exception as e:
+                        print(f"An error occurred during crawling: {e}")
+                        paths = ["/"]
                 else:
                     paths=["/"]
                 target_data["paths"] = paths

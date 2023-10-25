@@ -2,10 +2,10 @@
 import requests
 import time
 import os
+import concurrent.futures
 from bs4 import BeautifulSoup
 import http1_request_builder as request_builder
 from custom_http_client import CustomHTTP
-
 from urllib.parse import urlparse, urljoin, urlsplit
 
 class host_crawler:
@@ -15,10 +15,9 @@ class host_crawler:
         #domain, links_to_return, max_attempts
         #self.link_to_return=link_to_return
         #self.max_attempts=max_attempts
-        self.ALLOWED_CONTENT_TYPES = {'text/html', 'text/plain'}
-        self.MAX_FILE_SIZE_BYTES = 1 * 1024 * 1024  # 1 MB
+        
         self.timeout=5
-        os.environ["SSLKEYLOGFILE"] = "secrets.log"
+        #os.environ["SSLKEYLOGFILE"] = "secrets.log"
         self.experiment_configuration=experiment_configuration
         self.exp_log_folder=exp_log_folder+"/crawl"
         os.makedirs(self.exp_log_folder, exist_ok=True)
@@ -36,6 +35,8 @@ class host_crawler:
     def get_links_from_url(self, url, max_links=5):
         """Looks for links on the URL, Filters them """
         #search_start=time.time()
+        ALLOWED_CONTENT_TYPES = {'text/html', 'text/plain'}
+        MAX_FILE_SIZE_BYTES = 1 * 1024 * 1024  # 1 MB
         try: 
             headers = {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; rv:102.0) Gecko/20100101 Firefox/102.0',
@@ -49,18 +50,19 @@ class host_crawler:
                 "Sec-Fetch-Mode": "navigate", 
                 "Sec-Fetch-Site": "cross-site",
             }
+            print("Crawler: ",url)
             response = requests.get(url, headers=headers)
             response.raise_for_status()  # Check for HTTP errors
 
             # Check the content type of the response
             content_type = response.headers.get('content-type', '').split(';')[0]
-            if content_type not in self.ALLOWED_CONTENT_TYPES:
+            if content_type not in ALLOWED_CONTENT_TYPES:
                 # print(f"Skipped {url} (Content type: {content_type})")
                 return []
             # Check the file size
             if 'content-length' in response.headers:
                 file_size = int(response.headers['content-length'])
-                if file_size > self.MAX_FILE_SIZE_BYTES:
+                if file_size > MAX_FILE_SIZE_BYTES:
                     #print(f"Skipped {url} (File size: {file_size} bytes)")
                     return []
 
@@ -69,6 +71,7 @@ class host_crawler:
             base_url = parsed_url.scheme + "://" + parsed_url.netloc
             original_path = parsed_url.path
             links = set()
+            visited_links = set() 
 
             for link in soup.find_all('a', href=True):
                
@@ -88,16 +91,14 @@ class host_crawler:
                 if '#' in absolute_link:
                     #print("Link contains fragment: ",absolute_link)
                     continue
-                    
-
+                if absolute_link in visited_links:
+                    continue
+                visited_links.add(absolute_link) 
                 # Skip links to different subdomains
                 if self.is_external_link(base_url, absolute_link):
                     #print("Link is external: ",absolute_link)
                     continue                
                 links.add(absolute_link)
-                
-
-
                 if len(links) >= max_links:
                     break
             filtered_links = set()
@@ -106,8 +107,7 @@ class host_crawler:
                     filtered_links.add(link)
             if filtered_links:
                 links = filtered_links
-            
-            
+   
             sorted_links = sorted(list(links), key=len)
             return sorted_links[:max_links]
         
@@ -144,11 +144,11 @@ class host_crawler:
         """Checks if a link is returning a 200 Resonsecode"""
         try:
             host=urlparse(link).netloc
-            request_string, _deviation_count, _new_uri = request_builder.HTTP1_Request_Builder().generate_request(self.experiment_configuration, self.experiment_configuration["target_port"])
+            request_string, _deviation_count, new_uri = request_builder.HTTP1_Request_Builder().generate_request(self.experiment_configuration, self.experiment_configuration["target_port"])
             #Replace Placeholders
             request, _deviation_count, _new_uri = request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, link, self.experiment_configuration["standard_subdomain"], host, self.experiment_configuration["include_subdomain_host_header"], path="/")
             #Send request
-            print(request)
+            print(host)
             response_line, _response_header_fields, _body, _measured_times, _error_messages  = CustomHTTP().http_request(
                 host=host,
                 use_ipv4=self.experiment_configuration["use_ipv4"],
@@ -157,7 +157,7 @@ class host_crawler:
                 custom_request=request,
                 timeout=self.experiment_configuration["conn_timeout"],
                 verbose=self.experiment_configuration["verbose"],
-                log_path=self.exp_log_folder,    #Transfer to save TLS Keys
+                log_path=None,    #Transfer to save TLS Keys
                 )
             if response_line is not None:
                 print(response_line)
@@ -174,11 +174,27 @@ class host_crawler:
             print(f"An error occurred while checking the link {link}: {e}")
             return False
 
-
-    
     def crawl_and_check_links(self, start_url, max_working_links, max_attempts=10):
         """Crawls to through domain, starting at the host_url and tries to get max working links, digs deeper into the website,  stops after max_attemps"""
-        #Initialise Variables
+        working_links = []
+        try:
+            links = self.get_links_from_url(start_url, 10 * max_working_links)
+        except Exception as e:
+            print(f"An error occurred when fetching links from {start_url}: {e}")
+        print("Found links:", links)
+        for link in links:
+            try:
+                if self.is_working_custom(link):
+                    working_links.append(link)
+                if len(working_links) >= max_working_links:
+                    break
+            except requests.exceptions.RequestException as e:
+                print(f"An error occurred while checking the link {link}: {e}")
+        return working_links
+    
+    #def crawl_and_check_links(self, start_url, max_working_links, max_attempts=10):
+        """Crawls to through domain, starting at the host_url and tries to get max working links, digs deeper into the website,  stops after max_attemps"""
+        """       #Initialise Variables
         #starttime=time.time()
         visited = set()
         links_to_check = [start_url]
@@ -220,11 +236,11 @@ class host_crawler:
         #duration=time.time()-starttime
         #print("Duration: ", duration)
         #print("Rounds: ",rounds)
-        return working_links
+        return working_links """
 
-    def get_paths(self, domain, port, link_count, max_attempts, time_out):
+    def get_paths(self, domain, port, link_count, max_attempts, timeout):
         """Get a number of valid paths for domain"""
-        self.timeout=time_out
+        self.timeout=timeout
         if "://" not in domain:
             if port==443:
                 uri="https://"+domain
@@ -234,28 +250,37 @@ class host_crawler:
             uri=domain
 
         paths=[]
-        paths.append("/")
+        
         if link_count==0:
             return paths
-        start_time=time.time()
         working_links=None
         try:
-            #while start_time-time.time()<time_out*link_count:
-                
-            #    if not working_links:
-            
-            working_links = self.crawl_and_check_links(uri, link_count, max_attempts)
-            #    else:
-            #        break
-            #        print("Links found after:",start_time-time.time())
-
+            working_links=self.crawl_and_check_links(uri, link_count, max_attempts)
         except Exception as e:
-            print("Error during Crawling for links:",e)
-            return paths
-        
+            # Log and handle other exceptions
+            print(f"An error occurred during crawling: {e}")
+            working_links = []
+                
+        """ try:
+            with concurrent.futures.ThreadPoolExecutor() as executor2:
+                future = executor2.submit(self.crawl_and_check_links, uri, link_count, max_attempts)
+                working_links = future.result(timeout=timeout*link_count)
+        except concurrent.futures.TimeoutError:
+            print(f"Crawling for links exceeded timeout of {timeout*link_count} seconds.")
+            working_links = []
+        except Exception as e:
+            # Log and handle other exceptions
+            print(f"An error occurred during crawling: {e}")
+            working_links = [] """
+
+
         for entry in working_links:
                 parsed_link = urlparse(entry)
                 paths.append(parsed_link.path)
+        
+        if len(paths)==0:
+            paths.append("/")
+    
         print("paths",paths)
 
         return paths
@@ -320,8 +345,8 @@ if __name__ == '__main__':
      
     }
 
-
-
+    resp=requests.get("https://barnesandnoble.com")
+    print(resp.headers)
 
     target_url = "https://www.microsoft.com/de-de/"  # Change this to the target URL
     max_links_to_return = 5
