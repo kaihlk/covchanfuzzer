@@ -255,7 +255,7 @@ class Domain_Response_Analyzator():
         #Extract Data
         df=dataframe[['Host', '1xx', '2xx', '3xx', '4xx', '5xx', '9xx']]
         #10 is not constant????
-        df.loc[:, ['1xx', '2xx', '3xx', '4xx', '5xx', '9xx']] /= 10      
+        #df.loc[:, ['1xx', '2xx', '3xx', '4xx', '5xx', '9xx']] /= 10      
 
         df = df.sort_values(by=['2xx', '1xx', '3xx', '4xx', '5xx', '9xx'], ascending=[False, False, False, False, False, False])
 
@@ -263,7 +263,7 @@ class Domain_Response_Analyzator():
         if len(df)<100:
             num_clusters=len(df)
         else: 
-            num_clusters = 100
+            num_clusters = 1000
         
         cluster_size = len(df) // num_clusters
         df['Cluster'] = numpy.repeat(range(num_clusters), cluster_size)
@@ -279,7 +279,7 @@ class Domain_Response_Analyzator():
         ax = clustered_data.plot(kind='bar',  stacked=True, figsize=(12, 6),width=1, color=colors )
         
         mpl.xlabel('Clustered Hosts')
-        xticks = numpy.arange(0, num_clusters+1, 10)
+        xticks = numpy.arange(0, num_clusters+1, 100)
         ax.set_xticks(xticks)
         #ax.set_xticklabels(xticks)
         mpl.ylabel('Share of Response Codes')
@@ -578,6 +578,6 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/extracted_logs/EOW/experiment_4"
+    path = f"{log_dir}/extracted_logs/EOW/experiment_6"
     dra = Domain_Response_Analyzator(path)
     dra.start()

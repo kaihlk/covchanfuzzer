@@ -557,11 +557,14 @@ class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
     
     def replace_host_and_domain(self, prerequest, domain, standard_subdomain="", host=None, include_subdomain_host_header=False, path="",override_uri="", fuzzvalue=0.5):
         #CC specific
+        
+        fuzzvalue=0.5
         try:
-            _scheme, subdomains, hostname, tldomain, _port, _path =self.parse_host(domain)
+            scheme, subdomains, hostname, tldomain, _port, _path =self.parse_host(domain)
             if subdomains=="":
                 subdomains=standard_subdomain            
-            
+            if not subdomains=="" and not subdomains.endswith('.'):
+                    subdomains += '.'
             new_domain=hostname+"."+tldomain
             if host==None:
                 if include_subdomain_host_header==True:
@@ -573,14 +576,24 @@ class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
                 prerequest=prerequest.replace('https://', '',1)
             ##CC Change URI Case###
             #Change URI Case
+            if scheme!="":
+                new_scheme, deviation_count_scheme = random_switch_case_of_char_in_string(scheme, fuzzvalue)
+                if new_scheme.lower()=="http":
+                    request_sch=prerequest.replace("http", new_scheme)
+                elif new_scheme.lower()=="https":
+                    request_sch=prerequest.replace("https", new_scheme)
+            else: 
+                request_sch=prerequest
+                deviation_count_scheme=0
             new_domain, deviation_count_domain = random_switch_case_of_char_in_string(new_domain, fuzzvalue)
             new_subdomains, deviation_count_subdomains = random_switch_case_of_char_in_string(subdomains, fuzzvalue)
             new_path, deviation_count_path = random_switch_case_of_char_in_string(path, fuzzvalue)
-            deviation_count=deviation_count_domain+deviation_count_subdomains+deviation_count_path
-            #This inserts the sudomain in the uri    
-            prerequest_sub=prerequest.replace(self.subdomain_placeholder,new_subdomains)
-            request=prerequest_sub.replace(self.domain_placeholder, new_domain)
-            request=request.replace(self.path_placeholder, new_path)
+            deviation_count=deviation_count_scheme+deviation_count_domain+deviation_count_subdomains+deviation_count_path
+            #This inserts the sudomain in the uri
+
+            request_sub=request_sch.replace(self.subdomain_placeholder,new_subdomains)
+            request_dom=request_sub.replace(self.domain_placeholder, new_domain)
+            request=request_dom.replace(self.path_placeholder, new_path)
             #The Subdomain inclusion for the host header field takes places here,
             request=request.replace(self.host_placeholder, host)
             
