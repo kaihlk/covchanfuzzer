@@ -52,7 +52,7 @@ if __name__ == "__main__":
     log_dir, export_dir=get_logs_directory()
     experiment_no="98"
     experiment_maschine="ATTIC"
-    covert_channel_no="0"
+   
     input_folder = f"{log_dir}/experiment_{experiment_no}"
     covert_channel_no=read_cc_no(input_folder)   
     output_file_name=f"CC{covert_channel_no}_{experiment_maschine}_Experiment_{experiment_no}"
