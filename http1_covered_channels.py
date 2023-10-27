@@ -428,13 +428,27 @@ class HTTP1_Request_CC_URI_Represenation_opt(HTTP1_Request_Builder):
         # Build a new URL from the input
         request_line, new_uri = self.build_request_line(new_port, method, new_path, headers, new_scheme, fuzzvalue, relative_uri, new_include_subdomain, new_include_port, protocol)
         
+        
+        #Replace NEW_uri with new scheme
+        
         request_line = f"{method} {new_uri} HTTP/1.1\r\n"
 
+        
+        
+        
         request_string = request_line
         for header in headers:
             request_string += f"{header[0]}: {header[1]}\r\n"
 
+        
+        
+        
         request_string += "\r\n"
+
+
+
+
+
 
         return request_string, deviation_count, new_uri
 
