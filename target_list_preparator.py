@@ -23,6 +23,8 @@ class Target_List_Preperator:
         self.lock_df = threading.Lock()
         self.request_response_data_list=[]
         self.lock_rrd = threading.Lock()
+        self.base_check_fails = []
+        self.lock_bcf = threading.Lock()
         
 
     def save_df(self, dataframe, filename):
@@ -46,6 +48,16 @@ class Target_List_Preperator:
                 csv_writer.writerow(dictionary)
         print("CSV Saved: ", file_path)
         return   
+    
+    def save_list(self, list_to_save, filename):
+        """Adds an entry describing the experiment and the outcome into a list"""
+        file_path = f"{self.exp_log_folder}/{filename}"            
+        with open(file_path, "a+", newline="") as csvfile:
+            csv_writer = csv.writer(csvfile)
+            for entry in list_to_save:
+                csv_writer.writerow([entry])
+        print("CSV Saved: ", file_path)
+        return
         
     def prepare_data_frame(self, target_sub_list):
         """Builds a dataframe with validated target information"""
@@ -146,8 +158,14 @@ class Target_List_Preperator:
             df_checked_targets = df_checked_targets[:max_targets]
 
 
-        print("Invalid Entries:", invalid_entry_counts)    
+        print("Invalid Entries:", invalid_entry_counts) 
+      
+      
+        
+        self.save_dict_list(self.base_check_fails, "base_check_fails.csv")
+        self.save_dict_list(self.dns_fails, "dns_fails.csv")     
         self.save_df(df_checked_targets, filename="target_list.csv")
+        self.save_df_json(df_checked_targets, filename="target_list.json")
         self.save_dict_list(self.request_response_data_list, filename="request_response.csv")
 
         return df_checked_targets, invalid_entry_counts 
@@ -263,6 +281,14 @@ class Target_List_Preperator:
                     else:
                         errors+=f"{uri}: Redirect Location not found"       
                 else:
+                    with self.lock_bcf:
+                        base_check_fail={
+                            "uri": uri,
+                            "socket_info": socket_dns_info,
+                            "status-code": response_status_code,
+                            "errors": errors
+                            }
+                        self.base_check_fails.append(base_check_fail)
                     return None, errors
             else:  # No valid answer
                 return None, errors
@@ -321,7 +347,11 @@ class Target_List_Preperator:
         except Exception as e:
                 self.target_prep_logger.error(f"An error occurred during DNS Lookup: {e}")
                 with self.lock_df:
-                    self.dns_fails.append([uri,errors])    
+                    dns_fail={
+                        "uri":uri,
+                        "errors":errors,
+                    }
+                    self.dns_fails.append(dns_fail)    
         finally: 
             if socket_info is not None:
             #TODO Catch the case that IPv4 or IPv6 is not provided, some sites sends more than one IP/Port set per protocoll version,  example macromedia.com and criteo.com  

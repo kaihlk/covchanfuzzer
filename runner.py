@@ -863,9 +863,9 @@ class ExperimentRunner:
 
                 self.exp_log.add_global_entry_to_experiment_list(
                     self.experiment_configuration["experiment_no"])
-                self.exp_log.save_dns_fails(self.dns_fails)
-                self.exp_log.save_target_list(self.processed_targets)
-                self.exp_log.save_base_checks_fails(self.base_check_fails)
+                #self.exp_log.save_dns_fails(self.dns_fails)
+                #self.exp_log.save_target_list(self.processed_targets)
+                #self.exp_log.save_base_checks_fails(self.base_check_fails)
                 self.exp_log.save_prerequests(self.prerequest_list)
                 self.exp_log.prerequest_statisics(
                     self.prerequest_list, self.message_count)

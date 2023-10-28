@@ -250,7 +250,7 @@ class Domain_Response_Analyzator():
         #mpl.show()
         
     def plot_hosts_responses(self, dataframe, num_clusters=100):
-        file_path=self.exp_path+"/sortet_data.csv"
+        file_path=self.exp_path+"/sorted_data.csv"
         
         #Extract Data
         df=dataframe[['Host', '1xx', '2xx', '3xx', '4xx', '5xx', '9xx']]

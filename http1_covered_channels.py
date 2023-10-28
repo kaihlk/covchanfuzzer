@@ -377,6 +377,33 @@ class HTTP1_Request_CC_URI_Represenation(HTTP1_Request_Builder):
 
 
 class HTTP1_Request_CC_URI_Represenation_opt(HTTP1_Request_Builder):
+
+    def build_request_line(self, port, method, path, headers, scheme, fuzzvalue, relative_uri=True, include_subdomain=False, include_port=False, protocol="HTTP/1.1"):
+                # Build the request_line from the provided arguments
+        if relative_uri==False:        
+            #Scheme:
+  
+                #subdomains                      
+            if include_subdomain:
+               subdomain=self.subdomain_placeholder   ###SUBDOMAINS need to be ended with .
+            else:
+               subdomain="" 
+            #Port
+            if include_port==True:
+                new_port=":"+str(port)
+            else:
+                new_port=""
+            #absolute uri
+            new_uri =scheme + subdomain + self.domain_placeholder + new_port + self.path_placeholder
+        else:
+            #relative uri
+            new_uri=self.path_placeholder
+
+        request_line = f"{method} {new_uri} {protocol}\r\n"
+
+        return request_line, new_uri  
+
+
     def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
         '''URI in the request line
         Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers
@@ -387,7 +414,10 @@ class HTTP1_Request_CC_URI_Represenation_opt(HTTP1_Request_Builder):
         
         #Relative URI does not make sense here
         relative_uri=False
-        scheme=""
+        if port==443:
+            scheme="https://"
+        else:
+            scheme="http://"
 
         # Check if headers are provided elsewise take default headers
         if headers is None:
@@ -400,7 +430,7 @@ class HTTP1_Request_CC_URI_Represenation_opt(HTTP1_Request_Builder):
         deviation_count = 0
         
         #Randomly include a scheme
-        new_scheme = random.choice([scheme, "", "http://", "https://"])
+        new_scheme = random.choice(["", "http://", "https://"])
         if new_scheme != scheme:
             deviation_count += 1
         #Randomly include a subdomain
@@ -430,8 +460,13 @@ class HTTP1_Request_CC_URI_Represenation_opt(HTTP1_Request_Builder):
         
         
         #Replace NEW_uri with new scheme
+        """         if new_scheme.lower()=="http":
+                    request_sch=prerequest.replace("http", new_scheme)
+                elif new_scheme.lower()=="https":
+                    request_sch=prerequest.replace("https", new_scheme) """
+
         
-        request_line = f"{method} {new_uri} HTTP/1.1\r\n"
+        #request_line = f"{method} {new_uri} HTTP/1.1\r\n"
 
         
         
