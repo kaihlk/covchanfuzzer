@@ -21,6 +21,7 @@ pip install scapy
 pip install numpy
 pip install pandas
 pip install scipy
+pip install beautifulsoup
 
 # Wireshark User Group (replace 'username' with the actual username)
 sudo usermod -a -G wireshark kaihlk
@@ -34,3 +35,16 @@ cd ~/git
 git clone https://github.com/kaihlk/covchanfuzzer
 cd covchanfuzzer
 git init
+
+
+
+#Install Dropbox
+cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+~/.dropbox-dist/dropboxd
+mkdir ~/scripts
+wget -O ~/scripts/dropbox.py "https://www.dropbox.com/download?dl=packages/dropbox.py"
+chmod +x ~/scripts/dropbox.py
+sudo ln -s ~/scripts/dropbox.py /usr/local/bin/dropbox
+
+dropbox login
+dropbox start
