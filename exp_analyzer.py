@@ -694,7 +694,39 @@ class Domain_Response_Analyzator():
         ax.set_title('Scatterplot:\n2xx Response Rate over\n Steganographic Payload', fontsize=self.font_size_title, fontweight='bold' )
 
         # Set y-axis limits to 0% and 100%
-        ax.set_ylim(90, 105)  # 90,105 CC2
+        #ax.set_ylim(90, 105)  # 90,105 CC2
+
+        # Set y-tick locations and format labels as percentages
+        yticks = ax.get_yticks()
+        ax.set_yticks(yticks)
+        ax.set_yticklabels(['{:.0f}%'.format(ytick) for ytick in yticks])
+
+        # Show the plot
+        ax.grid(True)
+        #ax.tight_layout()
+        ax.legend()
+        #ax.savefig(self.exp_path+'/exp_stats_prerequest_statuscodes.png', dpi=300, bbox_inches='tight')
+        #mpl.show()
+        return ax
+
+
+    def cluster_prerequest_cc6(self, data_frame, ax):
+        """Figure 3 Bottom Left"""
+        #mpl.figure(figsize=(10, 8))
+        #ax = mpl.gca()
+        data_frame['2xx_percentage'] = data_frame['2xx'] / self.experiment_configuration["max_targets"] * 100
+        
+      
+
+        ax.scatter(data_frame['deviation_count'], data_frame['2xx_percentage'], alpha=0.5, s=500)  # Alpha for transparency
+
+        # Add labels and title
+        ax.set_xlabel('Steganographic Payload', fontsize=self.font_size_axis)
+        ax.set_ylabel('2xx Response Rate per Request (%)', fontsize=self.font_size_axis)
+        ax.set_title('Scatterplot:\n2xx Response Rate over\n Steganographic Payload', fontsize=self.font_size_title, fontweight='bold' )
+
+        # Set y-axis limits to 0% and 100%
+        #ax.set_ylim(90, 105)  # 90,105 CC2
 
         # Set y-tick locations and format labels as percentages
         yticks = ax.get_yticks()
@@ -750,7 +782,7 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/extracted_logs/attic/experiment_17"
+    path = f"{log_dir}/extracted_logs/EOW/experiment_10"
     dra = Domain_Response_Analyzator(path)
     dra.start()
   
