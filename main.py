@@ -152,7 +152,7 @@ def main():
         "verbose": False,
         "timestamp": time.strftime("%Y%m%d_%H%M%S"),
         # Covert Channel Option
-        "covertchannel_request_number": 51,
+        "covertchannel_request_number": 12,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
         "min_fuzz_value": 0.01,

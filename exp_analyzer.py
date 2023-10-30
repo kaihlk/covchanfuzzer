@@ -276,7 +276,7 @@ class Domain_Response_Analyzator():
         mpl.savefig(self.exp_path+'/combined_plots.png', dpi=300)
 
         # Show the combined plot
-        mpl.show()
+        #mpl.show()
 
         return
 
