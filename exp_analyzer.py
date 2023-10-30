@@ -12,6 +12,7 @@ import seaborn as sns
 from scipy.stats import norm
 from scipy import stats
 from scipy.optimize import curve_fit
+from matplotlib.gridspec import GridSpec
 
 class Domain_Response_Analyzator():
     def __init__(self, path):
@@ -20,11 +21,16 @@ class Domain_Response_Analyzator():
             path+"/experiment_stats.csv")
         self.data_frame_prerequest_stats = pandas.read_csv(
             path+"/prerequests.csv")
-        self.data_frame_uri = pandas.read_csv(path+"/uri_dev_statuscode.csv")
-        self.data_frame_rel_uri = pandas.read_csv(path+"/rel_uri_dev_statuscode.csv")        
-        self.experiment_configuration=self.load_exp_outcome(self.exp_path)
-        self.dra_logging=logging.getLogger("main.runner.dra_logger")
+        self.data_frame_pd_matrix = pandas.read_csv(
+            path+"/pd_matrix.csv")
         
+        #self.data_frame_uri = pandas.read_csv(path+"/uri_dev_statuscode.csv")
+        #self.data_frame_rel_uri = pandas.read_csv(path+"/rel_uri_dev_statuscode.csv")        
+        self.experiment_configuration, self.exp_meta_data=self.load_exp_outcome(self.exp_path)
+        self.dra_logging=logging.getLogger("main.runner.dra_logger")
+        self.font_size_axis=10
+        self.font_size_title=12
+        self.font_size_label=8
         return
 
     def load_exp_outcome(self, path):
@@ -45,25 +51,239 @@ class Domain_Response_Analyzator():
         active_workers = data["Active_Workers"]
         folder_size_mb = data["Folder_Size im MB"]
         invalid_target_entries = data["Invalid Target Entries"]
-        return experiment_configuration
+        return experiment_configuration, data
 
     def start(self):
-        self.plot_unsorted_data(self.data_frame_exp_stats)
-        self.cluster_domains(self.data_frame_exp_stats)
-        self.cluster_prerequest(self.data_frame_prerequest_stats)
+        #self.plot_unsorted_data(self.data_frame_exp_stats)
+        statuscodes_dict=self.count_status_codes(self.data_frame_pd_matrix)
         host_statistics=self.host_stats(self.data_frame_exp_stats)
         prerequest_statistics=self.prerequest_stats(self.data_frame_prerequest_stats)
         
+        latex_code = self.generate_latex_table(self.experiment_configuration, self.exp_meta_data, prerequest_statistics, host_statistics, statuscodes_dict)
+        report_filename = f'{self.exp_path}/experiment_report.tex'  
+        
+        self.export_latex_to_report(latex_code, report_filename)  
+
+
         self.save_exp_analyzer_results(host_statistics, prerequest_statistics)
-        self.plot_deviation_count_distribution(self.data_frame_prerequest_stats)
-        self.plot_2xx_over_attempt_no(self.data_frame_prerequest_stats)
-        self.plot_uri_deviation_count_distribution(self.data_frame_uri)
-        self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
-        self.plot_scatter_prerequest(self.data_frame_rel_uri)
+        #self.plot_deviation_count_distribution(self.data_frame_prerequest_stats)
+        
+        #self.plot_uri_deviation_count_distribution(self.data_frame_uri)
+        #self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
+        #self.plot_scatter_prerequest(self.data_frame_rel_uri)
         self.plot_hosts_responses(self.data_frame_exp_stats)
-        
-        
+        #self.figure1(self.data_frame_pd_matrix)
+        self.quadplot()
         return
+    
+    def count_status_codes(self,df):
+        status_code_counts = {}
+
+        # Iterate through the DataFrame to count the status codes
+        for col in df.columns[1:]:
+            for index, status_code in enumerate(df[col]):
+                # Assuming status_code is a string with 3 digits
+                if status_code not in status_code_counts:
+                    status_code_counts[status_code] = 1
+                else:
+                    status_code_counts[status_code] += 1
+
+        return status_code_counts
+    
+    def format_status_codes(self, status_code_counts):
+        # Create a table with 6 columns for each group
+        table = r"""
+        \begin{tabular}{p{1.1cm} p{2.4cm} p{2.4cm} p{2.4cm} p{2.4cm} p{2.4cm}}
+            \hline
+            \textbf{1xx} & \textbf{2xx} & \textbf{3xx} & \textbf{4xx} & \textbf{5xx} & \textbf{9xx} \\
+            \hline
+        """
+
+        # Initialize lists for each group
+        groups = {
+            '1xx': [],
+            '2xx': [],
+            '3xx': [],
+            '4xx': [],
+            '5xx': [],
+            '9xx': [],
+        }
+
+        # Group the status codes based on the leading digit
+        for code, count in status_code_counts.items():
+            leading_digit = str(int(code))[0]  # Extract the leading digit as a string
+            group_name = leading_digit + 'xx'
+            if group_name in groups:
+                groups[group_name].append(f"{int(code):03d} ({count})")
+
+        max_group_length = max(len(group) for group in groups.values())
+
+        # Populate the table
+        for i in range(max_group_length):
+            for group_name in ['1xx', '2xx', '3xx', '4xx', '5xx', '9xx']:
+                if i < len(groups[group_name]):
+                    table += groups[group_name][i]
+                table += ' & '
+
+            table = table[:-2]  # Remove the last ' & ' for the current row
+            table += r" \\"
+
+        table += r"""
+        \end{tabular}
+        """
+
+        return table
+
+
+
+
+    def generate_latex_table(self, experiment_configuration, outcome_info, prerequest_statistics, host_statistics, status_codes):
+        if experiment_configuration['relative_uri'] is True:
+            uri_type="relative"
+        else: 
+            uri_type="absolut"
+
+        if "EOW" in self.exp_path:
+            covertsender="EOW/TVCable"
+            imagepath=f"images/eow_exp_{experiment_configuration['experiment_no']}/"
+        else:
+            covertsender="ATTIC/FtH"
+            imagepath=f"images/exp_{experiment_configuration['experiment_no']}/"
+            
+        seconds=outcome_info["Experiment_Duration(s)"]
+        hours, remainder = divmod(seconds, 3600)  # 3600 seconds in an hour
+        minutes, _ = divmod(remainder, 60)        # 60 seconds in a minute
+        duration_str = f"{int(hours):2d}:{int(minutes):2d}h"
+        
+        
+        latex_table = r"""
+\begin{table}[htbp]
+\caption{Experiment Outcome: CC"""+str(experiment_configuration["covertchannel_request_number"])+r""": TODT}
+    \label{tab:outcomeCC"""+str(experiment_configuration["covertchannel_request_number"])+r"""}
+    \begin{tabular}{p{8cm} p{7cm}}
+        \hline
+        \textbf{Experiment Parameters} & \textbf{Experiment Outcome} \\
+        \hline
+        \begin{tabular}{ll}
+            Experiment No. & """ + str(experiment_configuration['experiment_no']) + r""" \\
+            Timestamp & """ + str(experiment_configuration['timestamp']) + r""" \\
+            Target Hosts & """ + str(experiment_configuration['max_targets']) + r""" \\
+            Messages per Host & """ + str(experiment_configuration['num_attempts']) + r""" \\
+            min. Fuzz & """ + str(experiment_configuration['min_fuzz_value']) + r""" \\
+            Deviation Spread & """ + str(experiment_configuration['spread_deviation']) + r""" \\
+            URI Type & """ + uri_type + r""" \\
+            Basis request & """ + experiment_configuration['standard_headers'] + r""" \\
+            Parallel worker & """ + str(experiment_configuration['max_workers']) + r""" \\
+            Subset size & """ + str(experiment_configuration['target_subset_size']) + r""" \\
+            Covert Sender & """ + covertsender+ r""" \\
+        \end{tabular}
+        &
+                
+        \begin{tabular}{ll}
+            Duration & """ + duration_str + r""" \\
+            Packets & """ + str(outcome_info["captured_packages"]) + r""" \\
+            HTTP Messages/s & """ + str(round(outcome_info["Messages_per_second"],2)) + r""" \\
+            Recorded Data(Mb) & """ + str(round(outcome_info['Folder_Size im MB'],0)) + r""" \\
+            Response Codes & \% \\
+            1xx: & """ + str(round(outcome_info["Outcome"]['1xx(%)'],2)) + r""" \\
+            2xx: & """ + str(round(outcome_info["Outcome"]['2xx(%)'],2)) + r""" \\
+            3xx: & """ + str(round(outcome_info["Outcome"]['3xx(%)'],2)) + r""" \\
+            4xx: & """ + str(round(outcome_info["Outcome"]['4xx(%)'],2)) + r""" \\
+            5xx: & """ + str(round(outcome_info["Outcome"]['5xx(%)'],2)) + r""" \\
+            Socket Errors: & """ +str(round(outcome_info["Outcome"]['9xx(%)'],2)) + r""" \\
+        \end{tabular} \\
+        \hline
+        \textbf{Request Analysis} & \textbf{Host Analysis}\ \\
+        \hline
+        \begin{tabular}{ll}
+            Min. Deviation & """ + str(prerequest_statistics['min_deviation_count']) + r""" \\
+            Max. Deviation & """ + str(prerequest_statistics['max_deviation_count']) + r""" \\
+            Min. 2xx Response Rate & """ + str(prerequest_statistics['min_2xx']*100/experiment_configuration['num_attempts']) + r"""\% \\
+            Max. 2xx Response Rate & """ + str(prerequest_statistics['max_2xx']*100/experiment_configuration['num_attempts']) + r"""\% \\
+        \end{tabular} &
+        \begin{tabular}{ll}
+            Min. 2xx Response Rate & """ + str(round(host_statistics['min_2xx'],2)) + r"""\% \\
+            Max. 2xx Response Rate & """ + str(round(host_statistics['max_2xx'],2)) + r"""\% \\
+            Avg. 2xx Response Rate & """ + str(round(host_statistics['avg_2xx'],2)) + r"""\% \\
+        \end{tabular} 
+        \\
+        \hline
+        \textbf{Response Statuscodes:}\\
+        
+        \multicolumn{2}{c}{%
+        \begin{minipage}{\dimexpr\linewidth-2\tabcolsep}""" + self.format_status_codes(status_codes)+ r"""
+        \end{minipage}
+        } \\
+        \hline
+\end{tabular}  
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1\linewidth]{"""+imagepath+r"""combined_plots.png}
+\caption{Experiment CC"""+ str(experiment_configuration["covertchannel_request_number"])+r""": Outcome}
+\label{fig:cc"""+ str(experiment_configuration["covertchannel_request_number"])+r"""_combined}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1\linewidth]{"""+imagepath+r"""exp_stats_host_statuscode_bars.png}
+\caption{Experiment CC"""+ str(experiment_configuration["covertchannel_request_number"])+r""": Outcome}
+\label{fig:cc"""+ str(experiment_configuration["covertchannel_request_number"])+r"""_bars}
+\end{figure}
+"""
+        return latex_table
+
+
+
+
+
+
+
+
+
+
+
+
+    def quadplot(self):
+        """Create 2x2 Plot Matrix"""
+        # Create a figure with subplots
+
+        self.font_size_axis=16
+        self.font_size_title=18
+        self.font_size_label=8
+        
+        fig, axs = mpl.subplots(2, 2, figsize=(15, 15))
+        gs = GridSpec(2, 2, figure=fig)
+        mpl.subplots_adjust(wspace=0.3, hspace=0.3)
+        
+        # Top Left
+        self.plot_deviation_count_distribution(self.data_frame_prerequest_stats, ax=axs[0, 0])
+        #self.cluster_prerequest(self.data_frame_prerequest_stats, ax=axs[0, 0])
+        # Bottom Left
+        self.cluster_prerequest(self.data_frame_prerequest_stats, ax=axs[1, 0])
+
+        # Top Right
+        self.cluster_domains(self.data_frame_exp_stats, ax=axs[0, 1])
+
+        # Bottom Right
+        self.plot_2xx_over_attempt_no(self.data_frame_prerequest_stats, ax=axs[1, 1])
+
+        # Adjust spacing between subplots
+        #mpl.tight_layout()
+        
+        # Save the figure as a single PNG file
+        mpl.savefig(self.exp_path+'/combined_plots.png', dpi=300)
+
+        # Show the combined plot
+        mpl.show()
+
+        return
+
+        
+        
+        
+        
 
 
     def save_exp_analyzer_results(self, host_statistics, prerequest_statistics):
@@ -120,50 +340,98 @@ class Domain_Response_Analyzator():
         return prereq_statistics
 
 
-    def plot_2xx_over_attempt_no(self, data_frame):
-        """Plot 5"""
+    def plot_2xx_over_attempt_no(self, data_frame, ax):
+        """Plot 5 Bottom right"""
         # Calculate the share of '200x' values over the total attempt number
         data_frame['Share_2xx'] = (data_frame['2xx'] / self.experiment_configuration["max_targets"]) * 100
         data_frame = data_frame.sort_values(by='no')
         # Create a plot
-        mpl.figure(figsize=(10, 8))
-        mpl.plot(data_frame['no'], data_frame['Share_2xx'], marker='', linestyle='-')
+        #mpl.figure(figsize=(10, 8))
+        
+        # Create a subplot
+        #ax = mpl.gca()
+        
+        
+        
+        ax.plot(data_frame['no'], data_frame['Share_2xx'], marker='', linestyle='-')
         
         slope, intercept, r_value, p_value, std_err = stats.linregress(data_frame['no'], data_frame['Share_2xx'])
         regression_line = slope * data_frame['no'] + intercept
-        mpl.plot(data_frame['no'], regression_line, 'r--', label='Regression Line')
-
+        ax.plot(data_frame['no'], regression_line, 'r--', label='Regression Line')
+        intercept_start = slope* data_frame['no'].min()+intercept
+        intercept_start_str = f"{intercept_start:.2f}"
+        intercept_start=round(intercept_start)
+        intercept_end=slope* data_frame['no'].max()+intercept
+        intercept_end_str = f"{intercept_end:.2f}"
+        intercept_end=round(intercept_end)
+        definition = f'Regression Line: y = {slope:.4f}x + {intercept:.4f}\nR-squared: {r_value ** 2:.2f}'
+        #ax.text(400, (intercept_start+intercept_end)/2, definition, fontsize=12, color='black')
+        ax.text(1, intercept_start, intercept_start_str, fontsize=12, color='black')
+        ax.text(900, intercept_end, intercept_end_str, fontsize=12, color='black')
+       
+        slope=str(round(slope*(-1000),1))  ##Request count??
         # Customize labels and title
-        mpl.xlabel('Message Index')
-        mpl.ylabel('Share of 2xx Responses (%)')  # Updated y-axis label
-        mpl.title('Development of 2xx Statuscodes over Message No.')
+        ax.set_xlabel('Request Index', fontsize=self.font_size_axis)
+        ax.set_ylabel('2xx Response Rate per Request (%)', fontsize=self.font_size_axis)  # Updated y-axis label
+        ax.set_title(f'Development of 2xx Response Rate\n over Request Index\n (blocking rate difference: '+slope+'%)' , fontsize=self.font_size_title, fontweight='bold')
 
         # Set y-axis limits to range from 0% to 100%
-        mpl.ylim(0, 100)
+        #mpl.ylim(0, 100)
 
         # Show the plot
-        mpl.grid(True)
-        mpl.tight_layout()
+        ax.grid(True)
+        #ax.tight_layout()
 
-        mpl.savefig(self.exp_path+'/exp_stats_2xx_no_development.png', dpi=300, bbox_inches='tight')
+        #mpl.savefig(self.exp_path+'/exp_stats_2xx_no_development.png', dpi=300, bbox_inches='tight')
         #mpl.show()
-        return
+        return ax
 #
     
-    def plot_deviation_count_distribution(self, data_frame):
-        """Plot 4"""
+    def plot_deviation_count_distribution(self, data_frame, ax):
+        """Plot 4 Top Left"""
         deviation_count = data_frame['deviation_count'].values
-        #relative_deviation_count = deviation_count / self.experiment_configuration["num_attempts"]*100  
+
+        # Create a histogram
+        #mpl.figure(figsize=(10, 8))
+        #ax = mpl.gca()
+        sns.histplot(x=deviation_count, stat='percent', kde=True, color='blue', bins=100, label='Data Distribution', ax=ax)
+        #mpl.ylim(0, (relative_deviation_count))
+        
+        ax.set_xlabel('Steganographic Payload', fontsize=self.font_size_axis)
+        ax.set_ylabel("Share of all Requests (%)", fontsize=self.font_size_axis)
+        ax.set_title("Histogram:\n Distribution of Steganographic Payload\n among Requests", fontsize=self.font_size_title, fontweight='bold')
+        #mpl.legend()
+        ax.grid(True)       
+        #ax.savefig(self.exp_path+'/exp_stats_deviation_distribution.png', dpi=300, bbox_inches='tight')
+
+        return ax
+    
+    def export_latex_to_report(self, latex_code, report_filename):
+        with open(report_filename, 'w') as report_file:
+            report_file.write(latex_code)
+        return    
+
+ 
+    """def plot_deviation_count_distribution(self, data_frame):
+        #Plot 4
+        deviation_count = data_frame['deviation_count'].values
+
         # Create a histogram
         mpl.figure(figsize=(10, 8))
-        sns.histplot(x=deviation_count, stat='percent', kde=True, color='blue', bins=100, label='Data Distribution')#b s
-        mpl.ylim(0, 50)
-        mpl.xlabel('Deviations from original Request')
-        mpl.ylabel('Share of Requests (%)')
-        mpl.title('Histogram: Deviation Count Distribution')
-        mpl.legend()
+        sns.histplot(x=deviation_count, stat='percent', kde=True, color='blue', bins=100, label='Data Distribution')
+        #mpl.ylim(0, (relative_deviation_count))
+        
+        mpl.xlabel('Amount of difference to original Request')
+        mpl.ylabel("Share of all Request")
+        mpl.title("Histogram: Distribution of steganographic Payload over Requests")
+        #mpl.legend()
         mpl.grid(True)       
-        mpl.savefig(self.exp_path+'/exp_stats_deviation_distribution.png', dpi=300, bbox_inches='tight')
+        mpl.savefig(self.exp_path+'/exp_stats_deviation_distribution.png', dpi=300, bbox_inches='tight')"""
+        
+        
+        
+        
+        
         # Show the plot or save it to a file
         #mpl.show()
         # Overlay a normal distribution curve
@@ -250,12 +518,15 @@ class Domain_Response_Analyzator():
         #mpl.show()
         
     def plot_hosts_responses(self, dataframe, num_clusters=100):
+        
+        """Plot 1"""
+        
         file_path=self.exp_path+"/sorted_data.csv"
         
         #Extract Data
         df=dataframe[['Host', '1xx', '2xx', '3xx', '4xx', '5xx', '9xx']]
         #10 is not constant????
-        #df.loc[:, ['1xx', '2xx', '3xx', '4xx', '5xx', '9xx']] /= 10      
+        df.loc[:, ['1xx', '2xx', '3xx', '4xx', '5xx', '9xx']] *= 10      
 
         df = df.sort_values(by=['2xx', '1xx', '3xx', '4xx', '5xx', '9xx'], ascending=[False, False, False, False, False, False])
 
@@ -276,14 +547,14 @@ class Domain_Response_Analyzator():
         #Build Diagram
         mpl.style.use('fivethirtyeight')
         colors = ['#9B59BB', '#2ECC77', '#F1C400', '#E74C33',  '#3498DD',   '#344955']
-        ax = clustered_data.plot(kind='bar',  stacked=True, figsize=(12, 6),width=1, color=colors )
+        ax = clustered_data.plot(kind='bar',  stacked=True, figsize=(12, 12),width=1, color=colors )
         
-        mpl.xlabel('Clustered Hosts')
+        mpl.xlabel('Hosts sorted descending by 2xx response share')
         xticks = numpy.arange(0, num_clusters+1, 100)
         ax.set_xticks(xticks)
         #ax.set_xticklabels(xticks)
-        mpl.ylabel('Share of Response Codes')
-        mpl.title('Response Codes over Host Cluster')
+        mpl.ylabel('Requests ordered by Response Codes per Host')
+        mpl.title('Response Code Distribution over Hosts')
         mpl.legend(title='Response Codes', loc='lower left')
 
         #mpl.show()
@@ -291,9 +562,75 @@ class Domain_Response_Analyzator():
                     dpi=300, bbox_inches='tight')
 
 
-    def cluster_domains(self, data_frame):
+    def figure1(self, df):
+        
+        # Define a color mapping for the leading digits
+        color_mapping = {'1': 'purple', '2': 'green', '3': 'yellow', '4': 'red', '5': 'blue', '9': 'black'}
+
+        host_2xx_counts = df.apply(lambda x: (x // 100 == 2).sum(), axis=0)
+        sorted_hosts = host_2xx_counts.sort_values(ascending=False).index
+        df_sorted = df[sorted_hosts].reindex(columns=sorted(df.columns, key=lambda x: x.split()[0]))
+
+        fig, ax = mpl.subplots(figsize=(12, 12))
+
+        # Loop through the DataFrame and create colored dots based on the leading digit
+        for row in df_sorted.index:
+            for col in df_sorted.columns:
+                response_code = str(df_sorted.loc[row, col])
+                leading_digit = response_code[0]
+                color = color_mapping.get(leading_digit, 'gray')  # Default to gray if not in mapping
+                ax.scatter(df_sorted.columns.get_loc(col), df_sorted.index.get_loc(row), c=color, s=20)
+
+        # Sort hosts by the number of 2xx status codes
+        host_2xx_counts = df.apply(lambda x: (x // 100 == 2).sum(), axis=0)
+        sorted_hosts = host_2xx_counts.sort_values(ascending=False).index
+
+        # Sort the DataFrame columns by the leading digit
+        sorted_df = df[sorted_hosts].loc[:, df.columns.str.split().sort_values()]
+
+        
+        mpl.imshow(sorted_df.values, cmap='viridis', aspect='auto')
+        mpl.colorbar()
+        mpl.title('Pixel Plot of Response Codes')
+        mpl.xlabel('Hosts')
+        mpl.ylabel('Messages')
+
+        # Show the plot
+        mpl.savefig(self.exp_path+'/exp_stats_host_statuscode_pixel.png',
+                    dpi=300, bbox_inches='tight')
+
+        return
+
+
+
+    def cluster_domains(self, data_frame, ax):
+        """Figure 2: TOP RIGHT"""
+        #ax = mpl.gca()
+        
+        #mpl.figure(figsize=(10, 8))
+        #ax.style.use('fivethirtyeight')
+
+        bins = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+        data = data_frame['2xx']
+        values, bins, bars = ax.hist(data, weights=[1 / len(data)] * len(data), bins=bins, color='blue', edgecolor='black', alpha=0.7, orientation='horizontal')
+        y_ticks = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]  # Specify your desired tick positions
+
+        #mpl.gca().set_yticks(y_ticks)
+        ax.set_yticks(y_ticks)
+        #mpl.gca().xaxis.set_major_formatter(PercentFormatter(1))
+        ax.xaxis.set_major_formatter(PercentFormatter(1))
+        ax.set_ylabel('2xx Responses Rate\n per Host (10% steps)', fontsize=self.font_size_axis)
+        ax.set_xlabel('Percentage of Hosts (%)', fontsize=self.font_size_axis)
+        ax.set_title('Histogram:\nCategorizing Hosts with\n Similar 2xx Response Rates in 10% Steps', fontsize=self.font_size_title, fontweight='bold')
+
+        ax.bar_label(bars, labels=[f'{x.get_width():.2%}' for x in bars], fontsize=15, color='black')
+
+        #mpl.savefig(self.exp_path+'/exp_stats_2xx_histogramm.png', dpi=300, bbox_inches='tight')
+        return ax
+        
+        
         """Figure 2"""
-        selected_column = data_frame['2xx']
+        """ selected_column = data_frame['2xx']
 
         num_clusters = 10
         mpl.figure(figsize=(10, 8))
@@ -316,11 +653,12 @@ class Domain_Response_Analyzator():
         mpl.savefig(self.exp_path+'/exp_stats_2xx_histogramm.png',
                     dpi=300, bbox_inches='tight')
         #mpl.show() 
-        return
+        return """
         
-    def cluster_prerequest(self, data_frame):
-        """Figure 3"""
-        mpl.figure(figsize=(10, 8))
+    def cluster_prerequest(self, data_frame, ax):
+        """Figure 3 Bottom Left"""
+        #mpl.figure(figsize=(10, 8))
+        #ax = mpl.gca()
         data_frame['2xx_percentage'] = data_frame['2xx'] / self.experiment_configuration["max_targets"] * 100
         
         #Exp19 Specific
@@ -341,44 +679,46 @@ class Domain_Response_Analyzator():
 
         #mpl.plot(x_values, y_fit_2, label='Regression Curve for Cluster 2', color='green')
         #mpl.plot(x_values, y_fit_3, label='Regression Curve for Cluster 3', color='purple')
-        mean_2 = cluster_2['2xx_percentage'].mean()
-        mean_3 = cluster_3['2xx_percentage'].mean()
-        mpl.axhline(mean_2, color='green', linestyle='--', label=f'Mean Cluster 1: {mean_2:.1f}%')
-        mpl.axhline(mean_3, color='red', linestyle='--', label=f'Mean Cluster 2: {mean_3:.1f}%')
+        
+        #CC3
+        #mean_2 = cluster_2['2xx_percentage'].mean()
+        #mean_3 = cluster_3['2xx_percentage'].mean()
+        #ax.axhline(mean_2, color='green', linestyle='--', label=f'Mean Cluster 1: {mean_2:.1f}%')
+        #ax.axhline(mean_3, color='red', linestyle='--', label=f'Mean Cluster 2: {mean_3:.1f}%')
 
-        mpl.scatter(data_frame['deviation_count'], data_frame['2xx_percentage'], alpha=0.5, s=500)  # Alpha for transparency
+        ax.scatter(data_frame['deviation_count'], data_frame['2xx_percentage'], alpha=0.5, s=500)  # Alpha for transparency
 
         # Add labels and title
-        mpl.xlabel('Deviation Count per Message')
-        mpl.ylabel('2xx Responses (%)')
-        mpl.title('Scatter Plot of 2xx Responses over Deviation')
+        ax.set_xlabel('Steganographic Payload', fontsize=self.font_size_axis)
+        ax.set_ylabel('2xx Response Rate per Request (%)', fontsize=self.font_size_axis)
+        ax.set_title('Scatterplot:\n2xx Response Rate over\n Steganographic Payload', fontsize=self.font_size_title, fontweight='bold' )
 
         # Set y-axis limits to 0% and 100%
-        mpl.ylim(0, 100)
+        ax.set_ylim(90, 105)  # 90,105 CC2
 
         # Set y-tick locations and format labels as percentages
-        yticks = mpl.gca().get_yticks()
-        mpl.gca().set_yticks(yticks)
-        mpl.gca().set_yticklabels(['{:.1f}%'.format(ytick) for ytick in yticks])
+        yticks = ax.get_yticks()
+        ax.set_yticks(yticks)
+        ax.set_yticklabels(['{:.0f}%'.format(ytick) for ytick in yticks])
 
         # Show the plot
-        mpl.grid(True)
-        mpl.tight_layout()
-        mpl.legend()
-        mpl.savefig(self.exp_path+'/exp_stats_prerequest_statuscodes.png', dpi=300, bbox_inches='tight')
+        ax.grid(True)
+        #ax.tight_layout()
+        ax.legend()
+        #ax.savefig(self.exp_path+'/exp_stats_prerequest_statuscodes.png', dpi=300, bbox_inches='tight')
         #mpl.show()
-        return
+        return ax
 
 
     def plot_scatter_prerequest(self, data_frame):
-        """Figure 3.1"""
+        """Figure 3.1 Bottom Left, URI"""
         mpl.figure(figsize=(10, 8))
         mpl.scatter(data_frame['Relative Deviation'], data_frame['2xx'] / data_frame['Sum'] * 100, alpha=0.5, s=500)  # Alpha for transparency
 
         # Add labels and title
         mpl.xlabel('Relative Deviation of URI')
-        mpl.ylabel('2xx Responses (%)')
-        mpl.title('Scatter Plot of 2xx Responses over relative URI Deviation')
+        mpl.ylabel('2xx Response Rate (%)')
+        mpl.title('Scatter Plot of 2xx Response Rate over relative URI Deviation', fontweight='bold')
 
         # Set y-axis limits to 0% and 100%
         mpl.ylim(0, 100)
@@ -410,9 +750,10 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/extracted_logs/EOW/experiment_6"
+    path = f"{log_dir}/extracted_logs/attic/experiment_17"
     dra = Domain_Response_Analyzator(path)
     dra.start()
+  
 
 
 
