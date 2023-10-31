@@ -296,6 +296,9 @@ class ExperimentRunner:
             (random_element * (1-2*min_fuzz_value))
         selected_covert_channel = class_mapping.requests_builders[covert_channel](
         )
+
+        
+        #Need to be implemented
         if covert_channel == 0:
             request, deviation_count, uri = self.get_prerequest_from_list(
                 attempt_no, self.experiment_configuration["CSV_request_list"])
@@ -335,7 +338,16 @@ class ExperimentRunner:
                                 deviation_count_found = True
                             # Check uniqueness
                             if request_hash != entry["request_hash"]:
-                                unique = True
+                                if covert_channel==3:
+                                    if deviation_count==entry["deviation_count"]:
+                                        unique=False
+                                        random_element = random.random()
+                                        new_fuzz_value = min_fuzz_value +  (random_element * (1-2*min_fuzz_value))
+                                        break
+                                    else:
+                                        unique=True
+                                else:
+                                    unique = True
                             # Break if already existing
                             else:
                                 random_element = random.random()

@@ -13,6 +13,7 @@ from scipy.stats import norm
 from scipy import stats
 from scipy.optimize import curve_fit
 from matplotlib.gridspec import GridSpec
+from scipy.interpolate import interp1d
 
 class Domain_Response_Analyzator():
     def __init__(self, path):
@@ -54,6 +55,10 @@ class Domain_Response_Analyzator():
         return experiment_configuration, data
 
     def start(self):
+        #THis one for Marocs Suggestions:
+        #self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats)
+        self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=None)
+        self.status_code_bars_over_deviation(self.data_frame_prerequest_stats, ax=None)
         #self.plot_unsorted_data(self.data_frame_exp_stats)
         statuscodes_dict=self.count_status_codes(self.data_frame_pd_matrix)
         host_statistics=self.host_stats(self.data_frame_exp_stats)
@@ -73,8 +78,101 @@ class Domain_Response_Analyzator():
         #self.plot_scatter_prerequest(self.data_frame_rel_uri)
         self.plot_hosts_responses(self.data_frame_exp_stats)
         #self.figure1(self.data_frame_pd_matrix)
-        self.quadplot()
+        self.quadplot()#
         return
+
+    
+  
+    
+    def grouped_results_csv(self, pd_matrix, prerequests, attempt_no=1000):
+        temp_matrix=pd_matrix.copy()
+        #Status Code to leading digit
+        def replace_with_xxx(value):
+            if value >= 100 and value <= 999:
+                leading_digit = str(value)[0]
+                return leading_digit + "xx"
+            else:
+                return value
+        #Status_Codes to Int
+        for col in pd_matrix.columns:
+            if col != "Attempt No.\Domain":
+                temp_matrix[col] = temp_matrix[col].round(0).astype(int)
+                temp_matrix[col] = temp_matrix[col].apply(replace_with_xxx)
+        result = temp_matrix.merge(prerequests[['no', 'deviation_count']], left_on='Attempt No.\Domain', right_on='no')
+        result = result.iloc[:, 1:]
+
+        #Grouping of the deviation count
+        # Define the bin edges and labels
+        #CC3 Exp19
+        bins = [-1, 200, 400, 600, 800, 1000]#, 1200, 1400, result['deviation_count'].max() + 1]
+        labels = ['0-200', '200-400', '400-600', '600-800', '800-1000']#, '1000-1200', '1200-1400', '1400-Max']              
+        #result['deviation_group'] = pandas.cut(result['deviation_count'], bins=bins, labels=labels)
+        result['deviation_group'] = pandas.cut(result['deviation_count'], bins=bins, labels=labels)
+
+        bin_dataframes = {}
+        status_codes = ['1xx', '2xx', '3xx', '4xx', '5xx', '9xx']
+        length = len(result)
+        requests_per_bin={}
+        # Loop through each unique bin label
+        for label in labels:
+            # Extract the DataFrame for the current bin
+            bin_dataframe = result[result['deviation_group'] == label]
+            requests_per_bin[label] = round(len(bin_dataframe)/attempt_no*100,1)
+            bin_dataframe = bin_dataframe.iloc[:, :-3]
+            #result_df = pandas.DataFrame({'Status Codes': status_codes})
+            host_percentages = {}
+            #Calculate the share for each host
+            for host in bin_dataframe.columns:
+                status_percentages = {}
+                total_count = len(bin_dataframe)
+                #status_counts = {}
+                for status_code in status_codes:
+                    # Calculate the count for the current status code for the current host
+                    count = bin_dataframe[host].str.contains(status_code).sum()
+                    percentage = round((count / total_count) * 100,1)
+                    status_percentages[status_code] = percentage
+                host_percentages[host] = status_percentages
+
+            bin_dataframes[label] = pandas.DataFrame(host_percentages)
+            bin_dataframes[label].insert(0, "Status Codes", status_codes)
+            #bin_dataframes[label] = bin_dataframes[label].set_index("Status Codes")
+         
+        bins_tp = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 101]
+        labels_tp  = ['0-10%', '10-20%', '20-30%', '30-40%', '40-50%', '50-60%', '60-70%', '70-80%', '80-90%', '90-100%']
+        result_df = pandas.DataFrame({'Percentage Bins': labels_tp})
+        for label in labels:
+            # Get the DataFrame for the current deviation count bin
+            bin_dataframe = bin_dataframes[label]
+
+            # Iterate through each percentage bin
+            for i in range(len(bins_tp) - 1):
+                lower_bound = bins_tp[i]
+                upper_bound = bins_tp[i + 1]
+                
+                # Calculate the count of hosts within the current percentage bin for '2xx'
+                count = ((bin_dataframe.loc['2xx'].iloc[1:] >= lower_bound) & (bin_dataframe.loc['2xx'].iloc[1:] < upper_bound)).sum()
+                total_count = len(bin_dataframe)
+                percentage = round(count/attempt_no*100,1)
+
+                # Add the host count to the result DataFrame
+                result_df.loc[i, label] = percentage
+                #
+                # result_df.loc[i, label + ' Percentage'] = percentage
+
+        # Save the result as a CSV file
+        new_row = pandas.DataFrame.from_dict(requests_per_bin, orient='index', columns=['Number of Requests'])
+        # Transpose the DataFrame to make it a row
+        new_row = new_row.transpose()
+        result_df=pandas.concat([result_df,new_row], ignore_index=True)
+        #Percent Value
+        #result_df = result_df.div(length/100)
+        result_df.to_csv(self.exp_path+"/hosts_count_in_10_percent_bins.csv", index=False)
+        result_df.to_latex(self.exp_path+"/hosts_count_in_10_percent_bins.tex", index=False)
+        latex_table = result_df.to_latex(index=False)
+        with open(self.exp_path+"/table.tex", "w") as f:
+            f.write(latex_table)
+        result.to_csv(self.exp_path+"/grouped_host_analysis.csv")
+        return result
     
     def count_status_codes(self,df):
         status_code_counts = {}
@@ -259,7 +357,7 @@ class Domain_Response_Analyzator():
         
         # Top Left
         self.plot_deviation_count_distribution(self.data_frame_prerequest_stats, ax=axs[0, 0])
-        #self.cluster_prerequest(self.data_frame_prerequest_stats, ax=axs[0, 0])
+        
         # Bottom Left
         self.cluster_prerequest(self.data_frame_prerequest_stats, ax=axs[1, 0])
 
@@ -281,10 +379,6 @@ class Domain_Response_Analyzator():
         return
 
         
-        
-        
-        
-
 
     def save_exp_analyzer_results(self, host_statistics, prerequest_statistics):
         log_file_path = self.exp_path + '/exp_analyzer_data.json'
@@ -359,21 +453,22 @@ class Domain_Response_Analyzator():
         regression_line = slope * data_frame['no'] + intercept
         ax.plot(data_frame['no'], regression_line, 'r--', label='Regression Line')
         intercept_start = slope* data_frame['no'].min()+intercept
-        intercept_start_str = f"{intercept_start:.2f}"
+        intercept_start_str = f"{intercept_start:.1f}"
         intercept_start=round(intercept_start)
-        intercept_end=slope* data_frame['no'].max()+intercept
-        intercept_end_str = f"{intercept_end:.2f}"
+        max_x=data_frame['no'].max()+1
+        intercept_end=slope* max_x+intercept
+        intercept_end_str = f"{intercept_end:.1f}"
         intercept_end=round(intercept_end)
         definition = f'Regression Line: y = {slope:.4f}x + {intercept:.4f}\nR-squared: {r_value ** 2:.2f}'
         #ax.text(400, (intercept_start+intercept_end)/2, definition, fontsize=12, color='black')
-        ax.text(1, intercept_start, intercept_start_str, fontsize=12, color='black')
-        ax.text(900, intercept_end, intercept_end_str, fontsize=12, color='black')
+        ax.text(1-int(0.08*max_x), intercept_start, intercept_start_str, fontsize=12, color='black')
+        ax.text(int(1.01*max_x), intercept_end, intercept_end_str, fontsize=12, color='black')
        
-        slope=str(round(slope*(-1000),1))  ##Request count??
+        slope=str(round(slope*(-max_x),1))  ##Request count??
         # Customize labels and title
         ax.set_xlabel('Request Index', fontsize=self.font_size_axis)
         ax.set_ylabel('2xx Response Rate per Request (%)', fontsize=self.font_size_axis)  # Updated y-axis label
-        ax.set_title(f'Development of 2xx Response Rate\n over Request Index\n (blocking rate difference: '+slope+'%)' , fontsize=self.font_size_title, fontweight='bold')
+        ax.set_title(f'Development of 2xx Response Rate\n over Request Index\n (blocking rate delta: '+slope+'%)' , fontsize=self.font_size_title, fontweight='bold')
 
         # Set y-axis limits to range from 0% to 100%
         #mpl.ylim(0, 100)
@@ -704,7 +799,7 @@ class Domain_Response_Analyzator():
         # Show the plot
         ax.grid(True)
         #ax.tight_layout()
-        ax.legend()
+        #ax.legend()
         #ax.savefig(self.exp_path+'/exp_stats_prerequest_statuscodes.png', dpi=300, bbox_inches='tight')
         #mpl.show()
         return ax
@@ -740,6 +835,127 @@ class Domain_Response_Analyzator():
         #ax.savefig(self.exp_path+'/exp_stats_prerequest_statuscodes.png', dpi=300, bbox_inches='tight')
         #mpl.show()
         return ax
+
+    def status_code_bars_over_deviation(self, data_frame, ax=None):
+
+        """
+        MARCO1
+        Plot percentage curves for different response codes over the deviation count.
+        """
+        if ax==None: 
+            fig, ax = mpl.subplots(figsize=(10, 8))
+
+        mpl.style.use('fivethirtyeight')
+        colors = ['#9B59BB','#2ECC77','#F1C400','#E74C33','#3498DD','#344955']
+
+        response_codes = [ '1xx','2xx', '3xx', '4xx', '5xx', '9xx']
+    
+        # Select only the relevant columns
+        data_frame = data_frame[['deviation_count'] + response_codes].copy()
+        # Sort Data by Deviation Count
+        data_frame.sort_values(by='deviation_count', ascending=True, inplace=True)
+        # Mean Value per deviation count
+        data_frame = data_frame.groupby('deviation_count').mean().reset_index()
+        for code in response_codes:
+            data_frame[f'{code}_percentage'] = data_frame[code] /self.experiment_configuration["max_targets"]  * 100
+        
+        interpolation_range = range(1, 1500)
+        data_frame.set_index('deviation_count', inplace=True)
+        data_frame = data_frame.reindex(interpolation_range).interpolate(method='linear')
+        data_frame.reset_index(inplace=True)
+        # Iterate through each response code and plot its curve.
+        
+        i=0
+        for code in response_codes:
+            #data_frame[f'{code}_percentage'] = data_frame[code] /self.experiment_configuration["max_targets"]  * 100
+            #Curves
+            #ax.plot(data_frame['deviation_count'], data_frame[f'{code}_percentage'], label=code, color=colors[i])
+            #Stacked_Bars:
+            if i == 0:
+                ax.bar(data_frame['deviation_count'], data_frame[f'{code}_percentage'], label=code, color=colors[i], width=1 ,alpha=0.7)
+            else:
+                bottom_percentage = data_frame[[f'{c}_percentage' for c in response_codes[:i]]].sum(axis=1)
+                ax.bar(data_frame['deviation_count'], data_frame[f'{code}_percentage'], label=code, color=colors[i], width=1 ,alpha=0.7, bottom=bottom_percentage)
+            i+=1
+
+        # Add labels and title
+        ax.set_xlabel('Modifications', fontsize=12)
+        ax.set_ylabel('Response Code Frequency(%)', fontsize=12)
+        ax.set_title('Statuscodes Frequency over Deviation Count', fontsize=14, fontweight='bold')
+
+        # Set y-axis limits if needed
+        # ax.set_ylim(0, 100)
+
+        # Set y-tick locations and format labels as percentages
+        yticks = ax.get_yticks()
+        ax.set_yticks(yticks)
+        ax.set_yticklabels(['{:.0f}%'.format(ytick) for ytick in yticks])
+
+        # Show the plot
+        ax.grid(True)
+        ax.legend(loc="upper right")
+        #mpl.show()
+        mpl.savefig(self.exp_path+'/status_code_bars_over_deviation.png', dpi=300, bbox_inches='tight')
+        return ax
+
+    def status_code_curves_over_deviation(self, data_frame, ax=None):
+
+        """
+        MARCO1
+        Plot percentage curves for different response codes over the deviation count.
+        """
+        if ax==None: 
+            fig, ax = mpl.subplots(figsize=(10, 8))
+
+        mpl.style.use('fivethirtyeight')
+        colors = ['#9B59BB','#2ECC77','#F1C400','#E74C33','#3498DD','#344955']
+
+        response_codes = [ '1xx','2xx', '3xx', '4xx', '5xx', '9xx']
+    
+        # Select only the relevant columns
+        data_frame = data_frame[['deviation_count'] + response_codes].copy()
+        # Sort Data by Deviation Count
+        data_frame.sort_values(by='deviation_count', ascending=True, inplace=True)
+        # Mean Value per deviation count
+        data_frame = data_frame.groupby('deviation_count').mean().reset_index()
+        for code in response_codes:
+            data_frame[f'{code}_percentage'] = data_frame[code] /self.experiment_configuration["max_targets"]  * 100
+        
+        interpolation_range = range(1, 1500)
+        data_frame.set_index('deviation_count', inplace=True)
+        data_frame = data_frame.reindex(interpolation_range).interpolate(method='linear')
+        data_frame.reset_index(inplace=True)
+        # Iterate through each response code and plot its curve.
+        
+        i=0
+        for code in response_codes:
+            data_frame[f'{code}_percentage'] = data_frame[code] /self.experiment_configuration["max_targets"]  * 100
+            #Curves
+            ax.plot(data_frame['deviation_count'], data_frame[f'{code}_percentage'], label=code, color=colors[i])
+            
+            i+=1
+
+        # Add labels and title
+        ax.set_xlabel('Modifications', fontsize=12)
+        ax.set_ylabel('Response Code Frequency(%)', fontsize=12)
+        ax.set_title('Statuscodes Frequency over Deviation Count', fontsize=14, fontweight='bold')
+
+        # Set y-axis limits if needed
+        # ax.set_ylim(0, 100)
+
+        # Set y-tick locations and format labels as percentages
+        yticks = ax.get_yticks()
+        ax.set_yticks(yticks)
+        ax.set_yticklabels(['{:.0f}%'.format(ytick) for ytick in yticks])
+
+        # Show the plot
+        ax.grid(True)
+        ax.legend()
+        #mpl.show()
+
+        mpl.savefig(self.exp_path+'/status_code_curves_over_deviation.png', dpi=300, bbox_inches='tight')
+        return ax
+
 
 
     def plot_scatter_prerequest(self, data_frame):
@@ -782,7 +998,7 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/extracted_logs/EOW/experiment_10"
+    path = f"{log_dir}/experiment_114"#extracted_logs/attic/experiment_19"
     dra = Domain_Response_Analyzator(path)
     dra.start()
   

@@ -1030,8 +1030,41 @@ class HTTP1_Request_CC_URI_Common_Addresses_And_Anchors(HTTP1_Request_Builder):
 class HTTP1_Request_CC_URI_Extend_with_fragments(HTTP1_Request_Builder):
     def __init__(self):
         super().__init__()  # Call the constructor of the base class first
-        self.cc_uri_post_generation = True
+        self.cc_uri_post_generation = False
 
+    def build_request_line(self, port, method, path, fragment, headers, scheme, fuzzvalue, relative_uri=True, include_subdomain=False, include_port=False, protocol="HTTP/1.1"):
+                # Build the request_line from the provided arguments
+        if relative_uri==False:        
+            #Scheme:
+            if scheme=="":
+                if port==443:
+                    scheme="https://"
+                else:
+                    scheme="http://"
+                #subdomains                      
+            if include_subdomain:
+               subdomain=self.subdomain_placeholder   ###SUBDOMAINS need to be ended with .
+            else:
+               subdomain="" 
+            #Port
+            if include_port==True:
+                new_port=":"+str(port)
+            else:
+                new_port=""
+            #absolute uri
+            new_uri =scheme + subdomain + self.domain_placeholder + new_port + self.path_placeholder + "#" +fragment
+        else:
+            #relative uri
+            new_uri=self.path_placeholder + "#" +fragment
+
+        request_line = f"{method} {new_uri} {protocol}\r\n"
+
+        return request_line, new_uri   
+
+    
+    
+    
+    
     def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
         '''CC URI  with addional changes in Case insensitvity'''
         # Check if headers are provided elsewise take default headers
@@ -1045,12 +1078,39 @@ class HTTP1_Request_CC_URI_Extend_with_fragments(HTTP1_Request_Builder):
         # Insert the Host header at the beginning of the list
         headers.insert(0, ("Host", self.host_placeholder))
 
+        ###CC Part#
+        max_length=1024*100    #8kb nginx and apache limit for repsonse line
+        fuzzvalue=0.5     #Insert Logic in runnner
+        char_sets = {
+            "letters_digits": string.ascii_letters + string.digits,
+            "subdelimiters": "!$&'()*+,;=",
+            "general_delimiters": ":/?#[]@"
+        }
+        chosen_set = random.choice(list(char_sets.keys()))
+
+        min_length = 1 # 1in bytes
+        max_length=1024*100   # 100 KB in bytes
+
+        # Adjust the mean and standard deviation for the Gaussian distribution
+        mean = (min_length + max_length) / 2  # Mean value
+        std_deviation = (max_length - min_length) / 4  # Standard deviation
+
+        # Generate a random length with a Gaussian distribution
+        random_border = int(random.gauss(mean, std_deviation))
+        random_border = max(min_length, min(max_length, random_border))
+
+        random_border=random.randint(0, max_length)
+        fragment=mutators.generate_random_string(chosen_set, random_border, 0)
+        if random.random()<fuzzvalue:
+            fragment = urllib.parse.quote(fragment) 
+        deviation_count=len(fragment)+1
+        
+        #### 
 
           # Build a new URL from the given host
-        request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
+        request_line, new_uri = self.build_request_line(port, method, path, fragment, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
         
 
-        deviation_count=0
         if protocol=="":
             protocol="HTTP/1.1"
         request_line = f"{method} {new_uri} {protocol}\r\n"
@@ -1091,21 +1151,7 @@ class HTTP1_Request_CC_URI_Extend_with_fragments(HTTP1_Request_Builder):
             if not new_path.startswith("/"):
                 new_path="/"+new_path   
 
-            ###CC Part#
-            max_length=1024*10    #8kb nginx and apache limit for repsonse line
-            fuzzvalue=0.5     #Insert Logic in runnner
-            char_sets = {
-                "letters_digits": string.ascii_letters + string.digits,
-                "subdelimiters": "!$&'()*+,;=",
-                "general_delimiters": ":/?#[]@"
-            }
-            chosen_set = random.choice(list(char_sets.keys()))
-            fragment=mutators.generate_random_string(chosen_set, max_length, 0)
-            if random.random()<fuzzvalue:
-                fragment = urllib.parse.quote(fragment) 
-            deviation_count=len(fragment)+1
-            new_path=new_path+"#"+fragment
-            #### 
+            deviation_count=0
 
                        
             #This inserts the sudomain in the uri
