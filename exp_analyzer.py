@@ -55,7 +55,7 @@ class Domain_Response_Analyzator():
         return experiment_configuration, data
 
     def start(self):
-        #THis one for Marocs Suggestions:
+        #This one for Marcos Suggestions:
         #self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats)
         self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=None)
         self.status_code_bars_over_deviation(self.data_frame_prerequest_stats, ax=None)
@@ -998,7 +998,7 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/experiment_114"#extracted_logs/attic/experiment_19"
+    path = f"{log_dir}/experiment_119/"#extracted_logs/attic/experiment_19"
     dra = Domain_Response_Analyzator(path)
     dra.start()
   

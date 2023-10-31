@@ -1080,7 +1080,7 @@ class HTTP1_Request_CC_URI_Extend_with_fragments(HTTP1_Request_Builder):
 
         ###CC Part#
         max_length=1024*100    #8kb nginx and apache limit for repsonse line
-        fuzzvalue=0.5     #Insert Logic in runnner
+            
         char_sets = {
             "letters_digits": string.ascii_letters + string.digits,
             "subdelimiters": "!$&'()*+,;=",
@@ -1093,7 +1093,7 @@ class HTTP1_Request_CC_URI_Extend_with_fragments(HTTP1_Request_Builder):
 
         # Adjust the mean and standard deviation for the Gaussian distribution
         mean = (min_length + max_length) / 2  # Mean value
-        std_deviation = (max_length - min_length) / 4  # Standard deviation
+        std_deviation = (max_length - min_length) / 2  # Standard deviation
 
         # Generate a random length with a Gaussian distribution
         random_border = int(random.gauss(mean, std_deviation))
