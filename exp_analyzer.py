@@ -56,7 +56,9 @@ class Domain_Response_Analyzator():
 
     def start(self):
         #This one for Marcos Suggestions:
-        #self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats)
+        self.decode_save_cc6(self.data_frame_prerequest_stats)
+       
+        self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats)
         self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=None)
         self.status_code_bars_over_deviation(self.data_frame_prerequest_stats, ax=None)
         #self.plot_unsorted_data(self.data_frame_exp_stats)
@@ -81,8 +83,76 @@ class Domain_Response_Analyzator():
         self.quadplot()#
         return
 
-    
-  
+    def create_stacked_bar_chart(self,data_frame):
+        # Filter the DataFrame where Bit 0 is equal to 1
+        filtered_data = data_frame[data_frame['Bit 0: Exclude Scheme'] == 1]
+
+        # Sum the response categories for the filtered data
+        stacked_data = filtered_data[['1xx', '2xx', '3xx', '4xx', '5xx', '9xx']].sum()
+
+        # Define colors for the response categories
+        colors = ['#9B59BB', '#2ECC77', '#F1C400', '#E74C33', '#3498DD', '#344955']
+
+        # Create a single stacked bar chart
+        stacked_data.plot(kind='bar', stacked=True, color=colors, figsize=(10, 6))
+
+        mpl.xlabel('Response Categories')
+        mpl.ylabel('Total Values')
+        mpl.title('Stacked Bar Chart for Bit 0 = 1')
+        mpl.legend(['Bit 0: Include Scheme'])
+
+        mpl.show()
+
+    def decode_save_cc6(self,data_frame):
+
+        
+        bit_columns= [
+            'Bit 0: Exclude Scheme',
+            'Bit 1: Original Scheme',
+            'Bit 2: Randomly include/exclude subdomain',
+            'Bit 3: Randomly include a port',
+            'Bit 4: Scheme Fitting Port',
+            'Bit 6: Counter HTTP/HTTPS Port',
+            'Bit 7: Random Integer',
+            'Bit 8: Random String (length=5)',
+            'Bit 9: Delete path if path is provided'
+        ]
+
+
+        def decode_bits(deviation_count, num_bits):
+            # Create a list of bit values by decoding the deviation_count.
+            bit_values = [(deviation_count >> bit_index) & 1 for bit_index in range(num_bits)]
+            return bit_values    
+
+        num_bits = len(bit_columns)
+
+        # Decode each row in the original DataFrame and add the bit columns.
+        for bit_index, bit_column in enumerate(bit_columns):
+            data_frame[bit_column] = data_frame['deviation_count'].apply(lambda x: (x >> bit_index) & 1)
+
+        data_frame.to_csv(self.exp_path + "/prerequest_decoded.csv", index=False)
+        
+        #self.create_stacked_bar_chart(data_frame)
+        
+
+        # Create an empty DataFrame to store the result
+        result_df = pandas.DataFrame(columns=['Bit Name', 'Mean 1xx', 'Mean 2xx', 'Mean 3xx', 'Mean 4xx', 'Mean 5xx', 'Mean 9xx'])
+
+        result_dfs = []
+
+        # Iterate through each bit, calculate the mean values, and add them to the list of DataFrames
+        for bit_column in bit_columns:
+            filtered_data = data_frame[data_frame[bit_column] == 1]
+            mean_values = filtered_data[['1xx', '2xx', '3xx', '4xx', '5xx', '9xx']].mean()
+            bit_df = pandas.DataFrame({'Bit Name': [bit_column], **mean_values.to_dict()})
+            result_dfs.append(bit_df)
+
+        # Concatenate the list of DataFrames into a single result DataFrame
+        result_df = pandas.concat(result_dfs, ignore_index=True)
+            # Save the DataFrame to a CSV file.
+        result_df.to_csv(self.exp_path + "/deviations_mean.csv", index=False)
+        return result_df
+
     
     def grouped_results_csv(self, pd_matrix, prerequests, attempt_no=1000):
         temp_matrix=pd_matrix.copy()
@@ -104,8 +174,8 @@ class Domain_Response_Analyzator():
         #Grouping of the deviation count
         # Define the bin edges and labels
         #CC3 Exp19
-        bins = [-1, 200, 400, 600, 800, 1000]#, 1200, 1400, result['deviation_count'].max() + 1]
-        labels = ['0-200', '200-400', '400-600', '600-800', '800-1000']#, '1000-1200', '1200-1400', '1400-Max']              
+        bins = [-1, 20, 40, 60, 80, 100, result['deviation_count'].max() + 1]
+        labels = ['0-20', '20-40', '40-60', '60-80', '80-100', '1000-Max']              
         #result['deviation_group'] = pandas.cut(result['deviation_count'], bins=bins, labels=labels)
         result['deviation_group'] = pandas.cut(result['deviation_count'], bins=bins, labels=labels)
 
@@ -546,9 +616,9 @@ class Domain_Response_Analyzator():
         mpl.bar(deviation_counts, frequency, color='blue', label='Data Distribution')
         #sns.histplot(deviation_counts, kde=True, color='blue', bins=100, label='Data Distribution')
 
-        mpl.xlabel('Deviation Count from original URI')
+        mpl.xlabel('Steganographic Payload / Modifications from original URI')
         mpl.ylabel('Share of Requests (%)')
-        mpl.title('Deviation Count URI Distribution')
+        mpl.title('Steganographic Payload URI Distribution')
         mpl.legend()
         mpl.grid(True) 
         mpl.savefig(self.exp_path+'/exp_stats_uri_deviation_distribution.png', dpi=300, bbox_inches='tight')
@@ -564,9 +634,9 @@ class Domain_Response_Analyzator():
         mpl.figure(figsize=(10, 8))
         mpl.bar(deviation_counts, frequency, color='blue', label='Data Distribution')
 
-        mpl.xlabel('Relative Deviation (%) from original URI')
+        mpl.xlabel('Relative Modification (%) from original URI')
         mpl.ylabel('Share of Requests (%)')
-        mpl.title('Relative Deviation URI Distribution')
+        mpl.title('Relative Modifications URI Distribution')
         mpl.legend()
         mpl.grid(True)
 
@@ -879,9 +949,9 @@ class Domain_Response_Analyzator():
             i+=1
 
         # Add labels and title
-        ax.set_xlabel('Modifications', fontsize=12)
+        ax.set_xlabel('Steganographic Payload / Modifications', fontsize=12)
         ax.set_ylabel('Response Code Frequency(%)', fontsize=12)
-        ax.set_title('Statuscodes Frequency over Deviation Count', fontsize=14, fontweight='bold')
+        ax.set_title('Statuscodes Frequency over Steganographic Payload', fontsize=14, fontweight='bold')
 
         # Set y-axis limits if needed
         # ax.set_ylim(0, 100)
@@ -936,9 +1006,9 @@ class Domain_Response_Analyzator():
             i+=1
 
         # Add labels and title
-        ax.set_xlabel('Modifications', fontsize=12)
+        ax.set_xlabel('Steganographic Payload / Modifications', fontsize=12)
         ax.set_ylabel('Response Code Frequency(%)', fontsize=12)
-        ax.set_title('Statuscodes Frequency over Deviation Count', fontsize=14, fontweight='bold')
+        ax.set_title('Statuscodes Frequency over Steganographic Payload', fontsize=14, fontweight='bold')
 
         # Set y-axis limits if needed
         # ax.set_ylim(0, 100)
@@ -998,7 +1068,7 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/experiment_119/"#extracted_logs/attic/experiment_19"
+    path = f"{log_dir}/experiment_122"#extracted_logs/attic/experiment_27"
     dra = Domain_Response_Analyzator(path)
     dra.start()
   
