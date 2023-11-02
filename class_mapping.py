@@ -9,6 +9,7 @@ requests_builders ={
     3: HTTP1_Request_CC_Random_Whitespace,
     31: HTTP1_Request_CC_Random_Whitespace_opt,
     32: HTTP1_Request_CC_Random_Whitespace_opt2,
+    33: HTTP1_Request_CC_Random_Whitespace_opt3,
     4: HTTP1_Request_CC_Reordering_Header_Fields,
     5: HTTP1_Request_CC_URI_Represenation,
     51: HTTP1_Request_CC_URI_Represenation_opt1,

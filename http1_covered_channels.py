@@ -271,7 +271,130 @@ class HTTP1_Request_CC_Random_Whitespace_opt2(HTTP1_Request_Builder):
 
         return request_string, deviation_count, new_uri
 
+class HTTP1_Request_CC_Random_Whitespace_opt3(HTTP1_Request_Builder):
+    def __init__(self):
+        super().__init__()  # Call the constructor of the base class first
+        self.cc_uri_post_generation = True
 
+
+
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
+        '''WHITESPACE Guided Modifications
+
+        # Bit 0: Random Non-critical SP+HTAB
+        # Bit 1: 2048 Non-critical
+        # Bit 2: 20480 Non-critical
+        # Bit 3: 40960 Non-critical  
+        # Bit 4: 81920 Non critical
+        # Bit 5: 1x +SP after Host
+        # Bit 6: 1x +HTAB after Host
+        # Bit 7: 1x +CRLN random position
+        # Bit 8: 1x SP after host + 1x CRLN 
+        # Bit 9: 1x HTAP after host +1 CRLN
+        # Bit 10: +SP between key +value
+        '''
+       
+        # Check if headers are provided elsewise take default headers
+        if headers is None:
+            headers = default_headers.copy()
+        else:
+            # Create a copy to avoid modifying the original list
+            headers = headers.copy()
+        # Insert the Host header at the beginning of the list
+        headers.insert(0, ("Host", self.host_placeholder)) 
+
+        scheme=""
+        # Build the request_line from the provided arguments
+        request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)      
+        request_string = request_line
+        fuzzvalue=0.7
+        deviation_count = 0
+        target_deviation =0
+        insertion_count=0
+        newline=""
+        keyspace=""
+        bit_set = random.choice(range(11))  # Randomly choose one of the 8 bits
+        
+        
+        
+
+        # Iterate over header fields(HTTP1_Request_Builder):
+        if bit_set==0: 
+            target_deviation=1
+            deviation_count += 1
+        if bit_set==1: 
+            target_deviation=2048
+            deviation_count += 2
+        if bit_set==2: 
+            target_deviation=2024*10
+            deviation_count += 4
+        if bit_set==3: 
+            target_deviation=2024*20
+            deviation_count += 8
+        if bit_set==4: 
+            target_deviation=2024*30
+            deviation_count += 16    
+        if bit_set==5: 
+            target_deviation=2024*40
+            deviation_count += 32
+
+        while insertion_count<target_deviation:
+            for index, header in enumerate(headers):
+                field_name, field_value = header
+                # Random choice if value is changed
+                if random.random() < fuzzvalue:
+                    # Create a string with random number of Whitespaces and Tabulators, third possible char?  ????
+                    whitespaces = ""
+                    while random.random() < fuzzvalue:
+                        # Random Choice from Tabulator, Whitespace, no carriage retrun + newline + Whitespace
+                        if field_name!="Host":     #no tab at host
+                            random_linearwhithespace = random.choice(["\t", " "])
+                        else: 
+                            random_linearwhithespace = ""
+                        whitespaces += random_linearwhithespace
+                        insertion_count += 1
+                    # Add the whitespace string at the end of the value
+                    field_value += whitespaces
+                # Build the line of the request string
+                headers[index]= (field_name, field_value)
+        if bit_set==6:
+            key, value = headers[0]
+            headers[0]=("Host", value+" ")
+            target_deviation=0
+            deviation_count += 64
+        if bit_set==7:
+            key, value = headers[0]
+            headers[0]=("Host", value+"\t")
+            deviation_count += 128
+        if bit_set==8:
+            key, value = headers[0]
+            headers[0]=("Host", value+" ")
+            newline=" \r\n"
+            deviation_count += 256
+        if bit_set==9:
+            key, value = headers[0]
+            headers[0]=("Host", value+"\t")
+            newline=" \r\n"
+            deviation_count += 512
+        random_header = random.choice(headers)    
+        modified_header = (random_header[0], random_header[1] + newline)
+        index = headers.index(random_header)
+        headers[index] = modified_header
+        if bit_set==10:
+            keyspace=" "
+            deviation_count += 1024
+            
+       
+        #Build header string
+
+        for header in headers:
+            request_string += f"{header[0]}: {keyspace}{header[1]}\r\n"
+
+        request_string += "\r\n"    
+                
+
+
+        return request_string, deviation_count, new_uri
 
 
 # Covertchannel suggested by Kwecka et al: Reordering ofHeaderfields#

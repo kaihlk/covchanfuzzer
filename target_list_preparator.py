@@ -163,7 +163,8 @@ class Target_List_Preperator:
       
         
         self.save_dict_list(self.base_check_fails, "base_check_fails.csv")
-        self.save_dict_list(self.dns_fails, "dns_fails.csv")     
+        if len(self.dns_fails)>0:
+            self.save_dict_list(self.dns_fails, "dns_fails.csv")     
         self.save_df(df_checked_targets, filename="target_list.csv")
         self.save_df_json(df_checked_targets, filename="target_list.json")
         self.save_dict_list(self.request_response_data_list, filename="request_response.csv")
