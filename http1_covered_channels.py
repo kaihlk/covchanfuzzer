@@ -530,21 +530,12 @@ class HTTP1_Request_CC_URI_Represenation_opt2(HTTP1_Request_Builder):
         
         
         #Replace NEW_uri with new scheme
-        """         if new_scheme.lower()=="http":
-                    request_sch=prerequest.replace("http", new_scheme)
-                elif new_scheme.lower()=="https":
-                    request_sch=prerequest.replace("https", new_scheme) """
-
-    
-        
-        
-        
+   
         request_string = request_line
         for header in headers:
             request_string += f"{header[0]}: {header[1]}\r\n"
 
-        
-        
+
         
         request_string += "\r\n"
 
@@ -1321,6 +1312,100 @@ class HTTP1_Request_CC_URI_Extend_with_fragments(HTTP1_Request_Builder):
             print(ex)
 
 
+    #Try to verify findings of first runn
+    
+class  HTTP1_Request_CC_Add_Random_Header_Fields(HTTP1_Request_Builder):      
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
+        # Check if headers are provided elsewise take default headers
+        if headers is None:
+            headers = default_headers.copy()
+        else:
+            # Create a copy to avoid modifying the original list
+            headers = headers.copy()
+        
+        # Insert the Host header at the beginning of the list
+        headers.insert(0, ("Host", self.host_placeholder))
+        
+        # Build the request_line from the provided arguments
+        
+        scheme=""
+        
+        request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
+       
+        deviation_count = 0
+        request_string = request_line
+        
+        max_header_key_length= 16
+        max_header_value_length =16
+        max_header_field_count = 1024
+        
+
+        # Generate random header key-value pairs
+        header_count=len(headers)  
+        chosen_header_field_count=random.randint(header_count, max_header_field_count)  
+        while header_count<chosen_header_field_count: 
+            header_count+=1
+            random_header_key = mutators.generate_random_string(length=max_header_key_length)
+            random_header_value = mutators.generate_random_string(length=max_header_value_length)
+            deviation_count+=len(random_header_key)+len(random_header_value)
+            headers.append((random_header_key, random_header_value))
+    
+        #CC PART
+        header_count=+1
+        headers.append(("Head-Count", header_count))
+
+
+        for header in headers:
+            request_string += f"{header[0]}: {header[1]}\r\n"
+
+        # End the request Sclass HTTP1_Request_CC_tring
+        request_string += "\r\n"
+
+        return request_string, deviation_count, new_uri
+
+class  HTTP1_Request_CC_Add_Big_Header_Field(HTTP1_Request_Builder):      
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
+        # Check if headers are provided elsewise take default headers
+        if headers is None:
+            headers = default_headers.copy()
+        else:
+            # Create a copy to avoid modifying the original list
+            headers = headers.copy()
+        
+        # Insert the Host header at the beginning of the list
+        headers.insert(0, ("Host", self.host_placeholder))
+        
+        # Build the request_line from the provided arguments
+        
+        scheme=""
+        
+        request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
+       
+        deviation_count = 0
+        request_string = request_line
+        
+        max_header_key_length= 20*1024
+        max_header_value_length =20*1024
+        #CC PART
+        
+        # Generate random header key-value pairs
+        random_header_key = mutators.generate_random_string(length=random.randint(1,max_header_key_length))
+        random_header_value = mutators.generate_random_string(length=random.randint(1,max_header_value_length))
+        headers.append((random_header_key, random_header_value))
+        header_count=len(headers)    
+        deviation_count+=len(random_header_key)+len(random_header_value)
+        
+            
+    
+        
+
+        for header in headers:
+            request_string += f"{header[0]}: {header[1]}\r\n"
+
+        # End the request Sclass HTTP1_Request_CC_tring
+        request_string += "\r\n"
+
+        return request_string, deviation_count, new_uri
 
     # CC Absence or PResense of a header field
 

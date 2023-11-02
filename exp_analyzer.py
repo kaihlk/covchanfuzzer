@@ -25,8 +25,8 @@ class Domain_Response_Analyzator():
         self.data_frame_pd_matrix = pandas.read_csv(
             path+"/pd_matrix.csv")
         
-        #self.data_frame_uri = pandas.read_csv(path+"/uri_dev_statuscode.csv")
-        #self.data_frame_rel_uri = pandas.read_csv(path+"/rel_uri_dev_statuscode.csv")        
+        self.data_frame_uri = pandas.read_csv(path+"/uri_dev_statuscode.csv")
+        self.data_frame_rel_uri = pandas.read_csv(path+"/rel_uri_dev_statuscode.csv")        
         self.experiment_configuration, self.exp_meta_data=self.load_exp_outcome(self.exp_path)
         self.dra_logging=logging.getLogger("main.runner.dra_logger")
         self.font_size_axis=10
@@ -57,8 +57,8 @@ class Domain_Response_Analyzator():
     def start(self):
         #This one for Marcos Suggestions:
         self.decode_save_cc6(self.data_frame_prerequest_stats)
-       
-        self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats)
+        
+        #self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats)
         self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=None)
         self.status_code_bars_over_deviation(self.data_frame_prerequest_stats, ax=None)
         #self.plot_unsorted_data(self.data_frame_exp_stats)
@@ -75,12 +75,12 @@ class Domain_Response_Analyzator():
         self.save_exp_analyzer_results(host_statistics, prerequest_statistics)
         #self.plot_deviation_count_distribution(self.data_frame_prerequest_stats)
         
-        #self.plot_uri_deviation_count_distribution(self.data_frame_uri)
-        #self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
-        #self.plot_scatter_prerequest(self.data_frame_rel_uri)
+        self.plot_uri_deviation_count_distribution(self.data_frame_uri)
+        self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
+        self.plot_scatter_prerequest(self.data_frame_rel_uri)
         self.plot_hosts_responses(self.data_frame_exp_stats)
         #self.figure1(self.data_frame_pd_matrix)
-        self.quadplot()#
+        self.quadplot()
         return
 
     def create_stacked_bar_chart(self,data_frame):
@@ -106,16 +106,17 @@ class Domain_Response_Analyzator():
     def decode_save_cc6(self,data_frame):
 
         
-        bit_columns= [
+        bit_columns= [ 
             'Bit 0: Exclude Scheme',
-            'Bit 1: Original Scheme',
-            'Bit 2: Randomly include/exclude subdomain',
-            'Bit 3: Randomly include a port',
-            'Bit 4: Scheme Fitting Port',
-            'Bit 6: Counter HTTP/HTTPS Port',
-            'Bit 7: Random Integer',
-            'Bit 8: Random String (length=5)',
-            'Bit 9: Delete path if path is provided'
+            'Bit 1: Switch Scheme https->http',
+            'Bit 2: Exclude subdomain',
+            'Bit 3: Include fitting port',
+            'Bit 4: Counter Scheme fitting Port',
+            'Bit 5: Random Port in Port Range 65535',
+            'Bit 6: Random Integer',
+            'Bit 7: Random String L=5',
+            'Bit 8: Random String L=6-100',
+            'Bit 9: Delete path if path is provided',
         ]
 
 
@@ -124,7 +125,7 @@ class Domain_Response_Analyzator():
             bit_values = [(deviation_count >> bit_index) & 1 for bit_index in range(num_bits)]
             return bit_values    
 
-        num_bits = len(bit_columns)
+       
 
         # Decode each row in the original DataFrame and add the bit columns.
         for bit_index, bit_column in enumerate(bit_columns):
@@ -149,8 +150,27 @@ class Domain_Response_Analyzator():
 
         # Concatenate the list of DataFrames into a single result DataFrame
         result_df = pandas.concat(result_dfs, ignore_index=True)
+        #Percentage
+        result_df.iloc[:, 1:] = result_df.iloc[:, 1:].apply(lambda x: (x / x.sum()) * 100, axis=1)
+        
             # Save the DataFrame to a CSV file.
         result_df.to_csv(self.exp_path + "/deviations_mean.csv", index=False)
+        colors = ['#9B59BB', '#2ECC77', '#F1C400', '#E74C33', '#3498DD', '#344955']
+        fig, ax = mpl.subplots(figsize=(10, 10))
+
+        bottom = 0
+
+        for i, col in enumerate(result_df.columns[1:]):
+            ax.bar(result_df['Bit Name'], result_df[col], label=col, bottom=bottom, color=colors[i])
+            bottom += result_df[col]
+
+        ax.set_xlabel('Bit Name')
+        ax.set_ylabel('Statuscodes Share (%)')
+        ax.set_title('Stacked Bar Diagram of 2xx Rates by Bit Name')
+        ax.legend(title='2xx Rates', loc='upper right')
+        mpl.xticks(rotation=90)
+        mpl.tight_layout()
+        mpl.savefig(self.exp_path+'/discrete_deviation_response_rates.png', dpi=300)
         return result_df
 
     
@@ -1068,7 +1088,7 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/experiment_122"#extracted_logs/attic/experiment_27"
+    path = f"{log_dir}/extracted_logs/EOW/experiment_11"
     dra = Domain_Response_Analyzator(path)
     dra.start()
   

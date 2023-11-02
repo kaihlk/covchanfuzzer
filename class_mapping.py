@@ -19,7 +19,10 @@ requests_builders ={
     9: HTTP1_Request_CC_Random_Content_No_Lenght_Field,
     10: HTTP1_Request_CC_URI_Common_Addresses,
     11: HTTP1_Request_CC_URI_Common_Addresses_And_Anchors,
-    12: HTTP1_Request_CC_URI_Extend_with_fragments
+    12: HTTP1_Request_CC_URI_Extend_with_fragments,
+    13: HTTP1_Request_CC_Add_Random_Header_Fields,
+    14: HTTP1_Request_CC_Add_Big_Header_Field,
+
 
 }
 
