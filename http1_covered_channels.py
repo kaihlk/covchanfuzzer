@@ -284,14 +284,15 @@ class HTTP1_Request_CC_Random_Whitespace_opt3(HTTP1_Request_Builder):
         # Bit 0: Random Non-critical SP+HTAB
         # Bit 1: 2048 Non-critical
         # Bit 2: 20480 Non-critical
-        # Bit 3: 40960 Non-critical  
-        # Bit 4: 81920 Non critical
-        # Bit 5: 1x +SP after Host
-        # Bit 6: 1x +HTAB after Host
-        # Bit 7: 1x +CRLN random position
-        # Bit 8: 1x SP after host + 1x CRLN 
-        # Bit 9: 1x HTAP after host +1 CRLN
-        # Bit 10: +SP between key +value
+        # Bit 3: 40960 Non-critical 
+        # Bit 4  61400 Non critical
+        # Bit 5: 81920 Non critical
+        # Bit 6: 1x +SP after Host
+        # Bit 7: 1x +HTAB after Host
+        # Bit 8: 1x +CRLN random position
+        # Bit 9: 1x SP after host + 1x CRLN 
+        # Bit 10: 1x HTAP after host +1 CRLN
+        # Bit 11: +SP between key +value
         '''
        
         # Check if headers are provided elsewise take default headers
@@ -313,7 +314,7 @@ class HTTP1_Request_CC_Random_Whitespace_opt3(HTTP1_Request_Builder):
         insertion_count=0
         newline=""
         keyspace=""
-        bit_set = random.choice(range(11))  # Randomly choose one of the 8 bits
+        bit_set = random.choice(range(12))  # Randomly choose one of the 8 bits
         
         
         
@@ -357,32 +358,35 @@ class HTTP1_Request_CC_Random_Whitespace_opt3(HTTP1_Request_Builder):
                     field_value += whitespaces
                 # Build the line of the request string
                 headers[index]= (field_name, field_value)
-        if bit_set==6:
+        if bit_set==6: #SP
             key, value = headers[0]
             headers[0]=("Host", value+" ")
             target_deviation=0
             deviation_count += 64
-        if bit_set==7:
+        if bit_set==7: #TB
             key, value = headers[0]
             headers[0]=("Host", value+"\t")
             deviation_count += 128
-        if bit_set==8:
+        if bit_set==8: #CRLN
+            newline=" \r\n"
+            deviation_count += 256
+        if bit_set==9: #CRLN
             key, value = headers[0]
             headers[0]=("Host", value+" ")
             newline=" \r\n"
-            deviation_count += 256
-        if bit_set==9:
+            deviation_count += 512     
+        if bit_set==10: 
             key, value = headers[0]
             headers[0]=("Host", value+"\t")
             newline=" \r\n"
-            deviation_count += 512
+            deviation_count += 1024
         random_header = random.choice(headers)    
         modified_header = (random_header[0], random_header[1] + newline)
         index = headers.index(random_header)
         headers[index] = modified_header
-        if bit_set==10:
+        if bit_set==11:
             keyspace=" "
-            deviation_count += 1024
+            deviation_count += 2048
             
        
         #Build header string

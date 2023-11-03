@@ -105,18 +105,30 @@ class Domain_Response_Analyzator():
 
     def decode_save_cc6(self,data_frame):
 
-        
+        # Bit 0: 
+        # Bit 1: 
+        # Bit 2: 
+        # Bit 3:   
+        # Bit 4: 
+        # Bit 5: 
+        # Bit 6: 
+        # Bit 7: 
+        # Bit 8: 
+        # Bit 9: 
+        # 
         bit_columns= [ 
-            'Bit 0: Exclude Scheme',
-            'Bit 1: Switch Scheme https->http',
-            'Bit 2: Exclude subdomain',
-            'Bit 3: Include fitting port',
-            'Bit 4: Counter Scheme fitting Port',
-            'Bit 5: Random Port in Port Range 65535',
-            'Bit 6: Random Integer',
-            'Bit 7: Random String L=5',
-            'Bit 8: Random String L=6-100',
-            'Bit 9: Delete path if path is provided',
+            'Bit 0: Random Non-critical SP+HTAB',
+            'Bit 1: 2048 Non-critical',
+            'Bit 2: 20480 Non-critical',
+            'Bit 3: 40960 Non-critical',
+            'Bit 4: 61440 Non critical',
+            'Bit 5: 81920 Non critical',
+            'Bit 6: 1x +SP after Host',
+            'Bit 7: 1x +HTAB after Host',
+            'Bit 8: 1x +CRLN random position',
+            'Bit 9: 1x SP after host + 1x CRLN ',
+            'Bit 10: 1x HTAP after host +1 CRLN',
+            'Bit 11: +SP between key +value',
         ]
 
 
@@ -948,8 +960,8 @@ class Domain_Response_Analyzator():
         data_frame = data_frame.groupby('deviation_count').mean().reset_index()
         for code in response_codes:
             data_frame[f'{code}_percentage'] = data_frame[code] /self.experiment_configuration["max_targets"]  * 100
-        
-        interpolation_range = range(1, 1500)
+        maximum_dev_count=data_frame["deviation_count"].values.max()
+        interpolation_range = range(1, maximum_dev_count)
         data_frame.set_index('deviation_count', inplace=True)
         data_frame = data_frame.reindex(interpolation_range).interpolate(method='linear')
         data_frame.reset_index(inplace=True)
@@ -1011,7 +1023,8 @@ class Domain_Response_Analyzator():
         for code in response_codes:
             data_frame[f'{code}_percentage'] = data_frame[code] /self.experiment_configuration["max_targets"]  * 100
         
-        interpolation_range = range(1, 1500)
+        maximum_dev_count=data_frame["deviation_count"].values.max()
+        interpolation_range = range(1, maximum_dev_count)
         data_frame.set_index('deviation_count', inplace=True)
         data_frame = data_frame.reindex(interpolation_range).interpolate(method='linear')
         data_frame.reset_index(inplace=True)
@@ -1088,7 +1101,7 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/extracted_logs/EOW/experiment_11"
+    path = f"{log_dir}/extracted_logs/EOW/experiment_15"
     dra = Domain_Response_Analyzator(path)
     dra.start()
   
