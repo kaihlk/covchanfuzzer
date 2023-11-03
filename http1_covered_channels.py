@@ -368,17 +368,17 @@ class HTTP1_Request_CC_Random_Whitespace_opt3(HTTP1_Request_Builder):
             headers[0]=("Host", value+"\t")
             deviation_count += 128
         if bit_set==8: #CRLN
-            newline=" \r\n"
+            newline="\r\n "
             deviation_count += 256
         if bit_set==9: #CRLN
             key, value = headers[0]
             headers[0]=("Host", value+" ")
-            newline=" \r\n"
+            newline="\r\n "
             deviation_count += 512     
         if bit_set==10: 
             key, value = headers[0]
             headers[0]=("Host", value+"\t")
-            newline=" \r\n"
+            newline="\r\n "
             deviation_count += 1024
         random_header = random.choice(headers)    
         modified_header = (random_header[0], random_header[1] + newline)

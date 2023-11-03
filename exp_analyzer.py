@@ -125,10 +125,9 @@ class Domain_Response_Analyzator():
             'Bit 5: 81920 Non critical',
             'Bit 6: 1x +SP after Host',
             'Bit 7: 1x +HTAB after Host',
-            'Bit 8: 1x +CRLN random position',
-            'Bit 9: 1x SP after host + 1x CRLN ',
-            'Bit 10: 1x HTAP after host +1 CRLN',
-            'Bit 11: +SP between key +value',
+            'Bit 8: 1x SP after host + 1x CRLN ',
+            'Bit 9: 1x HTAP after host +1 CRLN',
+            'Bit 10: +SP between key +value',
         ]
 
 
