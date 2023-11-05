@@ -25,13 +25,14 @@ class Domain_Response_Analyzator():
         self.data_frame_pd_matrix = pandas.read_csv(
             path+"/pd_matrix.csv")
         
-        self.data_frame_uri = pandas.read_csv(path+"/uri_dev_statuscode.csv")
-        self.data_frame_rel_uri = pandas.read_csv(path+"/rel_uri_dev_statuscode.csv")        
+        #self.data_frame_uri = pandas.read_csv(path+"/uri_dev_statuscode.csv")
+        #self.data_frame_rel_uri = pandas.read_csv(path+"/rel_uri_dev_statuscode.csv")        
         self.experiment_configuration, self.exp_meta_data=self.load_exp_outcome(self.exp_path)
         self.dra_logging=logging.getLogger("main.runner.dra_logger")
         self.font_size_axis=10
         self.font_size_title=12
         self.font_size_label=8
+        self.slope=0
         return
 
     def load_exp_outcome(self, path):
@@ -56,11 +57,20 @@ class Domain_Response_Analyzator():
 
     def start(self):
         #This one for Marcos Suggestions:
-        self.decode_save_cc6(self.data_frame_prerequest_stats)
+        self.singleplot_blocking()##CC3s
+        self.singleplot_mod()##CC3s
+        self.single_plot_deviation_count_distribution()###CC3
+        self.filter_and_aggregate(self.data_frame_pd_matrix, 503)
+        statuscodes_dict=self.count_status_codes(self.data_frame_pd_matrix)
+        print(statuscodes_dict)
+        self.doubleplot()
+        self.doubleplot_modification()
+        self.decode_save_cc52(self.data_frame_prerequest_stats)
+        #self.decode_save_cc33(self.data_frame_prerequest_stats)
         
         #self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats)
         self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=None)
-        self.status_code_bars_over_deviation(self.data_frame_prerequest_stats, ax=None)
+        #self.status_code_bars_over_deviation(self.data_frame_prerequest_stats, ax=None)
         #self.plot_unsorted_data(self.data_frame_exp_stats)
         statuscodes_dict=self.count_status_codes(self.data_frame_pd_matrix)
         host_statistics=self.host_stats(self.data_frame_exp_stats)
@@ -75,13 +85,43 @@ class Domain_Response_Analyzator():
         self.save_exp_analyzer_results(host_statistics, prerequest_statistics)
         #self.plot_deviation_count_distribution(self.data_frame_prerequest_stats)
         
-        self.plot_uri_deviation_count_distribution(self.data_frame_uri)
-        self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
-        self.plot_scatter_prerequest(self.data_frame_rel_uri)
+        #self.plot_uri_deviation_count_distribution(self.data_frame_uri)
+        #self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
+        #self.plot_scatter_prerequest(self.data_frame_rel_uri)
         self.plot_hosts_responses(self.data_frame_exp_stats)
         #self.figure1(self.data_frame_pd_matrix)
         self.quadplot()
         return
+    
+    def filter_and_aggregate(self,pd_matrix, target_status_code):
+        #Filter the DataFrame to only include rows with the target_status_code
+        filtered_df = pd_matrix[pd_matrix.iloc[:, 1:].eq(target_status_code).any(axis=1)]
+
+        #Group the filtered DataFrame by domain and count the occurrences of the target_status_code
+        status_code_counts = filtered_df.iloc[:, 1:].eq(target_status_code).sum()
+
+        #Create a dictionary to store message indexes when the code was received
+        message_indexes = {}
+        for domain in filtered_df.columns[1:]:
+            messages = filtered_df[filtered_df[domain] == target_status_code]['Attempt No.\Domain'].tolist()
+            if messages:  # Check if the list is not empty
+                message_indexes[domain] = messages
+
+        #Convert the aggregated counts to a DataFrame
+        counts_df = status_code_counts.reset_index()
+        counts_df.columns = ['Domain', 'Count']
+        
+        counts_df = counts_df[counts_df['Count'] > 0]
+        
+        #Save Results
+        with open(self.exp_path + f"/message_indexes_{target_status_code}.json", "w", encoding="utf-8") as file:
+            json.dump(message_indexes, file, indent=4)
+        counts_df.to_csv(self.exp_path+f"/counts_{target_status_code}.csv")
+
+        return counts_df, message_indexes
+
+
+
 
     def create_stacked_bar_chart(self,data_frame):
         # Filter the DataFrame where Bit 0 is equal to 1
@@ -103,33 +143,25 @@ class Domain_Response_Analyzator():
 
         mpl.show()
 
-    def decode_save_cc6(self,data_frame):
+    def decode_save_cc33(self,data_frame):
 
-        # Bit 0: 
-        # Bit 1: 
-        # Bit 2: 
-        # Bit 3:   
-        # Bit 4: 
-        # Bit 5: 
-        # Bit 6: 
-        # Bit 7: 
-        # Bit 8: 
-        # Bit 9: 
-        # 
+        
+        
+        #CC3 Columns
         bit_columns= [ 
-            'Bit 0: Random Non-critical SP+HTAB',
-            'Bit 1: 2048 Non-critical',
-            'Bit 2: 20480 Non-critical',
-            'Bit 3: 40960 Non-critical',
-            'Bit 4: 61440 Non critical',
-            'Bit 5: 81920 Non critical',
-            'Bit 6: 1x +SP after Host',
-            'Bit 7: 1x +HTAB after Host',
-            'Bit 8: 1x SP after host + 1x CRLN ',
-            'Bit 9: 1x HTAP after host +1 CRLN',
-            'Bit 10: +SP between key +value',
+            '0. Small No. SP+HTAB',
+            '1. 2048 SP+HTAB',
+            '2. 20480 SP+HTAB',
+            '3. 40960 SP+HTAB',
+            '4. 61440 SP+HTAB',
+            '5. 81920 SP+HTAB',
+            '6. Host + SP',
+            '7. Host + HTAB',
+            '8. rand. Header + CRLF',
+            '9. Host + SP + rand. Header + CRLF',
+            '10 Host + HTAB + rand. Header + CRLF',
+            '11 SP between key & value',
         ]
-
 
         def decode_bits(deviation_count, num_bits):
             # Create a list of bit values by decoding the deviation_count.
@@ -144,9 +176,6 @@ class Domain_Response_Analyzator():
 
         data_frame.to_csv(self.exp_path + "/prerequest_decoded.csv", index=False)
         
-        #self.create_stacked_bar_chart(data_frame)
-        
-
         # Create an empty DataFrame to store the result
         result_df = pandas.DataFrame(columns=['Bit Name', 'Mean 1xx', 'Mean 2xx', 'Mean 3xx', 'Mean 4xx', 'Mean 5xx', 'Mean 9xx'])
 
@@ -165,7 +194,11 @@ class Domain_Response_Analyzator():
         result_df.iloc[:, 1:] = result_df.iloc[:, 1:].apply(lambda x: (x / x.sum()) * 100, axis=1)
         
             # Save the DataFrame to a CSV file.
+        result_df.iloc[:, 1:] = result_df.iloc[:, 1:].round(1)
         result_df.to_csv(self.exp_path + "/deviations_mean.csv", index=False)
+        transpose_df=result_df
+        transpose_df.iloc[:, 1:] = transpose_df.iloc[:, 1:].round(2)
+        transpose_df.to_latex(self.exp_path+"/deviation_means_t.tex", index=False)
         colors = ['#9B59BB', '#2ECC77', '#F1C400', '#E74C33', '#3498DD', '#344955']
         fig, ax = mpl.subplots(figsize=(10, 10))
 
@@ -175,15 +208,87 @@ class Domain_Response_Analyzator():
             ax.bar(result_df['Bit Name'], result_df[col], label=col, bottom=bottom, color=colors[i])
             bottom += result_df[col]
 
-        ax.set_xlabel('Bit Name')
-        ax.set_ylabel('Statuscodes Share (%)')
-        ax.set_title('Stacked Bar Diagram of 2xx Rates by Bit Name')
-        ax.legend(title='2xx Rates', loc='upper right')
+        #ax.set_xlabel('Bit Name')
+        ax.set_ylabel('Response Status Codes Share (%)')
+        ax.set_title('Stacked Bar Diagram of 2xx Rates at different kind of Modifications')
+        ax.legend(loc='lower right')
         mpl.xticks(rotation=90)
         mpl.tight_layout()
         mpl.savefig(self.exp_path+'/discrete_deviation_response_rates.png', dpi=300)
         return result_df
+    
+    def decode_save_cc52(self,data_frame):
 
+        
+        
+        #CC52Columns
+        bit_columns= [ 
+            '0. Exclude Scheme',
+            '1. Switch Scheme',
+            '2. Exclude subdomain',
+            '3. Include fitting port',
+            '4. Counter Scheme fitting Port',
+            '5. Random Port in Port Range 65535',
+            '6. Random Integer as Port',
+            '7. Random String L=5 as Port',
+            '8. Random String L=6-100 as Port',
+            '9. Delete path if path is provided',
+       
+        ]
+
+        def decode_bits(deviation_count, num_bits):
+            # Create a list of bit values by decoding the deviation_count.
+            bit_values = [(deviation_count >> bit_index) & 1 for bit_index in range(num_bits)]
+            return bit_values    
+
+       
+
+        # Decode each row in the original DataFrame and add the bit columns.
+        for bit_index, bit_column in enumerate(bit_columns):
+            data_frame[bit_column] = data_frame['deviation_count'].apply(lambda x: (x >> bit_index) & 1)
+
+        data_frame.to_csv(self.exp_path + "/prerequest_decoded.csv", index=False)
+        
+        # Create an empty DataFrame to store the result
+        result_df = pandas.DataFrame(columns=['Bit Name', 'Mean 1xx', 'Mean 2xx', 'Mean 3xx', 'Mean 4xx', 'Mean 5xx', 'Mean 9xx'])
+
+        result_dfs = []
+
+        # Iterate through each bit, calculate the mean values, and add them to the list of DataFrames
+        for bit_column in bit_columns:
+            filtered_data = data_frame[data_frame[bit_column] == 1]
+            mean_values = filtered_data[['1xx', '2xx', '3xx', '4xx', '5xx', '9xx']].mean()
+            bit_df = pandas.DataFrame({'Bit Name': [bit_column], **mean_values.to_dict()})
+            result_dfs.append(bit_df)
+
+        # Concatenate the list of DataFrames into a single result DataFrame
+        result_df = pandas.concat(result_dfs, ignore_index=True)
+        #Percentage
+        result_df.iloc[:, 1:] = result_df.iloc[:, 1:].apply(lambda x: (x / x.sum()) * 100, axis=1)
+        
+            # Save the DataFrame to a CSV file.
+        result_df.iloc[:, 1:] = result_df.iloc[:, 1:].round(1)
+        result_df.to_csv(self.exp_path + "/deviations_mean.csv", index=False)
+        transpose_df=result_df
+        transpose_df.iloc[:, 1:] = transpose_df.iloc[:, 1:].round(2)
+        transpose_df.to_latex(self.exp_path+"/deviation_means_t.tex", index=False)
+        colors = ['#9B59BB', '#2ECC77', '#F1C400', '#E74C33', '#3498DD', '#344955']
+        fig, ax = mpl.subplots(figsize=(10, 10))
+
+        bottom = 0
+
+        for i, col in enumerate(result_df.columns[1:]):
+            ax.bar(result_df['Bit Name'], result_df[col], label=col, bottom=bottom, color=colors[i])
+            bottom += result_df[col]
+
+        #ax.set_xlabel('Bit Name')
+        ax.set_ylabel('Response Status Codes Share (%)')
+        ax.set_title('Stacked Bar Diagram of 2xx Rates at different kind of Modifications')
+        ax.legend(title='2xx Rates', loc='lower right')
+        mpl.xticks(rotation=90)
+        mpl.tight_layout()
+        mpl.savefig(self.exp_path+'/discrete_deviation_response_rates.png', dpi=300)
+        return result_df
     
     def grouped_results_csv(self, pd_matrix, prerequests, attempt_no=1000):
         temp_matrix=pd_matrix.copy()
@@ -205,8 +310,8 @@ class Domain_Response_Analyzator():
         #Grouping of the deviation count
         # Define the bin edges and labels
         #CC3 Exp19
-        bins = [-1, 20, 40, 60, 80, 100, result['deviation_count'].max() + 1]
-        labels = ['0-20', '20-40', '40-60', '60-80', '80-100', '1000-Max']              
+        bins = [-1, 20, 200, result['deviation_count'].max() + 1]
+        labels = ['0-20', '20-200', '200-2000']              
         #result['deviation_group'] = pandas.cut(result['deviation_count'], bins=bins, labels=labels)
         result['deviation_group'] = pandas.cut(result['deviation_count'], bins=bins, labels=labels)
 
@@ -281,7 +386,6 @@ class Domain_Response_Analyzator():
         # Iterate through the DataFrame to count the status codes
         for col in df.columns[1:]:
             for index, status_code in enumerate(df[col]):
-                # Assuming status_code is a string with 3 digits
                 if status_code not in status_code_counts:
                     status_code_counts[status_code] = 1
                 else:
@@ -291,6 +395,9 @@ class Domain_Response_Analyzator():
     
     def format_status_codes(self, status_code_counts):
         # Create a table with 6 columns for each group
+        
+        status_code_counts = {k: status_code_counts[k] for k in sorted(status_code_counts, key=lambda x: int(x))}
+
         table = r"""
         \begin{tabular}{p{1.1cm} p{2.4cm} p{2.4cm} p{2.4cm} p{2.4cm} p{2.4cm}}
             \hline
@@ -310,7 +417,7 @@ class Domain_Response_Analyzator():
 
         # Group the status codes based on the leading digit
         for code, count in status_code_counts.items():
-            leading_digit = str(int(code))[0]  # Extract the leading digit as a string
+            leading_digit = str(int(code))[0] 
             group_name = leading_digit + 'xx'
             if group_name in groups:
                 groups[group_name].append(f"{int(code):03d} ({count})")
@@ -417,6 +524,15 @@ class Domain_Response_Analyzator():
 \end{tabular}  
 \end{table}
 
+
+\begin{table}[H]
+    \caption{Experiment CC"""""": Received Response Status Codes}
+    \label{tab:cc"""+str(experiment_configuration["covertchannel_request_number"])+r"""statuscodes}
+    \centering
+         """+ self.format_status_codes(status_codes)+ r""" 
+\end{table}
+
+
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=1\linewidth]{"""+imagepath+r"""combined_plots.png}
@@ -434,14 +550,236 @@ class Domain_Response_Analyzator():
         return latex_table
 
 
+    def doubleplot_modification(self):
+        """Create 2x1 Plot Matrix"""
+        # Create a figure with subplots
+
+        self.font_size_axis=16
+        self.font_size_title=18
+        self.font_size_label=8
+        
+        fig, axs = mpl.subplots(2, 1, figsize=(14, 7))
+        #gs = GridSpec(2, 2, figure=fig)
+        mpl.subplots_adjust(wspace=0.3, hspace=0.3)
+        
+        # Top
+        self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=axs[0],subplottitles=False, autolimits=False, y_low=98, y_up=100 )
+        axs[0].set_title('Statuscodes Frequency over Steganographic Payload', fontsize=14, fontweight='bold')
+        axs[0].set_xlabel('')  # Remove x-axis label for the top plot
+        axs[0].legend(loc='upper right')
+        # Bottom 
+        self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=axs[1], subplottitles=False, autolimits=False, y_low=0, y_up=2, )
+        axs[1].set_xlabel('Steganographic Payload / Modifications', fontsize=self.font_size_axis)  # Set x-axis label for the bottom plot
+
+        fig.text(0.04, 0.5, 'Response Code Frequency(%) per Request', va='center', rotation='vertical', fontsize=self.font_size_axis)
+  
+
+        # Adjust spacing between subplots
+        #mpl.tight_layout()
+        
+        # Save the figure as a single PNG file
+        mpl.savefig(self.exp_path+'/doublestatus_code_curves_over_deviation.png', dpi=300, bbox_inches='tight')
+       
+
+        # Show the combined plot
+        #mpl.show()
+
+        return
 
 
 
+    def doubleplot_requests(self):
+        """Create 2x1 Plot Matrix"""
+        # Create a figure with subplots
+
+        self.font_size_axis=16
+        self.font_size_title=18
+        self.font_size_label=8
+        
+        fig, axs = mpl.subplots(2, 1, figsize=(14, 7))
+        #gs = GridSpec(2, 2, figure=fig)
+        mpl.subplots_adjust(wspace=0.3, hspace=0.3)
+        
+        # Top
+        self.plot_2xx_over_attempt_no_double(self.data_frame_prerequest_stats, ax=axs[0],subplottitles=False, autolimits=False, y_low=98, y_up=100 )
+        axs[0].set_title(f'Development of Response Rates (blocking rate delta: {self.slope}%)', fontsize=self.font_size_title, fontweight='bold')
+        axs[0].set_xlabel('')  # Remove x-axis label for the top plot
+        axs[0].legend(loc='upper right')
+        # Bottom 
+        self.plot_2xx_over_attempt_no_double(self.data_frame_prerequest_stats, ax=axs[1], subplottitles=False, autolimits=False, y_low=0, y_up=2, )
+        axs[1].set_xlabel('Request Index', fontsize=self.font_size_axis)  # Set x-axis label for the bottom plot
+
+        fig.text(0.04, 0.5, 'Response Rate per Request (%)', va='center', rotation='vertical', fontsize=self.font_size_axis)
+  
+
+        # Adjust spacing between subplots
+        #mpl.tight_layout()
+        
+        # Save the figure as a single PNG file
+        mpl.savefig(self.exp_path+'/double_plot.png', dpi=300)
+
+        # Show the combined plot
+        #mpl.show()
+
+        return
+    
+
+    def double_plot_deviation_count_distribution_CC3(self):
+        """Create 2x1 Plot Matrix"""
+        # Create a figure with subplots
+
+        self.font_size_axis=16
+        self.font_size_title=18
+        self.font_size_label=8
+        
+        fig, axs = mpl.subplots(1, 2, figsize=(14, 7))
+        #gs = GridSpec(2, 2, figure=fig)
+        mpl.subplots_adjust(wspace=0.3, hspace=0.3)
+        fig.suptitle("Histogram: Distribution of Steganographic Payload among Requests", fontsize=self.font_size_title, fontweight='bold')
+        # Top
+        self.plot_deviation_count_distribution(self.data_frame_prerequest_stats, ax=axs[0])
+        axs[0].set_title("Overview")
+        axs[0].set_xlabel('Steganographic Payload', fontsize=self.font_size_axis) # Remove x-axis label for the top plot
+        axs[0].set_ylabel('Share of all Requests (%)')
+        self.plot_deviation_count_distribution(self.data_frame_prerequest_stats, ax=axs[1], autolimits=False, x_low=0, x_up=200,  y_low=0, y_up=10,  bins=1000)
+        axs[1].set_title("Detail on small Modification Counts")
+        axs[1].set_xlabel('Steganographic Payload', fontsize=self.font_size_axis)  # Set x-axis label for the bottom 
+        axs[1].set_ylabel('Share of all Requests (%)')
+        # Adjust spacing between subplots
+        #mpl.tight_layout()
+
+        # Save the figure as a single PNG file
+        mpl.savefig(self.exp_path+'/double_request_distribution_plot.png', dpi=300)
+
+        # Show the combined plot
+        #mpl.show()
+
+        return
+
+    def single_plot_deviation_count_distribution(self):
+        """Create 2x1 Plot Matrix"""
+        # Create a figure with subplots
+
+        self.font_size_axis=16
+        self.font_size_title=18
+        self.font_size_label=8
+        
+        fig, axs = mpl.subplots(1,1, figsize=(14, 7))
+        #gs = GridSpec(2, 2, figure=fig)
+        mpl.subplots_adjust(wspace=0.3, hspace=0.3)
+        fig.suptitle("Histogram: Distribution of Steganographic Payload among Requests", fontsize=self.font_size_title, fontweight='bold')
+        # Top
+        self.plot_deviation_count_distribution(self.data_frame_prerequest_stats, ax=axs)
+        #axs.set_title("Overview")
+        axs.set_xlabel('Steganographic Payload / Modifications', fontsize=self.font_size_axis) # Remove x-axis label for the top plot
+        axs.set_ylabel('Share of all Requests (%)')
+        
+        # Adjust spacing between subplots
+        #mpl.tight_layout()
+
+        # Save the figure as a single PNG file
+        mpl.savefig(self.exp_path+'/single_request_distribution_plot.png', dpi=300)
+
+        # Show the combined plot
+        #mpl.show()
+
+        return
 
 
+    def doubleplot(self):
+        """Create 2x1 Plot Matrix"""
+        # Create a figure with subplots
 
+        self.font_size_axis=16
+        self.font_size_title=18
+        self.font_size_label=8
+        
+        fig, axs = mpl.subplots(2, 1, figsize=(14, 7))
+        #gs = GridSpec(2, 2, figure=fig)
+        mpl.subplots_adjust(wspace=0.3, hspace=0.3)
+        
+        # Top
+        self.plot_2xx_over_attempt_no_double(self.data_frame_prerequest_stats, ax=axs[0],subplottitles=False, autolimits=False, y_low=98, y_up=100 )
+        axs[0].set_title(f'Development of Response Rates (blocking rate delta: {self.slope}%)', fontsize=self.font_size_title, fontweight='bold')
+        axs[0].set_xlabel('')  # Remove x-axis label for the top plot
+        axs[0].legend(loc='upper right')
+        # Bottom 
+        self.plot_2xx_over_attempt_no_double(self.data_frame_prerequest_stats, ax=axs[1], subplottitles=False, autolimits=False, y_low=0, y_up=2, )
+        axs[1].set_xlabel('Request Index', fontsize=self.font_size_axis)  # Set x-axis label for the bottom plot
 
+        fig.text(0.04, 0.5, 'Response Rate per Request (%)', va='center', rotation='vertical', fontsize=self.font_size_axis)
+  
 
+        # Adjust spacing between subplots
+        #mpl.tight_layout()
+        
+        # Save the figure as a single PNG file
+        mpl.savefig(self.exp_path+'/double_plot.png', dpi=300)
+
+        # Show the combined plot
+        #mpl.show()
+
+        return
+
+    def singleplot_blocking(self):
+        """Create 2x1 Plot Matrix"""
+        # Create a figure with subplots
+
+        self.font_size_axis=16
+        self.font_size_title=18
+        self.font_size_label=8
+        
+        fig, axs = mpl.subplots(1, 1, figsize=(14, 7))
+        #gs = GridSpec(2, 2, figure=fig)
+        mpl.subplots_adjust(wspace=0.3, hspace=0.3)
+        
+        # Top
+        self.plot_2xx_over_attempt_no_double(self.data_frame_prerequest_stats, ax=axs,subplottitles=False, autolimits=False, y_low=35, y_up=65 )
+        axs.set_title(f'Development of Response Rates (blocking rate delta: {self.slope}%)', fontsize=self.font_size_title, fontweight='bold')
+        axs.set_xlabel('Message Index')  # Remove x-axis label for the top plot
+        axs.legend(loc='upper right')
+        axs.set_ylabel('Response Rate per Request (%)', va='center', rotation='vertical', fontsize=self.font_size_axis)
+  
+
+        # Adjust spacing between subplots
+        #mpl.tight_layout()
+        
+        # Save the figure as a single PNG file
+        mpl.savefig(self.exp_path+'/single_plot_block.png', dpi=300)
+
+        # Show the combined plot
+        #mpl.show()
+
+        return
+
+    def singleplot_mod(self):
+        """Create 1x1 Plot Matrix"""
+        # Create a figure with subplots
+
+        self.font_size_axis=16
+        self.font_size_title=18
+        self.font_size_label=8
+        
+        fig, axs = mpl.subplots(1, 1, figsize=(14, 7))
+        #gs = GridSpec(2, 2, figure=fig)
+        mpl.subplots_adjust(wspace=0.3, hspace=0.3)
+        
+        # Top
+        
+        self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=axs,subplottitles=False, autolimits=False, y_low=15, y_up=85 )       
+        axs.legend(loc='upper right')
+        # Adjust spacing between subplots
+        #mpl.tight_layout()
+        axs.set_xlabel('Steganographic Payload / Modifications', fontsize=self.font_size_axis)
+        axs.set_ylabel('Status Code Frequency(%)', fontsize=self.font_size_axis)
+        axs.set_title('Status Codes Frequency over Steganographic Payload', fontsize=self.font_size_title, fontweight='bold')
+        # sSave the figure as a single PNG file
+        mpl.savefig(self.exp_path+'/single_plot_mod.png', dpi=300)
+
+        # Show the combined plot
+        #mpl.show()
+
+        return
 
 
     def quadplot(self):
@@ -535,7 +873,7 @@ class Domain_Response_Analyzator():
         return prereq_statistics
 
 
-    def plot_2xx_over_attempt_no(self, data_frame, ax):
+    def plot_2xx_over_attempt_no(self, data_frame, ax, subplottitles=True, autolimits=True, y_low=0,y_up=100):
         """Plot 5 Bottom right"""
         # Calculate the share of '200x' values over the total attempt number
         data_frame['Share_2xx'] = (data_frame['2xx'] / self.experiment_configuration["max_targets"]) * 100
@@ -545,10 +883,20 @@ class Domain_Response_Analyzator():
         
         # Create a subplot
         #ax = mpl.gca()
+        """data_frame['Share_3xx'] = (data_frame['3xx'] / self.experiment_configuration["max_targets"]) * 100
+        data_frame['Share_4xx'] = (data_frame['4xx'] / self.experiment_configuration["max_targets"]) * 100
+        data_frame['Share_5xx'] = (data_frame['5xx'] / self.experiment_configuration["max_targets"]) * 100
+        data_frame['Share_9xx'] = (data_frame['9xx'] / self.experiment_configuration["max_targets"]) * 100
+
         
         
-        
-        ax.plot(data_frame['no'], data_frame['Share_2xx'], marker='', linestyle='-')
+        ax.plot(data_frame['no'], data_frame['Share_2xx'], label='2xx', marker='', linestyle='-')
+        ax.plot(data_frame['no'], data_frame['Share_3xx'], label='3xx', marker='', linestyle='-')
+        ax.plot(data_frame['no'], data_frame['Share_4xx'], label='4xx', marker='', linestyle='-')
+        ax.plot(data_frame['no'], data_frame['Share_5xx'], label='5xx', marker='', linestyle='-')
+        ax.plot(data_frame['no'], data_frame['Share_9xx'], label='9xx', marker='', linestyle='-')"""
+        ax.plot(data_frame['no'], data_frame['Share_2xx'], label='2xx', marker='', linestyle='-')
+
         
         slope, intercept, r_value, p_value, std_err = stats.linregress(data_frame['no'], data_frame['Share_2xx'])
         regression_line = slope * data_frame['no'] + intercept
@@ -561,19 +909,23 @@ class Domain_Response_Analyzator():
         intercept_end_str = f"{intercept_end:.1f}"
         intercept_end=round(intercept_end)
         definition = f'Regression Line: y = {slope:.4f}x + {intercept:.4f}\nR-squared: {r_value ** 2:.2f}'
+        
         #ax.text(400, (intercept_start+intercept_end)/2, definition, fontsize=12, color='black')
         ax.text(1-int(0.08*max_x), intercept_start, intercept_start_str, fontsize=12, color='black')
         ax.text(int(1.01*max_x), intercept_end, intercept_end_str, fontsize=12, color='black')
        
         slope=str(round(slope*(-max_x),1))  ##Request count??
+        self.slope=slope
         # Customize labels and title
-        ax.set_xlabel('Request Index', fontsize=self.font_size_axis)
-        ax.set_ylabel('2xx Response Rate per Request (%)', fontsize=self.font_size_axis)  # Updated y-axis label
-        ax.set_title(f'Development of 2xx Response Rate\n over Request Index\n (blocking rate delta: '+slope+'%)' , fontsize=self.font_size_title, fontweight='bold')
+        if subplottitles is True:
+            ax.set_xlabel('Request Index', fontsize=self.font_size_axis)
+            ax.set_ylabel('2xx Response Rate per Request (%)', fontsize=self.font_size_axis)  # Updated y-axis label
+            ax.set_title(f'Development of 2xx Response Rate\n over Request Index\n (blocking rate delta: '+slope+'%)' , fontsize=self.font_size_title, fontweight='bold')
 
         # Set y-axis limits to range from 0% to 100%
-        #mpl.ylim(0, 100)
-
+        if autolimits is False:
+            ax.set_ylim(y_low, y_up)
+        
         # Show the plot
         ax.grid(True)
         #ax.tight_layout()
@@ -581,23 +933,90 @@ class Domain_Response_Analyzator():
         #mpl.savefig(self.exp_path+'/exp_stats_2xx_no_development.png', dpi=300, bbox_inches='tight')
         #mpl.show()
         return ax
-#
+#   
+
+    def plot_2xx_over_attempt_no_double(self, data_frame, ax, subplottitles=True, autolimits=True, y_low=0,y_up=100):
+        """Plot 5 Bottom right"""
+        # Calculate the share of '200x' values over the total attempt number
+        
+        
+        # Create a plot
+        #mpl.figure(figsize=(10, 8))
+        
+        # Create a subplot
+        #ax = mpl.gca()
+        data_frame['Share_1xx'] = (data_frame['1xx'] / self.experiment_configuration["max_targets"]) * 100
+        data_frame['Share_2xx'] = (data_frame['2xx'] / self.experiment_configuration["max_targets"]) * 100
+        data_frame['Share_3xx'] = (data_frame['3xx'] / self.experiment_configuration["max_targets"]) * 100
+        data_frame['Share_4xx'] = (data_frame['4xx'] / self.experiment_configuration["max_targets"]) * 100
+        data_frame['Share_5xx'] = (data_frame['5xx'] / self.experiment_configuration["max_targets"]) * 100
+        data_frame['Share_9xx'] = (data_frame['9xx'] / self.experiment_configuration["max_targets"]) * 100
+        data_frame = data_frame.sort_values(by='no')
+        
+        colors = ['#9B59BB', '#2ECC77', '#F1C400', '#E74C33', '#3498DD', '#344955']
+        ax.plot(data_frame['no'], data_frame['Share_1xx'], label='1xx', marker='', linestyle='-', color=colors[0])
+        ax.plot(data_frame['no'], data_frame['Share_2xx'], label='2xx', marker='', linestyle='-', color=colors[1])
+        ax.plot(data_frame['no'], data_frame['Share_3xx'], label='3xx', marker='', linestyle='-', color=colors[2])
+        ax.plot(data_frame['no'], data_frame['Share_4xx'], label='4xx', marker='', linestyle='-', color=colors[3])
+        ax.plot(data_frame['no'], data_frame['Share_5xx'], label='5xx', marker='', linestyle='-', color=colors[4])
+        ax.plot(data_frame['no'], data_frame['Share_9xx'], label='9xx', marker='', linestyle='-', color=colors[5])
+
     
-    def plot_deviation_count_distribution(self, data_frame, ax):
+
+        
+        slope, intercept, r_value, p_value, std_err = stats.linregress(data_frame['no'], data_frame['Share_2xx'])
+        regression_line = slope * data_frame['no'] + intercept
+        ax.plot(data_frame['no'], regression_line, 'r--', label='Regression Line')
+        intercept_start = intercept #slope* data_frame['no'].min()+intercept
+        intercept_start_str = f"{intercept_start:.2f}"
+        #intercept_start=round(intercept_start)
+        max_x=data_frame['no'].max()+1
+        intercept_end=slope* max_x+intercept
+        intercept_end_str = f"{intercept_end:.2f}"
+        #intercept_end=round(intercept_end)
+        definition = f'Regression Line: y = {slope:.4f}x + {intercept:.4f}\nR-squared: {r_value ** 2:.2f}'
+        #ax.text(400, (intercept_start+intercept_end)/2, definition, fontsize=12, color='black')
+        ax.text(1, intercept_start, intercept_start_str, fontsize=12, color='black')#-int(0.08*max_x)
+        ax.text(int(1.01*max_x), intercept_end, intercept_end_str, fontsize=12, color='black')
+       
+        slope_percent=slope*(-max_x) ##Request count??
+        self.slope=f'{slope_percent:.2f}'
+        # Customize labels and title
+        if subplottitles is True:
+            ax.set_xlabel('Request Index', fontsize=self.font_size_axis)
+            ax.set_ylabel('2xx Response Rate per Request (%)', fontsize=self.font_size_axis)  # Updated y-axis label
+            ax.set_title(f'Development of 2xx Response Rate\n over Request Index\n (blocking rate delta: '+slope+'%)' , fontsize=self.font_size_title, fontweight='bold')
+
+        # Set y-axis limits to range from 0% to 100%
+        if autolimits is False:
+            ax.set_ylim(y_low, y_up)
+        
+        # Show the plot
+        ax.grid(True)
+        #ax.tight_layout()
+
+        #mpl.savefig(self.exp_path+'/exp_stats_2xx_no_development.png', dpi=300, bbox_inches='tight')
+        #mpl.show()
+        return ax
+    
+    def plot_deviation_count_distribution(self, data_frame, ax, autolimits=True, x_low=0, x_up=100,  y_low=0, y_up=100, bins=100 ):
         """Plot 4 Top Left"""
         deviation_count = data_frame['deviation_count'].values
 
         # Create a histogram
         #mpl.figure(figsize=(10, 8))
         #ax = mpl.gca()
-        sns.histplot(x=deviation_count, stat='percent', kde=True, color='blue', bins=100, label='Data Distribution', ax=ax)
+        sns.histplot(x=deviation_count, stat='percent',  color='blue', bins=bins, label='Data Distribution', ax=ax)#kde=True,
         #mpl.ylim(0, (relative_deviation_count))
         
         ax.set_xlabel('Steganographic Payload', fontsize=self.font_size_axis)
         ax.set_ylabel("Share of all Requests (%)", fontsize=self.font_size_axis)
         ax.set_title("Histogram:\n Distribution of Steganographic Payload\n among Requests", fontsize=self.font_size_title, fontweight='bold')
         #mpl.legend()
-        ax.grid(True)       
+        ax.grid(True)
+        if autolimits is False:
+            ax.set_xlim(x_low, x_up)  
+            ax.set_ylim(y_low, y_up)       
         #ax.savefig(self.exp_path+'/exp_stats_deviation_distribution.png', dpi=300, bbox_inches='tight')
 
         return ax
@@ -713,7 +1132,7 @@ class Domain_Response_Analyzator():
                     dpi=300, bbox_inches='tight')
         #mpl.show()
         
-    def plot_hosts_responses(self, dataframe, num_clusters=100):
+    def plot_hosts_responses(self, dataframe, num_clusters=1000):
         
         """Plot 1"""
         
@@ -980,6 +1399,8 @@ class Domain_Response_Analyzator():
             i+=1
 
         # Add labels and title
+
+        
         ax.set_xlabel('Steganographic Payload / Modifications', fontsize=12)
         ax.set_ylabel('Response Code Frequency(%)', fontsize=12)
         ax.set_title('Statuscodes Frequency over Steganographic Payload', fontsize=14, fontweight='bold')
@@ -999,7 +1420,11 @@ class Domain_Response_Analyzator():
         mpl.savefig(self.exp_path+'/status_code_bars_over_deviation.png', dpi=300, bbox_inches='tight')
         return ax
 
-    def status_code_curves_over_deviation(self, data_frame, ax=None):
+
+
+
+
+    def status_code_curves_over_deviation(self, data_frame, ax=None, subplottitles=True, autolimits=False, y_low=0, y_up=100):
 
         """
         MARCO1
@@ -1038,24 +1463,30 @@ class Domain_Response_Analyzator():
             i+=1
 
         # Add labels and title
-        ax.set_xlabel('Steganographic Payload / Modifications', fontsize=12)
-        ax.set_ylabel('Response Code Frequency(%)', fontsize=12)
-        ax.set_title('Statuscodes Frequency over Steganographic Payload', fontsize=14, fontweight='bold')
+        if subplottitles is True:
+            ax.set_xlabel('Steganographic Payload / Modifications', fontsize=12)
+            ax.set_ylabel('Response Code Frequency(%)', fontsize=12)
+            ax.set_title('Statuscodes Frequency over Steganographic Payload', fontsize=14, fontweight='bold')
 
         # Set y-axis limits if needed
         # ax.set_ylim(0, 100)
 
         # Set y-tick locations and format labels as percentages
+        if autolimits is False:
+            ax.set_ylim(y_low, y_up)
         yticks = ax.get_yticks()
         ax.set_yticks(yticks)
-        ax.set_yticklabels(['{:.0f}%'.format(ytick) for ytick in yticks])
+        ax.set_yticklabels(['{:.2f}%'.format(ytick) for ytick in yticks])
+
+        if autolimits is False:
+            ax.set_ylim(y_low, y_up)
 
         # Show the plot
         ax.grid(True)
         ax.legend()
         #mpl.show()
 
-        mpl.savefig(self.exp_path+'/status_code_curves_over_deviation.png', dpi=300, bbox_inches='tight')
+        #mpl.savefig(self.exp_path+'/status_code_curves_over_deviation.png', dpi=300, bbox_inches='tight')
         return ax
 
 
@@ -1100,7 +1531,7 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/extracted_logs/EOW/experiment_15"
+    path = f"{log_dir}/extracted_logs/attic/experiment_28"
     dra = Domain_Response_Analyzator(path)
     dra.start()
   

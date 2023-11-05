@@ -293,8 +293,10 @@ class Target_List_Preperator:
                     return None, errors
             else:  # No valid answer
                 return None, errors
+        
         target_data["uri"]=uri
         target_data["socket_dns_info"]=socket_dns_info
+        
         #target_data["errors"]=errors
         return target_data, errors
     

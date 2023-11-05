@@ -158,9 +158,9 @@ def main():
         "min_fuzz_value": 0.01,
         "spread_deviation": 0.9,
         # Target Selection Options
-        "num_attempts": 25,
-        "max_targets": 20,  # len(self.target_list):
-        "max_workers": 4,  # Parallel Processing of subsets,
+        "num_attempts": 10,
+        "max_targets": 100,  # len(self.target_list):
+        "max_workers": 25,  # Parallel Processing of subsets,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
         "check_basic_request": 2,
@@ -168,7 +168,7 @@ def main():
         # "target_list_subdomain_10000.csv",#"new_target_list.csv",
         "target_list": "target_list_subdomain_10000.csv",
 
-        "target_subset_size": 5,
+        "target_subset_size": 40,
         "target_add_www": True,  # Add www if no other subdomain is known
         # "target_host": "www.example.com",  #Just for special useipvstt
         "target_port": 443,  # 443, 8080 Apache

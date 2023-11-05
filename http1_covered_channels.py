@@ -592,7 +592,7 @@ class HTTP1_Request_CC_URI_Represenation_opt2(HTTP1_Request_Builder):
         new_path=path
 
 
-        bit_set = random.choice(range(10))  # Randomly choose one of the 10 bits
+        bit_set = random.choice(range(11))  # Randomly choose one of the 10 bits
 
         # Bit 0: Exclude Scheme
         if bit_set == 0:
@@ -609,6 +609,7 @@ class HTTP1_Request_CC_URI_Represenation_opt2(HTTP1_Request_Builder):
             deviation_count += 4
         elif bit_set == 3:
             # Bit 3: Include fitting port
+            new_include_port=True
             if scheme=="https://":
                 new_port="443"
             elif scheme=="http://":
@@ -651,6 +652,8 @@ class HTTP1_Request_CC_URI_Represenation_opt2(HTTP1_Request_Builder):
             # Bit 9: Delete path if path is provided
             new_path = ""
             deviation_count += 512
+        elif bit_set == 10:
+            deviation_count += 1024
         
         # Build a new URL from the input
         request_line, new_uri = self.build_request_line(new_port, method, new_path, headers, new_scheme, fuzzvalue, relative_uri, new_include_subdomain, new_include_port, protocol)
