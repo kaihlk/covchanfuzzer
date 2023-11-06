@@ -954,7 +954,7 @@ class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
     def replace_host_and_domain(self, prerequest, domain, standard_subdomain="", host=None, include_subdomain_host_header=False, path="",override_uri="", fuzzvalue=0.5):
         #CC specific
         
-        fuzzvalue=0.5
+        fuzzvalue=0.3
         try:
             scheme, subdomains, hostname, tldomain, _port, _path =self.parse_host(domain)
             if subdomains=="":
