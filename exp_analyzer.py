@@ -57,29 +57,29 @@ class Domain_Response_Analyzator():
 
     def start(self):
         #This one for Marcos Suggestions:
-        self.singleplot_blocking()##CC3s
-        self.singleplot_mod()##CC3s
-        self.single_plot_deviation_count_distribution()###CC3
-        self.filter_and_aggregate(self.data_frame_pd_matrix, 503)
-        statuscodes_dict=self.count_status_codes(self.data_frame_pd_matrix)
+        #self.singleplot_blocking()##CC3s
+        #self.singleplot_mod()##CC3s
+        #self.single_plot_deviation_count_distribution()###CC3
+        #self.filter_and_aggregate(self.data_frame_pd_matrix, 503)
+        #statuscodes_dict=self.count_status_codes(self.data_frame_pd_matrix)
         print(statuscodes_dict)
-        self.doubleplot()
-        self.doubleplot_modification()
-        self.decode_save_cc52(self.data_frame_prerequest_stats)
+        #self.doubleplot()
+        #self.doubleplot_modification()
+        #self.decode_save_cc52(self.data_frame_prerequest_stats)
         #self.decode_save_cc33(self.data_frame_prerequest_stats)
         
         #self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats)
-        self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=None)
+        #self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=None)
         #self.status_code_bars_over_deviation(self.data_frame_prerequest_stats, ax=None)
         #self.plot_unsorted_data(self.data_frame_exp_stats)
-        statuscodes_dict=self.count_status_codes(self.data_frame_pd_matrix)
-        host_statistics=self.host_stats(self.data_frame_exp_stats)
-        prerequest_statistics=self.prerequest_stats(self.data_frame_prerequest_stats)
+        #statuscodes_dict=self.count_status_codes(self.data_frame_pd_matrix)
+        #host_statistics=self.host_stats(self.data_frame_exp_stats)
+        #prerequest_statistics=self.prerequest_stats(self.data_frame_prerequest_stats)
         
-        latex_code = self.generate_latex_table(self.experiment_configuration, self.exp_meta_data, prerequest_statistics, host_statistics, statuscodes_dict)
-        report_filename = f'{self.exp_path}/experiment_report.tex'  
+        #latex_code = self.generate_latex_table(self.experiment_configuration, self.exp_meta_data, prerequest_statistics, host_statistics, statuscodes_dict)
+        #report_filename = f'{self.exp_path}/experiment_report.tex'  
         
-        self.export_latex_to_report(latex_code, report_filename)  
+        #self.export_latex_to_report(latex_code, report_filename)  
 
 
         self.save_exp_analyzer_results(host_statistics, prerequest_statistics)
