@@ -152,14 +152,14 @@ def main():
         "verbose": False,
         "timestamp": time.strftime("%Y%m%d_%H%M%S"),
         # Covert Channel Option
-        "covertchannel_request_number": 6,
+        "covertchannel_request_number": 12,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
         "min_fuzz_value": 0.01,
         "spread_deviation": 0.9,
         # Target Selection Options
-        "num_attempts": 10,
-        "max_targets": 100,  # len(self.target_list):
+        "num_attempts": 1000,
+        "max_targets": 1000,  # len(self.target_list):
         "max_workers": 25,  # Parallel Processing of subsets,
         "wait_between_request": 0,
         "base_line_check_frequency": 0,
@@ -174,8 +174,8 @@ def main():
         "target_port": 443,  # 443, 8080 Apache
         # Connection Options
         "conn_timeout": 5,  # seconds
-        "nw_interface": "enp0s3", # lappy
-        #"nw_interface": "enp0s31f6",#attic
+        #"nw_interface": "enp0s3", # lappy
+        "nw_interface": "enp0s31f6",#attic
         #"nw_interface": "enp6s0", #EOW #1f6",#"enp0s3",#s31f6#0s3",#31f6",#1s6",  # lo, docker, enp0s3
         
         "use_ipv4": True,

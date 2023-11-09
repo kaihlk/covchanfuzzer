@@ -443,7 +443,7 @@ class CustomHTTP(HTTP):
                 # Connect H2
                 settings=self.connect_h2(stream_socket)
                 tblhdr = h2.HPackHdrTable()
-                request=b":method GET\r\n:path /\r\n:authority www.example.com\r\n:scheme https\r\naccept-encoding: gzip, deflate\r\naccept-language: fr-FR\r\naccept: text/html\r\nuser-agent: Scapy HTTP/2 Module\r\n"
+                request=b":method GET\r\n:path /\r\n:authority www.example.com\r\n:scheme https\r\nAccept-encoding: gzip, deflate\r\naccept-language: fr-FR\r\naccept: text/html\r\nuser-agent: Scapy HTTP/2 Module\r\n"
                 
                 qry_frontpage = tblhdr.parse_txt_hdrs(
                     request,

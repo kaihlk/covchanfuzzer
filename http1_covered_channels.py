@@ -5,6 +5,7 @@
 import string
 import random
 import mutators
+import numpy as np
 import urllib.parse
 from http1_request_builder import HTTP1_Request_Builder
 
@@ -1363,16 +1364,11 @@ class HTTP1_Request_CC_URI_Extend_with_fragments(HTTP1_Request_Builder):
 
         min_length = 1 # 1in bytes
         max_length=1024*100   # 100 KB in bytes
-
-        # Adjust the mean and standard deviation for the Gaussian distribution
-        mean = (min_length + max_length) / 2  # Mean value
-        std_deviation = (max_length - min_length) / 2  # Standard deviation
-
-        # Generate a random length with a Gaussian distribution
-        random_border = int(random.gauss(mean, std_deviation))
+        sca1e=20
+        random_border = int(np.random.exponential(sca1e)*1024)
         random_border = max(min_length, min(max_length, random_border))
 
-        random_border=random.randint(0, max_length)
+        #random_border=random.randint(0, max_length)
         fragment=mutators.generate_random_string(chosen_set, random_border, 0)
         if random.random()<fuzzvalue:
             fragment = urllib.parse.quote(fragment) 
