@@ -402,6 +402,81 @@ class HTTP1_Request_CC_Random_Whitespace_opt3(HTTP1_Request_Builder):
         return request_string, deviation_count, new_uri
 
 
+class HTTP1_Request_CC_Random_Whitespace_opt4(HTTP1_Request_Builder):
+    """Finding boarders"""
+    
+    def __init__(self):
+        super().__init__()  # Call the constructor of the base class first
+        self.cc_uri_post_generation = True
+
+
+
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
+        """WHITESPACE Guided Modifications generate bigger"""
+
+        # Check if headers are provided elsewise take default headers
+        if headers is None:
+            headers = default_headers.copy()
+        else:
+            # Create a copy to avoid modifying the original list
+            headers = headers.copy()
+        # Insert the Host header at the beginning of the list
+        headers.insert(0, ("Host", self.host_placeholder)) 
+
+        scheme=""
+        # Build the request_line from the provided arguments
+        request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)      
+        request_string = request_line
+        fuzzvalue=0.6
+        deviation_count = 0
+        target_deviation =0
+        insertion_count=0
+        newline=""
+        keyspace=""
+        
+        min_length = 1 # 1in bytes
+        max_length=1024*200   # 100 KB in bytes
+        sca1e=20
+        target_deviation = int(np.random.exponential(sca1e)*1024)
+        #Scared of endless requests
+        target_deviation = max(min_length, min(max_length, target_deviation))
+
+        while insertion_count<target_deviation:
+            for index, header in enumerate(headers):
+                field_name, field_value = header
+                # Random choice if value is changed
+                if random.random() < fuzzvalue:
+                    # Create a string with random number of Whitespaces and Tabulators, third possible char?  ????
+                    whitespaces = ""
+                    while random.random() < fuzzvalue:
+                        # Random Choice from Tabulator, Whitespace, no carriage retrun + newline + Whitespace
+                        if field_name!="Host":     #no tab at host
+                            random_linearwhithespace = random.choice(["\t", " "])
+                        else: 
+                            random_linearwhithespace = ""
+                        whitespaces += random_linearwhithespace
+                        insertion_count += 1
+                    # Add the whitespace string at the end of the value
+                    field_value += whitespaces
+                # Build the line of the request string
+                headers[index]= (field_name, field_value)
+            
+        deviation_count=insertion_count
+        #Build header string
+
+        for header in headers:
+            request_string += f"{header[0]}: {keyspace}{header[1]}\r\n"
+
+        request_string += "\r\n"    
+                
+
+
+        return request_string, deviation_count, new_uri
+
+
+
+
+
 # Covertchannel suggested by Kwecka et al: Reordering ofHeaderfields#
 # Fuzz Parameter no effect, due to Implementation of Shuffle
 

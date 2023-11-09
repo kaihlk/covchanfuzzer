@@ -25,8 +25,8 @@ class Domain_Response_Analyzator():
         self.data_frame_pd_matrix = pandas.read_csv(
             path+"/pd_matrix.csv")
         
-        self.data_frame_uri = pandas.read_csv(path+"/uri_dev_statuscode.csv")
-        self.data_frame_rel_uri = pandas.read_csv(path+"/rel_uri_dev_statuscode.csv")        
+        #self.data_frame_uri = pandas.read_csv(path+"/uri_dev_statuscode.csv")
+        #self.data_frame_rel_uri = pandas.read_csv(path+"/rel_uri_dev_statuscode.csv")        
         self.experiment_configuration, self.exp_meta_data=self.load_exp_outcome(self.exp_path)
         self.dra_logging=logging.getLogger("main.runner.dra_logger")
         self.font_size_axis=10
@@ -63,15 +63,17 @@ class Domain_Response_Analyzator():
         self.double_plot_deviation_count_distribution_CC3()
         self.singleplot_blocking()##CC3
         self.singleplot_mod()##CC3s
+        
         self.filter_and_aggregate(self.data_frame_pd_matrix, 503)
         statuscodes_dict=self.count_status_codes(self.data_frame_pd_matrix)
         print(statuscodes_dict)
         self.doubleplot_response_rate_message_index()
         self.doubleplot_modification()
         
-        self.decode_save_cc52(self.data_frame_prerequest_stats)
-        #self.decode_save_cc33(self.data_frame_prerequest_stats)
+        #_self.decode_save_cc52(self.data_frame_prerequest_stats)
+        _, decoded_df=self.decode_save_cc33(self.data_frame_prerequest_stats)
         
+        self.count_and_plot_bit_occurrences(decoded_df)
         #self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats)
         self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=None)
         #self.status_code_bars_over_deviation(self.data_frame_prerequest_stats, ax=None)
@@ -219,8 +221,54 @@ class Domain_Response_Analyzator():
         mpl.xticks(rotation=90)
         mpl.tight_layout()
         mpl.savefig(self.exp_path+'/discrete_deviation_response_rates.png', dpi=300)
-        return result_df
-    
+        
+        return result_df, data_frame
+        
+        
+
+
+
+    def count_and_plot_bit_occurrences(self, data_frame):
+        def count_bit_occurrences(df, bit_columns):     
+            bit_occurrences = {}
+            for bit_column in bit_columns:
+                bit_count = df[bit_column].sum()
+                bit_occurrences[bit_column] = bit_count
+            return bit_occurrences
+
+        bit_columns = [
+            'Small No. SP+HTAB',
+            '2048 SP+HTAB',
+            '20480 SP+HTAB',
+            '40960 SP+HTAB',
+            '61440 SP+HTAB',
+            '81920 SP+HTAB',
+            'Host + SP',
+            'Host + HTAB',
+            'rand. Header + CRLF',
+            'Host + SP + rand. Header + CRLF',
+            'Host + HTAB + rand. Header + CRLF',
+            'SP between key & value',
+        ]
+
+        bit_occurrences = count_bit_occurrences(data_frame, bit_columns)
+
+        # Plotting
+        fig, ax = mpl.subplots(figsize=(10, 6))
+        bits = list(bit_occurrences.keys())
+        occurrences = list(bit_occurrences.values())
+
+        ax.bar(bits, occurrences, color='#3498DD')
+        ax.set_xlabel('Bit Columns')
+        ax.set_ylabel('Occurrences')
+        ax.set_title('Occurrences of Each Bit Column')
+        mpl.xticks(rotation=45, ha='right')
+        mpl.tight_layout()
+        mpl.savefig(self.exp_path+'/discrete_modification_occurencs.png', dpi=300)
+        
+        return
+
+
     def decode_save_cc52(self,data_frame):
 
         
@@ -1568,7 +1616,7 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/extracted_logs/EOW/experiment_16"
+    path = f"{log_dir}/extracted_logs/attic/experiment_29"
     dra = Domain_Response_Analyzator(path)
     dra.start()
   
