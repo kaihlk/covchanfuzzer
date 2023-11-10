@@ -839,69 +839,43 @@ class HTTP1_Request_CC_URI_Represenation_opt3(HTTP1_Request_Builder):
         new_path=path
 
 
-        bit_set = 6 #random.choice(range(11))  # Randomly choose one of the 10 bits
+        bit_set = random.choice([0,1,2,3,4,5,6,7]) #random.choice(range(11))  # Randomly choose one of the 10 bits
 
-        # Bit 0: Exclude Scheme
-        if bit_set == 0:
-            new_scheme = ""
-            deviation_count += 1
-        elif bit_set == 1:
-            # Bit 1: Switch Scheme
-            if scheme=="http://": new_scheme="https://"
-            else: new_scheme="http://"
-            deviation_count += 2
-        elif bit_set == 2:
-            # Bit 2: Exclude subdomain
-            new_include_subdomain = False
-            deviation_count += 4
-        elif bit_set == 3:
-            # Bit 3: Include fitting port
-            new_include_port=True
-            if scheme=="https://":
-                new_port="443"
-            elif scheme=="http://":
-                new_port="80"
-            else: 
-                new_port=port
-            deviation_count += 8
-        elif bit_set==4:
-            #Bit 4: Counter Scheme fitting Port:
-            new_include_port=True
-            if scheme=="https://":
-                new_port="80"
-            elif scheme=="http://":
-                new_port="443"
-            else: 
-                new_port=port
-            deviation_count+=16
-        elif bit_set==5:
+        
+        
+        if bit_set==1:
             #Bit 5: Random Port in Port Range 65535 
             new_include_port=True
             new_port=random.randint(0, 65535)
-            deviation_count+=32                 
-        elif bit_set==6:
-            #Bit 6: Random Integer
+            deviation_count+=1                 
+        elif bit_set==2:
+            #Bit 5: Random Port  -65535 
+            new_include_port=True
+            new_port=random.randint(-65535,0)
+            deviation_count+=2                 
+        elif bit_set==3:
+            #Bit 6: Random 32bit Integer
+            new_include_port=True
+            new_port = random.randint(0, 2147483648) #'Update'
+            deviation_count+=4            
+        elif bit_set==4:
+            #Bit 7: Random -32bit Integer
+            new_include_port=True
+            new_port = random.randint(-2147483648 ,0) #'Update'
+            deviation_count+=8       
+        elif bit_set==5:
+            #Bit 7: 64bit Integer
             new_include_port=True
             new_port = random.randint(0, 9223372036854775807) #'Update'
-            deviation_count+=64            
-        elif bit_set==7:
-            #Bit 7: Random String L=5
+            deviation_count+=16
+        elif bit_set==6:
+            #Bit 7: -64bit Integer
             new_include_port=True
-            new_port=mutators.generate_random_string(length=5)
-            deviation_count+=128
-        elif bit_set==8:
-            #Bit 8: Random String L=6-100
-            new_include_port=True
-            length=random.randint(6, 100)
-            new_port=mutators.generate_random_string(length=length)
-            deviation_count+=256
-        elif bit_set == 9:
-            # Bit 9: Delete path if path is provided
-            new_path = ""
-            deviation_count += 512
-        elif bit_set == 10:
+            new_port = random.randint(-9223372036854775807,0) #'Update'
+            deviation_count+=32    
+        elif bit_set ==7:
             # Bit 10 : Control Group
-            deviation_count += 1024
+            deviation_count += 64
         
         # Build a new URL from the input
         request_line, new_uri = self.build_request_line(new_port, method, new_path, headers, new_scheme, fuzzvalue, relative_uri, new_include_subdomain, new_include_port, protocol)
