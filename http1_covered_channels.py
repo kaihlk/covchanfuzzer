@@ -634,16 +634,17 @@ class HTTP1_Request_CC_URI_Represenation_opt2(HTTP1_Request_Builder):
         Port: "" "443" "80" (+1) "random int" (+1), random int bigger than portrange
         Path: No changes
 
-        # Bit 0: Exclude Scheme
-        # Bit 1: Switch Scheme
-        # Bit 2: Exclude subdomain
-        # Bit 3: Include fitting port
-        # Bit 4: Counter Scheme fitting Port
-        # Bit 5: Random Port in Port Range 65535 
-        # Bit 6: Random Integer
-        # Bit 7: Random String L=5
-        # Bit 8: Random String L=6-100
-        # Bit 9: Delete path if path is provided
+        # Bit 0:1 Exclude Scheme
+        # Bit 1:2 Switch Scheme
+        # Bit 2:4 Exclude subdomain
+        # Bit 3:8 Include fitting port
+        # Bit 4:16 Counter Scheme fitting Port
+        # Bit 5:32 Random Port in Port Range 65535 
+        # Bit 6:64 Random Integer
+        # Bit 7:128 Random String L=5
+        # Bit 8:256 Random String L=6-100
+        # Bit 9:512 Delete path if path is provided
+        # Bit10:1024 Control Group
         """
         #Relative URI does not make sense here
         relative_uri=False
@@ -729,6 +730,7 @@ class HTTP1_Request_CC_URI_Represenation_opt2(HTTP1_Request_Builder):
             new_path = ""
             deviation_count += 512
         elif bit_set == 10:
+            # Bit 10 : Control Group
             deviation_count += 1024
         
         # Build a new URL from the input
@@ -746,6 +748,178 @@ class HTTP1_Request_CC_URI_Represenation_opt2(HTTP1_Request_Builder):
         request_string += "\r\n"
 
         return request_string, deviation_count, new_uri
+
+class HTTP1_Request_CC_URI_Represenation_opt3(HTTP1_Request_Builder):
+
+    def __init__(self):
+        super().__init__()  # Call the constructor of the base class first
+        self.cc_uri_post_generation = True
+
+
+    def build_request_line(self, port, method, path, headers, scheme, fuzzvalue, relative_uri=True, include_subdomain=False, include_port=False, protocol="HTTP/1.1"):
+                # Build the request_line from the provided arguments, adjusted to be able to delte scheme and path
+        if relative_uri==False:        
+            #Scheme:
+  
+                #subdomains                      
+            if include_subdomain:
+               subdomain=self.subdomain_placeholder   ###SUBDOMAINS need to be ended with .
+            else:
+               subdomain="" 
+            #Port
+            if include_port==True:
+                new_port=":"+str(port)
+            else:
+                new_port=""
+            #absolute uri
+            if path=="":
+                local_path_placeholder=""
+            else:
+                local_path_placeholder=self.path_placeholder
+
+            new_uri =scheme + subdomain + self.domain_placeholder + new_port + local_path_placeholder
+        else:
+            #relative uri
+            new_uri=self.path_placeholder
+
+        request_line = f"{method} {new_uri} {protocol}\r\n"
+
+        return request_line, new_uri  
+
+
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
+        '''URI in the request line
+        Covertchannel suggested by Kwecka et al: Uniform Ressource Identifiers
+        Divide in 3 cover channels due to difference of technique
+        Change the part of the path to make an absolute URI, may include scheme, port or
+        '''
+        """Basic absolute request is build as following:
+        scheme://subdomain.hostname.topleveldomain/
+        for a HTTPS Request:
+        https://www.example.com/
+        Possible ways to add data:
+        Scheme:
+        scheme: https, http (+1), "" (+1)
+        [subodmain] this may lead to other ressources than expected is excluded
+        Port: "" "443" "80" (+1) "random int" (+1), random int bigger than portrange
+        Path: No changes
+
+        # Bit 0:1 Exclude Scheme
+        # Bit 1:2 Switch Scheme
+        # Bit 2:4 Exclude subdomain
+        # Bit 3:8 Include fitting port
+        # Bit 4:16 Counter Scheme fitting Port
+        # Bit 5:32 Random Port in Port Range 65535 
+        # Bit 6:64 Random Integer
+        # Bit 7:128 Random String L=5
+        # Bit 8:256 Random String L=6-100
+        # Bit 9:512 Delete path if path is provided
+        # Bit10:1024 Control Group
+        """
+        #Relative URI does not make sense here
+        relative_uri=False
+        # Check if headers are provided elsewise take default headers
+        if headers is None:
+            headers = default_headers.copy()
+        else:
+            # Create a copy to avoid modifying the original list
+            headers = headers.copy()
+        # Insert the Host header at the beginning of the list
+        headers.insert(0, ("Host", self.host_placeholder)) 
+
+        if port==443:
+            scheme="https://"
+        else:
+            scheme="http://"       
+        deviation_count = 0
+        new_scheme=scheme
+        new_include_subdomain=include_subdomain
+        new_include_port=include_port
+        new_port=port
+        new_path=path
+
+
+        bit_set = 6 #random.choice(range(11))  # Randomly choose one of the 10 bits
+
+        # Bit 0: Exclude Scheme
+        if bit_set == 0:
+            new_scheme = ""
+            deviation_count += 1
+        elif bit_set == 1:
+            # Bit 1: Switch Scheme
+            if scheme=="http://": new_scheme="https://"
+            else: new_scheme="http://"
+            deviation_count += 2
+        elif bit_set == 2:
+            # Bit 2: Exclude subdomain
+            new_include_subdomain = False
+            deviation_count += 4
+        elif bit_set == 3:
+            # Bit 3: Include fitting port
+            new_include_port=True
+            if scheme=="https://":
+                new_port="443"
+            elif scheme=="http://":
+                new_port="80"
+            else: 
+                new_port=port
+            deviation_count += 8
+        elif bit_set==4:
+            #Bit 4: Counter Scheme fitting Port:
+            new_include_port=True
+            if scheme=="https://":
+                new_port="80"
+            elif scheme=="http://":
+                new_port="443"
+            else: 
+                new_port=port
+            deviation_count+=16
+        elif bit_set==5:
+            #Bit 5: Random Port in Port Range 65535 
+            new_include_port=True
+            new_port=random.randint(0, 65535)
+            deviation_count+=32                 
+        elif bit_set==6:
+            #Bit 6: Random Integer
+            new_include_port=True
+            new_port = random.randint(0, 9223372036854775807) #'Update'
+            deviation_count+=64            
+        elif bit_set==7:
+            #Bit 7: Random String L=5
+            new_include_port=True
+            new_port=mutators.generate_random_string(length=5)
+            deviation_count+=128
+        elif bit_set==8:
+            #Bit 8: Random String L=6-100
+            new_include_port=True
+            length=random.randint(6, 100)
+            new_port=mutators.generate_random_string(length=length)
+            deviation_count+=256
+        elif bit_set == 9:
+            # Bit 9: Delete path if path is provided
+            new_path = ""
+            deviation_count += 512
+        elif bit_set == 10:
+            # Bit 10 : Control Group
+            deviation_count += 1024
+        
+        # Build a new URL from the input
+        request_line, new_uri = self.build_request_line(new_port, method, new_path, headers, new_scheme, fuzzvalue, relative_uri, new_include_subdomain, new_include_port, protocol)
+        
+        
+        #Replace NEW_uri with new scheme
+   
+        request_string = request_line
+        for header in headers:
+            request_string += f"{header[0]}: {header[1]}\r\n"
+
+
+        
+        request_string += "\r\n"
+
+        return request_string, deviation_count, new_uri
+
+
 
 class HTTP1_Request_CC_URI_Represenation_opt1(HTTP1_Request_Builder):
 

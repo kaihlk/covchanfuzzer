@@ -15,6 +15,7 @@ requests_builders ={
     5: HTTP1_Request_CC_URI_Represenation,
     51: HTTP1_Request_CC_URI_Represenation_opt1,
     52: HTTP1_Request_CC_URI_Represenation_opt2,
+    53: HTTP1_Request_CC_URI_Represenation_opt3,
     6: HTTP1_Request_CC_URI_Case_Insentivity,
     7: HTTP1_Request_CC_URI_Hex_Hex,
     8: HTTP1_Request_CC_Random_Content,

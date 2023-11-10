@@ -25,8 +25,8 @@ class Domain_Response_Analyzator():
         self.data_frame_pd_matrix = pandas.read_csv(
             path+"/pd_matrix.csv")
         
-        #self.data_frame_uri = pandas.read_csv(path+"/uri_dev_statuscode.csv")
-        #self.data_frame_rel_uri = pandas.read_csv(path+"/rel_uri_dev_statuscode.csv")        
+        self.data_frame_uri = pandas.read_csv(path+"/uri_dev_statuscode.csv")
+        self.data_frame_rel_uri = pandas.read_csv(path+"/rel_uri_dev_statuscode.csv")        
         self.experiment_configuration, self.exp_meta_data=self.load_exp_outcome(self.exp_path)
         self.dra_logging=logging.getLogger("main.runner.dra_logger")
         self.font_size_axis=10
@@ -70,11 +70,13 @@ class Domain_Response_Analyzator():
         self.doubleplot_response_rate_message_index()
         self.doubleplot_modification()
         
-        #_self.decode_save_cc52(self.data_frame_prerequest_stats)
-        _, decoded_df=self.decode_save_cc33(self.data_frame_prerequest_stats)
+        _, decoded_df=self.decode_save_cc52(self.data_frame_prerequest_stats)
+        self.count_and_plot_bit_occurrences52(decoded_df)
         
-        self.count_and_plot_bit_occurrences(decoded_df)
-        #self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats)
+        #_, decoded_df=self.decode_save_cc33(self.data_frame_prerequest_stats)
+        #self.count_and_plot_bit_occurrences33(decoded_df)
+        
+        self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats)
         self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=None)
         #self.status_code_bars_over_deviation(self.data_frame_prerequest_stats, ax=None)
         self.plot_unsorted_data(self.data_frame_exp_stats)
@@ -90,13 +92,13 @@ class Domain_Response_Analyzator():
 
         self.save_exp_analyzer_results(host_statistics, prerequest_statistics)
         #self.plot_deviation_count_distribution(self.data_frame_prerequest_stats)
-        
-        #self.plot_uri_deviation_count_distribution(self.data_frame_uri)
+        self.singleplot_rel_uri()
+        self.plot_uri_deviation_count_distribution(self.data_frame_uri)
         #self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
         #self.plot_scatter_prerequest(self.data_frame_rel_uri)
         self.plot_hosts_responses(self.data_frame_exp_stats)
         #self.figure1(self.data_frame_pd_matrix)
-        self.quadplot()
+        #self.quadplot()
         return
     
     def filter_and_aggregate(self,pd_matrix, target_status_code):
@@ -149,24 +151,25 @@ class Domain_Response_Analyzator():
 
         mpl.show()
 
-    def decode_save_cc33(self,data_frame):
 
-        
+
+
+    def decode_save_cc33(self,data_frame):
         
         #CC3 Columns
         bit_columns= [ 
-            '0. Small No. SP+HTAB',
-            '1. 2048 SP+HTAB',
-            '2. 20480 SP+HTAB',
-            '3. 40960 SP+HTAB',
-            '4. 61440 SP+HTAB',
-            '5. 81920 SP+HTAB',
-            '6. Host + SP',
-            '7. Host + HTAB',
-            '8. rand. Header + CRLF',
-            '9. Host + SP + rand. Header + CRLF',
-            '10 Host + HTAB + rand. Header + CRLF',
-            '11 SP between key & value',
+            'Small No. SP+HTAB',
+            '2048 SP+HTAB',
+            '20480 SP+HTAB',
+            '40960 SP+HTAB',
+            '61440 SP+HTAB',
+            '81920 SP+HTAB',
+            'Host + SP',
+            'Host + HTAB',
+            'rand. Header + CRLF',
+            'Host + SP + rand. Header + CRLF',
+            'Host + HTAB + rand. Header + CRLF',
+            'SP between key & value',
         ]
 
         def decode_bits(deviation_count, num_bits):
@@ -214,9 +217,9 @@ class Domain_Response_Analyzator():
             ax.bar(result_df['Bit Name'], result_df[col], label=col, bottom=bottom, color=colors[i])
             bottom += result_df[col]
 
-        #ax.set_xlabel('Bit Name')
-        ax.set_ylabel('Response Status Codes Share (%)')
-        ax.set_title('Stacked Bar Diagram of 2xx Rates at different kind of Modifications')
+        ax.tick_params(axis='both', labelsize=self.font_size_axis)
+        ax.set_ylabel('Response Status Codes Share (%)', fontsize=self.font_size_axis)
+        ax.set_title('Response Codes over different Modifications',fontsize=self.font_size_title)
         ax.legend(loc='lower right')
         mpl.xticks(rotation=90)
         mpl.tight_layout()
@@ -228,7 +231,7 @@ class Domain_Response_Analyzator():
 
 
 
-    def count_and_plot_bit_occurrences(self, data_frame):
+    def count_and_plot_bit_occurrences33(self, data_frame):
         def count_bit_occurrences(df, bit_columns):     
             bit_occurrences = {}
             for bit_column in bit_columns:
@@ -264,27 +267,68 @@ class Domain_Response_Analyzator():
         ax.set_title('Occurrences of Each Bit Column')
         mpl.xticks(rotation=45, ha='right')
         mpl.tight_layout()
-        mpl.savefig(self.exp_path+'/discrete_modification_occurencs.png', dpi=300)
+        mpl.savefig(self.exp_path+'/discrete_modification_occurence.png', dpi=300)
         
         return
 
 
-    def decode_save_cc52(self,data_frame):
+    def count_and_plot_bit_occurrences52(self, data_frame):
+        def count_bit_occurrences(df, bit_columns):     
+            bit_occurrences = {}
+            for bit_column in bit_columns:
+                bit_count = df[bit_column].sum()
+                bit_occurrences[bit_column] = bit_count
+            return bit_occurrences
 
+        bit_columns = [
+            'Exclude Scheme',
+            'Switch Scheme',
+            'Exclude subdomain',
+            'Include fitting port',
+            'Counter Scheme fitting Port',
+            'Random Port in Port Range 65535',
+            'Random Integer as Port',
+            'Random String L=5 as Port',
+            'Random String L=6-100 as Port',
+            'Delete path if path is provided',
+            'No changes',
+        ]
+
+        bit_occurrences = count_bit_occurrences(data_frame, bit_columns)
+
+        # Plotting
+        fig, ax = mpl.subplots(figsize=(10, 6))
+        bits = list(bit_occurrences.keys())
+        occurrences = list(bit_occurrences.values())
+
+        ax.bar(bits, occurrences, width=0.2, color='b')#, color='#3498DD')
+        #ax.set_xlabel('Bit Columns')
+        ax.set_ylabel('Requests', fontsize=self.font_size_axis)
+        ax.set_title('Distribution of Modifications among Requests', fontsize=self.font_size_title)
+        mpl.xticks(rotation=45, ha='right')
+        mpl.tight_layout()
+        mpl.savefig(self.exp_path+'/discrete_modification_occurence.png', dpi=300)
         
-        
+        return
+
+
+
+
+    def decode_save_cc52(self,data_frame):
+      
         #CC52Columns
         bit_columns= [ 
-            '0. Exclude Scheme',
-            '1. Switch Scheme',
-            '2. Exclude subdomain',
-            '3. Include fitting port',
-            '4. Counter Scheme fitting Port',
-            '5. Random Port in Port Range 65535',
-            '6. Random Integer as Port',
-            '7. Random String L=5 as Port',
-            '8. Random String L=6-100 as Port',
-            '9. Delete path if path is provided',
+            'Exclude Scheme',
+            'Switch Scheme',
+            'Exclude subdomain',
+            'Include fitting port',
+            'Counter Scheme fitting Port',
+            'Random Port in Port Range 65535',
+            'Random Integer as Port',
+            'Random String L=5 as Port',
+            'Random String L=6-100 as Port',
+            'Delete path if path is provided',
+            'No changes',
        
         ]
 
@@ -334,13 +378,16 @@ class Domain_Response_Analyzator():
             bottom += result_df[col]
 
         #ax.set_xlabel('Bit Name')
-        ax.set_ylabel('Response Status Codes Share (%)')
-        ax.set_title('Stacked Bar Diagram of 2xx Rates at different kind of Modifications')
+        ax.tick_params(axis='both', labelsize=self.font_size_axis)
+        
+        ax.set_ylabel('Response Status Codes Share (%)', fontsize=self.font_size_axis)
+        ax.set_title('Response Codes over different Modifications',fontsize=self.font_size_title)
         ax.legend(title='2xx Rates', loc='lower right')
         mpl.xticks(rotation=90)
         mpl.tight_layout()
         mpl.savefig(self.exp_path+'/discrete_deviation_response_rates.png', dpi=300)
-        return result_df
+        return result_df, data_frame
+
     
     def grouped_results_csv(self, pd_matrix, prerequests, attempt_no=1000):
         temp_matrix=pd_matrix.copy()
@@ -365,13 +412,27 @@ class Domain_Response_Analyzator():
         #bins = [-1, 20, 200, result['deviation_count'].max() + 1]
         #labels = ['0-20', '20-200', '200-2000']     
         #CC EOW2
-        bins = [-1, 5, 8, result['deviation_count'].max() + 1]
-        labels = ['0-5', '5-8', '8-11'] 
-
+        #bins = [-1, 5, 8, result['deviation_count'].max() + 1]
+        #labels = ['0-5', '5-8', '8-11'] 
+        ##CC52
+        bins = [0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 ,1024]   ##
+        labels = [
+            'Exclude Scheme',
+            'Switch Scheme',
+            'Exclude subdomain',
+            'Include fitting port',
+            'Counter Scheme fitting Port',
+            'Random Port in Port Range 65535',
+            'Random Integer as Port',
+            'Random String L=5 as Port',
+            'Random String L=6-100 as Port',
+            'Delete path if path is provided',
+            'No changes',
+        ]
 
         #result['deviation_group'] = pandas.cut(result['deviation_count'], bins=bins, labels=labels)
         result['deviation_group'] = pandas.cut(result['deviation_count'], bins=bins, labels=labels)
-
+        result.to_csv(self.exp_path+"/temp1.csv")
         bin_dataframes = {}
         status_codes = ['1xx', '2xx', '3xx', '4xx', '5xx', '9xx']
         length = len(result)
@@ -726,7 +787,7 @@ class Domain_Response_Analyzator():
         mpl.subplots_adjust(wspace=0.3, hspace=0.3)
         fig.suptitle("Histogram: Distribution of Modifications among Requests", fontsize=self.font_size_title, fontweight='bold')
         # Top
-        self.plot_deviation_count_distribution(self.data_frame_prerequest_stats, ax=axs, bins=1000 ) #CC52 bins 1000
+        self.plot_deviation_count_distribution(self.data_frame_prerequest_stats, ax=axs, bins=100 ) #CC52 bins 1000 ##CC4 100
         #axs.set_title("Overview")
         axs.set_xlabel('Number of Modifications', fontsize=self.font_size_axis) # Remove x-axis label for the top plot
         axs.set_ylabel('Number of Requests')
@@ -811,6 +872,42 @@ class Domain_Response_Analyzator():
         #mpl.show()
 
         return
+
+
+ 
+    def singleplot_rel_uri(self):
+        """Create 1x1 Plot Matrix"""
+        # Create a figure with subplots
+
+        self.font_size_axis=16
+        self.font_size_title=18
+        self.font_size_label=8
+        
+        fig, axs = mpl.subplots(1, 1, figsize=(14, 7))
+        #gs = GridSpec(2, 2, figure=fig)
+        mpl.subplots_adjust(wspace=0.3, hspace=0.3)
+        
+        # Top
+        #CC3 self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=axs,subplottitles=False, autolimits=False, y_low=15, y_up=85 )  CC3
+        #CC4self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=axs,subplottitles=False, autolimits=False, y_low=95, y_up=100)
+        self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri, ax=axs)
+        #subplottitles=False, autolimits=False, y_low=0, y_up=100)
+        # Adjust spacing between subplots
+        #mpl.tight_layout()
+        axs.set_xlabel('Relative URI Modifications (%)', fontsize=self.font_size_axis)
+        axs.set_ylabel('Requests', fontsize=self.font_size_axis)
+        axs.set_title('Status Codes Frequency over Modifications', fontsize=self.font_size_title, fontweight='bold')
+        # sSave the figure as a single PNG file
+        mpl.savefig(self.exp_path+'/single_plot_rel_uri_mod.png', facecolor='white', edgecolor='white', dpi=300)
+
+        # Show the combined plot
+        #mpl.show()
+
+        return
+
+
+
+
 
     def singleplot_mod(self):
         """Create 1x1 Plot Matrix"""
@@ -1131,7 +1228,7 @@ class Domain_Response_Analyzator():
         mpl.figure(figsize=(10, 8))
         mpl.bar(deviation_counts, frequency, color='blue', label='Data Distribution')
         #sns.histplot(deviation_counts, kde=True, color='blue', bins=100, label='Data Distribution')
-
+        
         mpl.xlabel('Steganographic Payload / Modifications from original URI')
         mpl.ylabel('Share of Requests (%)')
         mpl.title('Steganographic Payload URI Distribution')
@@ -1139,26 +1236,32 @@ class Domain_Response_Analyzator():
         mpl.grid(True) 
         mpl.savefig(self.exp_path+'/exp_stats_uri_deviation_distribution.png', dpi=300, bbox_inches='tight')
     
-    def plot_rel_uri_deviation_distribution(self, data_frame):
+    def plot_rel_uri_deviation_distribution(self, data_frame, ax):
         """Plot 4.2"""
         
         deviation_counts = data_frame['Relative Deviation'].values
         sums=data_frame['Sum'].values
         frequency = sums / data_frame['Sum'].values.sum()*100
 
-        # Create a histogram
-        mpl.figure(figsize=(10, 8))
-        mpl.bar(deviation_counts, frequency, color='blue', label='Data Distribution')
-
-        mpl.xlabel('Relative Modification (%) from original URI')
-        mpl.ylabel('Share of Requests (%)')
-        mpl.title('Relative Modifications URI Distribution')
-        mpl.legend()
-        mpl.grid(True)
-
         
-        mpl.savefig(self.exp_path+'/exp_stats_rel_uri_deviation_distribution.png', dpi=300, bbox_inches='tight')
-    
+        #fig, ax = mpl.subplots(figsize=(10, 8))
+
+        #fig.patch.set_facecolor('white')
+        #ax.set_facecolor('white')
+
+        bar_plot = ax.bar(deviation_counts, sums, color='blue', label='Data Distribution')
+        ax.set_xlabel('Relative Modification (%) from original URI')
+        ax.set_ylabel('Request (of 1000000)')
+        ax.set_title('Relative Modifications URI Distribution')
+        #ax.legend()
+        ax.set_facecolor('white')
+        ax.patch.set_facecolor('white')
+        ax.grid=True
+        
+        #mpl.savefig(self.exp_path+'/exp_stats_rel_uri_deviation_distribution.png', dpi=300, bbox_inches='tight')
+        return ax
+
+
     def plot_unsorted_data(self, df):
         # Daten in NumPy-Arrays umwandeln
         data_frame = df.sort_values(by=['3xx', '4xx', '5xx', '9xx', '2xx'], ascending=[False, False, False, False, True])
@@ -1616,7 +1719,7 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/extracted_logs/attic/experiment_29"
+    path = f"{log_dir}/extracted_logs/attic/experiment_30"
     dra = Domain_Response_Analyzator(path)
     dra.start()
   
