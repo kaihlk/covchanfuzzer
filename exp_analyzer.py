@@ -60,7 +60,7 @@ class Domain_Response_Analyzator():
       
         #Plot Histogramm Distribution of Modifications 
         self.single_plot_deviation_count_distribution() 
-        self.double_plot_deviation_count_distribution_CC3()
+        #self.double_plot_deviation_count_distribution_CC3()
         self.singleplot_blocking()##CC3
         self.singleplot_mod()##CC3s
         
@@ -70,13 +70,16 @@ class Domain_Response_Analyzator():
         self.doubleplot_response_rate_message_index()
         self.doubleplot_modification()
         
-        _, decoded_df=self.decode_save_cc52(self.data_frame_prerequest_stats)
-        self.count_and_plot_bit_occurrences52(decoded_df)
+        #_, decoded_df=self.decode_save_cc52(self.data_frame_prerequest_stats)
+        #self.count_and_plot_bit_occurrences52(decoded_df)
         
+        #_, decoded_df=self.decode_save_cc53(self.data_frame_prerequest_stats)
+        #self.count_and_plot_bit_occurrences53(decoded_df)
+
         #_, decoded_df=self.decode_save_cc33(self.data_frame_prerequest_stats)
         #self.count_and_plot_bit_occurrences33(decoded_df)
         
-        self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats)
+        #self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats)
         self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=None)
         #self.status_code_bars_over_deviation(self.data_frame_prerequest_stats, ax=None)
         self.plot_unsorted_data(self.data_frame_exp_stats)
@@ -92,8 +95,8 @@ class Domain_Response_Analyzator():
 
         self.save_exp_analyzer_results(host_statistics, prerequest_statistics)
         #self.plot_deviation_count_distribution(self.data_frame_prerequest_stats)
-        self.singleplot_rel_uri()
-        self.plot_uri_deviation_count_distribution(self.data_frame_uri)
+        #self.singleplot_rel_uri()
+        #self.plot_uri_deviation_count_distribution(self.data_frame_uri)
         #self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
         #self.plot_scatter_prerequest(self.data_frame_rel_uri)
         self.plot_hosts_responses(self.data_frame_exp_stats)
@@ -291,6 +294,40 @@ class Domain_Response_Analyzator():
             'Random String L=5 as Port',
             'Random String L=6-100 as Port',
             'Delete path if path is provided',
+            'No changes',]
+
+        bit_occurrences = count_bit_occurrences(data_frame, bit_columns)
+
+        # Plotting
+        fig, ax = mpl.subplots(figsize=(10, 6))
+        bits = list(bit_occurrences.keys())
+        occurrences = list(bit_occurrences.values())
+
+        ax.bar(bits, occurrences, width=0.2, color='b')#, color='#3498DD')
+        #ax.set_xlabel('Bit Columns')
+        ax.set_ylabel('Requests', fontsize=self.font_size_axis)
+        ax.set_title('Distribution of Modifications among Requests', fontsize=self.font_size_title)
+        mpl.xticks(rotation=45, ha='right')
+        mpl.tight_layout()
+        mpl.savefig(self.exp_path+'/discrete_modification_occurence.png', dpi=300)
+        
+        return
+
+    def count_and_plot_bit_occurrences53(self, data_frame):
+        def count_bit_occurrences(df, bit_columns):     
+            bit_occurrences = {}
+            for bit_column in bit_columns:
+                bit_count = df[bit_column].sum()
+                bit_occurrences[bit_column] = bit_count
+            return bit_occurrences
+
+        bit_columns = [
+            'pos 16Bit signed Int.',
+            'neg 16Bit signed Int.',
+            'pos 32Bit signed Int.',
+            'neg 32Bit signed Int.',
+            'pos 64Bit signed Int.',
+            'neg 64Bit signed Int.',
             'No changes',
         ]
 
@@ -310,8 +347,76 @@ class Domain_Response_Analyzator():
         mpl.savefig(self.exp_path+'/discrete_modification_occurence.png', dpi=300)
         
         return
+    
 
+    def decode_save_cc53(self,data_frame):
+      
+        #CC53Columns
+        bit_columns = [
+            'pos 16Bit signed Int.',
+            'neg 16Bit signed Int.',
+            'pos 32Bit signed Int.',
+            'neg 32Bit signed Int.',
+            'pos 64Bit signed Int.',
+            'neg 64Bit signed Int.',
+            'No changes',
+            ]
 
+        def decode_bits(deviation_count, num_bits):
+            # Create a list of bit values by decoding the deviation_count.
+            bit_values = [(deviation_count >> bit_index) & 1 for bit_index in range(num_bits)]
+            return bit_values    
+
+       
+
+        # Decode each row in the original DataFrame and add the bit columns.
+        for bit_index, bit_column in enumerate(bit_columns):
+            data_frame[bit_column] = data_frame['deviation_count'].apply(lambda x: (x >> bit_index) & 1)
+
+        data_frame.to_csv(self.exp_path + "/prerequest_decoded.csv", index=False)
+        
+        # Create an empty DataFrame to store the result
+        result_df = pandas.DataFrame(columns=['Bit Name', 'Mean 1xx', 'Mean 2xx', 'Mean 3xx', 'Mean 4xx', 'Mean 5xx', 'Mean 9xx'])
+
+        result_dfs = []
+
+        # Iterate through each bit, calculate the mean values, and add them to the list of DataFrames
+        for bit_column in bit_columns:
+            filtered_data = data_frame[data_frame[bit_column] == 1]
+            mean_values = filtered_data[['1xx', '2xx', '3xx', '4xx', '5xx', '9xx']].mean()
+            bit_df = pandas.DataFrame({'Bit Name': [bit_column], **mean_values.to_dict()})
+            result_dfs.append(bit_df)
+
+        # Concatenate the list of DataFrames into a single result DataFrame
+        result_df = pandas.concat(result_dfs, ignore_index=True)
+        #Percentage
+        result_df.iloc[:, 1:] = result_df.iloc[:, 1:].apply(lambda x: (x / x.sum()) * 100, axis=1)
+        
+            # Save the DataFrame to a CSV file.
+        result_df.iloc[:, 1:] = result_df.iloc[:, 1:].round(1)
+        result_df.to_csv(self.exp_path + "/deviations_mean.csv", index=False)
+        transpose_df=result_df
+        transpose_df.iloc[:, 1:] = transpose_df.iloc[:, 1:].round(2)
+        transpose_df.to_latex(self.exp_path+"/deviation_means_t.tex", index=False)
+        colors = ['#9B59BB', '#2ECC77', '#F1C400', '#E74C33', '#3498DD', '#344955']
+        fig, ax = mpl.subplots(figsize=(10, 10))
+
+        bottom = 0
+
+        for i, col in enumerate(result_df.columns[1:]):
+            ax.bar(result_df['Bit Name'], result_df[col], label=col, bottom=bottom, color=colors[i])
+            bottom += result_df[col]
+
+        #ax.set_xlabel('Bit Name')
+        ax.tick_params(axis='both', labelsize=self.font_size_axis)
+        
+        ax.set_ylabel('Response Status Codes Share (%)', fontsize=self.font_size_axis)
+        ax.set_title('Response Codes over different Modifications',fontsize=self.font_size_title)
+        ax.legend(title='2xx Rates', loc='lower right')
+        mpl.xticks(rotation=90)
+        mpl.tight_layout()
+        mpl.savefig(self.exp_path+'/discrete_deviation_response_rates.png', dpi=300)
+        return result_df, data_frame
 
 
     def decode_save_cc52(self,data_frame):
@@ -415,7 +520,7 @@ class Domain_Response_Analyzator():
         #bins = [-1, 5, 8, result['deviation_count'].max() + 1]
         #labels = ['0-5', '5-8', '8-11'] 
         ##CC52
-        bins = [0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 ,1024]   ##
+        """bins = [0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 ,1024]   ##
         labels = [
             'Exclude Scheme',
             'Switch Scheme',
@@ -428,7 +533,23 @@ class Domain_Response_Analyzator():
             'Random String L=6-100 as Port',
             'Delete path if path is provided',
             'No changes',
-        ]
+        ]"""
+        ##CC53
+        """bins = [0, 1, 2, 4, 8, 16, 32, 64]   ##
+        labels = [
+            'pos 16Bit signed Int.',
+            'neg 16Bit signed Int.',
+            'pos 32Bit signed Int.',
+            'neg 32Bit signed Int.',
+            'pos 64Bit signed Int.',
+            'neg 64Bit signed Int.',
+            'No changes',
+            ]"""
+        #CC12
+        bins = [-1, 1025, 8201, 16401, 32801, result['deviation_count'].max() + 1]
+        labels = ['0-1024', '1024-8200', '8201-16400', '16401-32800', '32801-Max']  
+
+
 
         #result['deviation_group'] = pandas.cut(result['deviation_count'], bins=bins, labels=labels)
         result['deviation_group'] = pandas.cut(result['deviation_count'], bins=bins, labels=labels)
@@ -1842,7 +1963,7 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/extracted_logs/attic/experiment_30"
+    path = f"{log_dir}/extracted_logs/attic/experiment_31"
     dra = Domain_Response_Analyzator(path)
     dra.start()
   

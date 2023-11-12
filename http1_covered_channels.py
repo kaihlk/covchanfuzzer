@@ -804,17 +804,14 @@ class HTTP1_Request_CC_URI_Represenation_opt3(HTTP1_Request_Builder):
         Port: "" "443" "80" (+1) "random int" (+1), random int bigger than portrange
         Path: No changes
 
-        # Bit 0:1 Exclude Scheme
-        # Bit 1:2 Switch Scheme
-        # Bit 2:4 Exclude subdomain
-        # Bit 3:8 Include fitting port
-        # Bit 4:16 Counter Scheme fitting Port
-        # Bit 5:32 Random Port in Port Range 65535 
-        # Bit 6:64 Random Integer
-        # Bit 7:128 Random String L=5
-        # Bit 8:256 Random String L=6-100
-        # Bit 9:512 Delete path if path is provided
-        # Bit10:1024 Control Group
+        # Bit 0: 0 No changes   <- Error 
+        # Bit 1: 1 Random Range 0..65535 
+        # Bit 2: 2 Random Range -65535..0
+        # Bit 3: 4 0 .. 2147483648
+        # Bit 4: 8 -2147483648 .. 0
+        # Bit 5:16 0, 9223372036854775807
+        # Bit 6:32 -9223372036854775807 .. 0
+        # Bit 7:64 No changes
         """
         #Relative URI does not make sense here
         relative_uri=False
@@ -844,7 +841,7 @@ class HTTP1_Request_CC_URI_Represenation_opt3(HTTP1_Request_Builder):
         
         
         if bit_set==1:
-            #Bit 5: Random Port in Port Range 65535 
+            #Bit 0: Random Range 0..65535 
             new_include_port=True
             new_port=random.randint(0, 65535)
             deviation_count+=1                 
@@ -873,8 +870,8 @@ class HTTP1_Request_CC_URI_Represenation_opt3(HTTP1_Request_Builder):
             new_include_port=True
             new_port = random.randint(-9223372036854775807,0) #'Update'
             deviation_count+=32    
-        elif bit_set ==7:
-            # Bit 10 : Control Group
+        elif bit_set ==7 :
+            # Bit 7 : Control Group
             deviation_count += 64
         
         # Build a new URL from the input
@@ -1587,9 +1584,7 @@ class HTTP1_Request_CC_URI_Extend_with_fragments(HTTP1_Request_Builder):
         max_length=1024*100    #8kb nginx and apache limit for repsonse line
             
         char_sets = {
-            "letters_digits": string.ascii_letters + string.digits,
-            "subdelimiters": "!$&'()*+,;=",
-            "general_delimiters": ":/?#[]@"
+            "letters_digits": string.ascii_letters + string.digits 
         }
         chosen_set = random.choice(list(char_sets.keys()))
 
@@ -1600,7 +1595,7 @@ class HTTP1_Request_CC_URI_Extend_with_fragments(HTTP1_Request_Builder):
         random_border = max(min_length, min(max_length, random_border))
 
         #random_border=random.randint(0, max_length)
-        fragment=mutators.generate_random_string(chosen_set, random_border, 0)
+        fragment=mutators.generate_random_string(char_sets[chosen_set], random_border, 0)
         if random.random()<fuzzvalue:
             fragment = urllib.parse.quote(fragment) 
         deviation_count=len(fragment)+1
@@ -1667,6 +1662,166 @@ class HTTP1_Request_CC_URI_Extend_with_fragments(HTTP1_Request_Builder):
             return request, deviation_count, new_uri
         except Exception as ex:
             print(ex)
+
+class HTTP1_Request_CC_URI_Extend_with_fragments_opt1(HTTP1_Request_Builder):
+    def __init__(self):
+        super().__init__()  # Call the constructor of the base class first
+        self.cc_uri_post_generation = False
+
+    def build_request_line(self, port, method, path, fragment, headers, scheme, fuzzvalue, relative_uri=True, include_subdomain=False, include_port=False, protocol="HTTP/1.1"):
+                # Build the request_line from the provided arguments
+        if relative_uri==False:        
+            #Scheme:
+            if scheme=="":
+                if port==443:
+                    scheme="https://"
+                else:
+                    scheme="http://"
+                #subdomains                      
+            if include_subdomain:
+               subdomain=self.subdomain_placeholder   ###SUBDOMAINS need to be ended with .
+            else:
+               subdomain="" 
+            #Port
+            if include_port==True:
+                new_port=":"+str(port)
+            else:
+                new_port=""
+            #absolute uri
+            new_uri =scheme + subdomain + self.domain_placeholder + new_port + self.path_placeholder + "#" +fragment
+        else:
+            #relative uri
+            new_uri=self.path_placeholder + "#" +fragment
+
+        request_line = f"{method} {new_uri} {protocol}\r\n"
+
+        return request_line, new_uri   
+
+    
+    
+    
+    
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
+        '''CC URI  with addional changes in Case insensitvity'''
+        # Check if headers are provided elsewise take default headers
+        if headers is None:
+            headers = default_headers.copy()
+        else:
+            # Create a copy to avoid modifying the original list
+            headers = headers.copy()
+        scheme=""
+
+        # Insert the Host header at the beginning of the list
+        headers.insert(0, ("Host", self.host_placeholder))
+
+        ###CC Part#
+        max_length=1024*100    #8kb nginx and apache limit for repsonse line
+            
+        char_sets = {
+            "letters_digits": string.ascii_letters + string.digits,
+            "lowercase_letters": string.ascii_lowercase,
+            "uppercase_letters": string.ascii_uppercase,
+            "digits": string.digits,
+            "subdelimiters": "!$&'()*+,;=",
+            "reserved_characters":":/?#[]@",
+            "reserved_characters_encoded": urllib.parse.quote(":/?#[]@"), 
+            "additional_characters": "_.-~",  
+        }
+        chosen_set = random.choice(list(char_sets.keys()))
+        if chosen_set == "letters_digits":
+            value = 1
+        if chosen_set == "lowercase_letters":
+            value = 2
+        elif chosen_set == "uppercase_letters":
+            value = 4
+        elif chosen_set == "digits":
+            value = 8
+        elif chosen_set == "subdelimiters":
+            value = 16
+        elif chosen_set == "reserved_characters":
+            value = 32
+        elif chosen_set == "reserved_characters_encoded":
+            value = 64
+        elif chosen_set == "additional_characters":
+            value = 128
+                           
+
+        min_length = 1 # 1in bytes
+        max_length=1024*100   # 100 KB in bytes
+        #sca1e=5
+        #random_border = int(np.random.exponential(sca1e)*1024)
+        #random_border = max(min_length, min(max_length, random_border))
+
+        #random_border=random.randint(0, max_length)
+        random_border=100
+        fragment=mutators.generate_random_string(char_sets[chosen_set], random_border, 0)
+        
+        deviation_count=value
+        
+        #### 
+
+          # Build a new URL from the given host
+        request_line, new_uri = self.build_request_line(port, method, path, fragment, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
+        
+
+        if protocol=="":
+            protocol="HTTP/1.1"
+        request_line = f"{method} {new_uri} {protocol}\r\n"
+        request_string = request_line
+
+        for header in headers:
+            request_string += f"{header[0]}: {header[1]}\r\n"
+
+        request_string += "\r\n"
+
+        return request_string, deviation_count, new_uri
+
+    def replace_host_and_domain(self, prerequest, uri, standard_subdomain="", host_header=None, include_subdomain_host_header=False, path="", override_uri="", fuzzvalue=0.5):
+        "Replace the the Placeholders from the Prerequest to adapt it to the host"
+        try:
+            #Prepare the parts of URI
+            #Break the domain into pieces
+            _scheme, subdomains, hostname, tldomain, _port, uri_path =self.parse_host(uri)
+            #if subdomains=="":
+            #    subdomains=standard_subdomain
+            if not subdomains=="" and not subdomains.endswith('.'):
+                subdomains += '.'
+            new_domain=hostname+"."+tldomain
+            #Build host from domain if not provided
+            if host_header is None:
+                if include_subdomain_host_header is True:
+                    host_header=subdomains+"."+new_domain
+                else:
+                    host_header=new_domain
+            #Replace domain if override_uri
+            if override_uri!="":
+                new_domain=override_uri
+                prerequest=prerequest.replace('https://', '',1)
+            if uri_path=="":
+                new_path=path
+            else:
+                new_path=uri_path
+            if not new_path.startswith("/"):
+                new_path="/"+new_path   
+
+            deviation_count=0
+
+                       
+            #This inserts the sudomain in the uri
+            request=prerequest.replace(self.subdomain_placeholder,subdomains)
+            request=request.replace(self.domain_placeholder, new_domain)
+            request=request.replace(self.path_placeholder, new_path)
+            #The Subdomain inclusion for the host header field takes places here,
+            request=request.replace(self.host_placeholder, host_header)
+
+    
+
+            new_uri=self.extract_new_uri(request)
+            return request, deviation_count, new_uri
+        except Exception as ex:
+            print(ex)
+
+
 
 
     #Try to verify findings of first runn
