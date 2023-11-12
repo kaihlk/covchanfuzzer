@@ -1178,11 +1178,10 @@ class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
     def replace_host_and_domain(self, prerequest, domain, standard_subdomain="", host=None, include_subdomain_host_header=False, path="",override_uri="", fuzzvalue=0.5):
         #CC specific
         
-        fuzzvalue=0.3
+        fuzzvalue=random.choice([0.1,0.3,0.5,0.7,0.9])
         try:
-            scheme, subdomains, hostname, tldomain, _port, _path =self.parse_host(domain)
-            if subdomains=="":
-                subdomains=standard_subdomain            
+            scheme, subdomains, hostname, tldomain, _port, path =self.parse_host(domain)
+                      
             if not subdomains=="" and not subdomains.endswith('.'):
                     subdomains += '.'
             new_domain=hostname+"."+tldomain
@@ -1213,6 +1212,8 @@ class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
 
             request_sub=request_sch.replace(self.subdomain_placeholder,new_subdomains)
             request_dom=request_sub.replace(self.domain_placeholder, new_domain)
+            if not new_path.startswith("/"):
+                    new_path="/"+new_path   
             request=request_dom.replace(self.path_placeholder, new_path)
             #The Subdomain inclusion for the host header field takes places here,
             request=request.replace(self.host_placeholder, host)
@@ -1222,7 +1223,14 @@ class HTTP1_Request_CC_URI_Case_Insentivity(HTTP1_Request_Builder):
             return request, deviation_count, new_uri
         except Exception as ex:
             print(ex)
-
+            
+    def path_generator(self, domain_specific_path=[], test_path="", fuzzvalue=0.5):
+        """Adapts the path of the domain (randomly one from the domain specific path list) and/or the CC, returns empty string'' if no input specified"""
+        if len(domain_specific_path)!=0:
+            path=random.choice(domain_specific_path)
+        else: path=test_path
+        ##Insert CC Part here
+        return path
 
 
 class HTTP1_Request_CC_URI_Hex_Hex(HTTP1_Request_Builder):

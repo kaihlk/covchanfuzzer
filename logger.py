@@ -12,6 +12,8 @@ import math
 import pandas
 import scipy.stats as scistats
 import logging
+from http1_request_builder import HTTP1_Request_Builder
+import itertools
 # import pyshark # doesnt work so well, probably a sudo problem
 
 
@@ -21,7 +23,7 @@ import logging
 
 
 class TestRunLogger:
-    def __init__(self, experiment_configuration, experiment_folder, host_ip_info, target_host, target_ip, target_port, target_paths):
+    def __init__(self, experiment_configuration, experiment_folder, host_ip_info, target_host, target_ip, target_port, target_paths, base_uri):
         self.experiment_configuration = experiment_configuration
         self.experiment_folder=experiment_folder
         self.host_ip_info=host_ip_info
@@ -29,6 +31,7 @@ class TestRunLogger:
         self.target_port = target_port
         self.target_host =target_host
         self.target_paths=target_paths
+        self.base_uri=base_uri
         self.log_folder = self.create_logging_folder()
         self.request_data_list=[]
         self.status_code_count= {}
@@ -52,6 +55,7 @@ class TestRunLogger:
         self.response_body_list=[]
         self.deviation_to_status_code=[]
         self.request_response_data_list=[]
+        self.rel_uri_stats=[]
 
     def create_logging_folder(self):
         '''Creates in not exists to store the logs'''
@@ -76,6 +80,48 @@ class TestRunLogger:
             json.dump(data, file, indent=4)
 
         return
+
+    def rel_uri_count(self, new_uri, status_code, deviation_count, attempt_no):
+        row={}
+        host=self.target_host
+        original_uri= self.base_uri
+        
+        #Calc Relative Deviation
+        letter_count = sum(1 for char in new_uri if char.isalpha())
+        rel_deviation = (deviation_count / letter_count) * 100
+
+        #Check if URI Parts are changed
+        o_scheme, o_subdomains, o_hostname, o_tldomain, _port, o_path = HTTP1_Request_Builder().parse_host(original_uri)
+        n_scheme, n_subdomains, n_hostname, n_tldomain, _port, n_path = HTTP1_Request_Builder().parse_host(new_uri)
+        if o_scheme!=n_scheme: scheme_mod=1
+        else: scheme_mod=0
+        if o_subdomains!=n_subdomains: subdomain_mod=1
+        else: subdomain_mod=0
+        if o_hostname!=n_hostname: hostname_mod=1 
+        else: hostname_mod=0
+        if o_tldomain!=n_tldomain: tlddomain_mod=1 
+        else: tlddomain_mod=0
+        if o_path!=n_path: path_mod=1 
+        else: path_mod=0
+        row['Attempt_No']=attempt_no
+        row['Host'] = host
+        row['Original_URI'] = original_uri
+        row['New_URI'] = new_uri
+        row['Status_Code'] = status_code
+        row['Deviation_Count'] = deviation_count
+        row['Letter_Count'] = letter_count
+        row['Relative_Deviation'] = rel_deviation
+        row['Scheme_Modification'] = scheme_mod
+        row['Subdomain_Modification'] = subdomain_mod
+        row['Hostname_Modification'] = hostname_mod
+        row['Tlddomain_Modification'] = tlddomain_mod
+        row['Path_Modification'] = path_mod
+
+        self.rel_uri_stats.append(row)
+
+        return 
+
+      
 
     def add_request_response_data(self, attempt_number, request, deviation_count, uri, response_line, response_header_fields, body, measured_times, error_message):
         """Save as csv."""
@@ -167,7 +213,9 @@ class TestRunLogger:
             "response_header_length": length_header,
             "response_body_length": length_body,
             "response_header_fields": response_header_fields, }
-  
+
+    
+
         self.deviation_to_status_code.append(dev_to_status) 
         
         self.reponse_time_list.append(measured_times["Response_Time"])
@@ -176,7 +224,7 @@ class TestRunLogger:
         self.uri_length_list.append(len (uri))
         self.response_header_keys_list.append(length_header)
         self.response_body_list.append(length_body)
-            
+        self.rel_uri_count(uri, response_status_code, deviation_count, attempt_number)
         return    
 
     """ def add_request_response_data(self, attempt_number, request, deviation_count, uri, response_line, response_header_fields, body, measured_times, error_message):
@@ -293,6 +341,92 @@ class TestRunLogger:
         data_frame.to_csv(log_file_path)
         return data_frame
 
+    def save_rel_uri_status_code(self, data):
+        log_file_path = f"{self.log_folder}/rel_uri_deviation.csv"
+        data_frame=pandas.DataFrame(data)
+        data_frame.to_csv(log_file_path)
+
+        data_frame['Modification_ID'] = (
+            data_frame['Scheme_Modification'] * 10000 +
+            data_frame['Subdomain_Modification'] * 1000 +
+            data_frame['Hostname_Modification'] * 100 +
+            data_frame['Tlddomain_Modification'] * 10 +
+            data_frame['Path_Modification']).astype(str)
+
+        data_frame['1xx'] = data_frame['Status_Code'].astype(str).str.startswith('1').astype(int)
+        data_frame['2xx'] = data_frame['Status_Code'].astype(str).str.startswith('2').astype(int)
+        data_frame['3xx'] = data_frame['Status_Code'].astype(str).str.startswith('3').astype(int)
+        data_frame['4xx'] = data_frame['Status_Code'].astype(str).str.startswith('4').astype(int)
+        data_frame['5xx'] = data_frame['Status_Code'].astype(str).str.startswith('5').astype(int)
+        data_frame['9xx'] = data_frame['Status_Code'].astype(str).str.startswith('9').astype(int)
+
+
+
+        rel_deviation_stats = data_frame.groupby(data_frame['Relative_Deviation'].astype(int) // 1 * 1).agg({
+            '1xx': 'sum', '2xx': 'sum', '3xx': 'sum', '4xx': 'sum', '5xx': 'sum', '9xx': 'sum'
+        })
+
+        rel_deviation_stats['Count'] = rel_deviation_stats[['1xx', '2xx', '3xx', '4xx', '5xx', '9xx']].sum(axis=1)
+
+        for code in ['1xx', '2xx', '3xx', '4xx', '5xx', '9xx']:
+            rel_deviation_stats[code + '_Percentage'] = (rel_deviation_stats[code] / rel_deviation_stats['Count']) * 100
+
+        # Calculate statistics for each Modification value
+        modification_stats = data_frame.groupby('Modification_ID').agg({
+            '1xx': 'sum', '2xx': 'sum', '3xx': 'sum', '4xx': 'sum', '5xx': 'sum', '9xx': 'sum'
+        })
+        modification_stats['Count'] = modification_stats[['1xx', '2xx', '3xx', '4xx', '5xx', '9xx']].sum(axis=1)
+        for code in ['1xx', '2xx', '3xx', '4xx', '5xx', '9xx']:
+            modification_stats[code + '_Percentage'] = (modification_stats[code] / modification_stats['Count']) * 100
+
+        log_file_path = f"{self.log_folder}/rel_uri_statuscode_stats.csv"
+        rel_deviation_stats.to_csv(log_file_path)
+        #log_file_path = f"{self.log_folder}/rel_uri_statuscode_freq_stats.csv"
+        #rel_freq_stats_percentage.to_csv(log_file_path)
+        log_file_path = f"{self.log_folder}/rel_uri_modification_type_stats.csv"
+        modification_stats.to_csv(log_file_path)
+
+        header = ['Host'] + [i for i in range(101)]
+        percentage_dict = {key: 0 for key in header}
+        # Set the 'Host' value
+        percentage_dict['Host'] = self.target_host
+       
+        for index, row in rel_deviation_stats.iterrows():
+            percentage_dict[index] = row['2xx_Percentage']
+        file_path = f"{self.experiment_folder}/rel_uri_host_2xx.csv"
+        exists = os.path.exists(file_path)
+
+        with open(file_path, "a+", newline="") as csvfile:
+            csv_writer = csv.DictWriter(csvfile, fieldnames=percentage_dict.keys())
+            if not exists:
+                csv_writer.writeheader()
+            row = percentage_dict.copy()
+            csv_writer.writerow(row)
+        
+
+        header_mod = ['Host'] + ['0','1','10','11','100','101','110','111','1000','1001','1010','1011','1100','1101','1110','1111','10000', '10001','10010','10011','10100','10101','10110','10111','11000','11001','11010','11011','11100','11101','11110','11111']
+        percentage_dict_mod = {key: 0 for key in header_mod}
+         # Set the 'Host' value
+        percentage_dict_mod['Host'] = self.target_host
+        
+        for index, row in modification_stats.iterrows():
+            percentage_dict_mod[index] = row['2xx_Percentage']
+        file_path = f"{self.experiment_folder}/rel_mod_uri_host_2xx.csv"
+        exists = os.path.exists(file_path)
+
+        with open(file_path, "a+", newline="") as csvfile:
+            csv_writer = csv.DictWriter(csvfile, fieldnames=percentage_dict_mod.keys())
+            if not exists:
+                csv_writer.writeheader()
+            row = percentage_dict_mod.copy()
+            csv_writer.writerow(row)
+
+        return
+    
+
+        
+        return data_frame,rel_deviation_stats, modification_stats
+
     
     def calcluate_avg(self,value_list):
         if len(value_list)==0:
@@ -356,6 +490,10 @@ class TestRunLogger:
         
         return statistics    
     
+
+
+
+
     def create_result_variables(self):
     
 
@@ -388,11 +526,15 @@ class TestRunLogger:
         
         
         return
+    
+    
+
 
     def save_logfiles(self):#, request_data, result_variables):
         '''Save all files after the experiments'''
         self.create_result_variables()
         data_frame=self.save_deviation_status_code(self.deviation_to_status_code)
+        self.save_rel_uri_status_code(self.rel_uri_stats)
         statistics= self.calculate_statistics(data_frame)
         self.save_run_metadata(self.result_variables, statistics)
         self.update_entry_to_experiment_list(statistics)

@@ -477,8 +477,11 @@ class ExperimentRunner:
 
             if deviation_count <= 0:
                 rel_deviation = 0
-            # Calculate relative change in percentage
-            rel_deviation = (deviation_count / len(uri)) * 100
+            # Calculate relative change in percentage  
+            # Count only letters
+            letter_count = sum(1 for char in uri if char.isalpha())
+            rel_deviation = (deviation_count / letter_count) * 100
+            
             # Round to the nearest whole percent
             rel_deviation = round(rel_deviation)
 
@@ -665,6 +668,7 @@ class ExperimentRunner:
                     host_ip_info["ip_address"],
                     host_ip_info["port"],
                     target_info["paths"],
+                    target_info["uri"]
                 )
                 logger_list.append(logger)
             except Exception as e:

@@ -905,7 +905,130 @@ class Domain_Response_Analyzator():
 
         return
 
+    def single_plot_mod_cc6(self, data_frame):
+        def status_code_curves_over_deviation6(data_frame, ax=None, subplottitles=True, autolimits=False, y_low=0, y_up=100):
 
+            """
+            MARCO1
+            Plot percentage curves for different response codes over the deviation count.
+            """
+            if ax==None: 
+                fig, ax = mpl.subplots(figsize=(10, 8))
+
+            #mpl.style.use('fivethirtyeight')
+            colors = ['#9B59BB','#2ECC77','#F1C400','#E74C33','#3498DD','#344955']
+
+            response_codes = [ '1xx','2xx', '3xx', '4xx', '5xx', '9xx']
+        
+            # Select only the relevant columns
+            data_frame = data_frame[['deviation_count'] + response_codes].copy()
+            # Sort Data by Deviation Count
+            data_frame.sort_values(by='deviation_count', ascending=True, inplace=True)
+            # Mean Value per deviation count
+            data_frame = data_frame.groupby('deviation_count').mean().reset_index()
+            for code in response_codes:
+                data_frame[f'{code}_percentage'] = data_frame[code] /self.experiment_configuration["max_targets"]  * 100
+            
+            maximum_dev_count=data_frame["deviation_count"].values.max()
+            interpolation_range = range(1, maximum_dev_count)
+            data_frame.set_index('deviation_count', inplace=True)
+            data_frame = data_frame.reindex(interpolation_range).interpolate(method='linear')
+            data_frame.reset_index(inplace=True)
+            # Iterate through each response code and plot its curve.
+            
+            i=0
+            for code in response_codes:
+                data_frame[f'{code}_percentage'] = data_frame[code] /self.experiment_configuration["max_targets"]  * 100
+                #Curves
+                ax.plot(data_frame['deviation_count'], data_frame[f'{code}_percentage'], label=code, color=colors[i])
+                
+                i+=1
+
+                    #CC3
+            data_frame['Cluster'] = pandas.cut(data_frame['2xx_percentage'], bins=[0, 32, 42, 62, 100], labels=['Cluster 1', 'Cluster 2', 'Cluster 3', 'Cluster 4'])
+            cluster_2 = data_frame[data_frame['Cluster'] == 'Cluster 2']
+            cluster_3 = data_frame[data_frame['Cluster'] == 'Cluster 3']
+            #CC3
+            #mean_2 = cluster_2['2xx_percentage'].mean()
+            #mean_3 = cluster_3['2xx_percentage'].mean()
+            #ax.axhline(36, color='black', linestyle='--', label=f'36%')
+            #ax.axhline(60, color='black', linestyle='dotted', label=f'60%')
+            #ax.axhline(mean_2, color='black', linestyle='--', label=f'Mean Cluster 1: {mean_2:.1f}%')
+            #ax.axhline(mean_3, color='black', linestyle='--', label=f'Mean Cluster 2: {mean_3:.1f}%')
+
+            # Add labels and title
+            if subplottitles is True:
+                ax.set_xlabel('Steganographic Payload / Modifications', fontsize=12)
+                ax.set_ylabel('Response Code Frequency(%)', fontsize=12)
+                ax.set_title('Statuscodes Frequency over Steganographic Payload', fontsize=14, fontweight='bold')
+
+            # Set y-axis limits if needed
+            # ax.set_ylim(0, 100)
+
+            # Set y-tick locations and format labels as percentages
+            if autolimits is False:
+                ax.set_ylim(y_low, y_up)
+            yticks = ax.get_yticks()
+            ax.set_yticks(yticks)
+            ax.set_yticklabels(['{:.2f}%'.format(ytick) for ytick in yticks])
+
+            if autolimits is False:
+                ax.set_ylim(y_low, y_up)
+
+            # Show the plot
+            ax.grid(True)
+            ax.legend()
+            #mpl.show()
+
+            #mpl.savefig(self.exp_path+'/status_code_curves_over_deviation.png', dpi=300, bbox_inches='tight')
+            return ax
+
+        
+        def plot_rel_uri_mod(self, data_frame, ax):
+        
+            deviation_counts = data_frame['Relative Deviation'].values
+            sums=data_frame['Sum'].values
+            frequency = sums / data_frame['Sum'].values.sum()*100
+
+            
+            #fig, ax = mpl.subplots(figsize=(10, 8))
+
+            #fig.patch.set_facecolor('white')
+            #ax.set_facecolor('white')
+
+            bar_plot = ax.bar(deviation_counts, sums, color='blue', label='Data Distribution')
+            ax.set_xlabel('Relative Modification (%) from original URI')
+            ax.set_ylabel('Request (of 1000000)')
+            ax.set_title('Relative Modifications URI Distribution')
+            #ax.legend()
+            ax.set_facecolor('white')
+            ax.patch.set_facecolor('white')
+            ax.grid=True
+            
+            #mpl.savefig(self.exp_path+'/exp_stats_rel_uri_deviation_distribution.png', dpi=300, bbox_inches='tight')
+            return ax
+        self.font_size_axis=16
+        self.font_size_title=18
+        self.font_size_label=8
+        
+        fig, axs = mpl.subplots(1, 1, figsize=(14, 7))
+        #gs = GridSpec(2, 2, figure=fig)
+        mpl.subplots_adjust(wspace=0.3, hspace=0.3)
+        
+        # Top
+        status_code_curves_over_deviation6(self.data_frame_prerequest_stats, ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100)
+        # Adjust spacing between subplots
+        #mpl.tight_layout()
+        axs.set_xlabel('Relative URI Modifications', fontsize=self.font_size_axis)
+        axs.set_ylabel('Status Code Frequency(%)', fontsize=self.font_size_axis)
+        axs.set_title('Status Codes Frequency over relativ URI Modifications', fontsize=self.font_size_title, fontweight='bold')
+        # sSave the figure as a single PNG file
+        mpl.savefig(self.exp_path+'/single_plot_mod6.png', dpi=300)
+
+        # Show the combined plot
+        #mpl.show()
+
+        return
 
 
 
