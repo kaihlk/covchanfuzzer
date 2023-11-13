@@ -59,7 +59,10 @@ class Domain_Response_Analyzator():
         #This one for Marcos Suggestions:
       
         #Plot Histogramm Distribution of Modifications 
-        self.single_plot_deviation_count_distribution() 
+        #self.single_plot_deviation_count_distribution() 
+        self.single_plot_mod_cc6()
+        #self.single_plot_mod_cc()
+        #s
         #self.double_plot_deviation_count_distribution_CC3()
         self.singleplot_blocking()##CC3
         self.singleplot_mod()##CC3s
@@ -96,7 +99,7 @@ class Domain_Response_Analyzator():
         self.save_exp_analyzer_results(host_statistics, prerequest_statistics)
         #self.plot_deviation_count_distribution(self.data_frame_prerequest_stats)
         #self.singleplot_rel_uri()
-        #self.plot_uri_deviation_count_distribution(self.data_frame_uri)
+        self.plot_uri_deviation_count_distribution(self.data_frame_uri)
         #self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
         #self.plot_scatter_prerequest(self.data_frame_rel_uri)
         self.plot_hosts_responses(self.data_frame_exp_stats)
@@ -1026,7 +1029,7 @@ class Domain_Response_Analyzator():
 
         return
 
-    def single_plot_mod_cc6(self, data_frame):
+    def single_plot_mod_cc6(self):
         def status_code_curves_over_deviation6(data_frame, ax=None, subplottitles=True, autolimits=False, y_low=0, y_up=100):
 
             """
@@ -1963,7 +1966,7 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/extracted_logs/attic/experiment_31"
+    path = f"{log_dir}/extracted_logs/EOW/experiment_18"
     dra = Domain_Response_Analyzator(path)
     dra.start()
   

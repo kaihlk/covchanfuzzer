@@ -17,6 +17,7 @@ requests_builders ={
     52: HTTP1_Request_CC_URI_Represenation_opt2,
     53: HTTP1_Request_CC_URI_Represenation_opt3,
     6: HTTP1_Request_CC_URI_Case_Insentivity,
+    61: HTTP1_Request_CC_URI_Case_Insentivity_opt1,
     7: HTTP1_Request_CC_URI_Extend_with_fragments,
     71: HTTP1_Request_CC_URI_Extend_with_fragments_opt1,
     13: HTTP1_Request_CC_Add_Random_Header_Fields,
