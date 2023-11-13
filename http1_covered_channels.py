@@ -1946,8 +1946,8 @@ class  HTTP1_Request_CC_Add_Random_Header_Fields(HTTP1_Request_Builder):
         
 
         # Generate random header key-value pairs
-        max_header_key_length= 16
-        max_header_value_length =16
+        max_header_key_length= 19
+        max_header_value_length =19
         max_header_field_count = 4096
         sca1e=20
         header_count=len(headers)
