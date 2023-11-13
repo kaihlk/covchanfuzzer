@@ -1942,14 +1942,19 @@ class  HTTP1_Request_CC_Add_Random_Header_Fields(HTTP1_Request_Builder):
         deviation_count = 0
         request_string = request_line
         
-        max_header_key_length= 16
-        max_header_value_length =16
-        max_header_field_count = 1024
+        
         
 
         # Generate random header key-value pairs
-        header_count=len(headers)  
-        chosen_header_field_count=random.randint(header_count, max_header_field_count)  
+        max_header_key_length= 16
+        max_header_value_length =16
+        max_header_field_count = 4096
+        sca1e=20
+        header_count=len(headers)
+        chosen_header_field_countr = int(np.random.exponential(sca1e)*1024/(max_header_key_length+max_header_value_length))
+        #Limit Min, Max
+        chosen_header_field_count= max(header_count, min(max_header_field_count, chosen_header_field_countr))
+        #hosen_header_field_count=random.randint(header_count, max_header_field_count)  
         while header_count<chosen_header_field_count: 
             header_count+=1
             random_header_key = mutators.generate_random_string(length=max_header_key_length)
@@ -1991,20 +1996,17 @@ class  HTTP1_Request_CC_Add_Big_Header_Field(HTTP1_Request_Builder):
         deviation_count = 0
         request_string = request_line
         
-        max_header_key_length= 20*1024
-        max_header_value_length =20*1024
+        max_header_length= 200*1024
         #CC PART
-        
+        sca1e=20
+        #Devide by 2 because two values are generated
+        chosen_length = int(np.random.exponential(sca1e)*1024/(2))
+        chosen_length= max(1, min(max_header_length, chosen_length))
         # Generate random header key-value pairs
-        random_header_key = mutators.generate_random_string(length=random.randint(1,max_header_key_length))
-        random_header_value = mutators.generate_random_string(length=random.randint(1,max_header_value_length))
+        random_header_key = mutators.generate_random_string(length=random.randint(1,chosen_length))
+        random_header_value = mutators.generate_random_string(length=random.randint(1,chosen_length))
         headers.append((random_header_key, random_header_value))
-        header_count=len(headers)    
         deviation_count+=len(random_header_key)+len(random_header_value)
-        
-            
-    
-        
 
         for header in headers:
             request_string += f"{header[0]}: {header[1]}\r\n"

@@ -20,8 +20,10 @@ requests_builders ={
     61: HTTP1_Request_CC_URI_Case_Insentivity_opt1,
     7: HTTP1_Request_CC_URI_Extend_with_fragments,
     71: HTTP1_Request_CC_URI_Extend_with_fragments_opt1,
-    13: HTTP1_Request_CC_Add_Random_Header_Fields,
-    14: HTTP1_Request_CC_Add_Big_Header_Field,
+    8: HTTP1_Request_CC_Add_Random_Header_Fields,
+    9: HTTP1_Request_CC_Add_Big_Header_Field,
+    #13: HTTP1_Request_CC_Add_Random_Header_Fields,
+    #14: HTTP1_Request_CC_Add_Big_Header_Field,
 }
     #7: HTTP1_Request_CC_URI_Hex_Hex,
     #7: HTTP1_Request_CC_URI_Extend_with_fragments,

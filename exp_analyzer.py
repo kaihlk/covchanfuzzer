@@ -59,9 +59,9 @@ class Domain_Response_Analyzator():
         #This one for Marcos Suggestions:
       
         #Plot Histogramm Distribution of Modifications 
-        #self.single_plot_deviation_count_distribution() 
-        self.single_plot_mod_cc6()
-        #self.single_plot_mod_cc()
+        self.single_plot_deviation_count_distribution() 
+        #self.single_plot_mod_cc6()
+        #self.singleplot_mod()
         #s
         #self.double_plot_deviation_count_distribution_CC3()
         self.singleplot_blocking()##CC3
@@ -1966,7 +1966,7 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/extracted_logs/EOW/experiment_18"
+    path = f"{log_dir}/extracted_logs/EOW/experiment_14"
     dra = Domain_Response_Analyzator(path)
     dra.start()
   

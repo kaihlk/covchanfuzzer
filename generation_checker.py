@@ -15,7 +15,7 @@ def generate_random_fragment(min_length, max_length, fuzzvalue, scale):
     chosen_set = random.choice(list(char_sets.keys()))
     
     # Generate a random length with a Gaussian distribution
-    random_border = int(np.random.exponential(scale))
+    random_border = int(np.random.exponential(scale)*1024)
     #random_border = max(min_length, min(max_length, random_border))
 
     fragment = ''.join(random.choice(chosen_set) for _ in range(random_border))
@@ -23,20 +23,20 @@ def generate_random_fragment(min_length, max_length, fuzzvalue, scale):
         fragment = urllib.parse.quote(fragment)
     return len(fragment)
 
-n = 1000  # Number of iterations
+n = 100  # Number of iterations
 min_length = 1
 max_length = 100  # 100 KB in bytes
 fuzzvalue = 0.1  # Adjust as needed
 
 
 
-scales=[5,10,15,20,25]
+scales=[15,20,25]
 colors = ['b', 'g', 'r', 'c', 'm', 'y', 'k']
 plt.figure(figsize=(10, 6))
 
 for scale, color in zip(scales, colors):
     lengths = [generate_random_fragment(min_length, max_length, fuzzvalue, scale) for _ in range(n)]
-    plt.hist(lengths, bins=1000, density=True, alpha=0.6, label=f'Scale {scale}', color=color)
+    plt.hist(lengths, bins=1024, density=True, alpha=0.6, label=f'Scale {scale}', color=color)
 
 # Configure the plot
 plt.title("Distribution of Fragment Lengths")
