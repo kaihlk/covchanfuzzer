@@ -6,6 +6,7 @@ import matplotlib
 import logging
 import matplotlib.pyplot as mpl
 import numpy as numpy
+from urllib.parse import urlparse
 from sklearn.cluster import KMeans
 from matplotlib.ticker import PercentFormatter
 import seaborn as sns
@@ -14,9 +15,11 @@ from scipy import stats
 from scipy.optimize import curve_fit
 from matplotlib.gridspec import GridSpec
 from scipy.interpolate import interp1d
+from http1_request_builder import HTTP1_Request_Builder
 
 class Domain_Response_Analyzator():
     def __init__(self, path):
+        self.log_dir=self.get_logs_directory()
         self.exp_path = path
         self.data_frame_exp_stats = pandas.read_csv(
             path+"/experiment_stats.csv")
@@ -24,15 +27,23 @@ class Domain_Response_Analyzator():
             path+"/prerequests.csv")
         self.data_frame_pd_matrix = pandas.read_csv(
             path+"/pd_matrix.csv")
-        
-        self.data_frame_uri = pandas.read_csv(path+"/uri_dev_statuscode.csv")
-        self.data_frame_rel_uri = pandas.read_csv(path+"/rel_uri_dev_statuscode.csv")        
+        self.log_dir=get_logs_directory()
+        # Try reading the existing global CSV file; if it doesn't exist, create an empty DataFrame
+        try:
+            self.df_global = pandas.read_csv(f'{self.log_dir}/global_status_codes.csv', index_col=0)
+        except FileNotFoundError:
+            self.df_global = pandas.DataFrame()
+        #self.data_frame_uri = pandas.read_csv(path+"/uri_dev_statuscode.csv")
+        #self.data_frame_rel_uri = pandas.read_csv(path+"/rel_uri_dev_statuscode.csv")        
         self.experiment_configuration, self.exp_meta_data=self.load_exp_outcome(self.exp_path)
         self.dra_logging=logging.getLogger("main.runner.dra_logger")
         self.font_size_axis=10
         self.font_size_title=12
         self.font_size_label=8
         self.slope=0
+
+        #self.data_frame_target_list = pandas.read_csv(path+"/base_request/target_list.csv")
+
         return
 
     def load_exp_outcome(self, path):
@@ -54,6 +65,16 @@ class Domain_Response_Analyzator():
         folder_size_mb = data["Folder_Size im MB"]
         invalid_target_entries = data["Invalid Target Entries"]
         return experiment_configuration, data
+    
+    def get_logs_directory(self):
+        """Get or create local log directory"""
+        script_directory = os.path.dirname(os.path.abspath(__file__))
+        parent_directory = os.path.dirname(script_directory)
+
+        # Check if directory for experiment_logs exist
+        logs_directory = os.path.join(parent_directory, "logs")
+    
+        return logs_directory
 
     def start(self):
         #This one for Marcos Suggestions:
@@ -66,10 +87,13 @@ class Domain_Response_Analyzator():
         #self.double_plot_deviation_count_distribution_CC3()
         self.singleplot_blocking()##CC3
         self.singleplot_mod()##CC3s
-        
+        #self.analyze_target_list(self.data_frame_target_list, self.data_frame_exp_stats)
         self.filter_and_aggregate(self.data_frame_pd_matrix, 503)
-        statuscodes_dict=self.count_status_codes(self.data_frame_pd_matrix)
+        statuscodes_dict=self.count_status_codes(self.data_frame_pd_matrix.copy())
         print(statuscodes_dict)
+        relativ_statuscodes_dict=self.convert_to_relative_values(statuscodes_dict.copy())
+        print(relativ_statuscodes_dict)
+
         self.doubleplot_response_rate_message_index()
         self.doubleplot_modification()
         
@@ -79,14 +103,16 @@ class Domain_Response_Analyzator():
         #_, decoded_df=self.decode_save_cc53(self.data_frame_prerequest_stats)
         #self.count_and_plot_bit_occurrences53(decoded_df)
 
-        #_, decoded_df=self.decode_save_cc33(self.data_frame_prerequest_stats)
-        #self.count_and_plot_bit_occurrences33(decoded_df)
+        _, decoded_df=self.decode_save_cc33(self.data_frame_prerequest_stats)
+        self.count_and_plot_bit_occurrences33(decoded_df)
         
         #self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats)
         self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=None)
         #self.status_code_bars_over_deviation(self.data_frame_prerequest_stats, ax=None)
         self.plot_unsorted_data(self.data_frame_exp_stats)
-        statuscodes_dict=self.count_status_codes(self.data_frame_pd_matrix)
+      
+        
+
         host_statistics=self.host_stats(self.data_frame_exp_stats)
         prerequest_statistics=self.prerequest_stats(self.data_frame_prerequest_stats)
         
@@ -94,19 +120,98 @@ class Domain_Response_Analyzator():
         report_filename = f'{self.exp_path}/experiment_report.tex'  
         
         self.export_latex_to_report(latex_code, report_filename)  
-
+        #self.analyze_modifications_cc6()
 
         self.save_exp_analyzer_results(host_statistics, prerequest_statistics)
         #self.plot_deviation_count_distribution(self.data_frame_prerequest_stats)
-        #self.singleplot_rel_uri()
-        self.plot_uri_deviation_count_distribution(self.data_frame_uri)
+        #self.singleplot_rel_uri() ACHTUNG
+        #self.plot_uri_deviation_count_distribution(self.data_frame_uri)
         #self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
         #self.plot_scatter_prerequest(self.data_frame_rel_uri)
         self.plot_hosts_responses(self.data_frame_exp_stats)
         #self.figure1(self.data_frame_pd_matrix)
         #self.quadplot()
+     
+        self.update_status_code_csv(statuscodes_dict, self.df_global)
         return
+
+
+    def convert_to_relative_values(self, data_dict):
+        # Calculate the total count
+        total = sum(data_dict.values())
+
+        # Convert each value to a relative value (percentage)
+        relative_values = {key: (value / total) * 100 for key, value in data_dict.items()}
+
+        return relative_values
+
+   
+
+    def update_status_code_csv(self, status_code_dict, df_global):
+        """
+        Updates the global status code CSV file with data from the current experiment.
+        Returns a DataFrame or dictionary with relative differences for each status code.
+        """
+        file_path = f'{self.log_dir}/global_status_codes.csv'
     
+        # Convert status_code_dict to DataFrame
+        df_current_experiment = pandas.DataFrame.from_dict(status_code_dict, orient='index', columns=[self.exp_path])
+
+        # Drop the column if it already exists
+        if self.exp_path in df_global.columns:
+            df_global.drop(columns=[self.exp_path], inplace=True)
+
+        # Merge and fill missing values
+        if not df_global.empty:
+            df_global = pandas.merge(df_global, df_current_experiment, left_index=True, right_index=True, how='outer')
+        else:
+            df_global = df_current_experiment
+        df_global.fillna(0, inplace=True)
+
+        # Save the updated DataFrame back to the CSV file
+        df_global.to_csv(file_path)
+
+        # Calculate relative values for the current experiment and the second column
+        total_current = df_current_experiment[self.exp_path].sum()
+        relative_current = df_current_experiment[self.exp_path] / total_current
+
+        second_column = df_global.columns[0]
+        total_global = df_global[second_column].sum()
+        relative_global = df_global[second_column] / total_global
+
+        # Calculate relative differences
+        relative_differences = (relative_current - relative_global) / relative_global
+        relative_differences = relative_differences.replace([float('inf'), -float('inf')], 0)
+        relative_differences = relative_differences.fillna(0)
+        relative_differences = relative_differences.apply(lambda x: f"{x:.2%}")
+        print(relative_differences)
+        # Return relative differences as a DataFrame or dict
+        return relative_differences.to_dict()
+
+
+
+
+    
+
+
+
+
+    def analyze_target_list(self,df_target_list, df_exp_stats):
+        def is_path_longer_than_slash(uri):
+            scheme, subdomain, hostname, domain, port, path = HTTP1_Request_Builder().parse_host(uri)
+            if len(path)>1:
+                print("Pfad: "+ path +" Länge: "+str(len(path)))
+                return True
+            else: return False
+        df_exp_stats['2xx_rate'] = df_exp_stats['2xx'] / df_exp_stats['Messages Send']
+        df_target_list['has_long_path'] = df_target_list['uri'].apply(is_path_longer_than_slash)
+        merged_df = pandas.merge(df_target_list, df_exp_stats, left_on='tranco_domain', right_on='Host')
+        correlation = merged_df['has_long_path'].corr(merged_df['2xx_rate'])
+        print(f"Correlation between URI having a long path and 2xx response rate: {correlation}")
+        average_2xx_rates = merged_df.groupby('has_long_path')['2xx_rate'].mean()
+        print("Average Rate: ", average_2xx_rates)
+        return 
+
     def filter_and_aggregate(self,pd_matrix, target_status_code):
         #Filter the DataFrame to only include rows with the target_status_code
         filtered_df = pd_matrix[pd_matrix.iloc[:, 1:].eq(target_status_code).any(axis=1)]
@@ -549,10 +654,11 @@ class Domain_Response_Analyzator():
             'No changes',
             ]"""
         #CC12
-        bins = [-1, 1025, 8201, 16401, 32801, result['deviation_count'].max() + 1]
-        labels = ['0-1024', '1024-8200', '8201-16400', '16401-32800', '32801-Max']  
-
-
+        #bins = [-1, 1025, 8201, 16401, 32801, result['deviation_count'].max() + 1]
+        #labels = ['0-1024', '1024-8200', '8201-16400', '16401-32800', '32801-Max']  
+        #CC6
+        bins = [0, 1, 11, 101, 1001, 10001]
+        labels = ['Scheme', 'Subdomain', 'Hostname', 'Toplevel Domain', 'Path']  
 
         #result['deviation_group'] = pandas.cut(result['deviation_count'], bins=bins, labels=labels)
         result['deviation_group'] = pandas.cut(result['deviation_count'], bins=bins, labels=labels)
@@ -1014,7 +1120,7 @@ class Domain_Response_Analyzator():
         # Top
         #CC3 self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=axs,subplottitles=False, autolimits=False, y_low=15, y_up=85 )  CC3
         #CC4self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=axs,subplottitles=False, autolimits=False, y_low=95, y_up=100)
-        self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri, ax=axs)
+        #self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri, ax=axs)
         #subplottitles=False, autolimits=False, y_low=0, y_up=100)
         # Adjust spacing between subplots
         #mpl.tight_layout()
@@ -1036,101 +1142,42 @@ class Domain_Response_Analyzator():
             MARCO1
             Plot percentage curves for different response codes over the deviation count.
             """
+            
             if ax==None: 
                 fig, ax = mpl.subplots(figsize=(10, 8))
 
             #mpl.style.use('fivethirtyeight')
             colors = ['#9B59BB','#2ECC77','#F1C400','#E74C33','#3498DD','#344955']
 
-            response_codes = [ '1xx','2xx', '3xx', '4xx', '5xx', '9xx']
-        
-            # Select only the relevant columns
-            data_frame = data_frame[['deviation_count'] + response_codes].copy()
-            # Sort Data by Deviation Count
-            data_frame.sort_values(by='deviation_count', ascending=True, inplace=True)
-            # Mean Value per deviation count
-            data_frame = data_frame.groupby('deviation_count').mean().reset_index()
+            response_codes = [ '2xx', '3xx', '4xx', '5xx', '9xx']  #'1xx' not present
+
+            i=1
             for code in response_codes:
-                data_frame[f'{code}_percentage'] = data_frame[code] /self.experiment_configuration["max_targets"]  * 100
-            
-            maximum_dev_count=data_frame["deviation_count"].values.max()
-            interpolation_range = range(1, maximum_dev_count)
-            data_frame.set_index('deviation_count', inplace=True)
-            data_frame = data_frame.reindex(interpolation_range).interpolate(method='linear')
-            data_frame.reset_index(inplace=True)
-            # Iterate through each response code and plot its curve.
-            
-            i=0
-            for code in response_codes:
-                data_frame[f'{code}_percentage'] = data_frame[code] /self.experiment_configuration["max_targets"]  * 100
+                data_frame[code + '_percentage'] = numpy.where(data_frame['Sum'] != 0, data_frame[code] / data_frame['Sum']*100, 0)
                 #Curves
-                ax.plot(data_frame['deviation_count'], data_frame[f'{code}_percentage'], label=code, color=colors[i])
-                
+                ax.plot(data_frame['Relative Deviation'], data_frame[f'{code}_percentage'], label=code, color=colors[i])
                 i+=1
 
-                    #CC3
-            data_frame['Cluster'] = pandas.cut(data_frame['2xx_percentage'], bins=[0, 32, 42, 62, 100], labels=['Cluster 1', 'Cluster 2', 'Cluster 3', 'Cluster 4'])
-            cluster_2 = data_frame[data_frame['Cluster'] == 'Cluster 2']
-            cluster_3 = data_frame[data_frame['Cluster'] == 'Cluster 3']
-            #CC3
-            #mean_2 = cluster_2['2xx_percentage'].mean()
-            #mean_3 = cluster_3['2xx_percentage'].mean()
-            #ax.axhline(36, color='black', linestyle='--', label=f'36%')
-            #ax.axhline(60, color='black', linestyle='dotted', label=f'60%')
-            #ax.axhline(mean_2, color='black', linestyle='--', label=f'Mean Cluster 1: {mean_2:.1f}%')
-            #ax.axhline(mean_3, color='black', linestyle='--', label=f'Mean Cluster 2: {mean_3:.1f}%')
-
-            # Add labels and title
             if subplottitles is True:
                 ax.set_xlabel('Steganographic Payload / Modifications', fontsize=12)
                 ax.set_ylabel('Response Code Frequency(%)', fontsize=12)
                 ax.set_title('Statuscodes Frequency over Steganographic Payload', fontsize=14, fontweight='bold')
 
-            # Set y-axis limits if needed
-            # ax.set_ylim(0, 100)
-
-            # Set y-tick locations and format labels as percentages
             if autolimits is False:
                 ax.set_ylim(y_low, y_up)
-            yticks = ax.get_yticks()
-            ax.set_yticks(yticks)
-            ax.set_yticklabels(['{:.2f}%'.format(ytick) for ytick in yticks])
+                yticks = ax.get_yticks()
+                ax.set_yticks(yticks)
+                ax.set_yticklabels(['{:.2f}%'.format(ytick) for ytick in yticks])
 
-            if autolimits is False:
-                ax.set_ylim(y_low, y_up)
+            
 
             # Show the plot
             ax.grid(True)
             ax.legend()
             #mpl.show()
 
-            #mpl.savefig(self.exp_path+'/status_code_curves_over_deviation.png', dpi=300, bbox_inches='tight')
             return ax
 
-        
-        def plot_rel_uri_mod(self, data_frame, ax):
-        
-            deviation_counts = data_frame['Relative Deviation'].values
-            sums=data_frame['Sum'].values
-            frequency = sums / data_frame['Sum'].values.sum()*100
-
-            
-            #fig, ax = mpl.subplots(figsize=(10, 8))
-
-            #fig.patch.set_facecolor('white')
-            #ax.set_facecolor('white')
-
-            bar_plot = ax.bar(deviation_counts, sums, color='blue', label='Data Distribution')
-            ax.set_xlabel('Relative Modification (%) from original URI')
-            ax.set_ylabel('Request (of 1000000)')
-            ax.set_title('Relative Modifications URI Distribution')
-            #ax.legend()
-            ax.set_facecolor('white')
-            ax.patch.set_facecolor('white')
-            ax.grid=True
-            
-            #mpl.savefig(self.exp_path+'/exp_stats_rel_uri_deviation_distribution.png', dpi=300, bbox_inches='tight')
-            return ax
         self.font_size_axis=16
         self.font_size_title=18
         self.font_size_label=8
@@ -1140,7 +1187,7 @@ class Domain_Response_Analyzator():
         mpl.subplots_adjust(wspace=0.3, hspace=0.3)
         
         # Top
-        status_code_curves_over_deviation6(self.data_frame_prerequest_stats, ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100)
+        status_code_curves_over_deviation6(self.data_frame_rel_uri, ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100)
         # Adjust spacing between subplots
         #mpl.tight_layout()
         axs.set_xlabel('Relative URI Modifications', fontsize=self.font_size_axis)
@@ -1153,8 +1200,35 @@ class Domain_Response_Analyzator():
         #mpl.show()
 
         return
+      
+    """def analyze_modifications_cc6(self):
+        # Read data from CSV file
+        df = pandas.read_csv(self.exp_path + "/rel_mod_uri_host_2xx.csv")
+        
+        # Select columns with only one bit set
+        single_bit_columns = ['1', '10', '100', '1000', '10000']
+        
+        # Create custom bins: (0, 10), (10, 20), ..., (90, 100)
+        bins = pandas.IntervalIndex.from_tuples([(0, 10), (10, 20), (20, 30), (30, 40), (40, 50),
+                                            (50, 60), (60, 70), (70, 80), (80, 90), (90, 100)])
+        
+        # Initialize the DataFrame to store the grouped data
+        grouped = pandas.DataFrame(index=[f"{interval.left}-{interval.right}%" for interval in bins],
+                            columns=[f"Bit {str(bin).count('1')}" for bin in single_bit_columns])
 
+        # Count hosts in each bin for each bit
+        for col in single_bit_columns:
+            # Group and count the data
+            counts = pandas.cut(df[col], bins=bins, right=False).value_counts().sort_index()
+            grouped[f"Bit {str(col).count('1')}"] = counts.reindex(bins).fillna(0).astype(int).values
 
+        # Transpose the DataFrame for the desired format
+        grouped = grouped.transpose()
+
+        # Save the grouped data to CSV
+        grouped.to_csv(self.exp_path + "/grouped_cc6_mod.csv")
+
+        return grouped"""
 
     def singleplot_mod(self):
         """Create 1x1 Plot Matrix"""
@@ -1904,7 +1978,6 @@ class Domain_Response_Analyzator():
             ax.set_title('Statuscodes Frequency over Steganographic Payload', fontsize=14, fontweight='bold')
 
         # Set y-axis limits if needed
-        # ax.set_ylim(0, 100)
 
         # Set y-tick locations and format labels as percentages
         if autolimits is False:
@@ -1915,6 +1988,38 @@ class Domain_Response_Analyzator():
 
         if autolimits is False:
             ax.set_ylim(y_low, y_up)
+        """
+        # ax.set_ylim(0, 100)
+        ###CC34
+        #x_values = [17542, 26605, 29656, 35028, 72716, 92990] 
+        ##CC 7
+        #x_values = [8299, 16272, 32983, 68243] 
+        ##CC8 (16*2)
+        x_values = [1792, 6240,22320,28400,58080,83504] 
+        ##CC 8a (19*2)
+        #x_values = [2128, 7486, 22534, 29735, 58767] 
+        ##CC9
+        #x_values = [1743, 8205,16476,25305,32468,66155] 
+        i=0
+        for x in x_values:
+            ax.axvline(x, color='red', linestyle='--', linewidth=1)  # Change color and style as needed
+            #y_value = data_frame.loc[data_frame['deviation_count'] == x, '2xx_percentage'].values[0]
+            #ax.scatter(x, y_value, color='blue')  # Change color as needed
+            y_value = data_frame.loc[data_frame['deviation_count'] == x, '2xx_percentage'].values[0]
+            #CC3
+            #ax.annotate(f'{x}', (x+2500,85-i), textcoords="offset points", xytext=(0,10), ha='center')
+            #i+=5 
+            #CC7
+            #ax.annotate(f'{x}', (x+2200,90), textcoords="offset points", xytext=(0,10), ha='center')
+            #CC8
+            if i==0:
+                ax.annotate(f'{x}', (x+2200,90-i), textcoords="offset points", xytext=(0,10), ha='center')
+            else:
+                ax.annotate(f'{x}', (x+3000,90-i), textcoords="offset points", xytext=(0,10), ha='center')
+            i+=3
+        """    
+
+
 
         # Show the plot
         ax.grid(True)
@@ -1966,7 +2071,7 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/extracted_logs/EOW/experiment_14"
+    path = f"{log_dir}/extracted_logs/EOW/experiment_2"
     dra = Domain_Response_Analyzator(path)
     dra.start()
   
