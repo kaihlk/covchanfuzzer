@@ -495,14 +495,21 @@ class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
         deviation_count = 0
         hostheader=self.host_placeholder
         headers.insert(0, ("Host", hostheader))
-
+        
         # Shuffle the header fields randomly
-        # Reorder the header fields, Note: the RandomValue random.shuffle(List, RandomValue[0,1]) is deprecated (Python 3.9)
+        # Reorder the header fields, Note: the Ra)ndomValue random.shuffle(List, RandomValue[0,1]) is deprecated (Python 3.9)
         shuffled_headers = headers[:]
-        random.shuffle(shuffled_headers)
+        n = len(headers)
 
-        request_string = request_line
-       
+
+        for i in range(n):
+            if random.random() < fuzzvalue:
+                swap_index = random.randint(0, n-1)
+                shuffled_headers[i], shuffled_headers[swap_index] = shuffled_headers[swap_index], shuffled_headers[i]
+
+
+        
+        request_string=request_line
         # Iterate over the shuffled headers and compare with the original order
         for shuffled_header, original_header in zip(shuffled_headers, headers):
             # Check if the header is not 'Host' and the order has deviated and increment the deviation count
@@ -510,6 +517,8 @@ class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
                 deviation_count += 1
             # Build the request_string with the shuffeled_header
             request_string += f"{shuffled_header[0]}: {shuffled_header[1]}\r\n"
+        
+        
         # Add the final line break to the request string
         request_string += "\r\n"
 

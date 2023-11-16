@@ -84,11 +84,11 @@ class Domain_Response_Analyzator():
         #self.single_plot_mod_cc6()
         #self.singleplot_mod()
         #s
-        #self.double_plot_deviation_count_distribution_CC3()
+        self.double_plot_deviation_count_distribution_CC3()
         self.singleplot_blocking()##CC3
         self.singleplot_mod()##CC3s
         #self.analyze_target_list(self.data_frame_target_list, self.data_frame_exp_stats)
-        self.filter_and_aggregate(self.data_frame_pd_matrix, 503)
+        self.filter_and_aggregate(self.data_frame_pd_matrix, 999)
         statuscodes_dict=self.count_status_codes(self.data_frame_pd_matrix.copy())
         print(statuscodes_dict)
         relativ_statuscodes_dict=self.convert_to_relative_values(statuscodes_dict.copy())
@@ -106,7 +106,7 @@ class Domain_Response_Analyzator():
         _, decoded_df=self.decode_save_cc33(self.data_frame_prerequest_stats)
         self.count_and_plot_bit_occurrences33(decoded_df)
         
-        #self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats)
+        self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats)
         self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=None)
         #self.status_code_bars_over_deviation(self.data_frame_prerequest_stats, ax=None)
         self.plot_unsorted_data(self.data_frame_exp_stats)
@@ -621,6 +621,9 @@ class Domain_Response_Analyzator():
 
         #Grouping of the deviation count
         # Define the bin edges and labels
+        #CC1
+        bins = [-1,1]
+        labels = ['0']  
         #CC3 Exp19
         #bins = [-1, 20, 200, result['deviation_count'].max() + 1]
         #labels = ['0-20', '20-200', '200-2000']     
@@ -657,8 +660,8 @@ class Domain_Response_Analyzator():
         #bins = [-1, 1025, 8201, 16401, 32801, result['deviation_count'].max() + 1]
         #labels = ['0-1024', '1024-8200', '8201-16400', '16401-32800', '32801-Max']  
         #CC6
-        bins = [0, 1, 11, 101, 1001, 10001]
-        labels = ['Scheme', 'Subdomain', 'Hostname', 'Toplevel Domain', 'Path']  
+        #bins = [0, 1, 11, 101, 1001, 10001]
+        #labels = ['Scheme', 'Subdomain', 'Hostname', 'Toplevel Domain', 'Path']  
 
         #result['deviation_group'] = pandas.cut(result['deviation_count'], bins=bins, labels=labels)
         result['deviation_group'] = pandas.cut(result['deviation_count'], bins=bins, labels=labels)
@@ -985,7 +988,7 @@ class Domain_Response_Analyzator():
         mpl.subplots_adjust(wspace=0.3, hspace=0.3)
         fig.suptitle("Histogram: Distribution of Steganographic Payload among Requests", fontsize=self.font_size_title, fontweight='bold')
         # Top
-        self.plot_deviation_count_distribution(self.data_frame_prerequest_stats, ax=axs[0])
+        self.plot_deviation_count_distribution(self.data_frame_prerequest_stats, ax=axs[0], bins=1000)
         axs[0].set_title("Overview", fontsize=self.font_size_title)
         axs[0].set_xlabel('Number of Modifications', fontsize=self.font_size_axis) # Remove x-axis label for the top plot
         axs[0].set_ylabel('Number of Requests', fontsize=self.font_size_axis)
@@ -2071,7 +2074,7 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/extracted_logs/EOW/experiment_2"
+    path = f"{log_dir}/extracted_logs/attic/experiment_19"
     dra = Domain_Response_Analyzator(path)
     dra.start()
   
