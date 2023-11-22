@@ -152,13 +152,13 @@ def main():
         "verbose": False,
         "timestamp": time.strftime("%Y%m%d_%H%M%S"),
         # Covert Channel Option
-        "covertchannel_request_number": 4,
+        "covertchannel_request_number": 91,
         "covertchannel_connection_number": 1,
         "covertchannel_timing_number": 1,
         "min_fuzz_value": 0.01,
         "spread_deviation": 0.9,
         # Target Selection Options
-        "num_attempts": 1000,
+        "num_attempts": 250,
         "max_targets": 1000,  # len(self.target_list):
         "max_workers": 25,  # Parallel Processing of subsets,
         "wait_between_request": 0,

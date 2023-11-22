@@ -22,6 +22,8 @@ requests_builders ={
     71: HTTP1_Request_CC_URI_Extend_with_fragments_opt1,
     8: HTTP1_Request_CC_Add_Random_Header_Fields,
     9: HTTP1_Request_CC_Add_Big_Header_Field,
+    91: HTTP1_Request_CC_Add_Big_Header_Field_opt1,
+    92: HTTP1_Request_CC_Add_Big_Header_Field_opt2,
     #13: HTTP1_Request_CC_Add_Random_Header_Fields,
     #14: HTTP1_Request_CC_Add_Big_Header_Field,
 }

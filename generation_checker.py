@@ -30,7 +30,7 @@ fuzzvalue = 0.1  # Adjust as needed
 
 
 
-scales=[15,20,25]
+scales=[2,4,8]
 colors = ['b', 'g', 'r', 'c', 'm', 'y', 'k']
 plt.figure(figsize=(10, 6))
 
