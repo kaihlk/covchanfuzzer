@@ -2048,7 +2048,7 @@ class  HTTP1_Request_CC_Add_Big_Header_Field_opt1(HTTP1_Request_Builder):
         
         max_header_length= 200*1024
         #CC PART
-        sca1e=4
+        sca1e=3
         #Devide by 2 because two values are generated
         chosen_length = int(np.random.exponential(sca1e)*1024)
         chosen_length= max(1, min(max_header_length, chosen_length))

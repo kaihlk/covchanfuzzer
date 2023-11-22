@@ -800,8 +800,11 @@ class Domain_Response_Analyzator():
         #bins = [0, 1, 11, 101, 1001, 10001]
         #labels = ['Scheme', 'Subdomain', 'Hostname', 'Toplevel Domain', 'Path']  
         ##CC8
-        bins = [-1, 1025, 8201, 16401, 32801, result['deviation_count'].max() + 1]
-        labels = ['0-1024', '1025-8200', '8201-16400', '16401-32800', '32801-Max'] 
+        #bins = [-1, 1025, 8201, 16401, 32801, result['deviation_count'].max() + 1]
+        #labels = ['0-1024', '1025-8200', '8201-16400', '16401-32800', '32801-Max'] 
+        ##CC91
+        bins = [-1, 1025, 2049, 4097, 8183, result['deviation_count'].max() + 1]
+        labels = ['0-1024', '1025-2048', '2049-4096', '4097-8192', '8193-Max'] 
         #result['deviation_group'] = pandas.cut(result['deviation_count'], bins=bins, labels=labels)
         result['deviation_group'] = pandas.cut(result['deviation_count'], bins=bins, labels=labels)
         result.to_csv(self.exp_path+"/temp1.csv")
