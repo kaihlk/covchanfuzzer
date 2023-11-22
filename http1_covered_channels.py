@@ -2053,8 +2053,14 @@ class  HTTP1_Request_CC_Add_Big_Header_Field_opt1(HTTP1_Request_Builder):
         chosen_length = int(np.random.exponential(sca1e)*1024)
         chosen_length= max(1, min(max_header_length, chosen_length))
         # Generate random header key-value pairs
-        random_header_key = mutators.generate_random_string(length=random.randint(1,chosen_length))
-        random_header_value = mutators.generate_random_string(length=10)
+        if random.random()<0.5:
+            random_header_key = mutators.generate_random_string(length=random.randint(1,chosen_length))
+            random_header_value = mutators.generate_random_string(length=10)
+        else:
+            random_header_key = mutators.generate_random_string(length=10)
+            random_header_value = mutators.generate_random_string(length=random.randint(1,chosen_length))
+       
+        
         headers.append((random_header_key, random_header_value))
         deviation_count+=len(random_header_key)+len(random_header_value)
 
