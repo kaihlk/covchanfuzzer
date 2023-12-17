@@ -1,0 +1,46 @@
+digraph "packages_CovChanFuzzer" {
+charset="utf-8"
+rankdir=BT
+"0" [label="check2", shape="box"];
+"1" [label="class_mapping", shape="box"];
+"2" [label="compress_log", shape="box"];
+"3" [label="custom_http2_client", shape="box"];
+"4" [label="custom_http_client", shape="box"];
+"5" [label="exp_analyzer", shape="box"];
+"6" [label="generation_checker", shape="box"];
+"7" [label="host_crawler", shape="box"];
+"8" [label="http1_covert_channels", shape="box"];
+"9" [label="http1_request_builder", shape="box"];
+"10" [label="http2connectiontls", shape="box"];
+"11" [label="logger", shape="box"];
+"12" [label="main", shape="box"];
+"13" [label="mutators", shape="box"];
+"14" [label="parser", shape="box"];
+"15" [label="request_tools", shape="box"];
+"16" [label="runner", shape="box"];
+"17" [label="secrets", shape="box"];
+"18" [label="target_list_preparator", shape="box"];
+"19" [label="upgrade_target_list", shape="box"];
+"5" -> "9" [arrowhead="open", arrowtail="none"];
+"7" -> "4" [arrowhead="open", arrowtail="none"];
+"7" -> "9" [arrowhead="open", arrowtail="none"];
+"8" -> "9" [arrowhead="open", arrowtail="none"];
+"8" -> "13" [arrowhead="open", arrowtail="none"];
+"11" -> "1" [arrowhead="open", arrowtail="none"];
+"11" -> "9" [arrowhead="open", arrowtail="none"];
+"12" -> "16" [arrowhead="open", arrowtail="none"];
+"16" -> "1" [arrowhead="open", arrowtail="none"];
+"16" -> "4" [arrowhead="open", arrowtail="none"];
+"16" -> "5" [arrowhead="open", arrowtail="none"];
+"16" -> "7" [arrowhead="open", arrowtail="none"];
+"16" -> "8" [arrowhead="open", arrowtail="none"];
+"16" -> "9" [arrowhead="open", arrowtail="none"];
+"16" -> "11" [arrowhead="open", arrowtail="none"];
+"16" -> "18" [arrowhead="open", arrowtail="none"];
+"18" -> "4" [arrowhead="open", arrowtail="none"];
+"18" -> "7" [arrowhead="open", arrowtail="none"];
+"18" -> "9" [arrowhead="open", arrowtail="none"];
+"19" -> "4" [arrowhead="open", arrowtail="none"];
+"19" -> "9" [arrowhead="open", arrowtail="none"];
+"19" -> "16" [arrowhead="open", arrowtail="none"];
+}

@@ -52,8 +52,7 @@ def generate_standard_request(self, port, method, path, headers, content, fuzzva
 class  HTTP1_Request_from_CSV(HTTP1_Request_Builder):
       def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
 
-        '''Covertchannel suggested by Kwecka et al: Case-insensitivity of header key names, fuzzvalue defines the probability that a character of a header field is changed'''
-
+        '''TODO Use request from an external list'''
         # Check fuzzvalue
         if fuzzvalue < 0 or fuzzvalue > 1:
             raise ValueError("fuzzvalue must be between 0 and 1.")

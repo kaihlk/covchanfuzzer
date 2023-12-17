@@ -15,7 +15,6 @@ class HTTP1_Request_Builder:
         self.domain_placeholder=">>DOMAIN_PLACEHOLDER<<"
         self.subdomain_placeholder=">>SUDBDOMAIN_PLACEHOLDER<<"
         self.path_placeholder=">>>PATH_PLACEHOLDER<<<"
-        self.generated_request=""
         self.cc_uri_post_generation=False
         self.default_headers_sets = {
             # The request line and the host and the url field must be generated and inserted in the functions
@@ -152,48 +151,7 @@ class HTTP1_Request_Builder:
         return scheme, subdomains, domain, tldomain, port, path
 
         #host may be part of the uri
-    def parse_uri(self, uri, host):
-        '''Parse host uris'''
-        # Initialize variables
-        scheme = ""
-        subdomain = ""
-        hostname = ""
-        domain = ""
-        port = ""
-        path = ""
-        
-        # Check if the host contains a scheme
-        if "://" in uri:
-            # Split the host into scheme and the rest of the URL
-            parts = host.split("://", 1)
-            scheme = parts[0]
-            remaining = parts[1]
-        else:
-            remaining = uri
-
-        # Split the remaining URL into subdomain, hostname, domain, and port (if present)
-        parts = remaining.split("/", 1)
-        if len(parts) == 2:
-            remaining, path = parts
-
-        subdomain_parts = remaining.split(".", 1)
-        if len(subdomain_parts) == 2:
-            subdomain = subdomain_parts[0]
-            remaining = subdomain_parts[1]
-
-        hostname_parts = remaining.split(".", 1)
-        if len(hostname_parts) == 2:
-            hostname = hostname_parts[0]
-            domain_port = hostname_parts[1].split(":", 1)
-            domain = domain_port[0]
-            if len(domain_port) == 2:
-                port = domain_port[1]
-        if host.lower()=="localhost":
-            hostname = host
-        # Return the extracted parts as a tuple
-     
-        return scheme, subdomain, hostname, domain, port, path
-
+    
     def build_request_line(self, port, method, path, headers, scheme, fuzzvalue, relative_uri=True, include_subdomain=False, include_port=False, protocol="HTTP/1.1"):
                 # Build the request_line from the provided arguments
         if relative_uri==False:        
@@ -270,14 +228,14 @@ class HTTP1_Request_Builder:
             # Create a copy to avoid modifying the original list
         return self.generate_cc_request(port, method, path, headers, content, fuzz_value, relative_uri, include_subdomain, include_port, protocol)
         
-
+    """Todo
     def path_generator(self, domain_specific_path=[], test_path="", fuzzvalue=0.5):
-        """Adapts the path of the domain (randomly one from the domain specific path list) and/or the CC, returns empty string'' if no input specified"""
-        if len(domain_specific_path)!=0:
-            path=random.choice(domain_specific_path)
+        #Adapts the path of the domain (randomly one from the domain specific path list) and/or the CC, returns empty string'' if no input specified
+        #if len(domain_specific_path)!=0:
+        #    path=random.choice(domain_specific_path)
         else: path=test_path
         ##Insert CC Part here
-        return path
+        return path"""
 
 
     def replace_host_and_domain(self, prerequest, uri, standard_subdomain="", host_header=None, include_subdomain_host_header=False, path="", override_uri="", fuzzvalue=0.5):

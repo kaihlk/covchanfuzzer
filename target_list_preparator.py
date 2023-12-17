@@ -1,19 +1,16 @@
 """Target_List_Preparator"""
 
 import concurrent.futures
-from concurrent.futures import FIRST_COMPLETED
 import time
 import logging
-import hashlib
 import threading
-import pandas
 import csv
-import random
+import pandas
 import http1_request_builder as request_builder
 from custom_http_client import CustomHTTP
 from host_crawler import host_crawler
 
-class Target_List_Preperator:
+class TargetListPreperator:
     def __init__(self, experiment_configuration, exp_logger):
         self.experiment_configuration = experiment_configuration
         self.exp_log_folder=exp_logger.get_experiment_folder()+"/base_request"
@@ -135,18 +132,6 @@ class Target_List_Preperator:
                         # Reset the index
                         df_checked_targets = df_checked_targets.reset_index(drop=True)
                         invalid_entry_counts+=invalid_entries
-                        """  for index, target in new_targets.iterrows():
-                            host = target.get("uri")
-                            double_entry = False
-                            for index, entry in df_checked_targets.iterrows():
-                                if host == entry.get("uri"):
-                                    invalid_entries += 1
-                                    double_entry = True
-                                    break
-                            if not double_entry:
-                                df_checked_targets = pandas.concat([df_checked_targets, target], axis=0, ignore_index=True)
-                        invalid_entry_counts+=invalid_entries """
-                       
                     except Exception as e:
                         self.target_prep_logger.error("Error while processing completed task: %s", e)
                     finally:
@@ -186,11 +171,6 @@ class Target_List_Preperator:
         print("List Length: ", len(loaded_list))
         return loaded_list
         
-    
-    
-    
-    
-    
     def load_target_list_df(self,target_list_csv):
         """Load the list back from the CSV file, considering only the first two columns."""
         df = pandas.read_csv(target_list_csv, usecols=[0, 1])
@@ -420,93 +400,4 @@ class Target_List_Preperator:
 
          
         return df_checked_targets, invalid_entries_count
-
-
-    """ 
-
-
-    def check_entry_http_options(self, entry_dns, follow_redirect=0): 
-        Perform n basic requests if option is set.
-        redirect_entry_dns=None
-        check=False
-        basic_request_status_code=0
-        if self.experiment_configuration["check_basic_request"]!=0:
-            for i in range(self.experiment_configuration["check_basic_request"]):
-                #Check if basic request is answered with a 2xx or 3xx response
-                print("Basic Check No. ",i," Target: ", entry_dns["host"])
-                basic_request_status_code, new_location =self.basic_request(entry_dns["host"], entry_dns["socket_info"])
-                first_digit = str(basic_request_status_code)[0]
-                print("Result: ", first_digit)
-                #Check first redirect
-                if first_digit == "3" and follow_redirect is True:
-                    #Check redirect location
-                    print("Checking redirect location:", new_location)
-                    #Check if it is relative redirect
-                    if not new_location.startswith(('http:', 'https:')):
-                        new_location = entry_dns["host"]+ new_location
-
-                    #Overwrite entry DNS, Lookup new Location
-                    entry_dns, error =self.add_dns_info(new_location)
-                    second_request_status_code, second_location =self.basic_request(new_location, entry_dns["socket_info"])
-                    #Overwrite śecond location
-                    first_digit = str(second_request_status_code)[0]
-                    print("Result: ", first_digit)
-                if first_digit == "2":
-                    check=True
-                else:
-                    check=False
-                    break
-        else:
-            #Add Entry without Basic Check if option is 0
-            check=True
-        if check is False:
-            #Extend List when Basic Check Fails
-            with self.lock_bcf:
-                self.base_check_fails.append([entry_dns["host"], basic_request_status_code])           
-        print(entry_dns)
-        return check, entry_dns
-
-
-
-
-    def basic_request(self, hostname, socket_info, location):
-        Performs as basic request with the selected options to check, if they match the host configuration
-        #Initialize Variables
-        host=None
-        response_line=None
-        response_status_code=None
-        redirect_location=None     
-        _scheme, subdomains, hostname, tldomain, _port, path= request_builder.HTTP1_Request_Builder().parse_host(domain)
-        if local_configuration["target_add_www"] is True:
-            if subdomains=="":
-                subdomains="www"
-        if subdomains!="":
-            subdomains=subdomains+"."
-        uri=subdomains+hostname+"."+tldomain
-        request_string, _, _=request_builder.HTTP1_Request_Builder().generate_request(local_configuration, 443)
-        #host deprecated?
-        #Carefull some hosts expect more 
-        request, _, _ =request_builder.HTTP1_Request_Builder().replace_host_and_domain(request_string, uri, local_configuration["standard_subdomain"], host, local_configuration["include_subdomain_host_header"])       
-        if local_configuration["include_subdomain_host_header"] is True:
-            host=subdomains+hostname+"."+tldomain
-        else:
-            host=hostname+"."+tldomain
-        # Perform Request
-        response_line, response_header_fields, body, measured_times, error_message  = CustomHTTP().http_request(
-            host=host,#host is important for building the TLS context
-            use_ipv4=self.experiment_configuration["use_ipv4"],
-            port=443,
-            host_ip_info=socket_info,
-            custom_request=request,
-            timeout=self.experiment_configuration["conn_timeout"],
-            verbose=self.experiment_configuration["verbose"],
-            log_path=self.exp_log.get_experiment_folder()+"/base_request",    #Transfer to save TLS Keys
-        )
-        if response_line is not None:
-            response_status_code = response_line["status_code"]
-            if str(response_status_code)[0]=="3":
-                redirect_location=response_header_fields.get('location') # Returns none if not pressent
-        return response_status_code, redirect_location,
-
-        """
 
