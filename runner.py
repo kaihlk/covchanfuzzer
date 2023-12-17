@@ -10,7 +10,7 @@ import hashlib
 import threading
 import pandas
 import random
-import http1_covered_channels
+import http1_covert_channels
 from logger import ExperimentLogger, TestRunLogger
 from custom_http_client import CustomHTTP
 from host_crawler import host_crawler
@@ -285,7 +285,7 @@ class ExperimentRunner:
 
     def pregenerate_request(self, covert_channel, attempt_no):
         '''Build a HTTP Request Message and sends it and processes the response'''
-        # Build HTTP Request after the selected covered channel
+        # Build HTTP Request after the selected covert channel
         unique = False
         min_fuzz_value = self.experiment_configuration["min_fuzz_value"]
         deviation_count_spread = False
@@ -587,14 +587,14 @@ class ExperimentRunner:
                         # Adapt the prerequest to the host
                         uri = host_data["uri"]
                         socket_dns_info = host_data["socket_dns_info"]
-                        selected_covered_channel = class_mapping.requests_builders[
+                        selected_covert_channel = class_mapping.requests_builders[
                             self.experiment_configuration["covertchannel_request_number"]]()
 
-                        path = selected_covered_channel.path_generator(
+                        path = selected_covert_channel.path_generator(
                             host_data["paths"], test_path=self.experiment_configuration["path"], fuzzvalue=self.experiment_configuration["min_fuzz_value"])
 
                         # INSERT CLEVER DEVIATION SPREADER HERE
-                        request, deviation_count_uri, uri = selected_covered_channel.replace_host_and_domain(prerequest["request"], uri, self.experiment_configuration["standard_subdomain"], socket_dns_info["host"], include_subdomain_host_header=self.experiment_configuration["include_subdomain_host_header"], path=path, override_uri="",  fuzzvalue=self.experiment_configuration["min_fuzz_value"])
+                        request, deviation_count_uri, uri = selected_covert_channel.replace_host_and_domain(prerequest["request"], uri, self.experiment_configuration["standard_subdomain"], socket_dns_info["host"], include_subdomain_host_header=self.experiment_configuration["include_subdomain_host_header"], path=path, override_uri="",  fuzzvalue=self.experiment_configuration["min_fuzz_value"])
                         deviation_count_request = prerequest["deviation_count"]
                         deviation_count = deviation_count_uri+deviation_count_request
 

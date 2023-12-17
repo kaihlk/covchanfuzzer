@@ -1,49 +1,16 @@
 # main
 
-
 import csv
-import requests
-import time
 import os
+import time
 import logging
+import requests
 import scapy.all as scapy
 from runner import ExperimentRunner
-from upgrade_target_list import Target_List_Upgrader
-#from upgrade_target_list import Target_List_Analyzer
-
-# For Information
-""" class_mapping_requests ={
-    0: HTTP1_Request_from_CSV
-    1: HTTP1_Request_Builder,
-    2: HTTP1_Request_CC_Case_Insensitivity,
-    3: HTTP1_Request_CC_Random_Whitespace,
-    4: HTTP1_Request_CC_Reordering_Header_Fields,
-    5: HTTP1_Reqeust_CC_URI_Representation,
-    6: HTTP1_Request_CC_URI_Case_Insentivity,
-    7: HTTP1_Reqeust_CC_URI_Hex_Hex,
-    8: HTTP1_Request_CC_Random_Content,
-    9: HTTP1_Request_CC_Random_Content_No_Lenght_Field,
-    10: HTTP1_Request_CC_URI_Common_Addresses    
-}
-
-class_mapping_connection = {
-    1: HTTP1_TCP_Connection,
-    2: HTTP1_TLS_Connection,
-    3: HTTP1_CC_TCP2TLS_Upgrade,
-    4: HTTP2_TLS_Connection
-    }
-
-class_mapping_timing  = {
-    1: Standard,
-    2: Frequency_Modulation,
-    3: Amplitude_Modulation,
-} """
-
-
 
 
 def is_network_adapter_present(adapter_name):
-    # Get a list of available network interfaces using Scapy's conf.ifaces dictionary.
+    """ Get a list of available network interfaces using Scapy's conf.ifaces dictionary."""
     network_interfaces = scapy.get_if_list()
     print("Network Adapters:", network_interfaces)
     if adapter_name in network_interfaces:
