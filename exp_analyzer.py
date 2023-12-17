@@ -44,8 +44,8 @@ class Domain_Response_Analyzator():
         self.font_size_title=12
         self.font_size_label=8
         self.slope=0
-
-        self.data_frame_target_list = pandas.read_csv(path+"/base_request/target_list.csv")
+        self.host100=0
+      #  self.data_frame_target_list = pandas.read_csv(path+"/base_request/target_list.csv")
 
         return
 
@@ -80,37 +80,44 @@ class Domain_Response_Analyzator():
         return logs_directory
 
     def start(self):
-        self.single_plot_deviation_count_distribution() 
-        self.singleplot_mod()
+        eval_folder= f"{self.exp_path}/evaluation"
+        os.makedirs(eval_folder, exist_ok=True)
+        self.exp_path=eval_folder
+        self.analyze_status_codes(self.data_frame_pd_matrix.copy())
+        #self.single_plot_deviation_count_distribution() 
+        #self.singleplot_mod()
         #s
-        #self.double_plot_deviation_count_distribution_CC3()
+        ##self.double_plot_deviation_count_distribution_CC3()
         self.singleplot_blocking()##CC3
-        #self.singleplot_mod()##CC3s
-        target_list_dict=self.analyze_target_list(self.data_frame_target_list, self.data_frame_exp_stats)
+        self.singleplot_mod()##CC3s
+        ##target_list_dict=self.analyze_target_list(self.data_frame_target_list, self.data_frame_exp_stats)
         
         statuscodes_dict=self.count_status_codes(self.data_frame_pd_matrix.copy())
         print(statuscodes_dict)
         relativ_statuscodes_dict=self.convert_to_relative_values(statuscodes_dict.copy())
         print(relativ_statuscodes_dict)
 
-       # self.doubleplot_response_rate_message_index()
+       ## self.doubleplot_response_rate_message_index()
         ##CC4
-        #self.doubleplot_modification()
+       # #self.doubleplot_modification()
         
-        #_, decoded_df=self.decode_save_cc52(self.data_frame_prerequest_stats)
-        #self.count_and_plot_bit_occurrences52(decoded_df.copy())
+        ##_, decoded_df=self.decode_save_cc52(self.data_frame_prerequest_stats)
+        ##self.count_and_plot_bit_occurrences52(decoded_df.copy())
         
-        #_, decoded_df=self.decode_save_cc53(self.data_frame_prerequest_stats)
-        #self.count_and_plot_bit_occurrences53(decoded_df)
+        ##_, decoded_df=self.decode_save_cc53(self.data_frame_prerequest_stats)
+        ##self.count_and_plot_bit_occurrences53(decoded_df)
 
-        #_, decoded_df=self.decode_save_cc33(self.data_frame_prerequest_stats)
-        #self.count_and_plot_bit_occurrences33(decoded_df)
-        
-        self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats)
-        #self.status_code_curves_over_deviation(self.data_frame_prerequest_stats.copy(), ax=None)
-        #self.status_code_bars_over_deviation(self.data_frame_prerequest_stats, ax=None)
-        self.plot_unsorted_data(self.data_frame_exp_stats)
-        #self.filter_and_aggregate(self.data_frame_pd_matrix.copy(), 429, decoded_df.copy())
+        _, decoded_df=self.decode_save_cc33(self.data_frame_prerequest_stats)
+        self.count_and_plot_bit_occurrences33(decoded_df)
+        ##_, decoded_df=self.decode_save_cc71(self.data_frame_prerequest_stats)
+        ##self.count_and_plot_bit_occurrences71(decoded_df)
+        ##CC91
+        ##self.check_91_key_value_length(self.data_frame_prerequest_stats.copy())
+        ##self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats)
+        ##self.status_code_curves_over_deviation(self.data_frame_prerequest_stats.copy(), ax=None)
+        ##self.status_code_bars_over_deviation(self.data_frame_prerequest_stats, ax=None)
+        #self.plot_unsorted_data(self.data_frame_exp_stats)
+        ##self.filter_and_aggregate(self.data_frame_pd_matrix.copy(), 429, decoded_df.copy())
 
         host_statistics=self.host_stats(self.data_frame_exp_stats)
         prerequest_statistics=self.prerequest_stats(self.data_frame_prerequest_stats)    
@@ -119,24 +126,79 @@ class Domain_Response_Analyzator():
         
         self.export_latex_to_report(latex_code, report_filename)  
         self.save_exp_analyzer_results(host_statistics, prerequest_statistics)
-        #self.plot_deviation_count_distribution(self.data_frame_prerequest_stats)
-        #self.plot_scatter_prerequest(self.data_frame_rel_uri)
-        self.plot_hosts_responses(self.data_frame_exp_stats)
-        #self.figure1(self.data_frame_pd_matrix)
-        #self.quadplot()
+        ##self.plot_deviation_count_distribution(self.data_frame_prerequest_stats)
+        ##self.plot_scatter_prerequest(self.data_frame_rel_uri)
+        #self.plot_hosts_responses(self.data_frame_exp_stats)
+        ##self.figure1(self.data_frame_pd_matrix)
+        ##self.quadplot()
      
-        #self.update_status_code_csv(statuscodes_dict, self.df_global)
-        ##CC6
+        ##self.update_status_code_csv(statuscodes_dict, self.df_global)
+        ###CC6
         ####self.singleplot_rel_uri() #ACHTUNG
         ####self.plot_uri_deviation_count_distribution(self.data_frame_uri)
         ####Delte self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
-        #self.single_plot_mod_cc6()
-        #self.analyze_modifications_cc6()
-        #self.grouped_cc6(self.data_frame_rel_uri_2xx.copy())
+        ##self.single_plot_mod_cc6()
+        ##self.analyze_modifications_cc6()
+        ##self.grouped_cc6(self.data_frame_rel_uri_2xx.copy())
         
 
         return
     
+
+    def analyze_status_codes(self, df):
+        def has_consecutive_200s(series, count=10):
+            """Check if the series contains at least 'count' consecutive 200s."""
+            consecutive = 0
+            for item in series:
+                if item == 200:
+                    consecutive += 1
+                    if consecutive >= count:
+                        return True
+                else:
+                    consecutive = 0
+            return False
+        # Calculate the percentage of 200 responses for each host
+        percentage_200_responses = (df == 200).mean() * 100
+
+        filtered_hosts = []
+        for host in df.columns:
+            if percentage_200_responses[host] < 90 and has_consecutive_200s(df[host]):
+                filtered_hosts.append(host)
+
+        # Extract data for filtered hosts
+        data_filtered_hosts = df[filtered_hosts]
+
+        # Calculate the frequency of each status code for these hosts
+        status_code_frequencies = data_filtered_hosts.apply(pandas.Series.value_counts, normalize=False).fillna(0)
+
+        # Number of hosts with 100% 200 responses
+        num_hosts_100_percent_200 = sum(percentage_200_responses > 90)
+
+
+        # Drop the 'Attempt No.\Domain' row
+        status_code_frequencies = status_code_frequencies.drop(columns=['Attempt No.\Domain'], errors='ignore')
+
+        # Drop columns where all values are zero
+        status_code_frequencies = status_code_frequencies.loc[:, (status_code_frequencies != 0).any(axis=0)]
+
+        # Group by leading digit of status code
+        status_code_summary = status_code_frequencies.groupby(status_code_frequencies.index // 100).sum()
+        status_code_summary.index = [f"{int(idx)}xx" for idx in status_code_summary.index]
+        if '2xx' in status_code_summary.index:
+            status_code_summary.loc['2xx'] -= status_code_frequencies.loc[200, :] if 200 in status_code_frequencies.index else 0
+
+        status_code_summary['Total Requests'] = status_code_summary.sum(axis=1)
+        file_path = f'{self.exp_path}/status_codes_blocking.csv'
+        status_code_summary.to_csv(file_path)  
+        self.host100=num_hosts_100_percent_200
+
+        return num_hosts_100_percent_200, status_code_summary
+
+  
+
+
+
+
 
     def grouped_cc6(self, data_frame):
         
@@ -393,25 +455,132 @@ class Domain_Response_Analyzator():
 
         #mpl.show()
 
+    def decode_save_cc71(self,data_frame):
+        
+        #CC71 Columns
+        bit_columns=  [
+            'Digit+Letters',
+            'Lowercase Letters',
+            'Uppercase Letters',
+            'Digits',
+            'Sub-Delimiters',
+            'Reserverd Characters',
+            'Encoded res. Characters',
+            'Additional Characters',
+        ]
 
+        def decode_bits(deviation_count, num_bits):
+            # Create a list of bit values by decoding the deviation_count.
+            bit_values = [(deviation_count >> bit_index) & 1 for bit_index in range(num_bits)]
+            return bit_values    
+
+       
+
+        # Decode each row in the original DataFrame and add the bit columns.
+        for bit_index, bit_column in enumerate(bit_columns):
+            data_frame[bit_column] = data_frame['deviation_count'].apply(lambda x: (x >> bit_index) & 1)
+
+        data_frame.to_csv(self.exp_path + "/prerequest_decoded.csv", index=False)
+        
+        # Create an empty DataFrame to store the result
+        result_df = pandas.DataFrame(columns=['Bit Name', 'Mean 1xx', 'Mean 2xx', 'Mean 3xx', 'Mean 4xx', 'Mean 5xx', 'Mean 9xx'])
+
+        result_dfs = []
+
+        # Iterate through each bit, calculate the mean values, and add them to the list of DataFrames
+        for bit_column in bit_columns:
+            filtered_data = data_frame[data_frame[bit_column] == 1]
+            mean_values = filtered_data[['1xx', '2xx', '3xx', '4xx', '5xx', '9xx']].mean()
+            bit_df = pandas.DataFrame({'Bit Name': [bit_column], **mean_values.to_dict()})
+            result_dfs.append(bit_df)
+
+        # Concatenate the list of DataFrames into a single result DataFrame
+        result_df = pandas.concat(result_dfs, ignore_index=True)
+        #Percentage
+        result_df.iloc[:, 1:] = result_df.iloc[:, 1:].apply(lambda x: (x / x.sum()) * 100, axis=1)
+        
+            # Save the DataFrame to a CSV file.
+        result_df.iloc[:, 1:] = result_df.iloc[:, 1:].round(1)
+        result_df.to_csv(self.exp_path + "/deviations_mean.csv", index=False)
+        transpose_df=result_df
+        transpose_df.iloc[:, 1:] = transpose_df.iloc[:, 1:].round(2)
+        transpose_df.to_latex(self.exp_path+"/deviation_means_t.tex", index=False)
+        colors = ['#9B59BB', '#2ECC77', '#F1C400', '#E74C33', '#3498DD', '#344955']
+        fig, ax = mpl.subplots(figsize=(10, 10))
+
+        bottom = 0
+
+        for i, col in enumerate(result_df.columns[1:]):
+            ax.bar(result_df['Bit Name'], result_df[col], label=col, bottom=bottom, color=colors[i])
+            bottom += result_df[col]
+
+        ax.tick_params(axis='both', labelsize=self.font_size_axis)
+        ax.set_ylabel('Response Status Codes Share (%)', fontsize=self.font_size_axis)
+        ax.set_title('Response Codes over different Modifications',fontsize=self.font_size_title)
+        ax.legend(loc='lower right')
+        mpl.xticks(rotation=90)
+        mpl.tight_layout()
+        mpl.savefig(self.exp_path+'/discrete_deviation_response_rates.png', dpi=300)
+        
+        return result_df, data_frame
+        
+        
+
+
+
+    def count_and_plot_bit_occurrences71(self, data_frame):
+        def count_bit_occurrences(df, bit_columns):     
+            bit_occurrences = {}
+            for bit_column in bit_columns:
+                bit_count = df[bit_column].sum()
+                bit_occurrences[bit_column] = bit_count
+            return bit_occurrences
+
+        bit_columns = [
+            'Digit+Letters',
+            'Lowercase Letters',
+            'Uppercase Letters',
+            'Digits',
+            'Sub-Delimiters',
+            'Reserverd Characters',
+            'Encoded res. Characters',
+            'Additional Characters',
+        ]
+
+        bit_occurrences = count_bit_occurrences(data_frame, bit_columns)
+
+        # Plotting
+        fig, ax = mpl.subplots(figsize=(10, 6))
+        bits = list(bit_occurrences.keys())
+        occurrences = list(bit_occurrences.values())
+
+        ax.bar(bits, occurrences, color='#3498DD')
+        ax.set_xlabel('Bit Columns')
+        ax.set_ylabel('Occurrences')
+        ax.set_title('Occurrences of Each Bit Column')
+        mpl.xticks(rotation=45, ha='right')
+        mpl.tight_layout()
+        mpl.savefig(self.exp_path+'/discrete_modification_occurence71.png', dpi=300)
+        
+        return
 
 
     def decode_save_cc33(self,data_frame):
         
         #CC3 Columns
         bit_columns= [ 
-            'Small No. SP+HTAB',
-            '2048 SP+HTAB',
-            '20480 SP+HTAB',
-            '40960 SP+HTAB',
-            '61440 SP+HTAB',
-            '81920 SP+HTAB',
-            'Host + SP',
-            'Host + HTAB',
-            'rand. Header + CRLF',
-            'Host + SP + rand. Header + CRLF',
-            'Host + HTAB + rand. Header + CRLF',
-            'SP between key & value',
+            'Spaces and tabs variant 1',
+            'Spaces and tabs variant 2',
+            'Spaces and tabs variant 3',
+            'Spaces and tabs variant 4',
+            'Spaces and tabs variant 5',
+            'Spaces and tabs variant 6',
+            'Host and space',
+            'Host and tab',
+            'Newline',
+            'Host, space and newline',
+            'Host, tab and newline',
+            'Add. separating space',
         ]
 
         def decode_bits(deviation_count, num_bits):
@@ -482,18 +651,18 @@ class Domain_Response_Analyzator():
             return bit_occurrences
 
         bit_columns = [
-            'Small No. SP+HTAB',
-            '2048 SP+HTAB',
-            '20480 SP+HTAB',
-            '40960 SP+HTAB',
-            '61440 SP+HTAB',
-            '81920 SP+HTAB',
-            'Host + SP',
-            'Host + HTAB',
-            'rand. Header + CRLF',
-            'Host + SP + rand. Header + CRLF',
-            'Host + HTAB + rand. Header + CRLF',
-            'SP between key & value',
+            'Spaces and tabs variant 1',
+            'Spaces and tabs variant 2',
+            'Spaces and tabs variant 3',
+            'Spaces and tabs variant 4',
+            'Spaces and tabs variant 5',
+            'Spaces and tabs variant 6',
+            'Host and space',
+            'Host and tab',
+            'Newline',
+            'Host, space and newline',
+            'Host, tab and newline',
+            'Add. separating space',
         ]
 
         bit_occurrences = count_bit_occurrences(data_frame, bit_columns)
@@ -792,6 +961,17 @@ class Domain_Response_Analyzator():
         #bins = [-1, 1025, 8201, 16401, 32801, result['deviation_count'].max() + 1]
         #labels = ['0-1024', '1025-8200', '8201-16400', '16401-32800', '32801-Max'] 
         #CC71
+        #bins = [0, 1, 2, 4, 8, 16, 32, 64, 128+1]   ##
+        """labels = [
+            'Digit+Letters',
+            'Lowercase Letters',
+            'Uppercase Letters',
+            'Digits',
+            'Sub-Delimiters',
+            'Reserverd Characters',
+            'Encoded res. Characters',
+            'Additional Characters',
+        ]#"""
         #bins = [-1, 10, 50,100, result['deviation_count'].max() + 1]
         # labels = ['0-10', '11-50', '51-100', '101-Max']  
         #bins = [-1, 20, 40, 60, 80, 1001]
@@ -799,10 +979,10 @@ class Domain_Response_Analyzator():
         #CC61
         #bins = [0, 1, 11, 101, 1001, 10001]
         #labels = ['Scheme', 'Subdomain', 'Hostname', 'Toplevel Domain', 'Path']  
-        ##CC8
+        ##CC8,CC9
         #bins = [-1, 1025, 8201, 16401, 32801, result['deviation_count'].max() + 1]
         #labels = ['0-1024', '1025-8200', '8201-16400', '16401-32800', '32801-Max'] 
-        ##CC91
+        #CC91
         bins = [-1, 1025, 2049, 4097, 8183, result['deviation_count'].max() + 1]
         labels = ['0-1024', '1025-2048', '2049-4096', '4097-8192', '8193-Max'] 
         #result['deviation_group'] = pandas.cut(result['deviation_count'], bins=bins, labels=labels)
@@ -1004,9 +1184,12 @@ class Domain_Response_Analyzator():
             Min. 2xx Response Rate & """ + str(round(host_statistics['min_2xx'],2)) + r"""\% \\
             Max. 2xx Response Rate & """ + str(round(host_statistics['max_2xx'],2)) + r"""\% \\
             Avg. 2xx Response Rate & """ + str(round(host_statistics['avg_2xx'],2)) + r"""\% \\
+            Hosts with over 99\% 200 response &"""+ str(self.host100) +r"""\% \\
         \end{tabular} 
         \\
         \hline
+        Avg. 2xx rate of first 10\% messages & """ + str(round(prerequest_statistics['average_2xx_first_10'],1)) + r"""\% \\
+        Avg. 2xx rate of last 10\% messages & """ + str(round(prerequest_statistics['average_2xx_last_10'],1)) + r"""\% \\
         \textbf{Response Statuscodes:}\\
         
         \multicolumn{2}{c}{%
@@ -1546,8 +1729,13 @@ class Domain_Response_Analyzator():
 
 
     def prerequest_stats(self, data_frame):
-        # Assuming 'no', 'deviation_count', and '2xx' are columns in the DataFrame
+       
+        
+        
+        # Compute the average 2xx rate for the first and alst 10% of the messages
+        
         df_2xx = data_frame[['no', 'deviation_count', '2xx']]
+        ten_percent_count = int(len(data_frame) * 0.1)
 
         prereq_statistics = {
             'min_2xx': int(df_2xx['2xx'].min()),
@@ -1562,6 +1750,9 @@ class Domain_Response_Analyzator():
             'std_deviation_deviation_count': numpy.std(df_2xx['deviation_count']),
             'min_deviation_count_no': int(df_2xx.loc[df_2xx['deviation_count'] == df_2xx['deviation_count'].min(), 'no'].iloc[0]),
             'max_deviation_count_no': int(df_2xx.loc[df_2xx['deviation_count'] == df_2xx['deviation_count'].max(), 'no'].iloc[0]),
+            'average_2xx_first_10': df_2xx['2xx'].iloc[:ten_percent_count].mean(),
+            'average_2xx_last_10': df_2xx['2xx'].iloc[-ten_percent_count:].mean(),
+            #MARIKERUNG
         }
 
         return prereq_statistics
@@ -2253,7 +2444,7 @@ class Domain_Response_Analyzator():
         ##CC 81 (19*2)
         #x_values = [2128, 7486, 22534, 29735, 58767,87362] 
         ##CC9
-        x_values = [1743, 8205,16476,25305,32468,66155] 
+        x_values = [ 8205,16476,25305,32468,66155] 
         i=0
         for x in x_values:
             ax.axvline(x, color='magenta', linestyle='--', linewidth=1)  # Change color and style as needed
@@ -2277,6 +2468,10 @@ class Domain_Response_Analyzator():
             ax.axvline(x, color='magenta', linestyle=':', linewidth=1)  # Change color and style as needed
             ax.annotate(f'{x}', (x+2300,80), textcoords="offset points", xytext=(0,10), ha='center')"""
 
+
+        ##CC9 Details
+        #ax.set_ylim(80, 100)
+        #ax.set_xlim(0, 4000)
         # Show the plot
         ax.grid(True)
         #ax.legend()
@@ -2284,6 +2479,68 @@ class Domain_Response_Analyzator():
 
         #mpl.savefig(self.exp_path+'/status_code_curves_over_deviation.png', dpi=300, bbox_inches='tight')
         return ax
+
+  
+
+    def check_91_key_value_length(self,df):
+        def process_line_after_cross_site(request):
+            """
+            Process the line following the occurrence of "cross-site" in the request string.
+            Splits the line into two parts divided by ": " and returns their lengths.
+            """
+            # Splitting the string by newlines
+            lines = request.split('\n')
+            
+            # Finding the line after "cross-site"
+            for i, line in enumerate(lines):
+                if "cross-site" in line:
+                    # Check if next line exists
+                    if i+1 < len(lines):
+                        next_line = lines[i+1]
+                        parts = next_line.split(': ')
+                        if len(parts) == 2:
+                            key, value = parts
+                        else:
+                            # In case the format is not as expected
+                            key, value = '', ''
+                        return len(key), len(value)
+            
+            # Return 0,0 if "cross-site" not found or no line after it
+            return 0, 0
+
+        # Creating new columns for key and value lengths
+        df[['key_length', 'value_length']] = df['request'].apply(
+            lambda x: pandas.Series(process_line_after_cross_site(x))
+        )
+
+        # Sorting by key_length and value_length
+        df_sorted_by_key = df.sort_values(by='key_length')
+        df_sorted_by_value = df.sort_values(by='value_length')
+        
+        # Creating the plot
+        mpl.figure(figsize=(12, 6))
+
+        # Plotting key_length vs 2xx/10
+        mpl.plot(df_sorted_by_key['key_length'], df_sorted_by_key['2xx']/10, label='Key Length', color='blue')
+
+        # Plotting value_length vs 2xx/10
+        mpl.plot(df_sorted_by_value['value_length'], df_sorted_by_value['2xx']/10, label='Value Length', color='red')
+
+        mpl.xlabel('Length')
+        mpl.ylabel('2xx Response Rate %')
+        mpl.title('Header/Key Length vs 2xx Rates')
+        mpl.legend()
+        mpl.grid(True)
+        #mpl.show()
+        mpl.savefig(self.exp_path+'/key_value.png', dpi=300, bbox_inches='tight')
+        mpl.xlim(0,1000)
+        mpl.axvline(256, color='magenta', linestyle='--', linewidth=1)
+        mpl.annotate('256', (280,80), textcoords="offset points", xytext=(0,10), ha='center')
+        mpl.savefig(self.exp_path+'/key_value_detail.png', dpi=300, bbox_inches='tight')
+        
+    # Applying this function to the DataFrame
+    
+
 
 
     def status_code_curves_over_size(self, data_frame, ax=None, subplottitles=True, autolimits=False, y_low=0, y_up=100):
@@ -2481,7 +2738,7 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/extracted_logs/EOW/experiment_22"
+    path = f"{log_dir}/extracted_logs/EOW For th/experiment_17"
     dra = Domain_Response_Analyzator(path)
     dra.start()
   
