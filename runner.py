@@ -3,13 +3,12 @@
 
 
 import concurrent.futures
-from concurrent.futures import FIRST_COMPLETED
 import time
 import logging
 import hashlib
 import threading
-import pandas
 import random
+import pandas
 import http1_covert_channels
 from logger import ExperimentLogger, TestRunLogger
 from custom_http_client import CustomHTTP
@@ -17,12 +16,11 @@ from host_crawler import host_crawler
 import class_mapping
 import http1_request_builder as request_builder
 import target_list_preparator
-from urllib.parse import urljoin
 import exp_analyzer
 
 
 class ExperimentRunner:
-    '''Runs the experiment itself'''
+    '''Runs the experiment'''
 
     def __init__(self, experiment_configuration, target_list, global_log_folder):
         self.experiment_configuration = experiment_configuration
@@ -49,32 +47,7 @@ class ExperimentRunner:
         self.rel_uri_deviation_table = pandas.DataFrame(
             columns=["Relative Deviation"])
         self.lock_udt = threading.Lock()
-        """ def get_target_subset(self, start_position=0, length=10)-> list:
-        Takes a subset from the target list to reduce the traffic to one target, in order to
-        
-        if start_position <0 or start_position > len(self.target_list):
-            raise ValueError("Invalid start_position")
-        sub_set=self.target_list[start_position:]
-        if length > len(sub_set):
-            length = len(sub_set)
-        
-        sub_set=sub_set[:length]
-        return sub_set
-         """
-
-    """     def get_target_subset(self, target_list, start_position=0, length=10)-> list:
-        #Takes a subset from the target list to reduce the traffic to one target, in order to
-        #Check inputs
-        if start_position <0 or start_position+length > len(target_list):
-            raise ValueError("Invalid start_position")
-        subset=target_list[start_position:]
-        #Prevent length exeeding target_list
-        if length > len(subset):
-            length = len(subset)
-        subset=subset[:length]
-        return subset
- """
-
+ 
     def get_target_subset(self, target_dataframe, start_position=0, length=10):
         """Takes a subset from the target DataFrame to reduce the traffic to one target."""
         # Check inputs
@@ -110,9 +83,9 @@ class ExperimentRunner:
                     dns_entry, self.experiment_configuration["follow_redirect"])
 
                 if check is True:
+                    #TODO
                     crawl_uri = dns_entry["host"]
-                    paths = host_crawler().get_paths(crawl_uri, self.experiment_configuration["target_port"], self.experiment_configuration[
-                        "crawl_paths"], max_attempts=5, time_out=self.experiment_configuration["conn_timeout"])
+                    paths = host_crawler(self.experiment_configuration, self.exp_log.get_experiment_folder()).get_paths(crawl_uri, self.experiment_configuration["target_port"], self.experiment_configuration["crawl_paths"], max_attempts=5, timeout=self.experiment_configuration["conn_timeout"])
                     dns_entry["paths"] = paths
                     checked_subset.append(dns_entry)
                 else:
@@ -284,8 +257,7 @@ class ExperimentRunner:
         return check, entry_dns
 
     def pregenerate_request(self, covert_channel, attempt_no):
-        '''Build a HTTP Request Message and sends it and processes the response'''
-        # Build HTTP Request after the selected covert channel
+        '''Build a HTTP Request Message'''
         unique = False
         min_fuzz_value = self.experiment_configuration["min_fuzz_value"]
         deviation_count_spread = False
@@ -403,6 +375,7 @@ class ExperimentRunner:
         return prerequest
 
     def get_prerequest_from_list(self, attempt, request_list):
+        """TODO: Loads pregenerated HTTP Requests from a external source"""
         uri = ""
         request = ""
         deviation_count = 0
@@ -650,13 +623,8 @@ class ExperimentRunner:
         # Initialise Logger List
         logger_list = []
         # Create logger object for each target in subset_dns
-        """         for entry in subset:
-                try:
-                    logger=TestRunLogger(self.experiment_configuration, self.exp_log.get_experiment_folder(), entry, entry["host"], entry["ip_address"], entry["port"])
-                    logger_list.append(logger)           
-                except Exception as e:
-                    self.runner_logger.error("Error while creating logger objects: %s", e)  
-        """  # Start the processing of the subset_dns and its corresponding loggers
+ 
+        # Start the processing of the subset_dns and its corresponding loggers
         for index, target_info in subset.iterrows():
             try:
                 host_ip_info = target_info["socket_dns_info"]
@@ -764,8 +732,9 @@ class ExperimentRunner:
 
     def setup_and_start_experiment(self):
         '''Setups the Experiment, creates an experiment logger, and starts the experiment run'''
+        start_time = time.time()
         try:
-            start_time = time.time()
+            
             # Create Folder for the experiment and save the path
             self.exp_log = ExperimentLogger(
                 self.experiment_configuration, self.global_log_folder)
@@ -899,126 +868,3 @@ class ExperimentRunner:
             finally:
                 self.exp_log.copy_log_file()
         return
-
-    """capture_threads=[] 
-
-                       for entry in sub_set_dns:
-                #Create logger object for each target
-                logger=ExperimentLogger(self.experiment_configuration, entry["ip_address"], entry["port"])
-                # Create a flag to stop the capturing process
-                stop_capture_flag = threading.Event()
-                # Create an start thread for the packet capture
-                capture_thread = threading.Thread(
-                s    target=logger.capture_packets_dumpcap,
-                    args=(
-                        stop_capture_flag,
-                        self.experiment_configuration["nw_interface"],
-                capture_thread.start() 
-                    )
-                )
-                capture_threads.append(capture_thread)   
-
-            start_position += self.experiment_configuration["target_sub_setsize"] """
-
-
-""" 
-             subset_dns=self.add_dns_info(subset)
-                        except Exception as e:
-                            logging.error("Error during DNS Lookups for subset: %s", e)
-                            #return 0
-                        if processed_targets+targets_in_processing>self.experiment_configuration["max_targets"]:
-                            delta=(processed_targets+targets_in_processing)-self.experiment_configuration["max_targets"]
-                            dyn_subset_length=subset_length-delta
-                            if dyn_subset_length<=0:
-                                dyn_subset_length=0 
-                        else: 
-                            dyn_subset_length=subset_length
-                        if dyn_subset_length>0:
-                            # Get the next subset from the target list
-                            target_subset = self.get_target_subset(start_position, dyn_subset_length)
-                            # Shift the start position for next iteration
-                            start_position += dyn_subset_length
-                            # Submit the subset for processing to executor
-                            subset_task = subset_executor.submit(self.fuzz_subset, target_subset)
-                            subsets_tasks.append(subset_task)
-                            targets_in_processing+=len(target_subset)
-                            
-                            #Count the number of active threads
-                            active_workers+=1
-                        else:
-                            max_active_workers-=1
-                
-                   
-                    # Wait for completed task If max_workers are active start waiting for completed tasks and remove them from the list
-                    #while active_workers==max_active_workers:
-                        #Wait for a completed task
-                    completed_tasks, uncompleted_task=concurrent.futures.wait(subsets_tasks, return_when=FIRST_COMPLETED)
-                   
-                    # iterate through completed target list
-                    for completed_task in completed_tasks:
-                        #extend_list is the count of entries that failed processcing calculated by the length of a subset minus the count of normal processed entries returned by the function
-                        length_processed_subset, valid_entries = completed_task.result()
-                        extend_list+=length_processed_subset-valid_entries 
-                        #Higher the value of the correctly processed entry count
-                        processed_targets+=valid_entries
-                        #remove the task
-                        subsets_tasks.remove(completed_task)
-                        targets_in_processing-=length_processed_subset
-                        #lower the number of active workers, which leads to end the inner while loop, and the outer loop will start the next worker
-                        active_workers-=1
-        """
-
-# Prepare Threading
-# capture_threads=[]
-# stop_events=[]
-# Start capturing threads
-# stop_event=threading.Event()
-# stop_events.append(stop_event)
-#capture_thread = threading.Thread(target=logger.capture_packets, args=(stop_event,))
-# capture_thread.start()
-# capture_threads.append(capture_thread)
-# End capturing
-# for stop_event in stop_events:
-#        stop_event.set()
-# Wait for all capturing threads to complete
-# for capture_thread in capture_threads:
-#    capture_thread.join()
-# Start send after ensuring each capturing process is ready
-# time.sleep(1)
-# time.sleep(1)
-"""def fuzz_subset(self, subset):
-        #Get DNS Infomation 
-        subset_dns=self.add_dns_info(subset)
-        #Prepare Threading
-        capture_threads=[]
-        logger_list=[]
-        stop_events=[]
-                    
-              with concurrent.futures.ThreadPoolExecutor() as executor:
-            #Create logger object for each target #Iterate over Li
-            for entry in subset_dns: 
-                try:   
-                    logger=TestRunLogger(self.experiment_configuration, self.exp_log.get_experiment_folder(), entry, entry["host"], entry["ip_address"], entry["port"])
-                    logger_list.append(logger)           
-                    stop_event=threading.Event()
-                    stop_events.append(stop_event)
-                    #Start capturing threads
-                    capture_thread = executor.submit(logger.capture_packets, stop_event)
-                    capture_threads.append(capture_thread)
-                except Exception as e:
-                    print("Error while creating logger objects:", e)    
-            #Start sending packages after ensuring each capturing process is ready
-            time.sleep(1)
-            self.run_experiment_subset(logger_list, subset_dns)
-        #End capturing
-        for stop_event in stop_events:
-                stop_event.set()       
-        # Wait for all capturing threads to complete
-        for capture_thread in capture_threads:
-            capture_thread.join()
-        
-        # Save Log fileds
-        for logger in logger_list:
-            logger.save_logfiles()
-        return True
-        """

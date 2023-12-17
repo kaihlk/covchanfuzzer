@@ -24,20 +24,7 @@ requests_builders ={
     9: HTTP1_Request_CC_Add_Big_Header_Field,
     91: HTTP1_Request_CC_Add_Big_Header_Field_opt1,
     92: HTTP1_Request_CC_Add_Big_Header_Field_opt2,
-    #13: HTTP1_Request_CC_Add_Random_Header_Fields,
-    #14: HTTP1_Request_CC_Add_Big_Header_Field,
-}
-    #7: HTTP1_Request_CC_URI_Hex_Hex,
-    #7: HTTP1_Request_CC_URI_Extend_with_fragments,
-    #71 HTTP1_Request_CC_URI_Extend_with_fragments_opt1,
-
-    #8: HTTP1_Request_CC_Random_Content,
-    #9: HTTP1_Request_CC_Random_Content_No_Lenght_Field,
-    #10: HTTP1_Request_CC_URI_Common_Addresses,
-    #11: HTTP1_Request_CC_URI_Common_Addresses_And_Anchors,
-    #12: HTTP1_Request_CC_URI_Extend_with_fragments,
-    #13: HTTP1_Request_CC_Add_Random_Header_Fields,
-    #14: HTTP1_Request_CC_Add_Big_Header_Field,
+  }
 """ class_mapping_connection = {
     1: HTTP1_TCP_Connection,
   #  2: HTTP1_TLS_Connection,

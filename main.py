@@ -71,21 +71,22 @@ def get_last_experiment_number(log_path):
     return int(last_row["experiment_no"])
 
 def get_public_ips():
-        try:
-            ip_info = {}
-            
-            # Get IPv4 address
-            response_ipv4 = requests.get("http://httpbin.org/ip")
-            if response_ipv4.status_code == 200:
-                data_ipv4 = response_ipv4.json()
-                return data_ipv4.get("origin")
-            else:
-                ip_info = "Unable to retrieve IPv4 address."
+    """Returns publci IP of the fuzzer"""
+    try:
+        ip_info = {}
+        
+        # Get IPv4 address
+        response_ipv4 = requests.get("http://httpbin.org/ip")
+        if response_ipv4.status_code == 200:
+            data_ipv4 = response_ipv4.json()
+            return data_ipv4.get("origin")
+        else:
+            ip_info = "Unable to retrieve IPv4 address."
 
-            return ip_info
+        return ip_info
 
-        except requests.RequestException as e:
-            return {"error": str(e)}
+    except requests.RequestException as e:
+        return {"error": str(e)}
 
 def load_target_list(target_list_csv):
     """Load the list back from the CSV file, considering only the first two colum"""

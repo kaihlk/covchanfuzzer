@@ -171,15 +171,6 @@ class CustomHTTP(HTTP):
                 )
         except socket.gaierror as error:
             self.httplogger.error("DNS Lookup failed: %s", error)
-            """"if "Name or service not known" in str(error) or "No address associated with hostname" in str(error):
-                # Attempt DNS lookup for the parent domain, Rekursion!!!
-                parts = hostname.split('.')
-                if len(parts) > 2:
-                    parent_domain = '.'.join(parts[1:])
-                    return self.lookup_dns(parent_domain, portnumber, use_ipv4)
-                else:
-                    return None, hostname, str(error)
-            else:"""
             return None,  str(error)#None, hostname, str(error)
 
         return address, None#address, hostname, None

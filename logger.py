@@ -6,21 +6,15 @@ import time
 import os
 import json
 import csv
-import class_mapping
 import shutil
 import math
 import pandas
 import scipy.stats as scistats
 import logging
+import class_mapping
 from http1_request_builder import HTTP1_Request_Builder
 import itertools
-# import pyshark # doesnt work so well, probably a sudo problem
-
-
-
-
-
-
+# import pyshark # doesnt work well, probably a sudo problem
 
 class TestRunLogger:
     def __init__(self, experiment_configuration, experiment_folder, host_ip_info, target_host, target_ip, target_port, target_paths, base_uri):
@@ -227,71 +221,6 @@ class TestRunLogger:
         self.rel_uri_count(uri, response_status_code, deviation_count, attempt_number)
         return    
 
-    """ def add_request_response_data(self, attempt_number, request, deviation_count, uri, response_line, response_header_fields, body, measured_times, error_message):
-        if response_line is not None:
-            response_http_version = response_line["HTTP_version"]
-            response_status_code = response_line["status_code"]
-            response_reason_phrase = response_line["reason_phrase"]
-            
-        else:
-            response_http_version = ""
-            response_status_code = 999
-            response_reason_phrase = error_message
-        
-        if body is None:
-            length_body=0
-        else:
-            length_body=len(body)
-        
-        if response_header_fields is None:
-            length_header=0
-        else: 
-            length_header=len(response_header_fields.items())
-                   
-        request_data = {
-            "number": attempt_number,
-            "request": request,
-            "deviation_count": deviation_count,
-            "uri":uri,
-            "request_length": len(request),
-            "http_version": response_http_version,
-            "status_code": response_status_code,
-            "reason_phrase": response_reason_phrase,
-            "measured_times": measured_times,
-            "error_message": error_message,
-            "response_header_fields": response_header_fields,
-            "response_length": length_body
-        }
-        self.request_data_list.append(request_data)
-        self.status_code_count[request_data["status_code"]] = (self.status_code_count.get(request_data["status_code"], 0) + 1)
-        self.logged_attempts+=1
-        self.data_count["Messages"]+=1
-        first_digit = str(response_status_code)[0]
-        if first_digit == "1":
-            self.data_count["1xx"]+=1
-        elif first_digit == "2":
-            self.data_count["2xx"]+=1
-        elif first_digit == "3":
-            self.data_count["3xx"]+=1
-        elif first_digit == "4":
-            self.data_count["4xx"]+=1
-        elif first_digit == "5":
-            self.data_count["5xx"]+=1
-        elif first_digit== "9":
-            self.data_count["9xx"]+=1
-
-        dev_to_status= {"Attempt No.": attempt_number, "Deviation Count": deviation_count, "Status Code": response_status_code}
-  
-        self.deviation_to_status_code.append(dev_to_status) 
-        
-        self.reponse_time_list.append(measured_times["Response_Time"])
-        self.deviation_count_list.append(deviation_count)
-        self.request_length_list.append(len(request))
-        self.uri_length_list.append(len (uri))
-        self.response_header_keys_list.append(length_header)
-        self.response_body_list.append(length_body)
-            
-        return     """
 
 
     def create_wireshark_script(self):
@@ -556,6 +485,9 @@ class TestRunLogger:
             print("capture close")
             self.capture.close()
         return """
+
+
+
     def capture_packets(
         self, stop_event
     ):
@@ -607,23 +539,6 @@ class TestRunLogger:
         
         return True
 
-        """  def capture_thread():
-            try:
-                self.capture.apply_on_packets(self.packet_handler, timeout=1)
-            except KeyboardInterrupt:
-                pass
-
-        capture_thread = threading.Thread(target=capture_thread)
-        capture_thread.start()
-
-        while not stop_capture_flag.is_set():
-            time.sleep(1)
-
-        print("End of run. Capturing terminated.")
-        self.capture.close()
-
-        print("Packets captured and saved to", pcap_path)
-        return """
 
 class ExperimentLogger:
     def __init__(self, experiment_configuration, global_log_folder):
