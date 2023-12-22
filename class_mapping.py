@@ -1,4 +1,4 @@
-from http1_covered_channels import *
+from http1_covert_channels import *
 
 
 

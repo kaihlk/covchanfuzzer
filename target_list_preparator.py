@@ -95,12 +95,9 @@ class TargetListPreperator:
         if max_workers>=10: max_workers=10
 
         subset_length=max(int(max_targets/max_workers),1)    
-        #Make sure if that the target list has enough entries --Maybe drop
-        ##if max_targets>len(target_list):
-        ##    max_targets=len(target_list)
         if max_targets>target_list.shape[0]:
             max_targets=target_list.shape[0]
-        #Build futures to look up DNS until enough target are collected or end of target list is reached
+        #Build futures to look up DNS / Base Requests until enough target are collected or end of target list is reached
         with concurrent.futures.ThreadPoolExecutor(max_workers) as subset_executor:
             while df_checked_targets.shape[0]<max_targets or end_of_list is True:
                 while active_workers<max_workers:
@@ -111,7 +108,7 @@ class TargetListPreperator:
                         end_of_list=True
                         break
                     #Get DNS Infomation for the subset, if the lookup fails for an entry the subset will be shortened
-                    subset_task = subset_executor.submit(self.check_target_list_subset, target_list, start_position, subset_length)
+                    subset_task = subset_executor.submit(self.prepare_subset, target_list, start_position, subset_length)
                     # Shift the start position for next iteration
                     start_position += subset_length
                     # Submit the subset for processing to executor
@@ -360,7 +357,7 @@ class TargetListPreperator:
         return dns_info, errors
 
 
-    def check_target_list_subset(self, target_list, start_position=0, length=10 ):
+    def prepare_subset(self, target_list, start_position=0, length=10 ):
         """Checks a subset from the target list, returns the validated entries"""
         #Check Inputs
         
@@ -376,6 +373,7 @@ class TargetListPreperator:
             target_data, errors=self.prepare_target(row['Rank'] , row['Domain'] )
             if target_data!=None:
                 if self.experiment_configuration["crawl_paths"]>0:
+                #TODO Crawling does not work properly
                     try:
                         crawl_uri=target_data["uri"]
                         print("Crawling:", crawl_uri)

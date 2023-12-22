@@ -51,12 +51,10 @@ def generate_standard_request(self, port, method, path, headers, content, fuzzva
 
 class  HTTP1_Request_from_CSV(HTTP1_Request_Builder):
       def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
-
         '''TODO Use request from an external list'''
         # Check fuzzvalue
         if fuzzvalue < 0 or fuzzvalue > 1:
             raise ValueError("fuzzvalue must be between 0 and 1.")
-
         # Check if headers are provided elsewise take default headers
         if headers is None:
             headers = default_headers.copy()
@@ -92,44 +90,34 @@ class  HTTP1_Request_from_CSV(HTTP1_Request_Builder):
 
 class HTTP1_Request_CC_Case_Insensitivity(HTTP1_Request_Builder):
     def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
-
         '''Covertchannel suggested by Kwecka et al: Case-insensitivity of header key names, fuzzvalue defines the probability that a character of a header field is changed'''
-
         # Check fuzzvalue
         if fuzzvalue < 0 or fuzzvalue > 1:
             raise ValueError("fuzzvalue must be between 0 and 1.")
-
         # Check if headers are provided elsewise take default headers
         if headers is None:
             headers = default_headers.copy()
         else:
             # Create a copy to avoid modifying the original list
             headers = headers.copy()
-
         # Insert the Host header at the beginning of the list
         headers.insert(0, ("Host", self.host_placeholder))
-
         # Build the request_line from the provided arguments
         scheme=""
         request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
-       
-
         # Define Request first line
         request_string = request_line
-        deviation_count = 0
+        modifcation_count = 0
         # Iterate over the header fields
         for header in headers:
             field_name, field_value = header
-            modified_field_name, deviation = random_switch_case_of_char_in_string(original_string=field_name, fuzzvalue=fuzzvalue
-            )
+            modified_field_name, modification = random_switch_case_of_char_in_string(original_string=field_name, fuzzvalue=fuzzvalue)
             # Build request string from modified field name, :, and field value
             request_string += f"{modified_field_name}: {field_value}\r\n"
-            deviation_count += deviation
-
+            modifcation_count += modification
         # Add ending of request
         request_string += "\r\n"
-
-        return request_string, deviation_count, new_uri
+        return request_string, modifcation_count, new_uri
 
 
 
@@ -495,19 +483,12 @@ class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
         hostheader=self.host_placeholder
         headers.insert(0, ("Host", hostheader))
         
-        # Shuffle the header fields randomly
-        # Reorder the header fields, Note: the Ra)ndomValue random.shuffle(List, RandomValue[0,1]) is deprecated (Python 3.9)
         shuffled_headers = headers[:]
         n = len(headers)
-
-
         for i in range(n):
             if random.random() < fuzzvalue:
                 swap_index = random.randint(0, n-1)
                 shuffled_headers[i], shuffled_headers[swap_index] = shuffled_headers[swap_index], shuffled_headers[i]
-
-
-        
         request_string=request_line
         # Iterate over the shuffled headers and compare with the original order
         for shuffled_header, original_header in zip(shuffled_headers, headers):
@@ -516,8 +497,6 @@ class HTTP1_Request_CC_Reordering_Header_Fields(HTTP1_Request_Builder):
                 deviation_count += 1
             # Build the request_string with the shuffeled_header
             request_string += f"{shuffled_header[0]}: {shuffled_header[1]}\r\n"
-        
-        
         # Add the final line break to the request string
         request_string += "\r\n"
 
