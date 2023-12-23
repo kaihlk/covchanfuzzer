@@ -302,7 +302,27 @@ class CustomHTTP(HTTP):
             raise ValueError("Invalid Response Line")    
         return response_line
 
+    def build_http_headers(self, host, path, headers, custom_request=None):
+        """Builds an http Request, uuses standard values if no custom request provided"""
+        http_headers = {
+            "Accept_Encoding": b"gzip, deflate",
+            "Cache_Control": b"no-cache",
+            "Pragma": b"no-cache",
+            "Connection": b"keep-alive",
+            "Host": host,
+            "Path": path,
+        }
+        http_headers.update(headers)
 
+        if custom_request is not None:
+            #  http_headers = custom_request
+            req = custom_request.encode()
+        else:
+            req = HTTP() / HTTPRequest(**http_headers)
+
+        return req
+
+        
     def http_request(
         self,
         host,
@@ -346,7 +366,7 @@ class CustomHTTP(HTTP):
         #TODO Add IPV6 support
         
         
- 
+        req = self.build_http_headers(host, path, headers, custom_request)
         # Check
         if verbose==True:
             

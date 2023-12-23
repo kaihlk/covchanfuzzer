@@ -228,14 +228,14 @@ class HTTP1_Request_Builder:
             # Create a copy to avoid modifying the original list
         return self.generate_cc_request(port, method, path, headers, content, fuzz_value, relative_uri, include_subdomain, include_port, protocol)
         
-    """Todo
+        #TOOD
     def path_generator(self, domain_specific_path=[], test_path="", fuzzvalue=0.5):
         #Adapts the path of the domain (randomly one from the domain specific path list) and/or the CC, returns empty string'' if no input specified
-        #if len(domain_specific_path)!=0:
-        #    path=random.choice(domain_specific_path)
+        if len(domain_specific_path)!=0:
+            path=random.choice(domain_specific_path)
         else: path=test_path
         ##Insert CC Part here
-        return path"""
+        return path
 
 
     def replace_host_and_domain(self, prerequest, uri, standard_subdomain="", host_header=None, include_subdomain_host_header=False, path="", override_uri="", fuzzvalue=0.5):
