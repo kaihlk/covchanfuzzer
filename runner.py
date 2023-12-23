@@ -124,15 +124,16 @@ class ExperimentRunner:
                                 deviation_count_found = True
                             # Check uniqueness
                             if request_hash != entry["request_hash"]:
-                                if covert_channel==3:
-                                    if deviation_count==entry["deviation_count"]:
-                                        unique=False
-                                        random_element = random.random()
-                                        new_fuzz_value = min_fuzz_value +  (random_element * (1-2*min_fuzz_value))
-                                        break
-                                    else:
-                                        unique=True
-                                else:
+                                ##This would change to diffenrent counts instead of positions at cc3
+                                ###if covert_channel==3:
+                                ###    if deviation_count==entry["deviation_count"]:
+                                ###        unique=False
+                                ###        random_element = random.random()
+                                ###        new_fuzz_value = min_fuzz_value +  (random_element * (1-2*min_fuzz_value))
+                                ###        break
+                                ###    else:
+                                ###        unique=True
+                                ###else:
                                     unique = True
                             # Break if already existing
                             else:

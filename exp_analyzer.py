@@ -46,7 +46,7 @@ class Domain_Response_Analyzator():
         self.font_size_label=8
         self.slope=0
         self.host99_200=0
-      #  self.data_frame_target_list = pandas.read_csv(path+"/base_request/target_list.csv")
+        self.data_frame_target_list = pandas.read_csv(path+"/base_request/target_list.csv")
 
         return
 
@@ -82,10 +82,11 @@ class Domain_Response_Analyzator():
 
     def start(self):
 
-        cc=2
+        cc=3
         self.cc = cc
         eval_folder= f"{self.exp_path}/evaluation"
         os.makedirs(eval_folder, exist_ok=True)
+        self.exp_path2=self.exp_path
         self.exp_path=eval_folder
         ###Work for all experiments
         
@@ -102,19 +103,22 @@ class Domain_Response_Analyzator():
         relativ_statuscodes_dict=self.convert_to_relative_values(statuscodes_dict.copy())
         self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats,cc=cc)
         print(relativ_statuscodes_dict)
-
+        target_list_dict=self.analyze_target_list(self.data_frame_target_list, self.data_frame_exp_stats)
         #Distribution of modifications
-        self.single_plot_deviation_count_distribution(1) 
+        
         #Response rates over modifications
         ##CC1
-        self.singleplot_mod(cc)
+        if cc==1:
+            self.single_plot_deviation_count_distribution(cc) 
+            self.singleplot_mod(cc)
         ###CC Specific Plots
         #CC2
         if cc==2:
             self.doubleplot_modification()
         ##CC3
-        #self.singleplot_mod(3)
-        #self.double_plot_deviation_count_distribution_CC3()
+        if cc==3:
+            self.singleplot_mod(3)
+            self.double_plot_deviation_count_distribution_CC3()
         ##C33
         if cc==33:
             _, decoded_df=self.decode_save_cc33(self.data_frame_prerequest_stats)
@@ -131,9 +135,8 @@ class Domain_Response_Analyzator():
         #self.singleplot_mod()
         #s
         ##
-        #self.singleplot_blocking()##CC3
-        #self.singleplot_mod()##CC3s
-        ##target_list_dict=self.analyze_target_list(self.data_frame_target_list, self.data_frame_exp_stats)
+        
+        
         
         
         
@@ -434,7 +437,7 @@ class Domain_Response_Analyzator():
             "Mean_Host_Length":mean_host_length,
             "Uri_Stats": uri_stats,
         }
-        with open(self.exp_path + f"/base_request/target_list_stats.json", "w", encoding="utf-8") as file:
+        with open(self.exp_path2 + f"/base_request/target_list_stats.json", "w+", encoding="utf-8") as file:
             json.dump(target_list_stats, file, indent=4)
         return  target_list_stats
 
@@ -975,15 +978,23 @@ class Domain_Response_Analyzator():
         #Grouping of the deviation count
         # Define the bin edges and labels
 
+        if cc==1:
+            #CC1
+            bins = [-1,1]
+            labels = ['0'] 
+
         if cc==2:
             bins = [-1, 40, 80,result['deviation_count'].max() + 1]
             labels = ['0-40', '41-80', '81-'+str(result['deviation_count'].max())]
-        #CC1
-        #bins = [-1,1]
-        #labels = ['0']  
+         
+        if cc==3:  
+            bins = [-1, 20, 200, result['deviation_count'].max() + 1]
+            labels = ['0-20', '20-200', '200-2000']     
+        
         #CC3 Exp19
         #bins = [-1, 20, 200, result['deviation_count'].max() + 1]
         #labels = ['0-20', '20-200', '200-2000']     
+        
         #CC EOW2
         #CC4: 
         #bins = [-1, 5, 8, result['deviation_count'].max() + 1]
@@ -2630,7 +2641,7 @@ def get_logs_directory():
 if __name__ == "__main__":
     log_dir=get_logs_directory()
     #path = f"{log_dir}/experiment_43"
-    path = f"{log_dir}/extracted_logs/EOW/experiment_25"
+    path = f"{log_dir}/extracted_logs/EOW/experiment_26"
     dra = Domain_Response_Analyzator(path)
     dra.start()
   

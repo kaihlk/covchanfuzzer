@@ -27,7 +27,7 @@ def get_logs_directory():
     # Check if directory for experiment_logs exist
     logs_directory = os.path.join(parent_directory, "logs")
     export_directory= os.path.join(script_directory, "export_logs")
-    dropbox_directory = os.path.join(parent_directory,"Dropbox/masterthesis")
+    dropbox_directory = os.path.join(parent_directory,"Dropbox/masterthesis/export_logs")
 
 
     return logs_directory, export_directory, dropbox_directory
@@ -76,7 +76,7 @@ if __name__ == "__main__":
     for index in numbers:
         log_dir, export_dir,  dropbox_dir=get_logs_directory()
         experiment_no=index
-        experiment_maschine="Lappy"
+        experiment_maschine="ATTIC"
     
         input_folder = f"{log_dir}/experiment_{experiment_no}"
         covert_channel_no=read_cc_no(input_folder)   
