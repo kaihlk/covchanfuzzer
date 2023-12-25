@@ -35,13 +35,13 @@ def extract_host_column(experiment_numbers, machine_name, base_path='extracted')
 if __name__ == "__main__":
    
     #experiment numbers for EOW and ATTIC
-    eow_experiment_numbers = [ 7, 17, 18, 20,  21, 22, 24, 25,26]  
-    attic_experiment_numbers = [ 29, 30, 32, 33, 34, 36, 37]  #29, #'Host_ATTIC_38': 'Experiment 3.1',#To
+    eow_experiment_numbers = [ 7, 17, 18, 20,  21, 22, 24, 25,26,27]  
+    attic_experiment_numbers = [ 29, 30, 32, 33, 34, 36, 37,38]  #29, #'Host_ATTIC_38': 'Experiment 3.1',#To
     name_mapping = {
         'Host_EOW_7': 'Experiment 1',
         'Host_EOW_25': 'Experiment 2',
-        'Host_EOW_26': 'Experiment 3',
-        'Host_attic_29': 'Experiment 3.1',#Replace
+        'Host_attic_38': 'Experiment 3', 
+        'Host_EOW_27': 'Experiment 3.1',#Replaced attic 29
         'Host_EOW_17': 'Experiment 3.2',
         'Host_attic_36': 'Experiment 4',
         'Host_attic_30': 'Experiment 5',
