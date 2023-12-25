@@ -825,42 +825,47 @@ class HTTP1_Request_CC_URI_Represenation_opt3(HTTP1_Request_Builder):
 
         bit_set = random.choice([0,1,2,3,4,5,6,7]) #random.choice(range(11))  # Randomly choose one of the 10 bits
 
-        
-        
-        if bit_set==1:
+          
+
+
+        if bit_set==0:
             #Bit 0: Random Range 0..65535 
             new_include_port=True
             new_port=random.randint(0, 65535)
             deviation_count+=1                 
-        elif bit_set==2:
-            #Bit 5: Random Port  -65535 
+        elif bit_set==1:
+            #Bit 1: Random Port  -65535 
             new_include_port=True
             new_port=random.randint(-65535,0)
             deviation_count+=2                 
-        elif bit_set==3:
-            #Bit 6: Random 32bit Integer
+        elif bit_set==2:
+            #Bit 2: Random 32bit Integer
             new_include_port=True
             new_port = random.randint(0, 2147483648) #'Update'
             deviation_count+=4            
-        elif bit_set==4:
-            #Bit 7: Random -32bit Integer
+        elif bit_set==3:
+            #Bit 3: Random -32bit Integer
             new_include_port=True
             new_port = random.randint(-2147483648 ,0) #'Update'
             deviation_count+=8       
-        elif bit_set==5:
-            #Bit 7: 64bit Integer
+        elif bit_set==4:
+            #Bit 4: 64bit Integer
             new_include_port=True
             new_port = random.randint(0, 9223372036854775807) #'Update'
             deviation_count+=16
-        elif bit_set==6:
-            #Bit 7: -64bit Integer
+        elif bit_set==5:
+            #Bit 5: -64bit Integer
             new_include_port=True
             new_port = random.randint(-9223372036854775807,0) #'Update'
             deviation_count+=32    
-        elif bit_set ==7 :
-            # Bit 7 : Control Group
-            deviation_count += 64
-        
+        elif bit_set==6:
+            #Bit 6: 443
+            new_include_port=True
+            new_port = 443  #'Update'
+            deviation_count+=64   
+        elif bit_set==7:
+            #Bit 7 Base line
+            deviation_count+=128  
         # Build a new URL from the input
         request_line, new_uri = self.build_request_line(new_port, method, new_path, headers, new_scheme, fuzzvalue, relative_uri, new_include_subdomain, new_include_port, protocol)
         

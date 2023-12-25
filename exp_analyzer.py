@@ -82,7 +82,7 @@ class Domain_Response_Analyzator():
 
     def start(self):
 
-        cc=3
+        cc=53
         self.cc = cc
         eval_folder= f"{self.exp_path}/evaluation"
         os.makedirs(eval_folder, exist_ok=True)
@@ -119,18 +119,20 @@ class Domain_Response_Analyzator():
             self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats,cc=cc)
         ##CC3
         if cc==3:
-            self.singleplot_blocking()
+            #self.singleplot_blocking()
             self.singleplot_mod(3)
             self.double_plot_deviation_count_distribution_CC3()
             self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats,cc=cc)
             
-        ##C33
+        ##C33/3.1
         if cc==33:
             self.singleplot_mod(cc)
             _, decoded_df=self.decode_save_cc33(self.data_frame_prerequest_stats)
             self.count_and_plot_bit_occurrences33(decoded_df)
+        #CC34/3.2
         if cc==34:
-            self.singleplot_mod(34)
+            self.singleplot_mod(cc)
+            self.single_plot_deviation_count_distribution(cc) 
         if cc==4:
             self.single_plot_deviation_count_distribution(cc) 
             self.doubleplot_modification()
@@ -138,7 +140,9 @@ class Domain_Response_Analyzator():
         if cc==52:
             _ , decoded_df=self.decode_save_cc52(self.data_frame_prerequest_stats)
             self.count_and_plot_bit_occurrences52(decoded_df.copy())
-      
+        if cc==53:
+            _, decoded_df=self.decode_save_cc53(self.data_frame_prerequest_stats)
+            self.count_and_plot_bit_occurrences53(decoded_df)
         #CC7
         #self.singleplot_mod(7)
 
@@ -159,8 +163,7 @@ class Domain_Response_Analyzator():
         
         
         
-        ##_, decoded_df=self.decode_save_cc53(self.data_frame_prerequest_stats)
-        ##self.count_and_plot_bit_occurrences53(decoded_df)
+        ##
 
         
         ##_, decoded_df=self.decode_save_cc71(self.data_frame_prerequest_stats)
@@ -799,12 +802,13 @@ class Domain_Response_Analyzator():
             return bit_occurrences
 
         bit_columns = [
-            'pos 16Bit signed Int.',
-            'neg 16Bit signed Int.',
-            'pos 32Bit signed Int.',
-            'neg 32Bit signed Int.',
-            'pos 64Bit signed Int.',
-            'neg 64Bit signed Int.',
+            'pos 16Bit signed int.',
+            'neg 16Bit signed int.',
+            'pos 32Bit signed int.',
+            'neg 32Bit signed int.',
+            'pos 64Bit signed int.',
+            'neg 64Bit signed int.',
+            '443',
             'No changes',
         ]
 
@@ -818,7 +822,7 @@ class Domain_Response_Analyzator():
         ax.bar(bits, occurrences, width=0.2, color='b')#, color='#3498DD')
         #ax.set_xlabel('Bit Columns')
         ax.set_ylabel('Requests', fontsize=self.font_size_axis)
-        ax.set_title('Distribution of Modifications among Requests', fontsize=self.font_size_title)
+        #ax.set_title('Distribution of modifications among requests', fontsize=self.font_size_title)
         mpl.xticks(rotation=45, ha='right')
         mpl.tight_layout()
         mpl.savefig(self.exp_path+'/discrete_modification_occurence.png', dpi=300)
@@ -829,15 +833,17 @@ class Domain_Response_Analyzator():
     def decode_save_cc53(self,data_frame):
       
         #CC53Columns
+
         bit_columns = [
-            'pos 16Bit signed Int.',
-            'neg 16Bit signed Int.',
-            'pos 32Bit signed Int.',
-            'neg 32Bit signed Int.',
-            'pos 64Bit signed Int.',
-            'neg 64Bit signed Int.',
+            'pos 16Bit signed int.',
+            'neg 16Bit signed int.',
+            'pos 32Bit signed int.',
+            'neg 32Bit signed int.',
+            'pos 64Bit signed int.',
+            'neg 64Bit signed int.',
+            '443',
             'No changes',
-            ]
+        ]
 
         def decode_bits(deviation_count, num_bits):
             # Create a list of bit values by decoding the deviation_count.
@@ -851,8 +857,7 @@ class Domain_Response_Analyzator():
             data_frame[bit_column] = data_frame['deviation_count'].apply(lambda x: (x >> bit_index) & 1)
 
         data_frame.to_csv(self.exp_path + "/prerequest_decoded.csv", index=False)
-        
-        # Create an empty DataFrame to store the result
+
         result_df = pandas.DataFrame(columns=['Bit Name', 'Mean 1xx', 'Mean 2xx', 'Mean 3xx', 'Mean 4xx', 'Mean 5xx', 'Mean 9xx'])
 
         result_dfs = []
@@ -887,10 +892,10 @@ class Domain_Response_Analyzator():
         #ax.set_xlabel('Bit Name')
         ax.tick_params(axis='both', labelsize=self.font_size_axis)
         
-        ax.set_ylabel('Response Status Codes Share (%)', fontsize=self.font_size_axis)
-        ax.set_title('Response Codes over different Modifications',fontsize=self.font_size_title)
+        ax.set_ylabel('Response status codes frequency (%)', fontsize=self.font_size_axis)
+        #ax.set_title('Response Codes over different Modifications',fontsize=self.font_size_title)
         ax.legend(title='2xx Rates', loc='lower right')
-        mpl.xticks(rotation=90)
+        mpl.xticks(rotation=45)
         mpl.tight_layout()
         mpl.savefig(self.exp_path+'/discrete_deviation_response_rates.png', dpi=300)
         mpl.show()
@@ -1459,9 +1464,11 @@ class Domain_Response_Analyzator():
         #mpl.subplots_adjust(wspace=0.3, hspace=0.3)
         axs.set_xlabel('Steganographic payload / modifications', fontsize=self.font_size_axis) 
         axs.set_ylabel('Number of requests', fontsize=self.font_size_axis)
-        if cc==4:
-            bins = [1.5,2.5,3.5,4.5,5.5,6.5,7.5,8.5,9.5,10.5,11.5]
-            self.plot_deviation_count_distribution(self.data_frame_prerequest_stats, ax=axs, bins=bins )
+        #if cc==4:
+         #   bins = [1.5,2.5,3.5,4.5,5.5,6.5,7.5,8.5,9.5,10.5,11.5]
+           # self.plot_deviation_count_distribution(self.data_frame_prerequest_stats, ax=axs, bins=bins )
+        if cc==34:
+            self.plot_deviation_count_distribution(self.data_frame_prerequest_stats, ax=axs, bins=100 )
         elif cc==52:
             self.plot_deviation_count_distribution(self.data_frame_prerequest_stats, ax=axs, bins=1000 )
         elif cc==7:
@@ -1693,8 +1700,8 @@ class Domain_Response_Analyzator():
         elif nr==34:
             x_values = [17542, 26605, 29656, 35028, 72716, 92990] 
             self.status_code_curves_over_size(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100)
-            axs.set_xlabel('Size of the Request in Bytes', fontsize=self.font_size_axis)
-            axs.set_ylabel('Status Code Frequency(%)', fontsize=self.font_size_axis)
+            axs.set_xlabel('Request size (bytes)', fontsize=self.font_size_axis)
+            axs.set_ylabel('Status code frequency (%)', fontsize=self.font_size_axis)
             
             #axs.set_title('Status Codes Frequency over Request Size', fontsize=self.font_size_title, fontweight='bold')
         elif nr==4:
@@ -2537,7 +2544,7 @@ class Domain_Response_Analyzator():
         response_codes = [ '1xx','2xx', '3xx', '4xx', '5xx', '9xx']
         
         path="20231109_214542_app.hubspot.com"
-        df_size = pandas.read_csv(f'{self.exp_path}/{path}/log_file.csv', index_col=0)
+        df_size = pandas.read_csv(f'{self.exp_path2}/{path}/log_file.csv', index_col=0)
         merged_df = pandas.merge(data_frame, df_size, left_on='no', right_on='number', how='inner')
         
 
@@ -2708,15 +2715,13 @@ def get_logs_directory():
     """Get or create local log directory"""
     script_directory = os.path.dirname(os.path.abspath(__file__))
     parent_directory = os.path.dirname(script_directory)
-
-    # Check if directory for experiment_logs exist
     logs_directory = os.path.join(parent_directory, "logs")
    
     return logs_directory
 
 if __name__ == "__main__":
     log_dir=get_logs_directory()
-    path = f"{log_dir}/extracted_logs/attic/experiment_38"
+    path = f"{log_dir}/experiment_213"
     dra = Domain_Response_Analyzator(path)
     dra.start()
   
