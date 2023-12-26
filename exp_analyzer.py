@@ -36,8 +36,8 @@ class Domain_Response_Analyzator():
         except FileNotFoundError:
             self.df_global = pandas.DataFrame()
         ###CC6
-        #self.data_frame_uri = pandas.read_csv(path+"/uri_dev_statuscode.csv")
-        #self.data_frame_rel_uri = pandas.read_csv(path+"/rel_uri_dev_statuscode.csv")   
+        self.data_frame_uri = pandas.read_csv(path+"/uri_dev_statuscode.csv")
+        self.data_frame_rel_uri = pandas.read_csv(path+"/rel_uri_dev_statuscode.csv")   
         #self.data_frame_rel_uri_2xx = pandas.read_csv(path+"/rel_uri_host_2xx.csv")      
         self.experiment_configuration, self.exp_meta_data=self.load_exp_outcome(self.exp_path)
         self.dra_logging=logging.getLogger("main.runner.dra_logger")
@@ -82,7 +82,7 @@ class Domain_Response_Analyzator():
 
     def start(self):
 
-        cc=53
+        cc=3
         self.cc = cc
         eval_folder= f"{self.exp_path}/evaluation"
         os.makedirs(eval_folder, exist_ok=True)
@@ -133,6 +133,10 @@ class Domain_Response_Analyzator():
         if cc==34:
             self.singleplot_mod(cc)
             self.single_plot_deviation_count_distribution(cc) 
+        #CC35
+        if cc==35:
+            self.singleplot_mod(cc)
+            self.single_plot_deviation_count_distribution(cc) 
         if cc==4:
             self.single_plot_deviation_count_distribution(cc) 
             self.doubleplot_modification()
@@ -143,6 +147,15 @@ class Domain_Response_Analyzator():
         if cc==53:
             _, decoded_df=self.decode_save_cc53(self.data_frame_prerequest_stats)
             self.count_and_plot_bit_occurrences53(decoded_df)
+        if cc==6:
+            self.single_plot_mod_cc6()
+            self.analyze_modifications_cc6()
+            self.grouped_cc6(self.data_frame_rel_uri_2xx.copy())
+            self.singleplot_rel_uri() #ACHTUNG
+        ####self.plot_uri_deviation_count_distribution(self.data_frame_uri)
+        ####Delte self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
+       
+
         #CC7
         #self.singleplot_mod(7)
 
@@ -185,12 +198,7 @@ class Domain_Response_Analyzator():
      
         ##self.update_status_code_csv(statuscodes_dict, self.df_global)
         ###CC6
-        ####self.singleplot_rel_uri() #ACHTUNG
-        ####self.plot_uri_deviation_count_distribution(self.data_frame_uri)
-        ####Delte self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
-        ##self.single_plot_mod_cc6()
-        ##self.analyze_modifications_cc6()
-        ##self.grouped_cc6(self.data_frame_rel_uri_2xx.copy())
+        
         
 
         return
@@ -435,7 +443,27 @@ class Domain_Response_Analyzator():
             print(f"Shortest URI Length: {shortest}")
             print(f"Average URI Length: {average}")
             return uri_length
+        def count_uri_components(df, uri_column):
+            counts = {
+                "contains_port": 0,
+                "path_is_slash": 0,
+                "path_longer_than_slash": 0,
+                "path_with_subfolders": 0
+            }
 
+            for uri in df[uri_column]:
+                scheme, subdomain, hostname, domain, port, path = HTTP1_Request_Builder().parse_host(uri)
+               
+                if port:
+                    counts["contains_port"] += 1
+                if path == "/":
+                    counts["path_is_slash"] += 1
+                elif path and len(path) > 1:
+                    counts["path_longer_than_slash"] += 1
+                    if '/' in path[1:]:
+                        counts["path_with_subfolders"] += 1
+
+            return counts
         mean_host_length=calculate_mean_host_length(df_target_list.copy(), "socket_dns_info")
         uri_stats=calculate_uri_length_stats(df_target_list.copy(), 'uri')
         df_exp_stats['2xx_rate'] = df_exp_stats['2xx'] / df_exp_stats['Messages Send']
@@ -447,9 +475,11 @@ class Domain_Response_Analyzator():
         print("Average Rate: ", average_2xx_rates)
         average_uri_length = df_target_list['uri'].apply(lambda uri: len(uri)).mean()
         print(f"Average URI Length: {average_uri_length}")
+        path_stats=count_uri_components(df_target_list.copy(), 'uri')
         target_list_stats={
             "Mean_Host_Length":mean_host_length,
             "Uri_Stats": uri_stats,
+            "Path_Stats": path_stats,
         }
         with open(self.exp_path2 + f"/base_request/target_list_stats.json", "w+", encoding="utf-8") as file:
             json.dump(target_list_stats, file, indent=4)
@@ -1543,17 +1573,12 @@ class Domain_Response_Analyzator():
         #gs = GridSpec(2, 2, figure=fig)
         mpl.subplots_adjust(wspace=0.3, hspace=0.3)
         
-        # Top
-        #CC3 self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=axs,subplottitles=False, autolimits=False, y_low=15, y_up=85 )  CC3
-        #self.status_code_curves_over_deviation(self.data_frame_prerequest_stats, ax=axs,subplottitles=False, autolimits=False, y_low=95, y_up=100)
-        #CC4
+        
         self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri, ax=axs)
-        #subplottitles=False, autolimits=False, y_low=0, y_up=100)
-        # Adjust spacing between subplots
-        #mpl.tight_layout()
-        axs.set_xlabel('Relative URI Modifications (%)', fontsize=self.font_size_axis)
+        
+        axs.set_xlabel('Relative URL modifications (%)', fontsize=self.font_size_axis)
         axs.set_ylabel('Requests', fontsize=self.font_size_axis)
-        axs.set_title('Status Codes Frequency over Modifications', fontsize=self.font_size_title, fontweight='bold')
+        #axs.set_title('Status Codes Frequency over Modifications', fontsize=self.font_size_title, fontweight='bold')
         # sSave the figure as a single PNG file
         mpl.savefig(self.exp_path+'/single_plot_rel_uri_mod.png', facecolor='white', edgecolor='white', dpi=300)
 
@@ -1623,16 +1648,15 @@ class Domain_Response_Analyzator():
         self.font_size_label=8
         
         fig, axs = mpl.subplots(1, 1, figsize=(14, 7))
-        #gs = GridSpec(2, 2, figure=fig)
         mpl.subplots_adjust(wspace=0.3, hspace=0.3)
         
         # Top
         status_code_curves_over_deviation6(self.data_frame_rel_uri, ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100)
         # Adjust spacing between subplots
         #mpl.tight_layout()
-        axs.set_xlabel('Relative URI Modifications', fontsize=self.font_size_axis)
-        axs.set_ylabel('Status Code Frequency(%)', fontsize=self.font_size_axis)
-        axs.set_title('Status Codes Frequency over relativ URI Modifications', fontsize=self.font_size_title, fontweight='bold')
+        axs.set_xlabel('Relative URL modifications', fontsize=self.font_size_axis)
+        axs.set_ylabel('Status code frequency(%)', fontsize=self.font_size_axis)
+        #axs.set_title('Status Codes Frequency over relative URI Modifications', fontsize=self.font_size_title, fontweight='bold')
         # sSave the figure as a single PNG file
         mpl.savefig(self.exp_path+'/single_plot_mod6.png', dpi=300)
 
@@ -1643,7 +1667,7 @@ class Domain_Response_Analyzator():
       
     def analyze_modifications_cc6(self):
         # Read data from CSV file
-        data_frame = pandas.read_csv(self.exp_path + "/rel_mod_uri_host_2xx.csv")
+        data_frame = pandas.read_csv(self.exp_path2 + "/rel_mod_uri_host_2xx.csv")
         single_bit_columns = ['1', '10', '100', '1000', '10000']
 
         # Define the percentage ranges for bins
@@ -1698,10 +1722,15 @@ class Domain_Response_Analyzator():
             self.status_code_curves_over_deviation(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100, no_regression=False )
             axs.legend(loc="upper right")
         elif nr==34:
-            x_values = [17542, 26605, 29656, 35028, 72716, 92990] 
+            x_values = [8918, 16412, 24687, 27483, 32430, 54630, 69234, 85014]
             self.status_code_curves_over_size(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100)
-            axs.set_xlabel('Request size (bytes)', fontsize=self.font_size_axis)
+            axs.set_xlabel('Request size (Bytes)', fontsize=self.font_size_axis)
             axs.set_ylabel('Status code frequency (%)', fontsize=self.font_size_axis)
+        elif nr==34:
+            x_values = [8918]#, 16412, 24687, 27483, 32430, 54630, 69234, 85014]
+            self.status_code_curves_over_size(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100)
+            axs.set_xlabel('Request size (Bytes)', fontsize=self.font_size_axis)
+            axs.set_ylabel('Status code frequency (%)', fontsize=self.font_size_axis)    
             
             #axs.set_title('Status Codes Frequency over Request Size', fontsize=self.font_size_title, fontweight='bold')
         elif nr==4:
@@ -2015,9 +2044,9 @@ class Domain_Response_Analyzator():
         #ax.set_facecolor('white')
 
         bar_plot = ax.bar(deviation_counts, sums, color='blue', label='Data Distribution')
-        ax.set_xlabel('Relative Modification (%) from original URI')
-        ax.set_ylabel('Request (of 1000000)')
-        ax.set_title('Relative Modifications URI Distribution')
+        #ax.set_xlabel('Relative Modification (%) from original URI')
+        #ax.set_ylabel('Request (of 1000000)')
+        #ax.set_title('Relative Modifications URI Distribution')
         #ax.legend()
         ax.set_facecolor('white')
         ax.patch.set_facecolor('white')
@@ -2543,7 +2572,7 @@ class Domain_Response_Analyzator():
 
         response_codes = [ '1xx','2xx', '3xx', '4xx', '5xx', '9xx']
         
-        path="20231109_214542_app.hubspot.com"
+        path="20231226_180708_adobe.com"
         df_size = pandas.read_csv(f'{self.exp_path2}/{path}/log_file.csv', index_col=0)
         merged_df = pandas.merge(data_frame, df_size, left_on='no', right_on='number', how='inner')
         
@@ -2620,9 +2649,9 @@ class Domain_Response_Analyzator():
 
         # Add labels and title
         if subplottitles is True:
-            ax.set_xlabel('Steganographic Payload / Modifications', fontsize=12)
-            ax.set_ylabel('Response Code Frequency(%)', fontsize=12)
-            ax.set_title('Statuscodes Frequency over Steganographic Payload', fontsize=14, fontweight='bold')
+            ax.set_xlabel('Steganographic payload / #modifications', fontsize=12)
+            ax.set_ylabel('Response code frequency(%)', fontsize=12)
+           # ax.set_title('Statuscodes Frequency over Steganographic Payload', fontsize=14, fontweight='bold')
 
         # Set y-axis limits if needed
 
@@ -2631,14 +2660,17 @@ class Domain_Response_Analyzator():
             ax.set_ylim(y_low, y_up)
         yticks = ax.get_yticks()
         ax.set_yticks(yticks)
-        ax.set_yticklabels(['{:.2f}%'.format(ytick) for ytick in yticks])
-
+        ax.set_yticklabels(['{:.1f}%'.format(ytick) for ytick in yticks])
+        
         if autolimits is False:
             ax.set_ylim(y_low, y_up)
         #"""
         # ax.set_ylim(0, 100)
         ##CC34
-        x_values = [8918, 16412, 24687, 27483, 32430, 54630, 69234, 85014] 
+        if self.cc==34:
+            x_values = [8918, 16412, 24687, 27483, 32430, 54630, 69234, 85014] 
+        if self.cc==35:
+            x_values = [8918]#, 16412, 24687, 27483, 32430, 54630, 69234, 85014]     
         ##CC 7
         #x_values = [8299, 16272, 32983, 68243] 
         ##CC8 (16*2)
@@ -2721,7 +2753,8 @@ def get_logs_directory():
 
 if __name__ == "__main__":
     log_dir=get_logs_directory()
-    path = f"{log_dir}/experiment_213"
+   # path = f"{log_dir}/extracted_logs/EOW/experiment_17"
+    path = f"{log_dir}/experiment_215"
     dra = Domain_Response_Analyzator(path)
     dra.start()
   
