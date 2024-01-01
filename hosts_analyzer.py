@@ -2,7 +2,7 @@ import os
 import pandas 
 import seaborn as sns
 import matplotlib.pyplot as plt
-
+from urllib.parse import urlparse
 
 
 def get_logs_directory():
@@ -30,10 +30,27 @@ def extract_host_column(experiment_numbers, machine_name, base_path='extracted')
             print(f"File not found: {file_path}")
     return columns
 
+def extract_base_name(url):
+    try:
+        hostname = urlparse(url).hostname
+        if hostname:
+            parts = hostname.split('.')
+            return parts[-2] if len(parts) >= 2 else None
+    except:
+        return None
 
+
+def extract_full_hostname(url):
+    try:
+        hostname = urlparse(url).hostname
+        if hostname:
+            parts = hostname.split('.')
+            return '.'.join(parts[-2:]) if len(parts) > 1 else None
+    except:
+        return None
 
 if __name__ == "__main__":
-   
+    log_dir=get_logs_directory()
     #experiment numbers for EOW and ATTIC
     eow_experiment_numbers = [ 7, 17, 18, 20,  21, 22, 24, 25,26,27,28]  
     attic_experiment_numbers = [ 29, 30, 32, 33, 34, 36, 37,38]  #29, #'Host_ATTIC_38': 'Experiment 3.1',#To
@@ -94,6 +111,28 @@ if __name__ == "__main__":
                 # Find the intersection and count common entries
                 common_entries = set1.intersection(set2)
                 common_entries_count[(col1, col2)] = len(common_entries)
+    
+    all_unique_entries = set()
+
+    # Count and extract all unique entries across all columns
+    for col in combined_df.columns:
+        unique_entries = set(combined_df[col].dropna())
+        all_unique_entries.update(unique_entries)
+
+    
+   
+
+    total_unique_count = len(all_unique_entries)
+   
+
+    unique_entries_df = pandas.DataFrame(list(all_unique_entries), columns=['Unique Entries'])
+    unique_entries_df['Base Name'] = unique_entries_df['Unique Entries'].apply(extract_base_name)
+    unique_entries_df['Full Hostname'] = unique_entries_df['Unique Entries'].apply(extract_full_hostname)
+
+    base_name_counts = unique_entries_df['Base Name'].value_counts()
+    full_hostname_counts = unique_entries_df['Full Hostname'].value_counts()
+    
+    unique_entries_df.to_csv(f'{log_dir}/extracted_logs/unique_entries.csv', index=False)
 
     # Output the common entries count
     for pair, count in common_entries_count.items():
@@ -104,10 +143,16 @@ if __name__ == "__main__":
     print("Ranking of columns based on common entries with others:")
     for rank, (col, count) in enumerate(sorted_common_counts, start=1):
         print(f"{rank}. {col} - {count} common entries")
-
-    log_dir=get_logs_directory()
+    
+    
     combined_df.to_csv(f'{log_dir}/extracted_logs/combined_experiment_data.csv', index=False)
 
+    print("Total unique entries: ",total_unique_count)
+    print("Hostnames: ")
+    print(base_name_counts)
+    print("Hostnames +TLD") 
+    print(full_hostname_counts)
+    
     similarity_matrix = pandas.DataFrame(index=combined_df.columns, columns=combined_df.columns, dtype=int)
 
     for col1 in combined_df.columns:

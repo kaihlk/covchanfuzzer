@@ -1,7 +1,7 @@
 # http1_covered_channels.py
 
 # Definition of functions to generate cover channels in http/1.1 requests
-# TODO HTTP/2 request generation, with method:
+
 import string
 import random
 import mutators
@@ -12,6 +12,7 @@ from http1_request_builder import HTTP1_Request_Builder
 
 
 def random_switch_case_of_char_in_string(original_string, fuzzvalue):
+    """Switches the case of string, increase fuzzvalue for more modifications"""
     modified_string = ""
     deviation_count = 0
     # Randomly change the case of the field name
@@ -34,7 +35,6 @@ def random_switch_case_of_char_in_string(original_string, fuzzvalue):
 
 def generate_standard_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
     '''Generation of request package without insertion of a covert channel'''
-     
 
     # Insert the Host header at the beginning of the list
     headers.insert(0, ("Host", self.host_placeholder))
@@ -50,7 +50,7 @@ def generate_standard_request(self, port, method, path, headers, content, fuzzva
     return request_string, deviation_count, new_uri
 
 class  HTTP1_Request_from_CSV(HTTP1_Request_Builder):
-      def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
+    def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
         '''TODO Use request from an external list'''
         # Check fuzzvalue
         if fuzzvalue < 0 or fuzzvalue > 1:
@@ -61,10 +61,8 @@ class  HTTP1_Request_from_CSV(HTTP1_Request_Builder):
         else:
             # Create a copy to avoid modifying the original list
             headers = headers.copy()
-
         # Insert the Host header at the beginning of the list
         headers.insert(0, ("Host", self.host_placeholder))
-
         # Build the request_line from the provided arguments
         scheme=""
         request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
@@ -124,9 +122,7 @@ class HTTP1_Request_CC_Case_Insensitivity(HTTP1_Request_Builder):
 class HTTP1_Request_CC_Random_Whitespace(HTTP1_Request_Builder):
 # Covertchannel suggested by Kwecka et al: Linear whitespacing
 # fuzzvalue defines the propability whether a value is changed and how many whitespaces/tabs/newlines are added
-# Possible endless Loop, here is CC to learn something about the maximum size of the Request size
-    
-       
+# Possible endless Loop, here is CC to learn something about the maximum size of the Request size  
     def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
         # Check if headers are provided elsewise take default headers
         if headers is None:
@@ -134,14 +130,11 @@ class HTTP1_Request_CC_Random_Whitespace(HTTP1_Request_Builder):
         else:
             # Create a copy to avoid modifying the original list
             headers = headers.copy()
-        
         # Insert the Host header at the beginning of the list
         headers.insert(0, ("Host", self.host_placeholder))
-        
         # Build the request_line from the provided arguments
         scheme=""
         request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
-       
         deviation_count = 0
         request_string = request_line
         # Iterate over header fields(HTTP1_Request_Builder):
@@ -160,7 +153,6 @@ class HTTP1_Request_CC_Random_Whitespace(HTTP1_Request_Builder):
                 field_value += whitespaces
             # Build the line of the request string
             request_string += f"{field_name}: {field_value}\r\n"
-
         # End the request Sclass HTTP1_Request_CC_tring
         request_string += "\r\n"
 
@@ -168,9 +160,7 @@ class HTTP1_Request_CC_Random_Whitespace(HTTP1_Request_Builder):
 
 
 class HTTP1_Request_CC_Random_Whitespace_opt(HTTP1_Request_Builder):
-    #Try to verify findings of first runn
-    
-       
+    #Try to verify findings of first run
     def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
         # Check if headers are provided elsewise take default headers
         if headers is None:
@@ -178,14 +168,11 @@ class HTTP1_Request_CC_Random_Whitespace_opt(HTTP1_Request_Builder):
         else:
             # Create a copy to avoid modifying the original list
             headers = headers.copy()
-        
         # Insert the Host header at the beginning of the list
         headers.insert(0, ("Host", self.host_placeholder))
-        
         # Build the request_line from the provided arguments
         scheme=""
         request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
-       
         deviation_count = 0
         request_string = request_line
         # Iterate over header fields(HTTP1_Request_Builder):
@@ -207,31 +194,25 @@ class HTTP1_Request_CC_Random_Whitespace_opt(HTTP1_Request_Builder):
                 field_value += whitespaces
             # Build the line of the request string
             request_string += f"{field_name}: {field_value}\r\n"
-
         # End the request Sclass HTTP1_Request_CC_tring
         request_string += "\r\n"
 
         return request_string, deviation_count, new_uri
 
 class HTTP1_Request_CC_Random_Whitespace_opt2(HTTP1_Request_Builder):
-    #Try to verify findings of first runn
-    
-       
+    #Try to verify findings of second run
     def generate_cc_request(self, port, method, path, headers, content, fuzzvalue, relative_uri, include_subdomain, include_port, protocol):
         # Check if headers are provided elsewise take default headers
         if headers is None:
             headers = default_headers.copy()
         else:
             # Create a copy to avoid modifying the original list
-            headers = headers.copy()
-        
+            headers = headers.copy()  
         # Insert the Host header at the beginning of the list
         headers.insert(0, ("Host", self.host_placeholder))
-        
         # Build the request_line from the provided arguments
         scheme=""
         request_line, new_uri = self.build_request_line(port, method, path, headers, scheme, fuzzvalue, relative_uri, include_subdomain, include_port, protocol)
-       
         deviation_count = 0
         request_string = request_line
         # Iterate over header fields(HTTP1_Request_Builder):

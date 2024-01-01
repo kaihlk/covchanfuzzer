@@ -316,13 +316,13 @@ class CustomHTTP(HTTP):
 
         if custom_request is not None:
             #  http_headers = custom_request
-            req = custom_request.encode()
+            req = custom_request.encode()#Default UTF-8
         else:
             req = HTTP() / HTTPRequest(**http_headers)
 
         return req
 
-        
+
     def http_request(
         self,
         host,

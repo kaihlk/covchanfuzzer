@@ -47,6 +47,7 @@ class Domain_Response_Analyzator():
         self.slope=0
         self.host99_200=0
         self.data_frame_target_list = pandas.read_csv(path+"/base_request/target_list.csv")
+        self.size_df=pandas.DataFrame()
 
         return
 
@@ -74,15 +75,12 @@ class Domain_Response_Analyzator():
         """Get or create local log directory"""
         script_directory = os.path.dirname(os.path.abspath(__file__))
         parent_directory = os.path.dirname(script_directory)
-
-        # Check if directory for experiment_logs exist
         logs_directory = os.path.join(parent_directory, "logs")
-    
         return logs_directory
 
     def start(self):
 
-        cc=3
+        cc=71
         self.cc = cc
         eval_folder= f"{self.exp_path}/evaluation"
         os.makedirs(eval_folder, exist_ok=True)
@@ -97,7 +95,7 @@ class Domain_Response_Analyzator():
         statuscodes_dict=self.count_status_codes(self.data_frame_pd_matrix.copy())  
         latex_code = self.generate_latex_table(self.experiment_configuration, self.exp_meta_data, prerequest_statistics, host_statistics, statuscodes_dict)
         report_filename = f'{self.exp_path}/experiment_report.tex'  
-        self.export_latex_to_report(latex_code, report_filename)  
+        self.export_latex_to_report(latex_code, report_filename) 
         
         print(statuscodes_dict)
         relativ_statuscodes_dict=self.convert_to_relative_values(statuscodes_dict.copy())
@@ -144,50 +142,55 @@ class Domain_Response_Analyzator():
         if cc==52:
             _ , decoded_df=self.decode_save_cc52(self.data_frame_prerequest_stats)
             self.count_and_plot_bit_occurrences52(decoded_df.copy())
+            self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats,cc=cc)
         if cc==53:
             _, decoded_df=self.decode_save_cc53(self.data_frame_prerequest_stats)
             self.count_and_plot_bit_occurrences53(decoded_df)
+            self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats,cc=cc)
         if cc==6:
             self.single_plot_mod_cc6()
             self.analyze_modifications_cc6()
             self.grouped_cc6(self.data_frame_rel_uri_2xx.copy())
             self.singleplot_rel_uri() #ACHTUNG
-        ####self.plot_uri_deviation_count_distribution(self.data_frame_uri)
-        ####Delte self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
-       
-
-        #CC7
-        #self.singleplot_mod(7)
+            ####self.plot_uri_deviation_count_distribution(self.data_frame_uri)
+            ####Delte self.plot_rel_uri_deviation_distribution(self.data_frame_rel_uri)
+        if cc==7:
+            self.singleplot_mod(cc)
+            self.single_plot_deviation_count_distribution(cc)
+        if cc==71:
+            self.single_plot_deviation_count_distribution(cc)
+            self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats,cc=cc)
+            _, decoded_df=self.decode_save_cc71(self.data_frame_prerequest_stats)
+            self.count_and_plot_bit_occurrences71(decoded_df)
+        if cc==8:
+            self.singleplot_mod(cc)
+            self.single_plot_deviation_count_distribution(cc)
+            
+        if cc==81:
+            self.singleplot_mod(cc)
+            self.single_plot_deviation_count_distribution(cc)
+        #Details on status code 
+        #self.filter_and_aggregate(self.data_frame_pd_matrix.copy(), 429, decoded_df.copy())
 
         #CCr  
         #
         #self.singleplot_mod()
         #s
         ##
-        
-        
-        
-        
-        
-
-       ## self.doubleplot_response_rate_message_index()
-        ##CC4
-       # #
+  
         
         
         
         ##
 
         
-        ##_, decoded_df=self.decode_save_cc71(self.data_frame_prerequest_stats)
-        ##self.count_and_plot_bit_occurrences71(decoded_df)
         ##CC91
         ##self.check_91_key_value_length(self.data_frame_prerequest_stats.copy())
         ##self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats)
         ##self.status_code_curves_over_deviation(self.data_frame_prerequest_stats.copy(), ax=None)
         ##self.status_code_bars_over_deviation(self.data_frame_prerequest_stats, ax=None)
         #self.plot_unsorted_data(self.data_frame_exp_stats)
-        ##self.filter_and_aggregate(self.data_frame_pd_matrix.copy(), 429, decoded_df.copy())
+        ##
 
         
       
@@ -206,39 +209,28 @@ class Domain_Response_Analyzator():
 
     def analyze_status_codes(self, df):
        
-
-
-
         percentage_200_responses = (df == 200).mean() * 100
         self.host99_200 = sum(percentage_200_responses > 99)
 
         ten_percent_index = int(len(df) * 0.1)
         if ten_percent_index == 0:
-            ten_percent_index = 1  # Ensure at least one row is included
-       
-        # Initialize a list to hold the results
+            ten_percent_index = 1  # Atleast one row is included
         results_list = []
 
         # Analyze each domain (column) except for the 'Attempt No.'
         for column in df.columns[1:]:
-            # Get the counts of all status codes for the current host
-            status_counts = df[column].astype(int).value_counts().to_dict()  # Ensure status codes are integers
-
+            status_counts = df[column].astype(int).value_counts().to_dict()  # Get the counts of all status codes for the current host
             # Calculate the share and absolute number of 200 codes in the first 10%
-            first_10_data = df[column].iloc[:ten_percent_index].astype(int)  # Convert to int for comparison
+            first_10_data = df[column].iloc[:ten_percent_index].astype(int)  
             first_10_share = (first_10_data == 200).mean()
             first_10_absolute = (first_10_data == 200).sum()
-
-            # Calculate the share and absolute number of 200 codes in the last 10%
-            last_10_data = df[column].iloc[-ten_percent_index:].astype(int)  # Convert to int for comparison
+            # Last 10%
+            last_10_data = df[column].iloc[-ten_percent_index:].astype(int)
             last_10_share = (last_10_data == 200).mean()
             last_10_absolute = (last_10_data == 200).sum()
-
-            # Calculate the difference in shares and absolute numbers
+            # Calculate the difference 
             difference_share = last_10_share - first_10_share
             difference_absolute = last_10_absolute - first_10_absolute
-
-            # Prepare the results dictionary for the current host
             results_dict = {
                 'Host': column,
                 'First_10_Percent_Share': first_10_share,
@@ -252,53 +244,32 @@ class Domain_Response_Analyzator():
             # Add the counts for each non-200 status code to the results dictionary
             for status_code, count in status_counts.items():
                 results_dict[f'{status_code}'] = count
-
-            # Append the results dictionary to the results list
             results_list.append(results_dict)
-        
-        
-
-        # Convert the list of dictionaries to a DataFrame
         results_df = pandas.DataFrame(results_list)
-
-        # Extracting status code columns and sorting them numerically
-        status_code_columns = [col for col in results_df if col.isdigit()]  # Assuming status codes are direct column names
+        status_code_columns = [col for col in results_df if col.isdigit()] 
         sorted_status_code_columns = sorted(status_code_columns, key=lambda x: int(x))
-
-        # Reordering DataFrame columns: Host and other metrics first, then sorted status codes
+        # Reordering DataFrame columns: Host and others first, then sorted status codes
         other_columns = [col for col in results_df.columns if col not in status_code_columns]
         ordered_columns = other_columns + sorted_status_code_columns
         results_df = results_df[ordered_columns]
-
-
-        # Sort the DataFrame by 'Difference_Absolute', then by 'Total_Non_200_Count', both ascending
         sorted_results_df = results_df.sort_values(by=['Difference_Absolute', 'Total_Non_200_Count'], ascending=[True, True])
-
         # Save the sorted DataFrame to a new CSV file
         sorted_results_df.to_csv(f'{self.exp_path}/status_codes_analysis.csv', index=False)
-
-
-
-        return #num_hosts_100_percent_200, status_code_summary
+        return 
 
      
 
     def grouped_cc6(self, data_frame):
         
-       
+        #Bins for relative modifications
         bins = [0, 20, 40, 60, 80, 101]
         # Create a dictionary to store the averages for each host
         host_averages = {}
-
-        # Exclude the first column (hosts)
-        columns_to_consider = data_frame.columns[1:]
-
-        # Iterate through each row
+        columns_to_consider = data_frame.columns[1:] # Exclude the first column (hosts)
         for index, row in data_frame.iterrows():
-            host = row[0]  # Assuming the first column is the host
+            host = row[0]  
             # Initialize Sum and Number for each bin range for the current row
             row_averages = {f'{bins[i]}-{bins[i+1]}_average': {'Sum': 0, 'Number': 0} for i in range(len(bins) - 1)}
-
             # Iterate through each column and classify them into bins
             for col in columns_to_consider:
                 value = row[col]
@@ -310,7 +281,6 @@ class Domain_Response_Analyzator():
                             row_averages[bin_key]['Sum'] += value
                             row_averages[bin_key]['Number'] += 1
                             break
-
             # Calculate and store averages for each bin for the current row
             host_averages[host] = {bin_key: (row_averages[bin_key]['Sum'] / row_averages[bin_key]['Number']) if row_averages[bin_key]['Number'] > 0 else 0 for bin_key in row_averages}
 
@@ -486,87 +456,18 @@ class Domain_Response_Analyzator():
         return  target_list_stats
 
 
-    def filter_and_aggregate(self,pd_matrix, target_status_code, decoded_df):
-        #Filter the DataFrame to only include rows with the target_status_code
-        
-      
-        
-        filtered_df = pd_matrix[pd_matrix.iloc[:, 1:].eq(target_status_code).any(axis=1)]
-
-
-        columns_mask = filtered_df.iloc[:, 1:].eq(target_status_code).any(axis=0)
-        # Select the columns based on the mask and always include the first column
-        filtered_df = filtered_df.loc[:, ['Attempt No.\Domain'] + columns_mask[columns_mask].index.tolist()]
-        #52
-        bit_columns = decoded_df.loc[:, ['no'] + decoded_df.columns[-11:].tolist()]
-
-
-        # Join the filtered DataFrame with the last 11 columns of the decoded DataFrame
-        # Ensure that the joining columns are correctly named and aligned
-        merged_df = pandas.merge(filtered_df, bit_columns, left_on='Attempt No.\Domain', right_on='no', how='left')
-
-
-        
-        merged_df.to_csv(self.exp_path + f"/pd_{target_status_code}.csv", index=False)
-
-        #Group the filtered DataFrame by domain and count the occurrences of the target_status_code
-        status_code_counts = filtered_df.iloc[:, 1:].eq(target_status_code).sum()
-
-        #Create a dictionary to store message indexes when the code was received
-        message_indexes = {}
-        for domain in filtered_df.columns[1:]:
-            messages = filtered_df[filtered_df[domain] == target_status_code]['Attempt No.\Domain'].tolist()
-            if messages:  # Check if the list is not empty
-                message_indexes[domain] = messages
-
-        #Convert the aggregated counts to a DataFrame
-        counts_df = status_code_counts.reset_index()
-        counts_df.columns = ['Domain', 'Count']
-        
-        counts_df = counts_df[counts_df['Count'] > 0]
-        
-        #Save Results
-        with open(self.exp_path + f"/message_indexes_{target_status_code}.json", "w", encoding="utf-8") as file:
-            json.dump(message_indexes, file, indent=4)
-        counts_df.to_csv(self.exp_path+f"/counts_{target_status_code}.csv")
-
-        return counts_df, message_indexes
-
-
-
-
-    def create_stacked_bar_chart(self,data_frame):
-        # Filter the DataFrame where Bit 0 is equal to 1
-        filtered_data = data_frame[data_frame['Bit 0: Exclude Scheme'] == 1]
-
-        # Sum the response categories for the filtered data
-        stacked_data = filtered_data[['1xx', '2xx', '3xx', '4xx', '5xx', '9xx']].sum()
-
-        # Define colors for the response categories
-        colors = ['#9B59BB', '#2ECC77', '#F1C400', '#E74C33', '#3498DD', '#344955']
-
-        # Create a single stacked bar chart
-        stacked_data.plot(kind='bar', stacked=True, color=colors, figsize=(10, 6))
-
-        mpl.xlabel('Response Categories')
-        mpl.ylabel('Total Values')
-        mpl.title('Stacked Bar Chart for Bit 0 = 1')
-        mpl.legend(['Bit 0: Include Scheme'])
-
-        #mpl.show()
-
     def decode_save_cc71(self,data_frame):
         
         #CC71 Columns
         bit_columns=  [
-            'Digit+Letters',
-            'Lowercase Letters',
-            'Uppercase Letters',
+            'Digits+letters',
+            'Lowercase letters',
+            'Uppercase letters',
             'Digits',
             'Sub-Delimiters',
-            'Reserverd Characters',
-            'Encoded res. Characters',
-            'Additional Characters',
+            'Reserverd characters',
+            'Encoded res. characters',
+            'Additional characters',
         ]
 
         def decode_bits(deviation_count, num_bits):
@@ -574,17 +475,12 @@ class Domain_Response_Analyzator():
             bit_values = [(deviation_count >> bit_index) & 1 for bit_index in range(num_bits)]
             return bit_values    
 
-       
-
         # Decode each row in the original DataFrame and add the bit columns.
         for bit_index, bit_column in enumerate(bit_columns):
             data_frame[bit_column] = data_frame['deviation_count'].apply(lambda x: (x >> bit_index) & 1)
 
         data_frame.to_csv(self.exp_path + "/prerequest_decoded.csv", index=False)
-        
-        # Create an empty DataFrame to store the result
         result_df = pandas.DataFrame(columns=['Bit Name', 'Mean 1xx', 'Mean 2xx', 'Mean 3xx', 'Mean 4xx', 'Mean 5xx', 'Mean 9xx'])
-
         result_dfs = []
 
         # Iterate through each bit, calculate the mean values, and add them to the list of DataFrames
@@ -599,33 +495,30 @@ class Domain_Response_Analyzator():
         #Percentage
         result_df.iloc[:, 1:] = result_df.iloc[:, 1:].apply(lambda x: (x / x.sum()) * 100, axis=1)
         
-            # Save the DataFrame to a CSV file.
+        # Save the DataFrame to a CSV file.
         result_df.iloc[:, 1:] = result_df.iloc[:, 1:].round(1)
         result_df.to_csv(self.exp_path + "/deviations_mean.csv", index=False)
         transpose_df=result_df
         transpose_df.iloc[:, 1:] = transpose_df.iloc[:, 1:].round(2)
         transpose_df.to_latex(self.exp_path+"/deviation_means_t.tex", index=False)
+        # Make plot
         colors = ['#9B59BB', '#2ECC77', '#F1C400', '#E74C33', '#3498DD', '#344955']
         fig, ax = mpl.subplots(figsize=(10, 10))
 
         bottom = 0
-
         for i, col in enumerate(result_df.columns[1:]):
             ax.bar(result_df['Bit Name'], result_df[col], label=col, bottom=bottom, color=colors[i])
             bottom += result_df[col]
-
         ax.tick_params(axis='both', labelsize=self.font_size_axis)
-        ax.set_ylabel('Response Status Codes Share (%)', fontsize=self.font_size_axis)
-        ax.set_title('Response Codes over different Modifications',fontsize=self.font_size_title)
+        ax.set_ylabel('Response status codes share (%)', fontsize=self.font_size_axis*1.5)
+        #ax.set_title('Response Codes over different Modifications',fontsize=self.font_size_title)
         ax.legend(loc='lower right')
-        mpl.xticks(rotation=90)
+        #mpl.xticks(rotation=45, fontsize=self.font_size_axis*1.5, rotation_mode='anchor')
+        ax.set_xticklabels(ax.get_xticklabels(),fontsize=self.font_size_axis*1.5, rotation=45, ha='right', va='top', rotation_mode='anchor')
         mpl.tight_layout()
         mpl.savefig(self.exp_path+'/discrete_deviation_response_rates.png', dpi=300)
-        
         return result_df, data_frame
         
-        
-
 
 
     def count_and_plot_bit_occurrences71(self, data_frame):
@@ -637,14 +530,14 @@ class Domain_Response_Analyzator():
             return bit_occurrences
 
         bit_columns = [
-            'Digit+Letters',
-            'Lowercase Letters',
-            'Uppercase Letters',
+            'Digits+letters',
+            'Lowercase letters',
+            'Uppercase letters',
             'Digits',
             'Sub-Delimiters',
-            'Reserverd Characters',
-            'Encoded res. Characters',
-            'Additional Characters',
+            'Reserverd characters',
+            'Encoded res. characters',
+            'Additional characters',
         ]
 
         bit_occurrences = count_bit_occurrences(data_frame, bit_columns)
@@ -654,11 +547,14 @@ class Domain_Response_Analyzator():
         bits = list(bit_occurrences.keys())
         occurrences = list(bit_occurrences.values())
 
-        ax.bar(bits, occurrences, color='#3498DD')
-        ax.set_xlabel('Bit Columns')
-        ax.set_ylabel('Occurrences')
-        ax.set_title('Occurrences of Each Bit Column')
-        mpl.xticks(rotation=45, ha='right')
+        ax.bar(bits, occurrences, color='blue', width=0.5)
+        #ax.set_xlabel('Bit Columns')
+        ax.set_ylabel('Requests',fontsize=self.font_size_axis)
+        #ax.set_title('Occurrences of Each Bit Column')
+        mpl.xticks(rotation=45, ha='right', fontsize=self.font_size_label*2)
+        yticks = ax.get_yticks()
+        ax.set_yticks(yticks)
+        ax.set_yticklabels(['{:.0f}'.format(ytick) for ytick in yticks])
         mpl.tight_layout()
         mpl.savefig(self.exp_path+'/discrete_modification_occurence71.png', dpi=300)
         
@@ -832,12 +728,12 @@ class Domain_Response_Analyzator():
             return bit_occurrences
 
         bit_columns = [
-            'pos 16Bit signed int.',
-            'neg 16Bit signed int.',
-            'pos 32Bit signed int.',
-            'neg 32Bit signed int.',
-            'pos 64Bit signed int.',
-            'neg 64Bit signed int.',
+            '16Bit',
+            '-16Bit',
+            '32Bit',
+            '-32Bit',
+            '64Bit',
+            '-64Bit',
             '443',
             'No changes',
         ]
@@ -851,9 +747,9 @@ class Domain_Response_Analyzator():
 
         ax.bar(bits, occurrences, width=0.2, color='b')#, color='#3498DD')
         #ax.set_xlabel('Bit Columns')
-        ax.set_ylabel('Requests', fontsize=self.font_size_axis)
+        ax.set_ylabel('Requests', fontsize=self.font_size_axis*1.5)
         #ax.set_title('Distribution of modifications among requests', fontsize=self.font_size_title)
-        mpl.xticks(rotation=45, ha='right')
+        mpl.xticks(rotation=45, ha='right', fontsize=self.font_size_axis*1.5)
         mpl.tight_layout()
         mpl.savefig(self.exp_path+'/discrete_modification_occurence.png', dpi=300)
         
@@ -865,15 +761,16 @@ class Domain_Response_Analyzator():
         #CC53Columns
 
         bit_columns = [
-            'pos 16Bit signed int.',
-            'neg 16Bit signed int.',
-            'pos 32Bit signed int.',
-            'neg 32Bit signed int.',
-            'pos 64Bit signed int.',
-            'neg 64Bit signed int.',
+            '16Bit',
+            '-16Bit',
+            '32Bit',
+            '-32Bit',
+            '64Bit',
+            '-64Bit',
             '443',
             'No changes',
         ]
+
 
         def decode_bits(deviation_count, num_bits):
             # Create a list of bit values by decoding the deviation_count.
@@ -922,13 +819,13 @@ class Domain_Response_Analyzator():
         #ax.set_xlabel('Bit Name')
         ax.tick_params(axis='both', labelsize=self.font_size_axis)
         
-        ax.set_ylabel('Response status codes frequency (%)', fontsize=self.font_size_axis)
+        ax.set_ylabel('Response status codes frequency (%)', fontsize=self.font_size_axis*2)
         #ax.set_title('Response Codes over different Modifications',fontsize=self.font_size_title)
         ax.legend(title='2xx Rates', loc='lower right')
-        mpl.xticks(rotation=45)
+        mpl.xticks(rotation=45, fontsize=self.font_size_axis*2)
         mpl.tight_layout()
         mpl.savefig(self.exp_path+'/discrete_deviation_response_rates.png', dpi=300)
-        mpl.show()
+        #mpl.show()
         return result_df, data_frame
 
 
@@ -1103,32 +1000,36 @@ class Domain_Response_Analyzator():
                 'No changes',
             ]
         if cc==53:
-            bins = [0, 1, 2, 4, 8, 16, 32, 64]   ##
-            labels = [
-                'pos 16Bit signed Int.',
-                'neg 16Bit signed Int.',
-                'pos 32Bit signed Int.',
-                'neg 32Bit signed Int.',
-                'pos 64Bit signed Int.',
-                'neg 64Bit signed Int.',
+            bins = [0, 1, 2, 4, 8, 16, 32, 64,128]   ##
+            labels =  [
+                '16Bit',
+                '-16Bit',
+                '32Bit',
+                '-32Bit',
+                '64Bit',
+                '-64Bit',
+                '443',
                 'No changes',
                 ]
-
-            #CC7
+        if cc==71:
+            bins = [0, 1, 2, 4, 8, 16, 32, 64, 128+1]  
+            labels = [
+                'Digit+Letters',
+                'Lowercase Letters',
+                'Uppercase Letters',
+                'Digits',
+                'Sub-Delimiters',
+                'Reserverd Characters',
+                'Encoded res. Characters',
+                'Additional Characters',
+            ]
+        #CC8
+        if cc==8 or cc==81:
+            bins = [-1, 1025, 8201, 16401, 32801, result['deviation_count'].max() + 1]
+            labels = ['0-1024', '1025-8200', '8201-16400', '16401-32800', '32801-Max'] 
         #bins = [-1, 1025, 8201, 16401, 32801, result['deviation_count'].max() + 1]
         #labels = ['0-1024', '1025-8200', '8201-16400', '16401-32800', '32801-Max'] 
-        #CC71
-        #bins = [0, 1, 2, 4, 8, 16, 32, 64, 128+1]   ##
-        """labels = [
-            'Digit+Letters',
-            'Lowercase Letters',
-            'Uppercase Letters',
-            'Digits',
-            'Sub-Delimiters',
-            'Reserverd Characters',
-            'Encoded res. Characters',
-            'Additional Characters',
-        ]#"""
+        #C
         #bins = [-1, 10, 50,100, result['deviation_count'].max() + 1]
         # labels = ['0-10', '11-50', '51-100', '101-Max']  
         #bins = [-1, 20, 40, 60, 80, 1001]
@@ -1503,8 +1404,13 @@ class Domain_Response_Analyzator():
             self.plot_deviation_count_distribution(self.data_frame_prerequest_stats, ax=axs, bins=1000 )
         elif cc==7:
             self.plot_deviation_count_distribution(self.data_frame_prerequest_stats, ax=axs, bins=100 )
+        elif cc==8 or cc==81:
+            self.plot_size_distribution(self.size_df, ax=axs, bins=100 )
+            axs.set_xlabel('Request size (Byte)', fontsize=self.font_size_axis) 
+            axs.set_ylabel('Number of requests', fontsize=self.font_size_axis)
         else:
             self.plot_deviation_count_distribution(self.data_frame_prerequest_stats, ax=axs, bins=100 )
+
         #fig.suptitle("Histogram: Distribution of Modifications among Requests", fontsize=self.font_size_title, fontweight='bold')
         mpl.tight_layout()
        
@@ -1515,6 +1421,9 @@ class Domain_Response_Analyzator():
         #mpl.show()
 
         return
+
+
+
 
     def singleplot_blocking(self):
         """Create 1x1 Plot Matrix"""
@@ -1726,7 +1635,7 @@ class Domain_Response_Analyzator():
             self.status_code_curves_over_size(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100)
             axs.set_xlabel('Request size (Bytes)', fontsize=self.font_size_axis)
             axs.set_ylabel('Status code frequency (%)', fontsize=self.font_size_axis)
-        elif nr==34:
+        elif nr==35:
             x_values = [8918]#, 16412, 24687, 27483, 32430, 54630, 69234, 85014]
             self.status_code_curves_over_size(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100)
             axs.set_xlabel('Request size (Bytes)', fontsize=self.font_size_axis)
@@ -1736,19 +1645,30 @@ class Domain_Response_Analyzator():
         elif nr==4:
             self.status_code_curves_over_deviation(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=95, y_up=100)
         elif nr==7:
-            self.status_code_curves_over_deviation(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100, no_regression=True)#  CC3
+            self.status_code_curves_over_deviation(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100, no_regression=True)
             x_values = [8258, 16381, 32283, 65661, 83079]
             x_values2 = [69036]
-            #for x in x_values2:
-                #ax.axvline(x, color='magenta', linestyle=':', linewidth=1) 
-                #ax.annotate(f'{x}', (x+2300,80), textcoords="offset points", xytext=(0,10), ha='center')
+            for x in x_values2:
+                ax.axvline(x, color='magenta', linestyle=':', linewidth=1) 
+                ax.annotate(f'{x}', (x+2300,80), textcoords="offset points", xytext=(0,10), ha='center')
         elif nr==8:
             #(16*2)
-            x_values = [1792, 6240,22320,28400,58080,83504] 
+            #x_values = [1792, 6240,22320,28400,58080,83504] #Size 
+                      #modifications
+            x_values = [3357, 7479, 25569, 33030,65799,94401] 
+            #self.status_code_curves_over_deviation(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100, no_regression=True)
+            self.status_code_curves_over_size(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100)
+            axs.set_xlabel('Request size (Bytes)', fontsize=self.font_size_axis)
+            axs.set_ylabel('Status code frequency (%)', fontsize=self.font_size_axis)  
+            
         elif nr==81:
-            #(16*2)
-            x_values = [2128, 7486, 22534, 29735, 58767,87362]  
+            #(18*2)
+            x_values = [3937, 8746, 25378, 33337,65425,97030] 
+            self.status_code_curves_over_size(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100)
+            axs.set_xlabel('Request size (Bytes)', fontsize=self.font_size_axis)
+            axs.set_ylabel('Status code frequency (%)', fontsize=self.font_size_axis)
         elif nr==9:
+            self.status_code_curves_over_size(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100)
             x_values = [ 8205,16476,25305,32468,66155] 
             ax.set_ylim(80, 100)
             ax.set_xlim(0, 4000)
@@ -1772,20 +1692,19 @@ class Domain_Response_Analyzator():
                 elif nr==7:
                     axs.annotate(f'{x}', (x+2300,90), textcoords="offset points", xytext=(0,10), ha='center')
                 elif nr==8:
-                    if i==0:
-                        axs.annotate(f'{x}', (x+2200,90-i), textcoords="offset points", xytext=(0,10), ha='center')
-                    else:
-                        axs.annotate(f'{x}', (x+3000,90-i), textcoords="offset points", xytext=(0,10), ha='center')
-                    i+=3
+                    axs.annotate(f'{x:,} ({round((x-464)/36) + 12:,})', (x+1600,78), textcoords="offset points", xytext=(0,10), ha='center', rotation=90)
+                elif nr==81:
+                    axs.annotate(f'{x:,} ({round((x-464)/42) + 12:,})', (x+1600,78), textcoords="offset points", xytext=(0,10), ha='center', rotation=90)
+            
                 #y_value = data_frame.loc[data_frame['deviation_count'] == x, '2xx_percentage'].values[0]
-                #ax.scatter(x, y_value, color='blue')  # Change color as needed
+                #ax.scatter(x, y_value, color='blue')  
                 #y_value = data_frame.loc[data_frame['deviation_count'] == x, '2xx_percentage'].values[0]
 
         # Save the figure as a single PNG file
         mpl.savefig(self.exp_path+'/single_plot_mod.png', dpi=300)
 
         # Show the combined plot
-        #mpl.show()
+        #mpl.show
 
         return
 
@@ -2005,6 +1924,30 @@ class Domain_Response_Analyzator():
             ax.set_ylim(y_low, y_up)       
        
         return ax
+
+        
+
+    def plot_size_distribution(self, data_frame, ax, autolimits=True, x_low=-1, x_up=100,  y_low=0, y_up=100, bins=100 ):
+        """Distribution of Modifications among request"""
+        deviation_count = data_frame['request_length'].values
+
+        # Create a histogram
+       
+        sns.histplot(x=deviation_count, stat='count',  color='blue',  bins=bins, label='Data Distribution', ax=ax)#kde=True,
+
+        ax.grid(True)
+        if self.cc==4:
+            for bar in ax.patches:
+                current_width = bar.get_width()
+                bar.set_width(0.5)
+                bar.set_x(bar.get_x() + current_width * 0.5 - 0.25)
+
+        if autolimits is False:
+            ax.set_xlim(x_low, x_up)  
+            ax.set_ylim(y_low, y_up)       
+       
+        return ax
+
     
     def export_latex_to_report(self, latex_code, report_filename):
         with open(report_filename, 'w') as report_file:
@@ -2571,24 +2514,47 @@ class Domain_Response_Analyzator():
         colors = ['#9B59BB','#2ECC77','#F1C400','#E74C33','#3498DD','#344955']
 
         response_codes = [ '1xx','2xx', '3xx', '4xx', '5xx', '9xx']
-        
-        path="20231226_180708_adobe.com"
+        if self.cc==34:
+            #CC33
+            #uri:   https://app.hubspot.com/home-beta 33
+            #host:  app.hubspot.com 15
+            #Average URI 28,324
+            #Average Host 14,456
+            path="20231226_180708_adobe.com"
+            correction_value= -33 -15 +28 + 14 +1
+        if self.cc==8:
+            path="20231113_115553_zoho.com"
+            correction_value= -24 -12 +28 + 15 
+            #CC8 (
+            #URI https://www.zoho.com/de/  24
+            #host: www.zoho.com 12
+            #Average URI 28,324
+            #Average Host 14,456
+        if self.cc==81:
+            path="20231113_200453_zillow.com"
+            correction_value= -23 -14 +29 + 14 +1
+            #CC81
+            #URI https://www.zillow.com/  23
+            #host: www.zillow.com 14
+            #Average URI 29,19
+            #Average Host 14,417
+              
         df_size = pandas.read_csv(f'{self.exp_path2}/{path}/log_file.csv', index_col=0)
         merged_df = pandas.merge(data_frame, df_size, left_on='no', right_on='number', how='inner')
+       
+
+     
+
         
 
-        #CC3
-        #78 is the uri and host from the unchanged request
-        #uri:   https://app.hubspot.com/home-beta 33
-        #host:  app.hubspot.com 15
-        #Average URI 28,324
-        #Average Host 14,456
-        merged_df['request_length'] = merged_df['request_length'] - 33 -15 +28 + 14 +1
+        
+
+        merged_df['request_length'] = merged_df['request_length'] + correction_value
         # Select only the relevant columns
+        
         data_frame = merged_df[['request_length'] + response_codes].copy()
         
-        # Sort Data by Deviation Count
-
+        self.size_df=data_frame
         data_frame.sort_values(by='request_length', ascending=True, inplace=True)
         # Mean Value per deviation count
         data_frame = data_frame.groupby('request_length').mean().reset_index()
@@ -2620,24 +2586,7 @@ class Domain_Response_Analyzator():
         #mean_2 = cluster_2['2xx_percentage'].mean()
         #mean_3 = cluster_3['2xx_percentage'].mean()
         #ax.axhline(33, color='magenta', linestyle='--', label=f'33%')
-        """"
-        slope, intercept, r_value, p_value, std_err = stats.linregress(data_frame['request_length'], data_frame['2xx_percentage'])
-        regression_line = slope * data_frame['request_length'] + intercept
-        ax.plot(data_frame['request_length'], regression_line, color='darkgreen', linestyle='dotted', label='2xx Regression Line')
-
-        intercept_start = slope* data_frame['request_length'].min()+intercept
-        intercept_start_str = f"{intercept_start:.1f}%"
-        intercept_start=round(intercept_start)
-        max_x=data_frame['request_length'].max()+1
-        intercept_end=slope* max_x+intercept
-        intercept_end_str = f"{intercept_end:.1f}%"
-        intercept_end=round(intercept_end)
-        #definition = f'Regression Line: y = {slope:.4f}x + {intercept:.4f}\nR-squared: {r_value ** 2:.2f}'
-        
-        #ax.text(400, (intercept_start+intercept_end)/2, definition, fontsize=12, color='black')
-        ax.text(-int(0.05*max_x), intercept_start, intercept_start_str, fontsize=12, color='black')
-        ax.text(int(1.0*max_x), intercept_end, intercept_end_str, fontsize=12, color='black')
-        """
+    
         #x1, y1 = 0, 62
         #x2, y2 = data_frame['deviation_count'].values.max(), 53
         #mpl.plot([x1, x2], [y1, y2], color='magenta', linestyle='dotted', label=f'62-53%')
@@ -2674,16 +2623,18 @@ class Domain_Response_Analyzator():
         ##CC 7
         #x_values = [8299, 16272, 32983, 68243] 
         ##CC8 (16*2)
-        #x_values = [1792, 6240,22320,28400,58080,83504] 
+        if self.cc==8: 
+           x_values = [1792, 6240,22320,28400,58080,83504] 
         ##CC 8a (19*2)
-        #x_values = [2128, 7486, 22534, 29735, 58767] 
+        if self.cc==81:
+            x_values = [2128, 7486, 22534, 29735, 58767] 
         ##CC9
         #x_values = [1743, 8205,16476,25305,32468,66155] 
         i=0
-        for x in x_values:
-            ax.axvline(x, color='magenta', linestyle='--', linewidth=1)  # Change color and style as needed
+        """for x in x_values:
+            ax.axvline(x, color='magenta', linestyle='--', linewidth=1)  
             #y_value = data_frame.loc[data_frame['deviation_count'] == x, '2xx_percentage'].values[0]
-            #ax.scatter(x, y_value, color='blue')  # Change color as needed
+            #ax.scatter(x, y_value, color='blue') 
             #y_value = data_frame.loc[data_frame['deviation_count'] == x, '2xx_percentage'].values[0]
             #CC3
             #ax.annotate(f'{x}', (x+2500,85-i), textcoords="offset points", xytext=(0,10), ha='center')
@@ -2753,8 +2704,10 @@ def get_logs_directory():
 
 if __name__ == "__main__":
     log_dir=get_logs_directory()
-   # path = f"{log_dir}/extracted_logs/EOW/experiment_17"
-    path = f"{log_dir}/experiment_215"
+    path = f"{log_dir}/extracted_logs/attic/experiment_33"
+    #
+    # path = f"{log_dir}/extracted_logs/EOW/experiment_21"
+    #path = f"{log_dir}/experiment_215"
     dra = Domain_Response_Analyzator(path)
     dra.start()
   

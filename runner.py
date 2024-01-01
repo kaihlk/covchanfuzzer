@@ -12,7 +12,7 @@ import pandas
 import http1_covert_channels
 from logger import ExperimentLogger, TestRunLogger
 from custom_http_client import CustomHTTP
-from host_crawler import host_crawler
+#from host_crawler import host_crawler
 import class_mapping
 import http1_request_builder as request_builder
 import target_list_preparator
@@ -65,7 +65,7 @@ class ExperimentRunner:
 
     def baseline_check(self):
         """Check if the host is not blocking the request due to detection"""
-        # TODO: TLS Rebuild Messages doesnt work
+        #TODO: TLS Rebuild Messages doesnt work
         return True
 
     
@@ -84,7 +84,7 @@ class ExperimentRunner:
         )
 
         
-        #Need to be implemented
+        #pregenerated Request from List beed to be implemented
         if covert_channel == 0:
             request, deviation_count, uri = self.get_prerequest_from_list(
                 attempt_no, self.experiment_configuration["CSV_request_list"])
@@ -143,7 +143,6 @@ class ExperimentRunner:
                                 unique = False
                                 break
                         # Prevent endless loop if all variations have been tried, save them for later check
-
                         if retry > maximum_retries:
                             self.exp_log.save_prerequests(self.prerequest_list)
                             raise RuntimeError(
@@ -221,7 +220,6 @@ class ExperimentRunner:
             if domain not in self.pd_matrix.index:
                 self.pd_matrix.at[domain, "Attempt No.\Domain"] = domain
             self.pd_matrix.at[domain, attempt_no] = response_status_code
-
         return
 
     def add_status_code_to_prerequest_list(self, attempt_no, response_line):
@@ -259,64 +257,45 @@ class ExperimentRunner:
 
             if category not in self.uri_deviation_table.columns:
                 self.uri_deviation_table[category] = 0
-
             if category not in self.rel_uri_deviation_table.columns:
                 self.rel_uri_deviation_table[category] = 0
 
             if deviation_count <= 0:
                 rel_deviation = 0
-            # Calculate relative change in percentage  
-            # Count only letters
+            # Calculate relative change in percentage
+            # Count only letters, round to the nearest whole percent
             letter_count = sum(1 for char in uri if char.isalpha())
             rel_deviation = (deviation_count / letter_count) * 100
-            
-            # Round to the nearest whole percent
             rel_deviation = round(rel_deviation)
-
-            # RELATIV DF
+            # relative DF
             if rel_deviation not in self.rel_uri_deviation_table["Relative Deviation"].values:
                 new_row = {"Relative Deviation": rel_deviation}
                 for col in self.rel_uri_deviation_table.columns:
                     if col != "Relative Deviation":
                         new_row[col] = 0
-
                 # Create a new DataFrame with the new row
                 new_df = pandas.DataFrame([new_row])
-
                 # Concatenate the new DataFrame with the existing DataFrame
                 self.rel_uri_deviation_table = pandas.concat(
                     [self.rel_uri_deviation_table, new_df], ignore_index=True)
-
-            # ABSOLUT DF
-            # Check if the deviation_count row already exists in the DataFrame
+            # absolute DF
+            # Check if the deviation_count row already exists in the DataFrame, else create a new and concat
             if deviation_count not in self.uri_deviation_table["Deviation Count"].values:
                 new_row = {"Deviation Count": deviation_count}
                 for col in self.uri_deviation_table.columns:
                     if col != "Deviation Count":
-                        new_row[col] = 0
-
-                # Create a new DataFrame with the new row
+                        new_row[col] = 0     
                 new_df = pandas.DataFrame([new_row])
-
-                # Concatenate the new DataFrame with the existing DataFrame
                 self.uri_deviation_table = pandas.concat(
                     [self.uri_deviation_table, new_df], ignore_index=True)
-
-            # Find the index of the deviation_count row
-            row_index = self.uri_deviation_table.index[self.uri_deviation_table["Deviation Count"] == deviation_count].tolist()[
-                0]
-            rel_row_index = self.rel_uri_deviation_table.index[self.rel_uri_deviation_table["Relative Deviation"] == rel_deviation].tolist()[
-                0]
-
-            # Get the current count for the specified category
+            # Find the index of the deviation_count row and current county
+            row_index = self.uri_deviation_table.index[self.uri_deviation_table["Deviation Count"] == deviation_count].tolist()[0]
+            rel_row_index = self.rel_uri_deviation_table.index[self.rel_uri_deviation_table["Relative Deviation"] == rel_deviation].tolist()[0]
             count = self.uri_deviation_table.at[row_index, category]
             rel_count = self.rel_uri_deviation_table.at[rel_row_index, category]
-            # Increment the value in the specified category column
             self.uri_deviation_table.at[row_index, category] = count + 1
-            self.rel_uri_deviation_table.at[rel_row_index,
-                                            category] = rel_count + 1
-
-            # Sort the DataFrame by "Deviation Count" in ascending order
+            self.rel_uri_deviation_table.at[rel_row_index, category] = rel_count + 1
+            # Sort the DataFrame by "Deviation Count" 
             self.uri_deviation_table = self.uri_deviation_table.sort_values(
                 by="Deviation Count", ascending=True)
             self.rel_uri_deviation_table = self.rel_uri_deviation_table.sort_values(
@@ -337,7 +316,7 @@ class ExperimentRunner:
             custom_request=request,
             timeout=self.experiment_configuration["conn_timeout"],
             verbose=self.experiment_configuration["verbose"],
-            log_path=log_path,  # Transfer to save TLS Keys
+            log_path=log_path,  # Folder to save TLS Keys
         )
         if self.experiment_configuration["verbose"] is True:
             print("Response:", response_line)
@@ -351,6 +330,7 @@ class ExperimentRunner:
             if self.error_event.is_set():
                 break
             try:
+                #Get new prerequest from list or generate it
                 prerequest = self.get_next_prerequest(i)
             except RuntimeError as e:
                 self.runner_logger.error(
@@ -360,14 +340,12 @@ class ExperimentRunner:
                 self.runner_logger.error(
                     "Error getting Prerequest from list %s", e)
 
-            # for host_data,logger in zip(sub_set_dns, logger_list):
-
             for host_data, logger in zip(sub_set_dns.iterrows(), logger_list):
                 host_data = host_data[1]
 
             # Round Robin one Host after each other
                 if self.baseline_check() is False:
-                    # TODO, raise error
+                    # TODO, Frequency, How to save them, how to find blocking targets
                     print("Baseline Check Failure, Connection maybe blocked")
                 else:
                     # Send the HTTP request and get the response in the main threads
@@ -377,11 +355,10 @@ class ExperimentRunner:
                         socket_dns_info = host_data["socket_dns_info"]
                         selected_covert_channel = class_mapping.requests_builders[
                             self.experiment_configuration["covertchannel_request_number"]]()
-
+                        #TODO Try different path from the same domain for stealthiness
                         path = selected_covert_channel.path_generator(
                             host_data["paths"], test_path=self.experiment_configuration["path"], fuzzvalue=self.experiment_configuration["min_fuzz_value"])
-
-                        # INSERT CLEVER DEVIATION SPREADER HERE
+                        #Adopt  prerequest to target
                         request, deviation_count_uri, uri = selected_covert_channel.replace_host_and_domain(prerequest["request"], uri, self.experiment_configuration["standard_subdomain"], socket_dns_info["host"], include_subdomain_host_header=self.experiment_configuration["include_subdomain_host_header"], path=path, override_uri="",  fuzzvalue=self.experiment_configuration["min_fuzz_value"])
                         deviation_count_request = prerequest["deviation_count"]
                         deviation_count = deviation_count_uri+deviation_count_request
@@ -390,6 +367,7 @@ class ExperimentRunner:
                         self.runner_logger.error(
                             "Error building request for host: %s", e)
                     try:
+                        #Sent and receive Rrquest
                         start_time = time.time()
                         response_line, response_header_fields, body, measured_times, error_message = self.send_and_receive_request(
                             i,
@@ -414,7 +392,6 @@ class ExperimentRunner:
                                 "Exception during updating request matrix: %s", e)
                         self.add_devcount_and_status_code_to_df(
                             deviation_count_uri, response_line, uri)
-
                         self.check_content(body)
                         with self.lock_mc:
                             self.message_count += 1
@@ -437,12 +414,12 @@ class ExperimentRunner:
                 "Error while getting subset objects: %s", e)
         # Initialise Logger List
         logger_list = []
-        # Create logger object for each target in subset_dns
- 
+
         # Start the processing of the subset_dns and its corresponding loggers
         for index, target_info in subset.iterrows():
             try:
                 host_ip_info = target_info["socket_dns_info"]
+                # Create targets specific logger object
                 logger = TestRunLogger(
                     self.experiment_configuration,
                     self.exp_log.get_experiment_folder(),
@@ -483,29 +460,24 @@ class ExperimentRunner:
         '''Setups the Experiment, creates an experiment logger, and starts the experiment run'''
         start_time = time.time()
         try:
-            
             # Create Folder for the experiment and save the path
             self.exp_log = ExperimentLogger(
                 self.experiment_configuration, self.global_log_folder)
-
-            # Start Global Capturing Process
-
+            # Start global capturing process with dumpcap
             global_stop_event = threading.Event()
             global_capture_thread = threading.Thread(
                 target=self.exp_log.capture_packets_dumpcap, args=(global_stop_event,))
             global_capture_thread.start()
             time.sleep(1)
-
+            #Prepare target List
             list_preparator = target_list_preparator.TargetListPreperator(
                 self.experiment_configuration, self.exp_log)
             df_target_list, invalid_entries = list_preparator.prepare_target_list()
-
-
             # Initialize
             fuzz_tasks = []
             subset_length = self.experiment_configuration["target_subset_size"]
             max_workers = self.experiment_configuration["max_workers"]
-            # Check max ative workers depending on configuration
+            # Check maximum ative workers depending on configuration
             max_active_workers = max(
                 self.experiment_configuration["max_targets"]/subset_length, 1)
             if max_active_workers > self.experiment_configuration["max_workers"]:
@@ -513,36 +485,28 @@ class ExperimentRunner:
             active_workers = 0
             processed_targets = 0
             start_position = 0
-
             # Iterate through target list
             with concurrent.futures.ThreadPoolExecutor(max_workers=self.experiment_configuration["max_workers"]) as fuzz_executor:
                 # Iterate though the list, if DNS Lookups or Basechecks fail, the entry from the list is droped and a new entry will be appended
                 # Take subsets from target_list until the the processed targets are equal or less than  configured max_targets
                 while processed_targets < self.experiment_configuration["max_targets"]:
                     # Create futures until max__active workers
-
                     while active_workers < max_active_workers:
-                        # If target_list limit is reached, break_
-                        # len(prepared_target_list):
+                        # If target_list limit is reached, reduce subset size break_
                         if start_position+subset_length > df_target_list.shape[0]:
-                            #    #Raise Error?
                             subset_length -= 1
                             break
-                            # Get DNS Infomation for the subset, if the lookup fails for an entry the subset will be shortened
                         try:
-                            fuzz_task = fuzz_executor.submit(
-                                self.fuzz_subset, df_target_list, start_position, subset_length)  # prepared_target_list
-
                             # Get a subset with valid entries
+                            fuzz_task = fuzz_executor.submit(
+                                self.fuzz_subset, df_target_list, start_position, subset_length)  # prepared_target_list     
                             # Shift the start position for next iteration
-
                             start_position += subset_length
                             # Submit the subset for processing to executor
                             fuzz_tasks.append(fuzz_task)
                             active_workers += 1
                             if self.error_event.is_set():
                                 break
-
                         except Exception as e:
                             self.runner_logger.error(
                                 "Error during subset Fuzzing DNS Lookups for subset: %s", e)
@@ -550,15 +514,12 @@ class ExperimentRunner:
                             continue
                     if self.error_event.is_set():
                         break
-
                     # Wait for a completed task
-
                     completed_tasks, _ = concurrent.futures.wait(
                         fuzz_tasks, return_when=concurrent.futures.FIRST_COMPLETED)
                     for completed_task in completed_tasks:
                         try:
                             processed_targets += len(completed_task.result())
-
                         except Exception as e:
                             self.runner_logger.error(
                                 "Error while processing completed task: %s", e)
@@ -586,12 +547,8 @@ class ExperimentRunner:
             print("Processed Targets: ", processed_targets)
             # Save OutCome to experiment Folder csv.
             try:
-
                 self.exp_log.add_global_entry_to_experiment_list(
                     self.experiment_configuration["experiment_no"])
-                #self.exp_log.save_dns_fails(self.dns_fails)
-                #self.exp_log.save_target_list(self.processed_targets)
-                #self.exp_log.save_base_checks_fails(self.base_check_fails)
                 self.exp_log.save_prerequests(self.prerequest_list)
                 self.exp_log.prerequest_statisics(
                     self.prerequest_list, self.message_count)
