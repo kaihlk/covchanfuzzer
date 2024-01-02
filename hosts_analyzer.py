@@ -53,42 +53,42 @@ if __name__ == "__main__":
     log_dir=get_logs_directory()
     #experiment numbers for EOW and ATTIC
     eow_experiment_numbers = [ 7, 17, 18, 20,  21, 22, 24, 25,26,27,28]  
-    attic_experiment_numbers = [ 29, 30, 32, 33, 34, 36, 37,38]  #29, #'Host_ATTIC_38': 'Experiment 3.1',#To
+    attic_experiment_numbers = [ 29, 30, 32, 33, 34, 36, 37,38]  #29, #'Host_ATTIC_38': 'Exp. 3.1',#To
     name_mapping = {
-        'Host_EOW_7': 'Experiment 1',
-        'Host_EOW_25': 'Experiment 2',
-        'Host_attic_38': 'Experiment 3', 
-        'Host_EOW_27': 'Experiment 3.1',#Replaced attic 29
-        'Host_EOW_17': 'Experiment 3.2',
-        'Host_attic_36': 'Experiment 4',
-        'Host_attic_30': 'Experiment 5',
-        'Host_EOW_28': 'Experiment 5.1',
-        'Host_EOW_18': 'Experiment 6',
-        'Host_EOW_20': 'Experiment 6.1',
-        'Host_EOW_24': 'Experiment 7',
-        'Host_attic_33': 'Experiment 7.1',
-        'Host_EOW_21': 'Experiment 8',
-        'Host_attic_34': 'Experiment 8.1',
-        'Host_EOW_22': 'Experiment 9',
-        'Host_attic_37': 'Experiment 9.1',
+        'Host_EOW_7': 'Exp. 1',
+        'Host_EOW_25': 'Exp. 2',
+        'Host_attic_38': 'Exp. 3', 
+        'Host_EOW_27': 'Exp. 3.1',#Replaced attic 29
+        'Host_EOW_17': 'Exp. 3.2',
+        'Host_attic_36': 'Exp. 4',
+        'Host_attic_30': 'Exp. 5',
+        'Host_EOW_28': 'Exp. 5.1',
+        'Host_EOW_18': 'Exp. 6',
+        'Host_EOW_20': 'Exp. 6.1',
+        'Host_EOW_24': 'Exp. 7',
+        'Host_attic_33': 'Exp. 7.1',
+        'Host_EOW_21': 'Exp. 8',
+        'Host_attic_34': 'Exp. 8.1',
+        'Host_EOW_22': 'Exp. 9',
+        'Host_attic_37': 'Exp. 9.1',
         }
     order = [
-        'Experiment 1',
-        'Experiment 2',
-        'Experiment 3',
-        'Experiment 3.1',
-        'Experiment 3.2',
-        'Experiment 4',
-        'Experiment 5',
-        'Experiment 5.1',
-        'Experiment 6',
-        'Experiment 6.1',
-        'Experiment 7',
-        'Experiment 7.1',
-        'Experiment 8',
-        'Experiment 8.1',
-        'Experiment 9',
-        'Experiment 9.1',
+        'Exp. 1',
+        'Exp. 2',
+        'Exp. 3',
+        'Exp. 3.1',
+        'Exp. 3.2',
+        'Exp. 4',
+        'Exp. 5',
+        'Exp. 5.1',
+        'Exp. 6',
+        'Exp. 6.1',
+        'Exp. 7',
+        'Exp. 7.1',
+        'Exp. 8',
+        'Exp. 8.1',
+        'Exp. 9',
+        'Exp. 9.1',
        ]
 
     
@@ -169,8 +169,10 @@ if __name__ == "__main__":
     
     similarity_matrix = similarity_matrix.astype(int)
     # Generate a heatmap
-    plt.figure(figsize=(10, 8))
+    plt.figure(figsize=(10, 10))
     # The 'fmt' parameter can be omitted if all values are integers
     sns.heatmap(similarity_matrix, annot=True, fmt='d' ,cmap='coolwarm')
-    plt.title('Heatmap of Common Entries Between Experiments')
+
+    plt.tight_layout()
+    #plt.title('Heatmap of Common Entries Between Experiments')
     plt.show()

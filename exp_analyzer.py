@@ -79,9 +79,9 @@ class Domain_Response_Analyzator():
         return logs_directory
 
     def start(self):
-
-        cc=71
+        cc=91
         self.cc = cc
+       
         eval_folder= f"{self.exp_path}/evaluation"
         os.makedirs(eval_folder, exist_ok=True)
         self.exp_path2=self.exp_path
@@ -164,11 +164,24 @@ class Domain_Response_Analyzator():
             self.count_and_plot_bit_occurrences71(decoded_df)
         if cc==8:
             self.singleplot_mod(cc)
+            self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats,cc=cc)
             self.single_plot_deviation_count_distribution(cc)
             
         if cc==81:
             self.singleplot_mod(cc)
+            self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats,cc=cc)
             self.single_plot_deviation_count_distribution(cc)
+        if cc==9:
+            self.singleplot_mod(cc)
+            self.single_plot_deviation_count_distribution(cc)
+           
+            self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats,cc=cc)
+        if cc==91:
+            self.check_91_key_value_length(self.data_frame_prerequest_stats.copy())
+            self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats,cc=cc)
+            self.singleplot_mod(cc)
+            self.single_plot_deviation_count_distribution(cc)
+
         #Details on status code 
         #self.filter_and_aggregate(self.data_frame_pd_matrix.copy(), 429, decoded_df.copy())
 
@@ -185,7 +198,7 @@ class Domain_Response_Analyzator():
 
         
         ##CC91
-        ##self.check_91_key_value_length(self.data_frame_prerequest_stats.copy())
+        ##
         ##self.grouped_results_csv(self.data_frame_pd_matrix,self.data_frame_prerequest_stats)
         ##self.status_code_curves_over_deviation(self.data_frame_prerequest_stats.copy(), ax=None)
         ##self.status_code_bars_over_deviation(self.data_frame_prerequest_stats, ax=None)
@@ -981,7 +994,7 @@ class Domain_Response_Analyzator():
         #bins = [-1, 20, 200, result['deviation_count'].max() + 1]
         #labels = ['0-20', '20-200', '200-2000']     
         
-        #CC EOW2
+        #CC 
         #CC4: 
         
         if cc==52:
@@ -1025,8 +1038,28 @@ class Domain_Response_Analyzator():
             ]
         #CC8
         if cc==8 or cc==81:
-            bins = [-1, 1025, 8201, 16401, 32801, result['deviation_count'].max() + 1]
-            labels = ['0-1024', '1025-8200', '8201-16400', '16401-32800', '32801-Max'] 
+            if cc==8:
+                correction_value=507
+            if cc==81:
+                correction_value=514
+            result['deviation_count'] = result['deviation_count'] + correction_value
+            bins = [-1, 8192, 16384, 24576, 32768, 65536 ,result['deviation_count'].max() + 1]
+            labels = ['0-8192', '8193-16384', '16385-24576', '24577-32768', '32769-65536', '65537-max'] 
+        
+            #bins = [-1, 3358, 7450, 25570, 33030, 65800 ,result['deviation_count'].max() + 1]
+            #labels = ['0-3357', '3359-7449', '7450-25569', '25570-33030', '33031-65800', '65801-max'] 
+
+        if cc==9: 
+            correction_value=446
+            result['deviation_count'] = result['deviation_count'] + correction_value
+            bins = [-1, 8192, 16384, 24576, 32768, 65536 ,result['deviation_count'].max() + 1]
+            labels = ['0-8192', '8193-16384', '16385-24576', '24577-32768', '32769-65536', '65537-max'] 
+        if cc==91:
+            correction_value=446
+            result['deviation_count'] = result['deviation_count'] + correction_value
+            bins = [-1, 1025, 2049, 4097, 8183, result['deviation_count'].max() + 1]
+            labels = ['0-1024', '1025-2048', '2049-4096', '4097-8192', '8193-Max']  
+
         #bins = [-1, 1025, 8201, 16401, 32801, result['deviation_count'].max() + 1]
         #labels = ['0-1024', '1025-8200', '8201-16400', '16401-32800', '32801-Max'] 
         #C
@@ -1633,12 +1666,12 @@ class Domain_Response_Analyzator():
         elif nr==34:
             x_values = [8918, 16412, 24687, 27483, 32430, 54630, 69234, 85014]
             self.status_code_curves_over_size(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100)
-            axs.set_xlabel('Request size (Bytes)', fontsize=self.font_size_axis)
+            axs.set_xlabel('Request size (bytes)', fontsize=self.font_size_axis)
             axs.set_ylabel('Status code frequency (%)', fontsize=self.font_size_axis)
         elif nr==35:
             x_values = [8918]#, 16412, 24687, 27483, 32430, 54630, 69234, 85014]
             self.status_code_curves_over_size(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100)
-            axs.set_xlabel('Request size (Bytes)', fontsize=self.font_size_axis)
+            axs.set_xlabel('Request size (bytes)', fontsize=self.font_size_axis)
             axs.set_ylabel('Status code frequency (%)', fontsize=self.font_size_axis)    
             
             #axs.set_title('Status Codes Frequency over Request Size', fontsize=self.font_size_title, fontweight='bold')
@@ -1658,22 +1691,37 @@ class Domain_Response_Analyzator():
             x_values = [3357, 7479, 25569, 33030,65799,94401] 
             #self.status_code_curves_over_deviation(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100, no_regression=True)
             self.status_code_curves_over_size(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100)
-            axs.set_xlabel('Request size (Bytes)', fontsize=self.font_size_axis)
+            axs.set_xlabel('Request size (bytes)', fontsize=self.font_size_axis)
             axs.set_ylabel('Status code frequency (%)', fontsize=self.font_size_axis)  
             
         elif nr==81:
             #(18*2)
             x_values = [3937, 8746, 25378, 33337,65425,97030] 
             self.status_code_curves_over_size(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100)
-            axs.set_xlabel('Request size (Bytes)', fontsize=self.font_size_axis)
+            axs.set_xlabel('Request size (bytes)', fontsize=self.font_size_axis)
             axs.set_ylabel('Status code frequency (%)', fontsize=self.font_size_axis)
-        elif nr==9:
+        elif nr==99:
+            
+            
+            self.status_code_curves_over_size(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100)
+            axs.set_ylim(80, 100)
+            axs.set_xlim(0, 4000)
+
+
+            mpl.savefig(self.exp_path+'/single_plot_mod_detail.png', dpi=300)
+            x_values = [ 8205,16476,25305,32468,66155] 
+            axs.set_ylim(0, 100)
+            axs.set_xlim(0, 16000)
+
+        elif nr==91:
             self.status_code_curves_over_size(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100)
             x_values = [ 8205,16476,25305,32468,66155] 
-            ax.set_ylim(80, 100)
-            ax.set_xlim(0, 4000)
+            axs.set_ylim(80, 100)
+            axs.set_xlim(0, 4000)
             mpl.savefig(self.exp_path+'/single_plot_mod_detail.png', dpi=300)
-
+            x_values = [ 8115] 
+            axs.set_ylim(0, 100)
+            axs.set_xlim(0, 23000)
         else:
             self.status_code_curves_over_deviation(self.data_frame_prerequest_stats.copy(), ax=axs,subplottitles=False, autolimits=False, y_low=0, y_up=100)
             axs.legend(loc="upper right")
@@ -1695,7 +1743,11 @@ class Domain_Response_Analyzator():
                     axs.annotate(f'{x:,} ({round((x-464)/36) + 12:,})', (x+1600,78), textcoords="offset points", xytext=(0,10), ha='center', rotation=90)
                 elif nr==81:
                     axs.annotate(f'{x:,} ({round((x-464)/42) + 12:,})', (x+1600,78), textcoords="offset points", xytext=(0,10), ha='center', rotation=90)
-            
+                elif nr==9:
+                    axs.annotate(f'{x}', (x+200,90), textcoords="offset points", xytext=(0,10), ha='center', rotation=90)
+                elif nr==91:
+                    axs.annotate(f'{x}', (x+200,90), textcoords="offset points", xytext=(0,10), ha='center', rotation=90)    
+
                 #y_value = data_frame.loc[data_frame['deviation_count'] == x, '2xx_percentage'].values[0]
                 #ax.scatter(x, y_value, color='blue')  
                 #y_value = data_frame.loc[data_frame['deviation_count'] == x, '2xx_percentage'].values[0]
@@ -2484,16 +2536,18 @@ class Domain_Response_Analyzator():
         # Plotting value_length vs 2xx/10
         mpl.plot(df_sorted_by_value['value_length'], df_sorted_by_value['2xx']/10, label='Value Length', color='red')
 
-        mpl.xlabel('Length')
-        mpl.ylabel('2xx Response Rate %')
-        mpl.title('Header/Key Length vs 2xx Rates')
+        mpl.xlabel('Length (bytes)')
+        mpl.ylabel('2xx Response rate %')
+        #mpl.title('Header/Key Length vs 2xx Rates')
         mpl.legend()
         mpl.grid(True)
         #mpl.show()
         mpl.savefig(self.exp_path+'/key_value.png', dpi=300, bbox_inches='tight')
         mpl.xlim(0,1000)
         mpl.axvline(256, color='magenta', linestyle='--', linewidth=1)
-        mpl.annotate('256', (280,80), textcoords="offset points", xytext=(0,10), ha='center')
+        #mpl.axvline(8115, color='magenta', linestyle='--', linewidth=1)
+        mpl.annotate('256', (280,80), textcoords="offset points", xytext=(0,10), ha='center', rotation=90)
+        #mpl.annotate('8115', (8395,80), textcoords="offset points", xytext=(0,10), ha='center', rotation=90)
         mpl.savefig(self.exp_path+'/key_value_detail.png', dpi=300, bbox_inches='tight')
         
     # Applying this function to the DataFrame
@@ -2538,17 +2592,27 @@ class Domain_Response_Analyzator():
             #host: www.zillow.com 14
             #Average URI 29,19
             #Average Host 14,417
-              
+        if self.cc==9:
+            path="20231113_190235_zemanta.com"
+            correction_value= -24 -15 +29 + 15
+            #CC9
+            #URI https://www.zemanta.com/  24
+            #host: www.zemanta.com 15
+            #Average URI 29,1
+            #Average Host 14,6
+
+        if self.cc==91:
+            path="20231122_150900_zillow.com"
+            correction_value= -23 -14 +28 + 14
+            #CC9
+            #URI https://www.zillow.com/  23
+            #host: www.zillow.com 14
+            #Average URI 28,
+            #Average Host 14,4
+
+
         df_size = pandas.read_csv(f'{self.exp_path2}/{path}/log_file.csv', index_col=0)
         merged_df = pandas.merge(data_frame, df_size, left_on='no', right_on='number', how='inner')
-       
-
-     
-
-        
-
-        
-
         merged_df['request_length'] = merged_df['request_length'] + correction_value
         # Select only the relevant columns
         
@@ -2664,36 +2728,6 @@ class Domain_Response_Analyzator():
 
 
 
-
-
-
-    def plot_scatter_prerequest(self, data_frame):
-        """Figure 3.1 Bottom Left, URI"""
-        mpl.figure(figsize=(10, 8))
-        mpl.scatter(data_frame['Relative Deviation'], data_frame['2xx'] / data_frame['Sum'] * 100, alpha=0.5, s=500)  # Alpha for transparency
-
-        # Add labels and title
-        mpl.xlabel('Relative Deviation of URI')
-        mpl.ylabel('2xx Response Rate (%)')
-        mpl.title('Scatter Plot of 2xx Response Rate over relative URI Deviation', fontweight='bold')
-
-        # Set y-axis limits to 0% and 100%
-        mpl.ylim(0, 100)
-
-        # Set y-tick locations and format labels as percentages
-        yticks = mpl.gca().get_yticks()
-        mpl.gca().set_yticks(yticks)
-        mpl.gca().set_yticklabels(['{:.1f}%'.format(ytick) for ytick in yticks])
-
-        # Show the plot
-        mpl.grid(True)
-        mpl.tight_layout()
-        mpl.savefig(self.exp_path+'/exp_stats_rel_uri_statuscodes.png', dpi=300, bbox_inches='tight')
-        #mpl.show()
-
-        return
-
-
 def get_logs_directory():
     """Get or create local log directory"""
     script_directory = os.path.dirname(os.path.abspath(__file__))
@@ -2704,10 +2738,14 @@ def get_logs_directory():
 
 if __name__ == "__main__":
     log_dir=get_logs_directory()
-    path = f"{log_dir}/extracted_logs/attic/experiment_33"
-    #
-    # path = f"{log_dir}/extracted_logs/EOW/experiment_21"
+
+    #path = f"{log_dir}/extracted_logs/attic/experiment_34"
+    #CC9
+    #path = f"{log_dir}/extracted_logs/EOW/experiment_22"
+    #CC91
+    path = f"{log_dir}/extracted_logs/attic/experiment_37"
     #path = f"{log_dir}/experiment_215"
     dra = Domain_Response_Analyzator(path)
+    
     dra.start()
   
