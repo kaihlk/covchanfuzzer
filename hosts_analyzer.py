@@ -72,7 +72,7 @@ if __name__ == "__main__":
         'Host_EOW_22': 'Exp. 9',
         'Host_attic_37': 'Exp. 9.1',
         }
-    order = [
+    order = [   
         'Exp. 1',
         'Exp. 2',
         'Exp. 3',

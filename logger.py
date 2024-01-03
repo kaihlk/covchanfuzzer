@@ -76,6 +76,7 @@ class TestRunLogger:
         return
 
     def rel_uri_count(self, new_uri, status_code, deviation_count, attempt_no):
+        '''Counts URI for CC6'''
         row={}
         host=self.target_host
         original_uri= self.base_uri
@@ -118,7 +119,7 @@ class TestRunLogger:
       
 
     def add_request_response_data(self, attempt_number, request, deviation_count, uri, response_line, response_header_fields, body, measured_times, error_message):
-        """Save as csv."""
+        """Records Request and Response Data"""
         if response_line is not None:
             response_http_version = response_line["HTTP_version"]
             response_status_code = response_line["status_code"]
@@ -241,11 +242,7 @@ class TestRunLogger:
 
         os.chmod(wireshark_script_path, 0o755)
 
-    def logger_print():
-        #TODO
-        print("Status Code Counts:")
-        for status_code, count in self.status_code_count.items():
-            print(f"{status_code}: {count}")
+
     
     def save_request_response_data(self, request_response_data):
         '''Save the recorded requests'''
@@ -271,6 +268,7 @@ class TestRunLogger:
         return data_frame
 
     def save_rel_uri_status_code(self, data):
+        """CC6"""
         log_file_path = f"{self.log_folder}/rel_uri_deviation.csv"
         data_frame=pandas.DataFrame(data)
         data_frame.to_csv(log_file_path)
@@ -308,10 +306,10 @@ class TestRunLogger:
         for code in ['1xx', '2xx', '3xx', '4xx', '5xx', '9xx']:
             modification_stats[code + '_Percentage'] = (modification_stats[code] / modification_stats['Count']) * 100
 
+        #Save Data
         log_file_path = f"{self.log_folder}/rel_uri_statuscode_stats.csv"
         rel_deviation_stats.to_csv(log_file_path)
-        #log_file_path = f"{self.log_folder}/rel_uri_statuscode_freq_stats.csv"
-        #rel_freq_stats_percentage.to_csv(log_file_path)
+       
         log_file_path = f"{self.log_folder}/rel_uri_modification_type_stats.csv"
         modification_stats.to_csv(log_file_path)
 
@@ -349,9 +347,6 @@ class TestRunLogger:
                 csv_writer.writeheader()
             row = percentage_dict_mod.copy()
             csv_writer.writerow(row)
-
-        return
-    
 
         
         return data_frame,rel_deviation_stats, modification_stats
@@ -542,6 +537,7 @@ class TestRunLogger:
 
 class ExperimentLogger:
     def __init__(self, experiment_configuration, global_log_folder):
+        """Logs the whole Experiment, Data from Runner"""
         self.experiment_configuration = experiment_configuration
         self.experiment_folder = self.create_experiment_folder(experiment_configuration["experiment_no"], global_log_folder)
         self.experiment_stats={}
@@ -619,6 +615,7 @@ class ExperimentLogger:
         return
 
     def prerequest_statisics(self, prerequest, message_count):
+        """Callculates Statisics for prerequsts"""
         data_frame=pandas.DataFrame(prerequest)
         result_stats={
             "1xx(%)": data_frame["1xx"].sum()/message_count*100,
@@ -633,6 +630,7 @@ class ExperimentLogger:
         return
 
     def uri_deviation_table(self,uri_dev_table, rel_uri_dev_table):
+        """CC6"""
         uri_dev_table['Sum'] = uri_dev_table.iloc[:, 1:].sum(axis=1)
         file_path = f"{self.experiment_folder}/uri_dev_statuscode.csv"            
         uri_dev_table.to_csv(file_path, index=False)
@@ -674,6 +672,7 @@ class ExperimentLogger:
 
 
     def analyze_prerequest_outcome(self):
+    
         file_path = f"{self.experiment_folder}/prerequests.csv"
         data_frame = pandas.read_csv(file_path)
         grouped = data_frame.groupby('deviation_count')[['1xx', '2xx', '3xx', '4xx', '5xx', '9xx']].sum().reset_index()
@@ -757,5 +756,6 @@ class ExperimentLogger:
             self.exp_logging.error("Error capturing packets subprocess: %s",e)
             
         return True
+
     def extract_packets_per_host(host_list):
         return 0
