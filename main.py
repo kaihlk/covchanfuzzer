@@ -103,7 +103,7 @@ def load_target_list(target_list_csv):
     return loaded_list
 
 def main():
-    '''Function that runs the connection, selection of the CC and the fuzzer'''
+    '''Fuzzer Configuration and start'''
 
     log_path = get_logs_directory()
     print("Logpath: ", log_path)

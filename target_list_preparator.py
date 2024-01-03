@@ -155,7 +155,7 @@ class TargetListPreperator:
     
 
     def load_target_list(self, target_list_csv):
-        """Load the list back from the CSV file, considering only the first two colum"""
+        """Load the list back from the CSV file, considering only the first two columns"""
         loaded_list = []
         with open(target_list_csv, 'r') as csvfile:
             csv_reader = csv.reader(csvfile)
