@@ -14,7 +14,7 @@ def generate_random_fragment(min_length, max_length, fuzzvalue, scale):
     }
     chosen_set = random.choice(list(char_sets.keys()))
     
-    # Generate a random length with a Gaussian distribution
+   
     random_border = int(np.random.exponential(scale)*1024)
     #random_border = max(min_length, min(max_length, random_border))
 

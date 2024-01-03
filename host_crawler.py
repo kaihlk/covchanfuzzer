@@ -192,51 +192,7 @@ class host_crawler:
                 print(f"An error occurred while checking the link {link}: {e}")
         return working_links
     
-    #def crawl_and_check_links(self, start_url, max_working_links, max_attempts=10):
-        """Crawls to through domain, starting at the host_url and tries to get max working links, digs deeper into the website,  stops after max_attemps"""
-        """       #Initialise Variables
-        #starttime=time.time()
-        visited = set()
-        links_to_check = [start_url]
-        working_links = []
-        rounds=0
-        # Loop through the page, until desired count of links are found, or no links are avaible
-        while links_to_check and len(working_links) < max_working_links and rounds<max_attempts:            
-            url = links_to_check.pop()
-            
-            try:
-                links = self.get_links_from_url(url, 5 * max_working_links)
-            except Exception as e:
-                print(f"An error occurred when fetching links from {url}: {e}")
-                rounds+=1
-                continue
-            visited.add(url)
-            # Optionally, you can log the error or perform other error handling here.
-            #check_time=time.time()
-            print("Found links:", links)
-            if len(links)==0: break
-            for link in links:
-                #maintain visited and links to check list
-                if link not in visited and link not in links_to_check:
-                    links_to_check.append(link)
-                #Check if link is working
-                try:
-                    #if self.is_link_working(link):
-                    if self.is_working_custom(link):
-                        working_links.append(link)
-                        if len(working_links) >= max_working_links:
-                            break
-                except requests.exceptions.RequestException as e:
-                    print(f"An error occurred while checking the link {link}: {e}")
-                    rounds+=1
-            rounds+=1
-            #check_duration=time.time()-check_time
-            #print("Round:", rounds," Checktime: ", check_duration)
-            
-        #duration=time.time()-starttime
-        #print("Duration: ", duration)
-        #print("Rounds: ",rounds)
-        return working_links """
+  
 
     def get_paths(self, domain, port, link_count, max_attempts, timeout):
         """Get a number of valid paths for domain"""

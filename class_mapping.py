@@ -26,7 +26,7 @@ requests_builders ={
     91: HTTP1_Request_CC_Add_Big_Header_Field_opt1,
     92: HTTP1_Request_CC_Add_Big_Header_Field_opt2,
   }
-""" class_mapping_connection = {
+""" TODO class_mapping_connection = {
     1: HTTP1_TCP_Connection,
   #  2: HTTP1_TLS_Connection,
   #  3: HTTP1_CC_TCP2TLS_Upgrade,
